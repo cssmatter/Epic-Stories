@@ -1,0 +1,31 @@
+# Credentials and tokens
+client_secrets.json
+token.pickle
+
+# Generated files
+*.mp4
+temp_quote_image.png
+daily_quote_videoTEMP_MPY_wvf_snd.mp4
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

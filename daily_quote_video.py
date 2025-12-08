@@ -201,7 +201,8 @@ def main():
     print("Selecting quote...")
     quote = get_random_quote(json_path)
     if not quote:
-        print("No quotes found.")
+        print("No quotes available. All quotes have been published!")
+        print("Please add more quotes to quotes.json to continue.")
         return
     print(f"Selected: {quote['quote'][:30]}...")
 

@@ -1,0 +1,104 @@
+name: Upload Quote Video to YouTube
+
+on:
+  schedule:
+    # Run every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  upload-video:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.PAT_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg fonts-liberation
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Restore YouTube credentials
+      env:
+        CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+        TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE_BASE64 }}
+      run: |
+        echo "$CLIENT_SECRETS" > client_secrets.json
+        echo "$TOKEN_PICKLE" | base64 -d > token.pickle
+    
+    - name: Download required media files
+      run: |
+        # Check if media files exist in repo, if not, fail gracefully
+        if [ ! -f "light-effect.mp4" ]; then
+          echo "Error: light-effect.mp4 not found in repository"
+          exit 1
+        fi
+        if [ ! -f "background-music.mp3" ]; then
+          echo "Warning: background-music.mp3 not found"
+        fi
+        if [ ! -f "daily_quote_background_final.mp4" ]; then
+          echo "Error: daily_quote_background_final.mp4 not found in repository"
+          exit 1
+        fi
+    
+    - name: Check if quotes are available
+      id: check_quotes
+      run: |
+        quote_count=$(python -c "import json; print(len(json.load(open('quotes.json'))))")
+        echo "quote_count=$quote_count" >> $GITHUB_OUTPUT
+        if [ "$quote_count" -eq 0 ]; then
+          echo "No quotes remaining. Stopping workflow gracefully."
+          echo "quotes_available=false" >> $GITHUB_OUTPUT
+        else
+          echo "Quotes available: $quote_count"
+          echo "quotes_available=true" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Run video generation and upload
+      if: steps.check_quotes.outputs.quotes_available == 'true'
+      run: |
+        python daily_quote_video.py
+    
+    - name: Commit updated quotes.json
+      if: steps.check_quotes.outputs.quotes_available == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Check if quotes.json was modified
+        if git diff --quiet quotes.json; then
+          echo "No changes to quotes.json"
+        else
+          git add quotes.json
+          git commit -m "Remove published quote [skip ci]"
+          git push
+        fi
+    
+    - name: Clean up credentials
+      if: always()
+      run: |
+        rm -f client_secrets.json token.pickle
+    
+    - name: Workflow summary
+      if: always()
+      run: |
+        if [ "${{ steps.check_quotes.outputs.quotes_available }}" == "false" ]; then
+          echo "## ⚠️ No Quotes Remaining" >> $GITHUB_STEP_SUMMARY
+          echo "All quotes have been published. Please add more quotes to quotes.json to continue." >> $GITHUB_STEP_SUMMARY
+        else
+          echo "## ✅ Video Upload Complete" >> $GITHUB_STEP_SUMMARY
+          echo "Remaining quotes: ${{ steps.check_quotes.outputs.quote_count }}" >> $GITHUB_STEP_SUMMARY
+        fi
