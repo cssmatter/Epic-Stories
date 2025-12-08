@@ -29,9 +29,6 @@ Go to your repository → Settings → Secrets and variables → Actions → New
 
 Add the following secrets:
 
-#### `PAT_TOKEN`
-Your GitHub Personal Access Token: `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`
-
 #### `CLIENT_SECRETS_JSON`
 Copy the entire content of your `client_secrets.json` file:
 ```json
