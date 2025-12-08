@@ -34,10 +34,19 @@ def create_quote_image(quote_data, output_image_path="temp_quote_image.png"):
     
     # Header Text
     header_text = "All Time Epic Stories"
+    
+    # Cross-platform font setup
+    import platform
+    system = platform.system()
+    
     try:
-        header_font_path = "C:\\Windows\\Fonts\\times.ttf"
-        header_font = ImageFont.truetype(header_font_path, 30) # Slightly smaller
+        if system == "Windows":
+            header_font_path = "C:\\Windows\\Fonts\\times.ttf"
+        else:  # Linux/Ubuntu (GitHub Actions)
+            header_font_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"
+        header_font = ImageFont.truetype(header_font_path, 30)
     except IOError:
+        print(f"Warning: Could not load font from {header_font_path}, using default")
         header_font = ImageFont.load_default()
     
     # Opacity 0.2 (approx 51/255)
@@ -46,14 +55,19 @@ def create_quote_image(quote_data, output_image_path="temp_quote_image.png"):
     # Position: Top Center (y=70)
     draw.text((width/2, 70), header_text, font=header_font, fill=header_color, anchor="ma")
     
-    # Font setup
+    # Font setup for quote and author
     try:
-        font_path = "C:\\Windows\\Fonts\\times.ttf" 
-        font_size = 50 # Smaller font for 720p
+        if system == "Windows":
+            font_path = "C:\\Windows\\Fonts\\times.ttf"
+        else:  # Linux/Ubuntu (GitHub Actions)
+            font_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"
+        font_size = 50  # Consistent font size for 720p
         font = ImageFont.truetype(font_path, font_size)
     except IOError:
+        print(f"Warning: Could not load font from {font_path}, using default")
+        # If font loading fails, use a larger default size
         font = ImageFont.load_default()
-        font_size = 30
+        font_size = 50  # Keep size consistent even with default font
     
     quote_text = f'"{quote_data["quote"]}"'
     author_text = f"- {quote_data['author']} -"
