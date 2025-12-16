@@ -4,6 +4,7 @@ import pickle
 import datetime
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from google.auth.exceptions import RefreshError
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
@@ -27,9 +28,19 @@ def get_authenticated_service():
     # If no valid credentials, log in
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
-            print("Refreshing access token...")
-            creds.refresh(Request())
-        else:
+            try:
+                print("Refreshing access token...")
+                creds.refresh(Request())
+            except RefreshError as e:
+                print(f"Token refresh failed: {e}")
+                print("Token has been revoked or expired. Deleting token and re-authenticating...")
+                # Delete the invalid token file
+                if os.path.exists(token_file):
+                    os.remove(token_file)
+                # Trigger new authentication flow
+                creds = None
+        
+        if not creds:
             print("Starting new authentication flow...")
             client_secrets_file = 'client_secrets.json'
             if not os.path.exists(client_secrets_file):
