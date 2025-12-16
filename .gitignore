@@ -1,6 +1,7 @@
 # Credentials and tokens
 client_secrets.json
 token.pickle
+token_base64.txt
 
 # Generated files
 *.mp4
