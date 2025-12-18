@@ -1,0 +1,31 @@
+{
+    "books": [
+        {
+            "book_name": "Rich Dad Poor Dad",
+            "author": "Robert T. Kiyosaki",
+            "image_style": "modern inspirational finance illustration, cinematic lighting",
+            "chapters": [
+                {
+                    "title": "Introduction",
+                    "text": "The book introduces two father figures with very different approaches to money, work, and life. One believes in job security and education, while the other focuses on financial independence."
+                },
+                {
+                    "title": "Money Mindset",
+                    "text": "The rich do not work for money. Instead, they focus on making money work for them through investments and businesses."
+                },
+                {
+                    "title": "Assets vs Liabilities",
+                    "text": "Assets put money in your pocket while liabilities take money out. Understanding this difference is the foundation of wealth building."
+                },
+                {
+                    "title": "Financial Education",
+                    "text": "Schools fail to teach financial intelligence. Learning about cash flow, investing, and entrepreneurship is essential."
+                },
+                {
+                    "title": "Conclusion",
+                    "text": "Financial freedom comes from knowledge, discipline, and long-term thinking rather than job security."
+                }
+            ]
+        }
+    ]
+}

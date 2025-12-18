@@ -3,3 +3,16 @@ imageio-ffmpeg==0.4.9
 google-auth-oauthlib==1.1.0
 google-auth-httplib2==0.1.1
 google-api-python-client==2.108.0
+torch
+diffusers
+transformers
+accelerate
+pyttsx3
+moviepy
+numpy
+vidgear
+cython
+pyaudio
+matplotlib
+scipy
+pandas
