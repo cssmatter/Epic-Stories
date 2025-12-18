@@ -85,10 +85,17 @@ def generate_images(chapters, style, book_slug, output_dir=OUTPUT_DIR, images_pe
 
     for ch in chapters:
         prompt = f"{ch['title']}, {style}"
-        for i in range(IMAGES_PER_CHAPTER):
-            image = pipe(prompt).images[0]
+        for i in range(images_per_chapter):
             filename = f"{book_slug}_{ch['title'].replace(' ', '_')}_{i}.png"
             path = os.path.join(output_dir, filename)
+            
+            if os.path.exists(path):
+                print(f"  - Using existing image: {filename}")
+                image_files.append(path)
+                continue
+
+            print(f"  - Generating image: {filename} (this may take time on CPU)...")
+            image = pipe(prompt).images[0]
             image.save(path)
             image_files.append(path)
 
@@ -141,8 +148,14 @@ def process_book(book, output_dir=OUTPUT_DIR, images_per_chapter=IMAGES_PER_CHAP
     audio_path = os.path.join(output_dir, f"{book_slug}.mp3")
     video_path = os.path.join(output_dir, f"{book_slug}.mp4")
 
+    if os.path.exists(video_path):
+        print(f"  - Video already exists, skipping: {video_path}")
+        return
+
+    print("  - Generating voice...")
     create_voice(chapters, audio_path)
 
+    print("  - Generating images...")
     images = generate_images(
         chapters,
         book["image_style"],
@@ -151,6 +164,7 @@ def process_book(book, output_dir=OUTPUT_DIR, images_per_chapter=IMAGES_PER_CHAP
         images_per_chapter=images_per_chapter
     )
 
+    print("  - Assembling video...")
     create_video(images, audio_path, video_path, fps=fps)
 
     print(f"Finished: {video_path}")
