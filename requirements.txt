@@ -4,7 +4,7 @@ torchvision
 diffusers
 transformers
 accelerate
-pyttsx3
+gTTS
 moviepy
 numpy
 imageio-ffmpeg

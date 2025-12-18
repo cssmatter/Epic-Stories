@@ -1,6 +1,6 @@
 import json
 import os
-import pyttsx3
+from gtts import gTTS
 import torch
 import numpy as np
 from diffusers import StableDiffusionPipeline
@@ -54,17 +54,13 @@ def auto_split(text):
 # ==================================================
 # VOICE (OFFLINE)
 # ==================================================
-def create_voice(chapters, audio_path, rate=150, volume=1.0):
-    engine = pyttsx3.init()
-    engine.setProperty("rate", rate)
-    engine.setProperty("volume", volume)
-
+def create_voice(chapters, audio_path, lang="en"):
     narration = ""
     for ch in chapters:
         narration += f"{ch['title']}. {ch['text']}...\n"
 
-    engine.save_to_file(narration, audio_path)
-    engine.runAndWait()
+    tts = gTTS(text=narration, lang=lang)
+    tts.save(audio_path)
 
 
 # ==================================================
@@ -145,7 +141,7 @@ def process_book(book, output_dir=OUTPUT_DIR, images_per_chapter=IMAGES_PER_CHAP
     audio_path = os.path.join(output_dir, f"{book_slug}.mp3")
     video_path = os.path.join(output_dir, f"{book_slug}.mp4")
 
-    create_voice(chapters, audio_path, rate=voice_rate, volume=voice_volume)
+    create_voice(chapters, audio_path)
 
     images = generate_images(
         chapters,
