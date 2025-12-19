@@ -86,6 +86,20 @@ jobs:
           git push
         fi
     
+    - name: Wait for 5 minutes
+      if: steps.check_moments.outputs.moments_available == 'true'
+      run: sleep 300
+    
+    - name: Upload to Instagram Reels
+      if: steps.check_moments.outputs.moments_available == 'true'
+      env:
+        INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+        INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+      run: |
+        # Use a generic caption or extract from metadata if available
+        # The script daily_moments_video.py creates daily_moments_video.mp4
+        python instagram_uploader.py daily_moments_video.mp4 "Check out this moment! #moments #reels"
+    
     - name: Clean up credentials
       if: always()
       run: |

@@ -89,6 +89,19 @@ jobs:
           git commit -m "Remove published quote [skip ci]"
           git push
         fi
+
+    - name: Wait for 5 minutes
+      if: steps.check_quotes.outputs.quotes_available == 'true'
+      run: sleep 300
+
+    - name: Upload to Instagram Reels
+      if: steps.check_quotes.outputs.quotes_available == 'true'
+      env:
+        INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+        INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+      run: |
+        # The script daily_quote_video.py creates daily_quote_video.mp4
+        python instagram_uploader.py daily_quote_video.mp4 "Daily Inspiration ✨ #quotes #motivation #reels"
     
     - name: Clean up credentials
       if: always()
