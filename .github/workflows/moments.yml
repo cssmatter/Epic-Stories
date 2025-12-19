@@ -1,0 +1,103 @@
+name: Upload Moments Video to YouTube
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write  # Required to commit changes back to the repository
+
+jobs:
+  upload-video:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg fonts-liberation fonts-liberation2
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Restore YouTube credentials
+      env:
+        CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+        TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE_BASE64 }}
+      run: |
+        echo "$CLIENT_SECRETS" > client_secrets.json
+        echo "$TOKEN_PICKLE" | base64 -d > token.pickle
+    
+    - name: Download required media files
+      run: |
+        # Check if media files exist in repo, if not, fail gracefully
+        if [ ! -f "light-effect.mp4" ]; then
+          echo "Error: light-effect.mp4 not found in repository"
+          exit 1
+        fi
+        if [ ! -f "background-music.mp3" ]; then
+          echo "Warning: background-music.mp3 not found"
+        fi
+    
+    - name: Check if moments are available
+      id: check_moments
+      run: |
+        moment_count=$(python -c "import json; print(len(json.load(open('moments.json'))))")
+        echo "moment_count=$moment_count" >> $GITHUB_OUTPUT
+        if [ "$moment_count" -eq 0 ]; then
+          echo "No moments remaining. Stopping workflow gracefully."
+          echo "moments_available=false" >> $GITHUB_OUTPUT
+        else
+          echo "Moments available: $moment_count"
+          echo "moments_available=true" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Run video generation and upload
+      if: steps.check_moments.outputs.moments_available == 'true'
+      run: |
+        python daily_moments_video.py
+    
+    - name: Commit updated moments.json
+      if: steps.check_moments.outputs.moments_available == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Check if moments.json was modified
+        if git diff --quiet moments.json; then
+          echo "No changes to moments.json"
+        else
+          git add moments.json
+          git commit -m "Remove published moment [skip ci]"
+          git push
+        fi
+    
+    - name: Clean up credentials
+      if: always()
+      run: |
+        rm -f client_secrets.json token.pickle
+    
+    - name: Workflow summary
+      if: always()
+      run: |
+        if [ "${{ steps.check_moments.outputs.moments_available }}" == "false" ]; then
+          echo "## ⚠️ No Moments Remaining" >> $GITHUB_STEP_SUMMARY
+          echo "All moments have been published. Please add more moments to moments.json to continue." >> $GITHUB_STEP_SUMMARY
+        else
+          echo "## ✅ Moments Video Upload Complete" >> $GITHUB_STEP_SUMMARY
+          echo "Remaining moments: ${{ steps.check_moments.outputs.moment_count }}" >> $GITHUB_STEP_SUMMARY
+        fi
