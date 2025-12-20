@@ -262,8 +262,13 @@ def main():
     title, description, keywords = generate_metadata(shayari)
     
     print("Starting YouTube Upload...")
-    playlist_id = "PL--T8UlYPeg5nqewlcIQ0xR-OVGijhSM0"
+    author_en = shayari.get('authnameinenglish', 'Hindi Shayari')
+    playlist_title = author_en if author_en.strip() else 'Hindi Shayari'
+    
     token_path = get_local_path('token_shayari.pickle')
+    
+    print(f"Target Playlist: {playlist_title}")
+    playlist_id = youtube_uploader.get_or_create_playlist(playlist_title, token_file=token_path)
     
     video_id = youtube_uploader.upload_video(video_output, title, description, category_id="22", keywords=keywords, token_file=token_path)
     
