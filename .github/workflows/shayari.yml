@@ -55,7 +55,7 @@ jobs:
     - name: Check if shayaris are available
       id: check_shayari
       run: |
-        shayari_count=$(python -c "import json, os; print(sum(len(json.load(open(f, encoding='utf-8'))) for f in os.listdir('shayari') if f.startswith('shayari') and f.endswith('.json')))")
+        shayari_count=$(python -c "import json, os; print(sum(len(json.load(open(os.path.join('shayari', f), encoding='utf-8'))) for f in os.listdir('shayari') if f.startswith('shayari') and f.endswith('.json')))")
         echo "shayari_count=$shayari_count" >> $GITHUB_OUTPUT
         if [ "$shayari_count" -eq 0 ]; then
           echo "No shayaris remaining."
