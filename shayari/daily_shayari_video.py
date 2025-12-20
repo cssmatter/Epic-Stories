@@ -123,7 +123,7 @@ def create_shayari_image(shayari_data, output_image_path=None):
     # Header
     header_paint = skia.Paint(Color=skia.Color(255, 255, 255, 51), AntiAlias=True)
     header_font = skia.Font(skia.Typeface.MakeFromName("Arial"), 25)
-    header_blob = skia.TextBlob.MakeFromText("https://www.youtube.com/@Hindi-Shayari-हिंदी-शायरी", header_font)
+    header_blob = skia.TextBlob.MakeFromText("Hindi-Shayari-Manish-Salunke", header_font)
     canvas.drawTextBlob(header_blob, (width - header_blob.bounds().width())/2, 70, header_paint)
     
     # Shayari and Author
