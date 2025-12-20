@@ -79,7 +79,13 @@ def get_authenticated_service(token_file='token.pickle'):
                 
             flow = InstalledAppFlow.from_client_secrets_file(
                 client_secrets_file, SCOPES)
-            creds = flow.run_local_server(port=0)
+            # Use access_type='offline' to get a refresh token
+            # Use prompt='consent' to force the consent screen and ensure we get a new refresh token
+            creds = flow.run_local_server(
+                port=0, 
+                access_type='offline',
+                prompt='consent'
+            )
             
         # Save the credentials for the next run
         with open(token_file, 'wb') as token:

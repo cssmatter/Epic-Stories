@@ -240,18 +240,37 @@ def remove_from_json(json_file_path, item_to_remove):
         print(f"Error removing from JSON: {e}")
         return False
 
+    title, description, keywords = generate_metadata(shayari)
+    return shayari, title, description, keywords, json_path
+
 def main():
-    json_path = get_local_path("shayari.json")
-    if not os.path.exists(json_path):
-        print(f"Error: {json_path} not found.")
+    # 1. Find all available shayari JSON files
+    json_files = [f for f in os.listdir(get_local_path(".")) if f.startswith("shayari") and f.endswith(".json")]
+    
+    if not json_files:
+        print("Error: No shayari JSON files found.")
         return
 
-    print("Selecting Shayari...")
-    shayari = get_random_shayari(json_path)
+    # 2. Pick a random JSON file and attempt to get a shayari
+    # We shuffle to try them in a random order if the first one is empty
+    random.shuffle(json_files)
+    
+    shayari = None
+    selected_json_path = None
+    
+    for json_file in json_files:
+        json_path = get_local_path(json_file)
+        print(f"Checking {json_file}...")
+        shayari = get_random_shayari(json_path)
+        if shayari:
+            selected_json_path = json_path
+            break
+            
     if not shayari:
-        print("No shayaris available.")
+        print("No shayaris available in any of the JSON files.")
         return
         
+    print(f"Selected Shayari from {os.path.basename(selected_json_path)}")
     print("Creating image with Hybrid Rendering...")
     image_path = create_shayari_image(shayari)
     
@@ -277,7 +296,7 @@ def main():
         try:
             youtube_uploader.add_video_to_playlist(video_id, playlist_id, token_file=token_path)
             print("Successfully added to playlist.")
-            remove_from_json(json_path, shayari)
+            remove_from_json(selected_json_path, shayari)
         except Exception as e:
             print(f"Failed to add to playlist: {e}")
     else:
