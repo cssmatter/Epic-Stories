@@ -11,13 +11,12 @@ from googleapiclient.http import MediaFileUpload
 # Scopes needed for uploading and playlist management
 SCOPES = ['https://www.googleapis.com/auth/youtube']
 
-def get_authenticated_service():
+def get_authenticated_service(token_file='token.pickle'):
     """
     Authenticate with YouTube using OAuth 2.0.
     Requires 'client_secrets.json' to be present in the directory.
     """
     creds = None
-    token_file = 'token.pickle'
     is_ci = os.getenv('CI') or os.getenv('GITHUB_ACTIONS')
     
     # Check if we have valid saved credentials
@@ -88,7 +87,7 @@ def get_authenticated_service():
             
     return build('youtube', 'v3', credentials=creds)
 
-def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation"):
+def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle'):
     """
     Uploads a video to YouTube.
     """
@@ -96,7 +95,7 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
         print(f"Error: Video file not found: {file_path}")
         return None
 
-    youtube = get_authenticated_service()
+    youtube = get_authenticated_service(token_file=token_file)
 
     body = {
         'snippet': {
@@ -130,11 +129,11 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
     print(f"Link: https://youtu.be/{response['id']}")
     return response['id']
 
-def add_video_to_playlist(video_id, playlist_id):
+def add_video_to_playlist(video_id, playlist_id, token_file='token.pickle'):
     """
     Adds a video to a specific playlist.
     """
-    youtube = get_authenticated_service()
+    youtube = get_authenticated_service(token_file=token_file)
     
     print(f"Adding video {video_id} to playlist {playlist_id}...")
     request = youtube.playlistItems().insert(
@@ -149,8 +148,13 @@ def add_video_to_playlist(video_id, playlist_id):
             }
         }
     )
-    response = request.execute()
-    print(f"Video added to playlist: {response['snippet']['title']}")
+    try:
+        response = request.execute()
+        print(f"Video added to playlist: {response['snippet']['title']}")
+    except UnicodeEncodeError:
+        print(f"Video added to playlist successfully (Title contains non-printable characters).")
+    except Exception as e:
+        print(f"Error adding to playlist: {e}")
 
 if __name__ == "__main__":
     # Test run
