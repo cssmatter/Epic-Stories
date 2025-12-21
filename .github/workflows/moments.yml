@@ -3,7 +3,7 @@ name: Upload Moments Video to YouTube
 on:
   schedule:
     # Run every 6 hours
-    - cron: '0 */6 * * *'
+    - cron: '0 */16 * * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:

@@ -47,6 +47,9 @@ def render_hindi_text(canvas, text, font_path, font_size, max_width, start_y, co
     sk_typeface = skia.Typeface.MakeFromFile(font_path)
     sk_font = skia.Font(sk_typeface, font_size)
     sk_paint = skia.Paint(Color=color, AntiAlias=True)
+    # Make font bolder using stroke-and-fill
+    sk_paint.setStyle(skia.Paint.kStrokeAndFill_Style)
+    sk_paint.setStrokeWidth(0.8) # Adjust for 'little bolder'
     
     lines = []
     words = text.split(' ')
@@ -113,7 +116,17 @@ def create_shayari_image(shayari_data, output_image_path=None):
     width, height = 720, 1280
     surface = skia.Surface(width, height)
     canvas = surface.getCanvas()
-    canvas.clear(skia.ColorTRANSPARENT)
+    
+    # Load and draw background image
+    bg_path = get_local_path("shayari-background.jpg")
+    canvas.clear(skia.ColorBLACK) # Clear with black so opacity has something to blend with
+    if os.path.exists(bg_path):
+        bg_img = skia.Image.open(bg_path)
+        # Draw with 0.5 opacity (alpha 127 out of 255)
+        bg_paint = skia.Paint(Alpha=255)
+        canvas.drawImage(bg_img, 0, 0, paint=bg_paint)
+    else:
+        print(f"Warning: {bg_path} not found. Using solid black.")
     
     font_path = get_root_path(os.path.join("fonts", "TiroDevanagariHindi-Regular.ttf"))
     if not os.path.exists(font_path):
@@ -121,9 +134,9 @@ def create_shayari_image(shayari_data, output_image_path=None):
         font_path = "C:\\Windows\\Fonts\\Nirmala.ttc"
         
     # Header
-    header_paint = skia.Paint(Color=skia.Color(255, 255, 255, 51), AntiAlias=True)
+    header_paint = skia.Paint(Color=skia.Color(0, 0, 0, 51), AntiAlias=True) # Black with low opacity
     header_font = skia.Font(skia.Typeface.MakeFromName("Arial"), 25)
-    header_blob = skia.TextBlob.MakeFromText("Hindi-Shayari-Manish-Salunke", header_font)
+    header_blob = skia.TextBlob.MakeFromText("Hindi Shayari", header_font)
     canvas.drawTextBlob(header_blob, (width - header_blob.bounds().width())/2, 70, header_paint)
     
     # Shayari and Author
@@ -139,49 +152,46 @@ def create_shayari_image(shayari_data, output_image_path=None):
     start_y = (height - total_h_estimate) / 2
     
     # Render Quote
-    actual_h = render_hindi_text(canvas, quote_text, font_path, 45, width - 100, start_y, skia.ColorWHITE)
+    actual_h = render_hindi_text(canvas, quote_text, font_path, 45, width - 100, start_y, skia.ColorBLACK)
     
     # Render Author
     author_y = start_y + actual_h + 80
-    render_hindi_text(canvas, author_text, font_path, 40, width - 100, author_y, skia.ColorWHITE)
+    render_hindi_text(canvas, author_text, font_path, 40, width - 100, author_y, skia.ColorBLACK)
     
     image = surface.makeImageSnapshot()
     image.save(output_image_path, skia.kPNG)
     return output_image_path
 
 def create_video(shayari_data, image_path, output_video_path="daily_shayari_video.mp4", duration=20):
-    """Creates a video with background, music, and overlaid image using FFMPEG directly."""
-    bg_video_path = get_root_path("light-effect.mp4")
-    bg_music_path = get_root_path("background-music.mp3")
+    """Creates a video with static background image and music."""
+    bg_music_path = get_local_path("Dhun.mp3")
     ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
     
-    if not os.path.exists(bg_video_path):
-        bg_video_path = get_root_path("daily_quote_background_final.mp4")
-    
-    if not os.path.exists(bg_video_path):
-        print(f"Error: Background video not found.")
-        return
-
     has_music = os.path.exists(bg_music_path)
         
-    inputs = ["-stream_loop", "-1", "-i", bg_video_path]
-    inputs.extend(["-i", image_path])
+    # Input 0: Static image (looped)
+    inputs = ["-loop", "1", "-i", image_path]
     
     if has_music:
+        # Input 1: Music (looped)
         inputs.extend(["-stream_loop", "-1", "-i", bg_music_path])
-        map_audio = ["-map", "2:a"]
+        map_audio = ["-map", "1:a"]
     else:
         map_audio = []
         
-    filter_complex = "[0:v]scale=720:1280,setsar=1,format=yuv420p[bg];[bg][1:v]overlay[v_final]"
-    
     cmd = [ffmpeg_exe, "-y", "-threads", "1"] + inputs
-    cmd.extend(["-filter_complex", filter_complex])
-    cmd.extend(["-map", "[v_final]"])
+    cmd.extend(["-t", str(duration), "-r", "30"]) # Force 30fps for the image loop
+    
+    # Explicit mapping is REQUIRED when using -map
+    cmd.extend(["-map", "0:v"]) 
+    
     if map_audio:
         cmd.extend(map_audio)
+        cmd.extend(["-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest"])
+    else:
+        cmd.extend(["-c:v", "libx264", "-pix_fmt", "yuv420p"])
         
-    cmd.extend(["-t", str(duration), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest", output_video_path])
+    cmd.append(output_video_path)
     
     subprocess.run(cmd, check=True)
 
