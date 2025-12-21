@@ -33,22 +33,6 @@ def get_authenticated_service(token_file='token.pickle'):
                 creds.refresh(Request())
             except RefreshError as e:
                 print(f"Token refresh failed: {e}")
-                
-                if is_ci:
-                    # In CI environment, we cannot open a browser for re-authentication
-                    print("\n" + "="*60)
-                    print("ERROR: Running in CI environment and token has expired!")
-                    print("="*60)
-                    print("\nTo fix this issue:")
-                    print("1. Run the script locally: python daily_quote_video.py")
-                    print("2. Complete the browser authentication")
-                    print("3. Update the GitHub secret TOKEN_PICKLE_BASE64 with:")
-                    print("   base64 -w 0 token.pickle  (Linux/Mac)")
-                    print("   or")
-                    print("   certutil -encode token.pickle token.txt  (Windows)")
-                    print("="*60 + "\n")
-                    raise RuntimeError("Token expired in CI environment. Please update TOKEN_PICKLE_BASE64 secret.")
-                
                 print("Token has been revoked or expired. Deleting token and re-authenticating...")
                 # Delete the invalid token file
                 if os.path.exists(token_file):
@@ -57,21 +41,6 @@ def get_authenticated_service(token_file='token.pickle'):
                 creds = None
         
         if not creds:
-            if is_ci:
-                # In CI environment, we cannot open a browser for authentication
-                print("\n" + "="*60)
-                print("ERROR: Running in CI environment without valid credentials!")
-                print("="*60)
-                print("\nTo fix this issue:")
-                print("1. Run the script locally: python daily_quote_video.py")
-                print("2. Complete the browser authentication")
-                print("3. Add the GitHub secret TOKEN_PICKLE_BASE64 with:")
-                print("   base64 -w 0 token.pickle  (Linux/Mac)")
-                print("   or")
-                print("   certutil -encode token.pickle token.txt  (Windows)")
-                print("="*60 + "\n")
-                raise RuntimeError("No valid credentials in CI environment. Please set up TOKEN_PICKLE_BASE64 secret.")
-            
             print("Starting new authentication flow...")
             client_secrets_file = 'client_secrets.json'
             if not os.path.exists(client_secrets_file):
