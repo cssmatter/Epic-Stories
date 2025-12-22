@@ -80,35 +80,20 @@ jobs:
       env:
         IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # 1. Host the video on a temporary branch for the API to pull
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        # 1. Upload the video to a temporary public host (required because repo is private)
+        echo "Uploading video to temporary host..."
+        VIDEO_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@daily_moments_video.mp4" https://catbox.moe/user/api.php)
         
-        # Create a unique tag for the video to ensure a fresh URL
-        TAG="v-$(date +%s)"
-        cp daily_moments_video.mp4 "video-$TAG.mp4"
+        if [[ $VIDEO_URL != http* ]]; then
+          echo "Error: Failed to get public URL. Response: $VIDEO_URL"
+          exit 1
+        fi
         
-        # Push to a dedicated media branch
-        git checkout --orphan media-assets
-        git rm -rf .
-        mv "video-$TAG.mp4" media-video.mp4
-        git add media-video.mp4
-        git commit -m "Host media for Instagram"
-        git push origin media-assets --force
+        echo "Public Video URL: $VIDEO_URL"
         
-        # 2. Get the RAW URL
-        # Format: https://raw.githubusercontent.com/<OWNER>/<REPO>/media-assets/media-video.mp4
-        VIDEO_URL="https://raw.githubusercontent.com/${{ github.repository }}/media-assets/media-video.mp4"
-        echo "Uploading video from: $VIDEO_URL"
-        
-        # 3. Call the official uploader
-        # The script instagram_graph_uploader.py handles the 3-step Reels process
+        # 2. Call the official uploader
         python instagram_graph_uploader.py "$VIDEO_URL" "Check out this moment! #moments #reels"
-        
-        # 4. Cleanup: Delete the media branch
-        git push origin --delete media-assets
     
     - name: Commit updated moments.json
       if: steps.check_moments.outputs.moments_available == 'true'
