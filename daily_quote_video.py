@@ -168,14 +168,13 @@ def generate_metadata(quote_data):
     title = f"{author} Quote"
         
     # Keywords / Hashtags
-    # Simple splitting for keywords
     words = [w.strip(".,!?;:\"") for w in quote.split() if len(w) > 3]
     words.append(author)
     words.extend(["shorts", "motivation", "wisdom", "stoic", "philosophy", "dailyquote", "inspiration"])
     
-    keywords = ",".join(list(set(words))[:30]) # Limit keywords
+    keywords = ",".join(list(set(words))[:30])
     
-    hashtags = " ".join([f"#{w.replace(' ', '')}" for w in words[:10]])
+    hashtags = " ".join([f"#{w.replace(' ', '')}" for w in words[:15]])
     
     description = f"""{quote}
 
@@ -183,8 +182,18 @@ def generate_metadata(quote_data):
 
 {hashtags}
 
-#shorts #motivation #inspiration #stoicism
+#shorts #motivation #inspiration #stoicism #reels #reel #trending
 """
+    # Save metadata for Instagram
+    metadata = {
+        "title": title,
+        "description": description.strip(),
+        "keywords": keywords,
+        "hashtags": hashtags
+    }
+    with open("instagram_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=4)
+        
     return title, description, keywords
 
 def remove_quote_from_json(json_file_path, quote_to_remove):

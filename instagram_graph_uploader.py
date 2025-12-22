@@ -91,6 +91,8 @@ class InstagramGraphUploader:
             return None
 
 if __name__ == "__main__":
+    import json
+    
     # Credentials from environment variables
     TOKEN = os.getenv("IG_ACCESS_TOKEN")
     ACCOUNT_ID = os.getenv("IG_BUSINESS_ID")
@@ -100,7 +102,22 @@ if __name__ == "__main__":
         sys.exit(1)
 
     video_url = sys.argv[1]
-    caption = sys.argv[2] if len(sys.argv) > 2 else ""
+    caption = sys.argv[2] if len(sys.argv) > 2 else None
+
+    # If no caption provided, try to load from metadata file
+    if caption is None:
+        metadata_file = "instagram_metadata.json"
+        if os.path.exists(metadata_file):
+            try:
+                with open(metadata_file, "r", encoding="utf-8") as f:
+                    metadata = json.load(f)
+                    caption = metadata.get("description", "")
+                print(f"Loaded caption from {metadata_file}")
+            except Exception as e:
+                print(f"Error loading metadata file: {e}")
+                caption = ""
+        else:
+            caption = ""
 
     if not TOKEN or not ACCOUNT_ID:
         print("Error: IG_ACCESS_TOKEN and IG_BUSINESS_ID environment variables are required.")

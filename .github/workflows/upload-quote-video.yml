@@ -97,7 +97,36 @@ jobs:
         echo "Public Video URL: $VIDEO_URL"
         
         # 2. Call the official uploader
-        python instagram_graph_uploader.py "$VIDEO_URL" "Daily Inspiration ✨ #quotes #motivation #reels"
+        # It will automatically pick up the description from instagram_metadata.json
+        python instagram_graph_uploader.py "$VIDEO_URL"
+        
+        # Cleanup
+        rm -f instagram_metadata.json
+Line 101:     - name: Upload to Instagram Reels (Official API)
+Line 102:       if: steps.check_quotes.outputs.quotes_available == 'true'
+Line 103:       env:
+Line 104:         IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+Line 105:         IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID }}
+Line 106:       run: |
+Line 107:         # 1. Upload the video to a temporary public host (required because repo is private)
+Line 108:         echo "Uploading video to temporary host..."
+Line 109:         VIDEO_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@daily_quote_video.mp4" https://catbox.moe/user/api.php)
+Line 110:         
+Line 111:         if [[ $VIDEO_URL != http* ]]; then
+Line 112:           echo "Error: Failed to get public URL. Response: $VIDEO_URL"
+Line 113:           exit 1
+Line 114:         fi
+Line 115:         
+Line 116:         echo "Public Video URL: $VIDEO_URL"
+Line 117:         
+Line 118:         # 2. Call the official uploader
+Line 119:         # It will automatically pick up the description from instagram_metadata.json
+Line 120:         python instagram_graph_uploader.py "$VIDEO_URL"
+Line 121:         
+Line 122:         # Cleanup
+Line 123:         rm -f instagram_metadata.json
+Line 124: 
+Line 125:     - name: Commit updated quotes.json
 
     - name: Commit updated quotes.json
       if: steps.check_quotes.outputs.quotes_available == 'true'

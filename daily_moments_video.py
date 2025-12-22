@@ -165,15 +165,14 @@ def generate_metadata(moment_data):
         title = title[:97] + "..."
         
     # Keywords / Hashtags
-    # Simple splitting for keywords
     words = [w.strip(".,!?;:\"") for w in quote.split() if len(w) > 3]
     words.append(author)
     words.append(category)
     words.extend(["shorts", "moments", "story", "emotional", "life", "inspiration", "dailyvideo"])
     
-    keywords = ",".join(list(set(words))[:30]) # Limit keywords
+    keywords = ",".join(list(set(words))[:30])
     
-    hashtags = " ".join([f"#{w.replace(' ', '')}" for w in words[:10]])
+    hashtags = " ".join([f"#{w.replace(' ', '')}" for w in words[:15]])
     
     description = f"""{quote}
 
@@ -183,8 +182,18 @@ Category: {category}
 
 {hashtags}
 
-#shorts #moments #story #emotional #life #{category.replace(' ', '')}
+#shorts #moments #story #emotional #life #{category.replace(' ', '')} #reels #reel #trending
 """
+    # Save metadata for Instagram
+    metadata = {
+        "title": title,
+        "description": description.strip(),
+        "keywords": keywords,
+        "hashtags": hashtags
+    }
+    with open("instagram_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=4)
+        
     return title, description, keywords
 
 def remove_moment_from_json(json_file_path, moment_to_remove):

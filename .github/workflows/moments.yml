@@ -93,7 +93,11 @@ jobs:
         echo "Public Video URL: $VIDEO_URL"
         
         # 2. Call the official uploader
-        python instagram_graph_uploader.py "$VIDEO_URL" "Check out this moment! #moments #reels"
+        # It will automatically pick up the description from instagram_metadata.json
+        python instagram_graph_uploader.py "$VIDEO_URL"
+        
+        # Cleanup
+        rm -f instagram_metadata.json
     
     - name: Commit updated moments.json
       if: steps.check_moments.outputs.moments_available == 'true'
