@@ -66,10 +66,49 @@ jobs:
           echo "moments_available=true" >> $GITHUB_OUTPUT
         fi
     
-    - name: Run video generation and upload
+    - name: Run video generation
       if: steps.check_moments.outputs.moments_available == 'true'
       run: |
         python daily_moments_video.py
+    
+    - name: Wait for 5 minutes
+      if: steps.check_moments.outputs.moments_available == 'true'
+      run: sleep 300
+    
+    - name: Upload to Instagram Reels (Official API)
+      if: steps.check_moments.outputs.moments_available == 'true'
+      env:
+        IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # 1. Host the video on a temporary branch for the API to pull
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Create a unique tag for the video to ensure a fresh URL
+        TAG="v-$(date +%s)"
+        cp daily_moments_video.mp4 "video-$TAG.mp4"
+        
+        # Push to a dedicated media branch
+        git checkout --orphan media-assets
+        git rm -rf .
+        mv "video-$TAG.mp4" media-video.mp4
+        git add media-video.mp4
+        git commit -m "Host media for Instagram"
+        git push origin media-assets --force
+        
+        # 2. Get the RAW URL
+        # Format: https://raw.githubusercontent.com/<OWNER>/<REPO>/media-assets/media-video.mp4
+        VIDEO_URL="https://raw.githubusercontent.com/${{ github.repository }}/media-assets/media-video.mp4"
+        echo "Uploading video from: $VIDEO_URL"
+        
+        # 3. Call the official uploader
+        # The script instagram_graph_uploader.py handles the 3-step Reels process
+        python instagram_graph_uploader.py "$VIDEO_URL" "Check out this moment! #moments #reels"
+        
+        # 4. Cleanup: Delete the media branch
+        git push origin --delete media-assets
     
     - name: Commit updated moments.json
       if: steps.check_moments.outputs.moments_available == 'true'
