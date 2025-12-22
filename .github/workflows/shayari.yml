@@ -69,6 +69,34 @@ jobs:
       if: steps.check_shayari.outputs.shayari_available == 'true'
       run: |
         python shayari/daily_shayari_video.py
+
+    - name: Wait for 5 minutes
+      if: steps.check_shayari.outputs.shayari_available == 'true'
+      run: sleep 300
+
+    - name: Upload to Instagram Reels (Official API - Shayari Account)
+      if: steps.check_shayari.outputs.shayari_available == 'true'
+      env:
+        IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN_SHAYARI }}
+        IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_SHAYARI }}
+      run: |
+        # 1. Upload the video to a temporary public host
+        echo "Uploading video to temporary host..."
+        VIDEO_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@daily_shayari_video.mp4" https://catbox.moe/user/api.php)
+        
+        if [[ $VIDEO_URL != http* ]]; then
+          echo "Error: Failed to get public URL. Response: $VIDEO_URL"
+          exit 1
+        fi
+        
+        echo "Public Video URL: $VIDEO_URL"
+        
+        # 2. Call the official uploader
+        # It will automatically pick up the description from instagram_metadata.json
+        python instagram_graph_uploader.py "$VIDEO_URL"
+        
+        # Cleanup
+        rm -f instagram_metadata.json daily_shayari_video.mp4
     
     - name: Commit updated shayari.json
       if: steps.check_shayari.outputs.shayari_available == 'true'

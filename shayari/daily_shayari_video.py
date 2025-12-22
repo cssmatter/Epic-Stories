@@ -217,7 +217,7 @@ def generate_metadata(shayari_data):
         words.append(auth_en)
     
     keywords = ",".join(list(set(words))[:30])
-    hashtags = "#hindi #shayari #shorts #poetry #status #love #sad"
+    hashtags = "#hindi #shayari #shorts #poetry #status #love #sad #reels #reel #trending"
     
     author_display = f"{author} ({auth_en})" if auth_en else author
     
@@ -230,7 +230,21 @@ def generate_metadata(shayari_data):
 Enjoy this beautiful Hindi Shayari. Subscribe for more daily Shayari status!
 
 {hashtags}
+
+#trending #viral #hindi #shayari #shorts #reels #reel
 """
+    # Save metadata for Instagram
+    metadata = {
+        "title": title,
+        "description": description.strip(),
+        "keywords": keywords,
+        "hashtags": hashtags
+    }
+    # Save at root so the uploader finds it
+    root_metadata_path = os.path.join(parent_dir, "instagram_metadata.json")
+    with open(root_metadata_path, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=4, ensure_ascii=False)
+
     return title, description, keywords
 
 def remove_from_json(json_file_path, item_to_remove):
@@ -307,6 +321,13 @@ def main():
             youtube_uploader.add_video_to_playlist(video_id, playlist_id, token_file=token_path)
             print("Successfully added to playlist.")
             remove_from_json(selected_json_path, shayari)
+            
+            # Copy video to root for Instagram uploader
+            import shutil
+            root_video_path = os.path.join(parent_dir, "daily_shayari_video.mp4")
+            shutil.copy2(video_output, root_video_path)
+            print(f"Video copied to root: {root_video_path}")
+            
         except Exception as e:
             print(f"Failed to add to playlist: {e}")
     else:
