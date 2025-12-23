@@ -110,6 +110,7 @@ jobs:
         else
           git add data/epicstories/quotes.json
           git commit -m "Remove published quote [skip ci]"
+          git reset --hard
           git pull --rebase origin main
           git push
         fi
