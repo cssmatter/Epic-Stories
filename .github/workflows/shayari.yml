@@ -40,7 +40,7 @@ jobs:
         SHAYARI_TOKEN_PICKLE: ${{ secrets.SHAYARI_TOKEN_PICKLE_BASE64 }}
       run: |
         echo "$CLIENT_SECRETS" > client_secrets.json
-        echo "$SHAYARI_TOKEN_PICKLE" | base64 -d > shayari/token_shayari.pickle
+        echo "$SHAYARI_TOKEN_PICKLE" | base64 -d > token_shayari.pickle
     
     - name: Download required media files
       run: |
