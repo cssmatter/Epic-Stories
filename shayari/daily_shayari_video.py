@@ -9,6 +9,7 @@ import subprocess
 import imageio_ffmpeg
 import platform
 import sys
+import shutil
 
 # Add parent directory to sys.path to import youtube_uploader
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,28 +118,14 @@ def create_shayari_image(shayari_data, output_image_path=None):
     surface = skia.Surface(width, height)
     canvas = surface.getCanvas()
     
-    # Load and draw background image
-    bg_path = get_local_path("shayari-background.jpg")
-    canvas.clear(skia.ColorBLACK) # Clear with black so opacity has something to blend with
-    if os.path.exists(bg_path):
-        bg_img = skia.Image.open(bg_path)
-        # Draw with 0.5 opacity (alpha 127 out of 255)
-        bg_paint = skia.Paint(Alpha=255)
-        canvas.drawImage(bg_img, 0, 0, paint=bg_paint)
-    else:
-        print(f"Warning: {bg_path} not found. Using solid black.")
+    # Create a transparent background for overlay
+    canvas.clear(skia.ColorTRANSPARENT)
     
     font_path = get_root_path(os.path.join("fonts", "TiroDevanagariHindi-Regular.ttf"))
     if not os.path.exists(font_path):
-        # Fallback for Windows if bundled not found (unlikely)
+        # Fallback for Windows if bundled not found
         font_path = "C:\\Windows\\Fonts\\Nirmala.ttc"
         
-    # Header
-    header_paint = skia.Paint(Color=skia.Color(0, 0, 0, 51), AntiAlias=True) # Black with low opacity
-    header_font = skia.Font(skia.Typeface.MakeFromName("Arial"), 25)
-    header_blob = skia.TextBlob.MakeFromText(" ", header_font)
-    canvas.drawTextBlob(header_blob, (width - header_blob.bounds().width())/2, 70, header_paint)
-    
     # Shayari and Author
     quote_text = shayari_data["quote"]
     author_text = f"- {shayari_data['author']} -"
@@ -163,36 +150,71 @@ def create_shayari_image(shayari_data, output_image_path=None):
     return output_image_path
 
 def create_video(shayari_data, image_path, output_video_path="daily_shayari_video.mp4", duration=20):
-    """Creates a video with static background image and music."""
+    """Creates a video with static background image, semi-transparent video, and music."""
+    bg_img_path = get_local_path("shayari-background.jpg")
+    bg_video_path = get_local_path("clouds.mp4")
     bg_music_path = get_local_path("Dhun.mp3")
     ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
     
+    has_video = os.path.exists(bg_video_path)
     has_music = os.path.exists(bg_music_path)
+    has_img = os.path.exists(bg_img_path)
         
-    # Input 0: Static image (looped)
-    inputs = ["-loop", "1", "-i", image_path]
+    # Inputs
+    inputs = []
     
+    # Input 0: Static background image (looped)
+    if has_img:
+        inputs.extend(["-loop", "1", "-i", bg_img_path])
+    else:
+        # Fallback if no image: solid black
+        inputs.extend(["-f", "lavfi", "-i", "color=c=black:s=720x1280"])
+        
+    # Input 1: Background Video (looped)
+    if has_video:
+        inputs.extend(["-stream_loop", "-1", "-i", bg_video_path])
+    else:
+        # Fallback to black if video missing
+        inputs.extend(["-f", "lavfi", "-i", "color=c=black:s=720x1280"])
+
+    # Input 2: Text Overlay Image (looped)
+    inputs.extend(["-loop", "1", "-i", image_path])
+    
+    # Input 3: Audio (looped)
     if has_music:
-        # Input 1: Music (looped)
         inputs.extend(["-stream_loop", "-1", "-i", bg_music_path])
-        map_audio = ["-map", "1:a"]
+        map_audio = ["-map", "3:a"]
     else:
         map_audio = []
         
-    cmd = [ffmpeg_exe, "-y", "-threads", "1"] + inputs
-    cmd.extend(["-t", str(duration), "-r", "30"]) # Force 30fps for the image loop
+    # Filter Complex: Layering
+    # [1:v] Clouds Video (Base)
+    # [0:v] Background Image (Overlay with transparency)
+    # [2:v] Text Overlay
+    filter_complex = (
+        "[1:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,setsar=1[v_base];"
+        "[0:v]scale=720:1280,setsar=1,format=yuva420p,colorchannelmixer=aa=0.90[img_overlay];"
+        "[v_base][img_overlay]overlay[bg_layered];"
+        "[bg_layered][2:v]overlay=format=auto[v_final]"
+    )
     
-    # Explicit mapping is REQUIRED when using -map
-    cmd.extend(["-map", "0:v"]) 
+    cmd = [ffmpeg_exe, "-y", "-threads", "1"] + inputs
+    cmd.extend(["-filter_complex", filter_complex])
+    cmd.extend(["-map", "[v_final]"])
     
     if map_audio:
         cmd.extend(map_audio)
-        cmd.extend(["-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest"])
-    else:
-        cmd.extend(["-c:v", "libx264", "-pix_fmt", "yuv420p"])
-        
-    cmd.append(output_video_path)
     
+    cmd.extend([
+        "-t", str(duration),
+        "-c:v", "libx264",
+        "-pix_fmt", "yuv420p",
+        "-c:a", "aac",
+        "-shortest",
+        output_video_path
+    ])
+    
+    print(f"Running FFMPEG with layered video background...")
     subprocess.run(cmd, check=True)
 
 def generate_metadata(shayari_data):
@@ -264,8 +286,7 @@ def remove_from_json(json_file_path, item_to_remove):
         print(f"Error removing from JSON: {e}")
         return False
 
-    title, description, keywords = generate_metadata(shayari)
-    return shayari, title, description, keywords, json_path
+
 
 def main():
     # 1. Find all available shayari JSON files
@@ -302,8 +323,17 @@ def main():
     video_output = get_local_path("daily_shayari_video.mp4")
     create_video(shayari, image_path, video_output)
     
+    # Metadata
     title, description, keywords = generate_metadata(shayari)
     
+    # Check for Local Test Mode
+    if os.getenv("LOCAL_TEST") == "true":
+        print("\n--- LOCAL TEST MODE ---")
+        print(f"Video generated: {video_output}")
+        print("Skipping YouTube upload as requested.")
+        print("-----------------------\n")
+        return
+
     print("Starting YouTube Upload...")
     author_en = shayari.get('authnameinenglish', 'Hindi Shayari')
     playlist_title = author_en if author_en.strip() else 'Hindi Shayari'
