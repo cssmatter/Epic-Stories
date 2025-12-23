@@ -105,10 +105,10 @@ jobs:
         git config --local user.name "github-actions[bot]"
         
         # Check if moments.json was modified
-        if git diff --quiet moments.json; then
+        if git diff --quiet data/epicstories/moments.json; then
           echo "No changes to moments.json"
         else
-          git add moments.json
+          git add data/epicstories/moments.json
           git commit -m "Remove published moment [skip ci]"
           git push
         fi

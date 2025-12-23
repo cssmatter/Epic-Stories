@@ -105,10 +105,10 @@ jobs:
         git config --local user.name "github-actions[bot]"
         
         # Check if quotes.json was modified
-        if git diff --quiet quotes.json; then
+        if git diff --quiet data/epicstories/quotes.json; then
           echo "No changes to quotes.json"
         else
-          git add quotes.json
+          git add data/epicstories/quotes.json
           git commit -m "Remove published quote [skip ci]"
           git push
         fi
