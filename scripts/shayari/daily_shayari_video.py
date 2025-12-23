@@ -22,9 +22,17 @@ import youtube_uploader
 def get_root_path(rel_path):
     return os.path.join(parent_dir, rel_path)
 
-# Helper to get paths relative to this script
-def get_local_path(rel_path):
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), rel_path)
+# Helper to get data paths
+def get_data_path(filename):
+    return os.path.join(parent_dir, "data", "shayari", filename)
+
+# Helper to get asset paths
+def get_asset_path(filename):
+    return os.path.join(parent_dir, "assets", "shayari", filename)
+
+# Helper to get output paths
+def get_output_path(filename):
+    return os.path.join(parent_dir, filename)
 
 def get_random_shayari(json_file_path):
     """Reads a random shayari from the JSON file."""
@@ -113,7 +121,7 @@ def render_hindi_text(canvas, text, font_path, font_size, max_width, start_y, co
 def create_shayari_image(shayari_data, output_image_path=None):
     """Creates an image with the shayari text centered using Skia."""
     if output_image_path is None:
-        output_image_path = get_local_path("temp_shayari_image.png")
+        output_image_path = get_output_path("temp_shayari_image.png")
     width, height = 720, 1280
     surface = skia.Surface(width, height)
     canvas = surface.getCanvas()
@@ -151,9 +159,9 @@ def create_shayari_image(shayari_data, output_image_path=None):
 
 def create_video(shayari_data, image_path, output_video_path="daily_shayari_video.mp4", duration=20):
     """Creates a video with static background image, semi-transparent video, and music."""
-    bg_img_path = get_local_path("shayari-background.jpg")
-    bg_video_path = get_local_path("clouds.mp4")
-    bg_music_path = get_local_path("Dhun.mp3")
+    bg_img_path = get_asset_path("shayari-background.jpg")
+    bg_video_path = get_asset_path("clouds.mp4")
+    bg_music_path = get_asset_path("Dhun.mp3")
     ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
     
     has_video = os.path.exists(bg_video_path)
@@ -289,8 +297,9 @@ def remove_from_json(json_file_path, item_to_remove):
 
 
 def main():
-    # 1. Find all available shayari JSON files
-    json_files = [f for f in os.listdir(get_local_path(".")) if f.startswith("shayari") and f.endswith(".json")]
+    # 1. Find all available shayari JSON files in data folder
+    data_dir = os.path.join(parent_dir, "data", "shayari")
+    json_files = [f for f in os.listdir(data_dir) if f.startswith("shayari") and f.endswith(".json")]
     
     if not json_files:
         print("Error: No shayari JSON files found.")
@@ -304,7 +313,7 @@ def main():
     selected_json_path = None
     
     for json_file in json_files:
-        json_path = get_local_path(json_file)
+        json_path = get_data_path(json_file)
         print(f"Checking {json_file}...")
         shayari = get_random_shayari(json_path)
         if shayari:
@@ -320,7 +329,7 @@ def main():
     image_path = create_shayari_image(shayari)
     
     print("Creating video...")
-    video_output = get_local_path("daily_shayari_video.mp4")
+    video_output = get_output_path("daily_shayari_video.mp4")
     create_video(shayari, image_path, video_output)
     
     # Metadata
@@ -338,7 +347,7 @@ def main():
     author_en = shayari.get('authnameinenglish', 'Hindi Shayari')
     playlist_title = author_en if author_en.strip() else 'Hindi Shayari'
     
-    token_path = get_local_path('token_shayari.pickle')
+    token_path = get_output_path('token_shayari.pickle')
     
     print(f"Target Playlist: {playlist_title}")
     playlist_id = youtube_uploader.get_or_create_playlist(playlist_title, token_file=token_path)
@@ -354,7 +363,7 @@ def main():
             
             # Copy video to root for Instagram uploader
             import shutil
-            root_video_path = os.path.join(parent_dir, "daily_shayari_video.mp4")
+            root_video_path = get_output_path("daily_shayari_video.mp4")
             shutil.copy2(video_output, root_video_path)
             print(f"Video copied to root: {root_video_path}")
             

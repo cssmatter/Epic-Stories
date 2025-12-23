@@ -44,18 +44,18 @@ jobs:
     
     - name: Download required media files
       run: |
-        if [ ! -f "light-effect.mp4" ]; then
+        if [ ! -f "assets/epicstories/light-effect.mp4" ]; then
           echo "Error: light-effect.mp4 not found"
           exit 1
         fi
-        if [ ! -f "background-music.mp3" ]; then
+        if [ ! -f "assets/epicstories/background-music.mp3" ]; then
           echo "Warning: background-music.mp3 not found"
         fi
     
     - name: Check if shayaris are available
       id: check_shayari
       run: |
-        shayari_count=$(python -c "import json, os; print(sum(len(json.load(open(os.path.join('shayari', f), encoding='utf-8'))) for f in os.listdir('shayari') if f.startswith('shayari') and f.endswith('.json')))")
+        shayari_count=$(python -c "import json, os; print(sum(len(json.load(open(os.path.join('data', 'shayari', f), encoding='utf-8'))) for f in os.listdir('data/shayari') if f.startswith('shayari') and f.endswith('.json')))")
         echo "shayari_count=$shayari_count" >> $GITHUB_OUTPUT
         if [ "$shayari_count" -eq 0 ]; then
           echo "No shayaris remaining."
@@ -68,7 +68,7 @@ jobs:
     - name: Run video generation and upload
       if: steps.check_shayari.outputs.shayari_available == 'true'
       run: |
-        python shayari/daily_shayari_video.py
+        python scripts/shayari/daily_shayari_video.py
 
     - name: Wait for 5 minutes
       if: steps.check_shayari.outputs.shayari_available == 'true'
@@ -107,7 +107,7 @@ jobs:
         if git diff --quiet shayari/shayari.json; then
           echo "No changes to shayari/shayari.json"
         else
-          git add shayari/shayari.json
+          git add data/shayari/shayari*.json
           git commit -m "Remove published shayari [skip ci]"
           git push
         fi

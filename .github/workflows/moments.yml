@@ -44,19 +44,18 @@ jobs:
     
     - name: Download required media files
       run: |
-        # Check if media files exist in repo, if not, fail gracefully
-        if [ ! -f "light-effect.mp4" ]; then
-          echo "Error: light-effect.mp4 not found in repository"
+        if [ ! -f "assets/epicstories/light-effect.mp4" ]; then
+          echo "Error: light-effect.mp4 not found"
           exit 1
         fi
-        if [ ! -f "background-music.mp3" ]; then
+        if [ ! -f "assets/epicstories/background-music.mp3" ]; then
           echo "Warning: background-music.mp3 not found"
         fi
     
     - name: Check if moments are available
       id: check_moments
       run: |
-        moment_count=$(python -c "import json; print(len(json.load(open('moments.json'))))")
+        moment_count=$(python -c "import json; print(len(json.load(open('data/epicstories/moments.json'))))")
         echo "moment_count=$moment_count" >> $GITHUB_OUTPUT
         if [ "$moment_count" -eq 0 ]; then
           echo "No moments remaining. Stopping workflow gracefully."
@@ -69,7 +68,7 @@ jobs:
     - name: Run video generation
       if: steps.check_moments.outputs.moments_available == 'true'
       run: |
-        python daily_moments_video.py
+        python scripts/epicstories/daily_moments_video.py
     
     - name: Wait for 5 minutes
       if: steps.check_moments.outputs.moments_available == 'true'

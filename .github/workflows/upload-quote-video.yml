@@ -44,23 +44,18 @@ jobs:
     
     - name: Download required media files
       run: |
-        # Check if media files exist in repo, if not, fail gracefully
-        if [ ! -f "light-effect.mp4" ]; then
-          echo "Error: light-effect.mp4 not found in repository"
+        if [ ! -f "assets/epicstories/daily_quote_background_final.mp4" ]; then
+          echo "Error: daily_quote_background_final.mp4 not found"
           exit 1
         fi
-        if [ ! -f "background-music.mp3" ]; then
+        if [ ! -f "assets/epicstories/background-music.mp3" ]; then
           echo "Warning: background-music.mp3 not found"
-        fi
-        if [ ! -f "daily_quote_background_final.mp4" ]; then
-          echo "Error: daily_quote_background_final.mp4 not found in repository"
-          exit 1
         fi
     
     - name: Check if quotes are available
       id: check_quotes
       run: |
-        quote_count=$(python -c "import json; print(len(json.load(open('quotes.json'))))")
+        quote_count=$(python -c "import json; print(len(json.load(open('data/epicstories/quotes.json'))))")
         echo "quote_count=$quote_count" >> $GITHUB_OUTPUT
         if [ "$quote_count" -eq 0 ]; then
           echo "No quotes remaining. Stopping workflow gracefully."
@@ -73,7 +68,7 @@ jobs:
     - name: Run video generation and upload
       if: steps.check_quotes.outputs.quotes_available == 'true'
       run: |
-        python daily_quote_video.py
+        python scripts/epicstories/daily_quote_video.py
     
     - name: Wait for 5 minutes
       if: steps.check_quotes.outputs.quotes_available == 'true'
