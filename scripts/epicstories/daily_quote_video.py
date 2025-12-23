@@ -10,12 +10,14 @@ import imageio_ffmpeg
 # from moviepy import ImageClip, VideoFileClip, AudioFileClip, CompositeVideoClip, ColorClip, concatenate_videoclips (Unused for now)
 
 
-import youtube_uploader
+
 
 # Path helpers for reorganized structure
 import sys
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT_DIR)
+
+import youtube_uploader
 
 def get_data_path(filename):
     return os.path.join(ROOT_DIR, "data", "epicstories", filename)
