@@ -104,11 +104,12 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        if git diff --quiet shayari/shayari.json; then
-          echo "No changes to shayari/shayari.json"
+        if git diff --quiet data/shayari; then
+          echo "No changes to data/shayari/"
         else
           git add data/shayari/shayari*.json
           git commit -m "Remove published shayari [skip ci]"
+          git reset --hard
           git pull --rebase origin main
           git push
         fi
@@ -116,7 +117,7 @@ jobs:
     - name: Clean up credentials
       if: always()
       run: |
-        rm -f client_secrets.json shayari/token_shayari.pickle
+        rm -f client_secrets.json token_shayari.pickle
     
     - name: Workflow summary
       if: always()
