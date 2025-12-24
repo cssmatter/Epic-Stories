@@ -188,11 +188,10 @@ def create_shayari_image(shayari_data, output_image_path=None):
     # Render Quote
     actual_h = render_hindi_text(canvas, quote_text, font_path, 45, width - 100, start_y, skia.ColorBLACK)
     
-    # Render Author only if not unknown
-    if shayari_data['author'] != "अज्ञात":
-        author_text = f"- {shayari_data['author']} -"
-        author_y = start_y + actual_h + 80
-        render_hindi_text(canvas, author_text, font_path, 40, width - 100, author_y, skia.ColorBLACK)
+    # Render Author
+    author_text = f"- {shayari_data['author']} -"
+    author_y = start_y + actual_h + 80
+    render_hindi_text(canvas, author_text, font_path, 40, width - 100, author_y, skia.ColorBLACK)
     
     image = surface.makeImageSnapshot()
     image.save(output_image_path, skia.kPNG)
