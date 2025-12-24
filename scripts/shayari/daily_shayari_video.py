@@ -12,6 +12,10 @@ import sys
 import shutil
 
 # Add parent directory to sys.path to import youtube_uploader
+# Force utf-8 output for Windows console
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding='utf-8')
+
 parent_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if parent_dir not in sys.path:
     sys.path.append(parent_dir)
@@ -33,6 +37,41 @@ def get_asset_path(filename):
 # Helper to get output paths
 def get_output_path(filename):
     return os.path.join(parent_dir, filename)
+
+CATEGORY_MUSIC_MAPPING = {
+    "Broken Heart (टूटे दिल की शायरी)": "I Cannot Forget You Yet - The Brothers Records.mp3",
+    "Alone Vibes (तन्हाई शायरी)": "A Quiet Thought - Wayne Jones.mp3",
+    "Sad Reality (कड़वा सच)": "Ether Real - Density & Time.mp3",
+    "First Love (पहला प्यार)": "Beneath the Moonlight - Aaron Kenny.mp3",
+    "Romantic Status (रोमांटिक शायरी)": "English Country Garden - Aaron Kenny.mp3",
+    "Deep Love (बेइंतहा मोहब्बत)": "White River - Aakash Gandhi.mp3",
+    "Badmash Attitude (तेवर शायरी)": "Spine Chilling Cardiac Tension - Biz Baz Studio.mp3",
+    "Self-Respect (आत्मसम्मान)": "The New Order - Aaron Kenny.mp3",
+    "Zindagi Motivation (प्रेरणादायक)": "Dreaming Blue - Sextile.mp3",
+    "Maa-Papa Special": "Glory Be - Patrick Patrikios.mp3",
+    "Unrequited Love (एकतरफा प्यार)": "Spirit of the Dead - Aakash Gandhi.mp3",
+    "Eternal Love (अमर प्रेम)": "Eyes of Glory - Aakash Gandhi.mp3",
+    "Royal (शाही)": "Symphony No. 5 (by Beethoven) - Beethoven.mp3",
+    "Success (सफलता)": "Cavalry - Aakash Gandhi.mp3",
+    "Loyalty (वफादारी)": "Recollections - Asher Fulero.mp3",
+    "Brother (भाई)": "Home - JHS Pedals.mp3",
+    "Sister (बहन)": "Nocturne - Asher Fulero.mp3",
+    "Friendship (दोस्ती)": "The Battle of 1066 - Patrick Patrikios.mp3",
+    "Sacrifice in Love (प्रेम में त्याग)": "Touching Moment - Wayne Jones.mp3",
+    "Enemies & Rivals (दुश्मनी)": "Lurking Shadows - Myuu.mp3",
+    "Hard Work (कठिन परिश्रम)": "Dig Deep - RW Smith.mp3",
+    "Leadership (नेतृत्व)": "Apollo - Telecasted.mp3",
+    "Trust (विश्वास)": "Venkatesananda - Jesse Gallagher.mp3",
+    "Father (पिता)": "Bach Cello Suite No. 1, G Major, Prelude - Cooper Cannell.mp3",
+    "Mother (माँ)": "Alone - Aakash Gandhi.mp3",
+    "Patience (धैर्य)": "Waterfall - Aakash Gandhi.mp3",
+    "Betrayal (धोखा)": "Rapid Unscheduled Disassembly - The Grey Room _ Density & Time.mp3",
+    "Courage (साहस)": "The Awakening - Patrick Patrikios.mp3",
+    "Respect (सम्मान)": "Oasis dreams - Patrick Patrikios.mp3",
+    "Time (समय)": "Red Shift - The Grey Room _ Density & Time.mp3",
+    "Self-Confidence (आत्मविश्वास)": "Something is Going On - Godmode.mp3",
+    "Discipline (अनुशासन)": "Tabla Compositions in Teentaal - Sandeep Das.mp3"
+}
 
 def get_random_shayari(json_file_path):
     """Reads a random shayari from the JSON file."""
@@ -149,9 +188,11 @@ def create_shayari_image(shayari_data, output_image_path=None):
     # Render Quote
     actual_h = render_hindi_text(canvas, quote_text, font_path, 45, width - 100, start_y, skia.ColorBLACK)
     
-    # Render Author
-    author_y = start_y + actual_h + 80
-    render_hindi_text(canvas, author_text, font_path, 40, width - 100, author_y, skia.ColorBLACK)
+    # Render Author only if not unknown
+    if shayari_data['author'] != "अज्ञात":
+        author_text = f"- {shayari_data['author']} -"
+        author_y = start_y + actual_h + 80
+        render_hindi_text(canvas, author_text, font_path, 40, width - 100, author_y, skia.ColorBLACK)
     
     image = surface.makeImageSnapshot()
     image.save(output_image_path, skia.kPNG)
@@ -161,7 +202,15 @@ def create_video(shayari_data, image_path, output_video_path="daily_shayari_vide
     """Creates a video with static background image, semi-transparent video, and music."""
     bg_img_path = get_asset_path("shayari-background.jpg")
     bg_video_path = get_asset_path("clouds.mp4")
-    bg_music_path = get_asset_path("Dhun.mp3")
+    
+    # Determine music based on category
+    category = shayari_data.get('authnameinenglish', '')
+    # Check if category matches any key in mapping (case-insensitive or exact match)
+    # The user provided exact keys, but let's be safe and try efficient lookup
+    music_filename = CATEGORY_MUSIC_MAPPING.get(category, "Dhun.mp3")
+    
+    bg_music_path = get_asset_path(music_filename)
+    print(f"Selected music: {music_filename} for category: {category}")
     ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
     
     has_video = os.path.exists(bg_video_path)
