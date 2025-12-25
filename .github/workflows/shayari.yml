@@ -2,9 +2,15 @@ name: Upload Shayari Video to YouTube
 
 on:
   schedule:
-    # Run every 6 hours (at 00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
-  workflow_dispatch: # Allow manual trigger
+    - cron: '30 18 * * *'  # 12:00 AM IST
+    - cron: '30 21 * * *'  # 3:00 AM IST
+    - cron: '30 3 * * *'   # 9:00 AM IST
+    - cron: '30 6 * * *'   # 12:00 PM IST
+    - cron: '30 9 * * *'   # 3:00 PM IST
+    - cron: '30 12 * * *'  # 6:00 PM IST
+    - cron: '30 15 * * *'  # 9:00 PM IST
+
+  workflow_dispatch:
 
 permissions:
   contents: write  # Required to commit changes back to the repository
