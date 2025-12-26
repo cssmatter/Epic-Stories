@@ -139,6 +139,16 @@ def generate_metadata(entry_data):
     description = f"{entry_data['description']}\n\n{hashtags_str}\n\n#shorts #trending #godmessage"
     title = f"God's Message: {quote[:50]}..." if len(quote) > 50 else f"God's Message: {quote}"
     
+    # Save metadata for Instagram
+    metadata = {
+        "title": title,
+        "description": description.strip(),
+        "keywords": keywords_str,
+        "hashtags": hashtags_str
+    }
+    with open("instagram_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=4)
+        
     return title, description, keywords_str
 
 def remove_entry_from_json(json_file_path, entry_to_remove):

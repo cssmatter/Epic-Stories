@@ -77,8 +77,7 @@ jobs:
         else
           git add data/godisgreatest/data.json
           git commit -m "Remove published god message [skip ci]"
-          # No need to pull/pust yet, will be handled by final step or next jobs
-          # But for safety in single job:
+          git reset --hard
           git pull --rebase origin main
           git push
         fi
