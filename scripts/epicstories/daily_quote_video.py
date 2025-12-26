@@ -207,7 +207,8 @@ def generate_metadata(quote_data):
         "keywords": keywords,
         "hashtags": hashtags
     }
-    with open("instagram_metadata.json", "w", encoding="utf-8") as f:
+    metadata_path = os.path.join(ROOT_DIR, "epicstories_metadata.json")
+    with open(metadata_path, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4)
         
     return title, description, keywords

@@ -146,7 +146,8 @@ def generate_metadata(entry_data):
         "keywords": keywords_str,
         "hashtags": hashtags_str
     }
-    with open("instagram_metadata.json", "w", encoding="utf-8") as f:
+    metadata_path = os.path.join(ROOT_DIR, "godisgreatest_metadata.json")
+    with open(metadata_path, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4)
         
     return title, description, keywords_str

@@ -30,3 +30,7 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Metadata
+*_metadata.json
+instagram_metadata.json

@@ -319,7 +319,7 @@ Enjoy this beautiful Hindi Shayari. Subscribe for more daily Shayari status!
         "hashtags": hashtags
     }
     # Save at root so the uploader finds it
-    root_metadata_path = os.path.join(parent_dir, "instagram_metadata.json")
+    root_metadata_path = os.path.join(parent_dir, "shayari_metadata.json")
     with open(root_metadata_path, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=4, ensure_ascii=False)
 

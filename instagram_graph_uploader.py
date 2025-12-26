@@ -90,23 +90,25 @@ class InstagramGraphUploader:
             print(f"Error publishing: {response}")
             return None
 
-if __name__ == "__main__":
-    import json
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Upload a Reel to Instagram.")
+    parser.add_argument("video_url", nargs="?", help="URL of the video to upload")
+    parser.add_argument("caption", nargs="?", help="Caption for the Reel")
+    parser.add_argument("--metadata", help="Path to JSON metadata file")
+    
+    args = parser.parse_args()
     
     # Credentials from environment variables
     TOKEN = os.getenv("IG_ACCESS_TOKEN")
     ACCOUNT_ID = os.getenv("IG_BUSINESS_ID")
     
-    if len(sys.argv) < 2:
-        print("Usage: python instagram_graph_uploader.py <VIDEO_URL> [CAPTION]")
-        sys.exit(1)
-
-    video_url = sys.argv[1]
-    caption = sys.argv[2] if len(sys.argv) > 2 else None
+    video_url = args.video_url
+    caption = args.caption
+    metadata_file = args.metadata or "instagram_metadata.json"
 
     # If no caption provided, try to load from metadata file
     if caption is None:
-        metadata_file = "instagram_metadata.json"
         if os.path.exists(metadata_file):
             try:
                 with open(metadata_file, "r", encoding="utf-8") as f:
@@ -117,7 +119,13 @@ if __name__ == "__main__":
                 print(f"Error loading metadata file: {e}")
                 caption = ""
         else:
+            if args.metadata: # Only warn if user explicitly provided a path that doesn't exist
+                print(f"Warning: Metadata file {metadata_file} not found.")
             caption = ""
+
+    if not video_url:
+        print("Error: VIDEO_URL is required.")
+        sys.exit(1)
 
     if not TOKEN or not ACCOUNT_ID:
         print("Error: IG_ACCESS_TOKEN and IG_BUSINESS_ID environment variables are required.")
