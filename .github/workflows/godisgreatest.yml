@@ -1,0 +1,89 @@
+name: Upload God Is Greatest Video to YouTube
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours (0:00, 6:00, 12:00, 18:00 UTC)
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-god-is-greatest:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg fonts-liberation fonts-liberation2 fonts-indic fonts-noto-core libfontconfig1 libfreetype6 libgl1 libegl1 libopengl0
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Restore YouTube credentials
+      env:
+        CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+        GODISGREATEST_TOKEN: ${{ secrets.GODISGREATEST_TOKEN_PICKLE_BASE64 }}
+      run: |
+        echo "$CLIENT_SECRETS" > client_secrets.json
+        echo "$GODISGREATEST_TOKEN" | base64 -d > token_godisgreatest.pickle
+    
+    - name: Run video generation and upload
+      run: |
+        python scripts/godisgreatest/daily_god_message_video.py
+
+    - name: Upload to Instagram Reels
+      env:
+        IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN_GODISGREATEST }}
+        IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_GODISGREATEST }}
+      run: |
+        if [ -f "daily_god_message_video.mp4" ]; then
+          echo "Uploading video to temporary host..."
+          VIDEO_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@daily_god_message_video.mp4" https://catbox.moe/user/api.php)
+          
+          if [[ $VIDEO_URL != http* ]]; then
+            echo "Error: Failed to get public URL. Response: $VIDEO_URL"
+            exit 1
+          fi
+          
+          echo "Public Video URL: $VIDEO_URL"
+          # instagram_graph_uploader.py takes VIDEO_URL and uses description from instagram_metadata.json by default
+          python instagram_graph_uploader.py "$VIDEO_URL"
+        else
+          echo "Video file not found, skipping IG upload."
+        fi
+    
+    - name: Commit updated data.json
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        if git diff --quiet data/godisgreatest; then
+          echo "No changes to data/godisgreatest/"
+        else
+          git add data/godisgreatest/data.json
+          git commit -m "Remove published god message [skip ci]"
+          # No need to pull/pust yet, will be handled by final step or next jobs
+          # But for safety in single job:
+          git pull --rebase origin main
+          git push
+        fi
+
+    - name: Clean up credentials
+      if: always()
+      run: |
+        rm -f client_secrets.json token_godisgreatest.pickle
