@@ -90,6 +90,8 @@ class InstagramGraphUploader:
             print(f"Error publishing: {response}")
             return None
 
+if __name__ == "__main__":
+    import json
     import argparse
     
     parser = argparse.ArgumentParser(description="Upload a Reel to Instagram.")
