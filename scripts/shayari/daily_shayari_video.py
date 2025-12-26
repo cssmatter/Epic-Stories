@@ -197,7 +197,7 @@ def create_shayari_image(shayari_data, output_image_path=None):
     image.save(output_image_path, skia.kPNG)
     return output_image_path
 
-def create_video(shayari_data, image_path, output_video_path="daily_shayari_video.mp4", duration=20):
+def create_video(shayari_data, image_path, output_video_path="daily_shayari_video.mp4", duration=10):
     """Creates a video with static background image, semi-transparent video, and music."""
     bg_img_path = get_asset_path("shayari-background.jpg")
     bg_video_path = get_asset_path("clouds.mp4")

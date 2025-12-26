@@ -115,7 +115,7 @@ def create_moment_image(moment_data, output_image_path="temp_moment_image.png"):
     img.save(output_image_path, "PNG")
     return output_image_path
 
-def create_video(moment_data, image_path, output_video_path="daily_moments_video.mp4", duration=20):
+def create_video(moment_data, image_path, output_video_path="daily_moments_video.mp4", duration=10):
     """Creates a video with background, music, and overlaid image using FFMPEG directly."""
     
     # Assets
