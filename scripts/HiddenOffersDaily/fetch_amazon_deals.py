@@ -7,9 +7,10 @@ import datetime
 from urllib.parse import quote
 
 # Amazon PA-API 5.0 Credentials
-ACCESS_KEY = "AKPAM1W8GA1766828509"
-SECRET_KEY = os.environ.get("AMAZON_SECRET_KEY", "ypZeAqs2CTIOV8GuIMIlskXxroivwVz+VadAQjKr")
-PARTNER_TAG = os.environ.get("AMAZON_PARTNER_TAG", "booksmanish-20")
+# Amazon PA-API 5.0 Credentials (Set these in GitHub Secrets)
+ACCESS_KEY = os.environ.get("AMAZON_ACCESS_KEY", "")
+SECRET_KEY = os.environ.get("AMAZON_SECRET_KEY", "")
+PARTNER_TAG = os.environ.get("AMAZON_PARTNER_TAG", "")
 REGION = "us-east-1"
 HOST = "webservices.amazon.com"
 ENDPOINT = "https://webservices.amazon.com/paapi5/searchitems"

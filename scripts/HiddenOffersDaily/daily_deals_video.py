@@ -1,6 +1,7 @@
 import json
 import os
 import requests
+import sys
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 import subprocess
@@ -11,6 +12,10 @@ from gtts import gTTS
 
 # Path helpers
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT_DIR)
+
+import youtube_uploader
+
 DATA_FILE = os.path.join(ROOT_DIR, "data", "HiddenOffersDaily", "products.json")
 OUTPUT_VIDEO = os.path.join(ROOT_DIR, "hidden_offers_daily_video.mp4")
 BG_MUSIC = os.path.join(ROOT_DIR, "assets", "epicstories", "background-music.mp3")
@@ -227,8 +232,6 @@ def create_video(products):
             os.remove(p)
     
     print(f"Video created: {OUTPUT_VIDEO}")
-
-import youtube_uploader
 
 def remove_product_from_json(product_to_remove):
     """Removes a specific product from products.json after successful upload."""
