@@ -1,0 +1,59 @@
+name: HiddenOffersDaily - YouTube Upload
+
+on:
+  schedule:
+    # Run every 140 minutes. 
+    # 140 minutes is ~2.33 hours. 
+    # This is tricky with cron, so we use a sequence that repeats.
+    # 0, 140, 280, 420, 560, 700, 840, 980, 1120, 1260, 1400 (minutes from midnight)
+    # Cron: 0 0, 2 20, 4 40, 7 0, 9 20, 11 40, 14 0, 16 20, 18 40, 21 0, 23 20
+    - cron: '0 0,7,14,21 * * *'
+    - cron: '20 2,9,16,23 * * *'
+    - cron: '40 4,11,18 * * *'
+  workflow_dispatch:
+
+jobs:
+  upload-video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install gtts mutagen
+
+      - name: Set up FFmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v2
+        with:
+          ffmpeg-version: release
+
+      - name: Restore YouTube credentials
+        env:
+          CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+          TOKEN_PICKLE: ${{ secrets.TOKEN_HIDDEN_OFFERS_BASE64 }}
+        run: |
+          echo "$CLIENT_SECRETS" > client_secrets.json
+          echo "$TOKEN_PICKLE" | base64 -d > token_hidden_offers.pickle
+
+      - name: Generate and Upload Video
+        run: python scripts/HiddenOffersDaily/daily_deals_video.py
+
+      - name: Commit and push changes (products removal)
+        # Note: We use the same TOKEN_PICKLE_BASE64 secret. 
+        # If the user has multiple channels, they should use unique secret names or separate repos.
+        # For now, we assume this repo is dedicated to HiddenOffersDaily or the secret is updated.
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/HiddenOffersDaily/products.json
+          git commit -m "Processed Deal Uploaded - $(date)" || echo "No changes to commit"
+          git push
