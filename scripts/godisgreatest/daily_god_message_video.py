@@ -137,7 +137,7 @@ def generate_metadata(entry_data):
     keywords_str = ",".join(all_keywords)
     
     description = f"{entry_data['description']}\n\n{hashtags_str}\n\n#shorts #trending #godmessage"
-    title = f"God's Message: {quote[:50]}..." if len(quote) > 50 else f"God's Message: {quote}"
+    title = f"{quote[:50]}..." if len(quote) > 50 else quote
     
     # Save metadata for Instagram
     metadata = {
