@@ -1,17 +1,5 @@
 [
     {
-        "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
-        "author": "James Clear",
-        "category": "Book",
-        "image_url": "https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg",
-        "price": "$12.99",
-        "savings": "$14.01",
-        "savings_percentage": 52,
-        "is_prime": true,
-        "description": "An Easy & Proven Way to Build Good Habits & Break Bad Ones.\nOver 10 million copies sold.\nTiny Changes, Remarkable Results.",
-        "url": "https://www.amazon.com/dp/0735211299"
-    },
-    {
         "title": "The Psychology of Money: Timeless lessons on wealth, greed, and happiness",
         "author": "Morgan Housel",
         "category": "Book",
