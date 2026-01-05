@@ -42,6 +42,20 @@ def get_authenticated_service(token_file='token.pickle'):
         
         if not creds:
             if is_ci:
+                # Map token filenames to their corresponding secret names in GitHub
+                secret_map = {
+                    'token_shayari.pickle': 'SHAYARI_TOKEN_PICKLE_BASE64',
+                    'token.pickle': 'TOKEN_PICKLE_BASE64',
+                    'token_godisgreatest.pickle': 'GOD_TOKEN_PICKLE_BASE64',
+                    'token_hidden_offers.pickle': 'HIDDEN_OFFERS_TOKEN_PICKLE_BASE64'
+                }
+                secret_name = secret_map.get(token_file, 'TOKEN_PICKLE_BASE64')
+                
+                # Determine refresh script
+                refresh_script = ".\\auth_and_get_token.ps1" if "shayari" in token_file else "python update_github_token.py"
+                if "god" in token_file:
+                    refresh_script = "python scripts/godisgreatest/daily_god_message_video.py" # Local run triggers auth
+                
                 raise RuntimeError(
                     f"\n{'='*70}\n"
                     f"TOKEN EXPIRED OR MISSING IN CI ENVIRONMENT\n"
@@ -49,10 +63,11 @@ def get_authenticated_service(token_file='token.pickle'):
                     f"The YouTube token ({token_file}) is missing or could not be refreshed.\n"
                     f"In a CI/GitHub Actions environment, we cannot open a browser for re-authentication.\n\n"
                     f"TO FIX THIS:\n"
-                    f"1. Run '.\\auth_and_get_token.ps1' locally in PowerShell.\n"
+                    f"1. Run the appropriate script locally to refresh the token:\n"
+                    f"   - {refresh_script}\n"
                     f"2. Complete the browser authentication.\n"
                     f"3. Copy the BASE64 string from the output.\n"
-                    f"4. Update the SHAYARI_TOKEN_PICKLE_BASE64 secret in GitHub repository settings.\n"
+                    f"4. Update the '{secret_name}' secret in GitHub repository settings.\n"
                     f"{'='*70}\n"
                 )
 
