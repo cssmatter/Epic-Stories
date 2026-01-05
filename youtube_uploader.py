@@ -46,7 +46,7 @@ def get_authenticated_service(token_file='token.pickle'):
                 secret_map = {
                     'token_shayari.pickle': 'SHAYARI_TOKEN_PICKLE_BASE64',
                     'token.pickle': 'TOKEN_PICKLE_BASE64',
-                    'token_godisgreatest.pickle': 'GOD_TOKEN_PICKLE_BASE64',
+                    'token_godisgreatest.pickle': 'GODISGREATEST_TOKEN_PICKLE_BASE64',
                     'token_hidden_offers.pickle': 'HIDDEN_OFFERS_TOKEN_PICKLE_BASE64'
                 }
                 secret_name = secret_map.get(token_file, 'TOKEN_PICKLE_BASE64')
