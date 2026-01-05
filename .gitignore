@@ -5,14 +5,6 @@ token_base64.txt
 b64_token.txt
 session.json
 
-# Generated files
-*.mp4
-*.mp4.jpg
-*.png
-*.jpg
-temp_*
-*_metadata.json
-
 # Python
 __pycache__/
 *.py[cod]
