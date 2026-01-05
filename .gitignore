@@ -1,12 +1,17 @@
 # Credentials and tokens
 client_secrets.json
-token.pickle
+*.pickle
 token_base64.txt
+b64_token.txt
+session.json
 
 # Generated files
 *.mp4
-temp_quote_image.png
-daily_quote_videoTEMP_MPY_wvf_snd.mp4
+*.mp4.jpg
+*.png
+*.jpg
+temp_*
+*_metadata.json
 
 # Python
 __pycache__/
@@ -19,6 +24,7 @@ __pycache__/
 venv/
 env/
 ENV/
+.env
 
 # IDE
 .vscode/
@@ -30,7 +36,4 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
-
-# Metadata
-*_metadata.json
-instagram_metadata.json
+desktop.ini
