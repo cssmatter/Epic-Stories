@@ -41,6 +41,21 @@ def get_authenticated_service(token_file='token.pickle'):
                 creds = None
         
         if not creds:
+            if is_ci:
+                raise RuntimeError(
+                    f"\n{'='*70}\n"
+                    f"TOKEN EXPIRED OR MISSING IN CI ENVIRONMENT\n"
+                    f"{'='*70}\n"
+                    f"The YouTube token ({token_file}) is missing or could not be refreshed.\n"
+                    f"In a CI/GitHub Actions environment, we cannot open a browser for re-authentication.\n\n"
+                    f"TO FIX THIS:\n"
+                    f"1. Run '.\\auth_and_get_token.ps1' locally in PowerShell.\n"
+                    f"2. Complete the browser authentication.\n"
+                    f"3. Copy the BASE64 string from the output.\n"
+                    f"4. Update the SHAYARI_TOKEN_PICKLE_BASE64 secret in GitHub repository settings.\n"
+                    f"{'='*70}\n"
+                )
+
             print("Starting new authentication flow...")
             client_secrets_file = 'client_secrets.json'
             if not os.path.exists(client_secrets_file):
@@ -56,9 +71,10 @@ def get_authenticated_service(token_file='token.pickle'):
                 prompt='consent'
             )
             
-        # Save the credentials for the next run
-        with open(token_file, 'wb') as token:
-            pickle.dump(creds, token)
+        # Save the credentials for the next run (only if not in CI, as secrets are immutable)
+        if not is_ci:
+            with open(token_file, 'wb') as token:
+                pickle.dump(creds, token)
             
     return build('youtube', 'v3', credentials=creds)
 
