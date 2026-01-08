@@ -58,7 +58,9 @@ def generate_social_metadata(quote_data):
     hook = quote_data.get("hook_text", "")
     verse = quote_data.get("verse_number", "")
     quote_sans = quote_data.get("quote_hindi_sansrikt", "")
-    meaning = quote_data.get("meaning_simple_hindi", "")
+    meaning_hindi = quote_data.get("meaning_simple_hindi", "")
+    meaning_hinglish = quote_data.get("meaning_simple_hinglish", "")
+    meaning_english = quote_data.get("meaning_english", "")
     cta = quote_data.get("cta", "")
     channel = quote_data.get("channel_name", "") # unused in text body if purely handle
     category = quote_data.get("category", "Bhagavad Gita")
@@ -80,7 +82,11 @@ def generate_social_metadata(quote_data):
 
 {quote_sans}
 
-{meaning}
+हिंदी: {meaning_hindi}
+
+Hinglish: {meaning_hinglish}
+
+English: {meaning_english}
 
 {cta}
 
