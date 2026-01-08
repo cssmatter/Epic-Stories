@@ -17,8 +17,9 @@ VIDEO_FILE = os.path.join(ROOT_DIR, "devotional_hindi_quote.mp4")
 BACKGROUND_IMAGE = os.path.join(ROOT_DIR, "assets", "devotional_hindi", "current_bg.png")
 TOKEN_FILE_YOUTUBE = os.path.join(ROOT_DIR, "token_devotional.pickle")
 
-# Instagram Token (Ideally from env var for security, but hardcoded as per prompt for now or env var in CI)
-INSTAGRAM_ACCESS_TOKEN = os.environ.get("BHAKTIDAILY_INSTAGRAM_TOKEN", "EAAc4XxpI2FYBQTJcczyPV64UM2mPrDTbQYMR2HwQ8YfRk2pI3nxY6bzvQKswiZAECUJSInGhFDrYy63YEZBu6fupnjKAZB8TDCDgFas9JuUAc2nuqYrObNOsIpckTKpamsMTU32KLHnIHSE0tqCgAvTG5nbOUTZBrT6FJq5N1y3YheYMCSp4ZASBp2Qh8ohdIbAZDZD")
+# Social Media Tokens
+INSTAGRAM_ACCESS_TOKEN = os.environ.get("BHAKTI_INSTAGRAM_ACCESS_TOKEN", "")
+FACEBOOK_ACCESS_TOKEN = os.environ.get("BHAKTI_FACEBOOK_ACCESS_TOKEN", "")
 INSTAGRAM_USER_ID = "me" # Or specific Page ID if "me" doesn't work with this token type, usually it's Page ID
 
 def load_first_quote():
@@ -161,7 +162,7 @@ def upload_to_facebook(video_path, caption):
     url = f"https://graph-video.facebook.com/v18.0/{fb_page_id}/videos"
     
     payload = {
-        'access_token': INSTAGRAM_ACCESS_TOKEN,
+        'access_token': FACEBOOK_ACCESS_TOKEN,
         'description': caption,
         # 'is_reel': 'true', # Optional, often auto-detected or treated as video
     }
