@@ -147,7 +147,12 @@ def upload_to_facebook(video_path, caption):
         print("Video file not found for Facebook.")
         return False
         
-    url = f"https://graph-video.facebook.com/v18.0/{INSTAGRAM_USER_ID}/videos"
+    # Get Facebook Page ID from environment
+    fb_page_id = os.environ.get("FB_PAGE_ID", INSTAGRAM_USER_ID)
+    if fb_page_id == "me":
+        print("[WARNING] FB_PAGE_ID not set. Using 'me' may not work for Reels.")
+    
+    url = f"https://graph-video.facebook.com/v18.0/{fb_page_id}/videos"
     
     payload = {
         'access_token': INSTAGRAM_ACCESS_TOKEN,
