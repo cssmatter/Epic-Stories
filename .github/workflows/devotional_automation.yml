@@ -67,6 +67,7 @@ jobs:
     - name: Upload and Cleanup
       env:
         BHAKTIDAILY_INSTAGRAM_TOKEN: ${{ secrets.BHAKTIDAILY_INSTAGRAM_TOKEN }}
+        IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_BHAKTI }}
       run: |
         python scripts/devotional_hindi/upload_devotional_video.py
 

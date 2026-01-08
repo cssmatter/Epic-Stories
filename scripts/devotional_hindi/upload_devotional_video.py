@@ -91,41 +91,51 @@ def generate_social_metadata(quote_data):
 # --- Instagram Logic ---
 
 def upload_to_instagram(video_path, caption):
+    """
+    Uploads video to Instagram by first hosting on catbox.moe, then using Graph API.
+    """
     print("\n--- Starting Instagram Upload ---")
     if not os.path.exists(video_path):
         print("Video file not found for Instagram.")
-        return
+        return False
         
-    # 1. Initialize Upload
-    url_init = f"https://graph.facebook.com/v18.0/{INSTAGRAM_USER_ID}/media"
-    
-    # Since we are running locally/CI, uploading a local file to Graph API directly isn't supported 
-    # for /media endpoint unless it's a public URL. 
-    # HOWEVER, valid for Instagram Content Publishing API:
-    # "The video_url parameter is required." -> Must be a public URL.
-    # If running on GitHub Actions, we don't have a public URL for the file roughly.
-    # Wait, usually automation tools upload to a hosting service first or use the 'resumable upload' protocol if supported.
-    # The 'Instagram Graph API' for Reels requires a hosted URL.
-    
-    # ALTERNATIVE: Use the Container ID approach with a hosted URL.
-    # If we cannot host it, we cannot upload via Graph API easily from a local runner without a server.
-    # BUT, recently Graph API allows resumable uploads for some endpoints? 
-    # Actually, for 'Instagram Graph API', usually you provide 'video_url'.
-    
-    # Since the user provided a token and asked to "implement upload script", 
-    # if this is running on GitHub Actions, the file is meaningless unless stored.
-    # We might need to rely on YouTube upload first? No, YouTube link doesn't help IG upload.
-    
-    # FOR NOW: I will implement the logic assuming a 'hosted_url' is available OR 
-    # if there's a workaround. 
-    # Actually, there is NO direct local file upload for IG Reels API. It requires a public URL.
-    # I will add a placeholder warning. 
-    # OR, we skip IG for now if we can't host it?
-    # LIMITATION: Without a public URL, IG API fails.
-    
-    print("[WARNING] Instagram API requires a publicly accessible video URL.")
-    print("Skipping Instagram Upload (Requires hosting logic not currently available).")
-    # In a real scenario, we'd upload to S3/GCS first, then pass that URL to FB.
+    try:
+        # Step 1: Upload to temporary public host (catbox.moe)
+        print("Uploading to temporary host for public URL...")
+        files = {'fileToUpload': open(video_path, 'rb')}
+        data = {'reqtype': 'fileupload'}
+        
+        response = requests.post('https://catbox.moe/user/api.php', files=files, data=data, timeout=120)
+        video_url = response.text.strip()
+        
+        if not video_url.startswith('http'):
+            print(f"Error: Failed to get public URL. Response: {video_url}")
+            return False
+            
+        print(f"Public Video URL: {video_url}")
+        
+        # Step 2: Use Instagram Graph API
+        sys.path.insert(0, ROOT_DIR)
+        from instagram_graph_uploader import InstagramGraphUploader
+        
+        # Get Instagram Business ID from env (different from "me")
+        instagram_id = os.environ.get("IG_BUSINESS_ID", INSTAGRAM_USER_ID)
+        
+        uploader = InstagramGraphUploader(INSTAGRAM_ACCESS_TOKEN, instagram_id)
+        success = uploader.upload_reel(video_url, caption)
+        
+        if success:
+            print("Instagram upload successful!")
+            return True
+        else:
+            print("Instagram upload failed.")
+            return False
+            
+    except Exception as e:
+        print(f"Error uploading to Instagram: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
 
 def upload_to_facebook(video_path, caption):
     """
@@ -209,18 +219,17 @@ def main():
     # 2. Upload YouTube
     success_yt = upload_to_youtube(VIDEO_FILE, quote_data)
     
-    # 3. Upload Instagram (Placeholder) & Facebook (Real Binary Upload)
+    # 3. Upload Instagram & Facebook
     _, caption, _ = generate_social_metadata(quote_data)
+    
+    # Instagram (Using catbox.moe hosting + Graph API)
+    success_ig = upload_to_instagram(VIDEO_FILE, caption)
     
     # Facebook Reel (Uses same token)
     success_fb = upload_to_facebook(VIDEO_FILE, caption)
     
-    # Instagram (Still skipped due to URL requirement)
-    # upload_to_instagram(VIDEO_FILE, caption)
-    
-    # 4. Cleanup (Only if upload success or forced?)
-    # For automation reliability, if YouTube OR Facebook succeeds, we proceed.
-    if success_yt or success_fb:
+    # 4. Cleanup (Only if at least one upload succeeds)
+    if success_yt or success_fb or success_ig:
         remove_processed_quote()
     else:
         print("Uploads failed. Skipping cleanup to preserve data.")
