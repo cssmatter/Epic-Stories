@@ -28,6 +28,8 @@ jobs:
         sudo apt-get install -y ffmpeg
         pip install --upgrade pip
         pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+        # Fix pyworld build error: Install numpy (pinned <2 for compatibility) and cython first
+        pip install "numpy<2" cython
         pip install requests pillow click imageio-ffmpeg moviepy skia-python uharfbuzz TTS
         # Note: TTS might be heavy, ensure runner has space
 
