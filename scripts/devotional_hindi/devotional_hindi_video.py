@@ -511,8 +511,11 @@ def create_quote_videos(limit=None):
         video_duration = max(20, int(audio_duration + 10))
         print(f"Setting smart video duration (Audio + 10s): {video_duration}s")
         
+        # Actually create the video!
+        create_video(quote, bg_path, overlay_path, output_video, duration=video_duration)
+        
         if os.path.exists(output_video):
-            print(f"Video generated successfully: {output_video}")
+            print(f"✅ Video generated successfully: {output_video}")
             
         # NOTE: Cleanup (removing quote and background) is now handled by the upload script
         # to ensure successful upload before deletion.
