@@ -24,6 +24,11 @@ jobs:
 
     - name: Install dependencies
       run: |
+        # Free up disk space on GitHub runners
+        sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        sudo apt-get clean
+        df -h
+        
         sudo apt-get update
         sudo apt-get install -y ffmpeg
         pip install --upgrade pip setuptools wheel
@@ -31,10 +36,12 @@ jobs:
         # Fix pyworld build error: Install numpy/cython then pyworld with no isolation
         pip install "numpy<2" cython
         pip install pyworld --no-build-isolation
-        pip install requests pillow click imageio-ffmpeg moviepy skia-python uharfbuzz
+        pip install requests pillow click imageio-ffmpeg skia-python uharfbuzz
         # Install TTS separately with no build isolation to use our pre-built pyworld
         pip install TTS --no-build-isolation
-        # Note: TTS might be heavy, ensure runner has space
+        # Clear pip cache to save space
+        pip cache purge
+        df -h
 
     - name: Decode YouTube Token
       env:
