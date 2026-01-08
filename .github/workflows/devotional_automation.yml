@@ -56,6 +56,8 @@ jobs:
         echo $CLIENT_SECRETS > client_secrets.json
 
     - name: Generate Video
+      env:
+        COQUI_TOS_AGREED: "1"  # Auto-accept Coqui TTS non-commercial license for CI
       run: |
         python scripts/devotional_hindi/devotional_hindi_video.py --limit 1
 
