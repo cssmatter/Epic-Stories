@@ -186,8 +186,23 @@ def create_quote_overlay(quote_data, output_image_path):
     # 3. Meaning (Below Quote)
     meaning_font_size = 38
     meaning_y = quote_start_y + actual_quote_h + 80
-    render_hindi_text(canvas, meaning_text, font_path, meaning_font_size, width - 150, meaning_y, skia.ColorWHITE)
+    meaning_text = quote_data.get("meaning_meaning_simple_hindi", quote_data.get("meaning_simple_hindi", ""))
+    actual_meaning_h = render_hindi_text(canvas, meaning_text, font_path, meaning_font_size, width - 150, meaning_y, skia.ColorWHITE)
     
+    # 4. CTA (Below Meaning)
+    cta_text = quote_data.get("cta", "")
+    if cta_text:
+        cta_y = meaning_y + actual_meaning_h + 60
+        cta_font_size = 30
+        actual_cta_h = render_hindi_text(canvas, cta_text, font_path, cta_font_size, width - 150, cta_y, skia.Color(255, 215, 0)) # Gold
+
+        # 5. Channel Name (Below CTA)
+        channel_name = quote_data.get("channel_name", "")
+        if channel_name:
+            channel_y = cta_y + actual_cta_h + 40
+            channel_font_size = 24
+            render_hindi_text(canvas, channel_name, font_path, channel_font_size, width - 150, channel_y, skia.Color(200, 200, 200)) # Light Grey
+
     image = surface.makeImageSnapshot()
     image.save(output_image_path, skia.kPNG)
     return output_image_path
@@ -203,12 +218,16 @@ def clean_text_for_tts(text):
         return ""
     # Remove verse refs like "|| 1.2" or "|| 1.1-1.3"
     text = re.sub(r"\|\|\s*[\d\.\-]+", "", text)
-    # Remove the standard Hindi punctuation pipes
-    text = text.replace("|", "").replace("॥", "").replace("।", " ")
+    # Replace punctuation with pause markers for TTS
+    # "Add pause after :, |, and ," -> we replace them with `...` which normally triggers a break
+    text = text.replace("|", " ... ").replace("॥", " ... ").replace("।", " ... ")
+    text = text.replace(":", " ... ").replace(",", " ... ")
+    
     # If any decimals remain (like 1.1), replace dot with space
     text = re.sub(r"(\d)\.(\d)", r"\1 \2", text)
-    # Remove special chars that might cause issues
-    text = re.sub(r"[^\w\s\u0900-\u097F]", " ", text)
+    # Remove special chars that might cause issues (but keep basic punctuation we just added/kept)
+    # We want to keep dot . because ... uses it.
+    text = re.sub(r"[^\w\s\u0900-\u097F\.]", " ", text)
     return " ".join(text.split())
 
 def download_ai_background(prompt, output_path):
@@ -288,7 +307,11 @@ def generate_meditative_voiceover(quote_data, output_path):
     
     # 2. Meaning
     add_segment(meaning, "meaning")
-    
+
+    # 3. CTA
+    cta_text = quote_data.get('cta', '').strip()
+    add_segment(cta_text, "cta")
+
     if not segments:
         print("Error: No text found for voiceover segments.")
         return None
@@ -311,7 +334,7 @@ def generate_meditative_voiceover(quote_data, output_path):
     temp_files.append(start_delay_path)
 
     # Concatenate with pauses
-    # Flow: [2s Delay] -> Quote -> [3s Pause] -> Meaning
+    # Flow: [2s Delay] -> Quote -> [3s Pause] -> Meaning -> [2s Pause] -> CTA
     concat_list = []
     
     # Always add start delay
@@ -320,8 +343,15 @@ def generate_meditative_voiceover(quote_data, output_path):
     if len(segments) > 0:
         concat_list.append(segments[0]) # Quote
     if len(segments) > 1:
-        concat_list.append(pause_path)
+        concat_list.append(pause_path) # 3s Pause
         concat_list.append(segments[1]) # Meaning
+    if len(segments) > 2:
+        # Re-use the 2s pause (start delay) for between Meaning and CTA? Or make a new one?
+        # User requested pauses after punctuation, effectively handled by clean_text.
+        # But between major sections, explicit pause is good.
+        # Let's use the 2s delay path as a 2s separator
+        concat_list.append(start_delay_path) 
+        concat_list.append(segments[2]) # CTA
 
     # Create concat list for ffmpeg
     list_file_path = get_output_path("concat_list.txt")
@@ -481,19 +511,12 @@ def create_quote_videos(limit=None):
         video_duration = max(20, int(audio_duration + 10))
         print(f"Setting smart video duration (Audio + 10s): {video_duration}s")
         
-        create_video(quote, bg_path, overlay_path, output_video, duration=video_duration)
-        print(f"Video generated successfully: {output_video}")
-        
-        # SUCCESS! Now remove the processed quote (Index 0) from JSON
-        all_data.pop(0)
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(all_data, f, ensure_ascii=False, indent=2)
-        print(f"Successfully removed processed quote (Index 0) from {os.path.basename(json_path)}")
-        
-        # ALSO remove the background image as per user request
-        if os.path.exists(bg_path):
-            os.remove(bg_path)
-            print(f"Deleted background image {os.path.basename(bg_path)} for a fresh start next time.")
+        if os.path.exists(output_video):
+            print(f"Video generated successfully: {output_video}")
+            
+        # NOTE: Cleanup (removing quote and background) is now handled by the upload script
+        # to ensure successful upload before deletion.
+        # all_data.pop(0) ...
         
     except Exception as e:
         import traceback

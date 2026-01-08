@@ -1,0 +1,62 @@
+name: Devotional Hindi Automation
+
+on:
+  schedule:
+    - cron: '0 */4 * * *' # Every 4 hours
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Need to push changes
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GH_PAT }} # Use PAT to allow pushing back protected branch if needed
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg
+        pip install --upgrade pip
+        pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+        pip install requests pillow click imageio-ffmpeg moviepy skia-python uharfbuzz TTS
+        # Note: TTS might be heavy, ensure runner has space
+
+    - name: Decode YouTube Token
+      env:
+        TOKEN_BASE64: ${{ secrets.DEVOTIONAL_TOKEN_PICKLE_BASE64 }}
+      run: |
+        echo $TOKEN_BASE64 | base64 --decode > token_devotional.pickle
+
+    - name: Create Client Secrets File
+      env:
+        CLIENT_SECRETS: ${{ secrets.YOUTUBE_CLIENT_SECRETS }}
+      run: |
+        echo $CLIENT_SECRETS > client_secrets.json
+
+    - name: Generate Video
+      run: |
+        python scripts/devotional_hindi/devotional_hindi_video.py --limit 1
+
+    - name: Upload and Cleanup
+      env:
+        BHAKTIDAILY_INSTAGRAM_TOKEN: ${{ secrets.BHAKTIDAILY_INSTAGRAM_TOKEN }}
+      run: |
+        python scripts/devotional_hindi/upload_devotional_video.py
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add data/DevotionalHindiQuotes/data.json
+        # Only commit if there are changes
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-cleanup published devotional quote" && git push)
