@@ -15,7 +15,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.GH_PAT }} # Use PAT to allow pushing back protected branch if needed
+        token: ${{ secrets.GITHUB_TOKEN }} # Use Built-in token (requires 'contents: write' permission set above)
 
     - name: Set up Python
       uses: actions/setup-python@v4
