@@ -31,7 +31,9 @@ jobs:
         # Fix pyworld build error: Install numpy/cython then pyworld with no isolation
         pip install "numpy<2" cython
         pip install pyworld --no-build-isolation
-        pip install requests pillow click imageio-ffmpeg moviepy skia-python uharfbuzz TTS
+        pip install requests pillow click imageio-ffmpeg moviepy skia-python uharfbuzz
+        # Install TTS separately with no build isolation to use our pre-built pyworld
+        pip install TTS --no-build-isolation
         # Note: TTS might be heavy, ensure runner has space
 
     - name: Decode YouTube Token
