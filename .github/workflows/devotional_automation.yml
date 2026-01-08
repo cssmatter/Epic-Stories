@@ -37,8 +37,8 @@ jobs:
         pip install "numpy<2" cython
         pip install pyworld --no-build-isolation
         pip install requests pillow click imageio-ffmpeg skia-python uharfbuzz
-        # Pin transformers version for TTS compatibility
-        pip install "transformers<4.42"
+        # Pin transformers and torch versions for TTS compatibility
+        pip install "torch<2.6" "transformers<4.42"
         # Install TTS separately with no build isolation to use our pre-built pyworld
         pip install TTS --no-build-isolation
         # Clear pip cache to save space
