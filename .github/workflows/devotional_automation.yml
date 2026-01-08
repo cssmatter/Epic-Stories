@@ -30,7 +30,7 @@ jobs:
         df -h
         
         sudo apt-get update
-        sudo apt-get install -y ffmpeg libegl1 libgl1-mesa-glx
+        sudo apt-get install -y ffmpeg libegl1 libgl1
         pip install --upgrade pip setuptools wheel
         pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
         # Fix pyworld build error: Install numpy/cython then pyworld with no isolation
