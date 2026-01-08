@@ -64,9 +64,13 @@ def generate_social_metadata(quote_data):
     category = quote_data.get("category", "Bhagavad Gita")
     
     # Title
-    title = f"{hook} | {category} #Shorts"
+    # User Request: category + verse_number + hook_text
+    title = f"{category} | {verse} | {hook} #Shorts"
+    
+    # Ensure it fits 100 char limit
     if len(title) > 100:
-        title = f"{hook} #Shorts"
+        # Try removing category length if too long
+        title = f"{verse} | {hook} #Shorts"
         
     # Hashtags
     hashtags = "#Hinduism #BhagavadGita #Krishna #Motivation #Spiritual #DailyWisdom #Shorts #HInduQuotes #SanatanaDharma"
