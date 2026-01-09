@@ -75,8 +75,8 @@ jobs:
 
     - name: Commit and Push Changes
       run: |
-        git config --global user.name 'GitHub Action'
-        git config --global user.email 'action@github.com'
+        git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+        git config --local user.name "cssmatter"
         git add data/DevotionalHindiQuotes/data.json
         # Only commit if there are changes
         git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-cleanup published devotional quote" && git push)

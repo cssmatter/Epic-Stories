@@ -57,8 +57,8 @@ jobs:
         # If the user has multiple channels, they should use unique secret names or separate repos.
         # For now, we assume this repo is dedicated to HiddenOffersDaily or the secret is updated.
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+          git config --local user.name "cssmatter"
           git add data/HiddenOffersDaily/products.json
           git commit -m "Processed Deal Uploaded - $(date)" || echo "No changes to commit"
           git push

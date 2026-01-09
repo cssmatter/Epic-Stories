@@ -101,8 +101,8 @@ jobs:
     - name: Commit updated quotes.json
       if: steps.check_quotes.outputs.quotes_available == 'true'
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+        git config --local user.name "cssmatter"
         
         # Check if quotes.json was modified
         if git diff --quiet data/epicstories/quotes.json; then
