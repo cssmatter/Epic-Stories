@@ -79,4 +79,4 @@ jobs:
         git config --local user.name "cssmatter"
         git add data/DevotionalHindiQuotes/data.json
         # Only commit if there are changes
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-cleanup published devotional quote" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-cleanup published devotional quote" && git pull --rebase origin main && git push)

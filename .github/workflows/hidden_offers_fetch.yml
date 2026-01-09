@@ -42,4 +42,5 @@ jobs:
           git config --local user.name "cssmatter"
           git add data/HiddenOffersDaily/products.json
           git commit -m "Fetch Amazon Deals - $(date)" || echo "No changes to commit"
+          git pull --rebase origin main || true
           git push
