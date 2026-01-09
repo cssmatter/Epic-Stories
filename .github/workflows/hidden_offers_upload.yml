@@ -60,6 +60,4 @@ jobs:
           git config --local user.email "11308641+cssmatter@users.noreply.github.com"
           git config --local user.name "cssmatter"
           git add data/HiddenOffersDaily/products.json
-          git commit -m "Processed Deal Uploaded - $(date)" || echo "No changes to commit"
-          git pull --rebase origin main || true
-          git push
+          git diff --staged --quiet || (git commit -m "Processed Deal Uploaded - $(date)" && git reset --hard && git pull --rebase origin main && git push)
