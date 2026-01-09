@@ -3,8 +3,7 @@ name: Automated Contribution
 on:
   schedule:
     - cron: '0 */3 * * *'  # Runs every 3 hours
-
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:      # Allows manual triggering
 
 permissions:
   contents: write
@@ -25,12 +24,12 @@ jobs:
     
     - name: Commit and push changes
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        # Use your specific noreply email to get credit for the contribution
+        git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+        git config --local user.name "cssmatter"
         
         git add contribution.txt
         
-        # Only commit if there are changes (though in this case there should always be a change)
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
