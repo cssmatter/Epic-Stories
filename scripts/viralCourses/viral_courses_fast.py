@@ -213,8 +213,6 @@ def generate_tts_cached_offline(text, filename_seed):
     if not text or not text.strip(): return None, 0.0
 
     clean_seed = "".join(x for x in filename_seed if x.isalnum())[:20]
-    fname = f"{clean_seed}_{hash(text)}.mp3" # pyttsx3 usually saves as wav, but we can name it mp3 or wav. ffmpeg handles it. 
-    # Actually pyttsx3 saves wav by default on windows.
     fname = f"{clean_seed}_{hash(text)}.wav"
     path = os.path.join(TEMP_DIR, fname)
     
@@ -294,6 +292,19 @@ def main():
     start_time = time.time()
     
     # 1. Load Data
+    if not os.path.exists(DATA_FILE):
+        print(f"Data file not found: {DATA_FILE}")
+        return
+
+    # Cleanup any legacy .mp3 files as requested
+    print("Cleaning up legacy .mp3 files...", flush=True)
+    for f in os.listdir(TEMP_DIR):
+        if f.endswith(".mp3"):
+            try:
+                os.remove(os.path.join(TEMP_DIR, f))
+            except:
+                pass
+
     with open(DATA_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
