@@ -26,9 +26,6 @@ jobs:
           pip install -r requirements.txt
           pip install skia-python
 
-      - name: Download ffmpeg
-        run: |
-            python scripts/download_ffmpeg.py 
 
       - name: Setup Credentials
         env:
