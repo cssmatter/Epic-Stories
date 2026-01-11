@@ -485,7 +485,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/pcep-certified-entry-level-python-programmer-practice-exams-tests",
                 "youtubetitle": "PCEP Certification Practice Exam | 30 Real Exam Questions and Answers | Certified Entry-Level Python Programmer",
-                "description": "Unlock your potential as a Python developer! This video provides 30 high-quality MCQ practice questions for the PCEP \u2013 Certified Entry-Level Python Programmer certification. We cover Computer Programming Basics, Control Flow, Data Collections (Lists, Tuples, Dicts), and Functions. Each question comes with a detailed explanation to help you understand the 'why' behind the code.",
+                "description": "Unlock your potential as a Python developer! This video provides 30 high-quality MCQ practice questions for the PCEP – Certified Entry-Level Python Programmer certification. We cover Computer Programming Basics, Control Flow, Data Collections (Lists, Tuples, Dicts), and Functions. Each question comes with a detailed explanation to help you understand the 'why' behind the code.",
                 "tags": "PCEP, Python Certification, Python for Beginners, PCEP Practice Test, Entry Level Python Programmer, Python Exam Prep, Python Programming, Coding Certification",
                 "hashtags": [
                     "#PCEP",
@@ -549,7 +549,7 @@
             },
             {
                 "id": 4,
-                "domain": "Control Flow \u2013 Loops and Conditional Blocks",
+                "domain": "Control Flow – Loops and Conditional Blocks",
                 "difficulty": "Medium",
                 "question": "What will be the output of the following code snippet?\n\nx = 1\nwhile x < 5:\n    x += 2\n    if x == 3:\n        continue\n    print(x, end=' ')",
                 "options": {
@@ -563,7 +563,7 @@
             },
             {
                 "id": 5,
-                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
                 "difficulty": "Easy",
                 "question": "Which of the following is an immutable data structure in Python?",
                 "options": {
@@ -591,7 +591,7 @@
             },
             {
                 "id": 7,
-                "domain": "Control Flow \u2013 Loops and Conditional Blocks",
+                "domain": "Control Flow – Loops and Conditional Blocks",
                 "difficulty": "Hard",
                 "question": "How many times will the following loop execute?\n\nfor i in range(1, 10, 3):\n    print(i)",
                 "options": {
@@ -619,7 +619,7 @@
             },
             {
                 "id": 9,
-                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What will be the output of the following list slicing?\n\nmy_list = [10, 20, 30, 40, 50]\nprint(my_list[-3:-1])",
                 "options": {
@@ -661,7 +661,7 @@
             },
             {
                 "id": 12,
-                "domain": "Control Flow \u2013 Loops and Conditional Blocks",
+                "domain": "Control Flow – Loops and Conditional Blocks",
                 "difficulty": "Hard",
                 "question": "What is the output of the following code?\n\nfor i in range(1):\n    print(\"#\")\nelse:\n    print(\"#\")",
                 "options": {
@@ -675,7 +675,7 @@
             },
             {
                 "id": 13,
-                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "How do you add a new key-value pair 'color': 'red' to a dictionary named 'car'?",
                 "options": {
@@ -731,7 +731,7 @@
             },
             {
                 "id": 17,
-                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What is the output of: \nvals = [1, 2, 3]\ndel vals[1]\nprint(vals)",
                 "options": {
@@ -745,7 +745,7 @@
             },
             {
                 "id": 18,
-                "domain": "Control Flow \u2013 Loops and Conditional Blocks",
+                "domain": "Control Flow – Loops and Conditional Blocks",
                 "difficulty": "Medium",
                 "question": "Which statement is used to skip the rest of the current loop iteration and move to the next one?",
                 "options": {
@@ -787,7 +787,7 @@
             },
             {
                 "id": 21,
-                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
                 "difficulty": "Hard",
                 "question": "Which method is used to remove and return the last element from a list?",
                 "options": {
@@ -815,7 +815,7 @@
             },
             {
                 "id": 23,
-                "domain": "Control Flow \u2013 Loops and Conditional Blocks",
+                "domain": "Control Flow – Loops and Conditional Blocks",
                 "difficulty": "Medium",
                 "question": "What is the output of: \nif 5 > 10:\n    print(\"A\")\nelif 8 < 4:\n    print(\"B\")\nelse:\n    print(\"C\")",
                 "options": {
@@ -857,7 +857,7 @@
             },
             {
                 "id": 26,
-                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What is the output of the following?\ndct = {'one': 1, 'two': 2}\nprint(dct['three'])",
                 "options": {
@@ -885,7 +885,7 @@
             },
             {
                 "id": 28,
-                "domain": "Control Flow \u2013 Loops and Conditional Blocks",
+                "domain": "Control Flow – Loops and Conditional Blocks",
                 "difficulty": "Medium",
                 "question": "What is the output of:\nprint(\"a\", \"b\", \"c\", sep=\"-\")",
                 "options": {
@@ -944,7 +944,7 @@
                 "Master the AZ-305: Azure Solutions Architect Expert Certification Guide"
             ],
             "intro_script": {
-                "hook": "Are you ready to prove your expertise and become a Microsoft Certified Azure Solutions Architect Expert? Mastering the AZ-305 exam requires more than just knowing the services\u2014it requires understanding how to design complex, scalable, and secure cloud solutions.",
+                "hook": "Are you ready to prove your expertise and become a Microsoft Certified Azure Solutions Architect Expert? Mastering the AZ-305 exam requires more than just knowing the services—it requires understanding how to design complex, scalable, and secure cloud solutions.",
                 "summary": "In this video, we dive deep into 30 high-quality practice questions modeled after the actual Azure Solutions Architect Expert exam. We cover infrastructure, data storage, business continuity, and security to ensure you are fully prepared.",
                 "cta_intro": "Before we jump into the first question, make sure to subscribe for more cloud certification deep dives.",
                 "checkfullexamlinkindescription": "For a full set of realistic practice exams and detailed performance tracking, check out the comprehensive course link in the description below."
@@ -2349,7 +2349,7 @@
             ],
             "intro_script": {
                 "hook": "Did you know that over 35% of candidates fail the ISTQB Foundation Level exam on their first try because they focus on theory instead of the actual question logic? Today, we are breaking that cycle.",
-                "summary": "In this video, we\u2019re going through 30 comprehensive practice questions for the ISTQB CTFL 4.0 syllabus. We\u2019ll cover everything from Testing Fundamentals and SDLC to Test Techniques and Management, ensuring you understand the 'why' behind every correct answer.",
+                "summary": "In this video, we’re going through 30 comprehensive practice questions for the ISTQB CTFL 4.0 syllabus. We’ll cover everything from Testing Fundamentals and SDLC to Test Techniques and Management, ensuring you understand the 'why' behind every correct answer.",
                 "cta_intro": "Before we dive in, make sure to grab a notepad. If you find these questions helpful, don't forget to like and subscribe for more certification prep.",
                 "checkfullexamlinkindescription": "For a complete set of over 500 practice questions and full-length mock exams, check out the top-rated Udemy course link in the description below."
             },
@@ -3041,7 +3041,7 @@
                     "D": "A smart card"
                 },
                 "answer": "B",
-                "detailedexplanation": "'Something you are' refers to biometrics\u2014physical or behavioral characteristics unique to an individual. This includes fingerprints, retina scans, facial recognition, or voice patterns. PINs are 'something you know,' and hardware tokens/smart cards are 'something you have.'"
+                "detailedexplanation": "'Something you are' refers to biometrics—physical or behavioral characteristics unique to an individual. This includes fingerprints, retina scans, facial recognition, or voice patterns. PINs are 'something you know,' and hardware tokens/smart cards are 'something you have.'"
             },
             {
                 "id": 15,
@@ -3269,7 +3269,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the ISC2 CC exam! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry\u2014security is a journey, and reviewing these explanations is a huge step forward.",
+            "closing": "That wraps up our 30 practice questions for the ISC2 CC exam! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry—security is a journey, and reviewing these explanations is a huge step forward.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more cybersecurity certification content. It really helps the channel grow.",
             "next_steps": "Ready to take the next step? Click the link in the description to access our full-length ISC2 CC practice exams on Udemy, featuring detailed explanations for every single question to help you pass on your first try."
         },
@@ -4674,7 +4674,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That's 30 questions down! How did you do? If you found some of these challenging, don't worry\u2014networking is a massive field, and every mistake is a learning opportunity.",
+            "closing": "That's 30 questions down! How did you do? If you found some of these challenging, don't worry—networking is a massive field, and every mistake is a learning opportunity.",
             "cta_final": "If you enjoyed this video, hit the like button and subscribe for more IT certification prep content. Don't forget to check the link in the description for our full Network+ practice exam course.",
             "next_steps": "Next, I recommend watching our deep dive into CIDR subnetting or the OSI model to strengthen those fundamental skills. Good luck with your studies!"
         },
@@ -4692,7 +4692,7 @@
                 "CompTIA Cloud Plus Certification Mock Exam"
             ],
             "intro_script": {
-                "hook": "Are you ready to validate your expertise in maintaining and optimizing cloud infrastructure services? The CompTIA Cloud+ certification is a high-stakes exam that requires more than just memorization\u2014it requires hands-on troubleshooting and architectural knowledge.",
+                "hook": "Are you ready to validate your expertise in maintaining and optimizing cloud infrastructure services? The CompTIA Cloud+ certification is a high-stakes exam that requires more than just memorization—it requires hands-on troubleshooting and architectural knowledge.",
                 "summary": "In this video, we dive into 30 high-yield practice questions designed to mimic the official CompTIA Cloud+ exam. We cover all major domains, from Cloud Architecture and Security to Deployment and Troubleshooting.",
                 "cta_intro": "Before we start, make sure to grab a pen and paper to track your score.",
                 "checkfullexamlinkindescription": "For a complete set of practice exams and the ultimate preparation guide, check out the link in the description below."
@@ -6098,7 +6098,7 @@
                 "CISSP Exam Prep: Domain-by-Domain Review"
             ],
             "intro_script": {
-                "hook": "Are you ready to join the elite ranks of certified cybersecurity professionals? The CISSP exam is notorious for its difficulty, but today, we\u2019re breaking down the complex concepts into manageable, exam-winning strategies.",
+                "hook": "Are you ready to join the elite ranks of certified cybersecurity professionals? The CISSP exam is notorious for its difficulty, but today, we’re breaking down the complex concepts into manageable, exam-winning strategies.",
                 "summary": "In this video, we cover 30 high-quality practice questions spanning all 8 domains of the CISSP Common Body of Knowledge. We won't just give you the answers; we'll explain the 'why' behind them to help you develop the managerial mindset required to pass.",
                 "cta_intro": "Subscribe and hit the notification bell to stay updated with our latest certification prep series.",
                 "checkfullexamlinkindescription": "For the full 800+ question practice sets and detailed study guides, check the link in the description below."
@@ -6363,7 +6363,7 @@
                     "D": "Smishing"
                 },
                 "answer": "C",
-                "detailedexplanation": "Whaling is a specific form of phishing that targets 'the big fish'\u2014high-level executives like CEOs or CFOs. Because these individuals have significant authority and access, they are high-value targets for attackers."
+                "detailedexplanation": "Whaling is a specific form of phishing that targets 'the big fish'—high-level executives like CEOs or CFOs. Because these individuals have significant authority and access, they are high-value targets for attackers."
             },
             {
                 "id": 18,
@@ -6575,7 +6575,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/certified-in-risk-and-information-systems-control-crisc-exams/?referralCode=0A5F9747A154CBD014CF",
                 "youtubetitle": "CRISC Exam Practice Questions | Certified in Risk and Information Systems Control Training",
-                "description": "Master the ISACA CRISC exam with this comprehensive practice session. This video features 30 realistic exam questions covering Governance, IT Risk Assessment, Risk Response, and Information Technology. \n\nEach question includes a detailed explanation to help you understand ISACA's mindset and improve your decision-making skills for the actual test. Whether you are a risk professional or an IT auditor, this training is designed to help you pass the CRISC exam on your first attempt.\n\nTopics Covered:\n- Governance and Risk Management Frameworks\n- IT Risk Assessment Methodologies\n- Risk Response and Mitigation Strategies\n- IT Security and Information Systems Control\n\n\ud83d\udccc Get the Full CRISC Practice Exam Course here: https://www.udemy.com/course/certified-in-risk-and-information-systems-control-crisc-exams/?referralCode=0A5F9747A154CBD014CF",
+                "description": "Master the ISACA CRISC exam with this comprehensive practice session. This video features 30 realistic exam questions covering Governance, IT Risk Assessment, Risk Response, and Information Technology. \n\nEach question includes a detailed explanation to help you understand ISACA's mindset and improve your decision-making skills for the actual test. Whether you are a risk professional or an IT auditor, this training is designed to help you pass the CRISC exam on your first attempt.\n\nTopics Covered:\n- Governance and Risk Management Frameworks\n- IT Risk Assessment Methodologies\n- Risk Response and Mitigation Strategies\n- IT Security and Information Systems Control\n\n📌 Get the Full CRISC Practice Exam Course here: https://www.udemy.com/course/certified-in-risk-and-information-systems-control-crisc-exams/?referralCode=0A5F9747A154CBD014CF",
                 "tags": "CRISC, CRISC exam, ISACA, IT Risk Management, Risk Assessment, Information Systems Control, CRISC certification, CRISC practice test, IT Governance, Risk Response, CRISC study guide",
                 "hashtags": [
                     "#CRISC",
@@ -7512,7 +7512,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/aws-certified-solutions-architect-associate-practice-exams-tests/?referralCode=D490B09EDC4FA90D336A",
                 "youtubetitle": "AWS Certified Solutions Architect Associate Practice Exam Questions and Answers SAA-C03",
-                "description": "Prepare for your AWS Certified Solutions Architect \u2013 Associate (SAA-C03) exam with this comprehensive practice test. This video covers the core domains including VPC, EC2, S3, RDS, and Serverless computing. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the correct answer. \n\nGet the full exam prep suite here: https://www.udemy.com/course/aws-certified-solutions-architect-associate-practice-exams-tests/?referralCode=D490B09EDC4FA90D336A",
+                "description": "Prepare for your AWS Certified Solutions Architect – Associate (SAA-C03) exam with this comprehensive practice test. This video covers the core domains including VPC, EC2, S3, RDS, and Serverless computing. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the correct answer. \n\nGet the full exam prep suite here: https://www.udemy.com/course/aws-certified-solutions-architect-associate-practice-exams-tests/?referralCode=D490B09EDC4FA90D336A",
                 "tags": "AWS Certified Solutions Architect Associate, SAA-C03, AWS Practice Exam, AWS Training, AWS Certification, Cloud Computing, Amazon Web Services, AWS Tutorial, Solutions Architect Questions",
                 "hashtags": [
                     "#AWS",
@@ -7723,7 +7723,7 @@
                     "A": "Create an IAM user for the auditor and share the password.",
                     "B": "Give the auditor your root account credentials for 24 hours.",
                     "C": "Use IAM Roles to provide cross-account access with an External ID.",
-                    "D": "Configure a VPN between the auditor\u2019s office and your VPC."
+                    "D": "Configure a VPN between the auditor’s office and your VPC."
                 },
                 "answer": "C",
                 "detailedexplanation": "Using an IAM Role with cross-account access is the most secure method. By requiring an 'External ID,' you prevent the 'Confused Deputy' problem. This allows the auditor to assume a role in your account using their own credentials, without you needing to manage a new user or share sensitive keys."
@@ -7980,7 +7980,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/aws-certified-developer-associate-practice-exams-tests/?referralCode=559656BFFB017AB759A5",
                 "youtubetitle": "AWS Certified Developer Associate Practice Exam Questions DVA-C02 | Full Training",
-                "description": "Level up your cloud career with this comprehensive practice exam for the AWS Certified Developer \u2013 Associate (DVA-C02). This video features 30 carefully curated questions covering the official exam domains including Deployment, Security, Development with AWS Services, Refactoring, and Monitoring/Troubleshooting. Each question is followed by a detailed explanation to ensure you understand the 'why' behind every answer.\n\nReady for the full experience? Access the complete practice exam course on Udemy here: https://www.udemy.com/course/aws-certified-developer-associate-practice-exams-tests/?referralCode=559656BFFB017AB759A5",
+                "description": "Level up your cloud career with this comprehensive practice exam for the AWS Certified Developer – Associate (DVA-C02). This video features 30 carefully curated questions covering the official exam domains including Deployment, Security, Development with AWS Services, Refactoring, and Monitoring/Troubleshooting. Each question is followed by a detailed explanation to ensure you understand the 'why' behind every answer.\n\nReady for the full experience? Access the complete practice exam course on Udemy here: https://www.udemy.com/course/aws-certified-developer-associate-practice-exams-tests/?referralCode=559656BFFB017AB759A5",
                 "tags": "AWS Certified Developer Associate, DVA-C02, AWS Practice Exam, AWS Training, AWS Certification, Lambda, DynamoDB, API Gateway, AWS S3, CloudFormation, Serverless, AWS Developer Guide",
                 "hashtags": [
                     "#AWS",
@@ -8322,7 +8322,7 @@
                     "D": "It increases the storage limit of a DynamoDB table."
                 },
                 "answer": "B",
-                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB. It delivers up to a 10x performance improvement\u2014from milliseconds to microseconds\u2014even at millions of requests per second. It is API-compatible, meaning you don't need to rewrite your application logic to use it."
+                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB. It delivers up to a 10x performance improvement—from milliseconds to microseconds—even at millions of requests per second. It is API-compatible, meaning you don't need to rewrite your application logic to use it."
             },
             {
                 "id": 24,
@@ -8483,7 +8483,7 @@
                     "D": "Performance Efficiency"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Reliability pillar focuses on ensuring a workload performs its intended function correctly and consistently when it\u2019s expected to. This includes the ability to operate and test the workload through its total lifecycle. Key topics include distributed system design, recovery planning, and how to handle change. Operational Excellence is about running and monitoring systems, Security is about protecting information, and Performance Efficiency is about using computing resources efficiently."
+                "detailedexplanation": "The Reliability pillar focuses on ensuring a workload performs its intended function correctly and consistently when it’s expected to. This includes the ability to operate and test the workload through its total lifecycle. Key topics include distributed system design, recovery planning, and how to handle change. Operational Excellence is about running and monitoring systems, Security is about protecting information, and Performance Efficiency is about using computing resources efficiently."
             },
             {
                 "id": 2,
