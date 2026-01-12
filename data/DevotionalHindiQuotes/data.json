@@ -1,53 +1,5 @@
 [
   {
-    "verse_number": "1.16-18",
-    "hook_text": "पाण्डव सेना की ललकार",
-    "quote_hindi_sansrikt": "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिरः। नकुलः सहदेवश्च सुघोषमणिपुष्पकौ॥ || 1.16-18",
-    "meaning_simple_hindi": "युधिष्ठिर, नकुल और सहदेव ने भी अपने-अपने शंख बजाए। राजाओं ने मिलकर भयानक गर्जना की।",
-    "meaning_simple_hinglish": "Yudhishthir, Nakul aur Sahadev ne bhi apne-apne shankh bajaye. Rajaon ne milkar bhayanak garjana ki.",
-    "meaning_english": "King Yudhishthira blew Anantavijaya; Nakula and Sahadeva blew Sughosha and Manipushpaka respectively.",
-    "background_theme_detailed_prompt": "The five Pandava brothers standing together, heroic warriors, battlefield setting.",
-    "cta": "सत्य की जीत निश्चित है! फॉलो करें।",
-    "channel_name": "@BhaktiDailyChannel",
-    "category": "श्रीमद्भगवत् गीता - Bhagavad Gita"
-  },
-  {
-    "verse_number": "1.19",
-    "hook_text": "थर्रा उठी धरती और आकाश",
-    "quote_hindi_sansrikt": "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्। नभश्च पृथिवीं चैव तुमुलोऽभ्यनुनादयन्॥ || 1.19",
-    "meaning_simple_hindi": "उस भयानक शब्द ने आकाश और पृथ्वी को गुँजाते हुए धृतराष्ट्र के पुत्रों के हृदय विदीर्ण कर दिए।",
-    "meaning_simple_hinglish": "Us bhayanak shabd ne aakash aur prithvi ko gunjaate hue Dhritarashtra ke putro ke hridaya videern kar diye.",
-    "meaning_english": "That tumultuous sound rent the hearts of Dhritarashtra’s sons, echoing through both earth and sky.",
-    "background_theme_detailed_prompt": "Ground shaking, sky darkening, terrified faces of Kaurava soldiers from the sound wave.",
-    "cta": "धर्म की शक्ति! लाइक करें।",
-    "channel_name": "@BhaktiDailyChannel",
-    "category": "श्रीमद्भगवत् गीता - Bhagavad Gita"
-  },
-  {
-    "verse_number": "1.20",
-    "hook_text": "अर्जुन ने उठाया धनुष",
-    "quote_hindi_sansrikt": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः। प्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डवः॥ || 1.20",
-    "meaning_simple_hindi": "धृतराष्ट्र के पुत्रों को सामने खड़ा देखकर, हनुमान जी के चिह्न वाली ध्वजा वाले अर्जुन ने अपना धनुष उठाया।",
-    "meaning_simple_hinglish": "Dhritarashtra ke putro ko saamne khada dekhkar, Hanuman ji ke chihn wali dhvaja wale Arjun ne apna dhanush uthaya.",
-    "meaning_english": "Seeing Dhritarashtra’s sons marshaled, Arjuna, whose flag bore the emblem of Hanuman, took up his bow.",
-    "background_theme_detailed_prompt": "Arjuna picking up Gandiva bow, Hanuman flag waving on the chariot, sun behind him.",
-    "cta": "जय श्री राम! फॉलो करें।",
-    "channel_name": "@BhaktiDailyChannel",
-    "category": "श्रीमद्भगवत् गीता - Bhagavad Gita"
-  },
-  {
-    "verse_number": "1.21-22",
-    "hook_text": "रथ को बीच में ले चलिए",
-    "quote_hindi_sansrikt": "सेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत। यावदेतान्निरीक्षेऽहं योद्धुकामानवस्थितान्॥ || 1.21-22",
-    "meaning_simple_hindi": "अर्जुन ने कहा: हे अच्युत! मेरे रथ को दोनों सेनाओं के बीच खड़ा करें ताकि मैं लड़ने वालों को देख सकूँ।",
-    "meaning_simple_hinglish": "Arjun ne kaha: He Achyuta! Mere rath ko dono senaon ke beech khada karein taaki mein ladne walon ko dekh sakun.",
-    "meaning_english": "Arjuna said: O Krishna, please place my chariot between the two armies so that I may see those who have come here eager to fight.",
-    "background_theme_detailed_prompt": "Krishna driving the golden chariot into the empty space between two massive armies.",
-    "cta": "भगवान के सारथी बनें, शेयर करें!",
-    "channel_name": "@BhaktiDailyChannel",
-    "category": "श्रीमद्भगवत् गीता - Bhagavad Gita"
-  },
-  {
     "verse_number": "1.23",
     "hook_text": "युद्ध के प्यासे योद्धा",
     "quote_hindi_sansrikt": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः। धार्तराष्ट्रस्य दुर्बुद्धेर्युद्धे प्रियचिकीर्षवः॥ || 1.23",
