@@ -7,6 +7,7 @@ import skia
 import numpy as np
 import subprocess
 import argparse
+import gc
 from gtts import gTTS
 import imageio_ffmpeg
 
@@ -163,8 +164,12 @@ def render_frame_bytes(
         canvas.drawSimpleText(footer_text, (WIDTH - f_width)/2, HEIGHT - 50, f_font, f_paint)
 
     image = surface.makeImageSnapshot()
-    # Output RGBA8888 for FFmpeg rawvideo compatibility
-    return image.toarray(colorType=skia.kRGBA_8888_ColorType).tobytes()
+    arr = image.toarray(colorType=skia.kRGBA_8888_ColorType).tobytes()
+    # Explicitly clear/delete to help GC
+    del image
+    del canvas
+    del surface
+    return arr
 
 # --- AUDIO HELPERS ---
 def get_audio_duration(file_path):
@@ -468,9 +473,10 @@ def main():
                     total_frames_written += 1
                 except BrokenPipeError: break
 
-        # Flush occasionally?
-        if len(audio_segments) % 10 == 0:
+        # Flush and GC
+        if total_frames_written % 100 == 0:
             process.stdin.flush()
+            gc.collect()
 
     # --- PRE-COMPUTE AUDIO (SEQUENTIAL) ---
     print("Pre-generating TTS Audio (Offline/Sequential)...", flush=True)
