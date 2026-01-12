@@ -6,45 +6,65 @@
 FILE_PATH=$1
 
 if [ ! -f "$FILE_PATH" ]; then
-    echo "Error: File $FILE_PATH not found."
+    echo "Error: File $FILE_PATH not found." >&2
     exit 1
 fi
 
-echo "Attempting to upload $FILE_PATH to temporary hosts..." >&2
+log() {
+    echo "$1" >&2
+}
+
+log "Attempting to upload $FILE_PATH to temporary hosts..."
 
 # --- Try Catbox.moe ---
-echo "Trying Catbox.moe..." >&2
-VIDEO_URL=$(curl -s -F "reqtype=fileupload" -F "fileToUpload=@$FILE_PATH" https://catbox.moe/user/api.php)
-
-if [[ $VIDEO_URL == http* ]]; then
-    echo "$VIDEO_URL"
+log "Trying Catbox.moe..."
+RESPONSE=$(curl -s -F "reqtype=fileupload" -F "fileToUpload=@$FILE_PATH" https://catbox.moe/user/api.php)
+if [[ $RESPONSE == http* ]]; then
+    echo "$RESPONSE"
     exit 0
 fi
-echo "Catbox failed. Response: $VIDEO_URL" >&2
+log "Catbox failed."
+
+# --- Try File.io (Very reliable) ---
+log "Trying File.io..."
+RESPONSE=$(curl -s -F "file=@$FILE_PATH" https://file.io)
+# Response: {"success":true,"link":"https://file.io/XXXX",...}
+LINK=$(echo "$RESPONSE" | grep -o 'https://file.io/[a-zA-Z0-9]*')
+if [[ $LINK == http* ]]; then
+    echo "$LINK"
+    exit 0
+fi
+log "File.io failed."
+
+# --- Try Transfer.sh ---
+log "Trying Transfer.sh..."
+# curl --upload-file ./hello.txt https://transfer.sh/hello.txt
+RESPONSE=$(curl -s --upload-file "$FILE_PATH" "https://transfer.sh/$(basename $FILE_PATH)")
+if [[ $RESPONSE == http* ]]; then
+    echo "$RESPONSE"
+    exit 0
+fi
+log "Transfer.sh failed."
 
 # --- Try Bashupload.com ---
-echo "Trying Bashupload.com..." >&2
-# Bashupload returns the URL in the response body directly
-VIDEO_URL=$(curl -s --upload-file "$FILE_PATH" "https://bashupload.com/$(basename $FILE_PATH)")
-
-if [[ $VIDEO_URL == http* ]]; then
-    # Bashupload sometimes adds extra text, extract just the URL
-    VIDEO_URL=$(echo "$VIDEO_URL" | grep -o 'https://bashupload.com/[^ ]*')
-    echo "$VIDEO_URL"
+log "Trying Bashupload.com..."
+RESPONSE=$(curl -s --upload-file "$FILE_PATH" "https://bashupload.com/$(basename $FILE_PATH)")
+LINK=$(echo "$RESPONSE" | grep -o 'https://bashupload.com/[^ ]*')
+if [[ $LINK == http* ]]; then
+    echo "$LINK"
     exit 0
 fi
-echo "Bashupload failed." >&2
+log "Bashupload failed."
 
 # --- Try Oshi.at ---
-echo "Trying Oshi.at..." >&2
-# Oshi returns a multi-line response, the URL is on its own line
-VIDEO_URL=$(curl -s -F "f=@$FILE_PATH" https://oshi.at | grep -o 'https://oshi.at/[a-zA-Z0-9]*')
-
-if [[ $VIDEO_URL == http* ]]; then
-    echo "$VIDEO_URL"
+log "Trying Oshi.at..."
+RESPONSE=$(curl -s -F "f=@$FILE_PATH" https://oshi.at)
+LINK=$(echo "$RESPONSE" | grep -o 'https://oshi.at/[a-zA-Z0-9]*')
+if [[ $LINK == http* ]]; then
+    echo "$LINK"
     exit 0
 fi
-echo "Oshi.at failed." >&2
+log "Oshi.at failed."
 
-echo "Error: All hosting providers failed." >&2
+log "Error: All 5 hosting providers failed."
 exit 1
