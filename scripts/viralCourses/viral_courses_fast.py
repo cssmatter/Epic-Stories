@@ -6,6 +6,7 @@ import math
 import skia
 import numpy as np
 import subprocess
+import argparse
 from gtts import gTTS
 import imageio_ffmpeg
 
@@ -292,6 +293,10 @@ def main():
     start_time = time.time()
     
     # 1. Load Data
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of MCQs to process")
+    args = parser.parse_args()
+
     if not os.path.exists(DATA_FILE):
         print(f"Data file not found: {DATA_FILE}")
         return
@@ -312,6 +317,10 @@ def main():
     intro = assets["intro_script"]
     meta = assets["youtube_metadata"]
     mcqs = data[0]["mcq_data"]
+
+    if args.limit:
+        print(f"Limiting to first {args.limit} MCQs for testing.")
+        mcqs = mcqs[:args.limit]
     
     # Use fallback if missing
     outro = data[0].get("outro_script", {
