@@ -202,36 +202,25 @@ def get_audio_duration(file_path):
         
     return 0.0
 
-import pyttsx3
-
-# ... (Previous imports kept in file, just modifying this section)
+import os
 
 # --- TTS HELPERS ---
 def generate_tts_cached_offline(text, filename_seed):
     """
-    Generate TTS using pyttsx3 (offline), save to temp.
+    Generate TTS using gTTS, save to temp.
     """
     if not text or not text.strip(): return None, 0.0
 
     clean_seed = "".join(x for x in filename_seed if x.isalnum())[:20]
-    fname = f"{clean_seed}_{hash(text)}.wav"
+    fname = f"{clean_seed}_{hash(text)}.mp3" 
     path = os.path.join(TEMP_DIR, fname)
     
     if os.path.exists(path):
         return path, get_audio_duration(path)
     
     try:
-        # Initialize engine per call or globally? 
-        # For simplicity and robust file locking, let's try a fresh init or global.
-        # Global is better for performance, but let's do local to ensure no open handles?
-        # No, init() returns a singleton usually.
-        engine = pyttsx3.init()
-        # Set properties if needed (faster rate?)
-        engine.setProperty('rate', 175) # Standard english reading speed
-        
-        # On Windows, save_to_file is reliable
-        engine.save_to_file(text, path)
-        engine.runAndWait()
+        tts = gTTS(text=text, lang='en')
+        tts.save(path)
         
         if os.path.exists(path):
              return path, get_audio_duration(path)
@@ -317,6 +306,7 @@ def main():
     intro = assets["intro_script"]
     meta = assets["youtube_metadata"]
     mcqs = data[0]["mcq_data"]
+    print(f"Loaded {len(mcqs)} MCQs from the first object.")
 
     if args.limit:
         print(f"Limiting to first {args.limit} MCQs for testing.")
@@ -355,6 +345,8 @@ def main():
 
     # 3. Processing Loop
     audio_segments = []
+    total_audio_time = 0.0
+    total_frames_written = 0
     
     def process_segment(
         text_content, 
@@ -388,8 +380,15 @@ def main():
                     audio_segments.append(s_path)
         
         # B. Video Rendering
-        total_frames = int(final_dur * FPS)
-        if total_frames <= 0: return
+        nonlocal total_audio_time, total_frames_written
+        
+        start_audio_time = total_audio_time
+        total_audio_time += final_dur
+        
+        target_total_frames = int(total_audio_time * FPS)
+        num_frames = target_total_frames - total_frames_written
+        
+        if num_frames <= 0: return
 
         # Static Mode Optimization
         if mode == "static":
@@ -403,17 +402,18 @@ def main():
                 title=title,
                 footer_text=footer_str
             )
-            for _ in range(total_frames):
+            for _ in range(num_frames):
                 try:
                     process.stdin.write(frame_bytes)
+                    total_frames_written += 1
                 except BrokenPipeError:
-                    print("Values broken pipe")
                     break
 
         elif mode == "typing_main":
             # Render Dynamic
-            for f in range(total_frames):
-                t = f / FPS
+            for f_idx in range(num_frames):
+                # Use absolute time since start of THIS segment to determine progress
+                t = f_idx / FPS
                 progress = min(1.0, t / (dur * 0.95)) if dur > 0 else 1.0
                 frame_bytes = render_frame_bytes(
                     text_content, 
@@ -425,11 +425,12 @@ def main():
                 )
                 try:
                     process.stdin.write(frame_bytes)
+                    total_frames_written += 1
                 except BrokenPipeError: break
 
         elif mode == "typing_options":
-             for f in range(total_frames):
-                t = f / FPS
+             for f_idx in range(num_frames):
+                t = f_idx / FPS
                 # Calc visible items
                 visible_count = len(subtext_list) if subtext_list else 0
                 if subtext_list and dur > 0:
@@ -446,11 +447,12 @@ def main():
                 )
                 try:
                     process.stdin.write(frame_bytes)
+                    total_frames_written += 1
                 except BrokenPipeError: break
         
         elif mode == "timer":
-             for f in range(total_frames):
-                t = f / FPS
+             for f_idx in range(num_frames):
+                t = f_idx / FPS
                 remaining = math.ceil(timer_seconds - t) if timer_seconds else 0
                 frame_bytes = render_frame_bytes(
                     text_content, 
@@ -461,7 +463,9 @@ def main():
                     timer_val=max(1, remaining),
                     footer_text=footer_str
                 )
-                try: process.stdin.write(frame_bytes)
+                try: 
+                    process.stdin.write(frame_bytes)
+                    total_frames_written += 1
                 except BrokenPipeError: break
 
         # Flush occasionally?
@@ -525,14 +529,20 @@ def main():
         # 3. Timer (5s static silence/visual)
         process_segment(q_text, None, mode="timer", duration_override=5, timer_seconds=5, subtext_list=opts_list, title=q_title)
         
-        # 4. Reveal
+        # 4. Reaction Pause (1.0s highlight, but SILENCE)
         ans_key = mcq["answer"]
-        process_segment(q_text, f"The correct answer is {ans_key}", mode="static", subtext_list=opts_list, highlight_option=ans_key, title=q_title, duration_override=3)
+        process_segment(q_text, None, mode="static", subtext_list=opts_list, highlight_option=ans_key, title=q_title, duration_override=1.0)
         
-        # 5. Explanation
+        # 5. Reveal Voiceover ("The correct answer is...")
+        process_segment(q_text, f"The correct answer is {ans_key}", mode="static", subtext_list=opts_list, highlight_option=ans_key, title=q_title, duration_override=2.0)
+        
+        # 6. Breather (0.5s silence before explanation)
+        process_segment(q_text, None, mode="static", subtext_list=opts_list, highlight_option=ans_key, title=q_title, duration_override=0.5)
+
+        # 7. Explanation
         exp_text = mcq["detailedexplanation"]
         process_segment(exp_text, exp_text, mode="typing_main", title="Detailed Explanation")
-        process_segment(exp_text, None, mode="static", duration_override=3, title="Detailed Explanation") # 3s Pause
+        process_segment(exp_text, None, mode="static", duration_override=2, title="Detailed Explanation") # Brief Pause
 
     # Outro
     process_segment(outro["closing"], outro["closing"], mode="typing_main", title="Conclusion")
@@ -556,7 +566,7 @@ def main():
     final_audio_path = os.path.join(TEMP_DIR, "full_audio.wav")
     subprocess.run([
         FFMPEG_EXE, "-y", "-f", "concat", "-safe", "0", 
-        "-i", concat_list_path, "-c", "copy", final_audio_path
+        "-i", concat_list_path, "-c:a", "pcm_s16le", final_audio_path
     ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     # --- FINAL MUX ---

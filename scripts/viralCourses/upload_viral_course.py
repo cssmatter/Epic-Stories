@@ -28,6 +28,10 @@ def generate_metadata(asset_data):
     meta = asset_data["video_assets"]["youtube_metadata"]
     
     title = meta.get("youtubetitle", "Viral Course Video")
+    # YouTube has a 100 character limit for titles
+    if len(title) > 100:
+        print(f"Truncating title from {len(title)} to 100 chars.")
+        title = title[:97] + "..."
     
     # Description Construction
     course_link = meta.get("courselink", "")
