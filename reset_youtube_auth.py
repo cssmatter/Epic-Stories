@@ -24,7 +24,20 @@ def reset_and_reauth(token_file='token.pickle', channel_name='All Time Epic Stor
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) > 1 and sys.argv[1] == 'shayari':
-        reset_and_reauth(token_file='shayari/token_shayari.pickle', channel_name='Hindi Shayari हिंदी शायरी')
+    channel_map = {
+        'shayari': ('token_shayari.pickle', 'Hindi Shayari हिंदी शायरी'),
+        'god': ('token_godisgreatest.pickle', 'God Is Greatest'),
+        'viral': ('token_viral_courses.pickle', 'Viral Courses'),
+        'hidden': ('token_hidden_offers.pickle', 'Hidden Offers'),
+        'devotional': ('token_devotional.pickle', 'Devotional hindi quote'),
+        'quote': ('token.pickle', 'All Time Epic Stories')
+    }
+    
+    if len(sys.argv) > 1 and sys.argv[1] in channel_map:
+        token, name = channel_map[sys.argv[1]]
+        reset_and_reauth(token_file=token, channel_name=name)
+    elif len(sys.argv) > 1:
+        # Try direct filename
+        reset_and_reauth(token_file=sys.argv[1])
     else:
         reset_and_reauth()

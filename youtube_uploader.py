@@ -47,14 +47,20 @@ def get_authenticated_service(token_file='token.pickle'):
                     'token_shayari.pickle': 'SHAYARI_TOKEN_PICKLE_BASE64',
                     'token.pickle': 'TOKEN_PICKLE_BASE64',
                     'token_godisgreatest.pickle': 'GODISGREATEST_TOKEN_PICKLE_BASE64',
-                    'token_hidden_offers.pickle': 'HIDDEN_OFFERS_TOKEN_PICKLE_BASE64'
+                    'token_hidden_offers.pickle': 'HIDDEN_OFFERS_TOKEN_PICKLE_BASE64',
+                    'token_viral_courses.pickle': 'VIRAL_COURSES_TOKEN_PICKLE_BASE64',
+                    'token_devotional.pickle': 'DEVOTIONAL_TOKEN_PICKLE_BASE64'
                 }
-                secret_name = secret_map.get(token_file, 'TOKEN_PICKLE_BASE64')
+                secret_name = secret_map.get(os.path.basename(token_file), 'TOKEN_PICKLE_BASE64')
                 
-                # Determine refresh script
-                refresh_script = ".\\auth_and_get_token.ps1" if "shayari" in token_file else "python update_github_token.py"
-                if "god" in token_file:
-                    refresh_script = "python scripts/godisgreatest/daily_god_message_video.py" # Local run triggers auth
+                # Determine refresh command
+                base_name = os.path.basename(token_file)
+                if base_name == 'token_shayari.pickle':
+                    refresh_cmd = ".\\auth_and_get_shayari_token.ps1"
+                elif base_name == 'token.pickle':
+                    refresh_cmd = ".\\auth_and_get_quote_token.ps1"
+                else:
+                    refresh_cmd = f"python reset_youtube_auth.py {base_name.replace('token_', '').replace('.pickle', '')}"
                 
                 raise RuntimeError(
                     f"\n{'='*70}\n"
@@ -62,9 +68,9 @@ def get_authenticated_service(token_file='token.pickle'):
                     f"{'='*70}\n"
                     f"The YouTube token ({token_file}) is missing or could not be refreshed.\n"
                     f"In a CI/GitHub Actions environment, we cannot open a browser for re-authentication.\n\n"
-                    f"TO FIX THIS:\n"
-                    f"1. Run the appropriate script locally to refresh the token:\n"
-                    f"   - {refresh_script}\n"
+                    f"TO FIX THIS LOCALLY:\n"
+                    f"1. Run the following command in your terminal:\n"
+                    f"   {refresh_cmd}\n"
                     f"2. Complete the browser authentication.\n"
                     f"3. Copy the BASE64 string from the output.\n"
                     f"4. Update the '{secret_name}' secret in GitHub repository settings.\n"

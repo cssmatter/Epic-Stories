@@ -52,11 +52,12 @@ jobs:
         IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_GODISGREATEST }}
       run: |
         if [ -f "daily_god_message_video.mp4" ]; then
-          echo "Uploading video to temporary host..."
-          VIDEO_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@daily_god_message_video.mp4" https://catbox.moe/user/api.php)
+          echo "Uploading video to temporary host with fallback..."
+          chmod +x scripts/temp_upload.sh
+          VIDEO_URL=$(./scripts/temp_upload.sh daily_god_message_video.mp4)
           
-          if [[ $VIDEO_URL != http* ]]; then
-            echo "Error: Failed to get public URL. Response: $VIDEO_URL"
+          if [ $? -ne 0 ] || [[ $VIDEO_URL != http* ]]; then
+            echo "Error: Failed to get public URL after all attempts. Response: $VIDEO_URL"
             exit 1
           fi
           

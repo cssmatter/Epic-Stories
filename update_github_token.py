@@ -1,34 +1,59 @@
 import base64
 import os
+import sys
 
-# Read the token.pickle file
-if not os.path.exists('token.pickle'):
-    print("ERROR: token.pickle not found!")
-    print("Please run 'python daily_quote_video.py' first to generate the token.")
+# Default token file
+token_file = 'token.pickle'
+
+# Check for command line argument
+if len(sys.argv) > 1:
+    token_file = sys.argv[1]
+    if not token_file.endswith('.pickle'):
+        token_file += '.pickle'
+    if not os.path.exists(token_file) and not token_file.startswith('token_'):
+        token_file = f"token_{token_file}"
+
+# Read the token file
+if not os.path.exists(token_file):
+    print(f"ERROR: {token_file} not found!")
+    print(f"Please ensure you've ran the authentication for this channel first.")
     exit(1)
 
-with open('token.pickle', 'rb') as f:
+with open(token_file, 'rb') as f:
     token_data = f.read()
 
 # Encode to base64
 encoded = base64.b64encode(token_data).decode('utf-8')
 
 # Save to a file for easy copying
-with open('token_base64.txt', 'w') as f:
+output_file = f"{token_file.replace('.pickle', '')}_base64.txt"
+with open(output_file, 'w') as f:
     f.write(encoded)
 
-print("SUCCESS: Token successfully encoded!")
+print(f"SUCCESS: {token_file} successfully encoded!")
 print("\n" + "="*70)
 print("INSTRUCTIONS: Update your GitHub Secret")
 print("="*70)
-print("\n1. Go to your GitHub repository")
+
+# Map token to secret names
+secret_map = {
+    'token_shayari.pickle': 'SHAYARI_TOKEN_PICKLE_BASE64',
+    'token.pickle': 'TOKEN_PICKLE_BASE64',
+    'token_godisgreatest.pickle': 'GODISGREATEST_TOKEN_PICKLE_BASE64',
+    'token_hidden_offers.pickle': 'HIDDEN_OFFERS_TOKEN_PICKLE_BASE64',
+    'token_viral_courses.pickle': 'VIRAL_COURSES_TOKEN_PICKLE_BASE64',
+    'token_devotional.pickle': 'DEVOTIONAL_TOKEN_PICKLE_BASE64'
+}
+secret_name = secret_map.get(os.path.basename(token_file), 'TOKEN_PICKLE_BASE64')
+
+print(f"\n1. Go to your GitHub repository")
 print("2. Navigate to: Settings -> Secrets and variables -> Actions")
-print("3. Find the secret named: TOKEN_PICKLE_BASE64")
-print("4. Click 'Update' and paste the content from 'token_base64.txt'")
-print("\nThe encoded token has been saved to: token_base64.txt")
+print(f"3. Find the secret named: {secret_name}")
+print("4. Click 'Update' and paste the content from your clipboard (or {output_file})")
+print(f"\nThe encoded token has been saved to: {output_file}")
 print("="*70)
 print("\nYou can also copy it directly from below:")
-print("-"*70)
+print("-" * 70)
 print(encoded)
-print("-"*70)
+print("-" * 70)
 
