@@ -42,14 +42,43 @@ ASSETS_DIR = os.path.join(REPO_ROOT, "assets", "fonts")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(TEMP_DIR, exist_ok=True)
 
-# --- SKIA HELPERS ---
+# --- SKIA CACHING ---
+_TYPEFACE_CACHE = {}
+_FONT_CACHE = {}
+_SHARED_SURFACE = None
+_SHARED_BUFFER = None
+
 def get_font(size=40):
-    font_path = os.path.join(ASSETS_DIR, "Inter-Bold.ttf")
-    if os.path.exists(font_path):
-         typeface = skia.Typeface.MakeFromFile(font_path)
-    else:
-         typeface = skia.Typeface.MakeFromName("Arial", skia.FontStyle.Bold())
-    return skia.Font(typeface, size)
+    global _TYPEFACE_CACHE, _FONT_CACHE
+    font_key = f"Inter-Bold_{size}"
+    if font_key in _FONT_CACHE:
+        return _FONT_CACHE[font_key]
+        
+    if "Inter-Bold" not in _TYPEFACE_CACHE:
+        font_path = os.path.join(ASSETS_DIR, "Inter-Bold.ttf")
+        if os.path.exists(font_path):
+             _TYPEFACE_CACHE["Inter-Bold"] = skia.Typeface.MakeFromFile(font_path)
+        else:
+             _TYPEFACE_CACHE["Inter-Bold"] = skia.Typeface.MakeFromName("Arial", skia.FontStyle.Bold())
+             
+    font = skia.Font(_TYPEFACE_CACHE["Inter-Bold"], size)
+    _FONT_CACHE[font_key] = font
+    return font
+
+def get_shared_surface():
+    global _SHARED_SURFACE, _SHARED_BUFFER
+    if _SHARED_SURFACE is None:
+        _SHARED_SURFACE = skia.Surface(WIDTH, HEIGHT)
+        # Pre-allocate a buffer for pixels (1920x1080x4)
+        import numpy as np
+        _SHARED_BUFFER = np.zeros((HEIGHT, WIDTH, 4), dtype=np.uint8)
+    return _SHARED_SURFACE
+
+def get_shared_buffer():
+    global _SHARED_BUFFER
+    if _SHARED_BUFFER is None:
+        get_shared_surface()
+    return _SHARED_BUFFER
 
 def wrap_text(text, font, max_width):
     if not text: return []
@@ -85,7 +114,7 @@ def render_frame_bytes(
     """
     Renders a frame using Skia and returns raw RGBA bytes.
     """
-    surface = skia.Surface(WIDTH, HEIGHT)
+    surface = get_shared_surface()
     canvas = surface.getCanvas()
     canvas.clear(BG_COLOR)
     
@@ -163,9 +192,10 @@ def render_frame_bytes(
         f_width = f_font.measureText(footer_text)
         canvas.drawSimpleText(footer_text, (WIDTH - f_width)/2, HEIGHT - 50, f_font, f_paint)
 
-    image = surface.makeImageSnapshot()
-    arr = image.toarray(colorType=skia.kRGBA_8888_ColorType).tobytes()
-    return arr
+    info = skia.ImageInfo.Make(WIDTH, HEIGHT, skia.kRGBA_8888_ColorType, skia.kPremul_AlphaType)
+    buffer = get_shared_buffer()
+    surface.readPixels(info, buffer)
+    return buffer
 
 # --- AUDIO HELPERS ---
 def get_audio_duration(file_path):
@@ -408,8 +438,6 @@ def main():
                 try:
                     process.stdin.write(frame_bytes)
                     total_frames_written += 1
-                    if total_frames_written % 50 == 0:
-                        gc.collect()
                 except BrokenPipeError:
                     break
 
@@ -455,29 +483,33 @@ def main():
                 except BrokenPipeError: break
         
         elif mode == "timer":
+             last_timer_val = -1
              for f_idx in range(num_frames):
                 t = f_idx / FPS
                 remaining = math.ceil(timer_seconds - t) if timer_seconds else 0
-                frame_bytes = render_frame_bytes(
-                    text_content, 
-                    progress=1.0, 
-                    subtext_list=subtext_list,
-                    visible_subtext_count=len(subtext_list) if subtext_list else 0,
-                    title=title,
-                    timer_val=max(1, remaining),
-                    footer_text=footer_str
-                )
+                remaining = max(1, remaining)
+                
+                # Only re-render if value changed
+                if remaining != last_timer_val:
+                    frame_bytes = render_frame_bytes(
+                        text_content, 
+                        progress=1.0, 
+                        subtext_list=subtext_list,
+                        visible_subtext_count=len(subtext_list) if subtext_list else 0,
+                        title=title,
+                        timer_val=remaining,
+                        footer_text=footer_str
+                    )
+                    last_timer_val = remaining
+                    
                 try: 
                     process.stdin.write(frame_bytes)
                     total_frames_written += 1
-                    if total_frames_written % 50 == 0:
-                        gc.collect()
                 except BrokenPipeError: break
 
         # Flush and GC
-        if total_frames_written % 100 == 0:
-            process.stdin.flush()
-            gc.collect()
+        process.stdin.flush()
+        gc.collect()
 
     # --- PRE-COMPUTE AUDIO (SEQUENTIAL) ---
     print("Pre-generating TTS Audio (Offline/Sequential)...", flush=True)
