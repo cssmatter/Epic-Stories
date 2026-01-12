@@ -29,3 +29,15 @@ ENV/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Video Output and Temp files
+output/
+temp/
+*.mp4
+*.wav
+*.mp3
+*.png
+*.txt
+!requirements.txt
+!README.md
+!data/**/*.json
