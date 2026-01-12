@@ -165,10 +165,6 @@ def render_frame_bytes(
 
     image = surface.makeImageSnapshot()
     arr = image.toarray(colorType=skia.kRGBA_8888_ColorType).tobytes()
-    # Explicitly clear/delete to help GC
-    del image
-    del canvas
-    del surface
     return arr
 
 # --- AUDIO HELPERS ---
@@ -371,7 +367,8 @@ def main():
         elif duration_override:
             # Create silence if no voice but duration needed
             audio_path = create_silence(duration_override)
-            dur = duration_override
+            # Get ACTUAL duration of the silence file to avoid drift
+            dur = get_audio_duration(audio_path) if audio_path and os.path.exists(audio_path) else duration_override
             
         final_dur = max(dur, duration_override if duration_override else 0)
         
@@ -411,6 +408,8 @@ def main():
                 try:
                     process.stdin.write(frame_bytes)
                     total_frames_written += 1
+                    if total_frames_written % 50 == 0:
+                        gc.collect()
                 except BrokenPipeError:
                     break
 
@@ -471,6 +470,8 @@ def main():
                 try: 
                     process.stdin.write(frame_bytes)
                     total_frames_written += 1
+                    if total_frames_written % 50 == 0:
+                        gc.collect()
                 except BrokenPipeError: break
 
         # Flush and GC
@@ -591,6 +592,37 @@ def main():
     elapsed = time.time() - start_time
     print(f"DONE! Total time: {elapsed:.2f}s")
     print(f"Output: {final_output}")
+    
+    # --- DATA ROTATION ---
+    # Remove the first object from data.json after successful generation
+    if not args.limit:  # Only rotate if processing full dataset (not testing)
+        print("Rotating data.json (removing first object)...", flush=True)
+        try:
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            if len(data) > 0:
+                data.pop(0)  # Remove first object
+                
+                with open(DATA_FILE, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=4, ensure_ascii=False)
+                
+                print(f"Data rotated. Remaining objects: {len(data)}", flush=True)
+            else:
+                print("No data to rotate (data.json is empty).", flush=True)
+        except Exception as e:
+            print(f"Error rotating data: {e}", flush=True)
+    
+    # --- CLEANUP TEMP FILES ---
+    print("Cleaning up temporary files...", flush=True)
+    try:
+        import shutil
+        if os.path.exists(TEMP_DIR):
+            shutil.rmtree(TEMP_DIR)
+            os.makedirs(TEMP_DIR, exist_ok=True)
+            print("Temporary files cleaned.", flush=True)
+    except Exception as e:
+        print(f"Error cleaning temp files: {e}", flush=True)
 
 if __name__ == "__main__":
     main()
