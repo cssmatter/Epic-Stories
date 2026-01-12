@@ -233,35 +233,61 @@ def get_audio_duration(file_path):
         
     return 0.0
 
-import os
+from gtts import gTTS # Added this import as it's used in the new code
 
 # --- TTS HELPERS ---
 def generate_tts_cached_offline(text, filename_seed):
     """
-    Generate TTS using gTTS, save to temp.
+    Generate TTS using gTTS, convert to WAV to ensure no padding/drift.
     """
     if not text or not text.strip(): return None, 0.0
 
     clean_seed = "".join(x for x in filename_seed if x.isalnum())[:20]
-    fname = f"{clean_seed}_{hash(text)}.mp3" 
-    path = os.path.join(TEMP_DIR, fname)
+    fname_wav = f"{clean_seed}_{hash(text)}.wav"
+    path_wav = os.path.join(TEMP_DIR, fname_wav)
     
-    if os.path.exists(path):
-        return path, get_audio_duration(path)
+    if os.path.exists(path_wav):
+        return path_wav, get_audio_duration(path_wav)
+
+    # Temporary mp3 path
+    path_mp3 = os.path.join(TEMP_DIR, f"temp_{hash(text)}.mp3")
     
     try:
         tts = gTTS(text=text, lang='en')
-        tts.save(path)
+        tts.save(path_mp3)
         
-        if os.path.exists(path):
-             return path, get_audio_duration(path)
-        return None, 0.0
+        # Convert to standard WAV 24kHz mono
+        subprocess.run([
+            FFMPEG_EXE, "-y", "-i", path_mp3, 
+            "-ar", "24000", "-ac", "1", path_wav
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        
+        if os.path.exists(path_mp3):
+            os.remove(path_mp3)
+
+        if os.path.exists(path_wav):
+             return path_wav, get_audio_duration(path_wav)
     except Exception as e:
-        print(f"  TTS Error: {e}")
-        return None, 0.0
+        print(f"  gTTS Error: {e}")
+        
+    return None, 0.0
+
+def create_silence(duration_sec):
+    if duration_sec <= 0: return None
+    
+    fname = f"silence_{duration_sec}s.wav"
+    path = os.path.join(TEMP_DIR, fname)
+    if os.path.exists(path):
+        return path
+    
+    cmd = [
+        FFMPEG_EXE, "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", 
+        "-t", str(duration_sec), "-c:a", "pcm_s16le", path
+    ]
+    subprocess.run(cmd, capture_output=True, text=True)
+    return path
 
 
-# ...
 
     # --- PRE-COMPUTE AUDIO (SEQUENTIAL) ---
     print("Pre-generating TTS Audio (Offline/Sequential)...", flush=True)
