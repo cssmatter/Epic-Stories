@@ -10,20 +10,20 @@ if [ ! -f "$FILE_PATH" ]; then
     exit 1
 fi
 
-echo "Attempting to upload $FILE_PATH to temporary hosts..."
+echo "Attempting to upload $FILE_PATH to temporary hosts..." >&2
 
 # --- Try Catbox.moe ---
-echo "Trying Catbox.moe..."
+echo "Trying Catbox.moe..." >&2
 VIDEO_URL=$(curl -s -F "reqtype=fileupload" -F "fileToUpload=@$FILE_PATH" https://catbox.moe/user/api.php)
 
 if [[ $VIDEO_URL == http* ]]; then
     echo "$VIDEO_URL"
     exit 0
 fi
-echo "Catbox failed. Response: $VIDEO_URL"
+echo "Catbox failed. Response: $VIDEO_URL" >&2
 
 # --- Try Bashupload.com ---
-echo "Trying Bashupload.com..."
+echo "Trying Bashupload.com..." >&2
 # Bashupload returns the URL in the response body directly
 VIDEO_URL=$(curl -s --upload-file "$FILE_PATH" "https://bashupload.com/$(basename $FILE_PATH)")
 
@@ -33,10 +33,10 @@ if [[ $VIDEO_URL == http* ]]; then
     echo "$VIDEO_URL"
     exit 0
 fi
-echo "Bashupload failed."
+echo "Bashupload failed." >&2
 
 # --- Try Oshi.at ---
-echo "Trying Oshi.at..."
+echo "Trying Oshi.at..." >&2
 # Oshi returns a multi-line response, the URL is on its own line
 VIDEO_URL=$(curl -s -F "f=@$FILE_PATH" https://oshi.at | grep -o 'https://oshi.at/[a-zA-Z0-9]*')
 
@@ -44,7 +44,7 @@ if [[ $VIDEO_URL == http* ]]; then
     echo "$VIDEO_URL"
     exit 0
 fi
-echo "Oshi.at failed."
+echo "Oshi.at failed." >&2
 
-echo "Error: All hosting providers failed."
+echo "Error: All hosting providers failed." >&2
 exit 1
