@@ -151,7 +151,20 @@ def upload_viral_video():
     )
     
     if video_id:
+        video_url = f"https://youtu.be/{video_id}"
         print(f"Upload Success! Video ID: {video_id}")
+        
+        # --- Community Post Helper ---
+        print("\n" + "="*50)
+        print("📢 COMMUNITY POST TEMPLATE (Copy & Paste)")
+        print("="*50)
+        print(f"New Course Video is LIVE! 🎓\n")
+        print(f"📺 {title_main}\n")
+        print(f"Watch the full video here 👇")
+        print(f"{video_url}\n")
+        print(f"Please like and subscribe for more free courses! 📚")
+        print("="*50 + "\n")
+        
         print("Please note: You can manually set up A/B testing in YouTube Studio using the variations saved in ab_test_metadata.json")
         
         # 6. Cleanup Data
