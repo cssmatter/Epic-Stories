@@ -222,54 +222,90 @@ def render_frame_bytes(
     surface.readPixels(info, buffer)
     return buffer
 
-def generate_thumbnail(mcq, meta, intro):
-    """Generates a thumbnail image and saves it to disk."""
-    print("Generating Thumbnail...", flush=True)
-    thumb_path = os.path.join(OUTPUT_DIR, "thumbnail.png")
+def generate_thumbnails_ab_testing(mcq, meta, intro):
+    """
+    Generates 3 thumbnail variations for A/B testing:
+    1. White background + Black text
+    2. Black background + White text
+    3. Dark background + White text (simulating AI professional look)
+    """
+    print("Generating 3 Thumbnail Variations for A/B Testing...", flush=True)
     
-    # Render a frame for thumbnail
-    # We can use the Title + Hook
-    # Or just the main Title
+    # Get the title text
+    title_text = meta.get("youtubetitle", "Viral Course")
+    if len(title_text) > 100:
+        title_text = title_text[:97] + "..."
     
+    thumbnails = []
+    
+    # Pre-wrap text for consistency across variations
     surface = get_shared_surface()
     canvas = surface.getCanvas()
-    
-    # 1. Draw BG
-    bg_img = get_bg_image()
-    if bg_img:
-        rect = skia.Rect.MakeWH(WIDTH, HEIGHT)
-        canvas.drawImageRect(bg_img, rect)
-    else:
-        canvas.clear(BG_COLOR)
-        
-    # 2. Draw Big Title
-    title_text = meta.get("youtubetitle", "Viral Course")
-    
-    # Split title if too long
     t_font = get_font(100)
-    t_paint = skia.Paint(Color=skia.ColorBLACK, AntiAlias=True)
-    
-    margin_x = 100
-    margin_y = 300
     max_w = WIDTH - 200
-    
     lines = wrap_text(title_text, t_font, max_w)
-    
-    # Center vertically by calculating total height
     total_height = len(lines) * 120
-    start_y = (HEIGHT - total_height) / 2 + 100
+    centered_start_y = (HEIGHT - total_height) / 2 + 100
+
+    # --- Variation 1: White Background + Black Text ---
+    print("  Creating Variation 1: White BG + Black Text", flush=True)
+    thumb_path_1 = os.path.join(OUTPUT_DIR, "thumbnail_1.png")
+    canvas.clear(skia.ColorWHITE)
+    t_paint_black = skia.Paint(Color=skia.ColorBLACK, AntiAlias=True)
     
+    y = centered_start_y
     for line in lines:
-        # Center horizontally
         w = t_font.measureText(line)
         x = (WIDTH - w) / 2
-        canvas.drawSimpleText(line, x, start_y, t_font, t_paint)
-        start_y += 120
-
-    # Save
+        canvas.drawSimpleText(line, x, y, t_font, t_paint_black)
+        y += 120
+    
     image = surface.makeImageSnapshot()
-    image.save(thumb_path, skia.kPNG)
-    print(f"Thumbnail saved to: {thumb_path}")
+    image.save(thumb_path_1, skia.kPNG)
+    thumbnails.append(thumb_path_1)
+    
+    # --- Variation 2: Black Background + White Text ---
+    print("  Creating Variation 2: Black BG + White Text", flush=True)
+    thumb_path_2 = os.path.join(OUTPUT_DIR, "thumbnail_2.png")
+    canvas.clear(skia.ColorBLACK)
+    t_paint_white = skia.Paint(Color=skia.ColorWHITE, AntiAlias=True)
+    
+    y = centered_start_y
+    for line in lines:
+        w = t_font.measureText(line)
+        x = (WIDTH - w) / 2
+        canvas.drawSimpleText(line, x, y, t_font, t_paint_white)
+        y += 120
+    
+    image = surface.makeImageSnapshot()
+    image.save(thumb_path_2, skia.kPNG)
+    thumbnails.append(thumb_path_2)
+
+    # --- Variation 3: Dark Gradient Background + White Text ---
+    print("  Creating Variation 3: Dark Gradient BG + White Text", flush=True)
+    thumb_path_3 = os.path.join(OUTPUT_DIR, "thumbnail_3.png")
+    
+    # Create dark gradient
+    grad_paint = skia.Paint(AntiAlias=True)
+    grad_paint.setShader(skia.GradientShader.MakeLinear(
+        points=[(0, 0), (WIDTH, HEIGHT)],
+        colors=[skia.Color(20, 30, 60, 255), skia.ColorBLACK] # Deep night blue to black
+    ))
+    canvas.drawRect(skia.Rect.MakeWH(WIDTH, HEIGHT), grad_paint)
+    
+    y = centered_start_y
+    for line in lines:
+        w = t_font.measureText(line)
+        x = (WIDTH - w) / 2
+        canvas.drawSimpleText(line, x, y, t_font, t_paint_white)
+        y += 120
+        
+    image = surface.makeImageSnapshot()
+    image.save(thumb_path_3, skia.kPNG)
+    thumbnails.append(thumb_path_3)
+    
+    print(f"✓ All 3 thumbnails saved in {OUTPUT_DIR}")
+    return thumbnails
 
 
 # --- AUDIO HELPERS ---
@@ -692,7 +728,7 @@ def main():
     print("TTS Generation Complete.", flush=True)
 
     # --- THUMBNAIL GENERATION ---
-    generate_thumbnail(mcqs[0] if mcqs else None, meta, intro)
+    generate_thumbnails_ab_testing(mcqs[0] if mcqs else None, meta, intro)
 
     # --- DEFINING THE SEQUENCE ---
     # --- SCENE DEFINITION ---
