@@ -2,474 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Microsoft Azure Solutions Architect Expert AZ-305 Exam Prep",
-                "Azure Solutions Architect Expert Practice Questions and Explanations",
-                "Master the AZ-305: Azure Solutions Architect Expert Certification Guide"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to prove your expertise and become a Microsoft Certified Azure Solutions Architect Expert? Mastering the AZ-305 exam requires more than just knowing the services\u2014it requires understanding how to design complex, scalable, and secure cloud solutions.",
-                "summary": "In this video, we dive deep into 30 high-quality practice questions modeled after the actual Azure Solutions Architect Expert exam. We cover infrastructure, data storage, business continuity, and security to ensure you are fully prepared.",
-                "cta_intro": "Before we jump into the first question, make sure to subscribe for more cloud certification deep dives.",
-                "checkfullexamlinkindescription": "For a full set of realistic practice exams and detailed performance tracking, check out the comprehensive course link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://www.udemy.com/course/microsoft-certified-azure-solutions-architect-expert-practice-exams",
-                "youtubetitle": "Azure Solutions Architect Expert AZ-305 Certification Practice Questions and Design Solutions",
-                "description": "Pass the Microsoft Certified: Azure Solutions Architect Expert exam with these comprehensive practice questions. This video covers the AZ-305 objective domains, including infrastructure design, data storage, business continuity, and security. Each question includes a detailed explanation to help you understand the 'why' behind the correct architecture choices. Use these practice tests to identify your weak areas and gain the confidence needed to ace the official exam.",
-                "tags": "Azure AZ-305, Azure Solutions Architect Expert, Microsoft Certified, Cloud Architecture, Azure Design, AZ-305 Practice Test, Microsoft Azure Certification, Azure Training",
-                "hashtags": [
-                    "#Azure",
-                    "#AZ305",
-                    "#CloudArchitect",
-                    "#MicrosoftCertified",
-                    "#AzureSolutionsArchitect"
-                ],
-                "keywords": [
-                    "AZ-305 exam questions",
-                    "Azure Solutions Architect Expert study guide",
-                    "Design Azure infrastructure",
-                    "Azure data storage solutions",
-                    "Azure business continuity design",
-                    "Microsoft Azure certification path"
-                ],
-                "mostsearchedongoogle": "AZ-305 Practice Exam, Azure Solutions Architect Expert Salary, AZ-305 Study Material, Microsoft Azure Certification Exam Dumps"
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Hard",
-                "question": "A company needs to ensure that specific Azure resources can only be deployed in the 'East US' region and must have a 'Department' tag. Which Azure service should a Solutions Architect implement to enforce these requirements across multiple subscriptions?",
-                "options": {
-                    "A": "Azure Role-Based Access Control (RBAC)",
-                    "B": "Azure Blueprints",
-                    "C": "Azure Policy",
-                    "D": "Azure Management Groups"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Policy is the correct service for enforcing resource consistency and compliance. While RBAC controls 'who' can do something, Azure Policy controls 'what' properties the resource can have (like location or tags). By using an 'Allowed Locations' policy and a 'Require a tag on resources' policy, the architect can ensure all deployments meet corporate standards. Management Groups provide a scope for the policy, but the policy itself performs the enforcement. Blueprints can package these, but for strict ongoing enforcement of resource properties, Policy is the primary engine."
-            },
-            {
-                "id": 2,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Medium",
-                "question": "You are designing a storage solution for an application that generates millions of small files daily. The files must be stored at the lowest possible cost, but they must be instantly accessible for 30 days. After 30 days, the files are rarely accessed but must be retained for 7 years. Which strategy is most cost-effective?",
-                "options": {
-                    "A": "Azure Blob Storage with Hot tier for 30 days, then manually move to Archive tier.",
-                    "B": "Azure Blob Storage with Cool tier and a Lifecycle Management policy to move to Archive after 30 days.",
-                    "C": "Azure Files Premium tier for 30 days, then move to Standard tier.",
-                    "D": "Azure Blob Storage with Hot tier and a Lifecycle Management policy to move to Archive after 30 days."
-                },
-                "answer": "D",
-                "detailedexplanation": "Azure Blob Storage Lifecycle Management allows you to automate the transition of blobs to cooler storage tiers. Since the files must be 'instantly accessible' for the first 30 days, the Hot tier is appropriate for frequent access. Moving them to the Archive tier after 30 days provides the lowest cost for long-term retention. Option B (Cool tier) might be cheaper for storage but has higher access costs; since the files are 'generated daily' and accessed for 30 days, Hot is generally better for the initial active period before archiving."
-            },
-            {
-                "id": 3,
-                "domain": "Design Business Continuity Solutions",
-                "difficulty": "Hard",
-                "question": "An enterprise application requires a Recovery Time Objective (RTO) of 15 minutes and a Recovery Point Objective (RPO) of 5 minutes. Which SQL database solution should you recommend to meet these requirements across Azure regions?",
-                "options": {
-                    "A": "SQL Managed Instance with Geo-Replication",
-                    "B": "SQL Database with Auto-failover groups",
-                    "C": "SQL Database with Long-term retention",
-                    "D": "SQL Server on Azure VMs with Log Shipping"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure SQL Database Auto-failover groups provide a high-level abstraction for managing geo-replication. They support an RPO of 5 seconds (well within the 5-minute requirement) and an RTO of 1 hour for the automatic failover policy, but if managed manually or configured correctly with grace periods, it is the only managed service that can realistically approach these low RTO/RPO targets for regional disasters. Log shipping and long-term retention have much higher RTOs."
-            },
-            {
-                "id": 4,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "You need to design a network topology that connects 10 different virtual networks (VNets) to an on-premises data center via a single ExpressRoute connection. The solution must minimize administrative overhead and ensure any-to-any connectivity between VNets. What should you use?",
-                "options": {
-                    "A": "VNet Peering in a full mesh configuration",
-                    "B": "Azure Virtual WAN (vWAN)",
-                    "C": "A central Hub VNet with VNet Peering to Spoke VNets",
-                    "D": "Azure VPN Gateway in each VNet"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Virtual WAN (vWAN) is designed for large-scale, complex networking. It simplifies the Hub-and-Spoke architecture by providing built-in any-to-any connectivity and centralizing the connection to on-premises via ExpressRoute. While a manual Hub-and-Spoke (Option C) is common, Virtual WAN reduces administrative overhead by managing the underlying routing tables and scale automatically, making it the superior choice for modern enterprise-scale architectures."
-            },
-            {
-                "id": 5,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Hard",
-                "question": "A high-performance computing (HPC) workload requires extremely low network latency and high throughput between several Azure Virtual Machines. Which feature should you enable when deploying these VMs?",
-                "options": {
-                    "A": "Accelerated Networking",
-                    "B": "Proximity Placement Groups",
-                    "C": "Load Balancer Standard Tier",
-                    "D": "Azure Dedicated Host"
-                },
-                "answer": "B",
-                "detailedexplanation": "While Accelerated Networking (Option A) improves throughput and reduces CPU overhead, a Proximity Placement Group (PPG) is specifically designed to minimize network latency by ensuring that VMs are physically located as close as possible to each other within a single data center. For HPC workloads where microsecond latency matters, PPG is the critical design choice for infrastructure placement."
-            },
-            {
-                "id": 6,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Medium",
-                "question": "A solution requires a NoSQL database that can provide single-digit millisecond latency at any scale and support multiple consistency levels like 'Session' and 'Consistent Prefix'. Which service is the best fit?",
-                "options": {
-                    "A": "Azure SQL Database",
-                    "B": "Azure Table Storage",
-                    "C": "Azure Cosmos DB",
-                    "D": "Azure Cache for Redis"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Cosmos DB is Microsoft's globally distributed, multi-model NoSQL database service. It is unique in offering five well-defined consistency levels (Strong, Bounded Staleness, Session, Consistent Prefix, and Eventual). It guarantees single-digit millisecond latency for both reads and writes at the 99th percentile, making it the standard choice for high-scale, low-latency globally distributed applications."
-            },
-            {
-                "id": 7,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Medium",
-                "question": "You need to allow an Azure Web App to access secrets stored in Azure Key Vault without storing any credentials in the application code or configuration files. What should you implement?",
-                "options": {
-                    "A": "Service Principal with a client secret",
-                    "B": "Managed Identity",
-                    "C": "Shared Access Signature (SAS)",
-                    "D": "Certificate-based authentication"
-                },
-                "answer": "B",
-                "detailedexplanation": "Managed Identity is the best practice for secure authentication in Azure. It provides an identity for the Azure resource (Web App) in Microsoft Entra ID (formerly Azure AD). The Web App can use this identity to obtain tokens for Azure Key Vault. This eliminates the need for developers to manage credentials, as the lifecycle of the identity is tied to the resource itself."
-            },
-            {
-                "id": 8,
-                "domain": "Design Business Continuity Solutions",
-                "difficulty": "Hard",
-                "question": "You are designing a solution to protect Azure Virtual Machines from a regional outage. The solution must ensure that the VMs can be failed over to a secondary region with minimal data loss. Which service should you use?",
-                "options": {
-                    "A": "Azure Backup",
-                    "B": "Azure Site Recovery (ASR)",
-                    "C": "Azure Redundant Storage (ZRS)",
-                    "D": "Virtual Machine Scale Sets"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Site Recovery (ASR) is a dedicated Disaster Recovery as a Service (DRaaS). It replicates workloads running on physical and virtual machines from a primary site to a secondary location. In the event of a regional outage, you can fail over to the secondary region. Azure Backup is for long-term data retention and recovery from corruption/deletion, but not for orchestration of regional failover for compute resources."
-            },
-            {
-                "id": 9,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "Your company is migrating a legacy application that requires SMB 3.0 support and must be accessible from multiple Windows and Linux VMs simultaneously. Which storage solution should you choose?",
-                "options": {
-                    "A": "Azure Blob Storage",
-                    "B": "Azure Managed Disks",
-                    "C": "Azure Files",
-                    "D": "Azure Elastic SAN"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Files offers fully managed file shares in the cloud that are accessible via the industry-standard Server Message Block (SMB) protocol or Network File System (NFS) protocol. This allows multiple VMs to mount the same share simultaneously with read/write access, mimicking a traditional on-premises file server. Managed disks are typically attached to a single VM (unless using shared disks, which have specific clustering requirements)."
-            },
-            {
-                "id": 10,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Hard",
-                "question": "A security auditor requires a report of all administrative changes made to resources in an Azure subscription over the last 90 days. Which service provides this audit trail?",
-                "options": {
-                    "A": "Azure Monitor Metrics",
-                    "B": "Azure Activity Log",
-                    "C": "Azure Advisor",
-                    "D": "Microsoft Defender for Cloud"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Activity Log is a platform log in Azure that provides insight into subscription-level events. This includes when a resource is modified or when a virtual machine is started. It captures 'who, what, and when' for all Write operations (PUT, POST, DELETE) on resources in your subscription. Data is retained for 90 days by default, which meets the auditor's requirement."
-            },
-            {
-                "id": 11,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "You need to distribute incoming HTTP/HTTPS traffic to a pool of backend web servers across different Azure regions. Which load balancing solution should you use?",
-                "options": {
-                    "A": "Azure Load Balancer",
-                    "B": "Azure Application Gateway",
-                    "C": "Azure Front Door",
-                    "D": "Azure Traffic Manager"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Front Door is a global, scalable entry point that uses the Microsoft global edge network to create fast, secure, and widely scalable web applications. It works at Layer 7 (HTTP/HTTPS) and is specifically designed for cross-region load balancing and acceleration. Application Gateway is regional, and Azure Load Balancer operates at Layer 4 (TCP/UDP)."
-            },
-            {
-                "id": 12,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Hard",
-                "question": "An application uses an Azure SQL Database. You need to ensure that sensitive data in a specific column is never visible to database administrators, even in plain text during processing, and is only decrypted at the application level. What should you implement?",
-                "options": {
-                    "A": "Transparent Data Encryption (TDE)",
-                    "B": "Dynamic Data Masking (DDM)",
-                    "C": "Always Encrypted",
-                    "D": "Azure SQL Auditing"
-                },
-                "answer": "C",
-                "detailedexplanation": "Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers, stored in Azure SQL Database or SQL Server databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the Database Engine. This ensures that even DBAs cannot see the plain text data."
-            },
-            {
-                "id": 13,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "You are designing an environment for a containerized application. The solution must support scaling to thousands of containers, offer integrated logging, and allow for complex microservices orchestration. Which service is most appropriate?",
-                "options": {
-                    "A": "Azure Container Instances (ACI)",
-                    "B": "Azure Kubernetes Service (AKS)",
-                    "C": "Azure App Service for Containers",
-                    "D": "Azure Container Apps"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Kubernetes Service (AKS) is the standard for complex microservices orchestration. It provides the full power of Kubernetes, including advanced networking, service discovery, and horizontal autoscaling. While Container Apps is good for serverless microservices, AKS offers the most control and scalability for large-scale enterprise container environments."
-            },
-            {
-                "id": 14,
-                "domain": "Design Business Continuity Solutions",
-                "difficulty": "Medium",
-                "question": "A company wants to backup their on-premises Windows Servers directly to Azure without deploying additional infrastructure on-premises. Which component of Azure Backup should they use?",
-                "options": {
-                    "A": "Azure Backup Server (MABS)",
-                    "B": "Microsoft Azure Recovery Services (MARS) agent",
-                    "C": "Data Protection Manager (DPM)",
-                    "D": "Azure Site Recovery"
-                },
-                "answer": "B",
-                "detailedexplanation": "The MARS agent is installed directly on Windows Server machines to back up files, folders, and system state to an Azure Recovery Services vault. It does not require a separate local backup server, unlike MABS or DPM, making it the simplest solution for direct-to-cloud backup for files and folders."
-            },
-            {
-                "id": 15,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Hard",
-                "question": "You are designing a network for an application that requires high availability. You want to ensure that even if an entire Azure Datacenter (Physical Building) fails, the application remains available. What should you use?",
-                "options": {
-                    "A": "Availability Sets",
-                    "B": "Availability Zones",
-                    "C": "Paired Regions",
-                    "D": "Fault Domains"
-                },
-                "answer": "B",
-                "detailedexplanation": "Availability Zones (AZ) are physically separate locations within an Azure region. Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. By deploying resources across AZs, you protect your application from the failure of a single physical datacenter building. Availability Sets only protect against hardware failure within a single datacenter."
-            },
-            {
-                "id": 16,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Medium",
-                "question": "Your company needs to perform big data analytics on petabytes of data using Spark and Hive. The data is currently stored in a flat namespace in Blob Storage. You want to optimize the storage for analytics performance. What should you enable?",
-                "options": {
-                    "A": "Static Website hosting",
-                    "B": "Hierarchical Namespace (HNS)",
-                    "C": "Soft Delete",
-                    "D": "Blob Index Tags"
-                },
-                "answer": "B",
-                "detailedexplanation": "Enabling Hierarchical Namespace (HNS) turns a standard Storage Account into an Azure Data Lake Storage Gen2 (ADLS Gen2) account. HNS organizes objects into a hierarchy of directories and nested folders, which significantly improves the performance of big data analytics frameworks like Spark and Hive by allowing them to perform directory-level operations instead of scanning flat prefixes."
-            },
-            {
-                "id": 17,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Medium",
-                "question": "You need to automatically increase the number of instances of a Web App when the average CPU usage exceeds 70% for 10 minutes. Which feature should you configure?",
-                "options": {
-                    "A": "Vertical Scaling",
-                    "B": "Manual Scale",
-                    "C": "Autoscale based on a metric",
-                    "D": "Azure Advisor recommendations"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Monitor Autoscale allows you to define rules that scale out (add instances) or scale in (remove instances) based on performance metrics like CPU or Memory usage. This is horizontal scaling. Vertical scaling (Option A) involves changing the service plan tier (e.g., from Small to Large), which usually requires downtime."
-            },
-            {
-                "id": 18,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Hard",
-                "question": "You have a VNet with a private subnet. You want to ensure that VMs in this subnet can access the internet for updates but cannot be reached by any unsolicited incoming traffic from the internet. What is the most secure managed solution?",
-                "options": {
-                    "A": "Public IP on each VM",
-                    "B": "Azure NAT Gateway",
-                    "C": "Standard Load Balancer with outbound rules",
-                    "D": "User Defined Routes (UDR) to a Firewall"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure NAT Gateway is a fully managed and highly resilient Network Address Translation (NAT) service. It simplifies outbound-only internet connectivity for virtual networks. When associated with a subnet, all outbound connectivity uses the NAT gateway's static public IP addresses. It is more scalable and easier to manage than Load Balancer outbound rules for simple internet egress."
-            },
-            {
-                "id": 19,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Medium",
-                "question": "A company wants to provide temporary, time-bound administrative access to Azure resources to reduce the risk of compromised privileged accounts. Which Entra ID feature should they use?",
-                "options": {
-                    "A": "Conditional Access",
-                    "B": "Privileged Identity Management (PIM)",
-                    "C": "Identity Protection",
-                    "D": "Access Reviews"
-                },
-                "answer": "B",
-                "detailedexplanation": "Privileged Identity Management (PIM) provides 'just-in-time' (JIT) privileged access. Instead of users having permanent admin rights, they must request activation of their role for a specific duration. This follows the principle of least privilege and significantly reduces the attack surface of the cloud environment."
-            },
-            {
-                "id": 20,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Hard",
-                "question": "You are designing a data migration strategy from an on-premises SQL Server to Azure. The application requires minimal downtime during the migration. Which tool should you use?",
-                "options": {
-                    "A": "SQL Server Management Studio (SSMS) Export Wizard",
-                    "B": "Azure Database Migration Service (DMS)",
-                    "C": "AzCopy",
-                    "D": "Azure Data Box"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Database Migration Service (DMS) is designed specifically for 'online' (minimal downtime) migrations. It uses the Data Migration Assistant to perform assessments and then continuously syncs data from the source to Azure until you are ready to perform a cutover, ensuring the smallest possible window of unavailability."
-            },
-            {
-                "id": 21,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "Which service should you use to store and manage Docker images in a private registry within Azure?",
-                "options": {
-                    "A": "Docker Hub",
-                    "B": "Azure Container Registry (ACR)",
-                    "C": "Azure Artifacts",
-                    "D": "Azure Container Instances"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Container Registry (ACR) is a managed, private Docker registry service based on the open-source Docker Registry 2.0. It allows you to store and manage images for all types of container deployments. It supports geo-replication and integrates seamlessly with AKS and Azure App Service."
-            },
-            {
-                "id": 22,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Hard",
-                "question": "You need to aggregate logs from multiple Azure resources (VNets, VMs, SQL Databases) into a single workspace for complex querying and dashboarding using Kusto Query Language (KQL). Which service is used for this?",
-                "options": {
-                    "A": "Azure Monitor Metrics",
-                    "B": "Log Analytics Workspace",
-                    "C": "Azure Storage Account",
-                    "D": "Azure Event Hubs"
-                },
-                "answer": "B",
-                "detailedexplanation": "A Log Analytics Workspace is the central repository for logs collected from various sources. Azure Monitor Logs stores data in a Log Analytics Workspace, and KQL is used to query that data. While you can send logs to a Storage Account or Event Hub, those services do not provide the built-in query capabilities of Log Analytics."
-            },
-            {
-                "id": 23,
-                "domain": "Design Business Continuity Solutions",
-                "difficulty": "Medium",
-                "question": "Which Azure Storage replication option provides the highest level of durability by replicating data across three separate facilities in two different regions?",
-                "options": {
-                    "A": "Locally-redundant storage (LRS)",
-                    "B": "Zone-redundant storage (ZRS)",
-                    "C": "Geo-redundant storage (GRS)",
-                    "D": "Geo-zone-redundant storage (GZRS)"
-                },
-                "answer": "D",
-                "detailedexplanation": "GZRS combines the high availability of ZRS (replicating across three zones in the primary region) with the regional disaster protection of GRS (replicating to a secondary region). This ensures that data is resilient to both a datacenter failure and a total regional failure."
-            },
-            {
-                "id": 24,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "An application consists of several Azure Functions. You want to ensure these functions can access an Azure SQL Database securely without using the public internet. What should you configure?",
-                "options": {
-                    "A": "Service Tags",
-                    "B": "Private Link / Private Endpoints",
-                    "C": "Application Security Groups (ASG)",
-                    "D": "Virtual Network Peering"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Private Link allows you to access Azure PaaS Services (like Azure SQL, Storage, etc.) over a private endpoint in your virtual network. Traffic between your VNet and the service travels the Microsoft backbone network, never traversing the public internet. This secures the communication channel significantly."
-            },
-            {
-                "id": 25,
-                "domain": "Design Identity, Governance, and Monitoring Solutions",
-                "difficulty": "Hard",
-                "question": "You need to ensure that certain Azure Virtual Machines are only accessible if the user is connecting from a known corporate IP range and has completed Multi-Factor Authentication (MFA). Which Entra ID feature is used to enforce these rules?",
-                "options": {
-                    "A": "Privileged Identity Management",
-                    "B": "Conditional Access",
-                    "C": "Role-Based Access Control",
-                    "D": "Azure Bastion"
-                },
-                "answer": "B",
-                "detailedexplanation": "Conditional Access is the 'if-then' engine of Entra ID. It allows you to create policies that enforce controls based on specific signals (like location, user group, or device state). Requiring MFA and IP range filtering are classic use cases for Conditional Access policies."
-            },
-            {
-                "id": 26,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Medium",
-                "question": "You are designing a storage solution for a social media application that needs to store user profiles and their relationships (friends, followers). Which Azure Cosmos DB API is most suitable for this 'graph' data?",
-                "options": {
-                    "A": "NoSQL API (formerly Core)",
-                    "B": "MongoDB API",
-                    "C": "Gremlin API",
-                    "D": "Cassandra API"
-                },
-                "answer": "C",
-                "detailedexplanation": "The Gremlin API in Azure Cosmos DB is used for graph modeling. It allows for efficient storage and querying of complex relationships between entities (nodes and edges), which is perfect for social networks, recommendation engines, and fraud detection."
-            },
-            {
-                "id": 27,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Hard",
-                "question": "A client requires a dedicated physical server in Azure to meet strict regulatory compliance and hardware isolation requirements. Which service should you recommend?",
-                "options": {
-                    "A": "Isolated VM Tier",
-                    "B": "Azure Dedicated Host",
-                    "C": "Azure Reserved Virtual Machine Instances",
-                    "D": "App Service Environment (ASE)"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Dedicated Host provides physical servers that are dedicated to one Azure subscription. It provides hardware isolation at the physical server level, allowing you to control the placement of VMs and meet specific compliance needs related to physical security and data residency."
-            },
-            {
-                "id": 28,
-                "domain": "Design Business Continuity Solutions",
-                "difficulty": "Medium",
-                "question": "Which service is used to create a globally distributed, high-performance, and secure entry point for web applications using the Microsoft global network?",
-                "options": {
-                    "A": "Azure ExpressRoute",
-                    "B": "Azure Front Door",
-                    "C": "Azure VPN Gateway",
-                    "D": "Azure Content Delivery Network (CDN)"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Front Door provides a unified 'front door' for your web applications. It combines Layer 7 load balancing, global acceleration (using Anycast), and security (WAF) into a single service. While CDN is part of it, Front Door is the broader architectural component for modern web apps."
-            },
-            {
-                "id": 29,
-                "domain": "Design Infrastructure Solutions",
-                "difficulty": "Medium",
-                "question": "You need to host a simple, static HTML website with zero server-side processing. What is the most cost-effective hosting option in Azure?",
-                "options": {
-                    "A": "Azure App Service (Basic Tier)",
-                    "B": "Azure Functions",
-                    "C": "Azure Storage Static Website hosting",
-                    "D": "Azure Virtual Machines"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Storage allows you to serve static content (HTML, CSS, JS, images) directly from a storage container ($web). This is extremely low-cost and highly scalable, as you only pay for storage and data egress, avoiding the costs associated with running a dedicated web server or app service plan."
-            },
-            {
-                "id": 30,
-                "domain": "Design Data Storage Solutions",
-                "difficulty": "Hard",
-                "question": "Your company is using an Azure SQL Database. You need to provide a read-only copy of the database to offload reporting workloads and reduce the load on the primary transactional database. What is the built-in feature for this in Premium/Business Critical tiers?",
-                "options": {
-                    "A": "Active Geo-Replication",
-                    "B": "Read Scale-Out",
-                    "C": "Failover Groups",
-                    "D": "SQL Data Sync"
-                },
-                "answer": "B",
-                "detailedexplanation": "In the Premium and Business Critical service tiers, Azure SQL Database provides 'Read Scale-Out'. This feature automatically provides one free read-only replica of the database. Applications can connect to this replica by setting the 'ApplicationIntent=ReadOnly' property in the connection string, allowing reporting to run without impacting the primary database performance."
-            }
-        ],
-        "outro_script": {
-            "closing": "That covers our 30 high-impact practice questions for the Azure Solutions Architect Expert certification. Remember, the AZ-305 is as much about understanding business requirements as it is about knowing the technology.",
-            "cta_final": "If you found these explanations helpful, give this video a thumbs up and comment below on which domain you find most challenging.",
-            "next_steps": "Ready for the full experience? Head over to the link in the description to take our comprehensive practice exams and get certified!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "15 seconds per question",
-            "transition_effect_hints": "Smooth fade between question and explanation. Use a distinct 'Correct Answer' sound and visual cue."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Microsoft Azure Fundamentals AZ-900 Full Course Practice Questions",
                 "Azure Fundamentals Certification Exam Prep: 30 Must-Know Questions",
                 "Master AZ-900: Microsoft Azure Fundamentals Practice Test and Explanations"
@@ -8936,7 +8468,7 @@
         "outro_script": {
             "closing": "That wraps up our 30-question deep dive into Angular interview preparation. We've covered the core architecture, reactivity with RxJS, and the latest features like Signals and Standalone components.",
             "cta_final": "If you found this helpful, please give the video a thumbs up and share it with your fellow developers. If you're serious about passing your interview, don't forget to check out our full practice exam on Udemy via the link in the description.",
-            "next_steps": "Leave a comment below with which topic you found the hardest—was it RxJS or Change Detection? See you in the next video!"
+            "next_steps": "Leave a comment below with which topic you found the hardest\u2014was it RxJS or Change Detection? See you in the next video!"
         },
         "on_screen_elements": {
             "timer_duration": "10 seconds",
@@ -8959,7 +8491,7 @@
             ],
             "intro_script": {
                 "hook": "Ever felt stumped when an interviewer asks you to explain the difference between Abstraction and Encapsulation? Or struggled to define the Liskov Substitution Principle on the spot?",
-                "summary": "In this video, we are diving deep into the core of software development with 30 essential Object-Oriented Programming interview questions. We'll cover everything from the four pillars—Inheritance, Polymorphism, Abstraction, and Encapsulation—to advanced SOLID principles and design patterns.",
+                "summary": "In this video, we are diving deep into the core of software development with 30 essential Object-Oriented Programming interview questions. We'll cover everything from the four pillars\u2014Inheritance, Polymorphism, Abstraction, and Encapsulation\u2014to advanced SOLID principles and design patterns.",
                 "cta_intro": "Before we jump into the first question, make sure to grab a notebook and see how many you can get right!",
                 "checkfullexamlinkindescription": "For the full 400+ question practice test suite, check the link in the description below."
             },
@@ -11140,7 +10672,7 @@
                     "D": "'display: none' only works on block elements."
                 },
                 "answer": "B",
-                "detailedexplanation": "'display: none' completely removes the element from the document flow; it’s like the element isn't there at all. 'visibility: hidden' makes the element invisible, but the browser still calculates its box and it still occupies the same width and height in the layout."
+                "detailedexplanation": "'display: none' completely removes the element from the document flow; it\u2019s like the element isn't there at all. 'visibility: hidden' makes the element invisible, but the browser still calculates its box and it still occupies the same width and height in the layout."
             },
             {
                 "id": 14,
@@ -12176,7 +11708,7 @@
                     "D": "Containers require a Hypervisor like VMware."
                 },
                 "answer": "B",
-                "detailedexplanation": "Virtual Machines (VMs) run on a hypervisor and include a complete copy of an operating system, the application, necessary binaries, and libraries—taking up tens of GBs. Containers, however, share the host system's kernel and isolate the application processes from the rest of the system. This makes containers significantly smaller, faster to start, and more portable."
+                "detailedexplanation": "Virtual Machines (VMs) run on a hypervisor and include a complete copy of an operating system, the application, necessary binaries, and libraries\u2014taking up tens of GBs. Containers, however, share the host system's kernel and isolate the application processes from the rest of the system. This makes containers significantly smaller, faster to start, and more portable."
             },
             {
                 "id": 18,
@@ -12302,7 +11834,7 @@
                     "D": "A database for storing server passwords."
                 },
                 "answer": "B",
-                "detailedexplanation": "Playbooks are Ansible’s configuration, deployment, and orchestration language. They are written in YAML and describe the policy you want your remote systems to enforce, or a set of steps in a general IT process. Each playbook maps a group of hosts to a set of 'roles' or 'tasks'."
+                "detailedexplanation": "Playbooks are Ansible\u2019s configuration, deployment, and orchestration language. They are written in YAML and describe the policy you want your remote systems to enforce, or a set of steps in a general IT process. Each playbook maps a group of hosts to a set of 'roles' or 'tasks'."
             },
             {
                 "id": 27,
@@ -13855,7 +13387,7 @@
                 "Essential PL/SQL Concepts for Technical Interviews"
             ],
             "intro_script": {
-                "hook": "Are you ready to ace your next Oracle PL/SQL interview? From tricky cursor behaviors to advanced exception handling, we’ve compiled the most critical questions asked by top tech companies.",
+                "hook": "Are you ready to ace your next Oracle PL/SQL interview? From tricky cursor behaviors to advanced exception handling, we\u2019ve compiled the most critical questions asked by top tech companies.",
                 "summary": "In this video, we dive deep into 30 comprehensive PL/SQL multiple-choice questions designed to test your knowledge of blocks, triggers, packages, and performance tuning.",
                 "cta_intro": "Before we begin, make sure to hit that subscribe button for more database career guides.",
                 "checkfullexamlinkindescription": "For a full set of practice tests and detailed explanations, check out the comprehensive course link in the description below."
@@ -14705,7 +14237,7 @@
                     "D": "Changes the ID of an element to avoid duplicates."
                 },
                 "answer": "A",
-                "detailedexplanation": "The .clone() method creates a deep copy of the selected elements, including all child nodes and text. By default, it does not copy event handlers, but if you pass 'true' as an argument—like .clone(true)—it will copy all data and events associated with the element. This is useful for repeating UI patterns dynamically."
+                "detailedexplanation": "The .clone() method creates a deep copy of the selected elements, including all child nodes and text. By default, it does not copy event handlers, but if you pass 'true' as an argument\u2014like .clone(true)\u2014it will copy all data and events associated with the element. This is useful for repeating UI patterns dynamically."
             },
             {
                 "id": 24,
@@ -14831,7 +14363,7 @@
                 "Crack Your Next C Programming Interview"
             ],
             "intro_script": {
-                "hook": "Ever wondered why even seasoned developers struggle with C programming interviews? It’s often the subtle details of pointers, memory management, and operator precedence that trip them up.",
+                "hook": "Ever wondered why even seasoned developers struggle with C programming interviews? It\u2019s often the subtle details of pointers, memory management, and operator precedence that trip them up.",
                 "summary": "In this video, we dive deep into 30 essential C programming interview questions that cover everything from basic syntax to complex data structures and memory allocation. Each question is designed to reflect the rigor of actual technical assessments.",
                 "cta_intro": "Before we start, make sure to grab a notebook. We aren't just giving answers; we're explaining the 'why' behind every solution.",
                 "checkfullexamlinkindescription": "For a complete practice test experience and to boost your certification chances, check the full exam link in the description below."
