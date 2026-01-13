@@ -99,7 +99,7 @@ def get_authenticated_service(token_file='token.pickle'):
             
     return build('youtube', 'v3', credentials=creds)
 
-def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle'):
+def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle', thumbnail=None):
     """
     Uploads a video to YouTube.
     """
@@ -139,6 +139,18 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
 
     print(f"Upload Complete! Video ID: {response['id']}")
     print(f"Link: https://youtu.be/{response['id']}")
+    
+    if thumbnail and os.path.exists(thumbnail):
+        print(f"Uploading thumbnail: {thumbnail}...")
+        try:
+            youtube.thumbnails().set(
+                videoId=response['id'],
+                media_body=MediaFileUpload(thumbnail)
+            ).execute()
+            print("Thumbnail set successfully.")
+        except Exception as e:
+            print(f"Error uploading thumbnail: {e}")
+
     return response['id']
 
 def add_video_to_playlist(video_id, playlist_id, token_file='token.pickle'):

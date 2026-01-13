@@ -47,10 +47,6 @@ jobs:
         run: |
           python scripts/viralCourses/viral_courses_fast.py
 
-      - name: Generate Thumbnail
-        run: |
-          python scripts/viralCourses/generate_thumbnail.py
-
       - name: Upload Video
         run: |
           python scripts/viralCourses/upload_viral_course.py
@@ -59,7 +55,9 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git stash
           git pull --rebase origin main
+          git stash pop || true
         shell: bash
 
       - name: Commit and Push changes

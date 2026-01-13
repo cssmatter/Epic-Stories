@@ -11,6 +11,7 @@ import youtube_uploader
 # Configuration
 DATA_FILE = os.path.join(ROOT_DIR, "data", "viralCourses", "data.json")
 VIDEO_FILE = os.path.join(ROOT_DIR, "output", "viralCourses", "viral_course_video_fast.mp4")
+THUMBNAIL_FILE = os.path.join(ROOT_DIR, "output", "viralCourses", "thumbnail.png")
 TOKEN_FILE_YOUTUBE = os.path.join(ROOT_DIR, "token_viral_courses.pickle")
 
 def load_data():
@@ -104,7 +105,8 @@ def upload_viral_video():
         description, 
         category_id="27", # Education
         keywords=",".join(tags),
-        token_file=TOKEN_FILE_YOUTUBE
+        token_file=TOKEN_FILE_YOUTUBE,
+        thumbnail=THUMBNAIL_FILE
     )
     
     if video_id:
@@ -131,11 +133,11 @@ def upload_viral_video():
                 os.remove(VIDEO_FILE)
                 print(f"Deleted video file: {VIDEO_FILE}")
             
+            
             # Also delete thumbnail if exists
-            thumb_file = os.path.join(ROOT_DIR, "output", "viralCourses", "thumbnail.png")
-            if os.path.exists(thumb_file):
-                os.remove(thumb_file)
-                print(f"Deleted thumbnail file: {thumb_file}")
+            if os.path.exists(THUMBNAIL_FILE):
+                os.remove(THUMBNAIL_FILE)
+                print(f"Deleted thumbnail file: {THUMBNAIL_FILE}")
                 
         except Exception as e:
             print(f"Error cleaning up files: {e}")
