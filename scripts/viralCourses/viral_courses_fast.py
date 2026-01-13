@@ -88,15 +88,11 @@ def get_bg_image():
     bg_path = os.path.join(ASSETS_DIR, "..", "viralCourses", "bg.jpg")
     if os.path.exists(bg_path):
         try:
-            with open(bg_path, "rb") as f:
-                data = skia.Data.MakeFromStream(skia.FILEStream(bg_path))
-                image = skia.Image.MakeFromEncoded(data)
-                if image:
-                    # Resize to fit screen if needed? 
-                    # For performance, we can pre-scale it to surface size if it isn't matches,
-                    # but simple drawImageRect is fast enough usually.
-                    _BG_IMAGE_CACHE = image
-                    return image
+            # Use skia.Image.open() to load the image
+            image = skia.Image.open(bg_path)
+            if image:
+                _BG_IMAGE_CACHE = image
+                return image
         except Exception as e:
             print(f"Error loading BG Image: {e}")
     return None
@@ -258,25 +254,17 @@ def generate_thumbnail(mcq, meta, intro):
     max_w = WIDTH - 200
     
     lines = wrap_text(title_text, t_font, max_w)
+    
+    # Center vertically by calculating total height
+    total_height = len(lines) * 120
+    start_y = (HEIGHT - total_height) / 2 + 100
+    
     for line in lines:
         # Center horizontally
         w = t_font.measureText(line)
         x = (WIDTH - w) / 2
-        canvas.drawSimpleText(line, x, margin_y, t_font, t_paint)
-        margin_y += 120
-        
-    # 3. Draw Hook/Subtitle
-    hook_text = intro.get("hook", "")
-    if hook_text:
-        h_font = get_font(60)
-        h_paint = skia.Paint(Color=skia.ColorRED, AntiAlias=True)
-        h_lines = wrap_text(hook_text, h_font, max_w)
-        margin_y += 50
-        for line in h_lines:
-            w = h_font.measureText(line)
-            x = (WIDTH - w) / 2
-            canvas.drawSimpleText(line, x, margin_y, h_font, h_paint)
-            margin_y += 80
+        canvas.drawSimpleText(line, x, start_y, t_font, t_paint)
+        start_y += 120
 
     # Save
     image = surface.makeImageSnapshot()

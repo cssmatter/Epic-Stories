@@ -53,27 +53,37 @@ def generate_metadata(asset_data):
     
     # Extra Titles
     titles = asset_data["video_assets"].get("titles", [])
-    titles_str = "\n".join(titles)
+    titles_str = "\n".join([f"• {t}" for t in titles if t])
 
-    description = f"""Full Course Link:
-{course_link}
-
-{desc_main}
-
-Alternative Titles:
-{titles_str}
-
-Related Queries:
-{google_search}
-
-Keywords:
-{keywords}
-
-Tags:
-{tags_str_raw}
-
-{hashtags}
-"""
+    # Build clean description
+    description_parts = []
+    
+    # Main description
+    if desc_main:
+        description_parts.append(desc_main)
+        description_parts.append("")
+    
+    # Course link
+    if course_link:
+        description_parts.append(f"📚 Full Course: {course_link}")
+        description_parts.append("")
+    
+    # Alternative titles
+    if titles_str:
+        description_parts.append("📌 Related Topics:")
+        description_parts.append(titles_str)
+        description_parts.append("")
+    
+    # Search queries
+    if google_search:
+        description_parts.append(f"🔍 {google_search}")
+        description_parts.append("")
+    
+    # Hashtags at the end
+    if hashtags:
+        description_parts.append(hashtags)
+    
+    description = "\n".join(description_parts)
     
     return title, description, tags, meta.get("category", "27") # 27 is Education
 
