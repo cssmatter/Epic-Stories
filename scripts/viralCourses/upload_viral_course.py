@@ -2,6 +2,10 @@ import os
 import sys
 import json
 
+# Force UTF-8 encoding for stdout to handle emojis
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 # Add root to python path to import youtube_uploader
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, ROOT_DIR)
