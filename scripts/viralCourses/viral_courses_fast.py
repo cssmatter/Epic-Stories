@@ -861,26 +861,6 @@ def main():
     print(f"DONE! Total time: {elapsed:.2f}s")
     print(f"Output: {final_output}")
     
-    # --- DATA ROTATION ---
-    # Remove the first object from data.json after successful generation
-    if not args.limit:  # Only rotate if processing full dataset (not testing)
-        print("Rotating data.json (removing first object)...", flush=True)
-        try:
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            
-            if len(data) > 0:
-                data.pop(0)  # Remove first object
-                
-                with open(DATA_FILE, 'w', encoding='utf-8') as f:
-                    json.dump(data, f, indent=4, ensure_ascii=False)
-                
-                print(f"Data rotated. Remaining objects: {len(data)}", flush=True)
-            else:
-                print("No data to rotate (data.json is empty).", flush=True)
-        except Exception as e:
-            print(f"Error rotating data: {e}", flush=True)
-    
     # --- CLEANUP TEMP FILES ---
     print("Cleaning up temporary files...", flush=True)
     try:
