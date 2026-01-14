@@ -2,476 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "ISC2 Certified in Cybersecurity (CC) Full Practice Exam",
-                "Master the ISC2 CC Exam: 30 Essential Practice Questions",
-                "ISC2 Certified in Cybersecurity Training: Real Exam Questions and Answers",
-                "Pass the ISC2 CC Certification - Comprehensive Practice Test"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to jumpstart your career in cybersecurity with the world's leading security professional organization? The ISC2 Certified in Cybersecurity entry-level credential is your gateway, but passing the exam requires a deep understanding of foundational security principles.",
-                "summary": "In this video, we are diving into 30 high-quality practice questions modeled after the actual ISC2 CC exam. We will cover all five domains: Security Principles, Business Continuity, Access Control, Network Security, and Security Operations.",
-                "cta_intro": "Make sure to grab a notebook, pause after each question, and see if you can pick the right answer before we reveal the explanation.",
-                "checkfullexamlinkindescription": "For the full bank of over 500 practice questions and timed mock exams, check out the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://www.udemy.com/course/isc2-certified-in-cybersecurity-cc-practice-exams-tests/?instructorPreviewMode=guest",
-                "youtubetitle": "ISC2 Certified in Cybersecurity CC Exam Prep - 30 Practice Questions & Detailed Explanations",
-                "description": "Unlock your potential in IT security with our ISC2 Certified in Cybersecurity (CC) practice exam video. This comprehensive guide provides 30 realistic exam questions covering all domains of the ISC2 CC syllabus. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the correct answer. \n\nTopics covered include:\n- Security Principles (CIA Triad, IAAA, Ethics)\n- Business Continuity (BCP, DRP, Incident Response)\n- Access Control Concepts (Physical and Logical)\n- Network Security (OSI Model, Threats, Protection)\n- Security Operations (Data Security, Policies, Hardening)\n\nPerfect for beginners and career changers looking to earn their first security certification.",
-                "tags": "ISC2 CC, Certified in Cybersecurity, ISC2 CC Exam Prep, Cybersecurity Certification, Entry Level Cybersecurity, ISC2 Practice Test, Information Security Basics, CIA Triad, Network Security, Security Operations",
-                "hashtags": [
-                    "#ISC2",
-                    "#Cybersecurity",
-                    "#CertifiedInCybersecurity",
-                    "#ExamPrep",
-                    "#InformationSecurity",
-                    "#CareerInTech"
-                ],
-                "keywords": [
-                    "ISC2 Certified in Cybersecurity CC",
-                    "CC Exam Questions",
-                    "Cybersecurity entry level certification",
-                    "ISC2 CC Study Guide",
-                    "Cybersecurity practice test",
-                    "How to pass ISC2 CC"
-                ],
-                "mostsearchedongoogle": "ISC2 CC practice exam free, ISC2 CC exam difficulty, Certified in Cybersecurity syllabus, ISC2 CC vs Security+"
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Security Principles",
-                "difficulty": "Easy",
-                "question": "Which component of the CIA Triad is focused on ensuring that data is not modified by unauthorized entities?",
-                "options": {
-                    "A": "Availability",
-                    "B": "Confidentiality",
-                    "C": "Integrity",
-                    "D": "Authenticity"
-                },
-                "answer": "C",
-                "detailedexplanation": "Integrity is the property that information is not altered by unauthorized persons or processes. When we talk about integrity, we are ensuring the accuracy and completeness of data over its entire lifecycle. If an attacker changes a bank balance or a medical record, the integrity of that data is compromised. Confidentiality deals with keeping data secret, while Availability ensures authorized users have access to the data when needed."
-            },
-            {
-                "id": 2,
-                "domain": "Security Principles",
-                "difficulty": "Medium",
-                "question": "An employee uses their unique username and a password to enter the corporate network. Which part of the IAAA process describes the username?",
-                "options": {
-                    "A": "Identification",
-                    "B": "Authentication",
-                    "C": "Authorization",
-                    "D": "Accountability"
-                },
-                "answer": "A",
-                "detailedexplanation": "Identification is the act of a user claiming an identity to a system, typically through a username, account number, or ID card. Authentication is the next step, where the user proves that identity (e.g., using a password). Authorization determines what the user can do once inside, and Accountability tracks the user's actions via logs."
-            },
-            {
-                "id": 3,
-                "domain": "Business Continuity (BC) and Disaster Recovery (DR)",
-                "difficulty": "Hard",
-                "question": "Which of the following is the primary goal of Business Continuity Planning (BCP)?",
-                "options": {
-                    "A": "Restoring IT systems after a flood.",
-                    "B": "Ensuring the safety of personnel during an emergency.",
-                    "C": "Maintaining critical business functions during and after a disruption.",
-                    "D": "Conducting a post-incident review to prevent future attacks."
-                },
-                "answer": "C",
-                "detailedexplanation": "The primary goal of Business Continuity Planning (BCP) is to ensure that the organization can continue to operate its most critical business functions during a disaster or disruption. While personnel safety (Life Safety) is always the top priority in any emergency response, the specific definition of BCP focuses on the operational resiliency and survival of the business processes themselves. Restoring IT systems is more specifically under the umbrella of Disaster Recovery (DR)."
-            },
-            {
-                "id": 4,
-                "domain": "Access Control Concepts",
-                "difficulty": "Medium",
-                "question": "A security guard checking badges at the entrance of a building is an example of which type of security control?",
-                "options": {
-                    "A": "Technical Control",
-                    "B": "Physical Control",
-                    "C": "Administrative Control",
-                    "D": "Logical Control"
-                },
-                "answer": "B",
-                "detailedexplanation": "Physical controls are tangible measures used to prevent unauthorized access to a physical facility or resource. Examples include guards, fences, locks, CCTV, and biometric scanners on doors. Technical (or Logical) controls involve hardware or software mechanisms like firewalls or encryption. Administrative controls are management-level policies and procedures."
-            },
-            {
-                "id": 5,
-                "domain": "Network Security",
-                "difficulty": "Medium",
-                "question": "At which layer of the OSI model does an IP router primarily operate?",
-                "options": {
-                    "A": "Layer 1 - Physical",
-                    "B": "Layer 2 - Data Link",
-                    "C": "Layer 3 - Network",
-                    "D": "Layer 4 - Transport"
-                },
-                "answer": "C",
-                "detailedexplanation": "The Network Layer (Layer 3) is responsible for packet forwarding, including routing through intermediate routers. This layer handles logical addressing (IP addresses). Layer 2 handles MAC addresses (switches), and Layer 4 handles end-to-end communication and error checking (TCP/UDP)."
-            },
-            {
-                "id": 6,
-                "domain": "Security Operations",
-                "difficulty": "Medium",
-                "question": "Which process involves the systematic evaluation of software and systems to identify potential security loopholes?",
-                "options": {
-                    "A": "Patch Management",
-                    "B": "Vulnerability Management",
-                    "C": "Change Management",
-                    "D": "Configuration Management"
-                },
-                "answer": "B",
-                "detailedexplanation": "Vulnerability Management is the cyclical practice of identifying, classifying, prioritizing, remediating, and mitigating software vulnerabilities. It often involves using automated scanners to find weaknesses that could be exploited by attackers. Patch management is a subset of this process where updates are applied to fix the identified vulnerabilities."
-            },
-            {
-                "id": 7,
-                "domain": "Security Principles",
-                "difficulty": "Medium",
-                "question": "What is the primary purpose of the ISC2 Code of Ethics?",
-                "options": {
-                    "A": "To provide a list of technical configurations for secure servers.",
-                    "B": "To establish a legal framework for prosecuting cybercriminals.",
-                    "C": "To guide the professional behavior and decision-making of members.",
-                    "D": "To define the requirements for the CC certification exam."
-                },
-                "answer": "C",
-                "detailedexplanation": "The ISC2 Code of Ethics provides high-level guidance for the professional conduct of its members. It consists of four canons: Protect society, the common good, necessary public trust and confidence, and the infrastructure; Act honorably, honestly, justly, responsibly, and legally; Provide diligent and competent service to principals; and Protect and advance the profession."
-            },
-            {
-                "id": 8,
-                "domain": "Network Security",
-                "difficulty": "Medium",
-                "question": "A 'Man-in-the-Middle' (MITM) attack primarily targets which of the following?",
-                "options": {
-                    "A": "Physical hardware destruction",
-                    "B": "The availability of a web server",
-                    "C": "The confidentiality and integrity of communication",
-                    "D": "The power supply of a data center"
-                },
-                "answer": "C",
-                "detailedexplanation": "In a MITM attack, the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other. By eavesdropping, they compromise confidentiality; by altering packets, they compromise integrity."
-            },
-            {
-                "id": 9,
-                "domain": "Access Control Concepts",
-                "difficulty": "Medium",
-                "question": "Which principle suggests that a user should only be granted the minimum level of access necessary to perform their job functions?",
-                "options": {
-                    "A": "Need to Know",
-                    "B": "Least Privilege",
-                    "C": "Separation of Duties",
-                    "D": "Implicit Deny"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Principle of Least Privilege (PoLP) dictates that users and systems should only have the permissions necessary to complete their tasks. This limits the potential damage from accidents or malicious attacks. 'Need to know' is similar but focuses specifically on access to data, whereas Least Privilege applies to all rights and permissions."
-            },
-            {
-                "id": 10,
-                "domain": "Security Operations",
-                "difficulty": "Medium",
-                "question": "Which type of malware is designed to encrypt a victim's files and demand payment for the decryption key?",
-                "options": {
-                    "A": "Spyware",
-                    "B": "Trojan Horse",
-                    "C": "Ransomware",
-                    "D": "Logic Bomb"
-                },
-                "answer": "C",
-                "detailedexplanation": "Ransomware is a type of malicious software that blocks access to a computer system or data, usually by encrypting it, until the victim pays a fee to the attacker. It has become one of the most significant threats to organizational availability and integrity."
-            },
-            {
-                "id": 11,
-                "domain": "Security Principles",
-                "difficulty": "Easy",
-                "question": "A security policy is considered which type of control?",
-                "options": {
-                    "A": "Technical",
-                    "B": "Administrative",
-                    "C": "Physical",
-                    "D": "Operational"
-                },
-                "answer": "B",
-                "detailedexplanation": "Administrative controls (also known as managerial controls) consist of policies, standards, procedures, and guidelines defined by management to provide a framework for running the organization and managing people. They are 'paper-based' controls rather than hardware or software ones."
-            },
-            {
-                "id": 12,
-                "domain": "Business Continuity (BC) and Disaster Recovery (DR)",
-                "difficulty": "Medium",
-                "question": "During which phase of the Incident Response life cycle does the team attempt to stop the 'bleeding' and limit the scope of an attack?",
-                "options": {
-                    "A": "Preparation",
-                    "B": "Detection and Analysis",
-                    "C": "Containment",
-                    "D": "Post-Incident Activity"
-                },
-                "answer": "C",
-                "detailedexplanation": "The Containment phase is critical for limiting the damage of an incident. It involves isolating affected systems to prevent the threat from spreading to other parts of the network. This happens after the incident has been identified but before the actual cleanup (Eradication) begins."
-            },
-            {
-                "id": 13,
-                "domain": "Network Security",
-                "difficulty": "Easy",
-                "question": "What is the primary function of a Firewall?",
-                "options": {
-                    "A": "To detect and remove viruses from email attachments.",
-                    "B": "To encrypt data stored on a local hard drive.",
-                    "C": "To filter incoming and outgoing network traffic based on rules.",
-                    "D": "To provide physical security for server rooms."
-                },
-                "answer": "C",
-                "detailedexplanation": "A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies. It acts as a barrier between a trusted network and an untrusted network (like the Internet)."
-            },
-            {
-                "id": 14,
-                "domain": "Access Control Concepts",
-                "difficulty": "Hard",
-                "question": "Which of the following is an example of 'something you are' in Multi-Factor Authentication (MFA)?",
-                "options": {
-                    "A": "A hardware token",
-                    "B": "A fingerprint scan",
-                    "C": "A PIN code",
-                    "D": "A smart card"
-                },
-                "answer": "B",
-                "detailedexplanation": "'Something you are' refers to biometrics\u2014physical or behavioral characteristics unique to an individual. This includes fingerprints, retina scans, facial recognition, or voice patterns. PINs are 'something you know,' and hardware tokens/smart cards are 'something you have.'"
-            },
-            {
-                "id": 15,
-                "domain": "Security Operations",
-                "difficulty": "Medium",
-                "question": "What is the primary purpose of logging and monitoring?",
-                "options": {
-                    "A": "To make the network run faster.",
-                    "B": "To ensure that all employees are working their full hours.",
-                    "C": "To provide a record of events and detect suspicious activity.",
-                    "D": "To automatically delete spam emails."
-                },
-                "answer": "C",
-                "detailedexplanation": "Logging is the process of recording events within a system. Monitoring is the active review of those logs. Together, they allow security professionals to detect unauthorized access, troubleshoot issues, and provide an audit trail for accountability and forensic investigations."
-            },
-            {
-                "id": 16,
-                "domain": "Security Principles",
-                "difficulty": "Medium",
-                "question": "Which risk management strategy involves moving the impact of a risk to a third party, such as an insurance company?",
-                "options": {
-                    "A": "Risk Avoidance",
-                    "B": "Risk Mitigation",
-                    "C": "Risk Transference",
-                    "D": "Risk Acceptance"
-                },
-                "answer": "C",
-                "detailedexplanation": "Risk Transference involves shifting the financial or operational impact of a risk to another entity. Purchasing cyber insurance or outsourcing a risky process to a specialized vendor are common examples of transference. Mitigation involves reducing the risk, Avoidance involves stopping the activity, and Acceptance means acknowledging the risk without taking further action."
-            },
-            {
-                "id": 17,
-                "domain": "Business Continuity (BC) and Disaster Recovery (DR)",
-                "difficulty": "Hard",
-                "question": "What does the 'Recovery Point Objective' (RPO) define?",
-                "options": {
-                    "A": "The maximum amount of time a system can be down.",
-                    "B": "The maximum age of files that must be recovered from backup for operations to resume.",
-                    "C": "The cost associated with a disaster.",
-                    "D": "The distance between the primary site and the DR site."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Recovery Point Objective (RPO) describes the maximum targeted period in which data might be lost from an IT service due to a major incident. In other words, it defines how 'old' the data is when you restore it from backup. If your RPO is 4 hours, you must perform backups at least every 4 hours. Recovery Time Objective (RTO) refers to the duration of time within which a business process must be restored."
-            },
-            {
-                "id": 18,
-                "domain": "Network Security",
-                "difficulty": "Medium",
-                "question": "Which of the following is a security risk associated with public Wi-Fi networks?",
-                "options": {
-                    "A": "Slow internet speeds",
-                    "B": "Eavesdropping/Sniffing",
-                    "C": "Lack of physical security for the router",
-                    "D": "Hardware failure of the user's laptop"
-                },
-                "answer": "B",
-                "detailedexplanation": "Public Wi-Fi networks are often unencrypted or use shared passwords, making it easy for attackers to use 'sniffing' tools to intercept data (like passwords or session cookies) being sent over the air. This is why using a VPN is recommended on public networks."
-            },
-            {
-                "id": 19,
-                "domain": "Access Control Concepts",
-                "difficulty": "Medium",
-                "question": "What is the result of a 'False Acceptance' in a biometric system?",
-                "options": {
-                    "A": "An authorized user is denied access.",
-                    "B": "An unauthorized user is granted access.",
-                    "C": "The system crashes during the scan.",
-                    "D": "The user is asked for a second form of ID."
-                },
-                "answer": "B",
-                "detailedexplanation": "A False Acceptance (Type II error) occurs when a biometric system incorrectly identifies an unauthorized person as an authorized one and grants them access. This is a critical security failure. A False Rejection (Type I error) is when an authorized user is denied access, which is an inconvenience but generally less of a security risk."
-            },
-            {
-                "id": 20,
-                "domain": "Security Operations",
-                "difficulty": "Medium",
-                "question": "Which term describes the process of removing unnecessary services and accounts from a system to reduce its attack surface?",
-                "options": {
-                    "A": "System Hardening",
-                    "B": "Data Masking",
-                    "C": "Network Segmentation",
-                    "D": "Encryption"
-                },
-                "answer": "A",
-                "detailedexplanation": "System Hardening is the process of securing a system by reducing its surface of vulnerability. This includes removing default passwords, disabling unused ports and services, deleting unnecessary accounts, and keeping the software patched. A 'hardened' system is much more difficult for an attacker to exploit."
-            },
-            {
-                "id": 21,
-                "domain": "Security Principles",
-                "difficulty": "Easy",
-                "question": "In the CIA triad, making sure that authorized users have timely and reliable access to data is known as:",
-                "options": {
-                    "A": "Confidentiality",
-                    "B": "Integrity",
-                    "C": "Availability",
-                    "D": "Accountability"
-                },
-                "answer": "C",
-                "detailedexplanation": "Availability ensures that systems, applications, and data are available when needed by authorized users. Threats to availability include Denial of Service (DoS) attacks, hardware failures, and natural disasters."
-            },
-            {
-                "id": 22,
-                "domain": "Access Control Concepts",
-                "difficulty": "Medium",
-                "question": "Which of the following is a logical access control?",
-                "options": {
-                    "A": "A padlocked gate",
-                    "B": "An Access Control List (ACL) on a router",
-                    "C": "A security guard",
-                    "D": "A visitor logbook"
-                },
-                "answer": "B",
-                "detailedexplanation": "Logical (or technical) access controls are software and hardware tools used to manage access to resources and data. An ACL is a list of permissions attached to an object (like a file or a network port) that specifies which users or system processes are granted access. The other options are physical or administrative controls."
-            },
-            {
-                "id": 23,
-                "domain": "Network Security",
-                "difficulty": "Hard",
-                "question": "Which protocol is used to securely log into a remote server over an unsecured network?",
-                "options": {
-                    "A": "Telnet",
-                    "B": "HTTP",
-                    "C": "SSH (Secure Shell)",
-                    "D": "FTP"
-                },
-                "answer": "C",
-                "detailedexplanation": "SSH (Secure Shell) provides a secure, encrypted channel over an unsecure network. It is widely used for remote login and command-line execution. Telnet and FTP are older protocols that send data (including passwords) in plain text, making them highly insecure."
-            },
-            {
-                "id": 24,
-                "domain": "Business Continuity (BC) and Disaster Recovery (DR)",
-                "difficulty": "Medium",
-                "question": "What is the first step in a Business Impact Analysis (BIA)?",
-                "options": {
-                    "A": "Recovering the web server.",
-                    "B": "Identifying critical business processes.",
-                    "C": "Purchasing insurance.",
-                    "D": "Notifying the media of a breach."
-                },
-                "answer": "B",
-                "detailedexplanation": "The BIA is used to identify and prioritize business functions and systems based on their criticality. You cannot plan for a disaster if you don't know which parts of the business are the most important to keep running. Therefore, identification is the foundational first step."
-            },
-            {
-                "id": 25,
-                "domain": "Security Operations",
-                "difficulty": "Hard",
-                "question": "Which of the following describes 'Least Privilege' in the context of data handling?",
-                "options": {
-                    "A": "Everyone in the company can read all files.",
-                    "B": "Only the CEO can delete files.",
-                    "C": "Users are only given access to data they need for their specific job.",
-                    "D": "Data is encrypted so no one can read it."
-                },
-                "answer": "C",
-                "detailedexplanation": "Least Privilege ensures that users have the minimum level of access (read, write, execute, etc.) and only to the specific resources required to perform their duties. This limits the 'blast radius' if a user account is compromised."
-            },
-            {
-                "id": 26,
-                "domain": "Security Principles",
-                "difficulty": "Hard",
-                "question": "An organization experiences a data breach where customer names and credit card numbers are leaked. Which part of the CIA triad was violated?",
-                "options": {
-                    "A": "Integrity",
-                    "B": "Availability",
-                    "C": "Confidentiality",
-                    "D": "Non-repudiation"
-                },
-                "answer": "C",
-                "detailedexplanation": "Confidentiality is about preventing the unauthorized disclosure of information. When sensitive data like credit card numbers is leaked or stolen, the confidentiality of that data has been broken."
-            },
-            {
-                "id": 27,
-                "domain": "Network Security",
-                "difficulty": "Medium",
-                "question": "What is the purpose of a DMZ (Demilitarized Zone) in networking?",
-                "options": {
-                    "A": "To provide a high-speed connection for internal users.",
-                    "B": "To isolate public-facing servers from the internal network.",
-                    "C": "To store encrypted backups.",
-                    "D": "To prevent physical theft of laptops."
-                },
-                "answer": "B",
-                "detailedexplanation": "A DMZ is a physical or logical subnetwork that contains and exposes an organization's external-facing services (like web and email servers) to an untrusted network, usually the Internet. This adds an extra layer of security; if a server in the DMZ is compromised, the attacker still has a firewall between them and the internal corporate network."
-            },
-            {
-                "id": 28,
-                "domain": "Access Control Concepts",
-                "difficulty": "Easy",
-                "question": "Using a password and a code sent to your mobile phone is an example of what?",
-                "options": {
-                    "A": "Single Sign-On (SSO)",
-                    "B": "Multi-Factor Authentication (MFA)",
-                    "C": "Discretionary Access Control (DAC)",
-                    "D": "Identity Federation"
-                },
-                "answer": "B",
-                "detailedexplanation": "Multi-Factor Authentication (MFA) requires more than one type of evidence to verify a user's identity. In this case, it uses 'something you know' (password) and 'something you have' (the phone/code)."
-            },
-            {
-                "id": 29,
-                "domain": "Security Operations",
-                "difficulty": "Medium",
-                "question": "Why is it important to perform regular data backups?",
-                "options": {
-                    "A": "To improve the speed of the primary database.",
-                    "B": "To ensure data can be restored if the original is lost or corrupted.",
-                    "C": "To comply with the ISC2 Code of Ethics.",
-                    "D": "To reduce the amount of storage space needed on the main server."
-                },
-                "answer": "B",
-                "detailedexplanation": "Backups are a fundamental component of Availability and Disaster Recovery. They ensure that if data is deleted, corrupted by malware (like ransomware), or lost due to hardware failure, the organization can recover the information and resume operations."
-            },
-            {
-                "id": 30,
-                "domain": "Security Principles",
-                "difficulty": "Hard",
-                "question": "Which term describes the assurance that a sender cannot later deny having sent a message?",
-                "options": {
-                    "A": "Availability",
-                    "B": "Non-repudiation",
-                    "C": "Encryption",
-                    "D": "Integrity"
-                },
-                "answer": "B",
-                "detailedexplanation": "Non-repudiation is the legal/technical concept that ensures a party cannot deny the authenticity of their signature on a document or the sending of a message that they originated. It is often achieved through digital signatures and public-key cryptography."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the ISC2 CC exam! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry\u2014security is a journey, and reviewing these explanations is a huge step forward.",
-            "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more cybersecurity certification content. It really helps the channel grow.",
-            "next_steps": "Ready to take the next step? Click the link in the description to access our full-length ISC2 CC practice exams on Udemy, featuring detailed explanations for every single question to help you pass on your first try."
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Use a subtle 'whoosh' sound effect between questions. Show the domain name at the top of each slide."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "GIAC Security Essentials (GSEC) Certification Practice Exam",
                 "GSEC Exam Questions and Detailed Explanations",
                 "Pass the GIAC GSEC Exam: Ultimate Practice Test Guide"
@@ -14185,7 +13715,7 @@
                     "D": "Cross-System Response Filter"
                 },
                 "answer": "A",
-                "detailedexplanation": "CSRF (Cross-Site Request Forgery) is an attack that tricks a victim into submitting a malicious request. It inherits the identity and privileges of the victim to perform an undesired action on the victim’s behalf. Spring Security provides built-in protection against CSRF by requiring a synchronized token (CSRF token) to be included in any state-changing requests (POST, PUT, DELETE)."
+                "detailedexplanation": "CSRF (Cross-Site Request Forgery) is an attack that tricks a victim into submitting a malicious request. It inherits the identity and privileges of the victim to perform an undesired action on the victim\u2019s behalf. Spring Security provides built-in protection against CSRF by requiring a synchronized token (CSRF token) to be included in any state-changing requests (POST, PUT, DELETE)."
             },
             {
                 "id": 16,
@@ -15017,13 +14547,13 @@
                 "difficulty": "Medium",
                 "question": "Which Relational Algebra operation is used to select a subset of columns from a relation?",
                 "options": {
-                    "A": "Selection (σ)",
-                    "B": "Projection (π)",
-                    "C": "Join (⨝)",
-                    "D": "Division (÷)"
+                    "A": "Selection (\u03c3)",
+                    "B": "Projection (\u03c0)",
+                    "C": "Join (\u2a1d)",
+                    "D": "Division (\u00f7)"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Projection (π) operator is used to select specific attributes (columns) from a relation while eliminating duplicate rows. Selection (σ), on the other hand, is used to filter rows based on a specific condition."
+                "detailedexplanation": "The Projection (\u03c0) operator is used to select specific attributes (columns) from a relation while eliminating duplicate rows. Selection (\u03c3), on the other hand, is used to filter rows based on a specific condition."
             },
             {
                 "id": 6,
@@ -15121,7 +14651,7 @@
                     "D": "Left Join"
                 },
                 "answer": "B",
-                "detailedexplanation": "A Theta Join (⨝θ) is defined as a selection performed on a Cartesian Product of two relations, where the selection condition is θ. If θ is an equality condition, it is specifically called an EQUI-JOIN."
+                "detailedexplanation": "A Theta Join (\u2a1d\u03b8) is defined as a selection performed on a Cartesian Product of two relations, where the selection condition is \u03b8. If \u03b8 is an equality condition, it is specifically called an EQUI-JOIN."
             },
             {
                 "id": 13,
@@ -15219,7 +14749,7 @@
                     "D": "Cartesian Product"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Union (∪) operator combines the results of two queries into a single result set including all the rows that belong to either or both queries, eliminating duplicates. Both relations must be union-compatible (same number and type of attributes)."
+                "detailedexplanation": "The Union (\u222a) operator combines the results of two queries into a single result set including all the rows that belong to either or both queries, eliminating duplicates. Both relations must be union-compatible (same number and type of attributes)."
             },
             {
                 "id": 20,
@@ -15351,7 +14881,7 @@
                 "id": 29,
                 "domain": "Relational Algebra",
                 "difficulty": "Hard",
-                "question": "The Division (÷) operator in relational algebra is most useful for which type of query?",
+                "question": "The Division (\u00f7) operator in relational algebra is most useful for which type of query?",
                 "options": {
                     "A": "Finding common elements between two sets",
                     "B": "Queries containing the keyword 'ALL'",
@@ -16298,7 +15828,7 @@
                     "D": "An error, because the method is deprecated."
                 },
                 "answer": "C",
-                "detailedexplanation": "Buffer.allocUnsafe() is faster than Buffer.alloc() because it does not initialize the allocated memory (it doesn't fill it with zeros). As a result, the allocated segment of memory might contain old data, which is why it is labeled 'unsafe'—it requires the developer to manually overwrite the data before reading."
+                "detailedexplanation": "Buffer.allocUnsafe() is faster than Buffer.alloc() because it does not initialize the allocated memory (it doesn't fill it with zeros). As a result, the allocated segment of memory might contain old data, which is why it is labeled 'unsafe'\u2014it requires the developer to manually overwrite the data before reading."
             },
             {
                 "id": 27,
@@ -17293,7 +16823,7 @@
                     "D": "A security feature that prevents XSS attacks."
                 },
                 "answer": "B",
-                "detailedexplanation": "Reconciliation is the process through which React updates the DOM. When a component’s props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element tree with the previously rendered one. It uses a heuristic O(n) algorithm to make this comparison efficient."
+                "detailedexplanation": "Reconciliation is the process through which React updates the DOM. When a component\u2019s props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element tree with the previously rendered one. It uses a heuristic O(n) algorithm to make this comparison efficient."
             },
             {
                 "id": 28,
@@ -17339,7 +16869,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 essential React JS interview questions. How many did you get right? If you struggled with the advanced hooks or reconciliation questions, don't worry—these are complex topics that take time to master.",
+            "closing": "That wraps up our 30 essential React JS interview questions. How many did you get right? If you struggled with the advanced hooks or reconciliation questions, don't worry\u2014these are complex topics that take time to master.",
             "cta_final": "If you found this helpful, please give the video a thumbs up and subscribe for more developer interview prep. To get the full certification and 500+ more questions, click the link in the description.",
             "next_steps": "Check out our next video on Advanced JavaScript Interview Questions to round out your frontend knowledge!"
         },
@@ -18887,7 +18417,7 @@
                     "D": "v-show supports the <template> element while v-if does not."
                 },
                 "answer": "C",
-                "detailedexplanation": "v-if is 'real' conditional rendering because it ensures that event listeners and child components inside the conditional block are properly destroyed and re-created during toggles. It is also lazy: if the condition is false on initial render, it does nothing. In contrast, v-show is much simpler—the element is always rendered and remains in the DOM; Vue simply toggles the CSS 'display' property. Use v-show if you need to toggle something very often, and v-if if the condition is unlikely to change during runtime."
+                "detailedexplanation": "v-if is 'real' conditional rendering because it ensures that event listeners and child components inside the conditional block are properly destroyed and re-created during toggles. It is also lazy: if the condition is false on initial render, it does nothing. In contrast, v-show is much simpler\u2014the element is always rendered and remains in the DOM; Vue simply toggles the CSS 'display' property. Use v-show if you need to toggle something very often, and v-if if the condition is unlikely to change during runtime."
             },
             {
                 "id": 2,
