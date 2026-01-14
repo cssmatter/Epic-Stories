@@ -16,6 +16,33 @@ log() {
 
 log "Attempting to upload $FILE_PATH to temporary hosts..."
 
+# --- Try GitHub Releases (Most reliable in CI/CD) ---
+if [ -n "$GITHUB_TOKEN" ]; then
+    log "Trying GitHub Releases..."
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    
+    if [ -f "$SCRIPT_DIR/github_release_upload.sh" ]; then
+        chmod +x "$SCRIPT_DIR/github_release_upload.sh"
+        RESPONSE=$("$SCRIPT_DIR/github_release_upload.sh" "$FILE_PATH" "$GITHUB_TOKEN" 2>&1)
+        
+        # Extract the URL (first line) and release info (stderr)
+        URL=$(echo "$RESPONSE" | grep -E '^https://' | head -1)
+        
+        if [[ $URL == https://* ]]; then
+            # Save release tag for cleanup
+            RELEASE_TAG=$(echo "$RESPONSE" | grep "RELEASE_TAG=" | sed 's/RELEASE_TAG=//')
+            if [ -n "$RELEASE_TAG" ]; then
+                echo "$RELEASE_TAG" > /tmp/github_release_tag.txt
+            fi
+            echo "$URL"
+            exit 0
+        fi
+    fi
+    log "GitHub Releases failed or not available."
+else
+    log "Skipping GitHub Releases (GITHUB_TOKEN not set)."
+fi
+
 # --- Try Catbox.moe ---
 log "Trying Catbox.moe..."
 RESPONSE=$(curl -s -F "reqtype=fileupload" -F "fileToUpload=@$FILE_PATH" https://catbox.moe/user/api.php)
@@ -66,5 +93,5 @@ if [[ $LINK == http* ]]; then
 fi
 log "Oshi.at failed."
 
-log "Error: All 5 hosting providers failed."
+log "Error: All hosting providers failed."
 exit 1

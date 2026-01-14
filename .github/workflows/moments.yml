@@ -79,6 +79,7 @@ jobs:
       env:
         IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         # 1. Upload the video to a temporary public host (required because repo is private)
         echo "Uploading video to temporary host with fallback..."
@@ -96,8 +97,17 @@ jobs:
         # It will automatically pick up the description from instagram_metadata.json
         python instagram_graph_uploader.py "$VIDEO_URL"
         
-        # Cleanup
-        rm -f instagram_metadata.json
+        # 3. Cleanup temporary release if it was used
+        if [ -f /tmp/github_release_tag.txt ]; then
+          RELEASE_TAG=$(cat /tmp/github_release_tag.txt)
+          echo "Cleaning up GitHub release: $RELEASE_TAG"
+          chmod +x scripts/cleanup_release.sh
+          ./scripts/cleanup_release.sh "$RELEASE_TAG" "$GITHUB_TOKEN"
+          rm -f /tmp/github_release_tag.txt
+        fi
+        
+        # Cleanup video files
+        rm -f instagram_metadata.json daily_moments_video.mp4
     
     - name: Commit updated moments.json
       if: steps.check_moments.outputs.moments_available == 'true'
