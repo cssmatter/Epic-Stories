@@ -2,473 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Microsoft Azure Fundamentals AZ-900 Full Course Practice Questions",
-                "Azure Fundamentals Certification Exam Prep: 30 Must-Know Questions",
-                "Master AZ-900: Microsoft Azure Fundamentals Practice Test and Explanations"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to pass the AZ-900 exam on your very first attempt? Most candidates fail because they understand the concepts but don't know how Microsoft phrases their questions.",
-                "summary": "In this video, we are breaking down 30 high-yield practice questions for the Microsoft Certified Azure Fundamentals certification. We cover cloud concepts, architecture, services, and governance.",
-                "cta_intro": "Make sure to grab a notebook, and let's see how many you can get right.",
-                "checkfullexamlinkindescription": "For a complete set of over 300+ realistic practice questions, check out the full exam prep link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://www.udemy.com/course/microsoft-certified-azure-fundamentals-practice-exams",
-                "youtubetitle": "Azure Fundamentals AZ-900 Certification Practice Questions and Full Training",
-                "description": "Unlock your potential in the cloud with our comprehensive guide to the AZ-900 Microsoft Azure Fundamentals exam. This video features 30 realistic practice questions designed to mimic the actual exam environment. Each question is followed by a detailed explanation to ensure you understand the 'why' behind the 'what'. Whether you are a beginner or looking to validate your cloud skills, this mock exam is your ultimate study companion. Topics include Cloud Computing, IaaS vs PaaS vs SaaS, Azure Resource Manager, Security, and Governance.",
-                "tags": "Azure Fundamentals, AZ-900, Microsoft Azure, Cloud Computing, Azure Certification, Microsoft Certified, AZ-900 Practice Test, Azure Training, Cloud Engineer, Azure Exam Prep",
-                "hashtags": [
-                    "#AzureFundamentals",
-                    "#AZ900",
-                    "#MicrosoftAzure",
-                    "#CloudCertification",
-                    "#AzureTraining"
-                ],
-                "keywords": [
-                    "AZ-900 exam questions",
-                    "Azure Fundamentals mock exam",
-                    "Microsoft Azure certification path",
-                    "Azure cloud concepts",
-                    "Azure architecture and services"
-                ],
-                "mostsearchedongoogle": "AZ-900 practice questions, Azure Fundamentals exam dumps, how to pass AZ-900, Azure certification for beginners"
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Describe cloud concepts",
-                "difficulty": "Easy",
-                "question": "Which cloud model provides the greatest degree of flexibility and scalability by allowing a company to use both its own on-premises servers and a third-party cloud provider?",
-                "options": {
-                    "A": "Public Cloud",
-                    "B": "Private Cloud",
-                    "C": "Hybrid Cloud",
-                    "D": "Community Cloud"
-                },
-                "answer": "C",
-                "detailedexplanation": "Hybrid cloud is a computing environment that combines a public cloud and a private cloud (on-premises infrastructure) by allowing data and applications to be shared between them. This gives businesses greater flexibility, more deployment options, and helps optimize existing infrastructure, security, and compliance. Public cloud is solely third-party, and private cloud is restricted to one organization."
-            },
-            {
-                "id": 2,
-                "domain": "Describe cloud concepts",
-                "difficulty": "Medium",
-                "question": "An organization wants to migrate to the cloud but must minimize administrative effort for managing the underlying OS and hardware. Which service model should they choose?",
-                "options": {
-                    "A": "Infrastructure as a Service (IaaS)",
-                    "B": "Platform as a Service (PaaS)",
-                    "C": "Software as a Service (SaaS)",
-                    "D": "Desktop as a Service (DaaS)"
-                },
-                "answer": "B",
-                "detailedexplanation": "Platform as a Service (PaaS) provides a framework for developers that they can build upon and use to create customized applications. All servers, storage, and networking can be managed by the enterprise or a third-party provider while the developers maintain management of the applications. It significantly reduces OS management compared to IaaS, while offering more customization than SaaS."
-            },
-            {
-                "id": 3,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Easy",
-                "question": "Which Azure component is used to manage multiple subscriptions under a single hierarchy for unified policy and compliance application?",
-                "options": {
-                    "A": "Resource Groups",
-                    "B": "Management Groups",
-                    "C": "Azure Active Directory",
-                    "D": "Azure Policy"
-                },
-                "answer": "B",
-                "detailedexplanation": "Management groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions within a management group automatically inherit the conditions applied to the management group. This is the highest level of organization above individual subscriptions."
-            },
-            {
-                "id": 4,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "You need to ensure that your Azure Virtual Machines remain available if a single data center within an Azure Region fails. What should you use?",
-                "options": {
-                    "A": "Availability Sets",
-                    "B": "Availability Zones",
-                    "C": "Region Pairs",
-                    "D": "Resource Groups"
-                },
-                "answer": "B",
-                "detailedexplanation": "Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. By using Availability Zones, you can protect your applications and data from datacenter failures. Availability Sets only protect against hardware failure within a single datacenter."
-            },
-            {
-                "id": 5,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Easy",
-                "question": "Which Azure service is best suited for hosting a web application that requires automatic scaling and supports multiple programming languages without managing servers?",
-                "options": {
-                    "A": "Azure Virtual Machines",
-                    "B": "Azure App Service",
-                    "C": "Azure SQL Database",
-                    "D": "Azure Functions"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure App Service is a HTTP-based service for hosting web applications, REST APIs, and mobile back ends. It is a PaaS solution, meaning Azure handles the infrastructure, scaling, and security patching, allowing users to focus on the code. While Azure Functions is also serverless, it is meant for event-driven small snippets of code rather than full web applications."
-            },
-            {
-                "id": 6,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Hard",
-                "question": "A company needs to connect their on-premises network to Azure using a dedicated, private connection that does not go over the public internet. Which service should they use?",
-                "options": {
-                    "A": "Azure VPN Gateway",
-                    "B": "Azure ExpressRoute",
-                    "C": "Azure Front Door",
-                    "D": "Azure Traffic Manager"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider. ExpressRoute connections do not go over the public Internet, offering more reliability, faster speeds, and consistent latencies. VPN Gateways, conversely, use the public internet with encryption."
-            },
-            {
-                "id": 7,
-                "domain": "Describe cloud concepts",
-                "difficulty": "Easy",
-                "question": "Which of the following describes 'Elasticity' in cloud computing?",
-                "options": {
-                    "A": "The ability to recover from a disaster",
-                    "B": "The ability to reach users globally",
-                    "C": "The ability to scale resources dynamically based on demand",
-                    "D": "The ability to maintain high uptime"
-                },
-                "answer": "C",
-                "detailedexplanation": "Elasticity is the ability of a system to grow or shrink its resource allocation (like CPU, memory, or storage) automatically to match the current demand. This ensures that you only pay for what you use and that the application remains responsive during traffic spikes."
-            },
-            {
-                "id": 8,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "Which service should be used to store large amounts of unstructured data, such as videos and images, that can be accessed from anywhere via HTTP?",
-                "options": {
-                    "A": "Azure SQL Database",
-                    "B": "Azure Files",
-                    "C": "Azure Blob Storage",
-                    "D": "Azure Table Storage"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Blob storage is Microsoft's object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a particular data model or definition, such as text or binary data (images, videos, documents)."
-            },
-            {
-                "id": 9,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Easy",
-                "question": "Which tool provides a set of tools for monitoring, allocating, and optimizing Azure costs?",
-                "options": {
-                    "A": "Azure Advisor",
-                    "B": "Azure Cost Management + Billing",
-                    "C": "Azure Monitor",
-                    "D": "Azure Service Health"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Cost Management + Billing is a suite of tools provided by Microsoft that help you analyze, manage, and optimize the costs of your workloads. It allows you to set budgets, export data, and receive alerts when spending reaches certain thresholds."
-            },
-            {
-                "id": 10,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Medium",
-                "question": "You need to prevent the accidental deletion of a critical production database in Azure. What should you apply to the resource?",
-                "options": {
-                    "A": "Azure Policy",
-                    "B": "Role-Based Access Control (RBAC)",
-                    "C": "Resource Locks",
-                    "D": "Management Groups"
-                },
-                "answer": "C",
-                "detailedexplanation": "Resource locks help you prevent accidental deletion or modification of your Azure resources. There are two types: 'CanNotDelete' (authorized users can read and modify, but not delete) and 'ReadOnly' (authorized users can read, but not delete or update). This is the most direct way to prevent accidental deletion."
-            },
-            {
-                "id": 11,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "Which Azure service is a serverless, event-driven compute service that lets you run code without explicitly provisioning or managing infrastructure?",
-                "options": {
-                    "A": "Azure Functions",
-                    "B": "Azure Logic Apps",
-                    "C": "Azure App Service",
-                    "D": "Azure Container Instances"
-                },
-                "answer": "A",
-                "detailedexplanation": "Azure Functions is a serverless solution that allows you to write less code, maintain less infrastructure, and save on costs. Instead of worrying about deploying and maintaining servers, the cloud infrastructure provides all the up-to-date resources needed to keep your applications running. It is specifically event-driven."
-            },
-            {
-                "id": 12,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Easy",
-                "question": "What is the primary function of the Azure Resource Manager (ARM)?",
-                "options": {
-                    "A": "To provide a command-line interface",
-                    "B": "To monitor application performance",
-                    "C": "To provide a management layer for creating, updating, and deleting resources",
-                    "D": "To manage physical hardware in datacenters"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Resource Manager (ARM) is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account. You use management features, like access control, locks, and tags, to secure and organize your resources after deployment."
-            },
-            {
-                "id": 13,
-                "domain": "Describe cloud concepts",
-                "difficulty": "Easy",
-                "question": "In the shared responsibility model, which of the following is always the responsibility of the customer, regardless of the cloud model (IaaS, PaaS, SaaS)?",
-                "options": {
-                    "A": "Physical security of datacenters",
-                    "B": "Operating system updates",
-                    "C": "Data and information",
-                    "D": "Network hardware"
-                },
-                "answer": "C",
-                "detailedexplanation": "In the shared responsibility model, the customer always retains responsibility for the data and information they put into the cloud. They also usually manage identity and access. The cloud provider always manages physical security and hardware."
-            },
-            {
-                "id": 14,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Medium",
-                "question": "Which Azure service provides personalized recommendations on how to follow best practices for cost, security, reliability, performance, and operational excellence?",
-                "options": {
-                    "A": "Azure Monitor",
-                    "B": "Azure Service Health",
-                    "C": "Azure Advisor",
-                    "D": "Azure Policy"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. It analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, Reliability, and security of your Azure resources."
-            },
-            {
-                "id": 15,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "Which Azure database service is a globally distributed, multi-model database that supports various APIs like NoSQL and MongoDB?",
-                "options": {
-                    "A": "Azure SQL Database",
-                    "B": "Azure Cosmos DB",
-                    "C": "Azure Database for PostgreSQL",
-                    "D": "Azure SQL Managed Instance"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Cosmos DB is a fully managed NoSQL database for modern app development. It offers single-digit millisecond response times, and automatic and instant scalability, along with guaranteed speed at any scale. It is multi-model, supporting Document, Key-value, Graph, and Column-family data models."
-            },
-            {
-                "id": 16,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Easy",
-                "question": "What can you use to ensure that all virtual machines in a specific resource group are restricted to a certain size?",
-                "options": {
-                    "A": "Role-Based Access Control",
-                    "B": "Azure Policy",
-                    "C": "Azure Blueprint",
-                    "D": "Azure Locks"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Policy helps to enforce organizational standards and to assess compliance at-scale. Through its compliance dashboard, it provides an aggregated view to evaluate the overall state of the environment. Common use cases for Azure Policy include implementing governance for resource consistency, regulatory compliance, security, cost, and management."
-            },
-            {
-                "id": 17,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Hard",
-                "question": "Which service acts as a 'gatekeeper' to filter incoming and outgoing network traffic to Azure resources within a Virtual Network (VNet)?",
-                "options": {
-                    "A": "Azure Firewall",
-                    "B": "Network Security Group (NSG)",
-                    "C": "Azure Bastion",
-                    "D": "Load Balancer"
-                },
-                "answer": "B",
-                "detailedexplanation": "A Network Security Group (NSG) contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify source and destination, port, and protocol. Azure Firewall is more robust and stateful, but NSGs are the primary basic filter."
-            },
-            {
-                "id": 18,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Easy",
-                "question": "What is the purpose of the 'Azure Region Pair'?",
-                "options": {
-                    "A": "To provide low-latency connections between regions",
-                    "B": "To ensure data residency within the same country",
-                    "C": "To allow for disaster recovery by replicating resources to a region at least 300 miles away",
-                    "D": "To share management groups between regions"
-                },
-                "answer": "C",
-                "detailedexplanation": "An Azure region pair consists of two regions within the same geography. Microsoft serializes platform updates (planned maintenance) so that only one region in each pair is updated at a time. In the event of an outage affecting multiple regions, at least one region in each pair will be prioritized for recovery."
-            },
-            {
-                "id": 19,
-                "domain": "Describe cloud concepts",
-                "difficulty": "Medium",
-                "question": "Which of the following describes Capital Expenditure (CapEx)?",
-                "options": {
-                    "A": "Spending money on services and being billed as you use them",
-                    "B": "Spending money on physical infrastructure up front",
-                    "C": "The cost of monthly cloud subscriptions",
-                    "D": "Operating expenses for a business"
-                },
-                "answer": "B",
-                "detailedexplanation": "CapEx involves spending money on physical infrastructure up-front, and then deducting that expense from your tax bill over time. CapEx is an upfront cost, which has a value that reduces over time. OpEx (Operating Expenditure) is what the cloud usually falls under, where you pay as you go."
-            },
-            {
-                "id": 20,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Hard",
-                "question": "Which service is used to centralize and manage secrets, keys, and certificates?",
-                "options": {
-                    "A": "Azure Active Directory",
-                    "B": "Azure Key Vault",
-                    "C": "Azure Security Center",
-                    "D": "Azure Information Protection"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Key Vault is a cloud service for securely storing and accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, or cryptographic keys. It helps solve problems regarding secret management and key management."
-            },
-            {
-                "id": 21,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "Which tool provides a command-line experience for managing Azure resources and can be run in a web browser?",
-                "options": {
-                    "A": "Azure Portal",
-                    "B": "Azure Cloud Shell",
-                    "C": "Azure PowerShell",
-                    "D": "Azure CLI"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Cloud Shell is an interactive, authenticated, browser-accessible shell for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You don't need to install anything on your local machine."
-            },
-            {
-                "id": 22,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Medium",
-                "question": "What is the Service Level Agreement (SLA)?",
-                "options": {
-                    "A": "A document describing the user's responsibilities",
-                    "B": "A Microsoft commitment for uptime and connectivity",
-                    "C": "A guide for using Azure services",
-                    "D": "A legal contract for data privacy"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Service Level Agreement (SLA) describes Microsoft's commitments for uptime and connectivity for specific services. If a service does not meet its SLA, Microsoft provides a service credit for a percentage of the monthly service fees."
-            },
-            {
-                "id": 23,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Easy",
-                "question": "Which Azure service provides a platform for Big Data analytics using Spark, Hive, and Kafka?",
-                "options": {
-                    "A": "Azure SQL Data Warehouse",
-                    "B": "Azure HDInsight",
-                    "C": "Azure Data Lake Storage",
-                    "D": "Azure Databricks"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure HDInsight is a managed, full-spectrum, open-source analytics service in the cloud for enterprises. You can use open-source frameworks such as Hadoop, Apache Spark, Apache Hive, LLAP, Apache Kafka, Apache Storm, R, and more. While Databricks also uses Spark, HDInsight is the broader service for these open-source frameworks."
-            },
-            {
-                "id": 24,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "Which Azure service allows users to run Windows or Linux virtual machines?",
-                "options": {
-                    "A": "Azure Functions",
-                    "B": "Azure App Service",
-                    "C": "Azure Virtual Machines",
-                    "D": "Azure Container Instances"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Virtual Machines (VMs) is one of several types of on-demand, scalable computing resources that Azure offers. Typically, you choose a VM when you need more control over the computing environment than the other choices offer. This is an Infrastructure as a Service (IaaS) offering."
-            },
-            {
-                "id": 25,
-                "domain": "Describe cloud concepts",
-                "difficulty": "Medium",
-                "question": "Which cloud characteristic allows you to pay only for the resources you use?",
-                "options": {
-                    "A": "High Availability",
-                    "B": "Scalability",
-                    "C": "Consumption-based model",
-                    "D": "Agility"
-                },
-                "answer": "C",
-                "detailedexplanation": "Cloud computing operates on a consumption-based model, which means that end users only pay for the resources that they use. Whatever they use is what they pay for. This leads to better cost prediction and eliminates the need for large upfront infrastructure investments."
-            },
-            {
-                "id": 26,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Medium",
-                "question": "A team needs to track when a specific resource was deleted and who performed the action. Which service should they check?",
-                "options": {
-                    "A": "Azure Monitor Metrics",
-                    "B": "Azure Activity Log",
-                    "C": "Azure Advisor",
-                    "D": "Azure Policy"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Azure Activity Log is a platform log in Azure that provides insight into subscription-level events. This includes such information as when a resource is modified or when a virtual machine is started. You can use the Activity Log to determine the 'what, who, and when' for any write operations (PUT, POST, DELETE) taken on the resources in your subscription."
-            },
-            {
-                "id": 27,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Medium",
-                "question": "You want to store data in a way that it is automatically replicated to a second region for high durability. Which storage account feature should you enable?",
-                "options": {
-                    "A": "Locally-redundant storage (LRS)",
-                    "B": "Zone-redundant storage (ZRS)",
-                    "C": "Geo-redundant storage (GRS)",
-                    "D": "Read-access geo-redundant storage (RA-GRS)"
-                },
-                "answer": "C",
-                "detailedexplanation": "Geo-redundant storage (GRS) copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies your data asynchronously to a single physical location in a secondary region that is hundreds of miles away from the primary region."
-            },
-            {
-                "id": 28,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Easy",
-                "question": "What is the main goal of the Azure Well-Architected Framework?",
-                "options": {
-                    "A": "To provide a list of all Azure services",
-                    "B": "To help improve the quality of a workload by following best practices",
-                    "C": "To create Azure Resource Manager templates",
-                    "D": "To provide billing support"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Azure Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architectural excellence: Cost Optimization, Operational Excellence, Performance Efficiency, Reliability, and Security."
-            },
-            {
-                "id": 29,
-                "domain": "Describe Azure architecture and services",
-                "difficulty": "Hard",
-                "question": "Which Azure service is a fully managed, enterprise-grade file share in the cloud that can be accessed via SMB or NFS?",
-                "options": {
-                    "A": "Azure Blob Storage",
-                    "B": "Azure Files",
-                    "C": "Azure Disk Storage",
-                    "D": "Azure Data Lake Storage Gen2"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol or Network File System (NFS) protocol. Azure file shares can be mounted concurrently by cloud or on-premises deployments of Windows, Linux, and macOS."
-            },
-            {
-                "id": 30,
-                "domain": "Describe Azure management and governance",
-                "difficulty": "Easy",
-                "question": "Which Azure tool allows you to view the status of Microsoft Azure services globally and receive notifications of outages?",
-                "options": {
-                    "A": "Azure Monitor",
-                    "B": "Azure Advisor",
-                    "C": "Azure Service Health",
-                    "D": "Azure Resource Health"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Service Health notifies you about Azure service incidents and planned maintenance so you can take action to mitigate downtime. It provides a personalized dashboard that allows you to see the status of the Azure services in the regions where you use them."
-            }
-        ],
-        "outro_script": {
-            "closing": "That concludes our 30-question mock exam for the Azure Fundamentals AZ-900 certification. How did you do? If you scored over 80%, you're in great shape for the real thing!",
-            "cta_final": "Don't forget to like this video and subscribe for more cloud certification content. If you want more practice, click the Udemy link in the description to access our full exam bank.",
-            "next_steps": "Check out our next video on Azure Security and Compliance to master the hardest domain of the exam."
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Use a subtle 'whoosh' sound effect and a slide-left transition between the question and the answer slide."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Microsoft Azure Administrator AZ-104 Practice Exam Questions",
                 "AZ-104 Microsoft Azure Administrator Certification Training",
                 "Pass the AZ-104: Azure Administrator Associate Exam Questions",
@@ -1636,7 +1169,7 @@
                     "D": "A smart card"
                 },
                 "answer": "B",
-                "detailedexplanation": "'Something you are' refers to biometrics—physical or behavioral characteristics unique to an individual. This includes fingerprints, retina scans, facial recognition, or voice patterns. PINs are 'something you know,' and hardware tokens/smart cards are 'something you have.'"
+                "detailedexplanation": "'Something you are' refers to biometrics\u2014physical or behavioral characteristics unique to an individual. This includes fingerprints, retina scans, facial recognition, or voice patterns. PINs are 'something you know,' and hardware tokens/smart cards are 'something you have.'"
             },
             {
                 "id": 15,
@@ -1864,7 +1397,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the ISC2 CC exam! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry—security is a journey, and reviewing these explanations is a huge step forward.",
+            "closing": "That wraps up our 30 practice questions for the ISC2 CC exam! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry\u2014security is a journey, and reviewing these explanations is a huge step forward.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more cybersecurity certification content. It really helps the channel grow.",
             "next_steps": "Ready to take the next step? Click the link in the description to access our full-length ISC2 CC practice exams on Udemy, featuring detailed explanations for every single question to help you pass on your first try."
         },
@@ -3269,7 +2802,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That's 30 questions down! How did you do? If you found some of these challenging, don't worry—networking is a massive field, and every mistake is a learning opportunity.",
+            "closing": "That's 30 questions down! How did you do? If you found some of these challenging, don't worry\u2014networking is a massive field, and every mistake is a learning opportunity.",
             "cta_final": "If you enjoyed this video, hit the like button and subscribe for more IT certification prep content. Don't forget to check the link in the description for our full Network+ practice exam course.",
             "next_steps": "Next, I recommend watching our deep dive into CIDR subnetting or the OSI model to strengthen those fundamental skills. Good luck with your studies!"
         },
@@ -3287,7 +2820,7 @@
                 "CompTIA Cloud Plus Certification Mock Exam"
             ],
             "intro_script": {
-                "hook": "Are you ready to validate your expertise in maintaining and optimizing cloud infrastructure services? The CompTIA Cloud+ certification is a high-stakes exam that requires more than just memorization—it requires hands-on troubleshooting and architectural knowledge.",
+                "hook": "Are you ready to validate your expertise in maintaining and optimizing cloud infrastructure services? The CompTIA Cloud+ certification is a high-stakes exam that requires more than just memorization\u2014it requires hands-on troubleshooting and architectural knowledge.",
                 "summary": "In this video, we dive into 30 high-yield practice questions designed to mimic the official CompTIA Cloud+ exam. We cover all major domains, from Cloud Architecture and Security to Deployment and Troubleshooting.",
                 "cta_intro": "Before we start, make sure to grab a pen and paper to track your score.",
                 "checkfullexamlinkindescription": "For a complete set of practice exams and the ultimate preparation guide, check out the link in the description below."
@@ -4693,7 +4226,7 @@
                 "CISSP Exam Prep: Domain-by-Domain Review"
             ],
             "intro_script": {
-                "hook": "Are you ready to join the elite ranks of certified cybersecurity professionals? The CISSP exam is notorious for its difficulty, but today, we’re breaking down the complex concepts into manageable, exam-winning strategies.",
+                "hook": "Are you ready to join the elite ranks of certified cybersecurity professionals? The CISSP exam is notorious for its difficulty, but today, we\u2019re breaking down the complex concepts into manageable, exam-winning strategies.",
                 "summary": "In this video, we cover 30 high-quality practice questions spanning all 8 domains of the CISSP Common Body of Knowledge. We won't just give you the answers; we'll explain the 'why' behind them to help you develop the managerial mindset required to pass.",
                 "cta_intro": "Subscribe and hit the notification bell to stay updated with our latest certification prep series.",
                 "checkfullexamlinkindescription": "For the full 800+ question practice sets and detailed study guides, check the link in the description below."
@@ -4958,7 +4491,7 @@
                     "D": "Smishing"
                 },
                 "answer": "C",
-                "detailedexplanation": "Whaling is a specific form of phishing that targets 'the big fish'—high-level executives like CEOs or CFOs. Because these individuals have significant authority and access, they are high-value targets for attackers."
+                "detailedexplanation": "Whaling is a specific form of phishing that targets 'the big fish'\u2014high-level executives like CEOs or CFOs. Because these individuals have significant authority and access, they are high-value targets for attackers."
             },
             {
                 "id": 18,
@@ -5170,7 +4703,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/certified-in-risk-and-information-systems-control-crisc-exams/?referralCode=0A5F9747A154CBD014CF",
                 "youtubetitle": "CRISC Exam Practice Questions | Certified in Risk and Information Systems Control Training",
-                "description": "Master the ISACA CRISC exam with this comprehensive practice session. This video features 30 realistic exam questions covering Governance, IT Risk Assessment, Risk Response, and Information Technology. \n\nEach question includes a detailed explanation to help you understand ISACA's mindset and improve your decision-making skills for the actual test. Whether you are a risk professional or an IT auditor, this training is designed to help you pass the CRISC exam on your first attempt.\n\nTopics Covered:\n- Governance and Risk Management Frameworks\n- IT Risk Assessment Methodologies\n- Risk Response and Mitigation Strategies\n- IT Security and Information Systems Control\n\n📌 Get the Full CRISC Practice Exam Course here: https://www.udemy.com/course/certified-in-risk-and-information-systems-control-crisc-exams/?referralCode=0A5F9747A154CBD014CF",
+                "description": "Master the ISACA CRISC exam with this comprehensive practice session. This video features 30 realistic exam questions covering Governance, IT Risk Assessment, Risk Response, and Information Technology. \n\nEach question includes a detailed explanation to help you understand ISACA's mindset and improve your decision-making skills for the actual test. Whether you are a risk professional or an IT auditor, this training is designed to help you pass the CRISC exam on your first attempt.\n\nTopics Covered:\n- Governance and Risk Management Frameworks\n- IT Risk Assessment Methodologies\n- Risk Response and Mitigation Strategies\n- IT Security and Information Systems Control\n\n\ud83d\udccc Get the Full CRISC Practice Exam Course here: https://www.udemy.com/course/certified-in-risk-and-information-systems-control-crisc-exams/?referralCode=0A5F9747A154CBD014CF",
                 "tags": "CRISC, CRISC exam, ISACA, IT Risk Management, Risk Assessment, Information Systems Control, CRISC certification, CRISC practice test, IT Governance, Risk Response, CRISC study guide",
                 "hashtags": [
                     "#CRISC",
@@ -6107,7 +5640,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/aws-certified-solutions-architect-associate-practice-exams-tests/?referralCode=D490B09EDC4FA90D336A",
                 "youtubetitle": "AWS Certified Solutions Architect Associate Practice Exam Questions and Answers SAA-C03",
-                "description": "Prepare for your AWS Certified Solutions Architect – Associate (SAA-C03) exam with this comprehensive practice test. This video covers the core domains including VPC, EC2, S3, RDS, and Serverless computing. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the correct answer. \n\nGet the full exam prep suite here: https://www.udemy.com/course/aws-certified-solutions-architect-associate-practice-exams-tests/?referralCode=D490B09EDC4FA90D336A",
+                "description": "Prepare for your AWS Certified Solutions Architect \u2013 Associate (SAA-C03) exam with this comprehensive practice test. This video covers the core domains including VPC, EC2, S3, RDS, and Serverless computing. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the correct answer. \n\nGet the full exam prep suite here: https://www.udemy.com/course/aws-certified-solutions-architect-associate-practice-exams-tests/?referralCode=D490B09EDC4FA90D336A",
                 "tags": "AWS Certified Solutions Architect Associate, SAA-C03, AWS Practice Exam, AWS Training, AWS Certification, Cloud Computing, Amazon Web Services, AWS Tutorial, Solutions Architect Questions",
                 "hashtags": [
                     "#AWS",
@@ -6318,7 +5851,7 @@
                     "A": "Create an IAM user for the auditor and share the password.",
                     "B": "Give the auditor your root account credentials for 24 hours.",
                     "C": "Use IAM Roles to provide cross-account access with an External ID.",
-                    "D": "Configure a VPN between the auditor’s office and your VPC."
+                    "D": "Configure a VPN between the auditor\u2019s office and your VPC."
                 },
                 "answer": "C",
                 "detailedexplanation": "Using an IAM Role with cross-account access is the most secure method. By requiring an 'External ID,' you prevent the 'Confused Deputy' problem. This allows the auditor to assume a role in your account using their own credentials, without you needing to manage a new user or share sensitive keys."
@@ -6575,7 +6108,7 @@
             "youtube_metadata": {
                 "courselink": "https://www.udemy.com/course/aws-certified-developer-associate-practice-exams-tests/?referralCode=559656BFFB017AB759A5",
                 "youtubetitle": "AWS Certified Developer Associate Practice Exam Questions DVA-C02 | Full Training",
-                "description": "Level up your cloud career with this comprehensive practice exam for the AWS Certified Developer – Associate (DVA-C02). This video features 30 carefully curated questions covering the official exam domains including Deployment, Security, Development with AWS Services, Refactoring, and Monitoring/Troubleshooting. Each question is followed by a detailed explanation to ensure you understand the 'why' behind every answer.\n\nReady for the full experience? Access the complete practice exam course on Udemy here: https://www.udemy.com/course/aws-certified-developer-associate-practice-exams-tests/?referralCode=559656BFFB017AB759A5",
+                "description": "Level up your cloud career with this comprehensive practice exam for the AWS Certified Developer \u2013 Associate (DVA-C02). This video features 30 carefully curated questions covering the official exam domains including Deployment, Security, Development with AWS Services, Refactoring, and Monitoring/Troubleshooting. Each question is followed by a detailed explanation to ensure you understand the 'why' behind every answer.\n\nReady for the full experience? Access the complete practice exam course on Udemy here: https://www.udemy.com/course/aws-certified-developer-associate-practice-exams-tests/?referralCode=559656BFFB017AB759A5",
                 "tags": "AWS Certified Developer Associate, DVA-C02, AWS Practice Exam, AWS Training, AWS Certification, Lambda, DynamoDB, API Gateway, AWS S3, CloudFormation, Serverless, AWS Developer Guide",
                 "hashtags": [
                     "#AWS",
@@ -6917,7 +6450,7 @@
                     "D": "It increases the storage limit of a DynamoDB table."
                 },
                 "answer": "B",
-                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB. It delivers up to a 10x performance improvement—from milliseconds to microseconds—even at millions of requests per second. It is API-compatible, meaning you don't need to rewrite your application logic to use it."
+                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB. It delivers up to a 10x performance improvement\u2014from milliseconds to microseconds\u2014even at millions of requests per second. It is API-compatible, meaning you don't need to rewrite your application logic to use it."
             },
             {
                 "id": 24,
@@ -7078,7 +6611,7 @@
                     "D": "Performance Efficiency"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Reliability pillar focuses on ensuring a workload performs its intended function correctly and consistently when it’s expected to. This includes the ability to operate and test the workload through its total lifecycle. Key topics include distributed system design, recovery planning, and how to handle change. Operational Excellence is about running and monitoring systems, Security is about protecting information, and Performance Efficiency is about using computing resources efficiently."
+                "detailedexplanation": "The Reliability pillar focuses on ensuring a workload performs its intended function correctly and consistently when it\u2019s expected to. This includes the ability to operate and test the workload through its total lifecycle. Key topics include distributed system design, recovery planning, and how to handle change. Operational Excellence is about running and monitoring systems, Security is about protecting information, and Performance Efficiency is about using computing resources efficiently."
             },
             {
                 "id": 2,
