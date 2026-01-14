@@ -68,7 +68,7 @@ def generate_metadata(asset_data):
     
     # Course link (first)
     if course_link:
-        description_parts.append(f"📚 Full Course: {course_link}")
+        description_parts.append(f"📚 Practice Exam Questions and Answers: {course_link}")
         description_parts.append("")
     
     # Main description
