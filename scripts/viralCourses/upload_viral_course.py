@@ -15,10 +15,7 @@ import youtube_uploader
 # Configuration
 DATA_FILE = os.path.join(ROOT_DIR, "data", "viralCourses", "data.json")
 VIDEO_FILE = os.path.join(ROOT_DIR, "output", "viralCourses", "viral_course_video_fast.mp4")
-THUMBNAIL_1 = os.path.join(ROOT_DIR, "output", "viralCourses", "thumbnail_1.png")
-THUMBNAIL_2 = os.path.join(ROOT_DIR, "output", "viralCourses", "thumbnail_2.png")
-THUMBNAIL_3 = os.path.join(ROOT_DIR, "output", "viralCourses", "thumbnail_3.png")
-AB_TEST_METADATA = os.path.join(ROOT_DIR, "output", "viralCourses", "ab_test_metadata.json")
+THUMBNAIL_FILE = os.path.join(ROOT_DIR, "output", "viralCourses", "thumbnail.png")
 TOKEN_FILE_YOUTUBE = os.path.join(ROOT_DIR, "token_viral_courses.pickle")
 
 def load_data():
@@ -36,22 +33,13 @@ def generate_metadata(asset_data):
     meta = asset_data["video_assets"]["youtube_metadata"]
     asset_titles = asset_data["video_assets"].get("titles", [])
     
-    # --- A/B TESTING TITLES ---
-    # Option 1: youtubetitle (Main)
-    title_1 = meta.get("youtubetitle", "Viral Course Video")
-    
-    # Option 2: titles[0] (Alternative 1)
-    title_2 = asset_titles[0] if len(asset_titles) > 0 else title_1
-    
-    # Option 3: titles[1] (Alternative 2)
-    title_3 = asset_titles[1] if len(asset_titles) > 1 else title_1
-    
-    # Truncate all titles to 100 chars
-    title_1 = (title_1[:97] + "...") if len(title_1) > 100 else title_1
-    title_2 = (title_2[:97] + "...") if len(title_2) > 100 else title_2
-    title_3 = (title_3[:97] + "...") if len(title_3) > 100 else title_3
+    # Get title
+    title = meta.get("youtubetitle", "Viral Course Video")
+    # Truncate to 100 chars
+    if len(title) > 100:
+        title = title[:97] + "..."
 
-    # --- RESTORE DESCRIPTION & TAGS LOGIC ---
+    # Extract course title
     course_title = asset_titles[0] if asset_titles else None
     course_link = meta.get("courselink", "")
     desc_main = meta.get("description", "")
@@ -105,7 +93,7 @@ def generate_metadata(asset_data):
     
     description = "\n".join(description_parts)
     
-    return (title_1, title_2, title_3), description, tags, meta.get("category", "27"), course_title
+    return title, description, tags, meta.get("category", "27"), course_title
 
 def upload_viral_video():
     print("\n--- Starting Viral Course YouTube Upload ---")
@@ -121,32 +109,21 @@ def upload_viral_video():
     if not data: return
 
     # 3. Generate Metadata
-    titles, description, tags, category_id, course_title = generate_metadata(data)
-    title_main = titles[0]
+    title, description, tags, category_id, course_title = generate_metadata(data)
     
-    print(f"Title (Main): {title_main}")
+    print(f"Title: {title}")
     print(f"Description Preview:\n{description[:100]}...")
     print(f"Tags: {tags}")
-    
-    # 4. Save A/B Test Metadata for user reference
-    ab_testing_data = {
-        "title_variations": titles,
-        "thumbnail_variations": [THUMBNAIL_1, THUMBNAIL_2, THUMBNAIL_3],
-        "video_file": VIDEO_FILE
-    }
-    with open(AB_TEST_METADATA, "w", encoding='utf-8') as f:
-        json.dump(ab_testing_data, f, indent=4)
-    print(f"✓ Saved A/B testing metadata to {AB_TEST_METADATA}")
 
-    # 5. Upload (Using Main Variation)
+    # 4. Upload
     video_id = youtube_uploader.upload_video(
         VIDEO_FILE, 
-        title_main, 
+        title, 
         description, 
         category_id="27", # Education
         keywords=",".join(tags),
         token_file=TOKEN_FILE_YOUTUBE,
-        thumbnail=THUMBNAIL_1,
+        thumbnail=THUMBNAIL_FILE,
         course_title=course_title
     )
     
@@ -159,15 +136,15 @@ def upload_viral_video():
         print("📢 COMMUNITY POST TEMPLATE (Copy & Paste)")
         print("="*50)
         print(f"New Course Video is LIVE! 🎓\n")
-        print(f"📺 {title_main}\n")
+        print(f"📺 {title}\n")
         print(f"Watch the full video here 👇")
         print(f"{video_url}\n")
         print(f"Please like and subscribe for more free courses! 📚")
         print("="*50 + "\n")
         
-        print("Please note: You can manually set up A/B testing in YouTube Studio using the variations saved in ab_test_metadata.json")
+
         
-        # 6. Cleanup Data
+        # 5. Cleanup Data
         try:
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 full_data = json.load(f)
@@ -189,15 +166,10 @@ def upload_viral_video():
                 print(f"Deleted video file: {VIDEO_FILE}")
             
             
-            # Delete all thumbnail variations
-            for t in [THUMBNAIL_1, THUMBNAIL_2, THUMBNAIL_3]:
-                if os.path.exists(t):
-                    os.remove(t)
-                    print(f"Deleted thumbnail: {t}")
-            
-            # Delete A/B metadata
-            if os.path.exists(AB_TEST_METADATA):
-                os.remove(AB_TEST_METADATA)
+            # Delete thumbnail
+            if os.path.exists(THUMBNAIL_FILE):
+                os.remove(THUMBNAIL_FILE)
+                print(f"Deleted thumbnail: {THUMBNAIL_FILE}")
                 
         except Exception as e:
             print(f"Error cleaning up files: {e}")
