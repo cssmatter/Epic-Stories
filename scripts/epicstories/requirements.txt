@@ -1,0 +1,12 @@
+# Epic Stories Video Generator Requirements
+
+# Core dependencies (already in main requirements.txt)
+gtts>=2.3.0
+Pillow>=10.0.0
+imageio-ffmpeg>=0.4.8
+
+# Networking
+requests>=2.31.0
+
+# Optional: For faster inference
+# xformers>=0.0.20  # Uncomment for faster SD inference on NVIDIA GPUs

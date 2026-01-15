@@ -1,0 +1,28 @@
+[
+    {
+        "video_title": "The Scariest Level of Discipline: The Gyo-ji System",
+        "target_duration_minutes": 20,
+        "scenes": [
+            {
+                "scene_number": 1,
+                "text": "There exists a level of discipline so absolute that it evokes fear in others. It is the frightening consistency of those who never fail, who show up when every excuse suggests they shouldn't.",
+                "image_prompt": "generate an image in the style of a renaissance painting: A stoic figure standing amidst a swirling storm, illuminated by a single heavenly beam of light, while others in the shadows are collapsing in exhaustion. Use dramatic chiaroscuro."
+            },
+            {
+                "scene_number": 2,
+                "text": "When you reach this state, society no longer calls you disciplined; they say you are 'not normal'. This is the result of Gyo-ji, an ancient Zen system from Japan designed to create unbreakable consistency.",
+                "image_prompt": "generate an image in the style of a renaissance painting: A portrait of a Zen master with intense, piercing eyes, holding a wooden staff, set against a dark, textured background with soft sfumato edges."
+            },
+            {
+                "scene_number": 3,
+                "text": "Meet Raphael, a successful programmer who was a victim of his own brain. He suffered from a cycle of total motivation on Monday, mental negotiation by Wednesday, and complete surrender by Friday.",
+                "image_prompt": "generate an image in the style of a renaissance painting: A scholar at a cluttered wooden desk, head in hands, surrounded by discarded scrolls and books, lit by a single flickering candle. The mood is one of profound melancholy."
+            },
+            {
+                "scene_number": 4,
+                "text": "He tried every modern tool—apps, rewards, accountability partners—but nothing worked because he was fighting the very architecture of his brain.",
+                "image_prompt": "generate an image in the style of a renaissance painting: An anatomical study of a human brain surrounded by complex gears and clockwork mechanisms that are rusted and breaking. Inspired by Da Vinci’s sketches."
+            }
+        ]
+    }
+]
