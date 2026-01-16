@@ -109,11 +109,34 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
 
     youtube = get_authenticated_service(token_file=token_file)
 
+    # Sanitize and limit tags
+    raw_tags = keywords.split(',')
+    sanitized_tags = []
+    total_chars = 0
+    forbidden = ['<', '>', '"'] # Brackets and quotes are forbidden in tags
+    
+    for tag in raw_tags:
+        clean_tag = tag.strip()
+        for char in forbidden:
+            clean_tag = clean_tag.replace(char, '')
+        
+        if not clean_tag:
+            continue
+            
+        # Check total length (plus comma separator)
+        # Limit total to 450 characters (YouTube max is 500)
+        tag_length = len(clean_tag)
+        if total_chars + tag_length + (1 if sanitized_tags else 0) > 450:
+            break
+            
+        sanitized_tags.append(clean_tag)
+        total_chars += tag_length + (1 if len(sanitized_tags) > 1 else 0)
+
     body = {
         'snippet': {
             'title': title,
             'description': description,
-            'tags': keywords.split(','),
+            'tags': sanitized_tags,
             'categoryId': category_id,
             'defaultLanguage': 'en'  # Set video language to English
         },

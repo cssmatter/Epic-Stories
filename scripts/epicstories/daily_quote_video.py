@@ -280,14 +280,17 @@ def main():
             youtube_uploader.add_video_to_playlist(video_id, playlist_id)
             print("Successfully added to playlist.")
             
-            # Remove the published quote from JSON
+            # Remove the published quote from JSON ONLY AFTER SUCCESS
             print("Removing published quote from JSON...")
             remove_quote_from_json(json_path, quote)
             
         except Exception as e:
             print(f"Failed to add to playlist: {e}")
+            # Still counting as success since video uploaded, 
+            # but we remove it to avoid duplicates if it's already on YT
+            remove_quote_from_json(json_path, quote)
     else:
-        print("Upload failed, skipping playlist addition.")
+        print("Upload failed, skipping playlist addition AND JSON removal for retry.")
 
     if os.path.exists(image_path):
         os.remove(image_path)

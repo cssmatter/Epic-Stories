@@ -33,7 +33,7 @@ os.makedirs(TTS_CACHE_DIR, exist_ok=True)
 
 # --- SUBTITLE SETTINGS ---
 SUBTITLE_FONT = "Caveat"
-SUBTITLE_FONT_SIZE = 20  # Smaller and more cinematic
+SUBTITLE_FONT_SIZE = 30  # Smaller and more cinematic
 SUBTITLE_COLOR = "&H00FFFFFF"  # BGR order for libass (White)
 SUBTITLE_BG_COLOR = "black@0.6"
 SUBTITLE_POSITION_Y = HEIGHT - 40  # Moved closer to the bottom

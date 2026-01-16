@@ -88,6 +88,7 @@ class EpicStoriesVideoGenerator:
             full_description += "tags: " + ", ".join(tags_list) + "\n\n"
             full_description += "hashtags: " + " ".join(hashtags)
 
+            # Pass full tags list (uploader now handles sanitization)
             tags = ",".join(tags_list)
 
         print(f"\nPublishing to YouTube: {title}")
@@ -615,10 +616,14 @@ class EpicStoriesVideoGenerator:
             if final_video:
                 if not test_mode:
                     # Step 5: Publish to YouTube
-                    self.publish_to_youtube(story, final_video, thumbnail_path)
+                    video_id = self.publish_to_youtube(story, final_video, thumbnail_path)
                     
-                    # Remove analyzed story from data
-                    self.remove_story_from_data()
+                    if video_id:
+                        # Remove analyzed story from data ONLY if upload succeeded
+                        self.remove_story_from_data()
+                    else:
+                        print("✗ YouTube upload failed. STORY NOT REMOVED FROM QUEUE for retry.")
+                        return None
                 else:
                     print("\n[TEST MODE] Skipping YouTube upload and story removal.")
 
