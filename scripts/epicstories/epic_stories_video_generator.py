@@ -226,8 +226,11 @@ class EpicStoriesVideoGenerator:
                 except: return ImageFont.load_default()
             
             target_width = int(config.WIDTH * 0.8)
-            current_font_size = 140
-            while current_font_size > 40:
+            # Scaling font size based on 1920 baseline. 140 for 1080p -> 280 for 4K
+            current_font_size = int(config.WIDTH / 1920 * 180) 
+            min_font_size = int(config.WIDTH / 1920 * 40)
+            
+            while current_font_size > min_font_size:
                 font = get_font(current_font_size)
                 if all((draw.textbbox((0, 0), line, font=font)[2] - draw.textbbox((0, 0), line, font=font)[0]) <= target_width for line in overlay_texts):
                     break
