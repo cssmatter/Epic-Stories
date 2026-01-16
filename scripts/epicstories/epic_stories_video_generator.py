@@ -91,6 +91,13 @@ class EpicStoriesVideoGenerator:
 
         print(f"\nPublishing to YouTube: {title}")
         try:
+            # Check which channel we are uploading to for CI debugging
+            yt_service = get_authenticated_service()
+            channel_info = yt_service.channels().list(part="snippet", mine=True).execute()
+            if channel_info.get("items"):
+                channel_name = channel_info["items"][0]["snippet"]["title"]
+                print(f"  Uploading to Channel: {channel_name}")
+            
             video_id = upload_video(
                 file_path=video_path,
                 title=title,
@@ -552,7 +559,8 @@ class EpicStoriesVideoGenerator:
             print("✗ No stories found in story.json")
             return None
             
-        # Process ONLY the first story
+        # Process ONLY the first story (index 0)
+        print("✓ Targeting story at index 0")
         story = story_list[0]
         
         story_title = story.get('video_title', 'Untitled Story')
