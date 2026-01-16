@@ -7,6 +7,9 @@ on:
   workflow_dispatch:
     # Allow manual triggering
 
+permissions:
+  contents: write
+
 jobs:
   generate-and-publish:
     runs-on: ubuntu-latest
@@ -15,8 +18,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          # Fetch all history so we can push back changes to story.json
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,19 +27,23 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install FFmpeg
+      - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          sudo apt-get install -y ffmpeg fonts-liberation fonts-liberation2 fonts-indic fonts-noto-core libfontconfig1 libfreetype6 libgl1 libegl1 libopengl0
 
       - name: Install Dependencies
         run: |
           pip install -r scripts/epicstories/requirements.txt
           pip install google-api-python-client google-auth-oauthlib google-auth-httplib2
 
-      - name: Decode YouTube Token
+      - name: Restore YouTube credentials
+        env:
+          CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+          TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE_BASE64 }}
         run: |
-          echo "${{ secrets.TOKEN_PICKLE_BASE64 }}" | base64 -d > token.pickle
+          echo "$CLIENT_SECRETS" > client_secrets.json
+          echo "$TOKEN_PICKLE" | base64 -d > token.pickle
 
       - name: Verify YouTube Token
         run: |
@@ -57,7 +64,18 @@ jobs:
         run: |
           git config --local user.email "11308641+cssmatter@users.noreply.github.com"
           git config --local user.name "cssmatter"
-          git add data/epicstories/story.json
-          git commit -m "Automated: Remove processed story from queue [skip ci]" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push origin main
+          
+          if git diff --quiet data/epicstories/story.json; then
+            echo "No changes to story.json"
+          else
+            git add data/epicstories/story.json
+            git commit -m "Automated: Remove processed story from queue [skip ci]"
+            git reset --hard
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      - name: Clean up credentials
+        if: always()
+        run: |
+          rm -f client_secrets.json token.pickle
