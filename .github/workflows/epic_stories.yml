@@ -32,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r scripts/epicstories/requirements.txt
-          pip install google-api-python-client google-auth-oauthlib google-auth-httplib2 imageio-ffmpeg Pillow requests
+          pip install google-api-python-client google-auth-oauthlib google-auth-httplib2
 
       - name: Decode YouTube Token
         run: |

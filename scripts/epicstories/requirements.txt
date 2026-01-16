@@ -5,8 +5,10 @@ gtts>=2.3.0
 Pillow>=10.0.0
 imageio-ffmpeg>=0.4.8
 
-# Networking
+# TTS and AI
+edge-tts>=6.1.0
 requests>=2.31.0
 
-# Optional: For faster inference
-# xformers>=0.0.20  # Uncomment for faster SD inference on NVIDIA GPUs
+# Subtitles and processing
+asyncio
+# Add any others specifically used in generators here
