@@ -18,8 +18,8 @@ os.makedirs(TEMP_DIR, exist_ok=True)
 os.makedirs(ASSETS_DIR, exist_ok=True)
 
 # --- VIDEO SETTINGS ---
-WIDTH = 1920
-HEIGHT = 1080
+WIDTH = 3840
+HEIGHT = 2160
 FPS = 60
 CODEC = "libx264"
 CRF = 23  # Quality (lower = better, 18-28 recommended)
@@ -27,17 +27,18 @@ PRESET = "medium"  # Encoding speed (ultrafast, fast, medium, slow)
 
 # --- TTS SETTINGS ---
 TTS_LANGUAGE = "en"
+TTS_VOICE = "en-US-GuyNeural"
 TTS_SLOW = True  # Slow speech for "wise man" effect
 TTS_CACHE_DIR = os.path.join(TEMP_DIR, "tts_cache")
 os.makedirs(TTS_CACHE_DIR, exist_ok=True)
 
 # --- SUBTITLE SETTINGS ---
 SUBTITLE_FONT = "Caveat"
-SUBTITLE_FONT_SIZE = 30  # Smaller and more cinematic
+SUBTITLE_FONT_SIZE = 22  # Scaled for 4K (approx 2.2x of 1080p size)
 SUBTITLE_COLOR = "&H00FFFFFF"  # BGR order for libass (White)
 SUBTITLE_BG_COLOR = "black@0.6"
 SUBTITLE_POSITION_Y = HEIGHT - 40  # Moved closer to the bottom
-SUBTITLE_MAX_WIDTH = WIDTH - 200  # Max width for text wrapping
+SUBTITLE_MAX_WIDTH = WIDTH - 400  # Max width for text wrapping
 
 # --- IMAGE GENERATION SETTINGS ---
 IMAGE_CACHE_DIR = os.path.join(TEMP_DIR, "image_cache")

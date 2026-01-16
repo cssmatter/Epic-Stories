@@ -269,7 +269,7 @@ class EpicStoriesVideoGenerator:
         filter_complex = (
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
             f"zoompan=z='1.0+0.05*on/{num_frames}':d={num_frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={render_w}x{render_h}:fps={fps},"
-            f"scale=1920:1080:flags=lanczos"
+            f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
         intro_base = intro_path.replace('.mp4', '_base.mp4')
@@ -358,7 +358,7 @@ class EpicStoriesVideoGenerator:
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,"
             f"pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
             f"zoompan=z='{zoom_expr}':d={num_frames}:x='{x_expr}':y='{y_expr}':s={render_w}x{render_h}:fps={fps},"
-            f"scale=1920:1080:flags=lanczos"
+            f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
         # Sub-pixel movement simulation: 4K+ -> 1080p
