@@ -30,19 +30,28 @@ class SubtitleGenerator:
 
     def create_word_synced_srt(self, word_timings, output_path):
         """
-        Create SRT file where each entry is a single word
+        Create SRT file where each entry shows 5 words at a time
         
         Args:
             word_timings: List of dicts with 'word', 'start', 'end'
             output_path: Path to save SRT file
         """
         srt_content = ""
-        for i, timing in enumerate(word_timings, 1):
-            start = self.format_time_srt(timing['start'])
-            end = self.format_time_srt(timing['end'])
-            word = timing['word']
+        words_per_subtitle = 5
+        
+        # Group words into chunks of 5
+        for i in range(0, len(word_timings), words_per_subtitle):
+            chunk = word_timings[i:i + words_per_subtitle]
             
-            srt_content += f"{i}\n{start} --> {end}\n{word}\n\n"
+            # Get timing from first and last word in chunk
+            start = self.format_time_srt(chunk[0]['start'])
+            end = self.format_time_srt(chunk[-1]['end'])
+            
+            # Combine words in chunk
+            words = ' '.join([timing['word'] for timing in chunk])
+            
+            subtitle_index = (i // words_per_subtitle) + 1
+            srt_content += f"{subtitle_index}\n{start} --> {end}\n{words}\n\n"
             
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(srt_content)
@@ -79,6 +88,7 @@ class SubtitleGenerator:
             
             cmd = [
                 FFMPEG_EXE, "-y",
+                "-threads", "2",
                 "-i", video_path,
                 "-vf", sub_filter,
                 "-c:a", "copy",

@@ -22,13 +22,14 @@ class ImageGenerator:
         prompt_hash = hashlib.md5(prompt.encode()).hexdigest()
         return os.path.join(self.cache_dir, f"{prompt_hash}.jpg")
     
-    def generate_image(self, prompt, scene_number=None):
+    def generate_image(self, prompt, scene_number=None, is_thumbnail=False):
         """
         Generate image from text prompt using Cloudflare Worker
         
         Args:
             prompt: Text description of image
             scene_number: Optional scene number for fallback naming
+            is_thumbnail: Whether to use the dedicated thumbnail worker
             
         Returns:
             Path to generated image file
@@ -42,12 +43,14 @@ class ImageGenerator:
         # Generate new image
         return self._generate_with_cloudflare(prompt, cache_path, scene_number)
     
-    def _generate_with_cloudflare(self, prompt, output_path, scene_number=None):
+    def _generate_with_cloudflare(self, prompt, output_path, scene_number=None, is_thumbnail=False):
         """Generates an image using Cloudflare Worker API."""
+        # Use the dedicated thumbnail worker if requested
+        api_url = config.CLOUDFLARE_THUMBNAIL_WORKER_URL if is_thumbnail else self.api_url
         
         # Enhance prompt with aspect ratio request and quality keywords
         if "aspect ratio" not in prompt.lower():
-            enhanced_prompt = f"{prompt}"
+            enhanced_prompt = f"{prompt}, cinematic lighting, high quality, 16:9 aspect ratio, 4k resolution"
         else:
             enhanced_prompt = prompt
 
@@ -63,15 +66,21 @@ class ImageGenerator:
         }
 
         try:
-            print(f"Generating via Cloudflare: {prompt[:40]}...")
+            worker_name = "Lucid-Origin" if is_thumbnail else "Cloudflare"
+            print(f"Generating via {worker_name}: {prompt[:40]}...")
             
-            response = requests.post(self.api_url, json=payload, headers=headers, timeout=60)
+            response = requests.post(api_url, json=payload, headers=headers, timeout=60)
             
             if response.status_code == 200:
                 # User requested wait time after generation
                 print("Waiting 2 seconds for image generation...")
                 time.sleep(2)
                 
+                # VALIDATION: Check for "object Object" or JSON error response saved as image
+                if len(response.content) < 1000 or response.content.startswith(b'{') or b'object Object' in response.content[:100]:
+                    print(f"FAILED: Received invalid image data (Size: {len(response.content)} bytes). Content start: {response.content[:50]}")
+                    return self._generate_placeholder(prompt, output_path, scene_number)
+
                 with open(output_path, "wb") as f:
                     f.write(response.content)
                 

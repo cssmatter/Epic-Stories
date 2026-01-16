@@ -20,7 +20,7 @@ os.makedirs(ASSETS_DIR, exist_ok=True)
 # --- VIDEO SETTINGS ---
 WIDTH = 1920
 HEIGHT = 1080
-FPS = 24
+FPS = 60
 CODEC = "libx264"
 CRF = 23  # Quality (lower = better, 18-28 recommended)
 PRESET = "medium"  # Encoding speed (ultrafast, fast, medium, slow)
@@ -45,7 +45,9 @@ os.makedirs(IMAGE_CACHE_DIR, exist_ok=True)
 
 # Cloudflare Image Generation Settings
 CLOUDFLARE_WORKER_URL = "https://imagegeneration.cssmatter.workers.dev/"
-CLOUDFLARE_AUTH_TOKEN = "Bearer shivaay143$manish"
+CLOUDFLARE_THUMBNAIL_WORKER_URL = "https://thumbnailgenerator.cssmatter.workers.dev/"
+# Supports environment variable for CI/GitHub Actions
+CLOUDFLARE_AUTH_TOKEN = os.getenv("CLOUDFLARE_AUTH_TOKEN", "Bearer shivaay143$manish")
 
 # Image Generation Dimensions (Requested 16:9)
 # Note: The worker likely handles dimensions or we emphasize in prompt
@@ -62,5 +64,10 @@ OVERLAY_VIDEO_PATH = os.path.join(ASSETS_DIR, "overlay.mp4")
 OVERLAY_OPACITY = 0.10  # Overlay opacity (0.0 to 1.0)
 
 # --- BACKGROUND MUSIC ---
-BACKGROUND_MUSIC_PATH = os.path.join(ASSETS_DIR, "background-music.mp3")
-MUSIC_VOLUME = 0.2  # Background music volume (0.0 to 1.0)
+BACKGROUND_MUSIC_PATH = os.path.join(ASSETS_DIR, "story-bg.mp3")
+MUSIC_VOLUME = 0.05  # Background music volume (0.0 to 1.0)
+
+# --- BRANDING ---
+LOGO_PATH = os.path.join(ASSETS_DIR, "channels_profile.jpg")
+LOGO_WIDTH = 50
+LOGO_PADDING = 20

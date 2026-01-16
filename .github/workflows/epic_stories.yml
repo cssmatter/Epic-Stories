@@ -1,0 +1,53 @@
+name: Epic Stories Automation
+
+on:
+  schedule:
+    # Run every 3 days at 00:00 UTC
+    - cron: '0 0 */3 * *'
+  workflow_dispatch:
+    # Allow manual triggering
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history so we can push back changes to story.json
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Dependencies
+        run: |
+          pip install -r scripts/epicstories/requirements.txt
+          pip install google-api-python-client google-auth-oauthlib google-auth-httplib2 imageio-ffmpeg Pillow requests
+
+      - name: Decode YouTube Token
+        run: |
+          echo "${{ secrets.TOKEN_PICKLE_BASE64 }}" | base64 -d > token.pickle
+
+      - name: Run Epic Stories Generator
+        env:
+          CLOUDFLARE_AUTH_TOKEN: ${{ secrets.CLOUDFLARE_AUTH_TOKEN }}
+        run: |
+          python scripts/epicstories/epic_stories_video_generator.py
+
+      - name: Commit and Push Updated story.json
+        run: |
+          git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+          git config --local user.name "cssmatter"
+          git add data/epicstories/story.json
+          git commit -m "Automated: Remove processed story from queue [skip ci]" || echo "No changes to commit"
+          git push origin main

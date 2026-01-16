@@ -99,7 +99,7 @@ def get_authenticated_service(token_file='token.pickle'):
             
     return build('youtube', 'v3', credentials=creds)
 
-def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle', thumbnail=None, course_title=None):
+def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle', thumbnail=None, course_title=None, privacy_status='public'):
     """
     Uploads a video to YouTube.
     """
@@ -118,7 +118,7 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
             'defaultLanguage': 'en'  # Set video language to English
         },
         'status': {
-            'privacyStatus': 'public', # Public so videos are immediately visible
+            'privacyStatus': privacy_status,
             'selfDeclaredMadeForKids': False,
         }
     }
