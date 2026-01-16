@@ -71,13 +71,13 @@ class SubtitleGenerator:
             
             # libass alignment codes: 1=LB, 2=CB, 3=RB, 5=LM, 6=CM, 7=RM, 9=LT, 10=CT, 11=RT
             # Alignment 2 is bottom center. MarginV shifts it up.
-            margin_v = config.HEIGHT - config.SUBTITLE_POSITION_Y - 50
+            margin_v = config.HEIGHT - config.SUBTITLE_POSITION_Y
             
             # Using the font name configured in config.py
             font_name = config.SUBTITLE_FONT
             
             style = (
-                f"FontName={font_name},FontSize={self.font_size*0.75}," # libass fontsize is different
+                f"FontName={font_name},FontSize={self.font_size}," # Using direct config value
                 f"PrimaryColour={config.SUBTITLE_COLOR},Outline=1,Shadow=1,"
                 f"BackColour=&H99000000,BorderStyle=4," # BorderStyle 4 is background box
                 f"Alignment=2,MarginV={margin_v}"

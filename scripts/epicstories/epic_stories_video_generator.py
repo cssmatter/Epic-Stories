@@ -20,11 +20,12 @@ from subtitle_generator import SubtitleGenerator
 # Add parent directory for youtube_uploader
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 try:
-    from youtube_uploader import upload_video
+    from youtube_uploader import upload_video, get_authenticated_service
 except ImportError:
     # Fallback to current dir or path
     import youtube_uploader
     upload_video = youtube_uploader.upload_video
+    get_authenticated_service = youtube_uploader.get_authenticated_service
 
 try:
     import imageio_ffmpeg
@@ -541,7 +542,7 @@ class EpicStoriesVideoGenerator:
                 except:
                     pass
     
-    def generate_video(self):
+    def generate_video(self, test_mode=False):
         """Main method to generate the complete video"""
         print("=" * 60)
         print("Epic Stories Video Generator (Male Voice & AI Visuals)")
@@ -612,11 +613,14 @@ class EpicStoriesVideoGenerator:
             final_video = self.concatenate_scenes(self.scene_videos, final_output)
             
             if final_video:
-                # Step 5: Publish to YouTube
-                self.publish_to_youtube(story, final_video, thumbnail_path)
-                
-                # Remove analyzed story from data
-                self.remove_story_from_data()
+                if not test_mode:
+                    # Step 5: Publish to YouTube
+                    self.publish_to_youtube(story, final_video, thumbnail_path)
+                    
+                    # Remove analyzed story from data
+                    self.remove_story_from_data()
+                else:
+                    print("\n[TEST MODE] Skipping YouTube upload and story removal.")
 
                 # Clean cache after successful generation
                 print("\nCleaning cache after completion...")
@@ -631,13 +635,14 @@ class EpicStoriesVideoGenerator:
 
 
 def main():
+    print("Starting Main Execution...")
     parser = argparse.ArgumentParser(description='Generate Epic Stories videos')
     parser.add_argument('--test', action='store_true', help='Run in test mode')
     args = parser.parse_args()
     
     try:
         generator = EpicStoriesVideoGenerator()
-        video_path = generator.generate_video()
+        video_path = generator.generate_video(test_mode=args.test)
         
         if video_path:
             print(f"\n✓ Video ready: {video_path}")

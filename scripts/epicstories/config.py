@@ -33,10 +33,10 @@ os.makedirs(TTS_CACHE_DIR, exist_ok=True)
 
 # --- SUBTITLE SETTINGS ---
 SUBTITLE_FONT = "Caveat"
-SUBTITLE_FONT_SIZE = 80  # Increased for handwritten font
+SUBTITLE_FONT_SIZE = 20  # Smaller and more cinematic
 SUBTITLE_COLOR = "&H00FFFFFF"  # BGR order for libass (White)
 SUBTITLE_BG_COLOR = "black@0.6"
-SUBTITLE_POSITION_Y = HEIGHT - 150  # Slightly higher for Caveat
+SUBTITLE_POSITION_Y = HEIGHT - 40  # Moved closer to the bottom
 SUBTITLE_MAX_WIDTH = WIDTH - 200  # Max width for text wrapping
 
 # --- IMAGE GENERATION SETTINGS ---
