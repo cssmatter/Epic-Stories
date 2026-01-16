@@ -32,11 +32,11 @@ TTS_CACHE_DIR = os.path.join(TEMP_DIR, "tts_cache")
 os.makedirs(TTS_CACHE_DIR, exist_ok=True)
 
 # --- SUBTITLE SETTINGS ---
-SUBTITLE_FONT = "Arial"
-SUBTITLE_FONT_SIZE = 28
-SUBTITLE_COLOR = "white"
-SUBTITLE_BG_COLOR = "black@0.6"  # Semi-transparent black background
-SUBTITLE_POSITION_Y = HEIGHT - 80  # Position from top (closer to bottom)
+SUBTITLE_FONT = "Caveat"
+SUBTITLE_FONT_SIZE = 80  # Increased for handwritten font
+SUBTITLE_COLOR = "&H00FFFFFF"  # BGR order for libass (White)
+SUBTITLE_BG_COLOR = "black@0.6"
+SUBTITLE_POSITION_Y = HEIGHT - 150  # Slightly higher for Caveat
 SUBTITLE_MAX_WIDTH = WIDTH - 200  # Max width for text wrapping
 
 # --- IMAGE GENERATION SETTINGS ---

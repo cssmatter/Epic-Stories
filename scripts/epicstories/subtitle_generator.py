@@ -70,21 +70,25 @@ class SubtitleGenerator:
             # Alignment 2 is bottom center. MarginV shifts it up.
             
             # libass alignment codes: 1=LB, 2=CB, 3=RB, 5=LM, 6=CM, 7=RM, 9=LT, 10=CT, 11=RT
-            # MarginV is pixels from bottom for alignment 2.
+            # Alignment 2 is bottom center. MarginV shifts it up.
             margin_v = config.HEIGHT - config.SUBTITLE_POSITION_Y - 50
             
+            # Using the font name configured in config.py
+            font_name = config.SUBTITLE_FONT
+            
             style = (
-                f"FontName=Arial,FontSize={self.font_size*0.75}," # libass fontsize is different
-                f"PrimaryColour=&H00FFFFFF,Outline=1,Shadow=1,"
+                f"FontName={font_name},FontSize={self.font_size*0.75}," # libass fontsize is different
+                f"PrimaryColour={config.SUBTITLE_COLOR},Outline=1,Shadow=1,"
                 f"BackColour=&H99000000,BorderStyle=4," # BorderStyle 4 is background box
                 f"Alignment=2,MarginV={margin_v}"
             )
             
             # Need to escape path for FFmpeg subtitles filter (especially on Windows)
             escaped_srt = srt_path.replace('\\', '/').replace(':', '\\:')
+            escaped_fontsdir = config.FONTS_DIR.replace('\\', '/').replace(':', '\\:')
             
-            # filter string: subtitles=filename.srt:force_style='...'
-            sub_filter = f"subtitles='{escaped_srt}':force_style='{style}'"
+            # filter string: subtitles=filename.srt:force_style='...':fontsdir='...'
+            sub_filter = f"subtitles='{escaped_srt}':force_style='{style}':fontsdir='{escaped_fontsdir}'"
             
             cmd = [
                 FFMPEG_EXE, "-y",

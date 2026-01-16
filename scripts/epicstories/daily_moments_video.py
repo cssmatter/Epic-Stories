@@ -56,11 +56,9 @@ def create_moment_image(moment_data, output_image_path="temp_moment_image.png"):
     system = platform.system()
     
     try:
-        if system == "Windows":
-            header_font_path = "C:\\Windows\\Fonts\\times.ttf"
-        else:  # Linux/Ubuntu (GitHub Actions)
-            header_font_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"
-        header_font = ImageFont.truetype(header_font_path, 30)
+        # Use our premium Caveat font
+        header_font_path = os.path.join(ROOT_DIR, "fonts", "Caveat-Bold.ttf")
+        header_font = ImageFont.truetype(header_font_path, 40) # Slightly larger for Caveat
     except IOError:
         print(f"Warning: Could not load font from {header_font_path}, using default")
         header_font = ImageFont.load_default()
@@ -73,11 +71,8 @@ def create_moment_image(moment_data, output_image_path="temp_moment_image.png"):
     
     # Font setup for moment and author (question)
     try:
-        if system == "Windows":
-            font_path = "C:\\Windows\\Fonts\\times.ttf"
-        else:  # Linux/Ubuntu (GitHub Actions)
-            font_path = "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf"
-        font_size = 50  # Consistent font size for 720p
+        font_path = os.path.join(ROOT_DIR, "fonts", "Caveat-Bold.ttf")
+        font_size = 75  # Handwriting fonts need to be much larger for readability
         font = ImageFont.truetype(font_path, font_size)
     except IOError:
         print(f"Warning: Could not load font from {font_path}, using default")
