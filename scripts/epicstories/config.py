@@ -66,7 +66,7 @@ OVERLAY_OPACITY = 0.10  # Overlay opacity (0.0 to 1.0)
 
 # --- BACKGROUND MUSIC ---
 BACKGROUND_MUSIC_PATH = os.path.join(ASSETS_DIR, "story-bg.mp3")
-MUSIC_VOLUME = 0.05  # Background music volume (0.0 to 1.0)
+MUSIC_VOLUME = 0.20  # Background music volume (0.0 to 1.0)
 
 # --- BRANDING ---
 LOGO_PATH = os.path.join(ASSETS_DIR, "channels_profile.jpg")
