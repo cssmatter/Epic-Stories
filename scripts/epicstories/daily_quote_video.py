@@ -56,9 +56,7 @@ def create_quote_image(quote_data, output_image_path="temp_quote_image.png"):
     system = platform.system()
     
     try:
-        # Use our premium Caveat font
-        header_font_path = os.path.join(ROOT_DIR, "fonts", "Caveat-Bold.ttf")
-        header_font = ImageFont.truetype(header_font_path, 40) # Slightly larger for Caveat
+        header_font = ImageFont.truetype("arialbd.ttf", 30) 
     except IOError:
         print(f"Warning: Could not load font from {header_font_path}, using default")
         header_font = ImageFont.load_default()
@@ -71,8 +69,8 @@ def create_quote_image(quote_data, output_image_path="temp_quote_image.png"):
     
     # Font setup for quote and author
     try:
-        font_path = os.path.join(ROOT_DIR, "fonts", "Caveat-Bold.ttf")
-        font_size = 75  # Handwriting fonts need to be much larger for readability
+        font_path = "arialbd.ttf"
+        font_size = 45 
         font = ImageFont.truetype(font_path, font_size)
     except IOError:
         print(f"Warning: Could not load font from {font_path}, using default")
