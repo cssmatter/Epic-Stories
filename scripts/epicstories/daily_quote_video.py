@@ -56,9 +56,21 @@ def create_quote_image(quote_data, output_image_path="temp_quote_image.png"):
     system = platform.system()
     
     try:
-        header_font = ImageFont.truetype("arialbd.ttf", 30) 
-    except IOError:
-        print(f"Warning: Could not load font from {header_font_path}, using default")
+        # Cross-platform font selection (Arial on Win, DejaVu on Linux)
+        font_names = ["arialbd.ttf", "Arial_Bold.ttf", "DejaVuSans-Bold.ttf", "Ubuntu-B.ttf"]
+        header_font = None
+        for font_name in font_names:
+            try:
+                header_font = ImageFont.truetype(font_name, 30)
+                break
+            except IOError:
+                continue
+        
+        if not header_font:
+            header_font = ImageFont.load_default()
+            
+    except Exception as e:
+        print(f"Warning: Could not load any header font, using default. Error: {e}")
         header_font = ImageFont.load_default()
     
     # Opacity 0.2 (approx 51/255)
@@ -69,14 +81,23 @@ def create_quote_image(quote_data, output_image_path="temp_quote_image.png"):
     
     # Font setup for quote and author
     try:
-        font_path = "arialbd.ttf"
+        font_names = ["arialbd.ttf", "Arial_Bold.ttf", "DejaVuSans-Bold.ttf", "Ubuntu-B.ttf"]
+        font = None
         font_size = 45 
-        font = ImageFont.truetype(font_path, font_size)
-    except IOError:
-        print(f"Warning: Could not load font from {font_path}, using default")
-        # If font loading fails, use a larger default size
+        for font_name in font_names:
+            try:
+                font = ImageFont.truetype(font_name, font_size)
+                break
+            except IOError:
+                continue
+        
+        if not font:
+            font = ImageFont.load_default()
+            font_size = 50
+    except Exception as e:
+        print(f"Warning: Could not load any body font, using default. Error: {e}")
         font = ImageFont.load_default()
-        font_size = 50  # Keep size consistent even with default font
+        font_size = 50
     
     quote_text = f'"{quote_data["quote"]}"'
     author_text = f"- {quote_data['author']} -"
