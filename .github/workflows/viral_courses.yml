@@ -2,7 +2,10 @@ name: Viral Courses Automation
 
 on:
   schedule:
-    - cron: '0 */8 * * *' # Run every 8 hours
+    # 15:00 UTC = 10:00 AM EST (Morning Scroll)
+    # 20:00 UTC = 03:00 PM EST (Afternoon Break)
+    # 01:00 UTC = 08:00 PM EST (Prime Time / Viral Window)
+    - cron: '0 1,15,20 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
@@ -17,6 +20,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Random Delay (USA Reach Optimization)
+        # PowerShell equivalent of the random delay for Windows runners
+        # Delays between 1 and 1200 seconds (20 minutes)
+        run: |
+          $delay = Get-Random -Minimum 1 -Maximum 1200
+          Write-Host "Waiting for $delay seconds to simulate organic activity..."
+          Start-Sleep -Seconds $delay
+        shell: powershell
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -27,7 +39,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install skia-python
-
 
       - name: Setup Credentials
         env:
@@ -57,7 +68,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git stash
           git pull --rebase origin main
-          git stash pop || true
+          git stash pop || echo "No stash to pop"
         shell: bash
 
       - name: Commit and Push changes

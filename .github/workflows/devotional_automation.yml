@@ -2,7 +2,10 @@ name: Devotional Hindi Automation
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Every 6 hours
+    # 15:00 UTC = 10:00 AM EST (Morning Scroll)
+    # 20:00 UTC = 03:00 PM EST (Afternoon Break)
+    # 01:00 UTC = 08:00 PM EST (Prime Time / Viral Window)
+    - cron: '0 1,15,20 * * *'
   workflow_dispatch: # Manual trigger
 
 jobs:
@@ -15,36 +18,38 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.GITHUB_TOKEN }} # Use Built-in token (requires 'contents: write' permission set above)
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
+    - name: Random Delay (USA Reach Optimization)
+      # Sleeps for a random time between 1 and 20 minutes (1200 seconds)
+      # This makes uploads look organic rather than automated at :00 exactly.
+      run: |
+        DELAY=$(( ( RANDOM % 1200 )  + 1 ))
+        echo "Waiting for $DELAY seconds to simulate organic upload..."
+        sleep $DELAY
+
     - name: Install dependencies
       run: |
         # Free up disk space on GitHub runners
         sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo apt-get clean
-        df -h
         
         sudo apt-get update
         sudo apt-get install -y ffmpeg libegl1 libgl1
         pip install --upgrade pip setuptools wheel
         pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-        # Fix pyworld build error: Install numpy/cython then pyworld with no isolation
         pip install "numpy<2" cython
         pip install pyworld --no-build-isolation
         pip install requests pillow click imageio-ffmpeg skia-python uharfbuzz
-        # Pin transformers and torch versions for TTS compatibility (torch 2.6 breaks model loading)
         pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
         pip install "transformers<4.42"
-        # Install TTS separately with no build isolation to use our pre-built pyworld
         pip install TTS --no-build-isolation
-        # Clear pip cache to save space
         pip cache purge
-        df -h
 
     - name: Decode YouTube Token
       env:
@@ -60,7 +65,7 @@ jobs:
 
     - name: Generate Video
       env:
-        COQUI_TOS_AGREED: "1"  # Auto-accept Coqui TTS non-commercial license for CI
+        COQUI_TOS_AGREED: "1"
       run: |
         python scripts/devotional_hindi/devotional_hindi_video.py --limit 1
 
@@ -78,5 +83,4 @@ jobs:
         git config --local user.email "11308641+cssmatter@users.noreply.github.com"
         git config --local user.name "cssmatter"
         git add data/DevotionalHindiQuotes/data.json
-        # Only commit if there are changes
         git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-cleanup published devotional quote" && git reset --hard && git pull --rebase origin main && git push)
