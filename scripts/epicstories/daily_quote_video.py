@@ -133,7 +133,7 @@ import imageio_ffmpeg
 
 # ... imports ...
 
-def create_video(quote_data, image_path, output_video_path="daily_quote_video.mp4", duration=10):
+def create_video(quote_data, image_path, output_video_path="daily_quote_video.mp4", duration=20):
     """Creates a video with background, music, and overlaid image using FFMPEG directly."""
     
     # Assets
