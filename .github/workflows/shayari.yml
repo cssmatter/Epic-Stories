@@ -121,10 +121,20 @@ jobs:
         if git diff --quiet data/shayari; then
           echo "No changes to data/shayari/"
         else
+          # Stash local changes
+          git stash
+          
+          # Pull latest changes from remote
+          git pull --rebase origin main
+          
+          # Apply stashed changes
+          git stash pop
+          
+          # Add and commit the changes
           git add data/shayari/shayari*.json
           git commit -m "Remove published shayari [skip ci]"
-          git reset --hard
-          git pull --rebase origin main
+          
+          # Push to remote
           git push
         fi
 

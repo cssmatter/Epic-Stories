@@ -82,5 +82,23 @@ jobs:
       run: |
         git config --local user.email "11308641+cssmatter@users.noreply.github.com"
         git config --local user.name "cssmatter"
-        git add data/DevotionalHindiQuotes/data.json
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-cleanup published devotional quote" && git reset --hard && git pull --rebase origin main && git push)
+        
+        if git diff --quiet data/DevotionalHindiQuotes/data.json && git diff --staged --quiet data/DevotionalHindiQuotes/data.json; then
+          echo "No changes to commit"
+        else
+          # Stash local changes
+          git stash
+          
+          # Pull latest changes from remote
+          git pull --rebase origin main
+          
+          # Apply stashed changes
+          git stash pop
+          
+          # Add and commit the changes
+          git add data/DevotionalHindiQuotes/data.json
+          git commit -m "Auto-cleanup published devotional quote"
+          
+          # Push to remote
+          git push
+        fi

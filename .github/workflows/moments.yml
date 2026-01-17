@@ -120,10 +120,20 @@ jobs:
         if git diff --quiet data/epicstories/moments.json; then
           echo "No changes to moments.json"
         else
+          # Stash local changes
+          git stash
+          
+          # Pull latest changes from remote
+          git pull --rebase origin main
+          
+          # Apply stashed changes
+          git stash pop
+          
+          # Add and commit the changes
           git add data/epicstories/moments.json
           git commit -m "Remove published moment [skip ci]"
-          git reset --hard
-          git pull --rebase origin main
+          
+          # Push to remote
           git push
         fi
     

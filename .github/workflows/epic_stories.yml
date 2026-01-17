@@ -68,10 +68,20 @@ jobs:
           if git diff --quiet data/epicstories/story.json; then
             echo "No changes to story.json"
           else
+            # Stash local changes
+            git stash
+            
+            # Pull latest changes from remote
+            git pull --rebase origin main
+            
+            # Apply stashed changes
+            git stash pop
+            
+            # Add and commit the changes
             git add data/epicstories/story.json
             git commit -m "Automated: Remove processed story from queue [skip ci]"
-            git reset --hard
-            git pull --rebase origin main
+            
+            # Push to remote
             git push origin main
           fi
 

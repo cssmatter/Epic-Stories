@@ -97,10 +97,20 @@ jobs:
         if git diff --quiet data/godisgreatest; then
           echo "No changes to data/godisgreatest/"
         else
+          # Stash local changes
+          git stash
+          
+          # Pull latest changes from remote
+          git pull --rebase origin main
+          
+          # Apply stashed changes
+          git stash pop
+          
+          # Add and commit the changes
           git add data/godisgreatest/data.json
           git commit -m "Remove published god message [skip ci]"
-          git reset --hard
-          git pull --rebase origin main
+          
+          # Push to remote
           git push
         fi
 
