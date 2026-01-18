@@ -61,35 +61,13 @@ class SubtitleGenerator:
     def burn_subtitles_srt(self, video_path, srt_path, output_path):
         """
         Burn subtitles from SRT into video using FFmpeg subtitles filter
+        (Standalone method)
         """
+        sub_filter = self.get_subtitles_filter(srt_path)
+        if not sub_filter:
+            return video_path
+            
         try:
-            # Shift the position using the subtitles filter arguments
-            # Note: FFmpeg subtitles filter uses libass. 
-            # It's harder to position vertically via filter string compared to drawtext.
-            # We use force_style to set alignment and margins.
-            # Alignment 2 is bottom center. MarginV shifts it up.
-            
-            # libass alignment codes: 1=LB, 2=CB, 3=RB, 5=LM, 6=CM, 7=RM, 9=LT, 10=CT, 11=RT
-            # Alignment 2 is bottom center. MarginV shifts it up.
-            margin_v = config.HEIGHT - config.SUBTITLE_POSITION_Y
-            
-            # Using the font name configured in config.py
-            font_name = config.SUBTITLE_FONT
-            
-            style = (
-                f"FontName={font_name},FontSize={self.font_size}," # Using direct config value
-                f"PrimaryColour={config.SUBTITLE_COLOR},Outline=1,Shadow=1,"
-                f"BackColour=&H99000000,BorderStyle=4," # BorderStyle 4 is background box
-                f"Alignment=2,MarginV={margin_v}"
-            )
-            
-            # Need to escape path for FFmpeg subtitles filter (especially on Windows)
-            escaped_srt = srt_path.replace('\\', '/').replace(':', '\\:')
-            escaped_fontsdir = config.FONTS_DIR.replace('\\', '/').replace(':', '\\:')
-            
-            # filter string: subtitles=filename.srt:force_style='...':fontsdir='...'
-            sub_filter = f"subtitles='{escaped_srt}':force_style='{style}':fontsdir='{escaped_fontsdir}'"
-            
             cmd = [
                 FFMPEG_EXE, "-y",
                 "-threads", "1",
@@ -115,6 +93,31 @@ class SubtitleGenerator:
         except Exception as e:
             print(f"Error burning SRT subtitles: {e}")
             return video_path
+
+    def get_subtitles_filter(self, srt_path):
+        """
+        Generate the FFmpeg filter string for subtitles
+        """
+        # libass alignment codes: 1=LB, 2=CB, 3=RB, 5=LM, 6=CM, 7=RM, 9=LT, 10=CT, 11=RT
+        # Alignment 2 is bottom center. MarginV shifts it up.
+        margin_v = config.HEIGHT - config.SUBTITLE_POSITION_Y
+        
+        # Using the font name configured in config.py
+        font_name = config.SUBTITLE_FONT
+        
+        style = (
+            f"FontName={font_name},FontSize={self.font_size}," 
+            f"PrimaryColour={config.SUBTITLE_COLOR},Outline=1,Shadow=1,"
+            f"BackColour=&H99000000,BorderStyle=4," 
+            f"Alignment=2,MarginV={margin_v}"
+        )
+        
+        # Need to escape path for FFmpeg subtitles filter (especially on Windows)
+        escaped_srt = srt_path.replace('\\', '/').replace(':', '\\:')
+        escaped_fontsdir = config.FONTS_DIR.replace('\\', '/').replace(':', '\\:')
+        
+        # filter string: subtitles=filename.srt:force_style='...':fontsdir='...'
+        return f"subtitles='{escaped_srt}':force_style='{style}':fontsdir='{escaped_fontsdir}'"
 
     def create_subtitle_file(self, text, duration, output_path):
         # Legacy method for full scene subtitle if needed

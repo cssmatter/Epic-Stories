@@ -315,7 +315,19 @@ class EpicStoriesVideoGenerator:
         
         intro_base = intro_path.replace('.mp4', '_base.mp4')
         # Use -loop 1 to treat image as a stream for zoompan
-        cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-loop", "1", "-t", str(process_duration), "-i", intro_img_path, "-vf", filter_complex, "-c:v", config.CODEC, "-preset", config.PRESET, "-pix_fmt", "yuv420p", "-r", str(fps), intro_base]
+        cmd = [
+            FFMPEG_EXE, "-y", 
+            "-loglevel", "error", # Prevent log buffer hangs
+            "-threads", "1", 
+            "-loop", "1", "-t", str(process_duration), 
+            "-i", intro_img_path, 
+            "-vf", filter_complex, 
+            "-c:v", config.CODEC, 
+            "-preset", "ultrafast", # Use fastest for intermediate
+            "-pix_fmt", "yuv420p", 
+            "-r", str(fps), 
+            intro_base
+        ]
         
         # Use binary capture for robustness
         result = subprocess.run(cmd, capture_output=True)
@@ -329,7 +341,16 @@ class EpicStoriesVideoGenerator:
         
         if audio_path:
             # Combine base and audio. We REMOVE -shortest to allow the padding to play.
-            cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-i", intro_base, "-i", audio_path, "-c:v", "copy", "-c:a", "aac", intro_path]
+            cmd = [
+                FFMPEG_EXE, "-y", 
+                "-loglevel", "error",
+                "-threads", "1", 
+                "-i", intro_base, 
+                "-i", audio_path, 
+                "-c:v", "copy", 
+                "-c:a", "aac", 
+                intro_path
+            ]
             subprocess.run(cmd, capture_output=True)
             if os.path.exists(intro_base): 
                 try: os.remove(intro_base)
@@ -379,45 +400,28 @@ class EpicStoriesVideoGenerator:
         else:
             scene_duration = self.tts_gen.get_audio_duration(audio_path)
         
-        # Step 3: Create video from image as background
-        print(f"  Creating video (duration: {scene_duration:.2f}s)...")
-        
-        # Create base video from image - Scale and crop to fit 1920x1080
-        # Create base video from image with Ken Burns effect
+        # Step 3: Scene Setup (Intermediates & Zoom)
         base_video = scene_path.replace('.mp4', '_base.mp4')
-        
-        # Determine zoom direction (Odd=In, Even=Out)
         direction = "in" if scene_number % 2 != 0 else "out"
-        
-        # Calculate parameters for smooth zoom
         fps = config.FPS
-        # [NEW] Padding ensures voiceover completes and adds a pause between scenes
         process_duration = scene_duration + config.SCENE_PADDING
         num_frames = int(process_duration * fps)
         
-        # Use frame-index based expressions ('on') to avoid cumulative float errors (jitter)
         if direction == "in":
-            # Zoom IN: 1.0 to 1.15
             zoom_expr = f"1.0+0.15*on/{num_frames}"
         else:
-            # Zoom OUT: 1.15 to 1.0
             zoom_expr = f"1.15-0.15*on/{num_frames}"
             
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
             
-        # 1.1-1.25x Supersampling
         zoom_mult = 1.1 if config.WIDTH >= 3840 else 1.25
         render_w = int(config.WIDTH * zoom_mult)
-        if render_w > 4800: render_w = 4800 # Sane cap for 4K+
+        if render_w > 4800: render_w = 4800 
         render_h = int(config.HEIGHT * (render_w / config.WIDTH))
-        
-        # Ensure even dimensions
         if render_w % 2 != 0: render_w += 1
         if render_h % 2 != 0: render_h += 1
         
-        # CRITICAL FIX: Since we use -loop 1 on input, we MUST use d=1 in zoompan
-        # Otherwise it duplicates frames (d*{num_frames}) causing massive output files and hangs
         filter_complex = (
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,"
             f"pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
@@ -425,12 +429,27 @@ class EpicStoriesVideoGenerator:
             f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
-        # Sub-pixel movement simulation: High-res -> Output res
+        # Step 4: Add subtitles (WORD-SYNCED SRT)
+        # We generate the SRT first so we can include it in the single-pass render
+        sub_filter = None
+        if word_timings:
+            print(f"  Preparing word-synced subtitles...")
+            srt_path = scene_path.replace('.mp4', '.srt')
+            self.subtitle_gen.create_word_synced_srt(word_timings, srt_path)
+            sub_filter = self.subtitle_gen.get_subtitles_filter(srt_path)
+        
+        # Build filter chain for single-pass render
+        final_vf = filter_complex
+        if sub_filter:
+            final_vf += f",{sub_filter}"
+            
+        print(f"  Rendering base video with zoom and subtitles...")
         cmd = [
             FFMPEG_EXE, "-y",
+            "-loglevel", "error", # Prevent buffer fill hangs
             "-threads", "1", # High res processing is memory intensive
             "-loop", "1", "-t", str(process_duration), "-i", image_path,
-            "-vf", filter_complex,
+            "-vf", final_vf,
             "-c:v", config.CODEC,
             "-preset", "ultrafast", # Optimization: use fast preset for the intermediate scene
             "-pix_fmt", "yuv420p",
@@ -444,31 +463,20 @@ class EpicStoriesVideoGenerator:
         if result.returncode != 0:
             print(f"  Error creating base video for scene {scene_number}")
             try:
-                print(f"  FFmpeg Error: {result.stderr.decode('utf-8', errors='replace')[:500]}")
+                err_text = result.stderr.decode('utf-8', errors='replace')
+                print(f"  FFmpeg Error: {err_text[:800]}")
             except:
                 print("  FFmpeg Error: (Could not decode output)")
             return None
         
-        # OPTIMIZATION: Overlays are now applied globally in generate_video/concatenate_scenes
-        
-        # Step 4: Add subtitles (WORD-SYNCED SRT)
-        # We burn subtitles onto the base video (without overlays yet)
-        video_with_subs = base_video.replace('_base.mp4', '_subs.mp4')
-        
-        if word_timings:
-            print(f"  Adding word-synced subtitles...")
-            srt_path = scene_path.replace('.mp4', '.srt')
-            self.subtitle_gen.create_word_synced_srt(word_timings, srt_path)
-            # Burn subtitles into base_video
-            self.subtitle_gen.burn_subtitles_srt(base_video, srt_path, video_with_subs)
-            
-            # Cleanup SRT
-            if os.path.exists(srt_path):
-                os.remove(srt_path)
-        else:
-            print(f"  Warning: No word timings, skipping subtitles")
-            # Just use base video if no subs
-            video_with_subs = base_video
+        # Cleanup SRT (if it was created)
+        srt_path = scene_path.replace('.mp4', '.srt')
+        if os.path.exists(srt_path):
+            try: os.remove(srt_path)
+            except: pass
+
+        # Skip Step 4 (already integrated) and keep video_with_subs pointer
+        video_with_subs = base_video
         
         # Step 5: Add voiceover audio
         # Combine video (with subs) and audio
@@ -479,6 +487,7 @@ class EpicStoriesVideoGenerator:
             print(f"  Adding voiceover...")
             cmd = [
                 FFMPEG_EXE, "-y",
+                "-loglevel", "error",
                 "-threads", "1",
                 "-i", input_video,
                 "-i", audio_path,
@@ -496,15 +505,9 @@ class EpicStoriesVideoGenerator:
                 shutil.copy(input_video, scene_path)
         
         # Cleanup temp files
-        if os.path.exists(base_video) and base_video != video_with_subs: 
+        if os.path.exists(base_video) and base_video != scene_path: 
             try: os.remove(base_video)
             except: pass
-        if os.path.exists(video_with_subs) and video_with_subs != input_video: # If intermediate
-            try: os.remove(video_with_subs)
-            except: pass
-        if os.path.exists(video_with_subs) and video_with_subs != scene_path and video_with_subs != base_video:
-             try: os.remove(video_with_subs)
-             except: pass
 
         if os.path.exists(scene_path):
             print(f"✓ Scene {scene_number} created: {scene_path}")
@@ -532,6 +535,7 @@ class EpicStoriesVideoGenerator:
         # Concatenate videos
         cmd = [
             FFMPEG_EXE, "-y",
+            "-loglevel", "error",
             "-f", "concat",
             "-safe", "0",
             "-i", concat_file,
@@ -587,7 +591,7 @@ class EpicStoriesVideoGenerator:
         # Using [v] and [a] as intermediate labels for clarity and parsing safety
         filter_str = " ; ".join(filter_parts)
         
-        cmd = [FFMPEG_EXE, "-y", "-threads", "1"] + inputs + [
+        cmd = [FFMPEG_EXE, "-y", "-loglevel", "error", "-threads", "1"] + inputs + [
             "-filter_complex", filter_str,
             "-map", current_v,
             "-map", current_a,
@@ -702,8 +706,8 @@ class EpicStoriesVideoGenerator:
         # Step 2: Create main story scenes
         scene_counter = 1
         for scene in scenes:
-            if test_mode and scene_counter > 2:
-                print("  Test Mode: Stopping after 2 scenes to save time.")
+            if test_mode and scene_counter > 5:
+                print("  Test Mode: Stopping after 5 scenes to save time.")
                 break
             scene_path = self.create_scene_video(scene, scene_counter)
             if scene_path:
