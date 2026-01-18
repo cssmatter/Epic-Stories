@@ -248,10 +248,23 @@ class EpicStoriesVideoGenerator:
             bg_prompt = intro_data.get('background_image_notext', '')
             overlay_texts = intro_data.get('overlay_text', [])
             vo_text = intro_data.get('voice_over_text', f"Welcome to All Time Epic Stories. Today's story: {story_data.get('video_title')}")
+        # SIMPLIFIED INTRO: Use Thumbnail Only + Voiceover (No Text, No AI Gen)
+        # We rely on 'intro_image.png' which creates_thumbnail_image saved earlier
         
-        # Prepend global style if not already present
-        if bg_prompt and hasattr(self, 'global_style') and self.global_style and self.global_style not in bg_prompt:
-            bg_prompt = self.global_style + " " + bg_prompt
+        intro_img_path = os.path.join(config.TEMP_DIR, "intro_image.png")
+        if not os.path.exists(intro_img_path):
+             print("  Warning: intro_image.png not found, trying to use thumbnail...")
+             # Fallback logic if needed, but intro_image.png should exist
+        
+        # Load image for processing (e.g. Watermark)
+        from PIL import Image
+        try:
+            img = Image.open(intro_img_path).convert('RGB')
+        except Exception as e:
+            print(f"  Error loading intro image: {e}")
+            return None
+
+        # (Text Overlay Logic Removed at User Request)
         
         intro_path = os.path.join(config.TEMP_DIR, "scene_000_intro.mp4")
         
@@ -260,122 +273,6 @@ class EpicStoriesVideoGenerator:
         audio_path, _ = self.tts_gen.generate_speech(vo_text)
         audio_duration = self.tts_gen.get_audio_duration(audio_path) if audio_path else 5.0
             
-        # Step 2: Fetch/Generate Background
-        from PIL import Image, ImageDraw, ImageFont
-        
-        if bg_prompt:
-            print(f"  Generating intro background from channel_intro prompt...")
-            bg_path = self.image_gen.generate_image(bg_prompt, "intro_bg")
-            img = Image.open(bg_path).convert('RGB') if bg_path else Image.new('RGB', (config.WIDTH, config.HEIGHT), color='#0f0f1e')
-        else:
-            img = Image.new('RGB', (config.WIDTH, config.HEIGHT), color='#0f0f1e')
-            
-        # Step 3: Add Centered Overlay Text
-        if overlay_texts:
-            print(f"  Adding centered overlay text...")
-            draw = ImageDraw.Draw(img)
-            
-            # Latch to prevent repeated download attempts
-            download_attempted = False
-
-            def get_optimal_font(size):
-                nonlocal download_attempted
-                # Priority 0: Cache/Download robust font (Roboto-Bold)
-                font_filename = "Roboto-Bold.ttf"
-                font_path = os.path.join(config.TEMP_DIR, font_filename)
-                
-                if not os.path.exists(font_path) and not download_attempted:
-                    download_attempted = True
-                    try:
-                        import urllib.request
-                        print(f"    Downloading {font_filename} for reliable rendering...")
-                        # Updated URL to correct raw path
-                        url = "https://raw.githubusercontent.com/google/fonts/main/apache/roboto/static/Roboto-Bold.ttf"
-                        urllib.request.urlretrieve(url, font_path)
-                    except Exception as e:
-                        print(f"    Warning: Could not download font: {e}")
-
-                if os.path.exists(font_path):
-                    try:
-                        return ImageFont.truetype(font_path, size)
-                    except:
-                        pass
-
-                # Priority 1: Common System Fonts
-                font_candidates = [
-                    "arialbd.ttf", "Arial Bold.ttf",
-                    "seguiemj.ttf",
-                    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-                    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-                    "C:\\Windows\\Fonts\\arialbd.ttf"
-                ]
-                for font_name in font_candidates:
-                    try:
-                        return ImageFont.truetype(font_name, size)
-                    except:
-                        continue
-                
-                # Fallback
-                return ImageFont.load_default()
-
-            # Dynamic Sizing & Wrapping Logic
-            # Goal: Text must fit within 85% width.
-            max_content_width = int(config.WIDTH * 0.85)
-            start_font_size = int(config.HEIGHT * 0.15) 
-            min_font_size = 40
-            
-            final_font = None
-            final_lines = []
-            
-            current_size = start_font_size
-            while current_size >= min_font_size:
-                font = get_optimal_font(current_size)
-                temp_lines = []
-                all_fit = True
-                
-                for line in overlay_texts:
-                    bbox = draw.textbbox((0, 0), line, font=font)
-                    w = bbox[2] - bbox[0]
-                    if w > max_content_width:
-                        all_fit = False
-                        break
-                    else:
-                        temp_lines.append(line)
-                
-                if all_fit:
-                    final_font = font
-                    final_lines = temp_lines
-                    print(f"  ✓ Text fits at font size {current_size}")
-                    break
-                current_size -= 5
-            
-            if not final_font:
-                final_font = get_optimal_font(min_font_size)
-                final_lines = overlay_texts
-            
-            # --- Draw Lines Centered ---
-            dummy = draw.textbbox((0, 0), "Aj", font=final_font)
-            line_height = dummy[3] - dummy[1]
-            line_spacing = int(line_height * 0.3)
-            
-            total_block_height = len(final_lines) * line_height + (len(final_lines) - 1) * line_spacing
-            start_y = (config.HEIGHT - total_block_height) // 2
-            
-            y = start_y
-            for line in final_lines:
-                bbox = draw.textbbox((0,0), line, font=final_font)
-                lw = bbox[2] - bbox[0]
-                x = (config.WIDTH - lw) // 2
-                
-                # Thick Outline for visibility
-                outline_color = "#000000"
-                stroke_width = max(3, int(current_size * 0.05))
-                
-                draw.text((x, y), line, font=final_font, fill='white', 
-                          stroke_width=stroke_width, stroke_fill=outline_color)
-                
-                y += line_height + line_spacing
-
         # Step 4: Watermark
         if os.path.exists(config.LOGO_PATH):
             try:
@@ -410,11 +307,18 @@ class EpicStoriesVideoGenerator:
         )
         
         intro_base = intro_path.replace('.mp4', '_base.mp4')
-        cmd = [FFMPEG_EXE, "-y", "-i", intro_img_path, "-vf", filter_complex, "-c:v", config.CODEC, "-preset", config.PRESET, "-pix_fmt", "yuv420p", "-r", str(fps), intro_base]
-        subprocess.run(cmd, capture_output=True)
+        cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-i", intro_img_path, "-vf", filter_complex, "-c:v", config.CODEC, "-preset", config.PRESET, "-pix_fmt", "yuv420p", "-r", str(fps), intro_base]
+        result = subprocess.run(cmd, capture_output=True)
+        
+        if result.returncode != 0:
+            print(f"  Error creating intro base video")
+            try:
+                print(f"  FFmpeg Error: {result.stderr.decode('utf-8', errors='replace')[:500]}")
+            except: pass
+            return None
         
         if audio_path:
-            cmd = [FFMPEG_EXE, "-y", "-i", intro_base, "-i", audio_path, "-c:v", "copy", "-c:a", "aac", "-shortest", intro_path]
+            cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-i", intro_base, "-i", audio_path, "-c:v", "copy", "-c:a", "aac", "-shortest", intro_path]
             subprocess.run(cmd, capture_output=True)
             return intro_path
         return intro_base
@@ -520,12 +424,15 @@ class EpicStoriesVideoGenerator:
             base_video
         ]
         
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True)
         
         if result.returncode != 0:
             print(f"  Error creating base video for scene {scene_number}")
             print(f"  Command: {' '.join(cmd)}")
-            print(f"  FFmpeg Error: {result.stderr}")
+            try:
+                print(f"  FFmpeg Error: {result.stderr.decode('utf-8', errors='replace')}")
+            except:
+                print("  FFmpeg Error: (Could not decode output)")
             return None
         
         # Step 3.5: Apply overlay videos (overlay.mp4 and clouds.mp4)
