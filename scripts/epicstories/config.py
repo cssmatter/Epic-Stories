@@ -64,8 +64,8 @@ FADE_DURATION = 0.5  # Fade transition duration
 # --- OVERLAY VIDEOS ---
 OVERLAY_VIDEO_PATH = os.path.join(ASSETS_DIR, "overlay.mp4")
 CLOUDS_VIDEO_PATH = os.path.join(ASSETS_DIR, "clouds.mp4")
-OVERLAY_OPACITY = 0.30  # Opacity for overlay.mp4
-CLOUDS_OPACITY = 0.02   # Opacity for clouds.mp4
+OVERLAY_OPACITY = 0.05  # Opacity for overlay.mp4
+CLOUDS_OPACITY = 0.05   # Opacity for clouds.mp4
 
 # --- BACKGROUND MUSIC ---
 BACKGROUND_MUSIC_PATH = os.path.join(ASSETS_DIR, "story-bg.mp3")

@@ -92,19 +92,24 @@ class SubtitleGenerator:
             
             cmd = [
                 FFMPEG_EXE, "-y",
-                "-threads", "2",
+                "-threads", "1",
                 "-i", video_path,
                 "-vf", sub_filter,
                 "-c:a", "copy",
                 output_path
             ]
             
-            result = subprocess.run(cmd, capture_output=True, text=True)
+            # Use binary capture to avoid UnicodeDecodeError on FFmpeg output
+            result = subprocess.run(cmd, capture_output=True)
             
             if result.returncode == 0:
                 return output_path
             else:
-                print(f"FFmpeg subtitles error: {result.stderr}")
+                try:
+                    error_msg = result.stderr.decode('utf-8', errors='replace')
+                    print(f"FFmpeg subtitles error: {error_msg[:500]}")
+                except:
+                    print(f"FFmpeg subtitles error: (Could not decode output)")
                 return video_path
                 
         except Exception as e:

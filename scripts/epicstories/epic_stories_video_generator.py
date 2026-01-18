@@ -143,32 +143,37 @@ class EpicStoriesVideoGenerator:
         bg_image_path = None
         self.thumbnail_source_path_to_delete = None
         
-        # Priority 1: Use Local Thumbnail from Temp (imageid)
+        # Priority 1: Use Local Thumbnail (search in Assets first, then Temp)
         if imageid:
-            thumbnails_dir = os.path.join(config.TEMP_DIR, "thumbnails")
-            print(f"  Searching for thumbnail matching ID: {imageid} in {thumbnails_dir}...")
+            search_dirs = [
+                os.path.join(config.ASSETS_DIR, "thumbnails"),
+                os.path.join(config.TEMP_DIR, "thumbnails")
+            ]
             
-            if os.path.exists(thumbnails_dir):
+            print(f"  Searching for thumbnail matching ID: {imageid}...")
+            
+            for thumbnails_dir in search_dirs:
+                if not os.path.exists(thumbnails_dir):
+                    continue
+                    
+                print(f"    Checking {thumbnails_dir}...")
                 for f in os.listdir(thumbnails_dir):
-                    # Match UUID part (f might be uuid.png or just uuid)
                     if f.startswith(imageid):
                         potential_path = os.path.join(thumbnails_dir, f)
-                        # Verify it's an image
                         try:
                             valid_img = Image.open(potential_path)
                             valid_img.verify()
                             bg_image_path = potential_path
-                            # Store path to delete later after successful upload
-                            self.thumbnail_source_path_to_delete = potential_path 
+                            self.thumbnail_source_path_to_delete = bg_image_path
                             print(f"  ✓ Found source thumbnail: {bg_image_path}")
                             break
-                        except Exception:
+                        except:
                             continue
-                
-                if not bg_image_path:
-                    print(f"  ✗ No valid thumbnail image found for ID {imageid}")
-            else:
-                print(f"  ✗ Thumbnails directory does not exist: {thumbnails_dir}")
+                if bg_image_path:
+                    break
+            
+            if not bg_image_path:
+                print(f"  Info: No local thumbnail found for ID {imageid} (checked {len(search_dirs)} locations). Falling back to generation.")
 
         # Priority 2: Fallback to AI Generation
         if not bg_image_path:
@@ -231,14 +236,22 @@ class EpicStoriesVideoGenerator:
         print("="*40)
         
         intro_data = story_data.get('channel_intro', {})
-        bg_prompt = intro_data.get('background_image_notext', '')
+        
+        # Handle case where channel_intro is just a string name
+        if isinstance(intro_data, str):
+            bg_prompt = '' # Use default intro image
+            overlay_texts = [intro_data]
+            vo_text = f"Welcome to {intro_data}."
+            if story_data.get('title') or story_data.get('video_title'):
+                vo_text += f" Today's story: {story_data.get('title') or story_data.get('video_title')}"
+        else:
+            bg_prompt = intro_data.get('background_image_notext', '')
+            overlay_texts = intro_data.get('overlay_text', [])
+            vo_text = intro_data.get('voice_over_text', f"Welcome to All Time Epic Stories. Today's story: {story_data.get('video_title')}")
         
         # Prepend global style if not already present
-        if hasattr(self, 'global_style') and self.global_style and self.global_style not in bg_prompt:
+        if bg_prompt and hasattr(self, 'global_style') and self.global_style and self.global_style not in bg_prompt:
             bg_prompt = self.global_style + " " + bg_prompt
-            
-        overlay_texts = intro_data.get('overlay_text', [])
-        vo_text = intro_data.get('voice_over_text', f"Welcome to All Time Epic Stories. Today's story: {story_data.get('video_title')}")
         
         intro_path = os.path.join(config.TEMP_DIR, "scene_000_intro.mp4")
         
@@ -262,11 +275,36 @@ class EpicStoriesVideoGenerator:
             print(f"  Adding centered overlay text...")
             draw = ImageDraw.Draw(img)
             
+            # Latch to prevent repeated download attempts
+            download_attempted = False
+
             def get_optimal_font(size):
-                # Common fonts on Windows/Linux
+                nonlocal download_attempted
+                # Priority 0: Cache/Download robust font (Roboto-Bold)
+                font_filename = "Roboto-Bold.ttf"
+                font_path = os.path.join(config.TEMP_DIR, font_filename)
+                
+                if not os.path.exists(font_path) and not download_attempted:
+                    download_attempted = True
+                    try:
+                        import urllib.request
+                        print(f"    Downloading {font_filename} for reliable rendering...")
+                        # Updated URL to correct raw path
+                        url = "https://raw.githubusercontent.com/google/fonts/main/apache/roboto/static/Roboto-Bold.ttf"
+                        urllib.request.urlretrieve(url, font_path)
+                    except Exception as e:
+                        print(f"    Warning: Could not download font: {e}")
+
+                if os.path.exists(font_path):
+                    try:
+                        return ImageFont.truetype(font_path, size)
+                    except:
+                        pass
+
+                # Priority 1: Common System Fonts
                 font_candidates = [
                     "arialbd.ttf", "Arial Bold.ttf",
-                    "seguiemj.ttf", # Segoe UI Emoji (Windows)
+                    "seguiemj.ttf",
                     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
                     "C:\\Windows\\Fonts\\arialbd.ttf"
@@ -276,13 +314,14 @@ class EpicStoriesVideoGenerator:
                         return ImageFont.truetype(font_name, size)
                     except:
                         continue
-                # Fallback to default (might not scale well, but better than crash)
+                
+                # Fallback
                 return ImageFont.load_default()
 
             # Dynamic Sizing & Wrapping Logic
-            # Goal: Text must fit within 80% width, no matter what.
+            # Goal: Text must fit within 85% width.
             max_content_width = int(config.WIDTH * 0.85)
-            start_font_size = int(config.HEIGHT * 0.12) # Start big (~250px on 4K)
+            start_font_size = int(config.HEIGHT * 0.15) 
             min_font_size = 40
             
             final_font = None
@@ -295,13 +334,9 @@ class EpicStoriesVideoGenerator:
                 all_fit = True
                 
                 for line in overlay_texts:
-                    # check if line fits
                     bbox = draw.textbbox((0, 0), line, font=font)
                     w = bbox[2] - bbox[0]
-                    
                     if w > max_content_width:
-                        # Try to wrap? For now, just reduce size until it fits.
-                        # Wrapping logic is complex without a library, simpler to shrink font for titles.
                         all_fit = False
                         break
                     else:
@@ -312,16 +347,13 @@ class EpicStoriesVideoGenerator:
                     final_lines = temp_lines
                     print(f"  ✓ Text fits at font size {current_size}")
                     break
-                
-                current_size -= 4  # Decrease and retry
+                current_size -= 5
             
             if not final_font:
-                # If even min size didn't fit (unlikely), fallback to min size and just chop/wrap
                 final_font = get_optimal_font(min_font_size)
                 final_lines = overlay_texts
             
             # --- Draw Lines Centered ---
-            # Calculate total height
             dummy = draw.textbbox((0, 0), "Aj", font=final_font)
             line_height = dummy[3] - dummy[1]
             line_spacing = int(line_height * 0.3)
@@ -330,18 +362,14 @@ class EpicStoriesVideoGenerator:
             start_y = (config.HEIGHT - total_block_height) // 2
             
             y = start_y
-            shadow_offset = max(2, int(current_size * 0.05))
-            
             for line in final_lines:
-                # Center X
                 bbox = draw.textbbox((0,0), line, font=final_font)
                 lw = bbox[2] - bbox[0]
                 x = (config.WIDTH - lw) // 2
                 
-                # Draw thick stroke/shadow for readability
-                # Black outline
+                # Thick Outline for visibility
                 outline_color = "#000000"
-                stroke_width = max(3, int(current_size * 0.04))
+                stroke_width = max(3, int(current_size * 0.05))
                 
                 draw.text((x, y), line, font=final_font, fill='white', 
                           stroke_width=stroke_width, stroke_fill=outline_color)
@@ -363,7 +391,18 @@ class EpicStoriesVideoGenerator:
         # Step 5: Render with Zoom
         fps = config.FPS
         num_frames = int(audio_duration * fps)
-        render_w, render_h = 4096, 2304
+        num_frames = int(audio_duration * fps)
+        # Dynamic render resolution for zoom effect
+        # Target at least 3840 (4K) for smoothness, or 1.5x for supersampling
+        target_zoom_w = max(3840, int(config.WIDTH * 1.5))
+        zoom_factor = target_zoom_w / config.WIDTH
+        render_w = int(config.WIDTH * zoom_factor)
+        render_h = int(config.HEIGHT * zoom_factor)
+        
+        # Ensure even dimensions
+        if render_w % 2 != 0: render_w += 1
+        if render_h % 2 != 0: render_h += 1
+        
         filter_complex = (
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
             f"zoompan=z='1.0+0.05*on/{num_frames}':d={num_frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={render_w}x{render_h}:fps={fps},"
@@ -449,8 +488,17 @@ class EpicStoriesVideoGenerator:
         y_expr = "ih/2-(ih/zoom/2)"
             
         # 4K+ Supersampling for ultra-smooth zoom (minimizes jitter)
-        # We use a single input frame and d={num_frames} for better stability
-        render_w, render_h = 4096, 2304
+        # We need high resolution input for zoompan to calculate sub-pixel movement smoothly
+        # Target at least 3840 (4K) or 1.5x output width
+        target_zoom_w = max(3840, int(config.WIDTH * 1.5))
+        # Maintain aspect ratio
+        zoom_factor = target_zoom_w / config.WIDTH
+        render_w = int(config.WIDTH * zoom_factor)
+        render_h = int(config.HEIGHT * zoom_factor)
+        
+        # Ensure even dimensions
+        if render_w % 2 != 0: render_w += 1
+        if render_h % 2 != 0: render_h += 1
         
         filter_complex = (
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,"
