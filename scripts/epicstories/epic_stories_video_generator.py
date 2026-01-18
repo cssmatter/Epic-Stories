@@ -12,7 +12,18 @@ from pathlib import Path
 # Add script directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import config
+# Parse arguments early to determine which config to use
+parser = argparse.ArgumentParser(description='Generate Epic Stories videos')
+parser.add_argument('--test', action='store_true', help='Run in test mode with lower resolution for faster processing')
+args, unknown = parser.parse_known_args()
+
+# Import appropriate config based on test mode
+if args.test:
+    import config_test as config
+    print("*** TEST MODE: Using reduced resolution (1080p, 30fps) for faster processing ***")
+else:
+    import config
+
 from image_generator import ImageGenerator
 from tts_generator import TTSGenerator
 from subtitle_generator import SubtitleGenerator
@@ -126,18 +137,51 @@ class EpicStoriesVideoGenerator:
         from PIL import Image
         
         thumbnail_data = story_data.get('youtube_thumbnail', {})
+        imageid = thumbnail_data.get('imageid', '')
         thumbnail_prompt = thumbnail_data.get('image_prompt', '')
         
-        # Prepend global style if not already present
-        if hasattr(self, 'global_style') and self.global_style and self.global_style not in thumbnail_prompt:
-            thumbnail_prompt = self.global_style + " " + thumbnail_prompt
+        bg_image_path = None
+        self.thumbnail_source_path_to_delete = None
         
-        if not thumbnail_prompt:
-            print("  Warning: No thumbnail prompt found. Skipping thumbnail generation.")
-            return None
+        # Priority 1: Use Local Thumbnail from Temp (imageid)
+        if imageid:
+            thumbnails_dir = os.path.join(config.TEMP_DIR, "thumbnails")
+            print(f"  Searching for thumbnail matching ID: {imageid} in {thumbnails_dir}...")
             
-        print(f"  Generating AI Thumbnail (Lucid-Origin)...")
-        bg_image_path = self.image_gen.generate_image(thumbnail_prompt, "thumbnail", is_thumbnail=True)
+            if os.path.exists(thumbnails_dir):
+                for f in os.listdir(thumbnails_dir):
+                    # Match UUID part (f might be uuid.png or just uuid)
+                    if f.startswith(imageid):
+                        potential_path = os.path.join(thumbnails_dir, f)
+                        # Verify it's an image
+                        try:
+                            valid_img = Image.open(potential_path)
+                            valid_img.verify()
+                            bg_image_path = potential_path
+                            # Store path to delete later after successful upload
+                            self.thumbnail_source_path_to_delete = potential_path 
+                            print(f"  ✓ Found source thumbnail: {bg_image_path}")
+                            break
+                        except Exception:
+                            continue
+                
+                if not bg_image_path:
+                    print(f"  ✗ No valid thumbnail image found for ID {imageid}")
+            else:
+                print(f"  ✗ Thumbnails directory does not exist: {thumbnails_dir}")
+
+        # Priority 2: Fallback to AI Generation
+        if not bg_image_path:
+            # Prepend global style if not already present
+            if hasattr(self, 'global_style') and self.global_style and self.global_style not in thumbnail_prompt:
+                thumbnail_prompt = self.global_style + " " + thumbnail_prompt
+            
+            if not thumbnail_prompt:
+                print("  Warning: No thumbnail prompt found. Skipping thumbnail generation.")
+                return None
+            
+            print(f"  Generating AI Thumbnail (Lucid-Origin)...")
+            bg_image_path = self.image_gen.generate_image(thumbnail_prompt, "thumbnail", is_thumbnail=True)
         
         if bg_image_path and os.path.exists(bg_image_path):
             img = Image.open(bg_image_path).convert('RGB')
@@ -213,45 +257,80 @@ class EpicStoriesVideoGenerator:
         else:
             img = Image.new('RGB', (config.WIDTH, config.HEIGHT), color='#0f0f1e')
             
-        if img.size != (config.WIDTH, config.HEIGHT):
-            img = img.resize((config.WIDTH, config.HEIGHT), Image.LANCZOS)
-        
         # Step 3: Add Centered Overlay Text
         if overlay_texts:
             print(f"  Adding centered overlay text...")
             draw = ImageDraw.Draw(img)
             
             def get_font(size):
-                try: return ImageFont.truetype("arialbd.ttf", size)
+                try: 
+                    # Try multiple common font paths depending on OS
+                    font_paths = [
+                        "arialbd.ttf", 
+                        "Arial Bold.ttf",
+                        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                        "C:\\Windows\\Fonts\\arialbd.ttf"
+                    ]
+                    for path in font_paths:
+                        try:
+                            return ImageFont.truetype(path, size)
+                        except: continue
+                    return ImageFont.load_default()
                 except: return ImageFont.load_default()
             
             target_width = int(config.WIDTH * 0.8)
             # Scaling font size based on 1920 baseline. 140 for 1080p -> 280 for 4K
-            current_font_size = int(config.WIDTH / 1920 * 180) 
+            # Make text scale relative to video width for consistent visibility
+            base_font_size = 120  # Base size for 1080p
+            current_font_size = int(config.WIDTH / 1920 * base_font_size) 
             min_font_size = int(config.WIDTH / 1920 * 40)
             
+            # Dynamic font sizing to fit width
             while current_font_size > min_font_size:
                 font = get_font(current_font_size)
-                if all((draw.textbbox((0, 0), line, font=font)[2] - draw.textbbox((0, 0), line, font=font)[0]) <= target_width for line in overlay_texts):
+                max_line_width = 0
+                for line in overlay_texts:
+                     bbox = draw.textbbox((0, 0), line, font=font)
+                     width = bbox[2] - bbox[0]
+                     if width > max_line_width:
+                         max_line_width = width
+                
+                if max_line_width <= target_width:
                     break
                 current_font_size -= 5
             
             font = get_font(current_font_size)
-            line_h = int(current_font_size * 1.3)
-            y = (config.HEIGHT - (len(overlay_texts) * line_h)) // 2
             
+            # Text layout calculations
+            # Use textbbox for precise height calculation
+            dummy_bbox = draw.textbbox((0, 0), "Tg", font=font)
+            line_height_pixels = dummy_bbox[3] - dummy_bbox[1]
+            line_spacing = int(line_height_pixels * 0.5)
+            total_block_height = (len(overlay_texts) * line_height_pixels) + ((len(overlay_texts) - 1) * line_spacing)
+            
+            start_y = (config.HEIGHT - total_block_height) // 2
+            
+            current_y = start_y
             for line in overlay_texts:
                 bbox = draw.textbbox((0, 0), line, font=font)
-                w = bbox[2] - bbox[0]
-                x = (config.WIDTH - w) // 2
+                text_width = bbox[2] - bbox[0]
+                text_height = bbox[3] - bbox[1] # Precise height of this line
                 
-                # Shadow
-                off = max(2, current_font_size // 25)
-                for dx, dy in [(-off,-off), (-off,off), (off,-off), (off,off)]:
-                    draw.text((x+dx, y+dy), line, fill='black', font=font)
+                x = (config.WIDTH - text_width) // 2
                 
-                draw.text((x, y), line, fill='white', font=font)
-                y += line_h
+                # Stronger Shadow/Outline for visibility
+                shadow_color = 'black'
+                outline_width = max(3, int(current_font_size / 20))
+                
+                # Draw outline/stroke
+                for dx in range(-outline_width, outline_width + 1):
+                    for dy in range(-outline_width, outline_width + 1):
+                        if dx != 0 or dy != 0:
+                            draw.text((x+dx, current_y+dy), line, fill=shadow_color, font=font)
+                
+                # Main text
+                draw.text((x, current_y), line, fill='white', font=font)
+                current_y += line_height_pixels + line_spacing
 
         # Step 4: Watermark
         if os.path.exists(config.LOGO_PATH):
@@ -385,22 +464,67 @@ class EpicStoriesVideoGenerator:
             print(f"  FFmpeg Error: {result.stderr}")
             return None
         
+        # Step 3.5: Apply overlay videos (overlay.mp4 and clouds.mp4)
+        # Note: This is done BEFORE adding audio, so we're working with video-only stream
+        video_with_overlays = base_video.replace('_base.mp4', '_overlays.mp4')
+        
+        if os.path.exists(config.OVERLAY_VIDEO_PATH) and os.path.exists(config.CLOUDS_VIDEO_PATH):
+            print(f"  Applying overlay effects (Overlay: {config.OVERLAY_OPACITY}, Clouds: {config.CLOUDS_OPACITY})...")
+            
+            # Complex filter to apply both overlays with opacity
+            # [0:v] is the base video (no audio yet)
+            # [1:v] is overlay.mp4 (looped as video, not frozen frame)
+            # [2:v] is clouds.mp4 (looped as video, not frozen frame)
+            filter_complex = (
+                f"[1:v]scale={config.WIDTH}:{config.HEIGHT},"
+                f"format=rgba,colorchannelmixer=aa={config.OVERLAY_OPACITY}[overlay1];"
+                f"[2:v]scale={config.WIDTH}:{config.HEIGHT},"
+                f"format=rgba,colorchannelmixer=aa={config.CLOUDS_OPACITY}[overlay2];"
+                f"[0:v][overlay1]overlay=0:0:shortest=1:repeatlast=0[tmp];"
+                f"[tmp][overlay2]overlay=0:0:shortest=1:repeatlast=0"
+            )
+            
+            cmd = [
+                FFMPEG_EXE, "-y",
+                "-i", base_video,
+                "-stream_loop", "-1", "-i", config.OVERLAY_VIDEO_PATH,  # Loop overlay video infinitely
+                "-stream_loop", "-1", "-i", config.CLOUDS_VIDEO_PATH,   # Loop clouds video infinitely
+                "-filter_complex", filter_complex,
+                "-c:v", config.CODEC,
+                "-preset", "ultrafast",
+                "-pix_fmt", "yuv420p",
+                "-an",  # No audio in this step (audio will be added later)
+                video_with_overlays
+            ]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            
+            if result.returncode != 0:
+                print(f"  Warning: Failed to apply overlays, using base video")
+                print(f"  FFmpeg Error: {result.stderr[:500]}")
+                if os.path.exists(base_video):
+                    os.replace(base_video, video_with_overlays)
+        else:
+            print(f"  Warning: Overlay videos not found, skipping overlay effects")
+            if os.path.exists(base_video):
+                os.replace(base_video, video_with_overlays)
+        
         # Step 4: Add subtitles (WORD-SYNCED SRT)
-        video_with_subs = base_video.replace('_base.mp4', '_subs.mp4')
+        video_with_subs = video_with_overlays.replace('_overlays.mp4', '_subs.mp4')
         
         if word_timings:
             print(f"  Adding word-synced subtitles...")
             srt_path = scene_path.replace('.mp4', '.srt')
             self.subtitle_gen.create_word_synced_srt(word_timings, srt_path)
-            self.subtitle_gen.burn_subtitles_srt(base_video, srt_path, video_with_subs)
+            self.subtitle_gen.burn_subtitles_srt(video_with_overlays, srt_path, video_with_subs)
             
             # Cleanup SRT
             if os.path.exists(srt_path):
                 os.remove(srt_path)
         else:
             print(f"  Warning: No word timings, skipping subtitles")
-            if os.path.exists(base_video):
-                os.replace(base_video, video_with_subs)
+            if os.path.exists(video_with_overlays):
+                os.replace(video_with_overlays, video_with_subs)
         
         # Step 5: Add voiceover audio
         if audio_path and os.path.exists(video_with_subs):
@@ -422,6 +546,7 @@ class EpicStoriesVideoGenerator:
         
         # Cleanup temp files
         if os.path.exists(base_video): os.remove(base_video)
+        if os.path.exists(video_with_overlays): os.remove(video_with_overlays)
         if os.path.exists(video_with_subs): os.remove(video_with_subs)
         
         if os.path.exists(scene_path):
@@ -507,7 +632,7 @@ class EpicStoriesVideoGenerator:
             ]
             subprocess.run(cmd, capture_output=True)
         else:
-            print("Warning: Background music not found, skipping...")
+            print(f"Warning: Background music not found at {config.BACKGROUND_MUSIC_PATH}, skipping...")
             if os.path.exists(temp_video):
                 os.replace(temp_video, output_path)
         
@@ -624,6 +749,15 @@ class EpicStoriesVideoGenerator:
                     if video_id:
                         # Remove analyzed story from data ONLY if upload succeeded
                         self.remove_story_from_data()
+                        
+                        # Cleanup source thumbnail if it was a temp file from thumbnails directory
+                        if hasattr(self, 'thumbnail_source_path_to_delete') and self.thumbnail_source_path_to_delete:
+                            if os.path.exists(self.thumbnail_source_path_to_delete):
+                                try:
+                                    os.remove(self.thumbnail_source_path_to_delete)
+                                    print(f"✓ Removed used thumbnail source: {self.thumbnail_source_path_to_delete}")
+                                except Exception as e:
+                                    print(f"Warning: Failed to remove thumbnail source: {e}")
                     else:
                         print("✗ YouTube upload failed. STORY NOT REMOVED FROM QUEUE for retry.")
                         return None
