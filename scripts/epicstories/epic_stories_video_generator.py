@@ -262,75 +262,91 @@ class EpicStoriesVideoGenerator:
             print(f"  Adding centered overlay text...")
             draw = ImageDraw.Draw(img)
             
-            def get_font(size):
-                try: 
-                    # Try multiple common font paths depending on OS
-                    font_paths = [
-                        "arialbd.ttf", 
-                        "Arial Bold.ttf",
-                        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-                        "C:\\Windows\\Fonts\\arialbd.ttf"
-                    ]
-                    for path in font_paths:
-                        try:
-                            return ImageFont.truetype(path, size)
-                        except: continue
-                    return ImageFont.load_default()
-                except: return ImageFont.load_default()
+            def get_optimal_font(size):
+                # Common fonts on Windows/Linux
+                font_candidates = [
+                    "arialbd.ttf", "Arial Bold.ttf",
+                    "seguiemj.ttf", # Segoe UI Emoji (Windows)
+                    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+                    "C:\\Windows\\Fonts\\arialbd.ttf"
+                ]
+                for font_name in font_candidates:
+                    try:
+                        return ImageFont.truetype(font_name, size)
+                    except:
+                        continue
+                # Fallback to default (might not scale well, but better than crash)
+                return ImageFont.load_default()
+
+            # Dynamic Sizing & Wrapping Logic
+            # Goal: Text must fit within 80% width, no matter what.
+            max_content_width = int(config.WIDTH * 0.85)
+            start_font_size = int(config.HEIGHT * 0.12) # Start big (~250px on 4K)
+            min_font_size = 40
             
-            target_width = int(config.WIDTH * 0.8)
-            # Scaling font size based on 1920 baseline. 140 for 1080p -> 280 for 4K
-            # Make text scale relative to video width for consistent visibility
-            base_font_size = 120  # Base size for 1080p
-            current_font_size = int(config.WIDTH / 1920 * base_font_size) 
-            min_font_size = int(config.WIDTH / 1920 * 40)
+            final_font = None
+            final_lines = []
             
-            # Dynamic font sizing to fit width
-            while current_font_size > min_font_size:
-                font = get_font(current_font_size)
-                max_line_width = 0
-                for line in overlay_texts:
-                     bbox = draw.textbbox((0, 0), line, font=font)
-                     width = bbox[2] - bbox[0]
-                     if width > max_line_width:
-                         max_line_width = width
+            current_size = start_font_size
+            while current_size >= min_font_size:
+                font = get_optimal_font(current_size)
+                temp_lines = []
+                all_fit = True
                 
-                if max_line_width <= target_width:
+                for line in overlay_texts:
+                    # check if line fits
+                    bbox = draw.textbbox((0, 0), line, font=font)
+                    w = bbox[2] - bbox[0]
+                    
+                    if w > max_content_width:
+                        # Try to wrap? For now, just reduce size until it fits.
+                        # Wrapping logic is complex without a library, simpler to shrink font for titles.
+                        all_fit = False
+                        break
+                    else:
+                        temp_lines.append(line)
+                
+                if all_fit:
+                    final_font = font
+                    final_lines = temp_lines
+                    print(f"  ✓ Text fits at font size {current_size}")
                     break
-                current_font_size -= 5
+                
+                current_size -= 4  # Decrease and retry
             
-            font = get_font(current_font_size)
+            if not final_font:
+                # If even min size didn't fit (unlikely), fallback to min size and just chop/wrap
+                final_font = get_optimal_font(min_font_size)
+                final_lines = overlay_texts
             
-            # Text layout calculations
-            # Use textbbox for precise height calculation
-            dummy_bbox = draw.textbbox((0, 0), "Tg", font=font)
-            line_height_pixels = dummy_bbox[3] - dummy_bbox[1]
-            line_spacing = int(line_height_pixels * 0.5)
-            total_block_height = (len(overlay_texts) * line_height_pixels) + ((len(overlay_texts) - 1) * line_spacing)
+            # --- Draw Lines Centered ---
+            # Calculate total height
+            dummy = draw.textbbox((0, 0), "Aj", font=final_font)
+            line_height = dummy[3] - dummy[1]
+            line_spacing = int(line_height * 0.3)
             
+            total_block_height = len(final_lines) * line_height + (len(final_lines) - 1) * line_spacing
             start_y = (config.HEIGHT - total_block_height) // 2
             
-            current_y = start_y
-            for line in overlay_texts:
-                bbox = draw.textbbox((0, 0), line, font=font)
-                text_width = bbox[2] - bbox[0]
-                text_height = bbox[3] - bbox[1] # Precise height of this line
+            y = start_y
+            shadow_offset = max(2, int(current_size * 0.05))
+            
+            for line in final_lines:
+                # Center X
+                bbox = draw.textbbox((0,0), line, font=final_font)
+                lw = bbox[2] - bbox[0]
+                x = (config.WIDTH - lw) // 2
                 
-                x = (config.WIDTH - text_width) // 2
+                # Draw thick stroke/shadow for readability
+                # Black outline
+                outline_color = "#000000"
+                stroke_width = max(3, int(current_size * 0.04))
                 
-                # Stronger Shadow/Outline for visibility
-                shadow_color = 'black'
-                outline_width = max(3, int(current_font_size / 20))
+                draw.text((x, y), line, font=final_font, fill='white', 
+                          stroke_width=stroke_width, stroke_fill=outline_color)
                 
-                # Draw outline/stroke
-                for dx in range(-outline_width, outline_width + 1):
-                    for dy in range(-outline_width, outline_width + 1):
-                        if dx != 0 or dy != 0:
-                            draw.text((x+dx, current_y+dy), line, fill=shadow_color, font=font)
-                
-                # Main text
-                draw.text((x, current_y), line, fill='white', font=font)
-                current_y += line_height_pixels + line_spacing
+                y += line_height + line_spacing
 
         # Step 4: Watermark
         if os.path.exists(config.LOGO_PATH):

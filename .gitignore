@@ -33,11 +33,16 @@ desktop.ini
 # Video Output and Temp files
 output/
 temp/
+# Ignore media files generally...
 *.mp4
 *.wav
 *.mp3
 *.png
+*.jpg
+*.jpeg
+# ...BUT allow them in assets folder and data folder
+!assets/**
+!data/**
 *.txt
 !requirements.txt
 !README.md
-!data/**/*.json
