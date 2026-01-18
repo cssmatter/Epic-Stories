@@ -288,26 +288,36 @@ class EpicStoriesVideoGenerator:
         # Step 5: Render with Zoom
         fps = config.FPS
         num_frames = int(audio_duration * fps)
-        num_frames = int(audio_duration * fps)
-        # Dynamic render resolution for zoom effect
-        # Target at least 3840 (4K) for smoothness, or 1.5x for supersampling
-        target_zoom_w = max(3840, int(config.WIDTH * 1.5))
-        zoom_factor = target_zoom_w / config.WIDTH
-        render_w = int(config.WIDTH * zoom_factor)
-        render_h = int(config.HEIGHT * zoom_factor)
+        
+        # [NEW] Add 1s padding to ensure voiceover completes fully
+        process_duration = audio_duration + config.SCENE_PADDING
+        num_frames = int(process_duration * fps)
+        
+        # Render at high resolution for supersampling (smooth zoom)
+        # For 4K (3840), 1.1x = 4224 (approx 12M pixels per frame)
+        # For 1080p (1920), 1.25x = 2400
+        zoom_mult = 1.1 if config.WIDTH >= 3840 else 1.25
+        render_w = int(config.WIDTH * zoom_mult)
+        if render_w > 4800: render_w = 4800 # Sane cap for 4K+
+        render_h = int(config.HEIGHT * (render_w / config.WIDTH))
         
         # Ensure even dimensions
         if render_w % 2 != 0: render_w += 1
         if render_h % 2 != 0: render_h += 1
         
+        # CRITICAL FIX: Since we use -loop 1 on input, we MUST use d=1 in zoompan
+        # Otherwise it duplicates frames (d*{num_frames}) causing massive output files and hangs
         filter_complex = (
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
-            f"zoompan=z='1.0+0.05*on/{num_frames}':d={num_frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={render_w}x{render_h}:fps={fps},"
+            f"zoompan=z='1.0+0.05*on/{num_frames}':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={render_w}x{render_h}:fps={fps},"
             f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
         intro_base = intro_path.replace('.mp4', '_base.mp4')
-        cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-i", intro_img_path, "-vf", filter_complex, "-c:v", config.CODEC, "-preset", config.PRESET, "-pix_fmt", "yuv420p", "-r", str(fps), intro_base]
+        # Use -loop 1 to treat image as a stream for zoompan
+        cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-loop", "1", "-t", str(process_duration), "-i", intro_img_path, "-vf", filter_complex, "-c:v", config.CODEC, "-preset", config.PRESET, "-pix_fmt", "yuv420p", "-r", str(fps), intro_base]
+        
+        # Use binary capture for robustness
         result = subprocess.run(cmd, capture_output=True)
         
         if result.returncode != 0:
@@ -318,9 +328,14 @@ class EpicStoriesVideoGenerator:
             return None
         
         if audio_path:
-            cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-i", intro_base, "-i", audio_path, "-c:v", "copy", "-c:a", "aac", "-shortest", intro_path]
+            # Combine base and audio. We REMOVE -shortest to allow the padding to play.
+            cmd = [FFMPEG_EXE, "-y", "-threads", "1", "-i", intro_base, "-i", audio_path, "-c:v", "copy", "-c:a", "aac", intro_path]
             subprocess.run(cmd, capture_output=True)
+            if os.path.exists(intro_base): 
+                try: os.remove(intro_base)
+                except: pass
             return intro_path
+        
         return intro_base
         
         if audio_path:
@@ -376,8 +391,8 @@ class EpicStoriesVideoGenerator:
         
         # Calculate parameters for smooth zoom
         fps = config.FPS
-        # Padding ensures video is longer than audio to prevent clipping
-        process_duration = scene_duration + 0.5
+        # [NEW] Padding ensures voiceover completes and adds a pause between scenes
+        process_duration = scene_duration + config.SCENE_PADDING
         num_frames = int(process_duration * fps)
         
         # Use frame-index based expressions ('on') to avoid cumulative float errors (jitter)
@@ -391,31 +406,30 @@ class EpicStoriesVideoGenerator:
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
             
-        # 4K+ Supersampling for ultra-smooth zoom (minimizes jitter)
-        # We need high resolution input for zoompan to calculate sub-pixel movement smoothly
-        # Target at least 3840 (4K) or 1.5x output width
-        target_zoom_w = max(3840, int(config.WIDTH * 1.5))
-        # Maintain aspect ratio
-        zoom_factor = target_zoom_w / config.WIDTH
-        render_w = int(config.WIDTH * zoom_factor)
-        render_h = int(config.HEIGHT * zoom_factor)
+        # 1.1-1.25x Supersampling
+        zoom_mult = 1.1 if config.WIDTH >= 3840 else 1.25
+        render_w = int(config.WIDTH * zoom_mult)
+        if render_w > 4800: render_w = 4800 # Sane cap for 4K+
+        render_h = int(config.HEIGHT * (render_w / config.WIDTH))
         
         # Ensure even dimensions
         if render_w % 2 != 0: render_w += 1
         if render_h % 2 != 0: render_h += 1
         
+        # CRITICAL FIX: Since we use -loop 1 on input, we MUST use d=1 in zoompan
+        # Otherwise it duplicates frames (d*{num_frames}) causing massive output files and hangs
         filter_complex = (
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,"
             f"pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
-            f"zoompan=z='{zoom_expr}':d={num_frames}:x='{x_expr}':y='{y_expr}':s={render_w}x{render_h}:fps={fps},"
+            f"zoompan=z='{zoom_expr}':d=1:x='{x_expr}':y='{y_expr}':s={render_w}x{render_h}:fps={fps},"
             f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
-        # Sub-pixel movement simulation: 4K+ -> 1080p
+        # Sub-pixel movement simulation: High-res -> Output res
         cmd = [
             FFMPEG_EXE, "-y",
             "-threads", "1", # High res processing is memory intensive
-            "-i", image_path,
+            "-loop", "1", "-t", str(process_duration), "-i", image_path,
             "-vf", filter_complex,
             "-c:v", config.CODEC,
             "-preset", "ultrafast", # Optimization: use fast preset for the intermediate scene
@@ -424,108 +438,74 @@ class EpicStoriesVideoGenerator:
             base_video
         ]
         
+        # Use binary capture for robustness
         result = subprocess.run(cmd, capture_output=True)
         
         if result.returncode != 0:
             print(f"  Error creating base video for scene {scene_number}")
-            print(f"  Command: {' '.join(cmd)}")
             try:
-                print(f"  FFmpeg Error: {result.stderr.decode('utf-8', errors='replace')}")
+                print(f"  FFmpeg Error: {result.stderr.decode('utf-8', errors='replace')[:500]}")
             except:
                 print("  FFmpeg Error: (Could not decode output)")
             return None
         
-        # Step 3.5: Apply overlay videos (overlay.mp4 and clouds.mp4)
-        # Note: This is done BEFORE adding audio, so we're working with video-only stream
-        video_with_overlays = base_video.replace('_base.mp4', '_overlays.mp4')
-        
-        if os.path.exists(config.OVERLAY_VIDEO_PATH) and os.path.exists(config.CLOUDS_VIDEO_PATH):
-            print(f"  Applying overlay effects (Overlay: {config.OVERLAY_OPACITY}, Clouds: {config.CLOUDS_OPACITY})...")
-            
-            # Complex filter to apply both overlays with opacity
-            # [0:v] is the base video (no audio yet)
-            # [1:v] is overlay.mp4 (looped as video, not frozen frame)
-            # [2:v] is clouds.mp4 (looped as video, not frozen frame)
-            filter_complex = (
-                f"[1:v]scale={config.WIDTH}:{config.HEIGHT},"
-                f"format=rgba,colorchannelmixer=aa={config.OVERLAY_OPACITY}[overlay1];"
-                f"[2:v]scale={config.WIDTH}:{config.HEIGHT},"
-                f"format=rgba,colorchannelmixer=aa={config.CLOUDS_OPACITY}[overlay2];"
-                f"[0:v][overlay1]overlay=0:0:shortest=1:repeatlast=0[tmp];"
-                f"[tmp][overlay2]overlay=0:0:shortest=1:repeatlast=0"
-            )
-            
-            cmd = [
-                FFMPEG_EXE, "-y",
-                "-i", base_video,
-                "-stream_loop", "-1", "-i", config.OVERLAY_VIDEO_PATH,  # Loop overlay video infinitely
-                "-stream_loop", "-1", "-i", config.CLOUDS_VIDEO_PATH,   # Loop clouds video infinitely
-                "-filter_complex", filter_complex,
-                "-c:v", config.CODEC,
-                "-preset", "ultrafast",
-                "-pix_fmt", "yuv420p",
-                "-an",  # No audio in this step (audio will be added later)
-                video_with_overlays
-            ]
-            
-            # Use binary capture and standard decoding to handle encoding errors from FFmpeg
-            result = subprocess.run(cmd, capture_output=True)
-            
-            if result.returncode != 0:
-                print(f"  Warning: Failed to apply overlays, using base video")
-                try:
-                    error_msg = result.stderr.decode('utf-8', errors='replace')
-                    print(f"  FFmpeg Error: {error_msg[:500]}")
-                except:
-                    print(f"  FFmpeg Error: Could not decode error output")
-                    
-                if os.path.exists(base_video):
-                    os.replace(base_video, video_with_overlays)
-        else:
-            print(f"  Warning: Overlay videos not found, skipping overlay effects")
-            if os.path.exists(base_video):
-                os.replace(base_video, video_with_overlays)
+        # OPTIMIZATION: Overlays are now applied globally in generate_video/concatenate_scenes
         
         # Step 4: Add subtitles (WORD-SYNCED SRT)
-        video_with_subs = video_with_overlays.replace('_overlays.mp4', '_subs.mp4')
+        # We burn subtitles onto the base video (without overlays yet)
+        video_with_subs = base_video.replace('_base.mp4', '_subs.mp4')
         
         if word_timings:
             print(f"  Adding word-synced subtitles...")
             srt_path = scene_path.replace('.mp4', '.srt')
             self.subtitle_gen.create_word_synced_srt(word_timings, srt_path)
-            self.subtitle_gen.burn_subtitles_srt(video_with_overlays, srt_path, video_with_subs)
+            # Burn subtitles into base_video
+            self.subtitle_gen.burn_subtitles_srt(base_video, srt_path, video_with_subs)
             
             # Cleanup SRT
             if os.path.exists(srt_path):
                 os.remove(srt_path)
         else:
             print(f"  Warning: No word timings, skipping subtitles")
-            if os.path.exists(video_with_overlays):
-                os.replace(video_with_overlays, video_with_subs)
+            # Just use base video if no subs
+            video_with_subs = base_video
         
         # Step 5: Add voiceover audio
-        if audio_path and os.path.exists(video_with_subs):
+        # Combine video (with subs) and audio
+        if audio_path:
+            # Check if we have video_with_subs (might be base_video)
+            input_video = video_with_subs if os.path.exists(video_with_subs) else base_video
+            
             print(f"  Adding voiceover...")
             cmd = [
                 FFMPEG_EXE, "-y",
-                "-threads", "2",
-                "-i", video_with_subs,
+                "-threads", "1",
+                "-i", input_video,
                 "-i", audio_path,
-                "-c:v", "copy",
+                "-c:v", "copy", # Video already encoded in Base or Subs step
                 "-c:a", "aac",
-                "-shortest",
                 scene_path
             ]
             subprocess.run(cmd, capture_output=True)
         else:
-            if os.path.exists(video_with_subs):
-                os.replace(video_with_subs, scene_path)
+            # Fallback if no audio
+            input_video = video_with_subs if os.path.exists(video_with_subs) else base_video
+            if os.path.exists(input_video):
+                # Copy to scene_path
+                import shutil
+                shutil.copy(input_video, scene_path)
         
         # Cleanup temp files
-        if os.path.exists(base_video): os.remove(base_video)
-        if os.path.exists(video_with_overlays): os.remove(video_with_overlays)
-        if os.path.exists(video_with_subs): os.remove(video_with_subs)
-        
+        if os.path.exists(base_video) and base_video != video_with_subs: 
+            try: os.remove(base_video)
+            except: pass
+        if os.path.exists(video_with_subs) and video_with_subs != input_video: # If intermediate
+            try: os.remove(video_with_subs)
+            except: pass
+        if os.path.exists(video_with_subs) and video_with_subs != scene_path and video_with_subs != base_video:
+             try: os.remove(video_with_subs)
+             except: pass
+
         if os.path.exists(scene_path):
             print(f"✓ Scene {scene_number} created: {scene_path}")
             return scene_path
@@ -561,61 +541,91 @@ class EpicStoriesVideoGenerator:
         
         subprocess.run(cmd, capture_output=True)
         
-        # Add logo watermark
-        video_with_logo = temp_video.replace('.mp4', '_logo.mp4')
-        if os.path.exists(config.LOGO_PATH):
-            print(f"Adding channel logo watermark...")
-            
-            # Apply logo overlay in top-right with padding
-            # [0:v] is main, [1:v] is logo. loop 1 for logo image.
-            cmd = [
-                FFMPEG_EXE, "-y",
-                "-threads", "2",
-                "-i", temp_video,
-                "-loop", "1", "-i", config.LOGO_PATH,
-                "-filter_complex", 
-                f"[1:v]scale={config.LOGO_WIDTH}:-1[logo];[0:v][logo]overlay=W-w-{config.LOGO_PADDING}:{config.LOGO_PADDING}:shortest=1",
-                "-c:v", config.CODEC,
-                "-preset", config.PRESET,
-                "-crf", str(config.CRF),
-                "-c:a", "copy",
-                video_with_logo
-            ]
-            subprocess.run(cmd, capture_output=True)
-            
-            # Replace temp_video with logo version
-            if os.path.exists(video_with_logo):
-                os.remove(temp_video)
-                os.rename(video_with_logo, temp_video)
-        else:
-            print(f"Warning: Logo not found at {config.LOGO_PATH}, skipping...")
+        # FINAL PASS: Combine Overlays, Logo, and Background Music into ONE encoding step
+        # This is a massive optimization: 1 encode instead of 3.
         
-        # Add background music
-        if os.path.exists(config.BACKGROUND_MUSIC_PATH):
-            print(f"Adding background music: {os.path.basename(config.BACKGROUND_MUSIC_PATH)}")
+        print(f"Starting final render (Overlays + Logo + Music)...")
+        
+        # Prepare inputs
+        inputs = ["-i", temp_video] # Input 0
+        filter_parts = []
+        
+        current_v = "[0:v]"
+        current_a = "[0:a]"
+        
+        input_idx = 1
+        
+        # 1. & 2. Overlays
+        if os.path.exists(config.OVERLAY_VIDEO_PATH) and os.path.exists(config.CLOUDS_VIDEO_PATH):
+            inputs.extend(["-stream_loop", "-1", "-i", config.OVERLAY_VIDEO_PATH]) # Input 1
+            inputs.extend(["-stream_loop", "-1", "-i", config.CLOUDS_VIDEO_PATH])  # Input 2
             
-            # Mux voiceover and background music
-            # [0:a] is voiceover, [1:a] is background music
-            # amix filter mixes them. volume adjustments: voiceover 1.0, background music low
-            cmd = [
-                FFMPEG_EXE, "-y",
-                "-threads", "2",
-                "-i", temp_video,
-                "-i", config.BACKGROUND_MUSIC_PATH,
-                "-filter_complex", f"[0:a]volume=1.0[v];[1:a]volume={config.MUSIC_VOLUME}[m];[v][m]amix=inputs=2:duration=first",
-                "-c:v", "copy",
-                "-c:a", "aac",
-                output_path
-            ]
-            subprocess.run(cmd, capture_output=True)
-        else:
-            print(f"Warning: Background music not found at {config.BACKGROUND_MUSIC_PATH}, skipping...")
+            filter_parts.append(f"[{input_idx}:v]scale={config.WIDTH}:{config.HEIGHT},format=rgba,colorchannelmixer=aa={config.OVERLAY_OPACITY}[ov1]")
+            filter_parts.append(f"[{input_idx+1}:v]scale={config.WIDTH}:{config.HEIGHT},format=rgba,colorchannelmixer=aa={config.CLOUDS_OPACITY}[ov2]")
+            filter_parts.append(f"{current_v}[ov1]overlay=0:0:shortest=1[tmp_v1]")
+            filter_parts.append(f"[tmp_v1][ov2]overlay=0:0:shortest=1[tmp_v2]")
+            current_v = "[tmp_v2]"
+            input_idx += 2
+            
+        # 3. Logo
+        if os.path.exists(config.LOGO_PATH):
+            inputs.extend(["-loop", "1", "-i", config.LOGO_PATH]) # Input N
+            filter_parts.append(f"[{input_idx}:v]scale={config.LOGO_WIDTH}:-1[logo_scaled]")
+            filter_parts.append(f"{current_v}[logo_scaled]overlay=W-w-{config.LOGO_PADDING}:{config.LOGO_PADDING}:shortest=1[tmp_v3]")
+            current_v = "[tmp_v3]"
+            input_idx += 1
+            
+        # 4. Music
+        if os.path.exists(config.BACKGROUND_MUSIC_PATH):
+            inputs.extend(["-i", config.BACKGROUND_MUSIC_PATH]) # Input N
+            # amix: input 0:a is voiceover, input N:a is music
+            filter_parts.append(f"{current_a}volume=1.0[vo];[{input_idx}:a]volume={config.MUSIC_VOLUME}[bgm];[vo][bgm]amix=inputs=2:duration=first[a_final]")
+            current_a = "[a_final]"
+            input_idx += 1
+        
+        # Assemble command
+        # Using [v] and [a] as intermediate labels for clarity and parsing safety
+        filter_str = " ; ".join(filter_parts)
+        
+        cmd = [FFMPEG_EXE, "-y", "-threads", "1"] + inputs + [
+            "-filter_complex", filter_str,
+            "-map", current_v,
+            "-map", current_a,
+            "-c:v", config.CODEC,
+            "-preset", config.PRESET,
+            "-crf", str(config.CRF),
+            "-pix_fmt", "yuv420p",
+            "-c:a", "aac",
+            output_path
+        ]
+        
+        print(f"  Executing: {' '.join(cmd)}")
+        
+        # Run final render
+        result = subprocess.run(cmd, capture_output=True)
+        
+        if result.returncode != 0:
+            print(f"✗ Final render failed!")
+            try:
+                err = result.stderr.decode('utf-8', errors='replace')
+                # Log both start (config issues) and end (processing issues)
+                print(f"  FFmpeg Error (Start):\n{err[:800]}")
+                print(f"  FFmpeg Error (Tail):\n{err[-800:]}")
+            except: pass
+            # Fallback: Just return the temp video if production fails
+            # (better than nothing, though it will lack effects)
             if os.path.exists(temp_video):
                 os.replace(temp_video, output_path)
-        
-        # Cleanup
-        if os.path.exists(temp_video): os.remove(temp_video)
-        if os.path.exists(concat_file): os.remove(concat_file)
+                return output_path
+            return None
+
+        # Success - Cleanup temp
+        if os.path.exists(temp_video): 
+            try: os.remove(temp_video)
+            except: pass
+        if os.path.exists(concat_file): 
+            try: os.remove(concat_file)
+            except: pass
         
         return output_path
     
@@ -692,6 +702,9 @@ class EpicStoriesVideoGenerator:
         # Step 2: Create main story scenes
         scene_counter = 1
         for scene in scenes:
+            if test_mode and scene_counter > 2:
+                print("  Test Mode: Stopping after 2 scenes to save time.")
+                break
             scene_path = self.create_scene_video(scene, scene_counter)
             if scene_path:
                 self.scene_videos.append(scene_path)
@@ -703,6 +716,8 @@ class EpicStoriesVideoGenerator:
         if outro_scenes:
             print(f"\nCreating {len(outro_scenes)} outro scenes...")
             for scene in outro_scenes:
+                if test_mode and scene_counter > 2:
+                    break
                 scene_path = self.create_scene_video(scene, scene_counter)
                 if scene_path:
                     self.scene_videos.append(scene_path)

@@ -64,8 +64,8 @@ FADE_DURATION = 0.5  # Fade transition duration
 # --- OVERLAY VIDEOS ---
 OVERLAY_VIDEO_PATH = os.path.join(ASSETS_DIR, "overlay.mp4")
 CLOUDS_VIDEO_PATH = os.path.join(ASSETS_DIR, "clouds.mp4")
-OVERLAY_OPACITY = 0.30  # Opacity for overlay.mp4
-CLOUDS_OPACITY = 0.02  # Opacity for clouds.mp4
+OVERLAY_OPACITY = 0.05  # Opacity for overlay.mp4
+CLOUDS_OPACITY = 0.05  # Opacity for clouds.mp4
 
 # --- BACKGROUND MUSIC ---
 BACKGROUND_MUSIC_PATH = os.path.join(ASSETS_DIR, "story-bg.mp3")
@@ -73,5 +73,5 @@ MUSIC_VOLUME = 0.20  # Background music volume (0.0 to 1.0)
 
 # --- BRANDING (Scaled for 1080p) ---
 LOGO_PATH = os.path.join(ASSETS_DIR, "channels_profile.jpg")
-LOGO_WIDTH = 50  # Scaled down from 100 for 1080p
-LOGO_PADDING = 20  # Scaled down from 40 for 1080p
+LOGO_WIDTH = 100  # Scaled down from 100 for 1080p
+LOGO_PADDING = 80  # Scaled down from 40 for 1080p

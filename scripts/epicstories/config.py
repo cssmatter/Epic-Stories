@@ -73,5 +73,5 @@ MUSIC_VOLUME = 0.20  # Background music volume (0.0 to 1.0)
 
 # --- BRANDING ---
 LOGO_PATH = os.path.join(ASSETS_DIR, "channels_profile.jpg")
-LOGO_WIDTH = 100  # Scaled for 4K
-LOGO_PADDING = 40 # Scaled for 4K
+LOGO_WIDTH = 200  # Scaled for 4K
+LOGO_PADDING = 80 # Scaled for 4K
