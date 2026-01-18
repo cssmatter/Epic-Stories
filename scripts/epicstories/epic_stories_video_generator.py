@@ -513,11 +513,17 @@ class EpicStoriesVideoGenerator:
                 video_with_overlays
             ]
             
-            result = subprocess.run(cmd, capture_output=True, text=True)
+            # Use binary capture and standard decoding to handle encoding errors from FFmpeg
+            result = subprocess.run(cmd, capture_output=True)
             
             if result.returncode != 0:
                 print(f"  Warning: Failed to apply overlays, using base video")
-                print(f"  FFmpeg Error: {result.stderr[:500]}")
+                try:
+                    error_msg = result.stderr.decode('utf-8', errors='replace')
+                    print(f"  FFmpeg Error: {error_msg[:500]}")
+                except:
+                    print(f"  FFmpeg Error: Could not decode error output")
+                    
                 if os.path.exists(base_video):
                     os.replace(base_video, video_with_overlays)
         else:
