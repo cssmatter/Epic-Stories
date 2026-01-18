@@ -50,8 +50,6 @@ CLOUDFLARE_THUMBNAIL_WORKER_URL = CLOUDFLARE_WORKER_URL
 # Supports environment variable for CI/GitHub Actions
 CLOUDFLARE_AUTH_TOKEN = os.getenv("CLOUDFLARE_AUTH_TOKEN", "Bearer shivaay143$manish")
 
-# OpenAI Settings for Thumbnails
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
 
 # Image Generation Dimensions (Requested 16:9)
 # Note: The worker likely handles dimensions or we emphasize in prompt
