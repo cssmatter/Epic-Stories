@@ -2,494 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Top Angular Interview Questions and Answers",
-                "Angular Coding Interview Questions for Senior Developers",
-                "Mastering Angular Interviews: Comprehensive Guide",
-                "Most Common Angular Interview Questions Explained",
-                "Angular Technical Interview Prep: Real-World Scenarios",
-                "Cracking the Angular Interview: Essential Concepts",
-                "Angular Interview Questions on Components and Services",
-                "Advanced Angular Interview Questions for 2024 and Beyond",
-                "Angular RxJS and State Management Interview Prep",
-                "Ultimate Angular Developer Interview Roadmap"
-            ],
-            "intro_script": {
-                "hook": "Ever felt like you know Angular inside out, but the moment an interviewer asks about 'Zone.js' or 'Change Detection strategies,' your mind goes blank? You aren't alone.",
-                "summary": "In this video, we dive deep into the core and advanced concepts of Angular, covering everything from dependency injection to RxJS operators and lifecycle hooks. We've compiled 30 high-impact practice questions designed to mimic real-world technical interviews.",
-                "cta_intro": "Before we jump into the first question, make sure to subscribe and hit the notification bell so you never miss a deep dive into modern web development.",
-                "checkfullexamlinkindescription": "Looking for the full comprehensive exam prep? Check the link in the description for the complete Angular Interview Questions course on Udemy."
-            },
-            "youtube_metadata": {
-                "courselink": "https://www.udemy.com/course/angular-interview-questions/?referralCode=581CD5CCAEB7EC897117",
-                "youtubetitle": "Angular Interview Questions and Answers | Comprehensive Technical Guide for Developers",
-                "description": "Master your next Angular interview with this deep dive into technical questions. We cover essential topics including Components, Directives, Services, RxJS, Signals, and Performance Optimization. Each question comes with a detailed explanation to help you understand the 'why' behind the 'what.' Whether you are a junior developer or a senior lead, these questions are designed to challenge your knowledge and prepare you for high-level technical discussions.",
-                "tags": "Angular, Angular Interview, Frontend Development, JavaScript Framework, Web Development, RxJS, Angular Signals, Component Lifecycle, TypeScript, Programming Interview",
-                "hashtags": [
-                    "#Angular",
-                    "#WebDev",
-                    "#CodingInterview",
-                    "#Frontend",
-                    "#SoftwareEngineering",
-                    "#TypeScript"
-                ],
-                "keywords": [
-                    "Angular interview prep",
-                    "Angular technical questions",
-                    "Angular developer assessment",
-                    "RxJS interview questions",
-                    "Angular performance optimization",
-                    "Angular lifecycle hooks explained",
-                    "Angular dependency injection tips"
-                ],
-                "mostsearchedongoogle": [
-                    "Angular interview questions for experienced",
-                    "Angular scenario based interview questions",
-                    "Difference between Observable and Promise in Angular",
-                    "How change detection works in Angular",
-                    "Angular 17 interview questions",
-                    "Angular Signals vs RxJS",
-                    "What is AOT in Angular",
-                    "Angular component communication methods",
-                    "Angular routing interview questions",
-                    "Angular dependency injection explained"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Core Architecture",
-                "difficulty": "Intermediate",
-                "question": "What is the primary purpose of 'Zone.js' in an Angular application?",
-                "options": {
-                    "A": "To handle HTTP requests asynchronously.",
-                    "B": "To create a sandbox for executing JavaScript code.",
-                    "C": "To intercept asynchronous tasks and notify Angular to run change detection.",
-                    "D": "To manage the routing states within the application."
-                },
-                "answer": "C",
-                "detailedexplanation": "Zone.js is a library that provides an execution context that persists across asynchronous tasks. In Angular, it monkey-patches common asynchronous APIs (like setTimeout, Promises, and XHR). When an async operation completes, Zone.js notifies Angular, which then triggers change detection to ensure the view is synchronized with the model. Without Zone.js (or manual triggering), Angular wouldn't know when to update the DOM after an event."
-            },
-            {
-                "id": 2,
-                "domain": "Change Detection",
-                "difficulty": "Advanced",
-                "question": "How does setting ChangeDetectionStrategy.OnPush improve application performance?",
-                "options": {
-                    "A": "It disables change detection for the entire application.",
-                    "B": "It only checks the component when its @Input properties change by reference.",
-                    "C": "It forces the component to update every 100 milliseconds.",
-                    "D": "It moves the change detection process to a Web Worker."
-                },
-                "answer": "B",
-                "detailedexplanation": "By default, Angular uses the 'Default' strategy, checking every component in the tree on every event. OnPush tells Angular that this component only depends on its inputs. It will only run change detection if an @Input property reference changes, an event originated from the component or its children, or if it is manually marked as dirty using ChangeDetectorRef. This significantly reduces the number of checks in large component trees."
-            },
-            {
-                "id": 3,
-                "domain": "Dependency Injection",
-                "difficulty": "Intermediate",
-                "question": "Which decorator is used to handle a dependency that might not be provided in the injection tree, preventing an error?",
-                "options": {
-                    "A": "@Inject()",
-                    "B": "@Host()",
-                    "C": "@Optional()",
-                    "D": "@Self()"
-                },
-                "answer": "C",
-                "detailedexplanation": "The @Optional() decorator allows a dependency to be null if the provider is not found in the injector hierarchy. If @Optional() is not used and the dependency is missing, Angular will throw a 'No provider for...' error. This is useful for building flexible components or plugins that can optionally consume services."
-            },
-            {
-                "id": 4,
-                "domain": "RxJS & Observables",
-                "difficulty": "Advanced",
-                "question": "What is the key difference between switchMap and mergeMap in RxJS?",
-                "options": {
-                    "A": "switchMap completes the inner observable while mergeMap does not.",
-                    "B": "switchMap cancels the previous inner observable when a new value arrives; mergeMap allows them to overlap.",
-                    "C": "mergeMap is used for HTTP GET, while switchMap is only for POST.",
-                    "D": "There is no functional difference; they are aliases."
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'switchMap' operator is ideal for scenarios like search-as-you-type where you only care about the latest request's result; it cancels any pending inner observables when a new outer value is emitted. 'mergeMap' (or flatMap) handles all inner observables concurrently, meaning multiple requests can be active and complete in any order."
-            },
-            {
-                "id": 5,
-                "domain": "Lifecycle Hooks",
-                "difficulty": "Intermediate",
-                "question": "In which lifecycle hook should you perform component initialization that depends on @Input values being set for the first time?",
-                "options": {
-                    "A": "constructor",
-                    "B": "ngAfterViewInit",
-                    "C": "ngOnInit",
-                    "D": "ngOnChanges"
-                },
-                "answer": "C",
-                "detailedexplanation": "While the constructor is the first thing called, @Input properties are not yet available there. ngOnInit is called once after the first ngOnChanges. It is the best place for initialization logic that requires the initial values of the component's inputs. ngOnChanges is called before ngOnInit and every time an input changes thereafter."
-            },
-            {
-                "id": 6,
-                "domain": "Routing",
-                "difficulty": "Intermediate",
-                "question": "Which interface should be implemented to prevent a user from navigating away from a route with unsaved changes?",
-                "options": {
-                    "A": "CanActivate",
-                    "B": "CanDeactivate",
-                    "C": "Resolve",
-                    "D": "CanLoad"
-                },
-                "answer": "B",
-                "detailedexplanation": "The CanDeactivate guard is used to decide if a user can leave a route. It is commonly used to show a confirmation dialog ('You have unsaved changes. Do you want to leave?') before allowing the navigation to proceed. If the guard returns false, the navigation is cancelled."
-            },
-            {
-                "id": 7,
-                "domain": "Modules & Optimization",
-                "difficulty": "Intermediate",
-                "question": "What is the purpose of 'Lazy Loading' in Angular routing?",
-                "options": {
-                    "A": "To load images only when they enter the viewport.",
-                    "B": "To defer the initialization of the app component.",
-                    "C": "To load feature modules only when the user navigates to their specific route.",
-                    "D": "To speed up the execution of the main.js bundle."
-                },
-                "answer": "C",
-                "detailedexplanation": "Lazy loading allows you to split your application into multiple bundles. Instead of downloading the entire application code on the initial load, Angular only downloads the code required for the current route. This significantly reduces the initial bundle size and improves the 'Time to Interactive' metric."
-            },
-            {
-                "id": 8,
-                "domain": "Directives",
-                "difficulty": "Intermediate",
-                "question": "What is the difference between a Component and an Attribute Directive?",
-                "options": {
-                    "A": "Components have a template; Attribute Directives do not.",
-                    "B": "Directives use @Input; Components do not.",
-                    "C": "Components cannot be reused; Directives can.",
-                    "D": "Attribute Directives change the DOM structure; Components do not."
-                },
-                "answer": "A",
-                "detailedexplanation": "Technically, a Component is a Directive with a template. The primary distinction is that Attribute Directives are used to change the appearance or behavior of an existing DOM element (like [ngStyle] or a custom hover effect), whereas Components define their own view (HTML) and logic."
-            },
-            {
-                "id": 9,
-                "domain": "Services",
-                "difficulty": "Intermediate",
-                "question": "By default, what is the scope of a service provided with 'providedIn: root'?",
-                "options": {
-                    "A": "A new instance is created for every component.",
-                    "B": "A single shared instance (Singleton) for the entire application.",
-                    "C": "One instance per module.",
-                    "D": "One instance per HTTP request."
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'providedIn: root' syntax creates a Singleton service. Angular creates a single instance of the service and shares it across all components and modules that inject it. It also enables tree-shaking, meaning if the service is not used, it won't be included in the final build bundle."
-            },
-            {
-                "id": 10,
-                "domain": "RxJS & Observables",
-                "difficulty": "Intermediate",
-                "question": "Which RxJS Subject variant ensures that new subscribers receive the last emitted value immediately upon subscription?",
-                "options": {
-                    "A": "Subject",
-                    "B": "AsyncSubject",
-                    "C": "BehaviorSubject",
-                    "D": "ReplaySubject(0)"
-                },
-                "answer": "C",
-                "detailedexplanation": "BehaviorSubject requires an initial value and stores the 'current' value. Whenever a new observer subscribes, it immediately receives that current value. A standard 'Subject' does not store values and only emits to active subscribers at the time of emission."
-            },
-            {
-                "id": 11,
-                "domain": "Forms",
-                "difficulty": "Intermediate",
-                "question": "In Reactive Forms, which class is used to track the value and validation status of an individual form control?",
-                "options": {
-                    "A": "FormGroup",
-                    "B": "FormControl",
-                    "C": "FormBuilder",
-                    "D": "FormArray"
-                },
-                "answer": "B",
-                "detailedexplanation": "FormControl is the basic building block of reactive forms. It tracks the value, validation status (valid/invalid), and user interaction (dirty/touched) for a single input field. Groups of FormControls are managed by FormGroups."
-            },
-            {
-                "id": 12,
-                "domain": "Performance",
-                "difficulty": "Advanced",
-                "question": "What is the benefit of using the 'trackBy' function in an *ngFor loop?",
-                "options": {
-                    "A": "It sorts the list automatically.",
-                    "B": "It enables filtering within the template.",
-                    "C": "It helps Angular identify which items changed, reducing DOM re-renders.",
-                    "D": "It prevents the list from being updated when the source array changes."
-                },
-                "answer": "C",
-                "detailedexplanation": "By default, when an array in *ngFor changes, Angular re-renders all DOM elements for that list. By providing a trackBy function (e.g., tracking by a unique ID), Angular can determine which specific items were added, removed, or moved. It then only updates the necessary DOM nodes, drastically improving performance for large lists."
-            },
-            {
-                "id": 13,
-                "domain": "Modern Angular",
-                "difficulty": "Intermediate",
-                "question": "What are Angular Signals primarily designed to improve?",
-                "options": {
-                    "A": "HTTP request speed.",
-                    "B": "Fine-grained reactivity and change detection efficiency.",
-                    "C": "The build time of the application.",
-                    "D": "The syntax of HTML templates."
-                },
-                "answer": "B",
-                "detailedexplanation": "Signals (introduced in Angular 16/17) provide a way for Angular to track state changes more precisely. Unlike Zone.js which checks component trees, Signals allow Angular to know exactly which parts of the UI need to be updated when a specific piece of data changes, paving the way for a future without Zone.js."
-            },
-            {
-                "id": 14,
-                "domain": "Compilation",
-                "difficulty": "Advanced",
-                "question": "What is the main difference between JIT and AOT compilation?",
-                "options": {
-                    "A": "JIT compiles in the browser at runtime; AOT compiles during the build process.",
-                    "B": "AOT is only for development; JIT is for production.",
-                    "C": "JIT makes the bundle size smaller than AOT.",
-                    "D": "AOT supports dynamic template generation; JIT does not."
-                },
-                "answer": "A",
-                "detailedexplanation": "Just-In-Time (JIT) compilation happens in the user's browser, which means the browser has to download the Angular compiler. Ahead-Of-Time (AOT) compilation happens on the server/machine during the build. AOT results in faster rendering, smaller bundles (no compiler needed), and earlier detection of template errors."
-            },
-            {
-                "id": 15,
-                "domain": "Pipes",
-                "difficulty": "Beginner",
-                "question": "What is a 'Pure Pipe' in Angular?",
-                "options": {
-                    "A": "A pipe that does not use any external dependencies.",
-                    "B": "A pipe that is called only when its input arguments change by reference.",
-                    "C": "A pipe that only works with strings.",
-                    "D": "A pipe that is executed on every change detection cycle."
-                },
-                "answer": "B",
-                "detailedexplanation": "Pipes are pure by default. Angular only executes a pure pipe when it detects a 'pure change' to the input value (a change to a primitive or a change in object reference). Impure pipes, on the other hand, are called during every change detection cycle, which can be very expensive."
-            },
-            {
-                "id": 16,
-                "domain": "ViewChildren & ContentChildren",
-                "difficulty": "Advanced",
-                "question": "Which decorator should be used to access a child component or DOM element that is projected into the component using <ng-content>?",
-                "options": {
-                    "A": "@ViewChild",
-                    "B": "@ContentChild",
-                    "C": "@Input",
-                    "D": "@Attribute"
-                },
-                "answer": "B",
-                "detailedexplanation": "@ViewChild is used to access elements inside the component's own template. @ContentChild is used to access elements that are passed into the component from the parent via content projection (inside the component's selector tags)."
-            },
-            {
-                "id": 17,
-                "domain": "Testing",
-                "difficulty": "Intermediate",
-                "question": "In Angular testing, what is the purpose of 'TestBed'?",
-                "options": {
-                    "A": "To run the application in a production-like environment.",
-                    "B": "To create an Angular testing module that mocks dependencies and components.",
-                    "C": "To automate end-to-end user flows.",
-                    "D": "To check the code coverage of the project."
-                },
-                "answer": "B",
-                "detailedexplanation": "TestBed is the primary API for writing unit tests for Angular components and services. It allows you to configure an @NgModule-like environment where you can declare the component under test and provide mock versions of its dependencies."
-            },
-            {
-                "id": 18,
-                "domain": "Security",
-                "difficulty": "Intermediate",
-                "question": "How does Angular protect against Cross-Site Scripting (XSS) attacks in templates?",
-                "options": {
-                    "A": "By blocking all script tags entirely.",
-                    "B": "By automatically sanitizing values bound to the DOM.",
-                    "C": "By requiring all data to be encrypted.",
-                    "D": "By using a proprietary browser engine."
-                },
-                "answer": "B",
-                "detailedexplanation": "Angular treats all values as untrusted by default. When a value is inserted into the DOM through property binding ([innerHtml], etc.), Angular sanitizes it to remove potentially dangerous scripts. To bypass this, a developer must explicitly use the DomSanitizer service."
-            },
-            {
-                "id": 19,
-                "domain": "Core Concepts",
-                "difficulty": "Beginner",
-                "question": "Which file serves as the entry point for an Angular application where the bootstrap process begins?",
-                "options": {
-                    "A": "app.component.ts",
-                    "B": "index.html",
-                    "C": "main.ts",
-                    "D": "angular.json"
-                },
-                "answer": "C",
-                "detailedexplanation": "The main.ts file is the entry point. It specifies the platform (like platformBrowserDynamic) and bootstraps the root module (usually AppModule) or the root component in standalone apps to start the application."
-            },
-            {
-                "id": 20,
-                "domain": "RxJS & Observables",
-                "difficulty": "Intermediate",
-                "question": "What is the purpose of the 'async' pipe in Angular templates?",
-                "options": {
-                    "A": "To make an HTTP request faster.",
-                    "B": "To automatically subscribe and unsubscribe from an Observable or Promise.",
-                    "C": "To run code in a background thread.",
-                    "D": "To delay the rendering of a component."
-                },
-                "answer": "B",
-                "detailedexplanation": "The async pipe is a best practice for handling Observables in templates. It automatically subscribes to the observable, returns the latest value, and most importantly, automatically unsubscribes when the component is destroyed to prevent memory leaks."
-            },
-            {
-                "id": 21,
-                "domain": "Standalone Components",
-                "difficulty": "Intermediate",
-                "question": "What is the main advantage of using Standalone Components (introduced in Angular 14/15)?",
-                "options": {
-                    "A": "They do not require TypeScript.",
-                    "B": "They can be run without a browser.",
-                    "C": "They reduce the need for NgModules, simplifying the mental model and structure.",
-                    "D": "They automatically make all services global."
-                },
-                "answer": "C",
-                "detailedexplanation": "Standalone components allow you to build components, directives, and pipes without declaring them in an @NgModule. This reduces boilerplate, makes components more reusable, and simplifies the application structure by moving dependencies directly into the component's metadata."
-            },
-            {
-                "id": 22,
-                "domain": "Interceptors",
-                "difficulty": "Intermediate",
-                "question": "What is the primary use case for an HttpInterceptor?",
-                "options": {
-                    "A": "To route users to different pages.",
-                    "B": "To transform the HTML of a component.",
-                    "C": "To globally modify outgoing HTTP requests or incoming responses (e.g., adding Auth tokens).",
-                    "D": "To manage local storage data."
-                },
-                "answer": "C",
-                "detailedexplanation": "HttpInterceptors act as a middleware for HTTP calls. They are perfect for adding Authorization headers to every request, logging, or handling global error responses (like 401 Unauthorized) in one central place."
-            },
-            {
-                "id": 23,
-                "domain": "Directives",
-                "difficulty": "Intermediate",
-                "question": "Which of the following is a Structural Directive?",
-                "options": {
-                    "A": "[ngStyle]",
-                    "B": "[ngClass]",
-                    "C": "*ngIf",
-                    "D": "[ngModel]"
-                },
-                "answer": "C",
-                "detailedexplanation": "Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements. You can identify them by the asterisk (*) prefix (e.g., *ngIf, *ngFor, *ngSwitchCase)."
-            },
-            {
-                "id": 24,
-                "domain": "Services",
-                "difficulty": "Advanced",
-                "question": "What happens if a service is provided in a Component's 'providers' array instead of 'providedIn: root'?",
-                "options": {
-                    "A": "The service becomes a global singleton.",
-                    "B": "A new instance of the service is created for that component and its children.",
-                    "C": "The service cannot be injected into that component.",
-                    "D": "The application will fail to compile."
-                },
-                "answer": "B",
-                "detailedexplanation": "Providing a service at the component level creates a 'locally scoped' instance. This instance is shared by that component and all its child components, but it is distinct from instances of the same service provided elsewhere in the app."
-            },
-            {
-                "id": 25,
-                "domain": "Modern Angular",
-                "difficulty": "Intermediate",
-                "question": "In the new built-in control flow (Angular 17+), which syntax replaces *ngIf?",
-                "options": {
-                    "A": "#if",
-                    "B": "@if",
-                    "C": "[if]",
-                    "D": "dir-if"
-                },
-                "answer": "B",
-                "detailedexplanation": "Angular 17 introduced a new block-based control flow syntax using the '@' symbol. @if, @else, @for, and @switch provide a more performant and cleaner alternative to structural directives like *ngIf and *ngFor, and they don't require importing CommonModule."
-            },
-            {
-                "id": 26,
-                "domain": "Component Communication",
-                "difficulty": "Beginner",
-                "question": "How does a child component send data back to its parent component?",
-                "options": {
-                    "A": "Using the @Input decorator.",
-                    "B": "Using the @Output decorator and an EventEmitter.",
-                    "C": "By modifying the parent's variables directly.",
-                    "D": "Using a global variable."
-                },
-                "answer": "B",
-                "detailedexplanation": "Angular uses a 'Data down, Events up' pattern. Parents pass data to children via @Input properties. Children notify parents of changes or actions by emitting events using the @Output decorator combined with an EventEmitter instance."
-            },
-            {
-                "id": 27,
-                "domain": "Performance",
-                "difficulty": "Advanced",
-                "question": "What is the purpose of the 'Title' and 'Meta' services in Angular?",
-                "options": {
-                    "A": "To manage the application's header styles.",
-                    "B": "To dynamically update the page title and meta tags for SEO and social sharing.",
-                    "C": "To create modal windows.",
-                    "D": "To handle database schema metadata."
-                },
-                "answer": "B",
-                "detailedexplanation": "Since Angular is a Single Page Application (SPA), the browser doesn't reload pages traditionally. The Title and Meta services (from @angular/platform-browser) allow developers to programmatically update the document title and meta descriptions as the user navigates, which is crucial for SEO."
-            },
-            {
-                "id": 28,
-                "domain": "RxJS",
-                "difficulty": "Advanced",
-                "question": "Which operator is used to wait for multiple observables to complete and then emit their last values as an array?",
-                "options": {
-                    "A": "combineLatest",
-                    "B": "withLatestFrom",
-                    "C": "forkJoin",
-                    "D": "concat"
-                },
-                "answer": "C",
-                "detailedexplanation": "forkJoin is similar to Promise.all(). It accepts an array of observables, waits for all of them to complete, and then emits a single value containing the last emitted value from each. If any source observable errors, forkJoin will error as well."
-            },
-            {
-                "id": 29,
-                "domain": "Forms",
-                "difficulty": "Intermediate",
-                "question": "What is the purpose of 'Validators.compose' in Reactive Forms?",
-                "options": {
-                    "A": "To create a custom validator function.",
-                    "B": "To combine multiple validators (like required and email) onto a single FormControl.",
-                    "C": "To merge two different form groups.",
-                    "D": "To sync form data with a backend API."
-                },
-                "answer": "B",
-                "detailedexplanation": "When a FormControl needs more than one validation rule (e.g., it must be required AND be a minimum length), Validators.compose() is used to group these rules. In modern Angular, you can simply pass an array [Validators.required, Validators.minLength(5)], which uses compose internally."
-            },
-            {
-                "id": 30,
-                "domain": "Dependency Injection",
-                "difficulty": "Advanced",
-                "question": "What does the 'multi: true' option do in a provider object?",
-                "options": {
-                    "A": "It allows the service to be instantiated multiple times.",
-                    "B": "It tells Angular that the provider token can have multiple values (an array of values).",
-                    "C": "It enables multi-threading for the service.",
-                    "D": "It allows the service to work across multiple browser tabs."
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'multi: true' flag is used for 'Multi-providers.' It allows you to provide multiple values for a single injection token (like HTTP_INTERCEPTORS). When you inject that token, Angular provides an array containing all the values provided for that token across the app."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30-question deep dive into Angular interview preparation. We've covered the core architecture, reactivity with RxJS, and the latest features like Signals and Standalone components.",
-            "cta_final": "If you found this helpful, please give the video a thumbs up and share it with your fellow developers. If you're serious about passing your interview, don't forget to check out our full practice exam on Udemy via the link in the description.",
-            "next_steps": "Leave a comment below with which topic you found the hardest\u2014was it RxJS or Change Detection? See you in the next video!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Use a smooth 'slide-in' for question cards. For correct answers, highlight the option in green with a subtle checkmark animation. For explanations, use a clean, readable overlay with bullet points."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Master Object-Oriented Programming Interview Questions",
                 "Top 30 OOP Concepts Interview Questions and Answers",
                 "Object-Oriented Programming Mock Exam Practice",
@@ -18251,11 +17763,11 @@
                 "options": {
                     "A": "Binary Search",
                     "B": "Dijkstra's Algorithm",
-                    "C": "Floyd’s Cycle-Finding Algorithm",
+                    "C": "Floyd\u2019s Cycle-Finding Algorithm",
                     "D": "QuickSort"
                 },
                 "answer": "C",
-                "detailedexplanation": "Floyd’s Cycle-Finding Algorithm, also known as the 'Tortoise and Hare' algorithm, uses two pointers moving at different speeds (one step vs. two steps). If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the loop. If the fast pointer reaches NULL, there is no cycle."
+                "detailedexplanation": "Floyd\u2019s Cycle-Finding Algorithm, also known as the 'Tortoise and Hare' algorithm, uses two pointers moving at different speeds (one step vs. two steps). If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the loop. If the fast pointer reaches NULL, there is no cycle."
             },
             {
                 "id": 8,
@@ -18801,7 +18313,7 @@
                     "D": "To measure the distance between different clusters."
                 },
                 "answer": "B",
-                "detailedexplanation": "K-Means requires the user to specify the number of clusters (K) in advance. The elbow method is a common heuristic used to find the 'best' value for K. You run the algorithm for a range of K values and for each K, calculate the Within-Cluster Sum of Squares (WCSS), which measures how compact the clusters are. When you plot WCSS against K, the value typically decreases as K increases. The 'elbow' of the curve—the point where the rate of decrease significantly slows down—is often chosen as the optimal K because adding more clusters beyond this point doesn't provide a significant improvement in capturing the data's structure."
+                "detailedexplanation": "K-Means requires the user to specify the number of clusters (K) in advance. The elbow method is a common heuristic used to find the 'best' value for K. You run the algorithm for a range of K values and for each K, calculate the Within-Cluster Sum of Squares (WCSS), which measures how compact the clusters are. When you plot WCSS against K, the value typically decreases as K increases. The 'elbow' of the curve\u2014the point where the rate of decrease significantly slows down\u2014is often chosen as the optimal K because adding more clusters beyond this point doesn't provide a significant improvement in capturing the data's structure."
             },
             {
                 "id": 12,
@@ -18880,7 +18392,7 @@
                 "question": "How does a Support Vector Machine (SVM) determine the 'optimal' decision boundary?",
                 "options": {
                     "A": "By finding the line that passes through the mean of each class.",
-                    "B": "By maximizing the 'margin'—the distance between the decision boundary and the nearest data points from each class.",
+                    "B": "By maximizing the 'margin'\u2014the distance between the decision boundary and the nearest data points from each class.",
                     "C": "By calculating the probability of a point belonging to each class.",
                     "D": "By minimizing the total number of misclassified points in the training set."
                 },
@@ -18927,7 +18439,7 @@
                     "D": "Reducing the dimensionality of a dataset while preserving its information."
                 },
                 "answer": "C",
-                "detailedexplanation": "Reinforcement Learning (RL) is a type of machine learning where an 'agent' learns to make decisions by interacting with an 'environment'. The agent receives feedback in the form of rewards or penalties based on its actions. Its goal is to learn a policy—a mapping from states of the environment to actions—that maximizes the total reward it receives over time. RL is widely used in applications like robotics, game playing (e.g., AlphaGo), and autonomous driving."
+                "detailedexplanation": "Reinforcement Learning (RL) is a type of machine learning where an 'agent' learns to make decisions by interacting with an 'environment'. The agent receives feedback in the form of rewards or penalties based on its actions. Its goal is to learn a policy\u2014a mapping from states of the environment to actions\u2014that maximizes the total reward it receives over time. RL is widely used in applications like robotics, game playing (e.g., AlphaGo), and autonomous driving."
             },
             {
                 "id": 21,
@@ -19095,7 +18607,7 @@
                 "The Ultimate AI Interview Preparation Marathon"
             ],
             "intro_script": {
-                "hook": "Ever felt like AI is moving faster than you can keep up with? In the next hour, we’re bridging that gap by tackling the 30 most critical Artificial Intelligence questions you’ll face in your next high-stakes interview.",
+                "hook": "Ever felt like AI is moving faster than you can keep up with? In the next hour, we\u2019re bridging that gap by tackling the 30 most critical Artificial Intelligence questions you\u2019ll face in your next high-stakes interview.",
                 "summary": "This video is a comprehensive deep dive into foundational AI, machine learning, deep learning, and generative AI. We've curated these questions based on current 2026 industry standards and top-tier certification requirements to ensure you're not just answering, but understanding.",
                 "cta_intro": "Before we dive in, make sure to hit that subscribe button to keep your technical skills sharp.",
                 "checkfullexamlinkindescription": "Looking for the full certification practice set? Check out the comprehensive course link in the description below to master every domain."
@@ -19221,7 +18733,7 @@
                     "0": "Spam Filters"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Trolley Problem is a thought experiment in ethics about a fictional scenario where one must choose between two unpleasant outcomes. In AI, it is used to discuss how Autonomous Vehicles (self-driving cars) should be programmed to react in unavoidable accident scenarios—for example, whether to prioritize the safety of the passengers or pedestrians. It highlights the difficulty of encoding human morality into machine code."
+                "detailedexplanation": "The Trolley Problem is a thought experiment in ethics about a fictional scenario where one must choose between two unpleasant outcomes. In AI, it is used to discuss how Autonomous Vehicles (self-driving cars) should be programmed to react in unavoidable accident scenarios\u2014for example, whether to prioritize the safety of the passengers or pedestrians. It highlights the difficulty of encoding human morality into machine code."
             },
             {
                 "id": 7,
@@ -19403,7 +18915,7 @@
                     "D": "A system that automatically generates documentation"
                 },
                 "answer": "B",
-                "detailedexplanation": "XAI refers to techniques that make the 'black box' of AI (especially deep learning) more transparent. It provides insights into why a model made a specific decision—for example, which features most influenced a loan denial. This is crucial for accountability, safety, and fairness in regulated industries like finance and healthcare."
+                "detailedexplanation": "XAI refers to techniques that make the 'black box' of AI (especially deep learning) more transparent. It provides insights into why a model made a specific decision\u2014for example, which features most influenced a loan denial. This is crucial for accountability, safety, and fairness in regulated industries like finance and healthcare."
             },
             {
                 "id": 20,
@@ -19561,7 +19073,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 essential AI interview questions! Whether you’re preparing for a certification or a job at a top tech firm, understanding these core concepts is your secret weapon.",
+            "closing": "That wraps up our 30 essential AI interview questions! Whether you\u2019re preparing for a certification or a job at a top tech firm, understanding these core concepts is your secret weapon.",
             "cta_final": "If you found this helpful, please give us a thumbs up and share it with your fellow learners. For the full 500+ question bank and interactive labs, head over to the Udemy link in the pinned comment.",
             "next_steps": "Would you like me to generate a specific coding challenge based on these AI concepts, or perhaps a mock interview script for a Machine Learning Engineer role?"
         },
