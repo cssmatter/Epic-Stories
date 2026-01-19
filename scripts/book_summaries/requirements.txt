@@ -1,0 +1,8 @@
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+Pillow
+requests
+imageio-ffmpeg
+edge-tts
+numpy
