@@ -285,14 +285,40 @@ def main():
         print("   Videos are set to PRIVATE. Review them in YouTube Studio before publishing.")
         
         # --- POST-UPLOAD CLEANUP ---
-        
+        screentext = book_data.get('screentext', {})
+        title_slug = screentext.get('original_title', 'book').replace(' ', '_')
+        long_video_path = os.path.join(OUTPUT_DIR, f"{title_slug}.mp4")
+        short_video_path = os.path.join(OUTPUT_DIR, f"{title_slug}_short.mp4")
+
         # 1. Cleanup timestamps file
         ts_file = os.path.join(OUTPUT_DIR, "timestamps.json")
         if os.path.exists(ts_file):
             os.remove(ts_file)
             print(f"Temporary file {ts_file} deleted.")
 
-        # 2. Delete Thumbnail
+        # 2. Delete Final Video Files
+        # Use find logic if slug naming failed
+        if not os.path.exists(long_video_path):
+             for file in os.listdir(OUTPUT_DIR):
+                if file.endswith('.mp4') and '_short' not in file:
+                    long_video_path = os.path.join(OUTPUT_DIR, file)
+                    break
+        
+        if os.path.exists(long_video_path):
+            os.remove(long_video_path)
+            print(f"Long video deleted: {long_video_path}")
+        
+        if not os.path.exists(short_video_path):
+            for file in os.listdir(OUTPUT_DIR):
+                if file.endswith('.mp4') and '_short' in file:
+                    short_video_path = os.path.join(OUTPUT_DIR, file)
+                    break
+
+        if os.path.exists(short_video_path):
+            os.remove(short_video_path)
+            print(f"Short video deleted: {short_video_path}")
+
+        # 3. Delete Thumbnail
         thumbnail_id = book_data.get('screentext', {}).get('thumbnail_id')
         if thumbnail_id:
             thumb_path = os.path.join(ROOT_DIR, "assets", "book_summaries", "thumb", f"{thumbnail_id}.jpg")

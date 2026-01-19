@@ -40,22 +40,30 @@ class BookSummaryVideoGenerator:
         self.bold_font = None
         
     def setup_fonts(self):
-        """Load fonts"""
-        # Try to load fonts from config or system
+        """Load fonts from project directory"""
         try:
-            self.font = ImageFont.truetype("arial.ttf", config.BODY_FONT_SIZE)
-            self.bold_font = ImageFont.truetype("arialbd.ttf", config.BODY_FONT_SIZE)
-            self.title_font = ImageFont.truetype("arialbd.ttf", config.TITLE_FONT_SIZE)
-            self.author_font = ImageFont.truetype("arial.ttf", config.AUTHOR_FONT_SIZE)
-            self.chapter_font = ImageFont.truetype("arialbd.ttf", config.CHAPTER_TITLE_FONT_SIZE)
-        except:
+            # Use fonts from the project's fonts directory for consistency (especially in CI)
+            font_path = os.path.join(config.FONTS_DIR, "arial.ttf")
+            bold_font_path = os.path.join(config.FONTS_DIR, "arialbd.ttf")
+            
+            # Check if paths exist, else try system defaults
+            if not os.path.exists(font_path): font_path = "arial.ttf"
+            if not os.path.exists(bold_font_path): bold_font_path = "arialbd.ttf"
+
+            self.font = ImageFont.truetype(font_path, config.BODY_FONT_SIZE)
+            self.bold_font = ImageFont.truetype(bold_font_path, config.BODY_FONT_SIZE)
+            self.title_font = ImageFont.truetype(bold_font_path, config.TITLE_FONT_SIZE)
+            self.author_font = ImageFont.truetype(font_path, config.AUTHOR_FONT_SIZE)
+            self.chapter_font = ImageFont.truetype(bold_font_path, config.CHAPTER_TITLE_FONT_SIZE)
+            print(f"Fonts loaded successfully from {config.FONTS_DIR}")
+        except Exception as e:
              # Fallback to default if custom fonts fail
+            print(f"Warning: Could not load requested fonts ({e}), using defaults.")
             self.font = ImageFont.load_default()
             self.bold_font = ImageFont.load_default()
             self.title_font = ImageFont.load_default()
             self.author_font = ImageFont.load_default()
             self.chapter_font = ImageFont.load_default()
-            print("Warning: Could not load requested fonts, using defaults.")
 
     def download_image(self, url, save_path):
         """Download image from URL"""
