@@ -7,11 +7,26 @@ token_file = 'token.pickle'
 
 # Check for command line argument
 if len(sys.argv) > 1:
-    token_file = sys.argv[1]
-    if not token_file.endswith('.pickle'):
-        token_file += '.pickle'
-    if not os.path.exists(token_file) and not token_file.startswith('token_'):
-        token_file = f"token_{token_file}"
+    arg = sys.argv[1]
+    
+    # Alias mapping to match reset_youtube_auth.py
+    alias_map = {
+        'shayari': 'token_shayari.pickle',
+        'god': 'token_godisgreatest.pickle',
+        'viral': 'token_viral_courses.pickle',
+        'hidden': 'token_hidden_offers.pickle',
+        'devotional': 'token_devotional.pickle',
+        'quote': 'token.pickle'
+    }
+    
+    if arg in alias_map:
+        token_file = alias_map[arg]
+    else:
+        token_file = arg
+        if not token_file.endswith('.pickle'):
+            token_file += '.pickle'
+        if not os.path.exists(token_file) and not token_file.startswith('token_'):
+            token_file = f"token_{token_file}"
 
 # Read the token file
 if not os.path.exists(token_file):
