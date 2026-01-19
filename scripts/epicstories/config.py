@@ -27,7 +27,7 @@ PRESET = "medium"  # Encoding speed (ultrafast, fast, medium, slow)
 
 # --- TTS SETTINGS ---
 TTS_LANGUAGE = "en"
-TTS_VOICE = "en-US-GuyNeural"
+TTS_VOICE = "en-US-ChristopherNeural"
 TTS_SLOW = True  # Slow speech for "wise man" effect
 TTS_CACHE_DIR = os.path.join(TEMP_DIR, "tts_cache")
 os.makedirs(TTS_CACHE_DIR, exist_ok=True)
@@ -57,8 +57,8 @@ GEN_WIDTH = 1920
 GEN_HEIGHT = 1080
 
 # --- SCENE SETTINGS ---
-INTRO_DURATION = 5.0  # Seconds to show intro
-SCENE_PADDING = 1.0  # Pause between scenes
+INTRO_DURATION = 6.0  # Seconds to show intro
+SCENE_PADDING = 0.5  # Pause between scenes
 FADE_DURATION = 0.5  # Fade transition duration
 
 # --- OVERLAY VIDEOS ---
