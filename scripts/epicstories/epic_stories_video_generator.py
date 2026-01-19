@@ -697,6 +697,13 @@ class EpicStoriesVideoGenerator:
         story = story_list[0]
         
         story_title = story.get('video_title', 'Untitled Story')
+        
+        # DEBUG: Log the description that will be used
+        metadata = story.get('youtube_metadata_for_better_seo', {})
+        desc_preview = metadata.get('description', story.get('video_description', 'No description found - Using Default'))
+        print(f"  PROCESSING STORY INDEX 0: {story_title}")
+        print(f"  DESCRIPTION PREVIEW: {desc_preview[:100]}...")
+
         scenes = story.get('scenes', [])
         
         print(f"Story: {story_title}")

@@ -1,0 +1,102 @@
+name: Book Summaries Automation
+
+on:
+  schedule:
+    # Run every 3 days at 01:00 UTC
+    - cron: '0 1 */3 * *'
+  workflow_dispatch:
+    # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-liberation fonts-liberation2 fonts-indic fonts-noto-core libfontconfig1 libfreetype6 libgl1 libegl1 libopengl0
+
+      - name: Install Dependencies
+        run: |
+          pip install -r scripts/book_summaries/requirements.txt
+          pip install google-api-python-client google-auth-oauthlib google-auth-httplib2 Pillow requests imageio-ffmpeg
+
+      - name: Restore YouTube credentials
+        env:
+          CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+          TOKEN_PICKLE: ${{ secrets.BOOK_SUMMARIES_TOKEN_PICKLE_BASE64 }}
+        run: |
+          echo "$CLIENT_SECRETS" > client_secrets.json
+          echo "$TOKEN_PICKLE" | base64 -d > token_book_summaries.pickle
+
+      - name: Verify YouTube Token
+        run: |
+          if [ -f "token_book_summaries.pickle" ]; then
+            echo "✓ YouTube token decoded successfully."
+          else
+            echo "✗ YouTube token missing!"
+            exit 1
+          fi
+
+      - name: Run Book Summaries Generator
+        run: |
+          python scripts/book_summaries/video_generator.py
+
+      - name: Run Book Summaries Uploader
+        run: |
+          python scripts/book_summaries/upload_book_summary.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+          git config --local user.name "cssmatter"
+          
+          # Check for changes in data.json or deleted thumbnails
+          if git diff --quiet data/BookSummariesChannel/data.json && git status --porcelain assets/book_summaries/thumb/ | grep -q "^ D"; then
+            # No changes to data.json but maybe thumbnails were deleted?
+            echo "Checking thumbnail deletions..."
+          fi
+
+          git add data/BookSummariesChannel/data.json
+          git add assets/book_summaries/thumb/
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            # Stash local changes if any (unlikely in CI but good practice)
+            git stash || true
+            
+            # Pull latest changes from remote to avoid conflicts
+            git pull --rebase origin main
+            
+            # Apply stashed changes
+            git stash pop || true
+            
+            # Re-add just in case
+            git add data/BookSummariesChannel/data.json
+            git add assets/book_summaries/thumb/
+            
+            git commit -m "Automated: Processed book summary and cleaned up data [skip ci]"
+            git push origin main
+          fi
+
+      - name: Clean up credentials
+        if: always()
+        run: |
+          rm -f client_secrets.json token_book_summaries.pickle

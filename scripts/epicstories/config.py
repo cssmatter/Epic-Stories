@@ -28,7 +28,7 @@ PRESET = "medium"  # Encoding speed (ultrafast, fast, medium, slow)
 # --- TTS SETTINGS ---
 TTS_LANGUAGE = "en"
 TTS_VOICE = "en-US-ChristopherNeural"
-TTS_SLOW = True  # Slow speech for "wise man" effect
+TTS_RATE = "+0%"
 TTS_CACHE_DIR = os.path.join(TEMP_DIR, "tts_cache")
 os.makedirs(TTS_CACHE_DIR, exist_ok=True)
 
