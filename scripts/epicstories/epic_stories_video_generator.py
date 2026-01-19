@@ -306,10 +306,14 @@ class EpicStoriesVideoGenerator:
         if render_h % 2 != 0: render_h += 1
         
         # CRITICAL FIX: Since we use -loop 1 on input, we MUST use d=1 in zoompan
-        # Otherwise it duplicates frames (d*{num_frames}) causing massive output files and hangs
+        # Otherwise it duplicates frames (d*{num_frames}) causing massive output files and hangs.
+        # [ADD] fps={fps} ensures input stream matches output density before zoompan.
+        # [ADD] setpts=N/FRAME_RATE/TB ensures flawlessly monotonic timestamps.
         filter_complex = (
+            f"fps={fps},"
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
             f"zoompan=z='1.0+0.05*on/{num_frames}':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={render_w}x{render_h}:fps={fps},"
+            f"setpts=N/FRAME_RATE/TB,"
             f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
@@ -319,7 +323,8 @@ class EpicStoriesVideoGenerator:
             FFMPEG_EXE, "-y", 
             "-loglevel", "error", # Prevent log buffer hangs
             "-threads", "1", 
-            "-loop", "1", "-t", str(process_duration), 
+            "-loop", "1", 
+            "-t", str(process_duration), 
             "-i", intro_img_path, 
             "-vf", filter_complex, 
             "-c:v", config.CODEC, 
@@ -422,10 +427,16 @@ class EpicStoriesVideoGenerator:
         if render_w % 2 != 0: render_w += 1
         if render_h % 2 != 0: render_h += 1
         
+        # CRITICAL FIX: Since we use -loop 1 on input, we MUST use d=1 in zoompan
+        # Otherwise it duplicates frames (d*{num_frames}) causing massive output files and hangs.
+        # [ADD] fps={fps} ensures input stream matches output density before zoompan.
+        # [ADD] setpts=N/FRAME_RATE/TB ensures flawlessly monotonic timestamps for subtitle/sync.
         filter_complex = (
+            f"fps={fps},"
             f"scale={render_w}:{render_h}:force_original_aspect_ratio=decrease,"
             f"pad={render_w}:{render_h}:(ow-iw)/2:(oh-ih)/2:black,"
             f"zoompan=z='{zoom_expr}':d=1:x='{x_expr}':y='{y_expr}':s={render_w}x{render_h}:fps={fps},"
+            f"setpts=N/FRAME_RATE/TB,"
             f"scale={config.WIDTH}:{config.HEIGHT}:flags=lanczos"
         )
         
@@ -448,7 +459,8 @@ class EpicStoriesVideoGenerator:
             FFMPEG_EXE, "-y",
             "-loglevel", "error", # Prevent buffer fill hangs
             "-threads", "1", # High res processing is memory intensive
-            "-loop", "1", "-t", str(process_duration), "-i", image_path,
+            "-loop", "1", "-t", str(process_duration), 
+            "-i", image_path,
             "-vf", final_vf,
             "-c:v", config.CODEC,
             "-preset", "ultrafast", # Optimization: use fast preset for the intermediate scene
