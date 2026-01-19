@@ -197,7 +197,7 @@ def upload_long_video(book_data):
         keywords=keywords,
         token_file=TOKEN_FILE_YOUTUBE,
         thumbnail=thumbnail_path,
-        privacy_status="private"  # Keep private for review
+        privacy_status="public"  # Set to public for launch
     )
     
     if video_id:
@@ -258,7 +258,7 @@ def upload_short_video(book_data):
         category_id="27",  # Education category
         keywords="shorts,book,summary",
         token_file=TOKEN_FILE_YOUTUBE,
-        privacy_status="private"  # Keep private for review
+        privacy_status="public"  # Set to public for launch
     )
     
     if video_id:
