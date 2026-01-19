@@ -11,11 +11,19 @@ import re
 import config
 import edge_tts
 
-try:
-    import imageio_ffmpeg
-    FFMPEG_EXE = imageio_ffmpeg.get_ffmpeg_exe()
-except:
-    FFMPEG_EXE = "ffmpeg"
+def get_ffmpeg_exe():
+    # Prefer system ffmpeg if available
+    try:
+        subprocess.run(["ffmpeg", "-version"], capture_output=True, check=True)
+        return "ffmpeg"
+    except:
+        try:
+            import imageio_ffmpeg
+            return imageio_ffmpeg.get_ffmpeg_exe()
+        except:
+            return "ffmpeg"
+
+FFMPEG_EXE = get_ffmpeg_exe()
 
 
 class TTSGenerator:

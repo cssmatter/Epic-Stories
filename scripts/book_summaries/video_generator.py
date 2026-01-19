@@ -16,11 +16,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import config
 from tts_generator import TTSGenerator
 
-try:
-    import imageio_ffmpeg
-    FFMPEG_EXE = imageio_ffmpeg.get_ffmpeg_exe()
-except:
-    FFMPEG_EXE = "ffmpeg"
+def get_ffmpeg_exe():
+    # Prefer system ffmpeg if available (especially on Linux/CI where it has all filters like drawtext)
+    try:
+        subprocess.run(["ffmpeg", "-version"], capture_output=True, check=True)
+        return "ffmpeg"
+    except:
+        try:
+            import imageio_ffmpeg
+            return imageio_ffmpeg.get_ffmpeg_exe()
+        except:
+            return "ffmpeg"
+
+FFMPEG_EXE = get_ffmpeg_exe()
 
 class BookSummaryVideoGenerator:
     def __init__(self):

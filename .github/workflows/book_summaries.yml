@@ -67,32 +67,28 @@ jobs:
           git config --local user.email "11308641+cssmatter@users.noreply.github.com"
           git config --local user.name "cssmatter"
           
-          # Check for changes in data.json or deleted thumbnails
-          if git diff --quiet data/BookSummariesChannel/data.json && git status --porcelain assets/book_summaries/thumb/ | grep -q "^ D"; then
-            # No changes to data.json but maybe thumbnails were deleted?
-            echo "Checking thumbnail deletions..."
-          fi
-
+          # Stage changes
           git add data/BookSummariesChannel/data.json
           git add assets/book_summaries/thumb/
           
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            # Stash local changes if any (unlikely in CI but good practice)
-            git stash || true
+            # Stash changes to safely rebase
+            git stash
             
-            # Pull latest changes from remote to avoid conflicts
+            # Pull latest changes from remote with rebase
             git pull --rebase origin main
             
-            # Apply stashed changes
-            git stash pop || true
+            # Apply changes back
+            git stash pop
             
-            # Re-add just in case
+            # Re-stage and commit
             git add data/BookSummariesChannel/data.json
             git add assets/book_summaries/thumb/
-            
             git commit -m "Automated: Processed book summary and cleaned up data [skip ci]"
+            
+            # Use --force-with-lease for safer pushes if necessary, or just push
             git push origin main
           fi
 
