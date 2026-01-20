@@ -59,6 +59,12 @@ def get_authenticated_service(token_file='token.pickle'):
                     refresh_cmd = ".\\auth_and_get_shayari_token.ps1"
                 elif base_name == 'token.pickle':
                     refresh_cmd = ".\\auth_and_get_quote_token.ps1"
+                elif base_name == 'token_godisgreatest.pickle':
+                    refresh_cmd = ".\\auth_and_get_god_token.ps1"
+                elif base_name == 'token_viral_courses.pickle':
+                    refresh_cmd = ".\\auth_and_get_viral_token.ps1"
+                elif base_name == 'token_devotional.pickle':
+                    refresh_cmd = ".\\auth_and_get_devotional_token.ps1"
                 else:
                     refresh_cmd = f"python reset_youtube_auth.py {base_name.replace('token_', '').replace('.pickle', '')}"
                 

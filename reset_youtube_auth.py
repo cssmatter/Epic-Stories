@@ -1,6 +1,14 @@
-
 import os
+import sys
 import youtube_uploader
+
+# Force utf-8 output for Windows console
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        # Older python versions might not have reconfigure
+        pass
 
 def reset_and_reauth(token_file='token.pickle', channel_name='All Time Epic Stories'):
     if os.path.exists(token_file):
