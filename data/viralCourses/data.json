@@ -19576,5 +19576,988 @@
             "timer_duration": "10 seconds",
             "transition_effect_hints": "Smooth fade between questions; highlighted correct answer in green; pop-up icons for 'Pro Tip' explanations."
         }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Data Structures Interview Questions and Answers",
+                "Top 30 Data Structures MCQs for Technical Interviews",
+                "Data Structures and Algorithms Mastery Quiz",
+                "Ultimate Data Structures Exam Preparation Guide",
+                "Common Data Structures Interview Problems Explained",
+                "Mastering Data Structures for FAANG Interviews",
+                "Data Structures Practice Test for Developers",
+                "Complete Data Structures MCQ Marathon",
+                "Crack Your Coding Interview: Data Structures Edition",
+                "Essential Data Structures Concepts for Programming Exams"
+            ],
+            "intro_script": {
+                "hook": "Ever wondered why some developers breeze through technical interviews while others struggle with basic logic? It almost always comes down to one thing: a rock-solid understanding of Data Structures.",
+                "summary": "In this video, we are diving into 30 high-impact multiple-choice questions designed to simulate real-world technical interviews and certification exams. We cover everything from fundamental Arrays to complex Graph theory.",
+                "cta_intro": "Make sure you have a pen and paper ready to track your score, and stay until the end for the detailed breakdowns.",
+                "checkfullexamlinkindescription": "For a comprehensive practice experience with even more questions, check out the full course link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/data-structures-mcq/?referralCode=AD1325B6248FDD445008",
+                "youtubetitle": "Data Structures Interview Preparation Questions and Answers Mastery Course",
+                "description": "Master your next technical interview with this comprehensive guide to Data Structures. This video covers 30 essential MCQs ranging from Stacks, Queues, and Linked Lists to Trees and Graphs. Each question is followed by a detailed explanation to ensure you understand the 'why' behind the 'what'. Perfect for students, job seekers, and competitive programmers.\n\nTopics Covered:\n- Linear Data Structures (Arrays, Lists)\n- Nonlinear Data Structures (Trees, Graphs)\n- Complexity Analysis (Big O)\n- Sorting and Searching Algorithms\n- Hash Tables and Collision Resolution",
+                "tags": "data structures, algorithms, dsa, programming interview, computer science, coding interview, mcq, technical interview, dsa tutorial, java, python, c++, software engineering",
+                "hashtags": [
+                    "#DataStructures",
+                    "#Algorithms",
+                    "#CodingInterview",
+                    "#DSA",
+                    "#ComputerScience",
+                    "#Programming",
+                    "#SoftwareEngineer"
+                ],
+                "keywords": [
+                    "Data Structures MCQ",
+                    "Algorithms Interview Questions",
+                    "Binary Tree Tutorial",
+                    "Linked List Explained",
+                    "Graph Theory Basics",
+                    "Big O Notation Guide",
+                    "Hash Table Collisions",
+                    "Dynamic Programming Prep",
+                    "Stack and Queue MCQ",
+                    "Sorting Algorithms Quiz"
+                ],
+                "mostsearchedongoogle": [
+                    "Data structures interview questions for freshers",
+                    "Top 50 data structures mcq with answers pdf",
+                    "Best data structures course for interviews",
+                    "Time complexity of common algorithms",
+                    "Difference between stack and queue",
+                    "Binary search tree vs AVL tree",
+                    "How to prepare for coding interviews",
+                    "Data structures and algorithms roadmap",
+                    "Advanced data structures for competitive programming",
+                    "Linked list interview problems and solutions"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Complexity Analysis",
+                "difficulty": "Easy",
+                "question": "What is the time complexity of searching for an element in a balanced Binary Search Tree (BST)?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(n)",
+                    "C": "O(log n)",
+                    "D": "O(n log n)"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a balanced Binary Search Tree, the height of the tree is logarithmic relative to the number of nodes (log n). During a search operation, we eliminate half of the remaining nodes at each step by comparing the target value with the current node's value. This divide-and-conquer approach results in a time complexity of O(log n). If the tree were skewed (unbalanced), the complexity could degrade to O(n)."
+            },
+            {
+                "id": 2,
+                "domain": "Linear Data Structures",
+                "difficulty": "Medium",
+                "question": "Which data structure is best suited for implementing a 'Undo' feature in a text editor?",
+                "options": {
+                    "A": "Queue",
+                    "B": "Stack",
+                    "C": "Linked List",
+                    "D": "Array"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Undo' feature follows the Last-In, First-Out (LIFO) principle. The most recent action performed is the first one to be reversed. A Stack naturally supports this behavior with its 'push' and 'pop' operations. When a user performs an action, it is pushed onto the stack; when they click 'Undo', the top element is popped and reversed."
+            },
+            {
+                "id": 3,
+                "domain": "Linked Lists",
+                "difficulty": "Medium",
+                "question": "In a doubly linked list, what is the minimum number of pointer changes required to delete a middle node?",
+                "options": {
+                    "A": "1",
+                    "B": "2",
+                    "C": "3",
+                    "D": "4"
+                },
+                "answer": "B",
+                "detailedexplanation": "To delete a middle node in a doubly linked list, you need to update the 'next' pointer of the previous node and the 'prev' pointer of the next node. Specifically, the previous node's next pointer must now point to the deleted node's successor, and the successor's previous pointer must now point to the deleted node's predecessor. This involves 2 primary pointer reassignments."
+            },
+            {
+                "id": 4,
+                "domain": "Trees",
+                "difficulty": "Hard",
+                "question": "What is the maximum number of nodes in a binary tree of height 'k' (where the root is at height 0)?",
+                "options": {
+                    "A": "2^k - 1",
+                    "B": "2^(k+1) - 1",
+                    "C": "2^k",
+                    "D": "2k"
+                },
+                "answer": "B",
+                "detailedexplanation": "A binary tree has 1 node at height 0, 2 nodes at height 1, 4 nodes at height 2, and so on. This is a geometric progression: 2^0 + 2^1 + ... + 2^k. The sum of this series is 2^(k+1) - 1. For example, a tree of height 2 can have a maximum of 2^(2+1) - 1 = 7 nodes."
+            },
+            {
+                "id": 5,
+                "domain": "Hashing",
+                "difficulty": "Medium",
+                "question": "Which of the following is a technique used to resolve collisions in a Hash Table by storing all elements that hash to the same slot in a list?",
+                "options": {
+                    "A": "Open Addressing",
+                    "B": "Linear Probing",
+                    "C": "Chaining",
+                    "D": "Double Hashing"
+                },
+                "answer": "C",
+                "detailedexplanation": "Chaining (or Separate Chaining) involves maintaining a linked list (or another data structure) for each bucket in the hash table. When multiple keys hash to the same index, they are simply appended to the list at that index. This contrasts with Open Addressing, where the algorithm searches for the next available empty slot in the array itself."
+            },
+            {
+                "id": 6,
+                "domain": "Stacks",
+                "difficulty": "Easy",
+                "question": "Which of the following notations is also known as 'Reverse Polish Notation'?",
+                "options": {
+                    "A": "Infix",
+                    "B": "Prefix",
+                    "C": "Postfix",
+                    "D": "None of the above"
+                },
+                "answer": "C",
+                "detailedexplanation": "Postfix notation is called Reverse Polish Notation (RPN). In this notation, operators follow their operands (e.g., '3 4 +'). It is highly efficient for computer evaluation using a stack because it eliminates the need for parentheses and follows a strict order of operations based on position."
+            },
+            {
+                "id": 7,
+                "domain": "Queues",
+                "difficulty": "Medium",
+                "question": "What is the primary disadvantage of a basic Linear Queue implemented using an array?",
+                "options": {
+                    "A": "Slow access time",
+                    "B": "Difficulty in deletion",
+                    "C": "Wastage of space (cannot reuse vacated slots)",
+                    "D": "Complexity in implementation"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a linear queue using an array, once elements are dequeued, the 'front' pointer moves forward. The spaces before the front pointer become empty, but they cannot be reused for new elements even if the 'rear' pointer reaches the end of the array. This leads to 'false overflow.' This issue is typically solved using a Circular Queue."
+            },
+            {
+                "id": 8,
+                "domain": "Graphs",
+                "difficulty": "Hard",
+                "question": "Which algorithm is most efficient for finding the shortest path from a single source to all other vertices in a graph with non-negative edge weights?",
+                "options": {
+                    "A": "Bellman-Ford",
+                    "B": "Dijkstra's Algorithm",
+                    "C": "Floyd-Warshall",
+                    "D": "Prim's Algorithm"
+                },
+                "answer": "B",
+                "detailedexplanation": "Dijkstra's Algorithm is the standard choice for single-source shortest paths when edge weights are non-negative, typically running in O(E log V) time with a priority queue. Bellman-Ford can handle negative weights but is slower (O(VE)). Floyd-Warshall is for all-pairs shortest paths, and Prim's is for Minimum Spanning Trees, not shortest paths."
+            },
+            {
+                "id": 9,
+                "domain": "Trees",
+                "difficulty": "Medium",
+                "question": "In a Pre-order traversal of a binary tree, in what order is the root node visited?",
+                "options": {
+                    "A": "First",
+                    "B": "In the middle",
+                    "C": "Last",
+                    "D": "Depends on the height"
+                },
+                "answer": "A",
+                "detailedexplanation": "The Pre-order traversal sequence is Root -> Left Subtree -> Right Subtree. Therefore, the root node is always the very first node visited in the entire process. In contrast, In-order is Left -> Root -> Right, and Post-order is Left -> Right -> Root."
+            },
+            {
+                "id": 10,
+                "domain": "Arrays",
+                "difficulty": "Easy",
+                "question": "What is the time complexity of accessing an element at a specific index in an array?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(log n)",
+                    "C": "O(n)",
+                    "D": "O(n^2)"
+                },
+                "answer": "A",
+                "detailedexplanation": "Arrays provide 'random access.' Since elements are stored in contiguous memory locations, the address of any element can be calculated using a simple formula: Base Address + (Index * Size of Element). This calculation happens in constant time, O(1), regardless of the array size."
+            },
+            {
+                "id": 11,
+                "domain": "Heaps",
+                "difficulty": "Medium",
+                "question": "In a Max-Heap, where is the largest element always located?",
+                "options": {
+                    "A": "At a leaf node",
+                    "B": "At the root node",
+                    "C": "In the middle level",
+                    "D": "At the leftmost child"
+                },
+                "answer": "B",
+                "detailedexplanation": "By definition, a Max-Heap is a complete binary tree where every parent node has a value greater than or equal to its children. This property ensures that the maximum value in the entire structure is always at the root. This allows for O(1) retrieval of the maximum element."
+            },
+            {
+                "id": 12,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "Which data structure is typically used to implement Breadth-First Search (BFS)?",
+                "options": {
+                    "A": "Stack",
+                    "B": "Queue",
+                    "C": "Priority Queue",
+                    "D": "Tree"
+                },
+                "answer": "B",
+                "detailedexplanation": "BFS explores nodes level by level. To ensure that nodes are visited in the order they were discovered, a Queue (FIFO) is used. When a node is visited, all its unvisited neighbors are added to the back of the queue to be processed after the current level is finished."
+            },
+            {
+                "id": 13,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "Which data structure is typically used to implement Depth-First Search (DFS)?",
+                "options": {
+                    "A": "Queue",
+                    "B": "Stack",
+                    "C": "Heap",
+                    "D": "Array"
+                },
+                "answer": "B",
+                "detailedexplanation": "DFS explores as far as possible along each branch before backtracking. This 'last-discovered, first-explored' behavior is perfectly handled by a Stack (LIFO). DFS can also be implemented using recursion, which internally uses the call stack."
+            },
+            {
+                "id": 14,
+                "domain": "Sorting",
+                "difficulty": "Medium",
+                "question": "Which sorting algorithm has the best worst-case time complexity?",
+                "options": {
+                    "A": "Bubble Sort",
+                    "B": "Quick Sort",
+                    "C": "Merge Sort",
+                    "D": "Selection Sort"
+                },
+                "answer": "C",
+                "detailedexplanation": "Merge Sort has a worst-case time complexity of O(n log n) because it consistently divides the array in half and performs a linear merge. Bubble Sort and Selection Sort are O(n^2). Quick Sort, while fast on average, has a worst-case of O(n^2) when the pivot selection is poor (though this is mitigated by randomized pivots)."
+            },
+            {
+                "id": 15,
+                "domain": "Linked Lists",
+                "difficulty": "Easy",
+                "question": "Which of the following is a key advantage of a Linked List over an Array?",
+                "options": {
+                    "A": "Faster random access",
+                    "B": "Lower memory overhead per element",
+                    "C": "Dynamic size and ease of insertion/deletion",
+                    "D": "Better cache locality"
+                },
+                "answer": "C",
+                "detailedexplanation": "Linked lists are dynamic; they can grow and shrink at runtime without needing to reallocate or copy the entire structure. Inserting or deleting a node only requires updating pointers (O(1) if the position is known), whereas arrays require shifting elements (O(n))."
+            },
+            {
+                "id": 16,
+                "domain": "Hashing",
+                "difficulty": "Medium",
+                "question": "What is 'Load Factor' in a Hash Table?",
+                "options": {
+                    "A": "The time taken to hash a key",
+                    "B": "The ratio of number of elements to the size of the table",
+                    "C": "The number of collisions per second",
+                    "D": "The size of the hash function code"
+                },
+                "answer": "B",
+                "detailedexplanation": "Load Factor (λ) is defined as n/m, where 'n' is the number of stored entries and 'm' is the number of slots (buckets). It indicates how full the hash table is. A high load factor increases the probability of collisions and slows down performance, often triggering a 'rehash' to a larger table."
+            },
+            {
+                "id": 17,
+                "domain": "Trees",
+                "difficulty": "Hard",
+                "question": "A Binary Search Tree is generated by inserting the following integers in order: 50, 30, 20, 40, 70, 60, 80. What is the In-order traversal of this tree?",
+                "options": {
+                    "A": "50, 30, 20, 40, 70, 60, 80",
+                    "B": "20, 30, 40, 50, 60, 70, 80",
+                    "C": "80, 70, 60, 50, 40, 30, 20",
+                    "D": "20, 40, 30, 60, 80, 70, 50"
+                },
+                "answer": "B",
+                "detailedexplanation": "A fundamental property of a Binary Search Tree (BST) is that its In-order traversal (Left-Root-Right) always produces the elements in sorted ascending order. Regardless of the insertion order, as long as it forms a valid BST, the In-order traversal of these numbers will be the sorted list: 20, 30, 40, 50, 60, 70, 80."
+            },
+            {
+                "id": 18,
+                "domain": "Queues",
+                "difficulty": "Medium",
+                "question": "In a Circular Queue implemented with an array of size 'N', what is the condition for the queue being full?",
+                "options": {
+                    "A": "rear == N - 1",
+                    "B": "front == rear + 1",
+                    "C": "(rear + 1) % N == front",
+                    "D": "front == (rear + 1) % N"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a circular queue, we use the modulo operator to wrap the pointers around. The queue is considered full when the next position after the 'rear' (calculated as (rear + 1) % N) is equal to the 'front'. This condition leaves one empty slot in the array to distinguish between a full queue and an empty queue (where front == rear)."
+            },
+            {
+                "id": 19,
+                "domain": "Arrays",
+                "difficulty": "Easy",
+                "question": "What is the space complexity of a 2D array with dimensions M x N?",
+                "options": {
+                    "A": "O(M + N)",
+                    "B": "O(M * N)",
+                    "C": "O(log(M * N))",
+                    "D": "O(1)"
+                },
+                "answer": "B",
+                "detailedexplanation": "A 2D array is a grid of elements. The total number of memory cells required is the product of the number of rows (M) and the number of columns (N). Therefore, the space complexity is proportional to the total number of elements, which is O(M * N)."
+            },
+            {
+                "id": 20,
+                "domain": "Trees",
+                "difficulty": "Medium",
+                "question": "Which of the following is true for a Complete Binary Tree?",
+                "options": {
+                    "A": "Every node must have exactly two children.",
+                    "B": "All levels are completely filled except possibly the last level, which is filled from left to right.",
+                    "C": "The tree must be perfectly balanced.",
+                    "D": "The root must have a value greater than all its children."
+                },
+                "answer": "B",
+                "detailedexplanation": "A Complete Binary Tree is a specific type of binary tree where every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. This property is crucial for efficiently representing trees in arrays, such as in Heaps."
+            },
+            {
+                "id": 21,
+                "domain": "Complexity Analysis",
+                "difficulty": "Medium",
+                "question": "If an algorithm's time complexity is O(n^2), how much longer will it take if the input size 'n' is doubled?",
+                "options": {
+                    "A": "2 times longer",
+                    "B": "4 times longer",
+                    "C": "8 times longer",
+                    "D": "Logarithmic increase"
+                },
+                "answer": "B",
+                "detailedexplanation": "In O(n^2) complexity, the execution time is proportional to the square of the input size. If you replace 'n' with '2n', the new time becomes (2n)^2 = 4n^2. This means the time taken increases by a factor of 4."
+            },
+            {
+                "id": 22,
+                "domain": "Linked Lists",
+                "difficulty": "Hard",
+                "question": "What is the time complexity to reverse a singly linked list with 'n' nodes?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(log n)",
+                    "C": "O(n)",
+                    "D": "O(n^2)"
+                },
+                "answer": "C",
+                "detailedexplanation": "To reverse a singly linked list, you must visit every node exactly once to change its 'next' pointer to point to its predecessor. Since you perform a constant amount of work for each of the 'n' nodes, the total time complexity is linear, O(n)."
+            },
+            {
+                "id": 23,
+                "domain": "Stacks",
+                "difficulty": "Easy",
+                "question": "What happens when you try to 'pop' from an empty stack?",
+                "options": {
+                    "A": "Overflow",
+                    "B": "Underflow",
+                    "C": "Garbage Collection",
+                    "D": "Nothing happens"
+                },
+                "answer": "B",
+                "detailedexplanation": "In data structures, 'Underflow' refers to the condition where you attempt to remove or access an element from an empty structure. 'Overflow' is the opposite—attempting to add an element to a structure that has reached its maximum capacity."
+            },
+            {
+                "id": 24,
+                "domain": "Hashing",
+                "difficulty": "Hard",
+                "question": "In Open Addressing, which probing method suffers most from 'Primary Clustering'?",
+                "options": {
+                    "A": "Quadratic Probing",
+                    "B": "Double Hashing",
+                    "C": "Linear Probing",
+                    "D": "Separate Chaining"
+                },
+                "answer": "C",
+                "detailedexplanation": "Linear Probing checks the next immediate slot (index + 1) when a collision occurs. This tends to create long runs of occupied slots, known as primary clusters. These clusters increase search time because any key hashing to any slot in the cluster will have to probe through the entire cluster to find an empty spot."
+            },
+            {
+                "id": 25,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "What is the maximum number of edges in a simple undirected graph with 'V' vertices?",
+                "options": {
+                    "A": "V^2",
+                    "B": "V(V-1)",
+                    "C": "V(V-1) / 2",
+                    "D": "2V"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a complete undirected graph, every vertex is connected to every other vertex. Each of the V vertices can have an edge to the other (V-1) vertices. This gives V * (V-1). However, since the graph is undirected, the edge between A and B is the same as B and A. Therefore, we divide by 2 to get V(V-1)/2."
+            },
+            {
+                "id": 26,
+                "domain": "Trees",
+                "difficulty": "Medium",
+                "question": "Which of the following tree traversals is required to construct a unique binary tree?",
+                "options": {
+                    "A": "Only In-order",
+                    "B": "Pre-order and Post-order",
+                    "C": "In-order and either Pre-order or Post-order",
+                    "D": "Only Pre-order"
+                },
+                "answer": "C",
+                "detailedexplanation": "To uniquely reconstruct a binary tree, you need the In-order traversal plus one other traversal (either Pre-order or Post-order). The Pre-order/Post-order identifies the root, while the In-order allows you to distinguish which nodes belong to the left and right subtrees."
+            },
+            {
+                "id": 27,
+                "domain": "Heaps",
+                "difficulty": "Medium",
+                "question": "What is the time complexity of building a heap from an unsorted array of 'n' elements?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(n)",
+                    "C": "O(n log n)",
+                    "D": "O(n^2)"
+                },
+                "answer": "B",
+                "detailedexplanation": "While inserting 'n' elements one by one into a heap takes O(n log n), the 'Build-Heap' algorithm (using bottom-up heapify) runs in O(n). This is because most nodes are near the leaves and require very few swaps, while only the root requires O(log n) swaps. The mathematical summation of the work per level converges to O(n)."
+            },
+            {
+                "id": 28,
+                "domain": "Sorting",
+                "difficulty": "Easy",
+                "question": "Which sorting algorithm is often used when the range of input values (K) is not significantly larger than the number of elements (N)?",
+                "options": {
+                    "A": "Counting Sort",
+                    "B": "Quick Sort",
+                    "C": "Heap Sort",
+                    "D": "Shell Sort"
+                },
+                "answer": "A",
+                "detailedexplanation": "Counting Sort is a non-comparison-based sorting algorithm that works in O(N + K) time. It counts the occurrences of each unique value. It is extremely efficient when the range of possible values (K) is small, but it requires extra space proportional to that range."
+            },
+            {
+                "id": 29,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "An Adjacency Matrix is a better choice than an Adjacency List for which type of graph?",
+                "options": {
+                    "A": "Sparse Graph",
+                    "B": "Dense Graph",
+                    "C": "Disconnected Graph",
+                    "D": "Tree"
+                },
+                "answer": "B",
+                "detailedexplanation": "In a dense graph, where the number of edges is close to V^2, an Adjacency Matrix is efficient because it takes O(1) time to check if an edge exists between two vertices. In contrast, for sparse graphs (few edges), an Adjacency List is preferred because it saves significant memory."
+            },
+            {
+                "id": 30,
+                "domain": "Linked Lists",
+                "difficulty": "Medium",
+                "question": "Which type of Linked List does not have a NULL pointer at the end of the list?",
+                "options": {
+                    "A": "Singly Linked List",
+                    "B": "Doubly Linked List",
+                    "C": "Circular Linked List",
+                    "D": "Header Linked List"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a Circular Linked List, the 'next' pointer of the last node points back to the first node (the head) of the list. This creates a continuous loop, meaning no node in the list points to NULL. This is useful for applications like round-robin scheduling."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30-question deep dive into Data Structures. How did you do? Whether you got a perfect score or found some areas to improve, remember that consistency is key in mastering DSA.",
+            "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more technical interview prep. Don't forget to comment your score below!",
+            "next_steps": "Ready for the next level? Click the link in the description to access my full Data Structures MCQ course on Udemy for even more practice and in-depth learning."
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds",
+            "transition_effect_hints": "Use a subtle 'whoosh' sound effect between questions. Show the correct answer in green and incorrect ones in red after the timer ends."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Mastering Object Oriented Programming MCQ for Interviews",
+                "Top 30 OOPs Interview Questions and Answers",
+                "Object Oriented Programming Comprehensive Practice Test",
+                "OOPs Concepts Explained Through MCQs",
+                "Java C++ Python OOPs Interview Preparation Guide",
+                "Fundamental OOPs Principles Certification Practice",
+                "Cracking the OOPs Interview: 30 Essential Questions",
+                "Object Oriented Programming Mock Exam with Explanations",
+                "Advanced OOPs MCQ for Technical Interviews",
+                "Core OOPs Design Patterns and Principles Quiz"
+            ],
+            "intro_script": {
+                "hook": "Ever wondered why some developers write code that is easy to maintain while others create a tangled mess? The secret lies in mastering Object Oriented Programming.",
+                "summary": "In this video, we dive deep into 30 essential OOPs interview questions covering Encapsulation, Inheritance, Polymorphism, and Abstraction to get you ready for your next big tech interview.",
+                "cta_intro": "Before we begin, make sure to hit that subscribe button for more technical interview prep.",
+                "checkfullexamlinkindescription": "For a full-length practice exam and certification-style questions, check out the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/object-oriented-programming-oops-mcq/?referralCode=65BC265F84E68C7BBE4B",
+                "youtubetitle": "Object Oriented Programming Interview Questions and Answers | OOPs MCQ Practice",
+                "description": "Master Object Oriented Programming with this comprehensive MCQ guide. This video covers 30 crucial questions on OOPs concepts like Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation. Perfect for software engineering interviews and computer science exams. We provide detailed explanations for every answer to ensure you understand the 'why' behind the 'what'.",
+                "tags": "OOPs, Object Oriented Programming, MCQ, Interview Questions, Software Engineering, Java, C++, Python, Inheritance, Polymorphism, Abstraction, Encapsulation",
+                "hashtags": [
+                    "#OOPs",
+                    "#ObjectOrientedProgramming",
+                    "#ProgrammingInterviews",
+                    "#CodingInterview",
+                    "#SoftwareEngineering",
+                    "#TechInterview"
+                ],
+                "keywords": [
+                    "OOPs MCQ with answers",
+                    "Object Oriented Programming basics",
+                    "Inheritance vs Polymorphism MCQ",
+                    "Abstraction and Encapsulation interview questions",
+                    "C++ OOPs concepts",
+                    "Java OOPs interview preparation",
+                    "Class and Object MCQs",
+                    "Virtual functions explained",
+                    "OOPs design principles",
+                    "Software developer interview questions"
+                ],
+                "mostsearchedongoogle": [
+                    "OOPs interview questions for freshers",
+                    "Object Oriented Programming MCQ PDF",
+                    "Top 50 OOPs interview questions",
+                    "Difference between Abstraction and Encapsulation",
+                    "What are the 4 pillars of OOPs",
+                    "Polymorphism examples in Java",
+                    "OOPs MCQ for placement",
+                    "Real world examples of OOPs",
+                    "Interface vs Abstract Class MCQ",
+                    "Constructor and Destructor interview questions"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "Which of the following features is considered the 'blueprint' for creating objects?",
+                "options": {
+                    "A": "Method",
+                    "B": "Class",
+                    "C": "Inheritance",
+                    "D": "Encapsulation"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Class is a user-defined data type that acts as a blueprint or a template for objects. It defines the variables (data) and methods (behavior) that all objects of that type will possess. An object, on the other hand, is an instance of a class. Without a class, the system doesn't know what properties an object should have."
+            },
+            {
+                "id": 2,
+                "domain": "Inheritance",
+                "difficulty": "Medium",
+                "question": "Which type of inheritance is not directly supported in Java but supported in C++?",
+                "options": {
+                    "A": "Single Inheritance",
+                    "B": "Multilevel Inheritance",
+                    "C": "Multiple Inheritance",
+                    "D": "Hierarchical Inheritance"
+                },
+                "answer": "C",
+                "detailedexplanation": "Multiple Inheritance occurs when a class inherits from more than one parent class. Java does not support multiple inheritance with classes to avoid the 'Diamond Problem' (ambiguity when two parents have the same method name). However, Java allows multiple inheritance through Interfaces. C++ supports multiple inheritance directly."
+            },
+            {
+                "id": 3,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "Method Overloading is an example of which type of polymorphism?",
+                "options": {
+                    "A": "Run-time Polymorphism",
+                    "B": "Compile-time Polymorphism",
+                    "C": "Dynamic Binding",
+                    "D": "Late Binding"
+                },
+                "answer": "B",
+                "detailedexplanation": "Method Overloading (multiple methods with the same name but different parameters) is resolved during the compilation phase. The compiler determines which method to call based on the method signature. This is known as Compile-time or Static Polymorphism. In contrast, Method Overriding is Run-time Polymorphism."
+            },
+            {
+                "id": 4,
+                "domain": "Encapsulation",
+                "difficulty": "Easy",
+                "question": "Which mechanism is used to hide the internal state of an object and require all interaction to be performed through an object's methods?",
+                "options": {
+                    "A": "Abstraction",
+                    "B": "Polymorphism",
+                    "C": "Encapsulation",
+                    "D": "Inheritance"
+                },
+                "answer": "C",
+                "detailedexplanation": "Encapsulation is the process of wrapping data (variables) and code (methods) together as a single unit. In encapsulation, the variables of a class are hidden from other classes and can be accessed only through the methods of their current class (using getters and setters). This protects the data from unauthorized access or modification."
+            },
+            {
+                "id": 5,
+                "domain": "Abstraction",
+                "difficulty": "Medium",
+                "question": "What is the main goal of using an Abstract Class?",
+                "options": {
+                    "A": "To prevent any class from inheriting from it.",
+                    "B": "To create an object directly from the class.",
+                    "C": "To provide a common base and force subclasses to implement specific methods.",
+                    "D": "To increase the speed of the program execution."
+                },
+                "answer": "C",
+                "detailedexplanation": "An Abstract Class cannot be instantiated (you cannot create an object of it). Its primary purpose is to serve as a base for other classes. It allows you to define a template with some implemented methods and some 'abstract' methods that subclasses MUST implement, ensuring a consistent interface across different implementations."
+            },
+            {
+                "id": 6,
+                "domain": "Constructors",
+                "difficulty": "Easy",
+                "question": "Which of the following is true about a constructor?",
+                "options": {
+                    "A": "It must have a return type like int or void.",
+                    "B": "It must have the same name as the class.",
+                    "C": "It is called only when an object is destroyed.",
+                    "D": "A class can have only one constructor."
+                },
+                "answer": "B",
+                "detailedexplanation": "A constructor is a special member function that is automatically called when an object of a class is created. It has the exact same name as the class and does not have a return type (not even void). Its main job is to initialize the object's data members."
+            },
+            {
+                "id": 7,
+                "domain": "Access Modifiers",
+                "difficulty": "Medium",
+                "question": "Which access modifier makes a class member visible only within its own class and its subclasses?",
+                "options": {
+                    "A": "public",
+                    "B": "private",
+                    "C": "protected",
+                    "D": "default"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'protected' modifier ensures that the member is accessible within its own package and also by subclasses in different packages. 'Private' is only for the same class, 'Public' is for everyone, and 'Default' (no modifier) is only for the same package."
+            },
+            {
+                "id": 8,
+                "domain": "Memory Management",
+                "difficulty": "Hard",
+                "question": "Where are objects usually stored in memory in an OOP-based language like Java?",
+                "options": {
+                    "A": "Stack Memory",
+                    "B": "Heap Memory",
+                    "C": "Register Memory",
+                    "D": "Cache Memory"
+                },
+                "answer": "B",
+                "detailedexplanation": "In most OOP languages, local variables and function calls are stored in the Stack, while all objects created using the 'new' keyword are stored in the Heap memory. The Heap is a large pool of memory used for dynamic allocation, and objects stay there until they are garbage collected or manually deleted."
+            },
+            {
+                "id": 9,
+                "domain": "Polymorphism",
+                "difficulty": "Hard",
+                "question": "What is 'Late Binding' another name for?",
+                "options": {
+                    "A": "Static Binding",
+                    "B": "Compile-time Polymorphism",
+                    "C": "Dynamic Polymorphism",
+                    "D": "Operator Overloading"
+                },
+                "answer": "C",
+                "detailedexplanation": "Late binding, also known as Dynamic Binding or Run-time Polymorphism, refers to the process where the method call is resolved at runtime rather than at compile time. This is typically achieved using Method Overriding and Virtual Functions, where the specific version of the method to execute depends on the actual object type at runtime."
+            },
+            {
+                "id": 10,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "Which concept allows the reuse of code by creating a new class from an existing class?",
+                "options": {
+                    "A": "Encapsulation",
+                    "B": "Inheritance",
+                    "C": "Composition",
+                    "D": "Aggregation"
+                },
+                "answer": "B",
+                "detailedexplanation": "Inheritance is the mechanism by which one class (child/subclass) acquires the properties and behaviors of another class (parent/superclass). It promotes code reusability because the child class can use the methods and fields of the parent class without rewriting them, while also adding its own specific features."
+            },
+            {
+                "id": 11,
+                "domain": "Interfaces",
+                "difficulty": "Medium",
+                "question": "What is the primary difference between an Interface and an Abstract Class regarding variables?",
+                "options": {
+                    "A": "Interfaces can have private variables.",
+                    "B": "Abstract classes can only have constant variables.",
+                    "C": "Interface variables are implicitly public, static, and final.",
+                    "D": "Abstract classes cannot have any variables."
+                },
+                "answer": "C",
+                "detailedexplanation": "In languages like Java, every variable defined in an interface is automatically public, static, and final (a constant). Abstract classes, however, can have instance variables that are non-static and non-final, allowing them to maintain the state of an object."
+            },
+            {
+                "id": 12,
+                "domain": "Relationships",
+                "difficulty": "Hard",
+                "question": "Which relationship is known as a 'Has-A' relationship?",
+                "options": {
+                    "A": "Inheritance",
+                    "B": "Composition",
+                    "C": "Generalization",
+                    "D": "Specialization"
+                },
+                "answer": "B",
+                "detailedexplanation": "Composition (and Aggregation) represents a 'Has-A' relationship. For example, a 'Car' HAS-A 'Engine'. Inheritance represents an 'Is-A' relationship, such as a 'Car' IS-A 'Vehicle'. Composition is often preferred over inheritance to keep classes loosely coupled."
+            },
+            {
+                "id": 13,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "Which keyword is used in C++ to achieve Run-time Polymorphism?",
+                "options": {
+                    "A": "override",
+                    "B": "virtual",
+                    "C": "abstract",
+                    "D": "dynamic"
+                },
+                "answer": "B",
+                "detailedexplanation": "In C++, the 'virtual' keyword is used in the base class method declaration to tell the compiler that this method should be dynamically bound. This allows the derived class's version of the method to be called even when accessed through a base class pointer or reference."
+            },
+            {
+                "id": 14,
+                "domain": "Constructors",
+                "difficulty": "Hard",
+                "question": "What happens if a programmer does not define a constructor in a class?",
+                "options": {
+                    "A": "The code will fail to compile.",
+                    "B": "The object will have no memory allocated.",
+                    "C": "The compiler provides a default no-argument constructor.",
+                    "D": "All variables will remain uninitialized and cause a crash."
+                },
+                "answer": "C",
+                "detailedexplanation": "If no constructor is explicitly defined by the programmer, the compiler automatically generates a 'Default Constructor'. This constructor takes no arguments and typically initializes member variables to their default values (e.g., 0 for integers, null for objects)."
+            },
+            {
+                "id": 15,
+                "domain": "Exception Handling",
+                "difficulty": "Medium",
+                "question": "In OOP, which block is used to write code that must execute regardless of whether an exception occurred?",
+                "options": {
+                    "A": "try",
+                    "B": "catch",
+                    "C": "finally",
+                    "D": "throw"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'finally' block is used in conjunction with try-catch. It contains code that is guaranteed to run, such as closing file streams or database connections, whether an exception was thrown and caught or not."
+            },
+            {
+                "id": 16,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "What does the 'this' keyword refer to in most OOP languages?",
+                "options": {
+                    "A": "The parent class of the current object.",
+                    "B": "The current instance of the class.",
+                    "C": "The static methods of the class.",
+                    "D": "A new instance of the class."
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'this' keyword is a reference to the current object whose method or constructor is being called. It is commonly used to distinguish between class fields and parameters with the same name, or to pass the current object as an argument to other methods."
+            },
+            {
+                "id": 17,
+                "domain": "Inheritance",
+                "difficulty": "Medium",
+                "question": "What is the 'Diamond Problem' in OOP?",
+                "options": {
+                    "A": "A memory leak caused by circular references.",
+                    "B": "The difficulty of managing private data in inheritance.",
+                    "C": "Ambiguity arising from multiple inheritance where a class inherits from two classes that have a common base class.",
+                    "D": "The high cost of creating large class hierarchies."
+                },
+                "answer": "C",
+                "detailedexplanation": "The Diamond Problem occurs in multiple inheritance. If Class D inherits from Class B and Class C, and both B and C inherit from Class A, and Class A has a method that B and C have overridden, Class D wouldn't know which version of the method to use. This is why Java avoids multiple inheritance with classes."
+            },
+            {
+                "id": 18,
+                "domain": "Encapsulation",
+                "difficulty": "Hard",
+                "question": "Why is 'Data Hiding' a fundamental part of Encapsulation?",
+                "options": {
+                    "A": "To make the code run faster.",
+                    "B": "To reduce the size of the compiled binary.",
+                    "C": "To ensure that internal object details cannot be changed directly in an invalid way.",
+                    "D": "To hide the logic of the algorithm from other developers."
+                },
+                "answer": "C",
+                "detailedexplanation": "Data hiding ensures that the internal representation of an object is hidden from the outside. By making fields private and providing public setter methods, you can add validation logic to ensure that the data remains consistent and valid (e.g., preventing a 'age' variable from being set to a negative number)."
+            },
+            {
+                "id": 19,
+                "domain": "Abstraction",
+                "difficulty": "Easy",
+                "question": "Which of these is an example of 'Real-world Abstraction'?",
+                "options": {
+                    "A": "The internal combustion logic of a car engine.",
+                    "B": "A car's steering wheel and pedals which hide the complex mechanical details.",
+                    "C": "The chemical composition of the fuel used in the car.",
+                    "D": "The specific wiring diagram of the car's electronics."
+                },
+                "answer": "B",
+                "detailedexplanation": "Abstraction is about showing only the essential features and hiding the unnecessary complexity. A driver only needs to know how to use the steering wheel and pedals (the interface) to drive the car; they don't need to know how the engine works internally."
+            },
+            {
+                "id": 20,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "What is required for Method Overriding to take place?",
+                "options": {
+                    "A": "Two methods in the same class with different parameters.",
+                    "B": "Two methods in different classes with no relationship.",
+                    "C": "An inheritance relationship and a method in the subclass with the same signature as the parent class.",
+                    "D": "The use of the static keyword on the method."
+                },
+                "answer": "C",
+                "detailedexplanation": "Method Overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. The method in the subclass must have the same name, return type, and parameters as the one in the superclass."
+            },
+            {
+                "id": 21,
+                "domain": "Static Members",
+                "difficulty": "Medium",
+                "question": "What is unique about a 'static' variable in a class?",
+                "options": {
+                    "A": "It is created every time a new object is instantiated.",
+                    "B": "It cannot be accessed by methods of the class.",
+                    "C": "It is shared among all instances of the class.",
+                    "D": "It can only be used inside the main method."
+                },
+                "answer": "C",
+                "detailedexplanation": "A static variable (also known as a class variable) is shared by all objects of that class. There is only one copy of the static variable, regardless of how many objects are created. Changing it in one object changes it for all others."
+            },
+            {
+                "id": 22,
+                "domain": "Destructors",
+                "difficulty": "Medium",
+                "question": "What is the purpose of a Destructor?",
+                "options": {
+                    "A": "To create a new object.",
+                    "B": "To free up resources or memory when an object goes out of scope or is deleted.",
+                    "C": "To initialize the variables of a class.",
+                    "D": "To copy one object into another."
+                },
+                "answer": "B",
+                "detailedexplanation": "A destructor is a special member function that is called when an object is destroyed. Its purpose is to perform cleanup tasks, such as releasing memory, closing open files, or releasing network sockets that were acquired during the object's lifetime."
+            },
+            {
+                "id": 23,
+                "domain": "Relationships",
+                "difficulty": "Hard",
+                "question": "Which of the following describes 'Aggregation'?",
+                "options": {
+                    "A": "A strong ownership where the child cannot exist without the parent.",
+                    "B": "A weak ownership where the child can exist independently of the parent.",
+                    "C": "A relationship where one class inherits from another.",
+                    "D": "A way to hide data from the user."
+                },
+                "answer": "B",
+                "detailedexplanation": "Aggregation is a specialized form of Association where there is a 'part-of' relationship, but the 'part' can exist without the 'whole'. For example, a Department has Professors. If the Department is deleted, the Professors still exist. This is different from Composition, where the part cannot exist without the whole."
+            },
+            {
+                "id": 24,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "Which of these is NOT one of the four main pillars of OOP?",
+                "options": {
+                    "A": "Encapsulation",
+                    "B": "Compilation",
+                    "C": "Polymorphism",
+                    "D": "Inheritance"
+                },
+                "answer": "B",
+                "detailedexplanation": "The four pillars of Object-Oriented Programming are Encapsulation, Inheritance, Polymorphism, and Abstraction. Compilation is a general programming process but not a specific pillar of the OOP paradigm."
+            },
+            {
+                "id": 25,
+                "domain": "Inheritance",
+                "difficulty": "Medium",
+                "question": "In Java, which keyword is used to inherit a class?",
+                "options": {
+                    "A": "implements",
+                    "B": "inherits",
+                    "C": "extends",
+                    "D": "using"
+                },
+                "answer": "C",
+                "detailedexplanation": "In Java, the 'extends' keyword is used by a subclass to inherit from a superclass. The 'implements' keyword is used to inherit from an interface."
+            },
+            {
+                "id": 26,
+                "domain": "Abstraction",
+                "difficulty": "Hard",
+                "question": "Can an Interface have a constructor?",
+                "options": {
+                    "A": "Yes, always.",
+                    "B": "Yes, but it must be private.",
+                    "C": "No, because interfaces cannot be instantiated.",
+                    "D": "Only if it is a functional interface."
+                },
+                "answer": "C",
+                "detailedexplanation": "Interfaces cannot have constructors because they cannot be instantiated. A constructor's job is to initialize an object's state, but since an interface only defines behavior (and contains only constants), it has no state to initialize."
+            },
+            {
+                "id": 27,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "What is the return type of a method that is being overridden?",
+                "options": {
+                    "A": "It can be anything.",
+                    "B": "It must be void.",
+                    "C": "It must be the same as or a subtype (covariant) of the return type in the parent class.",
+                    "D": "It must be a primitive type."
+                },
+                "answer": "C",
+                "detailedexplanation": "When overriding a method, the return type must be the same as the parent class's method. However, many modern languages (like Java) support 'Covariant Return Types', which allow the overriding method to return a subclass of the original return type."
+            },
+            {
+                "id": 28,
+                "domain": "Core Concepts",
+                "difficulty": "Hard",
+                "question": "What is the result of 'Tight Coupling' in software design?",
+                "options": {
+                    "A": "Better performance.",
+                    "B": "Easier maintenance.",
+                    "C": "Difficulty in changing one class without affecting others.",
+                    "D": "Increased code reusability."
+                },
+                "answer": "C",
+                "detailedexplanation": "Tight coupling occurs when classes are highly dependent on each other's internal details. This makes the system fragile because a small change in one class can cause a cascade of bugs and required changes in many other classes. OOP aims for 'Loose Coupling' through interfaces and abstraction."
+            },
+            {
+                "id": 29,
+                "domain": "Access Modifiers",
+                "difficulty": "Easy",
+                "question": "Which access modifier provides the widest visibility?",
+                "options": {
+                    "A": "private",
+                    "B": "protected",
+                    "C": "public",
+                    "0": "internal"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'public' access modifier allows a class, method, or variable to be accessed from any other class in any package. It provides the maximum level of visibility."
+            },
+            {
+                "id": 30,
+                "domain": "Constructors",
+                "difficulty": "Medium",
+                "question": "What is a Copy Constructor?",
+                "options": {
+                    "A": "A constructor that copies the source code of the class.",
+                    "B": "A constructor that creates an object by initializing it with an object of the same class, which has been created previously.",
+                    "C": "A constructor that creates multiple copies of the same object.",
+                    "D": "A constructor that is used to copy methods from one class to another."
+                },
+                "answer": "B",
+                "detailedexplanation": "A copy constructor is a member function which initializes an object using another object of the same class. In C++, it is often used to create a 'deep copy' of an object, ensuring that the new object has its own copy of resources rather than just a pointer to the original object's resources."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30 essential Object Oriented Programming questions. Mastering these concepts is the first step toward becoming a professional software engineer.",
+            "cta_final": "If you found this helpful, give it a thumbs up and share it with your fellow developers. Don't forget to subscribe!",
+            "next_steps": "Ready for the full challenge? Click the link in the description to access our full OOPs MCQ course and get certified."
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds",
+            "transition_effect_hints": "Use smooth slide-ins for questions and highlight the correct answer in green after the timer ends."
+        }
     }
 ]
