@@ -798,12 +798,23 @@ def main():
         process_segment(pipe, aud_list, ft, intro["summary"], intro["summary"], mode="typing_main", title="Summary")
         process_segment(pipe, aud_list, ft, intro["cta_intro"], intro["cta_intro"], mode="typing_main", title="Get Ready")
 
+    current_time = 0.0
+    timestamps_data = []
+
     intro_path = render_scene("scene_000_intro", render_intro)
     scene_clips.append(intro_path)
+    
+    # Calculate duration of intro
+    current_time += get_audio_duration(intro_path)
 
     # --- 2. MCQs SCENES ---
     for i, mcq in enumerate(mcqs):
         idx = i + 1
+        
+        # Add timestamp for this question
+        minutes = int(current_time // 60)
+        seconds = int(current_time % 60)
+        timestamps_data.append(f"QUESTION {idx}: {minutes:02d}:{seconds:02d}")
         
         def render_mcq(pipe, aud_list, ft):
             # Safety reset implicit in new clip
@@ -837,6 +848,15 @@ def main():
 
         clip_path = render_scene(f"scene_{idx:03d}_mcq", render_mcq)
         scene_clips.append(clip_path)
+        
+        # Update current time
+        current_time += get_audio_duration(clip_path)
+
+    # Save timestamps to a file for the uploader
+    timestamps_file = os.path.join(OUTPUT_DIR, "timestamps.json")
+    with open(timestamps_file, 'w', encoding='utf-8') as f:
+        json.dump(timestamps_data, f, indent=4)
+    print(f"✓ Saved {len(timestamps_data)} timestamps to {timestamps_file}")
 
     # --- 3. OUTRO SCENE ---
     def render_outro(pipe, aud_list, ft):

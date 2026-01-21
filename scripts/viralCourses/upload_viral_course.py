@@ -29,7 +29,7 @@ def load_data():
         return None
     return data[0]
 
-def generate_metadata(asset_data):
+def generate_metadata(asset_data, timestamps=None):
     meta = asset_data["video_assets"]["youtube_metadata"]
     asset_titles = asset_data["video_assets"].get("titles", [])
     
@@ -76,6 +76,11 @@ def generate_metadata(asset_data):
         description_parts.append(desc_main)
         description_parts.append("")
     
+    # Timestamps
+    if timestamps:
+        description_parts.append("\n".join(timestamps))
+        description_parts.append("")
+    
     # Alternative titles
     if titles_str:
         description_parts.append("📌 Related Topics:")
@@ -93,6 +98,10 @@ def generate_metadata(asset_data):
     
     description = "\n".join(description_parts)
     
+    # Handle description limit (5000 chars total, user wants 4600 limit with truncation)
+    if len(description) > 4600:
+        description = description[:4597] + "..."
+    
     return title, description, tags, meta.get("category", "27"), course_title
 
 def upload_viral_video():
@@ -108,8 +117,19 @@ def upload_viral_video():
     data = load_data()
     if not data: return
 
-    # 3. Generate Metadata
-    title, description, tags, category_id, course_title = generate_metadata(data)
+    # 3. Load Timestamps
+    timestamps = []
+    timestamps_file = os.path.join(ROOT_DIR, "output", "viralCourses", "timestamps.json")
+    if os.path.exists(timestamps_file):
+        try:
+            with open(timestamps_file, 'r', encoding='utf-8') as f:
+                timestamps = json.load(f)
+            print(f"Loaded {len(timestamps)} timestamps.")
+        except Exception as e:
+            print(f"Error loading timestamps: {e}")
+
+    # 4. Generate Metadata
+    title, description, tags, category_id, course_title = generate_metadata(data, timestamps)
     
     print(f"Title: {title}")
     print(f"Description Preview:\n{description[:100]}...")
@@ -170,6 +190,12 @@ def upload_viral_video():
             if os.path.exists(THUMBNAIL_FILE):
                 os.remove(THUMBNAIL_FILE)
                 print(f"Deleted thumbnail: {THUMBNAIL_FILE}")
+                
+            # Delete timestamps
+            timestamps_file = os.path.join(ROOT_DIR, "output", "viralCourses", "timestamps.json")
+            if os.path.exists(timestamps_file):
+                os.remove(timestamps_file)
+                print(f"Deleted timestamps file: {timestamps_file}")
                 
         except Exception as e:
             print(f"Error cleaning up files: {e}")
