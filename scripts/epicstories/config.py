@@ -11,11 +11,13 @@ OUTPUT_DIR = os.path.join(REPO_ROOT, "output", "epicstories")
 TEMP_DIR = os.path.join(OUTPUT_DIR, "temp")
 ASSETS_DIR = os.path.join(REPO_ROOT, "assets", "epicstories")
 FONTS_DIR = os.path.join(REPO_ROOT, "fonts")
+SPOTIFY_ASSETS_DIR = os.path.join(REPO_ROOT, "assets", "EpicStoriesChannel")
 
 # Create directories
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(TEMP_DIR, exist_ok=True)
 os.makedirs(ASSETS_DIR, exist_ok=True)
+os.makedirs(SPOTIFY_ASSETS_DIR, exist_ok=True)
 
 # --- VIDEO SETTINGS ---
 WIDTH = 3840

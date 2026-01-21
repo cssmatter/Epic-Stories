@@ -8,6 +8,8 @@ import sys
 import subprocess
 import argparse
 from pathlib import Path
+import re
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 
 # Add script directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -121,6 +123,11 @@ class EpicStoriesVideoGenerator:
             )
             if video_id:
                 print(f"✓ Video published successfully! ID: {video_id}")
+                
+                # Update Spotify Metadata with real URL
+                video_url = f"https://www.youtube.com/watch?v={video_id}"
+                self.update_spotify_metadata_url(story_data, video_url)
+                
                 return video_id
         except Exception as e:
             print(f"✗ Failed to publish to YouTube: {e}")
@@ -645,6 +652,86 @@ class EpicStoriesVideoGenerator:
         
         return output_path
     
+    def generate_spotify_assets(self, story_data, video_path):
+        """
+        Generate assets for Spotify: MP3, 3000x3000px thumbnail, and metadata.txt
+        """
+        title = story_data.get('video_title', 'Untitled')
+        title_slug = re.sub(r'[^\w\-_\. ]', '_', title)
+        
+        # 1. Create Folder
+        spotify_folder = os.path.join(config.SPOTIFY_ASSETS_DIR, title_slug)
+        os.makedirs(spotify_folder, exist_ok=True)
+        print(f"\nGenerating Spotify assets in: {spotify_folder}")
+        
+        # 2. Extract MP3
+        mp3_path = os.path.join(spotify_folder, f"{title_slug}.mp3")
+        print(f"  Extracting audio to {mp3_path}...")
+        cmd = [
+            FFMPEG_EXE, "-y",
+            "-i", video_path,
+            "-vn",
+            "-acodec", "libmp3lame",
+            "-ab", "192k",
+            mp3_path
+        ]
+        subprocess.run(cmd, capture_output=True)
+        
+        # 3. Create 3000x3000px Thumbnail from final thumbnail
+        final_thumb_path = os.path.join(config.OUTPUT_DIR, "thumbnail.png")
+        if os.path.exists(final_thumb_path):
+            try:
+                with Image.open(final_thumb_path) as img:
+                    # Spotify prefers square art. The thumbnail is already square-ish 
+                    # but let's ensure it's exact.
+                    side = min(img.size)
+                    left = (img.width - side) / 2
+                    top = (img.height - side) / 2
+                    right = (img.width + side) / 2
+                    bottom = (img.height + side) / 2
+                    
+                    img_cropped = img.crop((left, top, right, bottom))
+                    img_resized = img_cropped.resize((3000, 3000), Image.LANCZOS)
+                    
+                    thumb_path = os.path.join(spotify_folder, "thumbnail_3000x3000.jpg")
+                    img_resized.convert("RGB").save(thumb_path, "JPEG", quality=95)
+                    print(f"  Spotify thumbnail saved: {thumb_path}")
+            except Exception as e:
+                print(f"  Error creating Spotify thumbnail: {e}")
+        
+        # 4. Create Metadata File
+        yt_seo = story_data.get('youtube_metadata_for_better_seo', {})
+        description = yt_seo.get('description', story_data.get('video_description', ''))
+        hashtags = " ".join(yt_seo.get('10_hashtags', []))
+        
+        meta_path = os.path.join(spotify_folder, "metadata.txt")
+        yt_link = "YouTube Link: [Available after upload]"
+        
+        content = f"Title: {title}\n\nDescription:\n{description}\n\n{hashtags}\n\n{yt_link}"
+        
+        with open(meta_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"  Metadata file saved: {meta_path}")
+
+    def update_spotify_metadata_url(self, story_data, video_url):
+        """Update the metadata.txt with the real YouTube URL"""
+        title = story_data.get('video_title', 'Untitled')
+        title_slug = re.sub(r'[^\w\-_\. ]', '_', title)
+        
+        meta_path = os.path.join(config.SPOTIFY_ASSETS_DIR, title_slug, "metadata.txt")
+        if os.path.exists(meta_path):
+            try:
+                with open(meta_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                new_content = content.replace("YouTube Link: [Available after upload]", f"YouTube Link: {video_url}")
+                
+                with open(meta_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                print(f"✓ Updated Spotify metadata with YouTube link: {video_url}")
+            except Exception as e:
+                print(f"Warning: Failed to update Spotify metadata: {e}")
+    
     def clean_cache(self):
         """Clean all cache directories"""
         import shutil
@@ -757,6 +844,9 @@ class EpicStoriesVideoGenerator:
             final_video = self.concatenate_scenes(self.scene_videos, final_output)
             
             if final_video:
+                # Step 4: Generate Spotify Assets
+                self.generate_spotify_assets(story, final_video)
+                
                 if not test_mode:
                     # Step 5: Publish to YouTube
                     video_id = self.publish_to_youtube(story, final_video, thumbnail_path)

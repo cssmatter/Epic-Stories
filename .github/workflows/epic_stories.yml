@@ -79,6 +79,7 @@ jobs:
             
             # Add and commit the changes
             git add data/epicstories/story.json
+            git add assets/EpicStoriesChannel/
             git commit -m "Automated: Remove processed story from queue [skip ci]"
             
             # Push to remote
