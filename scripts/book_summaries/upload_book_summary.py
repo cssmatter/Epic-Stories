@@ -220,6 +220,34 @@ def upload_long_video(book_data):
         print("[FAILED] Long video upload failed")
         return False
 
+def update_spotify_metadata(book_data, video_url):
+    """Update the Spotify metadata.txt with the actual YouTube link"""
+    yt_meta = book_data.get('youtube_metadata', {})
+    screentext = book_data.get('screentext', {})
+    
+    display_title = screentext.get('original_title', yt_meta.get('title', 'Untitled'))
+    import re
+    title_slug = re.sub(r'[^\w\-_\. ]', '_', display_title)
+    
+    # Path to assets/BookSummariesChannel/[title_slug]/metadata.txt
+    spotify_dir = os.path.join(ROOT_DIR, "assets", "BookSummariesChannel", title_slug)
+    meta_path = os.path.join(spotify_dir, "metadata.txt")
+    
+    if os.path.exists(meta_path):
+        try:
+            with open(meta_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            new_content = content.replace("YouTube Link: [Available after upload]", f"YouTube Link: {video_url}")
+            
+            with open(meta_path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            print(f"[SUCCESS] Updated Spotify metadata with YouTube link: {video_url}")
+        except Exception as e:
+            print(f"[WARNING] Failed to update Spotify metadata file: {e}")
+    else:
+        print(f"[WARNING] Spotify metadata file not found at {meta_path}")
+
 def upload_short_video(book_data):
     """Upload the short-form video to YouTube"""
     print("\n=== UPLOADING SHORT VIDEO ===")
@@ -277,10 +305,57 @@ def main():
         return
     
     # Upload both videos
-    long_success = upload_long_video(book_data)
+    long_video_id = None
+    
+    # 1. Upload Long Video
+    print("\n=== UPLOADING LONG VIDEO ===")
+    yt_meta = book_data.get('youtube_metadata', {})
+    screentext = book_data.get('screentext', {})
+    
+    # Find the video file
+    title_slug = screentext.get('original_title', 'book').replace(' ', '_')
+    video_path = os.path.join(OUTPUT_DIR, f"{title_slug}.mp4")
+    
+    if not os.path.exists(video_path):
+        for file in os.listdir(OUTPUT_DIR):
+            if file.endswith('.mp4') and '_short' not in file:
+                video_path = os.path.join(OUTPUT_DIR, file)
+                break
+    
+    if os.path.exists(video_path):
+        title, description, keywords = generate_long_video_metadata(book_data, video_path)
+        thumbnail_id = book_data.get('screentext', {}).get('thumbnail_id')
+        thumbnail_path = None
+        if thumbnail_id:
+            test_path = os.path.join(ROOT_DIR, "assets", "book_summaries", "thumb", f"{thumbnail_id}.jpg")
+            if os.path.exists(test_path):
+                thumbnail_path = test_path
+
+        long_video_id = youtube_uploader.upload_video(
+            video_path, title, description, category_id="27", keywords=keywords,
+            token_file=TOKEN_FILE_YOUTUBE, thumbnail=thumbnail_path, privacy_status="public"
+        )
+        
+        if long_video_id:
+            video_url = f"https://www.youtube.com/watch?v={long_video_id}"
+            print(f"[SUCCESS] Long video uploaded! URL: {video_url}")
+            
+            # Update Spotify Metadata
+            update_spotify_metadata(book_data, video_url)
+            
+            # Add to playlist
+            category = yt_meta.get('category', 'Book Summaries')
+            try:
+                playlist_id = youtube_uploader.get_or_create_playlist(category, token_file=TOKEN_FILE_YOUTUBE)
+                if playlist_id:
+                    youtube_uploader.add_video_to_playlist(long_video_id, playlist_id, token_file=TOKEN_FILE_YOUTUBE)
+            except Exception as e:
+                print(f"Playlist failed: {e}")
+
+    # 2. Upload Short Video
     short_success = upload_short_video(book_data)
     
-    if long_success and short_success:
+    if long_video_id and short_success:
         print("\n[SUCCESS] Both videos uploaded successfully!")
         print("   Videos are set to PRIVATE. Review them in YouTube Studio before publishing.")
         

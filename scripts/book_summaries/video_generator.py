@@ -7,8 +7,9 @@ import subprocess
 import shutil
 import requests
 import textwrap
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 import numpy as np
+import re
 
 # Add script directory to path to import local config/modules
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -451,6 +452,76 @@ class BookSummaryVideoGenerator:
                 
         return final_output
 
+    def generate_spotify_assets(self, story_data, video_path):
+        """
+        Generate assets for Spotify: MP3, 3000x3000px thumbnail, and metadata.txt
+        """
+        yt = story_data.get('youtube_metadata', {})
+        st = story_data.get('screentext', {})
+        
+        display_title = st.get('original_title', yt.get('title', 'Untitled'))
+        title_slug = re.sub(r'[^\w\-_\. ]', '_', display_title)
+        
+        # 1. Create Folder
+        spotify_folder = os.path.join(config.SPOTIFY_ASSETS_DIR, title_slug)
+        os.makedirs(spotify_folder, exist_ok=True)
+        print(f"Generating Spotify assets in: {spotify_folder}")
+        
+        # 2. Extract MP3
+        mp3_path = os.path.join(spotify_folder, f"{title_slug}.mp3")
+        print(f"Extracting audio to {mp3_path}...")
+        cmd = [
+            FFMPEG_EXE, "-y",
+            "-i", video_path,
+            "-vn",
+            "-acodec", "libmp3lame",
+            "-ab", "192k",
+            mp3_path
+        ]
+        subprocess.run(cmd, check=True)
+        
+        # 3. Create 3000x3000px Thumbnail
+        cover_url = yt.get('cover_image', yt.get('cover_image_url', ''))
+        if cover_url:
+            temp_cover = os.path.join(config.TEMP_DIR, "spotify_temp_cover.jpg")
+            self.download_image(cover_url, temp_cover)
+            if os.path.exists(temp_cover):
+                try:
+                    with Image.open(temp_cover) as img:
+                        # Crop and resize to 3000x3000px
+                        # Spotify prefers square art
+                        side = min(img.size)
+                        left = (img.width - side) / 2
+                        top = (img.height - side) / 2
+                        right = (img.width + side) / 2
+                        bottom = (img.height + side) / 2
+                        
+                        img_cropped = img.crop((left, top, right, bottom))
+                        img_resized = img_cropped.resize((3000, 3000), Image.LANCZOS)
+                        
+                        thumb_path = os.path.join(spotify_folder, "thumbnail_3000x3000.jpg")
+                        img_resized.convert("RGB").save(thumb_path, "JPEG", quality=95)
+                        print(f"Spotify thumbnail saved: {thumb_path}")
+                except Exception as e:
+                    print(f"Error creating Spotify thumbnail: {e}")
+                finally:
+                    if os.path.exists(temp_cover): os.remove(temp_cover)
+        
+        # 4. Create Metadata File
+        meta_path = os.path.join(spotify_folder, "metadata.txt")
+        short_desc = yt.get('short_description', '')
+        tags = yt.get('tags', [])
+        hashtags = " ".join([f"#{tag.replace(' ', '')}" for tag in tags[:10]])
+        
+        # Placeholder for YouTube link as it's not uploaded yet
+        yt_link = "YouTube Link: [Available after upload]"
+        
+        content = f"Title: {display_title}\n\nDescription:\n{short_desc}\n\n{hashtags}\n\n{yt_link}"
+        
+        with open(meta_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Metadata file saved: {meta_path}")
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--test", action="store_true", help="Run in test mode")
@@ -468,7 +539,11 @@ def main():
         
         # 1. Generate Standard Video
         print("=== GENERATING STANDARD VIDEO ===")
-        generator.process_story(story, test_mode=args.test, shorts_mode=False)
+        video_path = generator.process_story(story, test_mode=args.test, shorts_mode=False)
+        
+        # 1.1 Generate Spotify Assets
+        if video_path and os.path.exists(video_path):
+            generator.generate_spotify_assets(story, video_path)
         
         print("\n\n")
         

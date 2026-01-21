@@ -17,6 +17,9 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(TEMP_DIR, exist_ok=True)
 os.makedirs(ASSETS_DIR, exist_ok=True)
 
+SPOTIFY_ASSETS_DIR = os.path.join(REPO_ROOT, "assets", "BookSummariesChannel")
+os.makedirs(SPOTIFY_ASSETS_DIR, exist_ok=True)
+
 # --- VIDEO SETTINGS ---
 WIDTH = 1920
 HEIGHT = 1080
