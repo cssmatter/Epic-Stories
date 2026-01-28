@@ -69,8 +69,8 @@ jobs:
           
           # Stage changes
           git add data/BookSummariesChannel/data.json
-          git add assets/book_summaries/thumb/
-          git add assets/BookSummariesChannel/
+          git add assets/book_summaries/thumbs/ || true
+          git add assets/BookSummariesChannel/ || true
           
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -86,8 +86,8 @@ jobs:
             
             # Re-stage and commit
             git add data/BookSummariesChannel/data.json
-            git add assets/book_summaries/thumb/
-            git add assets/BookSummariesChannel/
+            git add assets/book_summaries/thumbs/ || true
+            git add assets/BookSummariesChannel/ || true
             git commit -m "Automated: Processed book summary and cleaned up data [skip ci]"
             
             # Use --force-with-lease for safer pushes if necessary, or just push
