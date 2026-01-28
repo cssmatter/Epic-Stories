@@ -444,6 +444,18 @@ def main():
     mcqs = data[0]["mcq_data"]
     print(f"Loaded {len(mcqs)} MCQs from the first object.")
 
+    # --- NORMALIZE MCQ DATA ---
+    print("Normalizing MCQ data structures...", flush=True)
+    for mcq in mcqs:
+        if "options" in mcq and isinstance(mcq["options"], dict):
+            # Move 'answer' and 'detailedexplanation' to top level if they are in 'options'
+            for extra_key in ["answer", "detailedexplanation"]:
+                if extra_key in mcq["options"]:
+                    if extra_key not in mcq:
+                        mcq[extra_key] = mcq["options"].pop(extra_key)
+                    else:
+                        mcq["options"].pop(extra_key) # already at top level, just remove from options
+
     if args.limit:
         print(f"Limiting to first {args.limit} MCQs for testing.")
         mcqs = mcqs[:args.limit]
