@@ -2,10 +2,8 @@ name: Upload Moments Video to YouTube
 
 on:
   schedule:
-    # 15:00 UTC = 10:00 AM EST (Morning Scroll)
-    # 20:00 UTC = 03:00 PM EST (Afternoon Break)
-    # 01:00 UTC = 08:00 PM EST (Prime Time / Viral Window)
-    - cron: '0 1,15,20 * * *'
+    # Run every 1 days at 00:00 UTC
+    - cron: '0 0 */1 * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:
