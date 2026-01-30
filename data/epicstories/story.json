@@ -1569,5 +1569,666 @@
                 "#ArchaeologicalDiscovery"
             ]
         }
+    },
+    {
+        "video_title": "The Great Library of Nalanda: India's Lost Temple of Knowledge",
+        "image_style_for_all_images_generate": "Cinematic digital painting with warm golden lighting, atmospheric rays of light streaming through ancient architecture, rich amber and orange color palette, detailed textures showing age and grandeur, dramatic shadows and highlights, painterly quality with soft edges, ethereal and mystical atmosphere, depicting ancient Indian architecture with ornate details, stone pillars, arched doorways, and scholarly figures in traditional robes",
+        "youtube_thumbnail": {
+            "imageid": ""
+        },
+        "channel_intro": {
+            "overlay_background": "Faded paper texture",
+            "background_image_notext": "Cinematic digital painting of the magnificent Nalanda University complex at sunrise, with multiple temple-like structures rising into golden clouds, warm amber light illuminating ancient stone architecture, monks walking on pathways between buildings, atmospheric and awe-inspiring, no text overlay",
+            "overlay_text": [
+                "All Time Epic Stories",
+                "Presents",
+                "The Great Library of Nalanda: India's Lost Temple of Knowledge"
+            ],
+            "voice_over_text": "Welcome to All Time Epic Stories. Today, we present: The Great Library of Nalanda: India's Lost Temple of Knowledge."
+        },
+        "scenes": [
+            {
+                "scene_number": 1,
+                "text": "In the fifth century CE, as the Gupta Empire flourished across the Indian subcontinent, a revolutionary idea took root in the fertile plains of Bihar. This was not an idea of conquest or commerce, but of knowledge itself as the highest pursuit of humanity.",
+                "image_prompt": "Cinematic digital painting of the vast Gangetic plains at dawn, golden sunlight spreading across fertile agricultural lands, distant mountains on the horizon, small villages dotting the landscape, warm amber and green tones, atmospheric perspective showing the expansive territory of ancient India"
+            },
+            {
+                "scene_number": 2,
+                "text": "The vision belonged to Emperor Kumaragupta, a patron of learning who understood that true power resided not merely in armies, but in the minds of enlightened scholars. He would create something the world had never seen before.",
+                "image_prompt": "Cinematic digital painting of Emperor Kumaragupta in royal chambers, wearing ornate golden crown and silk robes, studying architectural plans spread before him, warm candlelight illuminating scrolls and manuscripts, expression of determined vision, rich burgundy and gold color palette"
+            },
+            {
+                "scene_number": 3,
+                "text": "Near the ancient city of Rajagriha, where Buddha himself had once walked and taught, construction began on an unprecedented institution. It would be called Nalanda, meaning giver of knowledge, and it would transform the intellectual landscape of Asia.",
+                "image_prompt": "Cinematic digital painting of construction workers laying foundation stones for massive buildings, Buddhist monks blessing the site, early morning golden light, architectural plans on wooden tables, mixture of workers and scholars observing the beginning of construction, warm earthy tones"
+            },
+            {
+                "scene_number": 4,
+                "text": "The university rose from the earth like a city of learning. Red brick buildings stretched across nearly fifteen square kilometers, their terraced structures ascending toward the heavens like philosophical aspirations made manifest in stone.",
+                "image_prompt": "Cinematic digital painting of Nalanda's architectural complex from elevated perspective, multiple red brick buildings with terraced levels, courtyard gardens between structures, pathways connecting various halls, warm afternoon light casting long shadows, grand scale showing the university's massive size"
+            },
+            {
+                "scene_number": 5,
+                "text": "At the heart of this academic city stood the crown jewel: the Dharmaganja, the Treasury of Truth. This was no ordinary library, but a nine-story tower of learning, each level dedicated to different branches of knowledge.",
+                "image_prompt": "Cinematic digital painting of the magnificent nine-story Dharmaganja library tower, ornate stone architecture with carved details, multiple levels visible with arched windows, warm golden light emanating from within, monks ascending external staircases, dramatic upward perspective emphasizing height and grandeur"
+            },
+            {
+                "scene_number": 6,
+                "text": "The library was divided into three principal buildings: Ratnasagara, the Ocean of Jewels, containing sacred Buddhist texts; Ratnaranjaka, the Jewel-Adorned, housing philosophical treatises; and Ratnodadhi, the Sea of Jewels, preserving scientific and medical knowledge.",
+                "image_prompt": "Cinematic digital painting of three interconnected library buildings, each with distinct architectural features, covered walkways connecting them, scholars moving between buildings carrying manuscripts, warm golden hour lighting, detailed stonework and carved pillars, atmospheric and scholarly"
+            },
+            {
+                "scene_number": 7,
+                "text": "Within these walls, an estimated nine million manuscripts were carefully preserved. Palm leaf texts, birch bark scrolls, and precious illuminated volumes represented the accumulated wisdom of centuries, gathered from across the known world.",
+                "image_prompt": "Cinematic digital painting of interior library shelves filled with ancient manuscripts, palm leaf texts bound with silk cords, birch bark scrolls in wooden compartments, golden light streaming through high windows illuminating dust motes in the air, warm amber tones, sense of vast knowledge preserved"
+            },
+            {
+                "scene_number": 8,
+                "text": "By the seventh century, Nalanda had become the world's first residential international university. Students journeyed from Tibet, China, Korea, Japan, Indonesia, Persia, and Turkey, crossing mountains and seas in pursuit of enlightenment.",
+                "image_prompt": "Cinematic digital painting of diverse group of international students arriving at Nalanda's gates, wearing different cultural attire representing various Asian regions, carrying travel packs and scrolls, expressions of awe and anticipation, warm welcoming light, detailed architectural gateway"
+            },
+            {
+                "scene_number": 9,
+                "text": "The entrance examination was legendarily difficult. It is said that only three in ten applicants were accepted. A gatekeeper scholar would question arrivals at the entrance, and many learned men were turned away, humbled by the depth of knowledge required.",
+                "image_prompt": "Cinematic digital painting of ornate university entrance with a senior scholar in orange robes questioning a nervous applicant, other hopeful students waiting in background, impressive stone archway with carved details, morning light creating dramatic atmosphere, expressions showing intellectual challenge"
+            },
+            {
+                "scene_number": 10,
+                "text": "Those fortunate enough to gain entry found themselves in an intellectual paradise. Ten thousand students and two thousand teachers formed a community dedicated entirely to the pursuit of knowledge, free from material concerns.",
+                "image_prompt": "Cinematic digital painting of bustling university courtyard filled with students in robes engaged in discussion, teachers lecturing under trees, stone pathways between buildings, vibrant scholarly atmosphere, warm afternoon light, diverse groups studying together, sense of intellectual energy"
+            },
+            {
+                "scene_number": 11,
+                "text": "The university was supported by the revenue of two hundred villages granted by various kings. This endowment ensured that students and teachers alike received free education, lodging, and sustenance, allowing them to focus entirely on learning.",
+                "image_prompt": "Cinematic digital painting of village farmers bringing grain offerings to university storehouse, monks receiving donations, fertile fields in background, cart laden with provisions, warm golden light suggesting prosperity and support, connection between rural communities and scholarship"
+            },
+            {
+                "scene_number": 12,
+                "text": "The curriculum was breathtaking in its scope. Buddhist philosophy formed the foundation, but students also studied logic, grammar, medicine, mathematics, astronomy, art, and even military science. No field of human inquiry was considered unworthy.",
+                "image_prompt": "Cinematic digital painting of lecture hall interior with elderly teacher at center gesturing to astronomical diagrams on wall, students seated on floor taking notes on palm leaves, mathematical calculations visible on boards, warm candlelight, intellectual intensity in faces"
+            },
+            {
+                "scene_number": 13,
+                "text": "The method of instruction emphasized rigorous debate. Students were trained not merely to memorize, but to question, analyze, and defend their understanding. Truth was not given; it was discovered through intellectual combat.",
+                "image_prompt": "Cinematic digital painting of two students engaged in formal debate in courtyard, surrounded by circle of observers, animated gestures of argumentation, teacher moderating, late afternoon golden light, expressions of concentration and intellectual passion, traditional debate posture"
+            },
+            {
+                "scene_number": 14,
+                "text": "Xuanzang, the famous Chinese Buddhist monk, arrived at Nalanda in 637 CE. What he found exceeded his wildest expectations. He would later write that the university's towers seemed to touch the clouds, and its learning illuminated the entire world.",
+                "image_prompt": "Cinematic digital painting of Xuanzang, Chinese monk in distinctive robes, standing before Nalanda's magnificent buildings with expression of wonder, carrying traveler's staff, warm sunset light, architectural grandeur emphasizing his awe, detailed period-accurate clothing"
+            },
+            {
+                "scene_number": 15,
+                "text": "Xuanzang spent years studying at Nalanda, absorbing Sanskrit texts and Buddhist philosophy. He participated in hundreds of debates, his reputation growing until even the great masters acknowledged his brilliance.",
+                "image_prompt": "Cinematic digital painting of Xuanzang seated among other scholars in study hall, surrounded by open manuscripts, oil lamps providing warm light, intense focus on his face as he reads, other monks visible in background engaged in similar study, peaceful scholarly atmosphere"
+            },
+            {
+                "scene_number": 16,
+                "text": "The library operated under strict regulations. Only the most dedicated scholars were granted access to the rarest texts. Librarian monks, who had memorized vast portions of the collection, guided researchers to the knowledge they sought.",
+                "image_prompt": "Cinematic digital painting of elderly librarian monk with long white beard guiding younger scholar through library corridors, pointing to specific shelf, warm oil lamp light creating dramatic shadows, reverent atmosphere, wooden shelves laden with ancient texts"
+            },
+            {
+                "scene_number": 17,
+                "text": "The preservation techniques were sophisticated. Texts were copied by hand by skilled scribes, with each copy checked meticulously for accuracy. Palm leaves were treated with oils to prevent decay, and special climate controls protected against moisture.",
+                "image_prompt": "Cinematic digital painting of scribes' workshop, multiple monks carefully copying manuscripts, comparing texts for accuracy, materials for treating palm leaves visible, warm natural light from large windows, atmosphere of meticulous scholarly care, detailed view of writing process"
+            },
+            {
+                "scene_number": 18,
+                "text": "Among the library's treasures were original Buddhist sutras, commentaries by great masters, and texts on subjects ranging from metallurgy to medicine. Some manuscripts were written in gold and silver ink on specially prepared surfaces.",
+                "image_prompt": "Cinematic digital painting of illuminated manuscript page with gold ink Sanskrit text, silver decorative borders, precious stone pigments, warm light making the metallic inks shimmer, monk's hand carefully turning the page with cloth, rich colors and ornate detail"
+            },
+            {
+                "scene_number": 19,
+                "text": "The university attracted the greatest minds of the age. Dharmakirti, the Buddhist logician, refined the science of reasoning within these walls. His work on epistemology would influence philosophical thought for centuries.",
+                "image_prompt": "Cinematic digital painting of Dharmakirti seated in meditation pose in study chamber, surrounded by logic diagrams and philosophical texts, expression of deep contemplation, warm afternoon light streaming through window, scholarly tools and writing materials around him"
+            },
+            {
+                "scene_number": 20,
+                "text": "Shantideva, whose Bodhicaryavatara became one of Buddhism's most beloved texts, studied and taught at Nalanda. His emphasis on compassion balanced the university's rigorous intellectualism with profound spiritual wisdom.",
+                "image_prompt": "Cinematic digital painting of Shantideva teaching compassion meditation to group of students under ancient tree in courtyard, gentle expression, students in attentive poses, warm dappled sunlight through leaves, peaceful and spiritual atmosphere"
+            },
+            {
+                "scene_number": 21,
+                "text": "The medical school at Nalanda was particularly renowned. Ayurvedic physicians studied anatomy, pharmacology, and surgery. The library contained detailed medical texts describing treatments that would not be rediscovered in Europe for centuries.",
+                "image_prompt": "Cinematic digital painting of medical teaching hall, anatomical diagrams on walls, medicinal herbs and instruments displayed on tables, teacher demonstrating to students, warm candlelight, serious scholarly atmosphere, traditional Ayurvedic medical texts visible"
+            },
+            {
+                "scene_number": 22,
+                "text": "Astronomical observations were conducted from specially designed towers. Scholars tracked celestial movements, calculated planetary positions, and developed mathematical models of the cosmos with remarkable precision.",
+                "image_prompt": "Cinematic digital painting of observatory tower at night, astronomers using traditional instruments to observe stars, oil lamps providing warm light, star-filled sky above, detailed astronomical instruments, atmosphere of scientific dedication and wonder"
+            },
+            {
+                "scene_number": 23,
+                "text": "The library's collection included works from Greek, Persian, and Chinese scholars, translated into Sanskrit. Nalanda was not merely preserving Indian knowledge, but serving as a bridge between civilizations, a meeting point of East and West.",
+                "image_prompt": "Cinematic digital painting of translation hall where scholars compare texts in different scripts - Sanskrit, Chinese, Greek visible, collaborative atmosphere, multiple scholars working together, warm light, diverse manuscripts spread on large table, cultural exchange in progress"
+            },
+            {
+                "scene_number": 24,
+                "text": "Daily life at Nalanda followed strict discipline. Students rose before dawn for meditation, attended lectures throughout the day, engaged in debate in the afternoon, and spent evenings in personal study. Every moment was dedicated to learning.",
+                "image_prompt": "Cinematic digital painting of pre-dawn scene, students walking to meditation hall carrying small oil lamps, stars still visible in sky, warm lamp light creating pools of illumination on pathways, peaceful atmosphere of disciplined routine"
+            },
+            {
+                "scene_number": 25,
+                "text": "The kitchens and dining halls could feed thousands daily. Meals were vegetarian, simple but nutritious, designed to sustain the body without dulling the mind. Even the act of eating was approached with mindfulness and gratitude.",
+                "image_prompt": "Cinematic digital painting of large dining hall, rows of students seated on floor eating from simple bowls, servers distributing food, warm firelight from cooking areas, atmosphere of communal harmony, architectural details of the hall visible"
+            },
+            {
+                "scene_number": 26,
+                "text": "Gardens and parks surrounded the academic buildings, providing spaces for contemplation and informal discussion. Ancient trees offered shade where teachers and students could engage in dialogue away from the formality of lecture halls.",
+                "image_prompt": "Cinematic digital painting of university garden with flowering trees, stone pathways, small groups of monks in discussion under tree shade, lotus pond reflecting warm afternoon light, peaceful atmosphere balancing nature and scholarship"
+            },
+            {
+                "scene_number": 27,
+                "text": "The university maintained its own printing and publishing operations, copying and distributing texts to scholars across Asia. Nalanda's editions were prized for their accuracy and beautiful calligraphy.",
+                "image_prompt": "Cinematic digital painting of printing workshop, monks preparing woodblocks for printing, fresh ink, sheets of paper drying on racks, warm light from windows, atmosphere of careful craftsmanship, traditional printing tools visible"
+            },
+            {
+                "scene_number": 28,
+                "text": "Atisha Dipankara, who would later bring reformed Buddhism to Tibet, spent years at Nalanda in the early eleventh century. The knowledge he acquired here would transform Tibetan spiritual and intellectual culture for generations.",
+                "image_prompt": "Cinematic digital painting of young Atisha studying intensely in library alcove, illuminated manuscript before him, warm candlelight on his focused face, Tibetan features, traditional robes, atmosphere of dedication that would change civilizations"
+            },
+            {
+                "scene_number": 29,
+                "text": "The university's influence extended far beyond its walls. Graduates returned to their homelands as teachers, physicians, and advisors to kings. Nalanda's intellectual lineages spread across the Asian continent like roots from a great tree.",
+                "image_prompt": "Cinematic digital painting of Nalanda graduates departing with scrolls and manuscripts, some boarding boats, others preparing for mountain journeys, emotional farewells, warm sunset light, sense of knowledge spreading outward to transform the world"
+            },
+            {
+                "scene_number": 30,
+                "text": "Korean monks like Hyecho documented their journeys to Nalanda, describing the arduous routes through mountains and deserts they crossed to reach this beacon of learning. Their accounts reveal the university's immense prestige across Asia.",
+                "image_prompt": "Cinematic digital painting of Korean monk Hyecho writing travel journal by lamplight in his Nalanda chamber, maps and travel notes visible, traditional Korean and Indian elements in room, warm intimate lighting, expression of wonder at completing his journey"
+            },
+            {
+                "scene_number": 31,
+                "text": "The Pala dynasty, which rose to power in the eighth century, became Nalanda's greatest patrons. These Buddhist kings expanded the university, adding new buildings and increasing its endowment, ensuring its golden age would continue.",
+                "image_prompt": "Cinematic digital painting of Pala king visiting Nalanda, being shown new construction by university administrators, monks presenting gifts of gratitude, royal procession with elephants in background, warm ceremonial atmosphere, mutual respect between temporal and spiritual power"
+            },
+            {
+                "scene_number": 32,
+                "text": "By the ninth century, Nalanda housed some of the world's greatest scholars. Shantarakshita, before journeying to Tibet, mastered the dialectical method here that would revolutionize Tibetan Buddhist philosophy.",
+                "image_prompt": "Cinematic digital painting of Shantarakshita engaged in complex philosophical debate, gesturing to logical diagrams, audience of advanced students, late afternoon light through pillared hall, intellectual intensity palpable, traditional debate mudras"
+            },
+            {
+                "scene_number": 33,
+                "text": "The library's medical section contained surgical texts describing procedures of astonishing sophistication. Cataract removal, plastic surgery, and cesarean sections were documented with precise instructions and detailed illustrations.",
+                "image_prompt": "Cinematic digital painting of medical manuscript page showing detailed anatomical illustrations, surgical instruments drawn precisely, Sanskrit medical text, warm candlelight making the page glow, monk physician studying intently, medical diagrams visible"
+            },
+            {
+                "scene_number": 34,
+                "text": "Mathematical treatises in the library preserved advanced concepts. Aryabhata's work on zero, decimal notation, and trigonometry were studied and expanded upon by generations of Nalanda mathematicians.",
+                "image_prompt": "Cinematic digital painting of mathematics classroom, teacher demonstrating geometric proofs on large board, students working on calculations using early decimal notation, warm afternoon light, atmosphere of mathematical discovery, numerical diagrams visible"
+            },
+            {
+                "scene_number": 35,
+                "text": "The university maintained an elaborate system of scholarships and honors. Outstanding students received special recognition, advanced study opportunities, and were groomed to become the next generation of teachers.",
+                "image_prompt": "Cinematic digital painting of award ceremony in grand hall, exceptional student receiving scroll of recognition from senior master, assembled scholars applauding, warm ceremonial lighting, atmosphere of academic achievement and pride"
+            },
+            {
+                "scene_number": 36,
+                "text": "Linguistic studies flourished at Nalanda. Sanskrit grammar was refined to extraordinary precision. Scholars developed sophisticated theories of meaning, interpretation, and the relationship between language and reality.",
+                "image_prompt": "Cinematic digital painting of linguistics lecture, teacher pointing to Sanskrit grammatical structures written on board, students taking detailed notes, warm light emphasizing the beauty of Sanskrit script, intellectual concentration evident"
+            },
+            {
+                "scene_number": 37,
+                "text": "The library contained extensive collections on statecraft and political philosophy. Kings sent their sons to Nalanda not only for spiritual education but to learn the arts of governance and diplomacy.",
+                "image_prompt": "Cinematic digital painting of political philosophy class, young princes among monks studying texts on governance, teacher discussing theories of just rule, warm formal atmosphere, mix of royal and monastic students, serious engagement with material"
+            },
+            {
+                "scene_number": 38,
+                "text": "Art and aesthetics were studied with the same rigor as philosophy and science. The principles of proportion, color theory, and symbolic representation were analyzed and codified in texts that guided artists across Asia.",
+                "image_prompt": "Cinematic digital painting of art studio within university, students creating Buddhist paintings, teacher demonstrating proper proportions using traditional grid system, warm natural light, completed works drying on racks, atmosphere of creative discipline"
+            },
+            {
+                "scene_number": 39,
+                "text": "The university's architecture itself was a teaching tool. Every proportion, every carving, every spatial relationship embodied philosophical and mathematical principles. Students learned by simply moving through these enlightened spaces.",
+                "image_prompt": "Cinematic digital painting of architectural detail showing proportional relationships in building design, students measuring and studying carved pillar, teacher explaining geometric and philosophical significance, warm afternoon light revealing mathematical harmony in architecture"
+            },
+            {
+                "scene_number": 40,
+                "text": "Nalanda's influence on Southeast Asian Buddhism was profound. Scholars from Srivijaya in modern Indonesia spent years studying here, then carried these teachings back to transform their homeland's spiritual landscape.",
+                "image_prompt": "Cinematic digital painting of Indonesian monks boarding ship at nearby river port, carrying precious manuscripts from Nalanda, emotional departure scene, warm sunset over water, sense of knowledge traveling across seas"
+            },
+            {
+                "scene_number": 41,
+                "text": "The library's cataloging system was remarkably sophisticated. Texts were classified by subject, author, and lineage. Finding aids and indices helped scholars navigate the vast collection efficiently.",
+                "image_prompt": "Cinematic digital painting of librarian monk consulting large catalog manuscript, complex classification system visible, organized shelving in background, warm oil lamp light, atmosphere of methodical scholarship and organized knowledge"
+            },
+            {
+                "scene_number": 42,
+                "text": "Music and chanting were studied as both art and science. The library contained treatises on acoustics, the mathematical relationships between notes, and the psychological effects of different musical modes.",
+                "image_prompt": "Cinematic digital painting of music theory class, students practicing traditional instruments, teacher demonstrating mathematical relationships in musical scales, warm afternoon light, manuscripts with musical notation visible, harmonious atmosphere"
+            },
+            {
+                "scene_number": 43,
+                "text": "Environmental wisdom was preserved in agricultural and botanical texts. Sustainable farming methods, water management, and medicinal plant cultivation were documented with practical instructions alongside theoretical understanding.",
+                "image_prompt": "Cinematic digital painting of botanical garden within university grounds, monks tending medicinal plants, detailed plant identification labels, warm sunlight on herbs and flowers, atmosphere of practical wisdom applied to nature"
+            },
+            {
+                "scene_number": 44,
+                "text": "The university maintained diplomatic relations with institutions across Asia. Scholarly exchanges, visiting professorships, and shared research projects created an international network of learning unprecedented in the medieval world.",
+                "image_prompt": "Cinematic digital painting of reception hall where foreign scholars are welcomed, exchange of gifts and manuscripts, representatives from different Asian cultures, warm ceremonial atmosphere, maps showing scholarly networks visible on walls"
+            },
+            {
+                "scene_number": 45,
+                "text": "Yogic and meditative practices were taught alongside intellectual pursuits. The library contained detailed instructions on pranayama, asana, and meditation techniques, recognizing that physical and mental discipline supported scholarly achievement.",
+                "image_prompt": "Cinematic digital painting of meditation hall, rows of students in perfect yogic postures, teacher observing and correcting positions, warm soft morning light through high windows, atmosphere of disciplined calm, ancient yogic texts visible"
+            },
+            {
+                "scene_number": 46,
+                "text": "The tenth century saw Nalanda at its absolute zenith. Naropa, who would become one of Tibetan Buddhism's most revered masters, studied here, his brilliant mind challenged and refined by Nalanda's demanding curriculum.",
+                "image_prompt": "Cinematic digital painting of young Naropa in intense meditation within library alcove, surrounded by advanced tantric texts, warm candlelight emphasizing his concentration, atmosphere of approaching enlightenment through rigorous study"
+            },
+            {
+                "scene_number": 47,
+                "text": "The library's tantric collection was kept in secure chambers, accessible only to advanced practitioners. These texts contained profound psychological insights and practices that required proper preparation to approach safely.",
+                "image_prompt": "Cinematic digital painting of secured library chamber with elderly master unlocking heavy door, tantric manuscripts visible within, mystical atmosphere, warm light creating dramatic shadows, sense of powerful knowledge requiring mature understanding"
+            },
+            {
+                "scene_number": 48,
+                "text": "Nalanda's fame spread beyond Asia. Persian scholars visited, and there are records suggesting contacts with scholars from as far as Egypt and Greece, though these connections remained fragmentary.",
+                "image_prompt": "Cinematic digital painting of Persian scholar in distinctive dress examining Sanskrit texts with help of translator, cultural exchange in progress, warm library interior, mutual respect despite language barriers, rare manuscripts spread between them"
+            },
+            {
+                "scene_number": 49,
+                "text": "The university developed its own ink recipes, paper-making techniques, and bookbinding methods. These crafts were refined to preserve texts for maximum longevity while maintaining readability.",
+                "image_prompt": "Cinematic digital painting of crafts workshop, artisans preparing ink from minerals and plants, binding palm leaf texts, testing paper quality, warm workspace lighting, atmosphere of skilled craftsmanship in service of knowledge preservation"
+            },
+            {
+                "scene_number": 50,
+                "text": "Debates were not merely academic exercises but public spectacles. Thousands would gather to watch great minds contest philosophical points, the outcome sometimes determining which interpretation would be taught.",
+                "image_prompt": "Cinematic digital painting of massive outdoor debate arena, two master scholars at center, thousands of spectators on tiered seating, warm afternoon sun, electric atmosphere of intellectual sport, flags and ceremonial elements visible"
+            },
+            {
+                "scene_number": 51,
+                "text": "The library contained extensive astronomical charts, documenting celestial observations spanning centuries. This accumulated data allowed scholars to predict eclipses and planetary positions with remarkable accuracy.",
+                "image_prompt": "Cinematic digital painting of astronomy manuscript showing detailed star charts and planetary motion diagrams, scholar comparing predictions to observation records, warm candlelight, mathematical calculations visible, atmosphere of empirical science"
+            },
+            {
+                "scene_number": 52,
+                "text": "Women scholars, though fewer in number, also studied at Nalanda. Some sources mention bhikkhunis and female philosophers who participated in debates and contributed to the intellectual life of the university.",
+                "image_prompt": "Cinematic digital painting of female scholar teaching smaller group of students in courtyard, traditional robes, expressions of respect from students, warm afternoon light, breaking gender barriers through intellectual excellence"
+            },
+            {
+                "scene_number": 53,
+                "text": "The university maintained workshops where students practiced bookmaking firsthand. Learning to copy texts carefully was considered essential training in attention, precision, and respect for knowledge.",
+                "image_prompt": "Cinematic digital painting of student scriptorium, young monks carefully copying manuscripts under supervision, comparing their work to originals, warm natural light from large windows, atmosphere of focused practice and skill development"
+            },
+            {
+                "scene_number": 54,
+                "text": "Chemical and alchemical knowledge was preserved in specialized texts. While seeking spiritual transformation, scholars also investigated material transformations, laying groundwork for what would become chemistry.",
+                "image_prompt": "Cinematic digital painting of alchemy laboratory, carefully controlled experiments in progress, ancient chemical apparatus, manuscripts describing processes, warm firelight from furnace, atmosphere of proto-scientific investigation blended with mysticism"
+            },
+            {
+                "scene_number": 55,
+                "text": "The library's geography section contained maps of the known world, travel accounts, and descriptions of distant lands. These fed into trade routes and diplomatic missions, connecting India to the broader world.",
+                "image_prompt": "Cinematic digital painting of map room with large illustrated maps of Asia spread on tables, scholars marking trade routes and political boundaries, warm light emphasizing the detailed cartography, atmosphere of worldly knowledge"
+            },
+            {
+                "scene_number": 56,
+                "text": "Psychological texts demonstrated sophisticated understanding of mental processes. Techniques for memory enhancement, concentration, and emotional regulation were systematically studied and taught.",
+                "image_prompt": "Cinematic digital painting of psychology lesson, teacher using diagrams of mental states and processes, students practicing concentration techniques, warm focused lighting, manuscripts on cognition visible, atmosphere of inner science"
+            },
+            {
+                "scene_number": 57,
+                "text": "The eleventh century brought new challenges. Political instability in northern India created occasional disruptions. Yet Nalanda endured, its reputation and sacred status providing some protection from the chaos of kingdoms.",
+                "image_prompt": "Cinematic digital painting of Nalanda with reinforced walls being constructed, concerned administrators watching distant smoke from conflicts, monks continuing studies despite external threats, warm troubled sunset, tension between learning and worldly conflict"
+            },
+            {
+                "scene_number": 58,
+                "text": "The library implemented fire prevention measures learned from bitter experience. Water storage, organized evacuation plans for texts, and distributed backup copies protected against the nightmare scenario of conflagration.",
+                "image_prompt": "Cinematic digital painting of monks conducting fire drill, carrying manuscript boxes in organized manner, water reservoirs visible, warm afternoon light, serious preparation for potential disaster, systematic protection of knowledge"
+            },
+            {
+                "scene_number": 59,
+                "text": "Visiting scholars continued to arrive, their numbers actually increasing as other centers of learning faced disruption. Nalanda became a refuge for knowledge, a sanctuary where learning could continue despite worldly turbulence.",
+                "image_prompt": "Cinematic digital painting of refugee scholars arriving with precious manuscripts saved from destroyed libraries elsewhere, being welcomed at Nalanda gates, warm compassionate atmosphere, knowledge finding safe harbor"
+            },
+            {
+                "scene_number": 60,
+                "text": "The university expanded its teaching of practical sciences. Engineering, hydraulics, and architecture students designed irrigation systems and buildings, applying theoretical knowledge to solve real-world problems.",
+                "image_prompt": "Cinematic digital painting of engineering classroom with working models of water wheels and irrigation systems, students testing designs, teacher demonstrating principles, warm workshop atmosphere, practical application of mathematical knowledge"
+            },
+            {
+                "scene_number": 61,
+                "text": "Legal and ethical texts occupied significant space in the library. Scholars debated questions of justice, rights, and moral responsibility with sophistication that would not be matched in Europe for centuries.",
+                "image_prompt": "Cinematic digital painting of ethics seminar, scholars debating complex moral scenarios, teacher moderating discussion, warm serious atmosphere, legal manuscripts spread on tables, atmosphere of rigorous moral philosophy"
+            },
+            {
+                "scene_number": 62,
+                "text": "The library's preservation efforts included creating fireproof storage chambers. Critical texts were kept in specially designed stone rooms with limited access, ensuring survival even in worst-case scenarios.",
+                "image_prompt": "Cinematic digital painting of underground stone vault, most precious manuscripts in sealed containers, monk librarian conducting inventory by oil lamp, cool stone interior contrasting with warm light, atmosphere of ultimate protection"
+            },
+            {
+                "scene_number": 63,
+                "text": "Trade brought wealth but also new ideas. Merchants visiting Nalanda contributed accounts of distant lands, foreign technologies, and unfamiliar philosophies, which scholars eagerly investigated and recorded.",
+                "image_prompt": "Cinematic digital painting of merchant presenting exotic texts and artifacts to university scholars, cultural exchange in courtyard, warm trading atmosphere, mixture of commercial and intellectual interaction, maps and foreign goods visible"
+            },
+            {
+                "scene_number": 64,
+                "text": "The twelfth century dawned with both promise and peril. Nalanda stood at the height of its influence, yet storm clouds gathered. Political fragmentation in northern India created vulnerability.",
+                "image_prompt": "Cinematic digital painting of Nalanda at sunrise, magnificent but with troubled sky, monks going about their routines unaware of approaching danger, beautiful but ominous atmosphere, glory at its peak before the fall"
+            },
+            {
+                "scene_number": 65,
+                "text": "In 1193 CE, the worst fears materialized. Bakhtiyar Khalji, a military commander serving the Delhi Sultanate, launched a raid into Bihar. His target was not military conquest but ideological destruction.",
+                "image_prompt": "Cinematic digital painting of military commander Bakhtiyar Khalji on horseback leading cavalry forces toward horizon, dust rising, warm but threatening light, ominous atmosphere of approaching destruction, sense of impending catastrophe"
+            },
+            {
+                "scene_number": 66,
+                "text": "The attack came swiftly. Khalji's forces, viewing the Buddhist monks as infidels, showed no mercy. Scholars were slaughtered as they prayed, taught, and studied. The sanctity of learning provided no protection against religious zeal.",
+                "image_prompt": "Cinematic digital painting of chaos in Nalanda courtyards, monks fleeing with manuscripts, others standing in peaceful resistance, warm afternoon light contrasting with violence, tragic destruction of centuries of peaceful scholarship"
+            },
+            {
+                "scene_number": 67,
+                "text": "The library became the raiders' primary target. The vast collection of texts, viewed as heretical, was set ablaze. The fires that began that day would burn for three months, fueled by nine million manuscripts.",
+                "image_prompt": "Cinematic digital painting of Dharmaganja library tower with flames beginning to engulf lower levels, monks desperately trying to save texts, smoke rising into darkening sky, warm firelight creating hellish glow, atmosphere of catastrophic loss"
+            },
+            {
+                "scene_number": 68,
+                "text": "Witnesses reported that the smoke from burning books was so thick it blocked out the sun. The smell of burning palm leaves and precious inks carried for miles, a funeral pyre for humanity's accumulated wisdom.",
+                "image_prompt": "Cinematic digital painting of massive smoke column rising from burning library, darkened sky, ash falling like black snow, distant view showing scale of conflagration, warm orange glow at base of smoke, apocalyptic atmosphere"
+            },
+            {
+                "scene_number": 69,
+                "text": "Some monks attempted to save what they could, rushing into burning buildings to rescue precious texts. Many perished in the flames, clutching manuscripts they hoped to preserve even at the cost of their lives.",
+                "image_prompt": "Cinematic digital painting of monk emerging from smoke-filled doorway carrying armload of manuscripts, expression of desperate determination, flames visible behind him, warm firelight and smoke, heroic sacrifice for knowledge"
+            },
+            {
+                "scene_number": 70,
+                "text": "Tibetan sources claim that some texts were saved by scholars who fled northward with whatever they could carry. These refugees brought fragments of Nalanda's wisdom into the Himalayas, where it would be treasured and preserved.",
+                "image_prompt": "Cinematic digital painting of small group of monks climbing mountain path at night, carrying manuscript boxes, looking back at distant orange glow of burning Nalanda, warm stars above, tragic exodus carrying remnants of lost civilization"
+            },
+            {
+                "scene_number": 71,
+                "text": "The three library buildings collapsed one by one as the fires consumed their structural supports. Each fall sent up fresh clouds of ash containing the atomized remains of irreplaceable knowledge.",
+                "image_prompt": "Cinematic digital painting of massive library tower collapsing, walls crumbling inward, enormous cloud of ash and embers erupting upward, warm destructive light, witnesses watching in horror from distance, monument to loss"
+            },
+            {
+                "scene_number": 72,
+                "text": "The medical texts were lost—surgical procedures, pharmaceutical formulas, diagnostic methods accumulated over centuries. This knowledge would have to be painstakingly reconstructed, some of it never recovered.",
+                "image_prompt": "Cinematic digital painting of burning medical manuscripts, pages curling in flames, anatomical diagrams visible for moment before being consumed, warm destructive fire, pharmaceutical containers melting, irreplaceable wisdom turning to ash"
+            },
+            {
+                "scene_number": 73,
+                "text": "Mathematical treatises vanished in the flames. Astronomical observations spanning centuries, calculations of planetary motions, geometric proofs—all reduced to smoke and ash that drifted away on the wind.",
+                "image_prompt": "Cinematic digital painting of mathematical manuscripts burning, complex calculations visible on pages being consumed by flames, astronomical charts curling and blackening, warm firelight illuminating loss of quantitative knowledge"
+            },
+            {
+                "scene_number": 74,
+                "text": "The philosophical texts, representing countless hours of rigorous debate and refined argument, fed the flames. Entire schools of thought, alternative interpretations, minority positions—all erased in hours.",
+                "image_prompt": "Cinematic digital painting of philosophy hall engulfed in flames, shelves of logical treatises burning, smoke obscuring the ceiling, warm orange glow destroying centuries of dialectical refinement, atmosphere of intellectual apocalypse"
+            },
+            {
+                "scene_number": 75,
+                "text": "The artistic and aesthetic treatises burned. Principles of proportion, color theory, symbolic systems—knowledge that had guided artists across Asia—lost forever. Future artists would work without this theoretical foundation.",
+                "image_prompt": "Cinematic digital painting of art studio burning, illustrated manuscripts curling in flames, color samples and artistic tools destroyed, warm destructive light consuming aesthetic wisdom, beautiful scrolls turning to ash"
+            },
+            {
+                "scene_number": 76,
+                "text": "The linguistic works vanished. Grammatical analyses of Sanskrit refined over generations, theories of meaning and interpretation, comparative studies of languages—all this sophistication reduced to nothing.",
+                "image_prompt": "Cinematic digital painting of burning grammar texts, Sanskrit characters visible for moments before flames consume them, linguistic charts burning, warm firelight destroying centuries of language scholarship"
+            },
+            {
+                "scene_number": 77,
+                "text": "Historical chronicles burned with the rest. Detailed records of dynasties, diplomatic relations, trade patterns, and daily life—primary sources that would have illuminated India's past—were destroyed.",
+                "image_prompt": "Cinematic digital painting of historical archives burning, chronological records visible on scrolls being consumed, maps and genealogies curling in heat, warm flames erasing detailed memory of civilization"
+            },
+            {
+                "scene_number": 78,
+                "text": "Foreign texts collected from across Asia fed the flames. Greek philosophy, Persian astronomy, Chinese medicine—Nalanda's role as a crossroads of civilizations was erased, these cultural bridges destroyed.",
+                "image_prompt": "Cinematic digital painting of multilingual manuscripts burning together, Greek, Persian, Chinese scripts all visible for moments before flames consume them, warm destructive fire ending cultural dialogue"
+            },
+            {
+                "scene_number": 79,
+                "text": "The tantric texts in their secure chambers were breached and burned. Profound psychological insights, meditative techniques refined over centuries, advanced practices—all destroyed by those who viewed them as dangerous heresy.",
+                "image_prompt": "Cinematic digital painting of broken vault door, tantric manuscripts burning within sealed chamber, mystical diagrams visible on pages being consumed, warm firelight in confined space, secret wisdom being destroyed"
+            },
+            {
+                "scene_number": 80,
+                "text": "When the fires finally died after three months, what remained was ash and rubble. The great university was reduced to charred ruins. Centuries of accumulated knowledge existed now only as scattered memories in survivors' minds.",
+                "image_prompt": "Cinematic digital painting of Nalanda ruins after fires, collapsed buildings still smoldering, ash covering everything, warm fading embers in rubble, desolation where magnificence stood, survivors wandering through destruction in shock"
+            },
+            {
+                "scene_number": 81,
+                "text": "Some scholars attempted to return and rebuild, but the resources were gone. The endowments had been seized, the supporting villages destroyed or redistributed. Without institutional support, revival was impossible.",
+                "image_prompt": "Cinematic digital painting of elderly monks standing in ruins, holding few saved texts, looking at devastation, warm sunset light on destroyed buildings, expressions of grief and determination, impossible task before them"
+            },
+            {
+                "scene_number": 82,
+                "text": "Buddhism itself began to fade from the land of its birth. Without Nalanda's institutional structure, teaching lineages broke. Monasteries closed. The tradition that had flourished for fifteen hundred years in India began its long decline.",
+                "image_prompt": "Cinematic digital painting of abandoned monastery years after destruction, nature reclaiming buildings, warm overgrown atmosphere, empty meditation halls, Buddhism withdrawing from India like tide receding"
+            },
+            {
+                "scene_number": 83,
+                "text": "In Tibet, the refugees from Nalanda were received with reverence. The texts they had saved became precious beyond measure. Tibetan Buddhism would preserve fragments of Nalanda's wisdom like archaeological treasures.",
+                "image_prompt": "Cinematic digital painting of Tibetan monastery receiving Nalanda refugees, precious manuscripts being cataloged with utmost care, warm butter lamp light, atmosphere of sacred preservation, fragments of lost civilization treasured"
+            },
+            {
+                "scene_number": 84,
+                "text": "The destruction of Nalanda represented more than the loss of books. It was the severing of teaching lineages, the breaking of intellectual traditions, the elimination of methodologies and approaches to knowledge that could never be fully reconstructed.",
+                "image_prompt": "Cinematic digital painting of broken chain symbolically represented, elderly master unable to pass knowledge to students, warm sorrowful light, gap in transmission of wisdom, intellectual lineages ending"
+            },
+            {
+                "scene_number": 85,
+                "text": "Alternative interpretations and minority scholarly positions vanished entirely. With them went intellectual diversity, the healthy disagreement that drives refinement of ideas. Orthodoxy triumphed through destruction rather than argument.",
+                "image_prompt": "Cinematic digital painting of debate hall in ruins, empty seats where diverse voices once contested, warm desolate light, silence where intellectual richness once flourished, homogenization through destruction"
+            },
+            {
+                "scene_number": 86,
+                "text": "The international network of scholars collapsed. Without Nalanda as a hub, connections between Chinese, Tibetan, Southeast Asian, and Indian scholarship weakened. The cosmopolitan intellectual world fragmented.",
+                "image_prompt": "Cinematic digital painting showing map with Nalanda at center, formerly bright connections to other regions fading and breaking, warm nostalgic light, visualization of network collapse, intellectual isolation replacing connection"
+            },
+            {
+                "scene_number": 87,
+                "text": "Practical knowledge was lost. The agricultural techniques, medical procedures, and engineering methods documented at Nalanda had to be rediscovered through trial and error, often imperfectly and at great cost.",
+                "image_prompt": "Cinematic digital painting of farmer struggling with failing irrigation system, medical healer without proper texts making errors, warm struggling atmosphere, practical consequences of lost technical knowledge"
+            },
+            {
+                "scene_number": 88,
+                "text": "The destruction influenced patterns of scholarship for centuries. Fear of losing texts led to secretiveness, limiting distribution of knowledge. What had been freely shared became jealously guarded, slowing the spread of ideas.",
+                "image_prompt": "Cinematic digital painting of scholar hiding precious manuscript, fearful expression, secure hiding place, warm protective lighting, paradigm shift from open sharing to protective hoarding of knowledge"
+            },
+            {
+                "scene_number": 89,
+                "text": "European scholars, who might have benefited from engagement with Nalanda's traditions, never had that opportunity. The medieval synthesis of knowledge took different paths without access to India's sophisticated philosophical and scientific traditions.",
+                "image_prompt": "Cinematic digital painting of European medieval scholar studying by candlelight, unaware of parallel Asian traditions now lost, warm isolated light, separate development of knowledge, missed opportunity for synthesis"
+            },
+            {
+                "scene_number": 90,
+                "text": "Some knowledge survived in fragmentary form. Texts quoted in later works, practices passed down orally, techniques preserved by practitioners—these fragments hint at what was lost, like archaeological sherds suggesting a shattered civilization.",
+                "image_prompt": "Cinematic digital painting of scholar piecing together fragments of knowledge from various sources, quotations and partial texts spread on table, warm investigative light, archaeological approach to recovering lost wisdom"
+            },
+            {
+                "scene_number": 91,
+                "text": "The ruins of Nalanda gradually disappeared beneath accumulated earth and vegetation. For centuries, the site was lost, its location uncertain. The physical monument to learning vanished as completely as the knowledge it had housed.",
+                "image_prompt": "Cinematic digital painting of overgrown ruins, trees growing through collapsed walls, warm jungle light filtering through canopy, architecture barely visible beneath vegetation, physical erasure matching intellectual loss"
+            },
+            {
+                "scene_number": 92,
+                "text": "In the nineteenth century, British archaeologist Alexander Cunningham identified the ruins. Excavations began to reveal the scale and magnificence of what had been destroyed, making the loss visible again after centuries of obscurity.",
+                "image_prompt": "Cinematic digital painting of Victorian-era archaeologist examining uncovered ruins, workers excavating buried walls, warm afternoon light revealing ancient grandeur, rediscovery of lost magnificence"
+            },
+            {
+                "scene_number": 93,
+                "text": "Each excavation revealed more of the tragedy. The foundations of the great library, lecture halls, dormitories—all showed sophisticated planning and execution. What had been destroyed was not primitive but highly advanced.",
+                "image_prompt": "Cinematic digital painting of excavated library foundation, architectural complexity visible, archaeologists measuring and documenting, warm light emphasizing sophistication of design, revelation of lost civilization's advancement"
+            },
+            {
+                "scene_number": 94,
+                "text": "Fragments of burned manuscripts were discovered in the ruins. Charred palm leaves with visible text offered tantalizing glimpses of lost works. Each fragment was both treasure and reminder of immense loss.",
+                "image_prompt": "Cinematic digital painting of conservator carefully examining charred manuscript fragment under magnification, partial Sanskrit text visible, warm focused light, mixture of excitement at discovery and sorrow at loss"
+            },
+            {
+                "scene_number": 95,
+                "text": "Modern scholars attempt to reconstruct Nalanda's curriculum and teachings from Tibetan sources, Chinese accounts, and fragmentary Indian references. This painstaking work recovers some knowledge but cannot restore what was lost.",
+                "image_prompt": "Cinematic digital painting of modern research library, scholars comparing texts from different traditions, attempting reconstruction, warm studious light, dedicated effort to recover fragments of lost wisdom"
+            },
+            {
+                "scene_number": 96,
+                "text": "A new Nalanda University was established in 2014 near the ancient site. It consciously attempts to revive the international, interdisciplinary spirit of the original, though it can never truly replace what was destroyed.",
+                "image_prompt": "Cinematic digital painting of modern Nalanda University buildings designed with nods to ancient architecture, international students walking grounds, warm hopeful light, conscious attempt to honor and partially revive lost tradition"
+            },
+            {
+                "scene_number": 97,
+                "text": "The lesson of Nalanda extends beyond its own tragedy. It demonstrates how quickly accumulated knowledge can be destroyed, how fragile intellectual traditions are, how essential is the preservation and distribution of learning.",
+                "image_prompt": "Cinematic digital painting showing contrast between burning library and modern digital archives, warm light bridging past and present, visual meditation on fragility and preservation of knowledge across time"
+            },
+            {
+                "scene_number": 98,
+                "text": "Today, Nalanda's ruins are a UNESCO World Heritage site. Visitors walk among the foundations of the great library, lecture halls, and dormitories, imagining the intellectual life that once flourished here.",
+                "image_prompt": "Cinematic digital painting of modern tourists walking through excavated ruins, warm sunset light on ancient bricks, mixture of reverence and wonder, physical connection to lost intellectual heritage"
+            },
+            {
+                "scene_number": 99,
+                "text": "The destruction of the Library of Nalanda stands as one of history's great intellectual catastrophes. It reminds us that knowledge is not inevitable, that civilization's achievements can be lost, and that preservation requires constant vigilance.",
+                "image_prompt": "Cinematic digital painting of the ruins at twilight, warm last light on ancient walls, sense of melancholy majesty, visual summation of loss and remembrance, architecture testifying to what once was"
+            },
+            {
+                "scene_number": 100,
+                "text": "Yet Nalanda's spirit endures. In every library preserving ancient texts, in every university welcoming international students, in every scholar pursuing knowledge across disciplinary boundaries, the vision of Nalanda lives on.",
+                "image_prompt": "Cinematic digital painting of modern library interior blending into vision of ancient Nalanda, warm light connecting past and present, students of different eras reaching for knowledge, continuity of human intellectual aspiration"
+            },
+            {
+                "scene_number": 101,
+                "text": "The name Nalanda, meaning giver of knowledge, carries its own irony. What it gave was destroyed, yet the memory of that giving inspires. We build our institutions of learning on the ruins of those that came before.",
+                "image_prompt": "Cinematic digital painting of symbolic image showing new growth emerging from ruins, warm light of dawn, cyclic nature of knowledge and loss, hope and continuity despite destruction"
+            },
+            {
+                "scene_number": 102,
+                "text": "The estimated nine million manuscripts that burned represent not just texts but minds—the countless scholars who wrote, copied, studied, and taught. Their intellectual labor was reduced to ash, but their example remains.",
+                "image_prompt": "Cinematic digital painting of ghostly transparent scholars from across centuries studying together in ruins, warm ethereal light, temporal layers showing continuity of scholarly dedication despite physical destruction"
+            },
+            {
+                "scene_number": 103,
+                "text": "When we preserve knowledge today—digitizing manuscripts, creating redundant backups, establishing international exchanges—we honor Nalanda. Every act of preservation is a refusal to accept that destruction is final.",
+                "image_prompt": "Cinematic digital painting of modern preservation lab, ancient manuscript being photographed, digital and physical preservation methods side by side, warm dedicated light, conscious protection against future Nalandas"
+            },
+            {
+                "scene_number": 104,
+                "text": "The greatest loss may be what we cannot know we lost. How many revolutionary ideas, brilliant insights, and transformative discoveries vanished without trace? We can only wonder at the shape of the absence.",
+                "image_prompt": "Cinematic digital painting of empty library shelves where treasures once stood, warm haunting light, shadows suggesting what might have been, visual meditation on unknowable loss"
+            },
+            {
+                "scene_number": 105,
+                "text": "Nalanda reminds us that intellectual freedom requires protection. The pursuit of knowledge, the questioning of orthodoxy, the preservation of diverse perspectives—these are achievements that must be actively defended.",
+                "image_prompt": "Cinematic digital painting of modern protesters defending libraries and educational institutions, warm light of conviction, conscious protection of intellectual freedom, learning from Nalanda's fate"
+            },
+            {
+                "scene_number": 106,
+                "text": "In Tibet, in Southeast Asia, in the fragments preserved in collections worldwide, pieces of Nalanda survive. These pieces are treasured not just for their content but as physical connections to that lost world of learning.",
+                "image_prompt": "Cinematic digital painting of monastery treasure room displaying ancient manuscripts saved from Nalanda, warm reverent lighting, each fragment precious beyond measure, scattered pieces of lost whole"
+            },
+            {
+                "scene_number": 107,
+                "text": "The story of Nalanda teaches that civilization is not a line of progress but a fragile achievement. What took centuries to build was destroyed in months. What was lost took further centuries to even partially recover.",
+                "image_prompt": "Cinematic digital painting showing timeline visualization, slow growth of knowledge over centuries, sudden catastrophic loss, slow incomplete recovery, warm historical light, non-linear nature of civilizational development"
+            },
+            {
+                "scene_number": 108,
+                "text": "Yet knowledge has an indestructible quality too. Ideas survived in minds that escaped, in practices that continued, in questions that persisted even without the texts that originally addressed them. Destruction was immense but not total.",
+                "image_prompt": "Cinematic digital painting of refugee scholar teaching from memory in distant monastery, warm candlelight, knowledge living in human minds despite physical destruction, resilience of intellectual tradition"
+            },
+            {
+                "scene_number": 109,
+                "text": "Today's internet, with its distributed architecture and redundant storage, consciously or not, embodies lessons from Nalanda. Knowledge too centralized is knowledge vulnerable. Preservation requires distribution.",
+                "image_prompt": "Cinematic digital painting showing metaphorical visualization of distributed network storage overlaid on image of burning Nalanda, warm light connecting past tragedy to present protection, learning from history"
+            },
+            {
+                "scene_number": 110,
+                "text": "The excavated ruins still yield discoveries. Each archaeological season reveals new structures, new artifacts, new understanding of how the ancient university functioned. Nalanda continues to teach even in destruction.",
+                "image_prompt": "Cinematic digital painting of current archaeological dig, researchers carefully excavating, warm afternoon light on newly exposed ancient bricks, ongoing revelation from ruins, teaching that continues across centuries"
+            },
+            {
+                "scene_number": 111,
+                "text": "For students and scholars who make pilgrimage to the ruins, the experience is profound. Standing where great minds once debated, where knowledge was pursued with singular dedication, connects them to a tradition larger than any individual.",
+                "image_prompt": "Cinematic digital painting of modern student standing in excavated lecture hall, warm contemplative light, hand touching ancient wall, profound connection across time, feeling weight of intellectual heritage"
+            },
+            {
+                "scene_number": 112,
+                "text": "The story ends not with destruction but with remembrance and renewal. Every library built, every text preserved, every student educated carries forward what Nalanda represented: the conviction that knowledge elevates humanity.",
+                "image_prompt": "Cinematic digital painting of sunrise over Nalanda ruins with modern university visible in distance, warm hopeful light, past and future connected, destruction acknowledged but transcended by renewal of intellectual mission"
+            }
+        ],
+        "video_outro": {
+            "outro_scenes": [
+                {
+                    "scene_number": 113,
+                    "text": "The Great Library of Nalanda burned for three months in 1193, destroying nine million manuscripts and ending seven centuries of unbroken scholarly tradition. Yet in that very destruction, we find our lesson: knowledge must be preserved, distributed, and defended, for civilization's achievements are far more fragile than we imagine.",
+                    "image_prompt": "Cinematic digital painting of the Nalanda ruins at sunset, warm golden light illuminating ancient brick foundations, sense of melancholy grandeur, architectural remnants testifying to lost magnificence, atmosphere of beautiful sadness and profound historical weight"
+                },
+                {
+                    "scene_number": 114,
+                    "text": "Thank you for joining us on this journey through India's Golden Age and its most tragic loss. If you found this story meaningful, please like, subscribe, and share. Hit the notification bell to explore more epic stories from history. Until next time, may we all be givers of knowledge.",
+                    "image_prompt": "Cinematic digital painting of warm paper texture background with soft golden light, vintage aesthetic, space for channel graphics and end screen elements, atmospheric and inviting, continuation of the documentary's warm visual tone"
+                }
+            ]
+        },
+        "youtube_metadata_for_better_seo": {
+            "video_title": "The Great Library of Nalanda: India's Lost Temple of Knowledge | Ancient History Documentary",
+            "description": "Journey to ancient India's golden age and discover the tragic story of Nalanda University and its legendary library. For seven centuries, from the 5th to the 12th century CE, Nalanda stood as the world's first international residential university, housing nine million manuscripts and educating scholars from across Asia. This documentary explores how Nalanda became the intellectual center of the Buddhist world, preserving knowledge in medicine, mathematics, astronomy, philosophy, and countless other fields. Learn about the rigorous entrance examinations, the sophisticated curriculum, and the famous scholars like Xuanzang, Naropa, and Atisha who studied within its walls. Discover how the three great library buildings—Ratnasagara, Ratnaranjaka, and Ratnodadhi—preserved humanity's wisdom, and witness the catastrophic destruction in 1193 CE that burned for three months, erasing centuries of accumulated knowledge. This is not just a story of loss, but a powerful reminder of knowledge's fragility and the eternal importance of preservation, intellectual freedom, and the pursuit of wisdom that elevates all humanity.",
+            "50_tags": [
+                "Nalanda University",
+                "ancient India",
+                "Great Library of Nalanda",
+                "Buddhist university",
+                "lost knowledge",
+                "ancient libraries",
+                "India's golden age",
+                "Gupta Empire",
+                "ancient education",
+                "Xuanzang",
+                "Bakhtiyar Khalji",
+                "library destruction",
+                "ancient manuscripts",
+                "Buddhist scholarship",
+                "medieval India",
+                "ancient universities",
+                "lost civilizations",
+                "intellectual history",
+                "preservation of knowledge",
+                "ancient Asia",
+                "Indian history",
+                "Buddhist monasteries",
+                "ancient learning",
+                "historical tragedy",
+                "cultural heritage",
+                "archaeological discoveries",
+                "Dharmaganja library",
+                "ancient science",
+                "medieval scholarship",
+                "international education",
+                "knowledge destruction",
+                "historical documentary",
+                "ancient wisdom",
+                "Bihar history",
+                "Pala dynasty",
+                "Sanskrit manuscripts",
+                "ancient medicine",
+                "ancient mathematics",
+                "Buddhist philosophy",
+                "ancient architecture",
+                "intellectual centers",
+                "scholarly traditions",
+                "lost texts",
+                "ancient astronomy",
+                "cultural loss",
+                "UNESCO heritage",
+                "academic history",
+                "ancient debating",
+                "monastic education",
+                "civilizational heritage"
+            ],
+            "10_hashtags": [
+                "#Nalanda",
+                "#AncientIndia",
+                "#LostKnowledge",
+                "#BuddhhistHistory",
+                "#AncientLibraries",
+                "#IndianHistory",
+                "#HistoricalDocumentary",
+                "#CulturalHeritage",
+                "#AncientEducation",
+                "#PreservationOfKnowledge"
+            ]
+        }
     }
 ]
