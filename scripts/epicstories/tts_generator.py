@@ -21,7 +21,7 @@ except:
 class TTSGenerator:
     def __init__(self):
         self.cache_dir = config.TTS_CACHE_DIR
-        self.voice = "en-US-GuyNeural"
+        self.voice = config.TTS_VOICE
         
     def _get_cache_path(self, text):
         """Generate cache file path from text"""

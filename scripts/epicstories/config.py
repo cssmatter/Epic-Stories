@@ -29,6 +29,7 @@ PRESET = "medium"  # Encoding speed (ultrafast, fast, medium, slow)
 
 # --- TTS SETTINGS ---
 TTS_LANGUAGE = "en"
+# Storyteller voices: en-US-ChristopherNeural (Reliable), en-US-GuyNeural (Passion), en-US-EricNeural (Rational), en-US-RogerNeural (Lively)
 TTS_VOICE = "en-US-ChristopherNeural"
 TTS_RATE = "+0%"
 TTS_CACHE_DIR = os.path.join(TEMP_DIR, "tts_cache")
