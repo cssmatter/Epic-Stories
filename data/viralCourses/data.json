@@ -5883,5 +5883,2449 @@
             "timer_duration": "10 seconds",
             "transition_effect_hints": "Use smooth slide-ins for questions and highlight the correct answer in green after the timer ends."
         }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Master Object Oriented Programming Interview Questions",
+                "Top 30 OOPs Concepts MCQs for Technical Interviews",
+                "Object Oriented Programming Comprehensive Exam Prep",
+                "OOPs Interview Questions and Answers for Developers",
+                "Crack Your Coding Interview with OOPs Mastery",
+                "The Ultimate Guide to OOPs Interview MCQs",
+                "Java C++ Python OOPs Interview Preparation",
+                "Essential Object Oriented Programming Concepts Explained",
+                "Common OOPs Interview Questions for Software Engineers",
+                "Advanced Object Oriented Programming Practice Test"
+            ],
+            "intro_script": {
+                "hook": "Ever wondered why top tech companies like Google, Amazon, and Microsoft obsess over Object-Oriented Programming in their interviews? It's because OOPs is the backbone of scalable software!",
+                "summary": "In this video, we dive deep into 30 essential OOPs questions covering Encapsulation, Inheritance, Polymorphism, and Abstraction to get you job-ready.",
+                "cta_intro": "Make sure to pause the video and try to answer each question yourself before we reveal the detailed explanation.",
+                "checkfullexamlinkindescription": "For the full practice exam and certification prep, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/object-oriented-programming-oops-mcq/?referralCode=65BC265F84E68C7BBE4B",
+                "youtubetitle": "Object Oriented Programming Interview Questions and Answers | OOPs MCQs Prep",
+                "description": "Master Object Oriented Programming for your next technical interview. This video covers 30 comprehensive MCQs based on the latest industry standards. We explore core concepts like Classes, Objects, Abstraction, Encapsulation, Inheritance, and Polymorphism. Each question includes a detailed explanation to ensure you understand the 'why' behind the 'what'. Perfect for students and professional developers preparing for coding assessments.",
+                "tags": "OOPs, Object Oriented Programming, Software Engineering, Coding Interview, Java, C++, Python, Programming MCQs, Computer Science, Tech Interview Prep",
+                "hashtags": [
+                    "#OOPs",
+                    "#Programming",
+                    "#CodingInterview",
+                    "#SoftwareEngineering",
+                    "#TechInterview"
+                ],
+                "keywords": [
+                    "Object Oriented Programming Interview Questions",
+                    "OOPs MCQ with Answers",
+                    "Inheritance vs Polymorphism",
+                    "Encapsulation and Abstraction",
+                    "OOPs Principles for Interviews",
+                    "Classes and Objects MCQ",
+                    "Technical Interview Preparation",
+                    "Programming Fundamentals"
+                ],
+                "mostsearchedongoogle": [
+                    "OOPs interview questions for freshers",
+                    "Difference between abstraction and encapsulation",
+                    "Types of polymorphism in OOPs",
+                    "What is inheritance in Java",
+                    "Solid principles interview questions",
+                    "Object oriented programming mcq pdf",
+                    "OOPs concepts in C++",
+                    "Common programming interview questions",
+                    "Best course for OOPs preparation",
+                    "OOPs coding exercises"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "Which of the following concepts means 'wrapping up data and methods into a single unit'?",
+                "options": {
+                    "A": "Inheritance",
+                    "B": "Encapsulation",
+                    "C": "Polymorphism",
+                    "D": "Abstraction"
+                },
+                "answer": "B",
+                "detailedexplanation": "Encapsulation is the fundamental principle of bundling the data (variables) and the methods (functions) that operate on the data into a single unit called a class. It serves as a protective shield that prevents the data from being accessed by the code outside this shield. By keeping data private and providing public getter and setter methods, a programmer can control how the data is accessed and modified, which leads to better maintainability and security in software design."
+            },
+            {
+                "id": 2,
+                "domain": "Inheritance",
+                "difficulty": "Medium",
+                "question": "In Object-Oriented Programming, what is 'Multiple Inheritance'?",
+                "options": {
+                    "A": "A class inheriting from multiple base classes",
+                    "B": "Multiple classes inheriting from a single base class",
+                    "C": "A class inheriting from a class that already has a parent",
+                    "D": "Creating multiple objects of the same class"
+                },
+                "answer": "A",
+                "detailedexplanation": "Multiple Inheritance is a feature in some object-oriented languages (like C++) where a class can inherit behaviors and features from more than one superclass. While powerful, it can lead to complexity and ambiguity, such as the 'Diamond Problem,' where the compiler is unsure which parent's method to use. Because of this complexity, many modern languages like Java and C# do not support multiple inheritance of classes, instead using 'Interfaces' to achieve similar functionality safely."
+            },
+            {
+                "id": 3,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "Which type of polymorphism is achieved through Method Overloading?",
+                "options": {
+                    "A": "Run-time Polymorphism",
+                    "B": "Dynamic Binding",
+                    "C": "Compile-time Polymorphism",
+                    "D": "Inheritance Polymorphism"
+                },
+                "answer": "C",
+                "detailedexplanation": "Compile-time polymorphism, also known as static polymorphism, is resolved during the compilation of the program. Method Overloading is the primary example of this, where multiple methods in the same class have the same name but different signatures (different number or types of parameters). The compiler determines which method to call based on the arguments passed at compile time, leading to faster execution compared to dynamic binding."
+            },
+            {
+                "id": 4,
+                "domain": "Abstraction",
+                "difficulty": "Easy",
+                "question": "What is the primary goal of Abstraction in OOP?",
+                "options": {
+                    "A": "To hide the implementation details and show only functionality",
+                    "B": "To increase the speed of the program execution",
+                    "C": "To allow multiple names for the same variable",
+                    "D": "To reduce the memory footprint of objects"
+                },
+                "answer": "A",
+                "detailedexplanation": "Abstraction is the process of hiding the internal complexity of a system and exposing only the necessary parts to the user. For instance, when you drive a car, you know that pressing the brake stops the vehicle, but you don't need to know the hydraulic mechanics happening under the hood. In programming, abstraction is achieved using abstract classes and interfaces, allowing developers to focus on what an object does rather than how it does it."
+            },
+            {
+                "id": 5,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "Which of the following is used to initialize an object?",
+                "options": {
+                    "A": "Destructor",
+                    "B": "Static Method",
+                    "C": "Constructor",
+                    "D": "Finalizer"
+                },
+                "answer": "C",
+                "detailedexplanation": "A constructor is a special member function of a class that is automatically called when an instance (object) of that class is created. Its main purpose is to initialize the member variables of the object and allocate necessary resources. Constructors have the same name as the class and do not have a return type. If a programmer doesn't define a constructor, the compiler usually provides a default one."
+            },
+            {
+                "id": 6,
+                "domain": "Polymorphism",
+                "difficulty": "Hard",
+                "question": "What happens during 'Method Overriding'?",
+                "options": {
+                    "A": "A class has two methods with the same name but different parameters",
+                    "B": "A subclass provides a specific implementation of a method already defined in its superclass",
+                    "C": "A method is called within itself",
+                    "D": "Two different classes have methods with the same name"
+                },
+                "answer": "B",
+                "detailedexplanation": "Method Overriding is a feature that allows a subclass to provide a specific implementation of a method that is already provided by one of its superclasses. This is the basis for Run-time Polymorphism (Dynamic Method Dispatch). When a method is overridden, the version of the method that is executed is determined by the object type used to invoke it at runtime, not the reference type, allowing for flexible and extensible code."
+            },
+            {
+                "id": 7,
+                "domain": "Access Modifiers",
+                "difficulty": "Medium",
+                "question": "Which access modifier allows a member to be accessible only within the same package and by subclasses?",
+                "options": {
+                    "A": "Private",
+                    "B": "Public",
+                    "C": "Protected",
+                    "D": "Default"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'protected' access modifier is designed to allow access to members within the same package and also to subclasses even if they are in different packages. This is a key part of inheritance, as it allows child classes to access parent attributes while still keeping those attributes hidden from the general 'outside' world (non-related classes in other packages)."
+            },
+            {
+                "id": 8,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "What is an 'instance' of a class called?",
+                "options": {
+                    "A": "Variable",
+                    "B": "Function",
+                    "C": "Object",
+                    "D": "Reference"
+                },
+                "answer": "C",
+                "detailedexplanation": "An object is a basic unit of Object-Oriented Programming and represents real-life entities. Technically, an object is an instance of a class. When a class is defined, no memory is allocated until an object is created from that class. Each object has its own state (stored in attributes) and behavior (defined by methods)."
+            },
+            {
+                "id": 9,
+                "domain": "Core Concepts",
+                "difficulty": "Hard",
+                "question": "Which of the following is NOT a characteristic of a static member in a class?",
+                "options": {
+                    "A": "It is shared by all instances of the class",
+                    "B": "It belongs to the class rather than any specific object",
+                    "C": "It can be accessed using the class name",
+                    "D": "It can access non-static instance variables directly"
+                },
+                "answer": "D",
+                "detailedexplanation": "Static methods and variables belong to the class itself, not to any specific instance. Because static members exist independently of any object, they cannot directly access non-static (instance) variables or methods, as instance variables require a specific object to have a value. Static members are useful for constants or utility functions that don't depend on object state."
+            },
+            {
+                "id": 10,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "What is another name for Run-time Polymorphism?",
+                "options": {
+                    "A": "Static Binding",
+                    "B": "Early Binding",
+                    "C": "Dynamic Binding",
+                    "D": "Direct Binding"
+                },
+                "answer": "C",
+                "detailedexplanation": "Dynamic Binding (or Late Binding) refers to the process where the specific method to be called is determined at runtime based on the actual type of the object. This is essential for achieving polymorphism through method overriding. Since the decision is delayed until the program is actually running, it provides the flexibility needed for plugin architectures and complex class hierarchies."
+            },
+            {
+                "id": 11,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "Which keyword is used to refer to the current instance of a class in Java or C++?",
+                "options": {
+                    "A": "parent",
+                    "B": "this",
+                    "C": "self",
+                    "D": "super"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'this' keyword (or pointer in C++) refers to the current object whose method is being called. It is commonly used to distinguish between class attributes and parameters with the same name, or to pass the current object as an argument to other methods. In Python, 'self' is used similarly but as an explicit first parameter of methods."
+            },
+            {
+                "id": 12,
+                "domain": "Advanced OOP",
+                "difficulty": "Hard",
+                "question": "Which concept allows a class to enforce a contract for what its subclasses must do without providing implementation?",
+                "options": {
+                    "A": "Encapsulation",
+                    "B": "Interface",
+                    "C": "Composition",
+                    "D": "Aggregation"
+                },
+                "answer": "B",
+                "detailedexplanation": "An Interface is a reference type in OOP that is similar to a class but can contain only constants and method signatures (in most languages). It serves as a contract. Any class that 'implements' the interface is forced to provide concrete implementations for all the methods defined in that interface. This allows for 'polymorphism' where different classes can be treated as the same interface type."
+            },
+            {
+                "id": 13,
+                "domain": "Relationships",
+                "difficulty": "Medium",
+                "question": "What is the 'Has-A' relationship in OOP?",
+                "options": {
+                    "A": "Inheritance",
+                    "B": "Composition",
+                    "C": "Polymorphism",
+                    "D": "Abstraction"
+                },
+                "answer": "B",
+                "detailedexplanation": "A 'Has-A' relationship, also known as Composition or Aggregation, occurs when one class contains an instance of another class as one of its members. For example, a 'Car' HAS-A 'Engine'. This is often preferred over 'Is-A' (Inheritance) because it creates less coupling between classes and provides more flexibility in changing system behavior at runtime."
+            },
+            {
+                "id": 14,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "Which of these is used to destroy an object and free up resources in C++?",
+                "options": {
+                    "A": "Constructor",
+                    "B": "Finalizer",
+                    "C": "Destructor",
+                    "D": "Garbage Collector"
+                },
+                "answer": "C",
+                "detailedexplanation": "In languages like C++, a Destructor is a special member function that is executed whenever an object's lifetime ends (e.g., it goes out of scope or is deleted). Its primary role is to release resources like memory, file handles, or network sockets. In managed languages like Java, this is handled automatically by the Garbage Collector, though 'finalizers' or 'cleaners' exist as a legacy/alternative concept."
+            },
+            {
+                "id": 15,
+                "domain": "Abstraction",
+                "difficulty": "Medium",
+                "question": "Can you create an object of an Abstract Class?",
+                "options": {
+                    "A": "Yes, always",
+                    "B": "No, abstract classes cannot be instantiated",
+                    "C": "Yes, if it has a constructor",
+                    "D": "Only if all methods are implemented"
+                },
+                "answer": "B",
+                "detailedexplanation": "Abstract classes are meant to be 'blueprints for other blueprints'. Because they are incomplete (often containing abstract methods with no body), the language prevents you from instantiating them directly. You must create a subclass that extends the abstract class and provides implementations for the missing parts before you can create an object."
+            },
+            {
+                "id": 16,
+                "domain": "Advanced OOP",
+                "difficulty": "Hard",
+                "question": "What is the primary difference between an Abstract Class and an Interface in Java?",
+                "options": {
+                    "A": "Abstract classes can have constructors, while interfaces cannot",
+                    "B": "Interfaces can have state, while abstract classes cannot",
+                    "C": "A class can extend multiple abstract classes but implement only one interface",
+                    "D": "Abstract classes cannot have any implemented methods"
+                },
+                "answer": "A",
+                "detailedexplanation": "The main technical difference is that an abstract class is a class and can have instance variables (state) and constructors to initialize that state. An interface is a contract and traditionally could not hold state (only constants). Furthermore, a class can only inherit from one abstract class (single inheritance) but can implement many interfaces."
+            },
+            {
+                "id": 17,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "What does 'Final' keyword indicate when applied to a class?",
+                "options": {
+                    "A": "The class cannot be instantiated",
+                    "B": "The class cannot be inherited",
+                    "C": "The class cannot have any methods",
+                    "D": "The class is ready for garbage collection"
+                },
+                "answer": "B",
+                "detailedexplanation": "When a class is declared as 'final', it prevents any other class from extending it. This is often used for security or performance reasons, or to ensure that the behavior of a utility class (like the 'String' class in Java) remains unchanged and cannot be overridden by third-party code."
+            },
+            {
+                "id": 18,
+                "domain": "Relationships",
+                "difficulty": "Hard",
+                "question": "In Composition, what happens to the child object when the parent object is destroyed?",
+                "options": {
+                    "A": "It continues to exist independently",
+                    "B": "It is also destroyed",
+                    "C": "It becomes a global object",
+                    "D": "It is transferred to another parent"
+                },
+                "answer": "B",
+                "detailedexplanation": "Composition is a 'strong' form of the Has-A relationship. In composition, the child object's lifecycle is strictly managed by the parent. If the parent is destroyed, the child cannot exist on its own and is destroyed as well. For example, a Room is part of a House; if the House is demolished, the Room is also gone. This differs from Aggregation, where the child can outlive the parent."
+            },
+            {
+                "id": 19,
+                "domain": "Polymorphism",
+                "difficulty": "Medium",
+                "question": "Which of these allows a function to be called with different types of data?",
+                "options": {
+                    "A": "Function Overloading",
+                    "B": "Encapsulation",
+                    "C": "Inheritance",
+                    "D": "Abstraction"
+                },
+                "answer": "A",
+                "detailedexplanation": "Function (or Method) Overloading allows multiple functions to have the same name but accept different parameters (either in number or type). This improves code readability and allows the same logical operation to be performed on different data types without needing unique names for every variation."
+            },
+            {
+                "id": 20,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "What is the purpose of the 'Super' keyword?",
+                "options": {
+                    "A": "To call a method in the current class",
+                    "B": "To access members or constructors of the parent class",
+                    "C": "To create a new instance of a class",
+                    "D": "To terminate a loop"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'super' keyword is used to refer to the immediate parent class. It is most commonly used in a subclass constructor to call the parent class's constructor, or to invoke a method in the parent class that has been overridden in the current subclass."
+            },
+            {
+                "id": 21,
+                "domain": "Core Concepts",
+                "difficulty": "Easy",
+                "question": "Which of these is NOT an OOP principle?",
+                "options": {
+                    "A": "Inheritance",
+                    "B": "Polymorphism",
+                    "C": "Compilation",
+                    "D": "Abstraction"
+                },
+                "answer": "C",
+                "detailedexplanation": "The four pillars of Object-Oriented Programming are Encapsulation, Abstraction, Inheritance, and Polymorphism. Compilation is a general process in computer science where source code is translated into machine code, but it is not a core principle specific to the Object-Oriented paradigm."
+            },
+            {
+                "id": 22,
+                "domain": "Polymorphism",
+                "difficulty": "Hard",
+                "question": "What is 'Operator Overloading'?",
+                "options": {
+                    "A": "Giving new meaning to an existing operator",
+                    "B": "Creating a new operator in a language",
+                    "C": "Using the same operator for different data types automatically",
+                    "D": "Removing an operator from a class"
+                },
+                "answer": "A",
+                "detailedexplanation": "Operator overloading is a specific type of polymorphism where different operators (like +, -, *) are given different implementations based on the arguments passed to them. For example, the '+' operator can be 'overloaded' in a 'ComplexNumber' class to perform vector addition instead of simple integer addition. Not all languages support this (C++ does, Java does not)."
+            },
+            {
+                "id": 23,
+                "domain": "Access Modifiers",
+                "difficulty": "Medium",
+                "question": "Which access modifier provides the least restriction?",
+                "options": {
+                    "A": "Private",
+                    "B": "Public",
+                    "C": "Protected",
+                    "D": "Package-private"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'public' access modifier is the most permissive. Any class, method, or variable declared as public can be accessed from any other class in the entire application, regardless of the package or module it resides in."
+            },
+            {
+                "id": 24,
+                "domain": "Advanced OOP",
+                "difficulty": "Medium",
+                "question": "What is a 'Virtual Function' used for?",
+                "options": {
+                    "A": "To make a function run faster",
+                    "B": "To ensure Run-time Polymorphism",
+                    "C": "To prevent inheritance",
+                    "D": "To hide data"
+                },
+                "answer": "B",
+                "detailedexplanation": "In C++, a virtual function is a member function that you expect to be redefined in derived classes. When you use a pointer or reference of the base class to point to a derived class object, the 'virtual' keyword ensures that the correct overridden version of the function is called at runtime, enabling dynamic binding."
+            },
+            {
+                "id": 25,
+                "domain": "Advanced OOP",
+                "difficulty": "Hard",
+                "question": "What is 'Pure Virtual Function'?",
+                "options": {
+                    "A": "A function that has no implementation in the base class",
+                    "B": "A function that can only be called once",
+                    "C": "A function that is private",
+                    "D": "A function that returns no value"
+                },
+                "answer": "A",
+                "detailedexplanation": "A pure virtual function is a function that has no implementation in the base class and is declared by assigning 0 to it (e.g., `virtual void draw() = 0;`). Any class containing at least one pure virtual function becomes an abstract class and cannot be instantiated. Subclasses must override this function to become concrete."
+            },
+            {
+                "id": 26,
+                "domain": "Memory Management",
+                "difficulty": "Medium",
+                "question": "Where are objects generally stored in memory?",
+                "options": {
+                    "A": "Stack",
+                    "B": "Heap",
+                    "C": "Register",
+                    "D": "Cache"
+                },
+                "answer": "B",
+                "detailedexplanation": "In most object-oriented environments, objects are dynamically allocated on the 'Heap'. The heap is a large pool of memory used for dynamic allocation. While the reference (variable name) might stay on the 'Stack' (local memory), the actual data/instance resides on the heap to allow it to persist beyond the scope of a single function call."
+            },
+            {
+                "id": 27,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "What is a 'Shallow Copy'?",
+                "options": {
+                    "A": "A copy that duplicates the memory address instead of the object values",
+                    "B": "A copy that creates a completely independent object",
+                    "C": "A copy that only copies the private members",
+                    "D": "A copy that is performed by the compiler"
+                },
+                "answer": "A",
+                "detailedexplanation": "A shallow copy creates a new object but does not create copies of the nested objects it refers to. Instead, it just copies the references. If the original object contains a pointer to another object, both the original and the shallow copy will point to the same memory location, meaning changes to one will affect the other. This is different from a 'Deep Copy' where everything is cloned."
+            },
+            {
+                "id": 28,
+                "domain": "Inheritance",
+                "difficulty": "Medium",
+                "question": "What is the relationship between a 'Square' class and a 'Shape' class likely to be?",
+                "options": {
+                    "A": "Composition",
+                    "B": "Inheritance (Is-A)",
+                    "C": "Aggregation",
+                    "D": "Encapsulation"
+                },
+                "answer": "B",
+                "detailedexplanation": "Since a Square 'is a' type of Shape, this is a classic example of Inheritance. The Square class would inherit general attributes like 'color' or 'position' from the Shape class and provide its own specific logic for calculating area or drawing four equal sides."
+            },
+            {
+                "id": 29,
+                "domain": "Advanced OOP",
+                "difficulty": "Hard",
+                "question": "What is the Diamond Problem in Multiple Inheritance?",
+                "options": {
+                    "A": "A situation where a subclass inherits from two parents that both inherit from the same grandparent",
+                    "B": "A situation where an object is too large for memory",
+                    "C": "A syntax error in C++ code",
+                    "D": "When a class is its own parent"
+                },
+                "answer": "A",
+                "detailedexplanation": "The Diamond Problem occurs in multiple inheritance when a class (D) inherits from two classes (B and C), and both B and C inherit from a single base class (A). If B and C both override a method from A, and D calls that method, it is ambiguous which version D should use. This ambiguity is why languages like Java chose to support only single inheritance of classes."
+            },
+            {
+                "id": 30,
+                "domain": "Core Concepts",
+                "difficulty": "Medium",
+                "question": "Which of the following describes 'Method Signature'?",
+                "options": {
+                    "A": "The name of the method and its return type",
+                    "B": "The name of the method and its parameter list",
+                    "C": "The body of the method",
+                    "D": "The access modifier and return type"
+                },
+                "answer": "B",
+                "detailedexplanation": "A method signature consists of the method name and the number, type, and order of its parameters. In many languages, the return type is not considered part of the signature for the purposes of overloading. The signature is what the compiler uses to distinguish between different methods with the same name."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our top 30 Object Oriented Programming questions. How many did you get right?",
+            "cta_final": "If you found this helpful, give us a thumbs up and subscribe for more technical interview prep. Don't forget to check the full course link in the description to get your official certification!",
+            "next_steps": "Next, you should watch our deep dive into SOLID principles to take your software design skills to the next level."
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds",
+            "transition_effect_hints": "Use smooth fade transitions between questions and a 'Ding' sound effect for the correct answer reveal."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Alibaba Cloud ACA Computing Certification Practice Exam",
+                "Ultimate Alibaba Cloud ACA Cloud Computing Mock Test",
+                "Pass the Alibaba Cloud ACA Certification Exam",
+                "ACA Cloud Computing Certification Questions and Answers",
+                "Alibaba Cloud ACA Training Course Practice Test",
+                "Alibaba Cloud Exam Prep: ACA Cloud Computing Certification",
+                "Top 30 ACA Cloud Computing Certification Exam Questions",
+                "Master Alibaba Cloud Computing with this ACA Mock Exam",
+                "Alibaba Cloud Associate ACA Certification Guide",
+                "Alibaba Cloud Certification Exam Questions for ACA"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to validate your cloud skills and become an Alibaba Cloud Certified Associate? The ACA Cloud Computing exam is the first step toward mastering one of the world's largest cloud infrastructures.",
+                "summary": "In this video, we cover 30 high-quality practice questions designed to simulate the actual Alibaba Cloud ACA exam environment, covering ECS, SLB, OSS, and Security.",
+                "cta_intro": "Follow along, pause the video for each question, and see how many you can get right.",
+                "checkfullexamlinkindescription": "For the full 300+ question bank and detailed study guides, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/alibaba-cloud-computing-certification/?referralCode=EFD6E8EA3C5ED23C6C5C",
+                "youtubetitle": "Alibaba Cloud ACA Computing Certification Mock Exam Questions and Answers",
+                "description": "Unlock your potential with our comprehensive Alibaba Cloud ACA Cloud Computing Mock Exam. This video provides a detailed breakdown of real exam-style questions to help you pass the Alibaba Cloud Certified Associate exam on your first try. We cover key topics including Elastic Compute Service (ECS), Server Load Balancer (SLB), Object Storage Service (OSS), Auto Scaling, and Cloud Security. Mastering these concepts is essential for any cloud professional working with Alibaba Cloud's ecosystem.",
+                "tags": "Alibaba Cloud, ACA Certification, Cloud Computing, ACA Mock Exam, Alibaba Cloud Exam, ECS, OSS, SLB, Cloud Security, Alibaba Cloud Associate, ACA Prep",
+                "hashtags": [
+                    "#AlibabaCloud",
+                    "#ACACertification",
+                    "#CloudComputing",
+                    "#CloudExam",
+                    "#TechCertification"
+                ],
+                "keywords": [
+                    "Alibaba Cloud ACA exam questions",
+                    "ACA Cloud Computing study guide",
+                    "Alibaba Cloud Certification practice test",
+                    "How to pass Alibaba Cloud ACA",
+                    "Alibaba Cloud ECS tutorials",
+                    "OSS vs S3 Alibaba Cloud",
+                    "Alibaba Cloud SLB configuration",
+                    "Cloud Computing fundamentals",
+                    "Alibaba Cloud Associate certification",
+                    "ACA Cloud Computing mockup"
+                ],
+                "mostsearchedongoogle": [
+                    "Alibaba Cloud ACA certification cost",
+                    "ACA Cloud Computing exam dumps",
+                    "Alibaba Cloud certification path",
+                    "ACA Cloud Computing syllabus",
+                    "Alibaba Cloud vs AWS comparison",
+                    "Alibaba Cloud free tier",
+                    "ACA Cloud Computing practice exam Udemy",
+                    "Alibaba Cloud Academy certification",
+                    "Alibaba Cloud Associate exam difficulty",
+                    "Alibaba Cloud developer certification"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "ECS (Elastic Compute Service)",
+                "difficulty": "Medium",
+                "question": "An administrator wants to ensure that an ECS instance remains available even if a physical server fails. Which feature should be used?",
+                "options": {
+                    "A": "Auto Scaling",
+                    "B": "Deployment Sets",
+                    "C": "Snapshot Backup",
+                    "D": "CloudMonitor"
+                },
+                "answer": "B",
+                "detailedexplanation": "Deployment Sets provide a way to influence the placement of your ECS instances on the underlying physical hardware. By using a 'High Availability' strategy within a Deployment Set, Alibaba Cloud ensures that instances are placed on different physical servers (racks), so that a single hardware failure does not take down all instances in the set. While Auto Scaling helps with capacity, Deployment Sets specifically address physical placement logic for fault tolerance."
+            },
+            {
+                "id": 2,
+                "domain": "OSS (Object Storage Service)",
+                "difficulty": "Easy",
+                "question": "Which storage class of Alibaba Cloud OSS is most suitable for data that is rarely accessed but requires millisecond retrieval when needed?",
+                "options": {
+                    "A": "Standard",
+                    "B": "Archive",
+                    "C": "IA (Infrequent Access)",
+                    "D": "Cold Archive"
+                },
+                "answer": "C",
+                "detailedexplanation": "OSS Infrequent Access (IA) storage is designed for data that is accessed less frequently (e.g., once or twice a month) but still requires the same high performance and millisecond access speed as Standard storage. Archive and Cold Archive require a restoration (thawing) process that can take minutes or hours, making them unsuitable for immediate millisecond retrieval."
+            },
+            {
+                "id": 3,
+                "domain": "SLB (Server Load Balancer)",
+                "difficulty": "Medium",
+                "question": "What is the primary function of a 'Health Check' in Alibaba Cloud Server Load Balancer?",
+                "options": {
+                    "A": "To check the billing status of the account",
+                    "B": "To monitor the network latency between the user and the SLB",
+                    "C": "To identify and stop sending traffic to unhealthy backend ECS instances",
+                    "D": "To automatically upgrade the instance type of backend servers"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Health Check feature in SLB periodically sends probes to the backend ECS instances to verify their operational status. If an instance fails the health check (e.g., the web service stops responding), the SLB automatically stops routing new traffic to that specific instance until it passes the check again. This ensures high availability by preventing users from being directed to a broken server."
+            },
+            {
+                "id": 4,
+                "domain": "Auto Scaling",
+                "difficulty": "Medium",
+                "question": "During a 'Cool-down period' in an Auto Scaling group, what happens to scaling activities?",
+                "options": {
+                    "A": "The group continues to scale up regardless of the period",
+                    "B": "Scaling activities triggered by alarm tasks are ignored",
+                    "C": "The instances are stopped to save costs",
+                    "D": "The health check is suspended"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Cool-down period is a time interval during which the Auto Scaling group does not execute new scaling activities triggered by CloudMonitor alarms. This prevents the system from over-provisioning or over-terminating instances in response to rapid fluctuations before the previous scaling action has had time to take effect on the system's overall load."
+            },
+            {
+                "id": 5,
+                "domain": "VPC (Virtual Private Cloud)",
+                "difficulty": "Easy",
+                "question": "In a VPC, which component is used to connect two different VPCs within the same or different regions?",
+                "options": {
+                    "A": "VPC Peering Connection / Cloud Enterprise Network (CEN)",
+                    "B": "Security Group",
+                    "C": "VRouter",
+                    "D": "Elastic IP"
+                },
+                "answer": "A",
+                "detailedexplanation": "To enable private network communication between two VPCs, Alibaba Cloud provides VPC Peering and, more commonly for enterprise scales, the Cloud Enterprise Network (CEN). CEN allows you to create a global network that connects VPCs across different regions and accounts. Security Groups are for instance-level firewalling, and VRouters manage internal routing within a single VPC."
+            },
+            {
+                "id": 6,
+                "domain": "Security",
+                "difficulty": "Medium",
+                "question": "Which Alibaba Cloud service provides protection against volumetric DDoS attacks?",
+                "options": {
+                    "A": "Server Guard",
+                    "B": "Anti-DDoS Basic/Pro",
+                    "C": "Resource Access Management (RAM)",
+                    "D": "ActionTrail"
+                },
+                "answer": "B",
+                "detailedexplanation": "Anti-DDoS Basic is a free service bundled with Alibaba Cloud resources that defends against common DDoS attacks. Anti-DDoS Pro/Premium is a paid service for higher-level protection against massive volumetric attacks. Server Guard (Cloud Security Center) focuses on host-level security like malware and vulnerability scanning, while RAM is for identity management."
+            },
+            {
+                "id": 7,
+                "domain": "ECS (Elastic Compute Service)",
+                "difficulty": "Easy",
+                "question": "What happens to the data on a local disk of an ECS instance when the instance is released?",
+                "options": {
+                    "A": "The data is automatically backed up to OSS",
+                    "B": "The data is retained for 7 days",
+                    "C": "The data is permanently deleted",
+                    "D": "The data is migrated to a new Cloud Disk"
+                },
+                "answer": "C",
+                "detailedexplanation": "Local disks are physically attached to the host server. Unlike Cloud Disks (which can be set to be retained or deleted), data on a local disk is tied to the lifecycle of the instance. When the ECS instance is released (terminated), the data on the local disk is lost and cannot be recovered. It is always recommended to use Cloud Disks for persistent data."
+            },
+            {
+                "id": 8,
+                "domain": "RDS (Relational Database Service)",
+                "difficulty": "Medium",
+                "question": "Which of the following is NOT a supported database engine in Alibaba Cloud RDS?",
+                "options": {
+                    "A": "MySQL",
+                    "B": "PostgreSQL",
+                    "C": "Oracle",
+                    "D": "SQL Server"
+                },
+                "answer": "C",
+                "detailedexplanation": "Alibaba Cloud RDS natively supports MySQL, SQL Server, PostgreSQL, and MariaDB. While Alibaba Cloud has migration tools and specialized services for Oracle workloads (such as PolarDB or running Oracle on ECS with specific licenses), Oracle is not a standard managed RDS engine option in the same way MySQL or SQL Server is."
+            },
+            {
+                "id": 9,
+                "domain": "OSS (Object Storage Service)",
+                "difficulty": "Medium",
+                "question": "To provide temporary access to a private file in OSS, which method should be used?",
+                "options": {
+                    "A": "Change the bucket permission to Public Read",
+                    "B": "Generate a signed URL",
+                    "C": "Give the user the Root account password",
+                    "D": "Create a new RAM user for every request"
+                },
+                "answer": "B",
+                "detailedexplanation": "Signed URLs (also known as Pre-signed URLs) allow you to give temporary access to private objects without changing the bucket's permissions. You can set an expiration time for the URL, after which the access is revoked. This is the most secure and efficient way to share private content temporarily."
+            },
+            {
+                "id": 10,
+                "domain": "VPC (Virtual Private Cloud)",
+                "difficulty": "Medium",
+                "question": "Each VSwitch in a VPC belongs to how many Availability Zones (AZ)?",
+                "options": {
+                    "A": "One",
+                    "B": "Two",
+                    "C": "All AZs in the region",
+                    "D": "It depends on the VPC CIDR"
+                },
+                "answer": "A",
+                "detailedexplanation": "A VSwitch is a basic network component of a VPC and it is tied to a specific Availability Zone (AZ). To achieve high availability, you should create VSwitches in at least two different AZs and distribute your instances across them."
+            },
+            {
+                "id": 11,
+                "domain": "SLB (Server Load Balancer)",
+                "difficulty": "Easy",
+                "question": "Which protocol can an Alibaba Cloud SLB Layer 7 listener support?",
+                "options": {
+                    "A": "TCP",
+                    "B": "UDP",
+                    "C": "HTTPS",
+                    "D": "ICMP"
+                },
+                "answer": "C",
+                "detailedexplanation": "SLB supports both Layer 4 and Layer 7 load balancing. Layer 4 listeners support TCP and UDP protocols. Layer 7 listeners are designed for application-level traffic and support HTTP and HTTPS protocols."
+            },
+            {
+                "id": 12,
+                "domain": "ECS (Elastic Compute Service)",
+                "difficulty": "Medium",
+                "question": "What is the maximum number of Security Groups an ECS instance can belong to?",
+                "options": {
+                    "A": "1",
+                    "B": "5",
+                    "C": "10",
+                    "D": "Unlimited"
+                },
+                "answer": "B",
+                "detailedexplanation": "By default, an ECS instance can be associated with up to 5 security groups. Security groups act as virtual firewalls, and the rules from all associated groups are aggregated to determine the traffic allowed to or from the instance."
+            },
+            {
+                "id": 13,
+                "domain": "OSS (Object Storage Service)",
+                "difficulty": "Medium",
+                "question": "In OSS, what is the purpose of 'Bucket Versioning'?",
+                "options": {
+                    "A": "To increase the storage capacity of the bucket",
+                    "B": "To keep multiple variants of an object in the same bucket",
+                    "C": "To automatically compress files",
+                    "D": "To encrypt data at rest"
+                },
+                "answer": "B",
+                "detailedexplanation": "Bucket Versioning is a feature that allows you to maintain multiple versions of an object. This is highly useful for recovering from accidental deletions or overwrites. If a user deletes an object, a delete marker is created instead of permanent removal, allowing for easy restoration."
+            },
+            {
+                "id": 14,
+                "domain": "CloudMonitor",
+                "difficulty": "Easy",
+                "question": "Which service is used to view the CPU and Memory utilization metrics of an ECS instance in real-time?",
+                "options": {
+                    "A": "ActionTrail",
+                    "B": "CloudMonitor",
+                    "C": "Resource Access Management (RAM)",
+                    "D": "OSS"
+                },
+                "answer": "B",
+                "detailedexplanation": "CloudMonitor is the monitoring service for Alibaba Cloud resources. It collects metrics such as CPU usage, memory, disk I/O, and network traffic. You can set alarms based on these metrics to notify you when thresholds are reached."
+            },
+            {
+                "id": 15,
+                "domain": "Auto Scaling",
+                "difficulty": "Medium",
+                "question": "Which component of Auto Scaling defines the 'template' (Image ID, Instance Type) used to create new instances?",
+                "options": {
+                    "A": "Scaling Group",
+                    "B": "Scaling Configuration",
+                    "C": "Scaling Rule",
+                    "D": "Scheduled Task"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Scaling Configuration is where you specify the parameters for the ECS instances that will be created, such as the Instance Type, Image (OS), Storage, and Security Groups. The Scaling Group manages the bounds (min/max), and Scaling Rules define when to trigger the scaling."
+            },
+            {
+                "id": 16,
+                "domain": "Security",
+                "difficulty": "Medium",
+                "question": "What is the function of Resource Access Management (RAM)?",
+                "options": {
+                    "A": "To provide high-speed internet access",
+                    "B": "To manage user identities and control access to resources",
+                    "C": "To store large amounts of unstructured data",
+                    "D": "To monitor the temperature of data centers"
+                },
+                "answer": "B",
+                "detailedexplanation": "RAM is the identity and access management service. It allows you to create RAM users, groups, and roles, and assign specific permissions (policies) to them. This ensures the principle of least privilege, where users only have access to the resources they need."
+            },
+            {
+                "id": 17,
+                "domain": "VPC (Virtual Private Cloud)",
+                "difficulty": "Medium",
+                "question": "A user wants to allow an ECS instance in a private VSwitch to access the internet to download updates, without allowing the internet to initiate connections to the instance. Which service is needed?",
+                "options": {
+                    "A": "Elastic IP (EIP)",
+                    "B": "NAT Gateway",
+                    "C": "Server Load Balancer (SLB)",
+                    "D": "VPN Gateway"
+                },
+                "answer": "B",
+                "detailedexplanation": "A NAT Gateway (specifically using SNAT - Source Network Address Translation) allows instances in a private subnet to access the internet. It masks the private IP with a public IP for outbound requests, but does not allow unsolicited inbound connections from the internet, maintaining security."
+            },
+            {
+                "id": 18,
+                "domain": "ECS (Elastic Compute Service)",
+                "difficulty": "Easy",
+                "question": "What is the difference between 'Stop' and 'Release' for a Pay-As-You-Go ECS instance?",
+                "options": {
+                    "A": "Stop pauses billing for CPU/RAM; Release deletes the instance permanently",
+                    "B": "Stop deletes the instance; Release pauses billing",
+                    "C": "They are the same thing",
+                    "D": "Stop keeps the Public IP; Release keeps the Private IP"
+                },
+                "answer": "A",
+                "detailedexplanation": "Stopping an instance (specifically under the 'No Charge While Stopped' policy) ceases billing for CPU and Memory, though you still pay for the disk storage. Releasing an instance is equivalent to termination; the instance is permanently deleted, and all billing for that resource stops."
+            },
+            {
+                "id": 19,
+                "domain": "OSS (Object Storage Service)",
+                "difficulty": "Easy",
+                "question": "What is the unique identifier for a file in Alibaba Cloud OSS?",
+                "options": {
+                    "A": "Bucket Name",
+                    "B": "Object Key",
+                    "C": "Region ID",
+                    "D": "EIP"
+                },
+                "answer": "B",
+                "detailedexplanation": "In OSS, a file is referred to as an 'Object'. Every object is uniquely identified within a bucket by its 'Key'. The key is essentially the full path/name of the file (e.g., 'images/photo.jpg')."
+            },
+            {
+                "id": 20,
+                "domain": "SLB (Server Load Balancer)",
+                "difficulty": "Medium",
+                "question": "To maintain session persistence for a web application using SLB, what should be configured?",
+                "options": {
+                    "A": "Round Robin",
+                    "B": "Session Sticky / Persistence",
+                    "C": "Weight-based routing",
+                    "D": "Auto Scaling"
+                },
+                "answer": "B",
+                "detailedexplanation": "Session Persistence (Session Sticky) ensures that a user who has established a session is consistently routed to the same backend ECS instance for the duration of that session. This is critical for applications that store session state locally on the server."
+            },
+            {
+                "id": 21,
+                "domain": "Security",
+                "difficulty": "Medium",
+                "question": "Which of the following describes the 'Shared Responsibility Model' in Alibaba Cloud?",
+                "options": {
+                    "A": "Alibaba Cloud is responsible for everything",
+                    "B": "The customer is responsible for everything",
+                    "C": "Alibaba Cloud manages the 'Security of the Cloud', customer manages 'Security in the Cloud'",
+                    "D": "Alibaba Cloud only manages the physical hardware; the customer manages the network"
+                },
+                "answer": "C",
+                "detailedexplanation": "Under the Shared Responsibility Model, Alibaba Cloud is responsible for the security of the infrastructure (physical data centers, hardware, virtualization layer). The customer is responsible for the security of their data, operating systems, applications, and configurations like Security Groups and RAM policies."
+            },
+            {
+                "id": 22,
+                "domain": "ECS (Elastic Compute Service)",
+                "difficulty": "Medium",
+                "question": "Which image type allows you to create a pre-configured environment including the OS and installed software?",
+                "options": {
+                    "A": "Public Image",
+                    "B": "Custom Image",
+                    "C": "Marketplace Image",
+                    "D": "Shared Image"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Custom Image is created by the user, usually from an existing ECS instance that has been configured with specific software, patches, and settings. Once created, it can be used to launch multiple identical instances, saving setup time."
+            },
+            {
+                "id": 23,
+                "domain": "VPC (Virtual Private Cloud)",
+                "difficulty": "Medium",
+                "question": "What is the purpose of a Route Table in a VPC?",
+                "options": {
+                    "A": "To list all the files in a bucket",
+                    "B": "To define the rules for traffic flow between VSwitches and external networks",
+                    "C": "To manage user passwords",
+                    "D": "To monitor CPU usage"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Route Table contains a set of rules (routes) that determine where network traffic from your VSwitch or VPC is directed. For example, a route might direct traffic destined for the internet to a NAT Gateway or an Internet Gateway."
+            },
+            {
+                "id": 24,
+                "domain": "RDS (Relational Database Service)",
+                "difficulty": "Medium",
+                "question": "How can you improve the read performance of a heavily loaded RDS MySQL database?",
+                "options": {
+                    "A": "Create Read-only instances",
+                    "B": "Use OSS instead",
+                    "C": "Decrease the instance size",
+                    "D": "Enable Anti-DDoS"
+                },
+                "answer": "A",
+                "detailedexplanation": "Read-only instances allow you to offload read traffic from the primary (Master) database. This is a common scaling technique for read-intensive applications. The Master handles all writes, and changes are replicated to the Read-only instances."
+            },
+            {
+                "id": 25,
+                "domain": "Auto Scaling",
+                "difficulty": "Medium",
+                "question": "In Auto Scaling, what is a 'Scheduled Task'?",
+                "options": {
+                    "A": "A task that scales based on CPU usage",
+                    "B": "A task that executes scaling at a specific point in time",
+                    "C": "A task that backups the database",
+                    "D": "A task that deletes old logs"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Scheduled Task allows you to trigger a scaling activity (like increasing the instance count) at a specific time or on a recurring schedule (e.g., every Monday at 9 AM). This is useful for predictable traffic patterns, such as business hours."
+            },
+            {
+                "id": 26,
+                "domain": "OSS (Object Storage Service)",
+                "difficulty": "Easy",
+                "question": "What is the maximum size for a single object uploaded to OSS using a single PutObject request?",
+                "options": {
+                    "A": "5 GB",
+                    "B": "100 GB",
+                    "C": "5 TB",
+                    "D": "48.8 TB"
+                },
+                "answer": "A",
+                "detailedexplanation": "For a standard PutObject (single upload) request, the maximum size is 5 GB. For files larger than 5 GB, you must use Multipart Upload, which can support objects up to 48.8 TB."
+            },
+            {
+                "id": 27,
+                "domain": "Cloud Security",
+                "difficulty": "Easy",
+                "question": "Which service helps you audit all API calls made in your Alibaba Cloud account?",
+                "options": {
+                    "A": "ActionTrail",
+                    "B": "CloudMonitor",
+                    "C": "WAF",
+                    "D": "KMS"
+                },
+                "answer": "A",
+                "detailedexplanation": "ActionTrail records all API calls made through the Alibaba Cloud Console, SDKs, or CLI. This provides a complete history of actions taken by users or services, which is essential for security auditing and compliance."
+            },
+            {
+                "id": 28,
+                "domain": "ECS (Elastic Compute Service)",
+                "difficulty": "Medium",
+                "question": "Which of the following is a benefit of using 'Cloud Disks' over 'Local Disks'?",
+                "options": {
+                    "A": "Lower cost",
+                    "B": "Lower latency",
+                    "C": "Independent lifecycle (can be detached and reattached)",
+                    "D": "No encryption support"
+                },
+                "answer": "C",
+                "detailedexplanation": "Cloud Disks are distributed block storage. Their primary benefit is that they are independent of the ECS instance's lifecycle. You can detach a Cloud Disk from one instance and attach it to another. They also offer higher reliability through triple-copy redundancy."
+            },
+            {
+                "id": 29,
+                "domain": "VPC (Virtual Private Cloud)",
+                "difficulty": "Easy",
+                "question": "What does CIDR stand for in the context of VPC networking?",
+                "options": {
+                    "A": "Cloud Integrated Data Router",
+                    "B": "Classless Inter-Domain Routing",
+                    "C": "Connected Instance Data Record",
+                    "D": "Centralized Internal Data Resource"
+                },
+                "answer": "B",
+                "detailedexplanation": "CIDR (Classless Inter-Domain Routing) is a method for allocating IP addresses and IP routing. In Alibaba Cloud, you define your VPC and VSwitch address spaces using CIDR notation (e.g., 192.168.0.0/16)."
+            },
+            {
+                "id": 30,
+                "domain": "SLB (Server Load Balancer)",
+                "difficulty": "Medium",
+                "question": "If you need to distribute traffic based on the 'URL path' (e.g., /images vs /api), which type of SLB configuration is required?",
+                "options": {
+                    "A": "Layer 4 Listener (TCP)",
+                    "B": "Layer 7 Listener (HTTP/HTTPS) with Forwarding Rules",
+                    "C": "Any listener with Round Robin",
+                    "D": "Layer 4 Listener (UDP)"
+                },
+                "answer": "B",
+                "detailedexplanation": "Path-based or Domain-based routing requires the Load Balancer to inspect the application-level data (Layer 7). This can only be done with HTTP or HTTPS listeners where you can configure 'Forwarding Rules' to send traffic to different VServer groups based on the URI path."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question mock exam for the Alibaba Cloud ACA certification. I hope these explanations helped clarify some of the core concepts of ECS, OSS, SLB, and Security.",
+            "cta_final": "If you found this helpful, please give this video a thumbs up and subscribe for more cloud certification content.",
+            "next_steps": "Don't forget to check the full course link in the description to access hundreds of more questions and pass your exam with confidence. Good luck with your studies!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Smooth fade between questions; show the correct answer in green after the timer expires; display the detailed explanation on a clean side panel."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Alibaba Cloud ACP Cloud Computing Professional Exam Guide",
+                "Ultimate Alibaba Cloud ACP Certification Practice Questions",
+                "Pass the Alibaba Cloud ACP Cloud Computing Exam",
+                "Alibaba Cloud ACP Exam Preparation and Mock Questions",
+                "Master Alibaba Cloud ACP Cloud Computing Certification",
+                "Alibaba Cloud Professional ACP Exam Training",
+                "ACP-Cloud1 Exam Study Guide and Practice Test",
+                "Alibaba Cloud Computing Certification Questions and Answers",
+                "Alibaba Cloud ACP Certification Roadmap and Mock Exam",
+                "Top 30 Alibaba Cloud ACP Exam Questions Explained"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to validate your expertise in the world's leading cloud ecosystem for Asian markets? Today, we are diving deep into the Alibaba Cloud ACP Cloud Computing Professional exam.",
+                "summary": "This video covers 30 high-yield practice questions designed to mimic the actual ACP certification exam. We will explore Elastic Computing, Storage, Networking, Security, and Auto Scaling to ensure you are fully prepared.",
+                "cta_intro": "Make sure to subscribe and hit the bell icon so you don't miss our deep-dive certification series.",
+                "checkfullexamlinkindescription": "For the full 400+ question bank and timed mock exams, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/alibaba-cloud-computing-professional/?referralCode=D7667FC7B5F14EF0F8A5",
+                "youtubetitle": "Alibaba Cloud ACP Cloud Computing Professional Certification Full Mock Exam Prep",
+                "description": "Prepare for your Alibaba Cloud ACP Cloud Computing Professional Certification with this comprehensive mock exam. This video includes 30 expert-curated questions covering ECS, SLB, OSS, RDS, and Cloud Security. Each question includes a detailed explanation of the logic and architecture behind the correct answer to help you pass on your first attempt.\n\nKey Topics Covered:\n- Elastic Compute Service (ECS)\n- Server Load Balancer (SLB)\n- Object Storage Service (OSS)\n- Relational Database Service (RDS)\n- Auto Scaling and Cloud Security.",
+                "tags": "Alibaba Cloud, ACP Cloud Computing, ACP Certification, Alibaba Cloud Exam, Cloud Computing Professional, ECS, OSS, SLB, Alibaba Cloud Training, Cloud Certification 2025",
+                "hashtags": [
+                    "#AlibabaCloud",
+                    "#ACPCloudComputing",
+                    "#CloudCertification",
+                    "#AlibabaCloudACP",
+                    "#TechTraining"
+                ],
+                "keywords": [
+                    "Alibaba Cloud ACP Exam Questions",
+                    "Alibaba Cloud Professional Certification",
+                    "Alibaba Cloud Mock Test",
+                    "ACP Cloud Computing Study Guide",
+                    "Alibaba Cloud ECS OSS SLB RDS",
+                    "Cloud Computing Exam Prep"
+                ],
+                "mostsearchedongoogle": [
+                    "Alibaba Cloud ACP exam questions PDF",
+                    "ACP Cloud Computing Professional syllabus",
+                    "Alibaba Cloud certification path",
+                    "Alibaba Cloud vs AWS certification",
+                    "How to pass Alibaba Cloud ACP exam",
+                    "Alibaba Cloud free practice test",
+                    "ACP-Cloud1 exam dumps",
+                    "Alibaba Cloud cloud computing professional salary",
+                    "Alibaba Cloud ACP registration",
+                    "Alibaba Cloud learning path"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Elastic Compute Service (ECS)",
+                "difficulty": "Medium",
+                "question": "An administrator needs to ensure that an ECS instance can be recovered with the same metadata and configurations in another region. Which method is most efficient?",
+                "options": {
+                    "A": "Copy the system disk snapshot to the target region and create a new instance.",
+                    "B": "Create a custom image from the instance and use 'Image Copy' to move it to the target region.",
+                    "C": "Use the 'Move Instance' feature in the Alibaba Cloud console.",
+                    "D": "Take a backup using Cloud Backup Center and restore it in the new region."
+                },
+                "answer": "B",
+                "detailedexplanation": "Alibaba Cloud ECS does not support direct 'movement' of instances across regions. The standard professional workflow involves creating a Custom Image from the existing ECS instance (which captures the system and data disks). You then use the 'Copy Image' feature to replicate that image to the destination region. Once the image exists in the target region, you can launch a new ECS instance that is an exact replica of the original."
+            },
+            {
+                "id": 2,
+                "domain": "Server Load Balancer (SLB)",
+                "difficulty": "Hard",
+                "question": "A user is configuring an SLB instance to distribute traffic across several ECS instances. If 'Session Persistence' is enabled for an HTTP listener, how does the SLB identify the user?",
+                "options": {
+                    "A": "By the source IP address of the client.",
+                    "B": "By the MAC address of the client's router.",
+                    "C": "By inserting or observing a Cookie.",
+                    "D": "By the sequence number of the TCP packet."
+                },
+                "answer": "C",
+                "detailedexplanation": "For Layer 7 (HTTP/HTTPS) listeners, Alibaba Cloud SLB uses Cookies to implement session persistence. It can either use 'Server-inserted cookies' (where SLB adds a cookie to the response) or 'Server-rewritten cookies' (where the SLB tracks cookies set by the backend ECS). Layer 4 (TCP/UDP) session persistence, on the other hand, is based solely on the Client IP address."
+            },
+            {
+                "id": 3,
+                "domain": "Object Storage Service (OSS)",
+                "difficulty": "Medium",
+                "question": "Which OSS storage class is most cost-effective for data that must be stored for at least 180 days and can tolerate a data retrieval time of 1-5 minutes?",
+                "options": {
+                    "A": "Standard",
+                    "B": "IA (Infrequent Access)",
+                    "C": "Archive",
+                    "D": "Cold Archive"
+                },
+                "answer": "C",
+                "detailedexplanation": "Archive storage is designed for long-term retention (minimum 60 days, though often used for much longer). It offers lower storage costs than Standard or IA. However, the data must be restored before reading. For Archive storage, the restoration process typically takes 1 to 5 minutes. Cold Archive would take hours, and Standard/IA offer real-time access."
+            },
+            {
+                "id": 4,
+                "domain": "Auto Scaling",
+                "difficulty": "Medium",
+                "question": "In Auto Scaling, what happens to an ECS instance that was manually added to a scaling group when a scale-in event occurs?",
+                "options": {
+                    "A": "It is always the first to be removed.",
+                    "B": "It is never removed by a scale-in event; only auto-created ones are.",
+                    "C": "It can be removed, but it will only be detached from the group rather than released.",
+                    "D": "It is treated exactly like an automatically created instance and will be released."
+                },
+                "answer": "C",
+                "detailedexplanation": "Alibaba Cloud Auto Scaling distinguishes between instances it creates and instances you add manually. Automatically created instances are released (deleted) during scale-in. Manually added instances, however, are merely 'Detached' from the scaling group to protect your data, as the system assumes you may have other uses for those specific instances."
+            },
+            {
+                "id": 5,
+                "domain": "Relational Database Service (RDS)",
+                "difficulty": "Hard",
+                "question": "A company wants to improve the read performance of their RDS MySQL database which is experiencing high latency due to heavy query traffic. What is the best solution?",
+                "options": {
+                    "A": "Upgrade the instance to a higher CPU/RAM tier.",
+                    "B": "Create one or more Read-only instances and use the Read/Write Splitting endpoint.",
+                    "C": "Convert the instance to an RDS MariaDB instance.",
+                    "D": "Enable Multi-AZ deployment for better performance."
+                },
+                "answer": "B",
+                "detailedexplanation": "While upgrading the instance (Vertical Scaling) is an option, the most architectural sound and cost-effective way to handle high 'Read' volumes is Horizontal Scaling. By creating Read-only instances and using the 'Read/Write Splitting' address, the system automatically routes SELECT queries to read-only replicas and INSERT/UPDATE queries to the primary instance."
+            },
+            {
+                "id": 6,
+                "domain": "Virtual Private Cloud (VPC)",
+                "difficulty": "Medium",
+                "question": "Can two VPCs in the same region communicate with each other over the internal Alibaba Cloud network by default?",
+                "options": {
+                    "A": "Yes, all VPCs in the same region are connected by default.",
+                    "B": "No, VPCs are isolated by default; they require a Cloud Enterprise Network (CEN) or VPC Peering.",
+                    "C": "Yes, but only if they use the same CIDR block.",
+                    "D": "No, they can only communicate via the Public Internet."
+                },
+                "answer": "B",
+                "detailedexplanation": "Security and isolation are core features of VPCs. By default, VPCs are completely isolated. To connect two VPCs (even in the same region), you must use a service like Cloud Enterprise Network (CEN) or VBR/VPN Gateway. This ensures that traffic remains on the private backbone without being exposed to the public internet."
+            },
+            {
+                "id": 7,
+                "domain": "Cloud Security",
+                "difficulty": "Easy",
+                "question": "Which Alibaba Cloud service provides protection against volumetric DDoS attacks?",
+                "options": {
+                    "A": "Anti-DDoS Basic/Pro",
+                    "B": "Server Guard",
+                    "C": "Cloud Firewall",
+                    "D": "Resource Access Management (RAM)"
+                },
+                "answer": "A",
+                "detailedexplanation": "Anti-DDoS is the dedicated service for mitigating distributed denial-of-service attacks. 'Basic' is provided for free to all Alibaba Cloud users up to a certain threshold (usually 5Gbps), while 'Pro/Premium' offers much higher mitigation capacities for enterprise applications."
+            },
+            {
+                "id": 8,
+                "domain": "Elastic Compute Service (ECS)",
+                "difficulty": "Medium",
+                "question": "You have a preemptible ECS instance. How much notice does Alibaba Cloud give you before the instance is reclaimed?",
+                "options": {
+                    "A": "30 seconds",
+                    "B": "5 minutes",
+                    "C": "1 minute",
+                    "D": "10 minutes"
+                },
+                "answer": "B",
+                "detailedexplanation": "When the market price exceeds your bid or when resource capacity is insufficient, Alibaba Cloud will reclaim preemptible instances. A release notification is sent 5 minutes before the actual release, allowing you to save state or drain traffic."
+            },
+            {
+                "id": 9,
+                "domain": "Server Load Balancer (SLB)",
+                "difficulty": "Medium",
+                "question": "Which of the following scheduling algorithms is NOT supported by Alibaba Cloud SLB?",
+                "options": {
+                    "A": "Round Robin (RR)",
+                    "B": "Weighted Round Robin (WRR)",
+                    "C": "Weighted Least Connections (WLC)",
+                    "D": "Random Sequence (RS)"
+                },
+                "answer": "D",
+                "detailedexplanation": "SLB supports several algorithms including Round Robin, Weighted Round Robin (taking server weights into account), and Weighted Least Connections (routing to servers with fewer active sessions). 'Random Sequence' is not a standard scheduling algorithm provided by the SLB service."
+            },
+            {
+                "id": 10,
+                "domain": "Object Storage Service (OSS)",
+                "difficulty": "Medium",
+                "question": "What is the maximum size of a single object that can be uploaded to Alibaba Cloud OSS using a single PutObject request?",
+                "options": {
+                    "A": "500 MB",
+                    "B": "5 GB",
+                    "C": "5 TB",
+                    "D": "100 GB"
+                },
+                "answer": "B",
+                "detailedexplanation": "For a single upload operation (PutObject), the limit is 5 GB. If you need to upload larger files (up to 48.8 TB), you must use Multipart Upload, which breaks the file into smaller chunks."
+            },
+            {
+                "id": 11,
+                "domain": "Content Delivery Network (CDN)",
+                "difficulty": "Medium",
+                "question": "How does Alibaba Cloud CDN improve website performance?",
+                "options": {
+                    "A": "By increasing the CPU power of the origin server.",
+                    "B": "By caching static content at edge nodes closer to the user.",
+                    "C": "By compressing the database files on the RDS instance.",
+                    "D": "By providing a dedicated fiber line to the user's home."
+                },
+                "answer": "B",
+                "detailedexplanation": "CDN (Content Delivery Network) reduces latency by caching static assets (images, CSS, JS) on a global network of edge nodes. When a user requests content, it is served from the nearest node rather than the origin server, reducing physical distance and network hops."
+            },
+            {
+                "id": 12,
+                "domain": "Elastic Compute Service (ECS)",
+                "difficulty": "Hard",
+                "question": "A user wants to attach an additional disk to an ECS instance. What is the maximum number of total data disks (excluding system disk) that can be attached to a single ECS instance?",
+                "options": {
+                    "A": "4",
+                    "B": "8",
+                    "C": "16",
+                    "D": "64"
+                },
+                "answer": "C",
+                "detailedexplanation": "In most current ECS specifications on Alibaba Cloud, a single instance can have 1 system disk and up to 16 data disks attached simultaneously. This allows for significant storage expansion for databases or file servers."
+            },
+            {
+                "id": 13,
+                "domain": "Resource Access Management (RAM)",
+                "difficulty": "Easy",
+                "question": "Which of the following is the best practice for managing permissions in Alibaba Cloud?",
+                "options": {
+                    "A": "Sharing the Root account credentials with the IT team.",
+                    "B": "Using the Root account for daily operations.",
+                    "C": "Creating RAM users and following the Principle of Least Privilege.",
+                    "D": "Giving all users 'AdministratorAccess' to avoid permission errors."
+                },
+                "answer": "C",
+                "detailedexplanation": "The Root account has full control over all resources and billing. Best practice is to lock away Root credentials and create RAM (Resource Access Management) users. Each user should only be granted the minimum permissions required to perform their specific job (Least Privilege)."
+            },
+            {
+                "id": 14,
+                "domain": "Auto Scaling",
+                "difficulty": "Medium",
+                "question": "Which component of Auto Scaling defines 'how' the new ECS instances will look (e.g., CPU, RAM, Image)?",
+                "options": {
+                    "A": "Scaling Group",
+                    "B": "Scaling Rule",
+                    "C": "Scaling Configuration",
+                    "D": "Lifecycle Hook"
+                },
+                "answer": "C",
+                "detailedexplanation": "A Scaling Group defines 'where' and 'how many' (VPC, VSwitch, Min/Max size). A Scaling Rule defines 'when' to scale (e.g., add 2 instances). The 'Scaling Configuration' is the template that defines the instance properties like Instance Type, Image ID, and Security Groups."
+            },
+            {
+                "id": 15,
+                "domain": "Relational Database Service (RDS)",
+                "difficulty": "Hard",
+                "question": "What happens if the primary instance of an RDS High-Availability edition fails?",
+                "options": {
+                    "A": "The database becomes unavailable until manually restarted.",
+                    "B": "The system automatically fails over to the secondary instance and updates the DNS.",
+                    "C": "The data is lost because RDS does not support automatic failover.",
+                    "D": "The system creates a new instance from the last backup."
+                },
+                "answer": "B",
+                "detailedexplanation": "RDS High-Availability (HA) edition uses a primary-secondary architecture. The system monitors the primary instance 24/7. If a failure is detected, it automatically switches traffic to the secondary instance. The connection string (endpoint) remains the same, so no application code changes are needed."
+            },
+            {
+                "id": 16,
+                "domain": "Cloud Security",
+                "difficulty": "Medium",
+                "question": "Which Alibaba Cloud service acts as a virtual firewall for your ECS instances at the network interface level?",
+                "options": {
+                    "A": "Cloud Firewall",
+                    "B": "Network ACL",
+                    "C": "Security Group",
+                    "D": "WAF (Web Application Firewall)"
+                },
+                "answer": "C",
+                "detailedexplanation": "Security Groups are stateful virtual firewalls that control inbound and outbound traffic for one or more ECS instances. While Network ACLs work at the VSwitch level (subnet), Security Groups work directly at the instance (NIC) level."
+            },
+            {
+                "id": 17,
+                "domain": "Object Storage Service (OSS)",
+                "difficulty": "Easy",
+                "question": "A user wants to host a static website using OSS. Which feature must be enabled?",
+                "options": {
+                    "A": "Versioning",
+                    "B": "Static Website Hosting",
+                    "C": "Mirroring",
+                    "D": "Lifecycle Management"
+                },
+                "answer": "B",
+                "detailedexplanation": "OSS allows you to host static websites. Once you upload your HTML, CSS, and JS files, you must enable the 'Static Website Hosting' feature and configure the index document (e.g., index.html) and error document."
+            },
+            {
+                "id": 18,
+                "domain": "Server Load Balancer (SLB)",
+                "difficulty": "Medium",
+                "question": "What is the primary purpose of an SLB Health Check?",
+                "options": {
+                    "A": "To check if the client is still connected.",
+                    "B": "To monitor the CPU usage of the SLB itself.",
+                    "C": "To identify unhealthy backend ECS instances and stop routing traffic to them.",
+                    "D": "To verify the identity of the user."
+                },
+                "answer": "C",
+                "detailedexplanation": "Health Checks ensure high availability. The SLB periodically sends probes to the backend ECS instances. If an instance fails to respond correctly, it is marked as 'unhealthy' and the SLB stops sending traffic to it until it passes the health check again."
+            },
+            {
+                "id": 19,
+                "domain": "Elastic Compute Service (ECS)",
+                "difficulty": "Medium",
+                "question": "Which of the following disk categories provides the highest performance (IOPS) for Alibaba Cloud ECS?",
+                "options": {
+                    "A": "Standard Cloud Disk",
+                    "B": "Efficiency Cloud Disk",
+                    "C": "SSD Cloud Disk",
+                    "D": "ESSD (Enhanced SSD) Cloud Disk"
+                },
+                "answer": "D",
+                "detailedexplanation": "ESSD (Enhanced SSD) is the highest performance tier, offering up to 1 million IOPS and very low latency. It is designed for IO-intensive workloads like large-scale databases and real-time computing."
+            },
+            {
+                "id": 20,
+                "domain": "Virtual Private Cloud (VPC)",
+                "difficulty": "Easy",
+                "question": "What is a VSwitch used for within a VPC?",
+                "options": {
+                    "A": "To connect the VPC to the Internet.",
+                    "B": "To divide the VPC address space into smaller subnets.",
+                    "C": "To balance traffic between different regions.",
+                    "D": "To provide physical hardware to the user."
+                },
+                "answer": "B",
+                "detailedexplanation": "A VSwitch (Virtual Switch) is a basic network device of a VPC. It is used to segment the VPC's IP address range into one or more subnets. Instances must be launched within a VSwitch, and each VSwitch belongs to a single Availability Zone."
+            },
+            {
+                "id": 21,
+                "domain": "Content Delivery Network (CDN)",
+                "difficulty": "Medium",
+                "question": "If you update a file on your origin server, but the CDN continues to serve the old version, what action should you take?",
+                "options": {
+                    "A": "Delete the file from the origin server.",
+                    "B": "Wait 24 hours for the cache to expire.",
+                    "C": "Perform a 'Cache Refresh' or 'Purge' on the CDN console.",
+                    "D": "Restart the ECS instance serving as the origin."
+                },
+                "answer": "C",
+                "detailedexplanation": "CDN nodes cache content based on the TTL (Time To Live). If you need to update content immediately, you must use the 'Refresh' (Purge) feature in the Alibaba Cloud CDN console to force the edge nodes to delete the old version and fetch the new one from the origin."
+            },
+            {
+                "id": 22,
+                "domain": "Cloud Security",
+                "difficulty": "Medium",
+                "question": "Which tool provides a centralized security dashboard for identifying vulnerabilities and configuration risks across all Alibaba Cloud resources?",
+                "options": {
+                    "A": "Cloud Monitor",
+                    "B": "Cloud Config",
+                    "C": "Cloud Security Center",
+                    "D": "ActionTrail"
+                },
+                "answer": "C",
+                "detailedexplanation": "Cloud Security Center (formerly Server Guard) is a unified security management system. It identifies, analyzes, and handles security risks like vulnerabilities, suspicious logins, and malware across ECS, RDS, and other services."
+            },
+            {
+                "id": 23,
+                "domain": "Object Storage Service (OSS)",
+                "difficulty": "Hard",
+                "question": "What is the purpose of 'Bucket Policies' in OSS?",
+                "options": {
+                    "A": "To define the lifecycle of objects.",
+                    "B": "To grant or restrict access to the bucket for specific users or IP ranges.",
+                    "C": "To set the storage class (e.g., IA or Archive).",
+                    "D": "To enable cross-region replication."
+                },
+                "answer": "B",
+                "detailedexplanation": "While RAM is used for managing user-level permissions, Bucket Policies are resource-based policies. They allow you to define complex access rules directly on the bucket, such as 'Allow only IP 1.2.3.4 to download' or 'Grant anonymous access to a specific folder'."
+            },
+            {
+                "id": 24,
+                "domain": "Elastic Compute Service (ECS)",
+                "difficulty": "Easy",
+                "question": "Which payment method for ECS is best for long-term, predictable workloads to save the most money?",
+                "options": {
+                    "A": "Pay-As-You-Go",
+                    "B": "Preemptible Instances",
+                    "C": "Subscription",
+                    "D": "Spot Instances"
+                },
+                "answer": "C",
+                "detailedexplanation": "Subscription (Reserved) instances require upfront payment for a fixed term (monthly or yearly). This offers a significant discount (often 40-70%) compared to Pay-As-You-Go pricing, making it the best choice for stable, 24/7 workloads."
+            },
+            {
+                "id": 25,
+                "domain": "Relational Database Service (RDS)",
+                "difficulty": "Medium",
+                "question": "Which of these is NOT a supported database engine in Alibaba Cloud RDS?",
+                "options": {
+                    "A": "MySQL",
+                    "B": "SQL Server",
+                    "C": "PostgreSQL",
+                    "D": "Oracle Database"
+                },
+                "answer": "D",
+                "detailedexplanation": "Alibaba Cloud RDS supports MySQL, SQL Server, PostgreSQL, and MariaDB. While Alibaba Cloud offers solutions for Oracle migration (like PolarDB or OceanBase), 'Oracle Database' is not a standard engine choice within the 'RDS' product line itself."
+            },
+            {
+                "id": 26,
+                "domain": "Auto Scaling",
+                "difficulty": "Medium",
+                "question": "What is the 'Cooldown Period' in Auto Scaling?",
+                "options": {
+                    "A": "The time it takes for an instance to shut down.",
+                    "B": "A period after a scaling activity where the group does not execute new scaling activities.",
+                    "C": "The time required to warm up the cache on a new instance.",
+                    "D": "The time the system waits before deleting a snapshot."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Cooldown Period prevents 'flapping' or over-scaling. After an instance is added or removed, the system waits for the Cooldown period (e.g., 300 seconds) to allow the metrics (like CPU) to stabilize before triggering another scaling action."
+            },
+            {
+                "id": 27,
+                "domain": "Content Delivery Network (CDN)",
+                "difficulty": "Easy",
+                "question": "What must you do to your domain's DNS to start using Alibaba Cloud CDN?",
+                "options": {
+                    "A": "Delete the A record.",
+                    "B": "Change the nameservers to Alibaba Cloud.",
+                    "C": "Add a CNAME record pointing to the CDN domain provided by Alibaba Cloud.",
+                    "D": "No DNS changes are required."
+                },
+                "answer": "C",
+                "detailedexplanation": "To route user traffic through the CDN, you must go to your DNS provider and create a CNAME record. This record points your website (e.g., www.example.com) to the Alibaba Cloud assigned CNAME (e.g., www.example.com.w.kunlunsl.com)."
+            },
+            {
+                "id": 28,
+                "domain": "Virtual Private Cloud (VPC)",
+                "difficulty": "Medium",
+                "question": "Which service allows you to connect an on-premises data center to an Alibaba Cloud VPC via a physical leased line?",
+                "options": {
+                    "A": "VPN Gateway",
+                    "B": "Express Connect",
+                    "C": "Smart Access Gateway",
+                    "D": "Internet NAT Gateway"
+                },
+                "answer": "B",
+                "detailedexplanation": "Express Connect is the service used for physical, dedicated connections between on-premises environments and Alibaba Cloud. It provides high bandwidth and lower latency compared to a standard VPN over the public internet."
+            },
+            {
+                "id": 29,
+                "domain": "Elastic Compute Service (ECS)",
+                "difficulty": "Medium",
+                "question": "When creating a snapshot of an ECS disk, where is the snapshot data actually stored?",
+                "options": {
+                    "A": "On the same disk as the ECS instance.",
+                    "B": "On a hidden system disk.",
+                    "C": "In an internal Object Storage Service (OSS) bucket managed by Alibaba Cloud.",
+                    "D": "In a separate VPC."
+                },
+                "answer": "C",
+                "detailedexplanation": "ECS Snapshots are stored in an internal, high-reliability storage pool based on OSS technology. This ensures that the snapshot is physically separate from the ECS disk, protecting against local hardware failures."
+            },
+            {
+                "id": 30,
+                "domain": "Cloud Monitor",
+                "difficulty": "Easy",
+                "question": "Which service is used to set up alarms for CPU usage or Disk I/O on your Alibaba Cloud resources?",
+                "options": {
+                    "A": "Cloud Monitor",
+                    "B": "ActionTrail",
+                    "C": "Resource Manager",
+                    "D": "Log Service"
+                },
+                "answer": "A",
+                "detailedexplanation": "Cloud Monitor is the core monitoring service. It collects metrics from all Alibaba Cloud services and allows you to set up 'Alarm Rules' that notify you via Email or SMS when certain thresholds (like 80% CPU usage) are reached."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question mock exam for the Alibaba Cloud ACP Cloud Computing Professional certification.",
+            "cta_final": "If you found these explanations helpful, please give this video a thumbs up and share it with your fellow cloud enthusiasts.",
+            "next_steps": "Don't forget to click the link in the description to access the full course and practice tests. Good luck with your exam!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Smooth fade between questions; highlight correct answer in green; display detailed explanation text after the timer expires."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "AWS Certified Advanced Networking Specialty Practice Exam",
+                "AWS ANS-C01 Certification Training Mock Test",
+                "AWS Advanced Networking Specialty Full Course Questions",
+                "How to Pass AWS Certified Advanced Networking Specialty",
+                "AWS Networking Specialty Exam Prep Guide",
+                "Mastering AWS Advanced Networking Exam Questions",
+                "AWS ANS-C01 Real Exam Scenarios and Answers",
+                "AWS Networking Specialty Certification Practice Questions",
+                "Direct Connect Transit Gateway and VPC Networking Deep Dive",
+                "Ultimate AWS Advanced Networking Exam Simulation"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to tackle the toughest networking challenges in the cloud? The AWS Certified Advanced Networking Specialty is one of the most prestigious and difficult certifications to earn.",
+                "summary": "In this video, we go through 30 high-quality, exam-style practice questions that cover the core domains of the ANS-C01 exam, including Network Design, Implementation, Management, and Security.",
+                "cta_intro": "Follow along and test your knowledge. If you can score 80% or higher, you're on the right track!",
+                "checkfullexamlinkindescription": "For the full 6-set mock exam series, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/aws-certified-advanced-networking-specialty-mock-exam-test/?referralCode=2D6A208173B0F1F41F62",
+                "youtubetitle": "AWS Certified Advanced Networking Specialty Practice Exam ANS-C01 | Full Mock Test with Explanations",
+                "description": "Master the AWS Certified Advanced Networking Specialty (ANS-C01) exam with this comprehensive mock test. We dive deep into complex networking scenarios involving AWS Direct Connect, Transit Gateway, Route 53, and Network Security. Each question is followed by a detailed explanation to ensure you understand the 'why' behind the correct answer.\n\nTopics covered:\n- Design and implement hybrid IT network architectures\n- Design and implement AWS networks\n- Automate AWS tasks\n- Configure network services\n- Design and implement for security and compliance",
+                "tags": "AWS Certification, AWS Advanced Networking, ANS-C01, AWS Networking, Direct Connect, AWS Transit Gateway, VPC, Route 53, BGP, Cloud Networking, AWS Mock Exam",
+                "hashtags": [
+                    "#AWS",
+                    "#AWSNetworking",
+                    "#CloudComputing",
+                    "#ANS-C01",
+                    "#AWSCloud",
+                    "#NetworkingSpecialty"
+                ],
+                "keywords": [
+                    "AWS ANS-C01 questions",
+                    "AWS Advanced Networking tutorial",
+                    "AWS Direct Connect vs VPN",
+                    "Transit Gateway routing",
+                    "AWS Network Security best practices",
+                    "BGP configuration AWS",
+                    "VPC Peering vs Transit Gateway",
+                    "Route 53 Resolver deep dive"
+                ],
+                "mostsearchedongoogle": [
+                    "AWS Certified Advanced Networking Specialty exam cost",
+                    "ANS-C01 study guide",
+                    "AWS Advanced Networking Specialty difficulty",
+                    "AWS networking specialty salary",
+                    "AWS Transit Gateway routing scenarios",
+                    "Direct Connect Gateway vs Transit Gateway",
+                    "How to prepare for AWS ANS-C01",
+                    "AWS advanced networking specialty questions pdf",
+                    "AWS networking interview questions",
+                    "AWS VPC design best practices"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Network Design",
+                "difficulty": "Hard",
+                "question": "A company requires a high-bandwidth, low-latency connection between their on-premises data center and AWS. They need to access multiple VPCs across different AWS Regions using a single AWS Direct Connect connection. Which architecture meets these requirements with the least administrative overhead?",
+                "options": {
+                    "A": "Create a public virtual interface (VIF) and establish IPsec VPNs to each VPC.",
+                    "B": "Use a Direct Connect gateway and associate it with a Transit Gateway in each region.",
+                    "C": "Establish a private VIF for each VPC via the Direct Connect connection.",
+                    "D": "Use VPC Peering between all VPCs and connect the Direct Connect to a single 'hub' VPC."
+                },
+                "answer": "B",
+                "detailedexplanation": "A Direct Connect gateway (DXGW) allows a Direct Connect connection to access VPCs in any AWS Region (except China). By associating the DXGW with a Transit Gateway (TGW) in each region, you can scale to thousands of VPCs. This 'Transit VIF' approach is the most scalable and efficient way to handle multi-region, multi-VPC connectivity over Direct Connect, reducing the overhead of managing individual Private VIFs or complex VPN meshes."
+            },
+            {
+                "id": 2,
+                "domain": "Network Implementation",
+                "difficulty": "Medium",
+                "question": "An application requires an AWS Site-to-Site VPN that supports a maximum throughput of 10 Gbps. Which configuration should the network engineer use?",
+                "options": {
+                    "A": "A single VPN connection to a Virtual Private Gateway.",
+                    "B": "An AWS Direct Connect connection with a public VIF.",
+                    "C": "A Transit Gateway with multiple VPN connections using Equal Cost Multi-Path (ECMP).",
+                    "D": "Multiple Virtual Private Gateways with VPC Peering."
+                },
+                "answer": "C",
+                "detailedexplanation": "A single AWS Site-to-Site VPN tunnel is capped at 1.25 Gbps. To achieve higher throughput like 10 Gbps, you must use a Transit Gateway and enable Equal Cost Multi-Path (ECMP) support. By creating multiple VPN connections (tunnels) to the Transit Gateway, AWS can distribute traffic across them, effectively aggregating the bandwidth to meet the 10 Gbps requirement."
+            },
+            {
+                "id": 3,
+                "domain": "Network Security",
+                "difficulty": "Hard",
+                "question": "A financial services firm needs to inspect all outbound traffic from their VPCs to the internet. The traffic must be inspected by a third-party firewall appliance cluster. Which architecture is recommended for high availability and scalability?",
+                "options": {
+                    "A": "Deploy firewalls in each subnet and change the default route.",
+                    "B": "Use a Transit Gateway and route traffic through a centralized 'Security VPC' using Gateway Load Balancer (GWLB) endpoints.",
+                    "C": "Configure a NAT Gateway to forward all traffic to an EC2 proxy instance.",
+                    "D": "Use VPC Peering to a central VPC where firewalls are deployed in an Auto Scaling group."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Gateway Load Balancer (GWLB) is designed specifically for deploying, scaling, and managing third-party virtual appliances. By using a centralized Inspection/Security VPC connected via Transit Gateway, you can route all outbound traffic through GWLB endpoints. This ensures traffic is transparently inspected, maintains flow symmetry, and allows the firewall fleet to scale horizontally without manual routing changes."
+            },
+            {
+                "id": 4,
+                "domain": "Management and Operations",
+                "difficulty": "Medium",
+                "question": "You are troubleshooting a connectivity issue between two VPCs connected via VPC Peering. The instances in VPC A cannot ping instances in VPC B. Security groups and NACLs are wide open. What is the most likely cause?",
+                "options": {
+                    "A": "The MTU size is mismatching between the instances.",
+                    "B": "VPC Peering does not support ICMP traffic.",
+                    "C": "The route tables in both VPCs have not been updated to point to the peering connection ID.",
+                    "D": "The VPCs have overlapping CIDR blocks."
+                },
+                "answer": "C",
+                "detailedexplanation": "Establishing a VPC Peering connection only creates the 'link' between VPCs. For traffic to flow, you must manually add routes to the route tables of both VPCs. Each route table in VPC A must have a route for VPC B's CIDR pointing to the pcx-xxxx (peering) ID, and vice versa. Overlapping CIDRs would prevent the peering from being created in the first place."
+            },
+            {
+                "id": 5,
+                "domain": "Network Design",
+                "difficulty": "Hard",
+                "question": "A company wants to implement a disaster recovery strategy for their Direct Connect connection. They require the shortest possible failover time for their mission-critical workloads. Which feature should be enabled?",
+                "options": {
+                    "A": "Bidirectional Forwarding Detection (BFD).",
+                    "B": "BGP Graceful Restart.",
+                    "C": "Route 53 Health Checks.",
+                    "D": "AS-Path Prepending."
+                },
+                "answer": "A",
+                "detailedexplanation": "Bidirectional Forwarding Detection (BFD) provides fast forwarding path failure detection. Without BFD, BGP rely on keepalive timers which can take up to 90 seconds to time out. BFD can detect a link failure in sub-second intervals, allowing for much faster convergence and failover to a backup connection (like another Direct Connect or a VPN)."
+            },
+            {
+                "id": 6,
+                "domain": "Network Security",
+                "difficulty": "Medium",
+                "question": "Which AWS service can be used to protect a web application from common web exploits and also allows you to filter traffic based on geographic location?",
+                "options": {
+                    "A": "AWS Shield Advanced",
+                    "B": "AWS WAF",
+                    "C": "Amazon Inspector",
+                    "D": "AWS Network Firewall"
+                },
+                "answer": "B",
+                "detailedexplanation": "AWS WAF (Web Application Firewall) allows you to create rules to block common attacks such as SQL injection or cross-site scripting. It also includes a geo-match condition, allowing you to block or allow traffic based on the country of origin. While Shield Advanced protects against DDoS, WAF is the correct tool for application-layer filtering and geo-blocking."
+            },
+            {
+                "id": 7,
+                "domain": "Network Implementation",
+                "difficulty": "Hard",
+                "question": "A company has a Direct Connect connection with a Private VIF. They need to access S3 buckets and DynamoDB tables over the Direct Connect. What is the best way to achieve this?",
+                "options": {
+                    "A": "Configure a Public VIF on the Direct Connect connection.",
+                    "B": "Use a Gateway Endpoint for S3 and DynamoDB.",
+                    "C": "Use an Interface VPC Endpoint for S3 and DynamoDB.",
+                    "D": "Set up a NAT Gateway in the VPC."
+                },
+                "answer": "A",
+                "detailedexplanation": "To access public AWS services like S3 and DynamoDB over Direct Connect, a Public VIF is the standard method as it advertises AWS public IP ranges to your on-premises router. While Interface Endpoints (PrivateLink) can be accessed over a Private VIF, Gateway Endpoints (like the standard S3/DynamoDB endpoints) are not reachable over Direct Connect Private VIFs without a proxy or complex routing. Therefore, Public VIF is the most direct solution for reaching public services."
+            },
+            {
+                "id": 8,
+                "domain": "Management and Operations",
+                "difficulty": "Medium",
+                "question": "You need to capture information about the IP traffic going to and from network interfaces in your VPC to troubleshoot why some traffic is being dropped. Which feature should you use?",
+                "options": {
+                    "A": "CloudWatch Metrics",
+                    "B": "VPC Flow Logs",
+                    "C": "AWS Trusted Advisor",
+                    "D": "Amazon GuardDuty"
+                },
+                "answer": "B",
+                "detailedexplanation": "VPC Flow Logs capture metadata about the IP traffic (source, destination, port, protocol, and action—Accept or Reject) for network interfaces. This is the primary tool for troubleshooting connectivity issues and verifying if Security Group or NACL rules are blocking traffic."
+            },
+            {
+                "id": 9,
+                "domain": "Network Design",
+                "difficulty": "Hard",
+                "question": "A multinational corporation uses a Transit Gateway to connect VPCs across different regions. They want to ensure that traffic between two specific regions never traverses the public internet. What should they use?",
+                "options": {
+                    "A": "Inter-Region VPC Peering",
+                    "B": "Transit Gateway Inter-Region Peering",
+                    "C": "Site-to-Site VPN with Accelerated VPN",
+                    "D": "Direct Connect Public VIF"
+                },
+                "answer": "B",
+                "detailedexplanation": "Transit Gateway Inter-Region Peering allows you to connect Transit Gateways across different AWS Regions. This peering traffic stays entirely on the AWS global network backbone and never traverses the public internet, providing high security and consistent performance."
+            },
+            {
+                "id": 10,
+                "domain": "Network Security",
+                "difficulty": "Hard",
+                "question": "How does AWS Network Firewall differ from Security Groups?",
+                "options": {
+                    "A": "Security Groups are stateless, while Network Firewall is stateful.",
+                    "B": "Network Firewall can perform Deep Packet Inspection (DPI) and FQDN filtering, which Security Groups cannot.",
+                    "C": "Network Firewall only operates at Layer 3.",
+                    "D": "Security Groups are applied at the subnet level, while Network Firewall is applied at the instance level."
+                },
+                "answer": "B",
+                "detailedexplanation": "AWS Network Firewall is a managed service that provides advanced protections including Deep Packet Inspection (DPI), intrusion prevention (IPS), and web filtering (FQDN). Security Groups are stateful firewalls at the instance/ENI level that only filter based on IP/Port/Protocol, but cannot inspect the content of the packets or filter by domain name."
+            },
+            {
+                "id": 11,
+                "domain": "Network Design",
+                "difficulty": "Medium",
+                "question": "What is the maximum MTU supported for traffic over an AWS Direct Connect connection with a Private VIF?",
+                "options": {
+                    "A": "1500 bytes",
+                    "B": "9001 bytes",
+                    "C": "1492 bytes",
+                    "D": "8500 bytes"
+                },
+                "answer": "B",
+                "detailedexplanation": "AWS Direct Connect supports Jumbo Frames with an MTU of up to 9001 bytes for Private and Transit VIFs. However, the MTU must be supported and configured on the end-to-end path (on-premises router and the AWS resources) to be effective. Public VIFs are limited to 1500 bytes."
+            },
+            {
+                "id": 12,
+                "domain": "Network Implementation",
+                "difficulty": "Hard",
+                "question": "A company wants to share their internal DNS zones in VPC A with VPC B and VPC C. They are using Route 53 Private Hosted Zones. What is the most efficient way to achieve this?",
+                "options": {
+                    "A": "Create duplicate hosted zones in each VPC.",
+                    "B": "Associate VPC B and VPC C with the Private Hosted Zone in VPC A.",
+                    "C": "Use Route 53 Resolver Endpoints and Forwarding Rules.",
+                    "D": "Configure a VPC Peering mesh and use the AmazonProvidedDNS."
+                },
+                "answer": "B",
+                "detailedexplanation": "Route 53 Private Hosted Zones can be associated with multiple VPCs, even those belonging to different AWS accounts. This allows all associated VPCs to resolve the same internal DNS records without the need for additional infrastructure like Resolvers or manual record synchronization."
+            },
+            {
+                "id": 13,
+                "domain": "Network Design",
+                "difficulty": "Medium",
+                "question": "Which BGP attribute does AWS use to determine the preferred path for inbound traffic from your customer gateway to AWS when multiple Direct Connect paths exist?",
+                "options": {
+                    "A": "Local Preference",
+                    "B": "Multi-Exit Discriminator (MED)",
+                    "C": "AS-Path Prepending",
+                    "D": "Weight"
+                },
+                "answer": "B",
+                "detailedexplanation": "For inbound traffic (from AWS to your on-premises), AWS honors the Multi-Exit Discriminator (MED). You can set different MED values on your advertised routes to indicate which path AWS should prefer (lower MED is preferred). AS-Path prepending is also used, but MED is often the primary mechanism for fine-grained control over multiple Direct Connect links."
+            },
+            {
+                "id": 14,
+                "domain": "Network Security",
+                "difficulty": "Hard",
+                "question": "A user is trying to connect to a service via AWS PrivateLink but the connection is failing. The service provider has accepted the connection request. What is the most likely issue on the consumer side?",
+                "options": {
+                    "A": "The consumer's Security Group does not allow outbound traffic to the Interface Endpoint.",
+                    "B": "The consumer's Security Group does not allow inbound traffic from the provider's CIDR.",
+                    "C": "The VPC Endpoint is in a different region than the consumer instance.",
+                    "D": "The Interface Endpoint doesn't have a Private DNS name enabled."
+                },
+                "answer": "A",
+                "detailedexplanation": "When using an Interface VPC Endpoint, the consumer's instance must be able to reach the IP address of the endpoint. The Security Group attached to the *Interface Endpoint* must allow inbound traffic (typically on port 443 or the service port) from the consumer instance's IP or Security Group. Common mistakes include forgetting to allow this inbound traffic on the endpoint's SG."
+            },
+            {
+                "id": 15,
+                "domain": "Network Implementation",
+                "difficulty": "Medium",
+                "question": "In a Transit Gateway environment, what is 'Route Propagation'?",
+                "options": {
+                    "A": "Manually adding routes to the TGW route table.",
+                    "B": "The process where a VPC or VPN connection automatically advertises its routes to the TGW route table.",
+                    "C": "The synchronization of routes between two peered Transit Gateways.",
+                    "D": "The process of updating instance route tables using BGP."
+                },
+                "answer": "B",
+                "detailedexplanation": "Route propagation allows a Transit Gateway attachment to dynamically inject its routes into a TGW route table. For VPC attachments, the VPC CIDR is propagated. For VPN or Direct Connect attachments, the routes learned via BGP are propagated. This eliminates the need for manual static route management within the Transit Gateway itself."
+            },
+            {
+                "id": 16,
+                "domain": "Network Design",
+                "difficulty": "Medium",
+                "question": "You need to connect an on-premises network to AWS with 100 Mbps bandwidth but do not want to use the public internet. What is the best option?",
+                "options": {
+                    "A": "AWS Site-to-Site VPN",
+                    "B": "AWS Direct Connect",
+                    "C": "AWS Client VPN",
+                    "D": "SD-WAN via AWS Marketplace"
+                },
+                "answer": "B",
+                "detailedexplanation": "AWS Direct Connect provides a dedicated physical connection that does not use the public internet. It is available in various speeds starting from 50 Mbps (via partners) up to 100 Gbps. VPN, while cheaper, always traverses the public internet."
+            },
+            {
+                "id": 17,
+                "domain": "Management and Operations",
+                "difficulty": "Hard",
+                "question": "Which tool provides a centralized view for monitoring the health of your global network across AWS and on-premises?",
+                "options": {
+                    "A": "AWS Network Manager",
+                    "B": "AWS Resource Access Manager",
+                    "C": "Amazon CloudWatch Network Monitor",
+                    "D": "AWS Config"
+                },
+                "answer": "A",
+                "detailedexplanation": "AWS Network Manager (part of AWS Cloud WAN and Transit Gateway) provides a single dashboard to visualize and monitor your global network. It integrates with Transit Gateways and SD-WAN devices to provide performance metrics, topology diagrams, and health alerts for your entire hybrid network."
+            },
+            {
+                "id": 18,
+                "domain": "Network Implementation",
+                "difficulty": "Medium",
+                "question": "When configuring a Transit Gateway, what does the 'Appliance Mode' setting do?",
+                "options": {
+                    "A": "It increases the throughput of the Transit Gateway.",
+                    "B": "It ensures flow symmetry by keeping traffic within the same Availability Zone for the life of the flow.",
+                    "C": "It allows the Transit Gateway to act as a Layer 7 Load Balancer.",
+                    "D": "It enables encryption for all VPC-to-VPC traffic."
+                },
+                "answer": "B",
+                "detailedexplanation": "Appliance Mode is used when you have a security appliance (like a firewall) in a separate VPC. It ensures that the Transit Gateway sends both the request and response traffic through the same ENI in the same Availability Zone, preventing 'asymmetric routing' which would cause stateful firewalls to drop the traffic."
+            },
+            {
+                "id": 19,
+                "domain": "Network Design",
+                "difficulty": "Hard",
+                "question": "A company is using Route 53 Resolver to bridge DNS between on-premises and AWS. They want to ensure that queries for 'internal.example.com' are sent to on-premises DNS servers. What should they configure?",
+                "options": {
+                    "A": "An Inbound Resolver Endpoint",
+                    "B": "A Private Hosted Zone with an NS record",
+                    "C": "An Outbound Resolver Endpoint and a Forwarding Rule",
+                    "D": "A Route 53 Resolver System Rule"
+                },
+                "answer": "C",
+                "detailedexplanation": "To send DNS queries from AWS to on-premises, you need an Outbound Resolver Endpoint. You then create a Forwarding Rule for the specific domain (internal.example.com) that specifies the IP addresses of the on-premises DNS servers. Inbound Endpoints are for the reverse direction (on-premises querying AWS)."
+            },
+            {
+                "id": 20,
+                "domain": "Network Security",
+                "difficulty": "Medium",
+                "question": "Which of the following is true regarding Network ACLs (NACLs)?",
+                "options": {
+                    "A": "They are stateful.",
+                    "B": "They apply to the individual EC2 instances.",
+                    "C": "They are processed in numbered order, starting with the lowest number.",
+                    "D": "They can filter traffic by FQDN."
+                },
+                "answer": "C",
+                "detailedexplanation": "Network ACLs (NACLs) are stateless and act as a firewall for the entire subnet. They process rules in numerical order (100, 200, 300...). Because they are stateless, you must explicitly allow both inbound and outbound traffic for a connection to work."
+            },
+            {
+                "id": 21,
+                "domain": "Network Design",
+                "difficulty": "Medium",
+                "question": "Your company needs to connect two VPCs in different regions. The traffic volume is very high, and you want to minimize costs and latency. Which is the best solution?",
+                "options": {
+                    "A": "AWS Transit Gateway with Inter-Region Peering",
+                    "B": "Inter-Region VPC Peering",
+                    "C": "AWS Site-to-Site VPN",
+                    "D": "AWS Cloud WAN"
+                },
+                "answer": "B",
+                "detailedexplanation": "Inter-Region VPC Peering is often the most cost-effective and lowest-latency option for high-volume traffic between two specific VPCs. Unlike Transit Gateway, there are no hourly processing fees for the data transfer in VPC Peering beyond the standard inter-region data transfer rates. Transit Gateway adds a per-GB processing charge."
+            },
+            {
+                "id": 22,
+                "domain": "Network Implementation",
+                "difficulty": "Hard",
+                "question": "You have a Direct Connect connection with a 1Gbps capacity. You want to encrypt the traffic between your on-premises data center and your AWS VPC. How can you achieve this?",
+                "options": {
+                    "A": "Direct Connect is encrypted by default at Layer 2.",
+                    "B": "Create a Public VIF and establish an IPsec VPN over it.",
+                    "C": "Create a Private VIF and establish an IPsec VPN using the Private VIF IPs.",
+                    "D": "Enable MACsec on the Direct Connect port."
+                },
+                "answer": "D",
+                "detailedexplanation": "For encryption on a Direct Connect link, you have two main options: IEEE 802.1AE MACsec (Layer 2 encryption) for 10Gbps or 100Gbps links, or running an IPsec VPN (Layer 3) over a Private or Public VIF. Since the question asks to encrypt the traffic and the link is 1Gbps, MACsec is available on certain 1G/10G/100G dedicated connections. However, IPsec over Private VIF is a more common architectural answer for 'VPN over DX'."
+            },
+            {
+                "id": 23,
+                "domain": "Management and Operations",
+                "difficulty": "Medium",
+                "question": "You want to perform a 'dry run' of a network change to see if it will break connectivity. Which tool allows you to analyze path reachability without sending actual traffic?",
+                "options": {
+                    "A": "VPC Reachability Analyzer",
+                    "B": "VPC Flow Logs",
+                    "C": "AWS Firewall Manager",
+                    "D": "Amazon Inspector"
+                },
+                "answer": "A",
+                "detailedexplanation": "VPC Reachability Analyzer is a configuration analysis tool that enables you to perform reachability analysis between two resources in your VPC. It uses automated reasoning to check the configuration (Route tables, SGs, NACLs, etc.) without sending any packets, making it perfect for verifying changes."
+            },
+            {
+                "id": 24,
+                "domain": "Network Design",
+                "difficulty": "Medium",
+                "question": "What is the purpose of a Route 53 Alias record compared to a CNAME record?",
+                "options": {
+                    "A": "Alias records are slower than CNAMEs.",
+                    "B": "Alias records can be used for the zone apex (e.g., example.com), whereas CNAMEs cannot.",
+                    "C": "CNAME records are free, while Alias records are charged per query.",
+                    "D": "Alias records only work for external domain names."
+                },
+                "answer": "B",
+                "detailedexplanation": "A major advantage of Alias records is that they can be created for the 'zone apex' (naked domain like example.com). DNS standards do not allow a CNAME for the zone apex. Additionally, Route 53 does not charge for Alias record queries if they point to AWS resources like ELBs or S3 buckets."
+            },
+            {
+                "id": 25,
+                "domain": "Network Security",
+                "difficulty": "Hard",
+                "question": "A security audit requires that all data in transit between VPCs in the same region must be encrypted. Which AWS feature provides this automatically without manual configuration?",
+                "options": {
+                    "A": "AWS Site-to-Site VPN",
+                    "B": "Traffic Mirroring",
+                    "C": "Encryption in transit between supported Nitro-based instances.",
+                    "D": "VPC Peering Encryption"
+                },
+                "answer": "C",
+                "detailedexplanation": "AWS automatically encrypts traffic between supported Nitro-based instance types when they communicate within the same VPC or peered VPCs in the same region. This is done at the physical network layer and does not require manual setup of VPNs or certificates."
+            },
+            {
+                "id": 26,
+                "domain": "Network Implementation",
+                "difficulty": "Medium",
+                "question": "How many BGP sessions are established in a single AWS Site-to-Site VPN connection?",
+                "options": {
+                    "A": "1",
+                    "B": "2",
+                    "C": "4",
+                    "D": "Variable based on throughput"
+                },
+                "answer": "B",
+                "detailedexplanation": "An AWS Site-to-Site VPN consists of two tunnels for high availability. Each tunnel has its own outside IP address and its own BGP session. AWS recommends using both tunnels to ensure connectivity during AWS maintenance events."
+            },
+            {
+                "id": 27,
+                "domain": "Network Design",
+                "difficulty": "Hard",
+                "question": "You have multiple VPCs across many accounts and regions. You want to manage global connectivity and security policies through a single, central dashboard. Which service is best suited for this?",
+                "options": {
+                    "A": "AWS Transit Gateway",
+                    "B": "AWS Cloud WAN",
+                    "C": "AWS Organization",
+                    "D": "VPC Lattice"
+                },
+                "answer": "B",
+                "detailedexplanation": "AWS Cloud WAN is a managed wide-area network (WAN) service. It allows you to build, manage, and monitor a global network that connects your resources across AWS Regions and on-premises locations using a 'Core Network Policy' to define your routing and security intent."
+            },
+            {
+                "id": 28,
+                "domain": "Network Security",
+                "difficulty": "Medium",
+                "question": "Which service protects your applications from DDoS attacks and is available at no additional charge for all AWS customers?",
+                "options": {
+                    "A": "AWS Shield Standard",
+                    "B": "AWS Shield Advanced",
+                    "C": "AWS WAF",
+                    "D": "AWS Firewall Manager"
+                },
+                "answer": "A",
+                "detailedexplanation": "AWS Shield Standard provides automatic protection against common Layer 3 and 4 DDoS attacks (like SYN floods or Reflection attacks). It is automatically enabled for all AWS customers at no extra cost. Shield Advanced is a paid tier with more features."
+            },
+            {
+                "id": 29,
+                "domain": "Network Implementation",
+                "difficulty": "Hard",
+                "question": "What happens if you advertise a CIDR block from on-premises to AWS via BGP that is exactly the same as the VPC CIDR?",
+                "options": {
+                    "A": "BGP will prefer the on-premises route.",
+                    "B": "The VPC will stop functioning.",
+                    "C": "The local VPC route always takes precedence over the propagated BGP route.",
+                    "D": "Traffic will be load-balanced between the VPC and on-premises."
+                },
+                "answer": "C",
+                "detailedexplanation": "In an AWS route table, the 'Local' route (the VPC's own CIDR) is always the most preferred and cannot be overridden by any propagated or static route. If you advertise the same CIDR via BGP, the VPC will continue to route internal traffic locally, and the external advertisement will likely be ignored or cause routing loops elsewhere."
+            },
+            {
+                "id": 30,
+                "domain": "Network Design",
+                "difficulty": "Medium",
+                "question": "You are designing a solution for an application that requires a static IP address that can be reached from the internet, but the underlying EC2 instances might change. Which AWS feature provides this?",
+                "options": {
+                    "A": "Elastic IP Address",
+                    "B": "Secondary Private IP",
+                    "C": "Public IP Address",
+                    "D": "IPv6 Address"
+                },
+                "answer": "A",
+                "detailedexplanation": "An Elastic IP address is a static, public IPv4 address designed for dynamic cloud computing. You can associate it with an instance, and if that instance fails, you can rapidly remapped the address to another instance in your account, ensuring the endpoint remains the same for your users."
+            }
+        ],
+        "outro_script": {
+            "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these networking concepts challenging, don't worry—the Specialty exam is meant to be a deep dive.",
+            "cta_final": "For more practice and a much larger pool of questions with even more detailed scenarios, click the link in the description to access our full AWS Certified Advanced Networking Specialty Mock Exam course on Udemy.",
+            "next_steps": "Don't forget to like this video if it helped you, and subscribe for more AWS certification prep content. Good luck with your studies!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Fade between questions, highlight correct answer in green, incorrect in red."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Automation Anywhere Advanced RPA Professional Certification Prep",
+                "Automation 360 Advanced Exam Mock Test and Explanations",
+                "Mastering Automation Anywhere Certified Advanced RPA Professional",
+                "Automation Anywhere A360 Certification Practice Questions",
+                "How to Pass Automation Anywhere Advanced RPA Exam",
+                "Automation 360 Advanced RPA Professional Training Guide",
+                "A360 RPA Certification Exam Dumps and Real Questions",
+                "Automation Anywhere Certified Advanced RPA Professional Mastery",
+                "Automation 360 Bot Developer Certification Mock Exam",
+                "Complete Guide to Automation Anywhere A360 Certification"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to level up your RPA career and clear the Automation Anywhere Advanced RPA Professional exam on your first try?",
+                "summary": "In this video, we dive deep into 30 high-yield practice questions for the Automation 360 certification, covering everything from Control Room management to advanced Recorder techniques.",
+                "cta_intro": "Make sure to grab a pen and paper to track your score as we go through these real-world scenarios.",
+                "checkfullexamlinkindescription": "For the full 100+ question practice set, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://www.udemy.com/course/advanced-rpa-professional-exam-prep-automation-360-exam-test/?referralCode=9B7335A38838191771A9",
+                "youtubetitle": "Automation Anywhere Certified Advanced RPA Professional A360 Exam Prep - Mock Test",
+                "description": "Unlock your potential with this comprehensive mock exam for the Automation Anywhere Certified Advanced RPA Professional (Automation 360) certification. This video covers the core domains including Bot Creator, Control Room, Packages, and Error Handling to ensure you are exam-ready. Each question is followed by a detailed explanation to help you understand the 'why' behind the correct answer.",
+                "tags": "Automation Anywhere, A360, RPA Certification, Advanced RPA Professional, Automation 360, Bot Developer, Robotic Process Automation, Automation Anywhere Training, A360 Certification Questions, Control Room",
+                "hashtags": [
+                    "#AutomationAnywhere",
+                    "#RPA",
+                    "#A360",
+                    "#CertificationPrep",
+                    "#AdvancedRPA",
+                    "#BotDeveloper"
+                ],
+                "keywords": [
+                    "Automation Anywhere Certified Advanced RPA Professional",
+                    "A360 Mock Test",
+                    "RPA Certification Questions",
+                    "Automation Anywhere A360 Tutorial",
+                    "Control Room Administration",
+                    "Automation Anywhere Exam Dumps",
+                    "Bot Creator Basics",
+                    "Advanced RPA Techniques",
+                    "Automation 360 Packages",
+                    "Error Handling in A360"
+                ],
+                "mostsearchedongoogle": [
+                    "Automation Anywhere Advanced Certification cost",
+                    "Automation 360 exam questions",
+                    "How to pass Automation Anywhere Advanced exam",
+                    "Automation Anywhere A360 training free",
+                    "RPA Professional certification benefits",
+                    "Automation Anywhere Control Room architecture",
+                    "Automation 360 Recorder vs Classic",
+                    "Automation Anywhere variable types",
+                    "Difference between A2019 and A360",
+                    "Automation Anywhere certification path"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Bot Creator",
+                "difficulty": "Intermediate",
+                "question": "Which variable type is best suited for storing a collection of data retrieved from an Excel spreadsheet for iteration?",
+                "options": {
+                    "A": "List",
+                    "B": "Dictionary",
+                    "C": "Table",
+                    "D": "Record"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Table variable is specifically designed to store two-dimensional data, such as the rows and columns found in an Excel worksheet. While a Record variable can hold a single row during an iteration, the Table variable is the primary container for the entire dataset retrieved via the 'Get Worksheet as Table' command in the Excel Advanced package."
+            },
+            {
+                "id": 2,
+                "domain": "Control Room",
+                "difficulty": "Advanced",
+                "question": "A developer needs to ensure that a specific bot runs only on a particular Bot Runner machine. Where should this be configured?",
+                "options": {
+                    "A": "In the Bot Creator local settings",
+                    "B": "Within the Run Bot menu by selecting 'Run bot on specific device'",
+                    "C": "In the Device Pool settings only",
+                    "D": "By hardcoding the machine name in the bot script"
+                },
+                "answer": "B",
+                "detailedexplanation": "When deploying a bot from the Control Room, the user can choose the 'Run bot' option and specify the deployment target. By selecting a specific device from the list of available Bot Runners, the administrator ensures the workload is directed to that hardware specifically, which is crucial for tasks requiring unique local configurations or software licenses."
+            },
+            {
+                "id": 3,
+                "domain": "Recorder",
+                "difficulty": "Intermediate",
+                "question": "Which Capture action technology is most effective for interacting with legacy applications that do not have accessible UI objects?",
+                "options": {
+                    "A": "Object-based capturing",
+                    "B": "Image-based capturing",
+                    "C": "Coordinate-based capturing",
+                    "D": "Text-based capturing"
+                },
+                "answer": "B",
+                "detailedexplanation": "When the Universal Recorder cannot identify internal UI elements (common in Citrix environments or older legacy apps), Image-based capturing is the fallback. It uses visual pattern matching to find the UI component. While Coordinate-based is an option, it is less reliable than Image-based capturing which can adapt to slight screen shifts."
+            },
+            {
+                "id": 4,
+                "domain": "Error Handling",
+                "difficulty": "Advanced",
+                "question": "In the Try-Catch-Finally block, when does the 'Finally' block execute?",
+                "options": {
+                    "A": "Only if an error occurs in the Try block",
+                    "B": "Only if the Catch block fails to resolve the error",
+                    "C": "Every time, regardless of whether an error occurred or not",
+                    "D": "Only if no error occurs in the Try block"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'Finally' block is designed for cleanup activities (like closing an application or logging out). It is guaranteed to run whether the 'Try' block completed successfully or the 'Catch' block was triggered by an exception. This ensures that the system state is reset regardless of the automation's success."
+            },
+            {
+                "id": 5,
+                "domain": "Workload Management",
+                "difficulty": "Advanced",
+                "question": "What is the primary benefit of using a Work Queue in Automation 360?",
+                "options": {
+                    "A": "To speed up the development of individual bots",
+                    "B": "To distribute work items across multiple Bot Runners simultaneously",
+                    "C": "To store encrypted passwords",
+                    "D": "To schedule bots to run at specific times"
+                },
+                "answer": "B",
+                "detailedexplanation": "Work Queues allow for the 'Producer-Consumer' model. They enable high-volume data processing by allowing multiple Bot Runners (Consumers) to pull work items from a central queue (Workload) simultaneously, ensuring scalability and efficient resource utilization."
+            },
+            {
+                "id": 6,
+                "domain": "Credential Vault",
+                "difficulty": "Intermediate",
+                "question": "Which role in the Control Room is allowed to create 'Lockers' in the Credential Vault?",
+                "options": {
+                    "A": "Bot Developer",
+                    "B": "Locker Admin",
+                    "C": "Bot Runner",
+                    "D": "Guest User"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Locker Admin' role (or a custom role with equivalent permissions) is required to manage the lifecycle of Lockers. While Bot Developers can use credentials within Lockers they have access to, they do not have the inherent right to create the security containers (Lockers) themselves."
+            },
+            {
+                "id": 7,
+                "domain": "Variable Management",
+                "difficulty": "Intermediate",
+                "question": "Which of the following is a system-defined variable in Automation 360?",
+                "options": {
+                    "A": "$String:MyVariable$",
+                    "B": "$AA-ControlRoom$",
+                    "C": "$CPUBasedDelay$",
+                    "D": "$System:Date$"
+                },
+                "answer": "D",
+                "detailedexplanation": "Automation 360 provides built-in system variables like $System:Date$, $System:Day$, and $System:Hour$ to provide real-time environment data. Custom variables created by users do not have the 'System' prefix."
+            },
+            {
+                "id": 8,
+                "domain": "Excel Automation",
+                "difficulty": "Intermediate",
+                "question": "What is the difference between Excel Basic and Excel Advanced packages?",
+                "options": {
+                    "A": "Basic requires MS Excel to be installed, Advanced does not",
+                    "B": "Advanced requires MS Excel to be installed, Basic does not",
+                    "C": "Basic is only for .csv files",
+                    "D": "There is no difference"
+                },
+                "answer": "B",
+                "detailedexplanation": "Excel Advanced utilizes the Excel API and therefore requires Microsoft Excel to be installed on the Bot Runner machine. Excel Basic uses a driver-based approach to read/write Excel files (.xlsx) even if the Microsoft Office suite is not present on the machine."
+            },
+            {
+                "id": 9,
+                "domain": "Bot Insight",
+                "difficulty": "Advanced",
+                "question": "Which action must a developer take to ensure specific data is captured for business analytics in Bot Insight?",
+                "options": {
+                    "A": "Use the 'Analyze' variable property",
+                    "B": "Export the bot as a PDF",
+                    "C": "Use the 'Log to File' command",
+                    "D": "Tag variables as 'Tracked'"
+                },
+                "answer": "A",
+                "detailedexplanation": "In Automation 360, when creating or editing a variable, there is a checkbox to 'Include in Analytics'. By selecting this, the bot automatically sends the variable's value to Bot Insight during execution, allowing for the generation of operational and business dashboards."
+            },
+            {
+                "id": 10,
+                "domain": "Trigger",
+                "difficulty": "Intermediate",
+                "question": "Which trigger type would you use to start a bot as soon as a specific file is dropped into a folder?",
+                "options": {
+                    "A": "Email Trigger",
+                    "B": "Folder Trigger",
+                    "C": "Interface Trigger",
+                    "D": "Process Trigger"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Folder Trigger monitors local or network directories. It can be configured to fire based on several events: when a file is created, deleted, renamed, or modified. This is ideal for 'Hot Folder' automation patterns."
+            },
+            {
+                "id": 11,
+                "domain": "Packages",
+                "difficulty": "Advanced",
+                "question": "If a bot is using version 2.0.0 of the Mail package but the Control Room has version 3.0.0 available, what happens?",
+                "options": {
+                    "A": "The bot automatically upgrades to 3.0.0",
+                    "B": "The bot will fail to run",
+                    "C": "The bot continues to use 2.0.0 unless manually updated",
+                    "D": "The Control Room deletes the 2.0.0 version"
+                },
+                "answer": "C",
+                "detailedexplanation": "Automation 360 supports package versioning. A bot is compiled with a specific package version to ensure stability. Even if a newer version is uploaded to the Control Room, the bot will remain on its assigned version until a developer explicitly changes it in the Bot Creator."
+            },
+            {
+                "id": 12,
+                "domain": "Loops",
+                "difficulty": "Intermediate",
+                "question": "Which Loop iterator is most efficient for processing each row in a SQL query result?",
+                "options": {
+                    "A": "For each row in CSV/TXT",
+                    "B": "For each row in SQL query dataset",
+                    "C": "For each row in Excel",
+                    "D": "While Loop"
+                },
+                "answer": "B",
+                "detailedexplanation": "When using the Database package to execute a query, the 'For each row in SQL query dataset' iterator allows the bot to process the result set record by record, assigning each row's data to a Record variable for easy access to specific columns."
+            },
+            {
+                "id": 13,
+                "domain": "Dictionary",
+                "difficulty": "Intermediate",
+                "question": "How do you access a specific value in a Dictionary variable?",
+                "options": {
+                    "A": "Using an Index (Number)",
+                    "B": "Using a Key (String)",
+                    "C": "Using a Row ID",
+                    "D": "Dictionary values cannot be accessed individually"
+                },
+                "answer": "B",
+                "detailedexplanation": "Dictionaries are Key-Value pairs. To retrieve a value, you must provide the specific string key associated with it. This is useful for storing configuration data (e.g., Key: 'URL', Value: 'https://site.com')."
+            },
+            {
+                "id": 14,
+                "domain": "Recorder",
+                "difficulty": "Advanced",
+                "question": "When using the Recorder 'Capture' action, what is 'Object Resiliency' primarily used for?",
+                "options": {
+                    "A": "To make the bot run faster",
+                    "B": "To handle changes in UI properties like 'Path' or 'Name'",
+                    "C": "To encrypt the recorded data",
+                    "D": "To capture images instead of text"
+                },
+                "answer": "B",
+                "detailedexplanation": "Object Resiliency (or 'Smart Recording') allows the bot to identify a UI element even if some of its attributes change slightly between the time of recording and the time of execution. By selecting multiple attributes (DOMXPath, ID, Name), the bot has multiple ways to find the same object."
+            },
+            {
+                "id": 15,
+                "domain": "Administration",
+                "difficulty": "Intermediate",
+                "question": "What is the function of 'Device Pools' in Automation 360?",
+                "options": {
+                    "A": "To group Bot Creators for collaboration",
+                    "B": "To group Bot Runners for workload distribution",
+                    "C": "To store physical hardware specifications",
+                    "D": "To manage licenses for external APIs"
+                },
+                "answer": "B",
+                "detailedexplanation": "Device Pools allow administrators to group multiple Unattended Bot Runner machines together. When a workload is assigned to a pool, the Control Room automatically distributes the tasks to whichever device in the pool is currently available."
+            },
+            {
+                "id": 16,
+                "domain": "Bot Creator",
+                "difficulty": "Intermediate",
+                "question": "Which file extension is used for bots created in Automation 360?",
+                "options": {
+                    "A": ".atmx",
+                    "B": ".bot",
+                    "C": ".xml",
+                    "D": ".json"
+                },
+                "answer": "B",
+                "detailedexplanation": "In Automation 360 (formerly A2019), bots are saved with the '.bot' extension. This is a departure from the older version (v11), which used '.atmx' for TaskBots and '.mbot' for MetaBots."
+            },
+            {
+                "id": 17,
+                "domain": "Security",
+                "difficulty": "Advanced",
+                "question": "What happens when a credential is set to 'User-defined' in a Locker?",
+                "options": {
+                    "A": "The admin provides the value for everyone",
+                    "B": "Each user must provide their own value for that credential",
+                    "C": "The value is automatically generated by the Control Room",
+                    "D": "The credential can only be used by the Admin"
+                },
+                "answer": "B",
+                "detailedexplanation": "User-defined credentials allow for personalized security. For example, if a bot needs to log into a system using the user's personal ID, the Locker Admin defines the field, but each individual Bot Runner/Creator must input their own specific password in their profile."
+            },
+            {
+                "id": 18,
+                "domain": "String Operation",
+                "difficulty": "Intermediate",
+                "question": "Which String action would you use to separate a full name into First and Last names based on a space?",
+                "options": {
+                    "A": "Substring",
+                    "B": "Trim",
+                    "C": "Split",
+                    "D": "Replace"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'Split' action takes a string and a delimiter (like a space or comma) and breaks the string into a List variable. Each segment of the original string becomes an item in that list."
+            },
+            {
+                "id": 19,
+                "domain": "Automation 360 Overview",
+                "difficulty": "Intermediate",
+                "question": "Automation 360 is primarily a _____ platform.",
+                "options": {
+                    "A": "Desktop-only",
+                    "B": "Web-based",
+                    "C": "Command-line only",
+                    "D": "Mainframe-based"
+                },
+                "answer": "B",
+                "detailedexplanation": "Automation 360 is a cloud-native, web-based platform. This means both the Control Room and the Bot Creator (Integrated Development Environment) are accessed via a web browser, requiring no local installation for the IDE itself."
+            },
+            {
+                "id": 20,
+                "domain": "Error Handling",
+                "difficulty": "Intermediate",
+                "question": "What is the purpose of the 'Throw' action?",
+                "options": {
+                    "A": "To ignore an error",
+                    "B": "To manually trigger a custom exception",
+                    "C": "To restart the Bot Runner machine",
+                    "D": "To delete a variable"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Throw' action is used within a bot to signal that a specific condition has occurred which should be treated as an error (e.g., 'Insufficient Funds'). This 'throws' the execution to the nearest 'Catch' block."
+            },
+            {
+                "id": 21,
+                "domain": "Variable Management",
+                "difficulty": "Advanced",
+                "question": "Which variable type is required to pass a full row of data from a Table during a loop?",
+                "options": {
+                    "A": "String",
+                    "B": "Record",
+                    "C": "List",
+                    "D": "Any"
+                },
+                "answer": "B",
+                "detailedexplanation": "When looping through a Table or a CSV, the standard practice is to assign the 'current row' to a Record variable. You can then access columns within that record by index (e.g., $rCurrentRow[0]$) or by column name (e.g., $rCurrentRow{Email}$). "
+            },
+            {
+                "id": 22,
+                "domain": "Browser Automation",
+                "difficulty": "Intermediate",
+                "question": "Which package is recommended for web-based automation tasks in Automation 360?",
+                "options": {
+                    "A": "Web Automation package",
+                    "B": "Browser package",
+                    "C": "Recorder package",
+                    "D": "HTTP package"
+                },
+                "answer": "C",
+                "detailedexplanation": "While the Browser package handles things like opening and closing tabs, the Universal Recorder (within the Recorder package) is the primary and most powerful tool for capturing elements and performing actions (Click, Set Text) on web pages."
+            },
+            {
+                "id": 23,
+                "domain": "Control Room",
+                "difficulty": "Advanced",
+                "question": "What is the 'Audit Log' used for in the Control Room?",
+                "options": {
+                    "A": "To see the source code of a bot",
+                    "B": "To track all user and system activities for compliance",
+                    "C": "To debug a bot's variable values",
+                    "D": "To check the CPU usage of a Bot Runner"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Audit Log is a security feature that records every action taken in the Control Room—such as logging in, creating a user, starting a bot, or changing a locker. It provides a non-repudiable trail for compliance and security auditing."
+            },
+            {
+                "id": 24,
+                "domain": "File Folders",
+                "difficulty": "Intermediate",
+                "question": "How can you check if a file exists before trying to open it?",
+                "options": {
+                    "A": "Use an 'If' condition with the 'File exists' check",
+                    "B": "Use a 'Wait' command with 'Wait for file'",
+                    "C": "Just open it; the Catch block will handle it",
+                    "D": "Both A and B"
+                },
+                "answer": "D",
+                "detailedexplanation": "Best practice involves checking for the file's existence using an 'If' condition or using a 'Wait for file' command if the file is expected to appear after a delay. This prevents unnecessary errors and makes the bot more robust."
+            },
+            {
+                "id": 25,
+                "domain": "Packages",
+                "difficulty": "Intermediate",
+                "question": "How do you add a new package to your Automation 360 Control Room?",
+                "options": {
+                    "A": "Upload it via the 'Packages' section in the Control Room",
+                    "B": "Install it on the local Bot Runner machine",
+                    "C": "Email it to Automation Anywhere support",
+                    "D": "Packages are updated automatically and cannot be added manually"
+                },
+                "answer": "A",
+                "detailedexplanation": "Administrators can navigate to the 'Packages' menu in the Control Room and use the 'Add Package' button to upload .jar or .zip files provided by Automation Anywhere or third-party developers via the Bot Store."
+            },
+            {
+                "id": 26,
+                "domain": "Bot Creator",
+                "difficulty": "Intermediate",
+                "question": "Which view in the Bot Creator allows you to see the bot as a flowchart?",
+                "options": {
+                    "A": "List View",
+                    "B": "Flow View",
+                    "C": "Dual View",
+                    "D": "Script View"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Bot Creator offers three views: List View (linear steps), Flow View (graphical flowchart), and Dual View (both side-by-side). Flow View is excellent for visualizing logical branches and loops."
+            },
+            {
+                "id": 27,
+                "domain": "Control Room",
+                "difficulty": "Advanced",
+                "question": "What is the purpose of 'Check-in' and 'Check-out' in the Control Room?",
+                "options": {
+                    "A": "To manage employee attendance",
+                    "B": "To manage version control and prevent multiple developers from editing the same bot",
+                    "C": "To license the Bot Runner",
+                    "D": "To upload a bot to the Bot Store"
+                },
+                "answer": "B",
+                "detailedexplanation": "Automation 360 uses a repository system. 'Check-out' locks a bot to a specific developer for editing, and 'Check-in' saves those changes back to the public repository (Control Room) and makes it available for deployment or others to edit."
+            },
+            {
+                "id": 28,
+                "domain": "Wait",
+                "difficulty": "Intermediate",
+                "question": "Which is more efficient: 'Wait for window' or a 'Static Delay' of 10 seconds?",
+                "options": {
+                    "A": "Static Delay",
+                    "B": "Wait for window",
+                    "C": "Both are equally efficient",
+                    "D": "Static Delay is better for security"
+                },
+                "answer": "B",
+                "detailedexplanation": "'Wait for window' is a dynamic wait. If the window appears in 1 second, the bot moves on immediately. A static delay of 10 seconds would waste 9 seconds. Dynamic waits make bots faster and more reliable."
+            },
+            {
+                "id": 29,
+                "domain": "Administration",
+                "difficulty": "Intermediate",
+                "question": "Which of these is NOT a type of Bot Runner license?",
+                "options": {
+                    "A": "Attended Bot Runner",
+                    "B": "Unattended Bot Runner",
+                    "C": "Bot Creator",
+                    "D": "Floating Bot Runner"
+                },
+                "answer": "D",
+                "detailedexplanation": "Standard licenses include Bot Creator (for development), Attended Bot Runner (requires human trigger), and Unattended Bot Runner (can be scheduled/triggered by Control Room). 'Floating' is not a standard Automation 360 license type."
+            },
+            {
+                "id": 30,
+                "domain": "Variables",
+                "difficulty": "Intermediate",
+                "question": "What is the primary use of a 'Global Value' in Automation 360?",
+                "options": {
+                    "A": "To store values that change frequently during a bot run",
+                    "B": "To share constant values (like a URL) across all bots in the Control Room",
+                    "C": "To store temporary calculation results",
+                    "D": "To store encrypted passwords"
+                },
+                "answer": "B",
+                "detailedexplanation": "Global Values are defined at the Control Room level. They are read-only for the bots and are perfect for environment-wide constants, such as a company website URL or a standard email address, ensuring consistency across all automated processes."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30-question mock exam for the Automation Anywhere Certified Advanced RPA Professional certification.",
+            "cta_final": "If you found this helpful, please hit the like button and subscribe for more RPA certification content. Don't forget to comment your score below!",
+            "next_steps": "Ready for the full exam experience? Click the Udemy link in the description to get the complete practice tests and pass your exam with confidence."
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Fade out question, slide in correct answer and explanation."
+        }
     }
 ]
