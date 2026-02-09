@@ -16,9 +16,15 @@ if [ -z "$GITHUB_TOKEN" ]; then
     exit 1
 fi
 
-# Get repository info from git
-REPO_OWNER=$(git config --get remote.origin.url | sed -n 's/.*github.com[:/]\([^/]*\)\/.*/\1/p')
-REPO_NAME=$(git config --get remote.origin.url | sed -n 's/.*github.com[:/][^/]*\/\([^.]*\).*/\1/p')
+# Get repository info
+if [ -n "$GITHUB_REPOSITORY" ]; then
+    REPO_OWNER=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f1)
+    REPO_NAME=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f2)
+else
+    # Fallback to git config for local testing
+    REPO_OWNER=$(git config --get remote.origin.url | sed -n 's/.*github.com[:/]\([^/]*\)\/.*/\1/p')
+    REPO_NAME=$(git config --get remote.origin.url | sed -n 's/.*github.com[:/][^/]*\/\([^.]*\).*/\1/p')
+fi
 
 if [ -z "$REPO_OWNER" ] || [ -z "$REPO_NAME" ]; then
     echo "Error: Could not determine repository owner and name." >&2
@@ -34,7 +40,7 @@ log() {
     echo "$1" >&2
 }
 
-log "Creating temporary release: $RELEASE_TAG"
+log "Creating temporary release: $RELEASE_TAG for $REPO_OWNER/$REPO_NAME"
 
 # Create a temporary release
 CREATE_RESPONSE=$(curl -s -X POST \
@@ -49,11 +55,16 @@ CREATE_RESPONSE=$(curl -s -X POST \
     \"prerelease\": true
   }")
 
-# Extract release ID and upload URL
-RELEASE_ID=$(echo "$CREATE_RESPONSE" | grep -o '"id": [0-9]*' | head -1 | grep -o '[0-9]*')
-UPLOAD_URL=$(echo "$CREATE_RESPONSE" | grep -o '"upload_url": "[^"]*"' | sed 's/"upload_url": "\([^{]*\).*/\1/')
+# Extract release ID and upload URL using jq if available, otherwise fallback to grep/sed
+if command -v jq >/dev/null 2>&1; then
+    RELEASE_ID=$(echo "$CREATE_RESPONSE" | jq -r '.id // empty')
+    UPLOAD_URL=$(echo "$CREATE_RESPONSE" | jq -r '.upload_url // empty' | sed 's/{?name,label}//')
+else
+    RELEASE_ID=$(echo "$CREATE_RESPONSE" | grep -o '"id": [0-9]*' | head -1 | grep -o '[0-9]*')
+    UPLOAD_URL=$(echo "$CREATE_RESPONSE" | grep -o '"upload_url": "[^"]*"' | sed 's/"upload_url": "\([^{]*\).*/\1/')
+fi
 
-if [ -z "$RELEASE_ID" ] || [ -z "$UPLOAD_URL" ]; then
+if [ -z "$RELEASE_ID" ] || [ -z "$UPLOAD_URL" ] || [ "$RELEASE_ID" == "null" ]; then
     log "Error: Failed to create release."
     log "Response: $CREATE_RESPONSE"
     exit 1

@@ -45,16 +45,36 @@ fi
 
 # --- Try Catbox.moe ---
 log "Trying Catbox.moe..."
-RESPONSE=$(curl -s -F "reqtype=fileupload" -F "fileToUpload=@$FILE_PATH" https://catbox.moe/user/api.php)
+RESPONSE=$(curl -sL -F "reqtype=fileupload" -F "fileToUpload=@$FILE_PATH" https://catbox.moe/user/api.php)
 if [[ $RESPONSE == http* ]]; then
     echo "$RESPONSE"
     exit 0
 fi
 log "Catbox failed."
 
+# --- Try 0x0.st (Reliable) ---
+log "Trying 0x0.st..."
+RESPONSE=$(curl -sL -F "file=@$FILE_PATH" https://0x0.st)
+if [[ $RESPONSE == http* ]]; then
+    echo "$RESPONSE"
+    exit 0
+fi
+log "0x0.st failed."
+
+# --- Try Pixeldrain (Reliable) ---
+log "Trying Pixeldrain.com..."
+RESPONSE=$(curl -sL -F "file=@$FILE_PATH" https://pixeldrain.com/api/file/)
+# Response: {"id":"XXXX","success":true}
+ID=$(echo "$RESPONSE" | grep -o '"id":"[^"]*"' | cut -d'"' -f4)
+if [ -n "$ID" ]; then
+    echo "https://pixeldrain.com/api/file/$ID"
+    exit 0
+fi
+log "Pixeldrain failed."
+
 # --- Try File.io (Very reliable) ---
 log "Trying File.io..."
-RESPONSE=$(curl -s -F "file=@$FILE_PATH" https://file.io)
+RESPONSE=$(curl -sL -F "file=@$FILE_PATH" https://file.io)
 # Response: {"success":true,"link":"https://file.io/XXXX",...}
 LINK=$(echo "$RESPONSE" | grep -o 'https://file.io/[a-zA-Z0-9]*')
 if [[ $LINK == http* ]]; then
@@ -66,7 +86,7 @@ log "File.io failed."
 # --- Try Transfer.sh ---
 log "Trying Transfer.sh..."
 # curl --upload-file ./hello.txt https://transfer.sh/hello.txt
-RESPONSE=$(curl -s --upload-file "$FILE_PATH" "https://transfer.sh/$(basename $FILE_PATH)")
+RESPONSE=$(curl -sL --upload-file "$FILE_PATH" "https://transfer.sh/$(basename $FILE_PATH)")
 if [[ $RESPONSE == http* ]]; then
     echo "$RESPONSE"
     exit 0
@@ -75,7 +95,7 @@ log "Transfer.sh failed."
 
 # --- Try Bashupload.com ---
 log "Trying Bashupload.com..."
-RESPONSE=$(curl -s --upload-file "$FILE_PATH" "https://bashupload.com/$(basename $FILE_PATH)")
+RESPONSE=$(curl -sL --upload-file "$FILE_PATH" "https://bashupload.com/$(basename $FILE_PATH)")
 LINK=$(echo "$RESPONSE" | grep -o 'https://bashupload.com/[^ ]*')
 if [[ $LINK == http* ]]; then
     echo "$LINK"
@@ -85,7 +105,7 @@ log "Bashupload failed."
 
 # --- Try Oshi.at ---
 log "Trying Oshi.at..."
-RESPONSE=$(curl -s -F "f=@$FILE_PATH" https://oshi.at)
+RESPONSE=$(curl -sL -F "f=@$FILE_PATH" https://oshi.at)
 LINK=$(echo "$RESPONSE" | grep -o 'https://oshi.at/[a-zA-Z0-9]*')
 if [[ $LINK == http* ]]; then
     echo "$LINK"
@@ -93,5 +113,5 @@ if [[ $LINK == http* ]]; then
 fi
 log "Oshi.at failed."
 
-log "Error: All hosting providers failed."
+log "Error: All hosting providers failed. Please check the logs above for details."
 exit 1
