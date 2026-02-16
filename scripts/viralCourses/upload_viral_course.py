@@ -68,7 +68,7 @@ def generate_metadata(asset_data, timestamps=None):
     
     # Course link (first)
     if course_link:
-        description_parts.append(f"📚 Practice Exam Questions and Answers: {course_link}")
+        description_parts.append(f"{course_title}: {course_link} ")
         description_parts.append("")
     
     # Main description
@@ -159,7 +159,7 @@ def upload_viral_video():
         print(f"📺 {title}\n")
         print(f"Watch the full video here 👇")
         print(f"{video_url}\n")
-        print(f"Please like and subscribe for more free courses! 📚")
+        print(f"Please like and subscribe for more free courses! {course_title if course_title else ''}")
         print("="*50 + "\n")
         
 
