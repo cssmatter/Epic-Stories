@@ -2,496 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Software Testing Interview Questions and Answers",
-                "Top Software Testing Interview Questions for Freshers and Experienced",
-                "Software QA Testing Interview Preparation Guide",
-                "Manual Testing Interview Questions and Answers Comprehensive Set",
-                "Software Testing Mastery Practice Test",
-                "Crack Your Next Software Testing Interview",
-                "QA Engineer Interview Questions Practice Session",
-                "Common Software Testing Interview Questions Explained",
-                "Software Testing Technical Interview Prep",
-                "Everything You Need for Software Testing Interviews"
-            ],
-            "intro_script": {
-                "hook": "Are you struggling to land your dream role in QA because the interview questions seem tougher than the actual job? Most candidates fail not because they lack skills, but because they can't articulate technical testing concepts under pressure.",
-                "summary": "In this video, we dive deep into 30 essential software testing interview questions covering manual testing, automation concepts, SDLC, and defect management to ensure you are fully prepared for your next technical round.",
-                "cta_intro": "Make sure to grab a notebook and follow along with these scenarios.",
-                "checkfullexamlinkindescription": "For a complete bank of practice tests and mock exams, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/n4kJz6",
-                "youtubetitle": "Software Testing Interview Questions and Answers | QA Testing Practice Test",
-                "description": "Unlock your career in Quality Assurance with this comprehensive guide to Software Testing Interview Questions. We cover everything from the Software Testing Life Cycle (STLC) to Black Box and White Box testing techniques. Whether you are a fresher or an experienced QA engineer, these 30 practice questions will help you sharpen your knowledge and ace your interview. Check out the full exam practice link below for more in-depth preparation.",
-                "tags": "software testing interview questions, QA interview questions, manual testing, software testing certification, QA engineer, SDLC, STLC, defect life cycle, testing types, automation testing interview questions",
-                "hashtags": [
-                    "#SoftwareTesting",
-                    "#QAInterview",
-                    "#ManualTesting",
-                    "#QualityAssurance",
-                    "#TechInterview"
-                ],
-                "keywords": [
-                    "Software Testing Interview Prep",
-                    "QA Engineer Interview",
-                    "Manual Testing Questions",
-                    "STLC Interview Questions",
-                    "Testing Methodology",
-                    "Defect Management",
-                    "Regression Testing",
-                    "Smoke vs Sanity",
-                    "Agile Testing",
-                    "Black Box Testing"
-                ],
-                "mostsearchedongoogle": [
-                    "top software testing interview questions",
-                    "manual testing interview questions for 3 years experience",
-                    "software testing interview questions for freshers",
-                    "QA automation interview questions",
-                    "software testing mock test",
-                    "SDLC and STLC interview questions",
-                    "how to prepare for software testing interview",
-                    "software testing mcq with answers",
-                    "real time software testing interview questions",
-                    "entry level QA interview questions"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Testing Fundamentals",
-                "difficulty": "Easy",
-                "question": "Which of the following is the primary purpose of Software Testing?",
-                "options": {
-                    "A": "To prove that the software has no bugs remaining.",
-                    "B": "To find defects and provide information about the level of quality.",
-                    "C": "To ensure that the development team is working efficiently.",
-                    "D": "To increase the cost of the software development process."
-                },
-                "answer": "B",
-                "detailedexplanation": "The fundamental objective of software testing is to identify defects and assess the quality of the software. According to the principles of testing, exhaustive testing is impossible; therefore, testing cannot prove that a system is 100% bug-free (Option A). Instead, it aims to reduce the risk of failure and ensure the product meets the specified requirements and user needs."
-            },
-            {
-                "id": 2,
-                "domain": "Testing Principles",
-                "difficulty": "Medium",
-                "question": "The concept that 'a small number of modules contain most of the defects' is known as:",
-                "options": {
-                    "A": "Pesticide Paradox",
-                    "B": "Absence-of-errors fallacy",
-                    "C": "Defect Clustering",
-                    "D": "Early Testing"
-                },
-                "answer": "C",
-                "detailedexplanation": "Defect Clustering is based on the Pareto Principle (80/20 rule), which states that approximately 80% of defects are often found in 20% of the modules. Identifying these 'hot spots' allows testers to focus their efforts more effectively. The Pesticide Paradox (Option A) refers to the need to update test cases to find new bugs, while the Absence-of-errors fallacy (Option B) suggests that finding no bugs doesn't mean the system is useful."
-            },
-            {
-                "id": 3,
-                "domain": "SDLC/STLC",
-                "difficulty": "Medium",
-                "question": "At which stage of the Software Testing Life Cycle (STLC) are the test cases written?",
-                "options": {
-                    "A": "Test Planning",
-                    "B": "Requirement Analysis",
-                    "C": "Test Design/Development",
-                    "D": "Test Execution"
-                },
-                "answer": "C",
-                "detailedexplanation": "Test cases and test scripts are formally created during the Test Design or Test Development phase. During Requirement Analysis (Option B), testers understand what to test. During Test Planning (Option A), the strategy and resources are defined. Test Execution (Option D) is the phase where the actual tests are run against the software build."
-            },
-            {
-                "id": 4,
-                "domain": "Testing Types",
-                "difficulty": "Easy",
-                "question": "Which type of testing is performed to ensure that new code changes have not adversely affected existing features?",
-                "options": {
-                    "A": "Smoke Testing",
-                    "B": "Sanity Testing",
-                    "C": "Regression Testing",
-                    "D": "Exploratory Testing"
-                },
-                "answer": "C",
-                "detailedexplanation": "Regression Testing is the process of re-running functional and non-functional tests to ensure that previously developed and tested software still performs correctly after a change (such as bug fixes, configuration changes, or enhancements). This is crucial to prevent 'side effects' in the codebase."
-            },
-            {
-                "id": 5,
-                "domain": "Black Box Techniques",
-                "difficulty": "Medium",
-                "question": "If an input field accepts values between 1 and 100 inclusive, which values would be used for Boundary Value Analysis (BVA)?",
-                "options": {
-                    "A": "0, 1, 100, 101",
-                    "B": "1, 50, 100",
-                    "C": "0, 1, 2, 99, 100, 101",
-                    "D": "1, 2, 100, 101"
-                },
-                "answer": "A",
-                "detailedexplanation": "Boundary Value Analysis focuses on the values at the edge of the boundaries. For a range of 1-100, the boundaries are 1 and 100. Testing involves the boundary value itself and the values just outside those boundaries. Therefore, 0 (invalid low), 1 (valid low), 100 (valid high), and 101 (invalid high) are the standard BVA set."
-            },
-            {
-                "id": 6,
-                "domain": "Testing Levels",
-                "difficulty": "Easy",
-                "question": "What is the primary goal of Unit Testing?",
-                "options": {
-                    "A": "To verify the interaction between different modules.",
-                    "B": "To validate the system against user requirements.",
-                    "C": "To test individual components or modules in isolation.",
-                    "D": "To check the performance of the entire application."
-                },
-                "answer": "C",
-                "detailedexplanation": "Unit testing is the lowest level of testing, typically performed by developers. Its primary goal is to isolate each part of the program and show that the individual parts (methods, classes, or functions) are correct. Integration testing (Option A) focuses on interactions, and Acceptance testing (Option B) validates requirements."
-            },
-            {
-                "id": 7,
-                "domain": "Defect Management",
-                "difficulty": "Medium",
-                "question": "A defect that causes the entire application to crash and prevents further testing is categorized as which severity?",
-                "options": {
-                    "A": "Low",
-                    "B": "Medium",
-                    "C": "High",
-                    "D": "Critical/Blocker"
-                },
-                "answer": "D",
-                "detailedexplanation": "Severity refers to the impact of the bug on the functionality of the software. A 'Critical' or 'Blocker' severity is assigned when the application is unusable, a core feature is completely broken, or the bug prevents any further testing from taking place. High (Option C) might be a major feature failing without a workaround, but the app still runs."
-            },
-            {
-                "id": 8,
-                "domain": "Testing Types",
-                "difficulty": "Easy",
-                "question": "What is the difference between Static and Dynamic testing?",
-                "options": {
-                    "A": "Static testing involves running code; Dynamic testing does not.",
-                    "B": "Static testing is done by testers; Dynamic testing is done by developers.",
-                    "C": "Static testing involves reviewing documents without executing code; Dynamic testing involves code execution.",
-                    "D": "There is no difference between the two."
-                },
-                "answer": "C",
-                "detailedexplanation": "Static testing includes reviews, walkthroughs, and inspections of requirements, design, and code without actually running the software. Dynamic testing requires the software to be executed to observe its behavior and verify functional and non-functional requirements."
-            },
-            {
-                "id": 9,
-                "domain": "Testing Methodology",
-                "difficulty": "Medium",
-                "question": "In Agile methodology, when is testing performed?",
-                "options": {
-                    "A": "At the end of the entire project.",
-                    "B": "Only after the development of a specific module is 100% complete.",
-                    "C": "Continuously and concurrently with development in every sprint.",
-                    "D": "Once every six months."
-                },
-                "answer": "C",
-                "detailedexplanation": "In Agile, testing is not a separate phase; it is an integral part of the development process. Testing happens continuously throughout the sprint. This 'shift-left' approach ensures that defects are found and fixed as early as possible, maintaining a high velocity of quality delivery."
-            },
-            {
-                "id": 10,
-                "domain": "Black Box Techniques",
-                "difficulty": "Medium",
-                "question": "Which technique divides input data into classes where all elements are expected to be treated similarly by the system?",
-                "options": {
-                    "A": "Boundary Value Analysis",
-                    "B": "Equivalence Partitioning",
-                    "C": "Decision Table Testing",
-                    "D": "State Transition Testing"
-                },
-                "answer": "B",
-                "detailedexplanation": "Equivalence Partitioning (EP) is a black-box testing technique that divides the input data of a software unit into partitions of equivalent data from which test cases can be derived. The idea is that if one value in a partition works, all others in that same partition will likely work too, thus reducing the number of required test cases."
-            },
-            {
-                "id": 11,
-                "domain": "White Box Testing",
-                "difficulty": "Hard",
-                "question": "Statement coverage is a technique used in which type of testing?",
-                "options": {
-                    "A": "Black Box Testing",
-                    "B": "White Box Testing",
-                    "C": "Ad-hoc Testing",
-                    "D": "Exploratory Testing"
-                },
-                "answer": "B",
-                "detailedexplanation": "White Box Testing (also known as structural testing) involves looking at the internal logic and structure of the code. Statement coverage, branch coverage, and path coverage are all metrics used in White Box testing to ensure that the internal parts of the code have been executed by the test suite."
-            },
-            {
-                "id": 12,
-                "domain": "Defect Management",
-                "difficulty": "Medium",
-                "question": "What is the state of a defect when it is first identified by a tester?",
-                "options": {
-                    "A": "Assigned",
-                    "B": "Open",
-                    "C": "New",
-                    "D": "Fixed"
-                },
-                "answer": "C",
-                "detailedexplanation": "In a typical Defect Life Cycle, when a tester finds a bug and logs it for the first time, its status is 'New'. Once the lead or manager reviews it and decides it is a valid bug, it may move to 'Open' or 'Assigned' to a specific developer for fixing."
-            },
-            {
-                "id": 13,
-                "domain": "Testing Levels",
-                "difficulty": "Medium",
-                "question": "Who is typically responsible for User Acceptance Testing (UAT)?",
-                "options": {
-                    "A": "The Development Team",
-                    "B": "The QA Team",
-                    "C": "The End Users or Stakeholders",
-                    "D": "The Project Manager"
-                },
-                "answer": "C",
-                "detailedexplanation": "User Acceptance Testing (UAT) is the final phase of testing before the software goes live. It is performed by the client, end-users, or stakeholders to ensure the system supports real-world business scenarios and meets their specific needs. It determines if the software is 'fit for use'."
-            },
-            {
-                "id": 14,
-                "domain": "Non-Functional Testing",
-                "difficulty": "Easy",
-                "question": "Testing the software for its ability to handle a large number of concurrent users is called:",
-                "options": {
-                    "A": "Usability Testing",
-                    "B": "Performance/Load Testing",
-                    "C": "Security Testing",
-                    "D": "Compatibility Testing"
-                },
-                "answer": "B",
-                "detailedexplanation": "Load testing is a subset of performance testing that determines how a system behaves under a specific expected load (e.g., a certain number of concurrent users). Stress testing goes further by pushing the system beyond its limits to see where it breaks."
-            },
-            {
-                "id": 15,
-                "domain": "Testing Terms",
-                "difficulty": "Medium",
-                "question": "What is the term for testing conducted by developers at the developer's site before releasing the product to customers?",
-                "options": {
-                    "A": "Beta Testing",
-                    "B": "Alpha Testing",
-                    "C": "Gamma Testing",
-                    "D": "Delta Testing"
-                },
-                "answer": "B",
-                "detailedexplanation": "Alpha Testing is a type of acceptance testing performed in-house by the development/QA team to find bugs before the product is released to external users. Beta Testing (Option A) is performed by real users in their own environment after Alpha testing is complete."
-            },
-            {
-                "id": 16,
-                "domain": "Testing Strategy",
-                "difficulty": "Hard",
-                "question": "What is 'Sanity Testing'?",
-                "options": {
-                    "A": "Testing performed on a new build to check if it's stable enough for further testing.",
-                    "B": "Brief testing to verify that a specific bug fix works as expected and doesn't break related logic.",
-                    "C": "Testing all possible paths in a program.",
-                    "D": "Testing performed by the customer."
-                },
-                "answer": "B",
-                "detailedexplanation": "Sanity testing is a subset of regression testing. It is performed after receiving a software build with minor code changes or bug fixes to verify that the specific changes work and that no further issues were introduced in that specific area. It is narrow and deep, whereas Smoke testing is wide and shallow."
-            },
-            {
-                "id": 17,
-                "domain": "Defect Management",
-                "difficulty": "Medium",
-                "question": "If a bug is fixed by a developer, but the tester finds it again during re-testing, what should the defect status be?",
-                "options": {
-                    "A": "Closed",
-                    "B": "Deferred",
-                    "C": "Reopened",
-                    "D": "New"
-                },
-                "answer": "C",
-                "detailedexplanation": "When a developer marks a bug as 'Fixed', the tester performs 'Re-testing'. If the bug still exists in the application, the tester changes the status back to 'Reopened' to signal to the developer that the fix was unsuccessful."
-            },
-            {
-                "id": 18,
-                "domain": "Black Box Techniques",
-                "difficulty": "Medium",
-                "question": "Which testing technique is best suited for systems with complex business logic represented by multiple conditions and actions?",
-                "options": {
-                    "A": "Equivalence Partitioning",
-                    "B": "Error Guessing",
-                    "C": "Decision Table Testing",
-                    "D": "State Transition Testing"
-                },
-                "answer": "C",
-                "detailedexplanation": "Decision Table Testing is an ideal technique for capturing system requirements that contain logical conditions. It helps testers map out all possible combinations of inputs and their corresponding outputs/actions, ensuring that no logic path is missed."
-            },
-            {
-                "id": 19,
-                "domain": "Testing Methodology",
-                "difficulty": "Easy",
-                "question": "In the V-Model of software testing, what corresponds to the 'Requirement Analysis' phase?",
-                "options": {
-                    "A": "Unit Testing",
-                    "B": "Integration Testing",
-                    "C": "System Testing",
-                    "D": "User Acceptance Testing"
-                },
-                "answer": "D",
-                "detailedexplanation": "The V-Model maps development phases to corresponding testing phases. User Acceptance Testing (UAT) is planned during the Requirement Analysis phase. Similarly, System Testing is planned during System Design, and Unit Testing is planned during the coding phase."
-            },
-            {
-                "id": 20,
-                "domain": "Testing Levels",
-                "difficulty": "Medium",
-                "question": "What is the focus of 'Integration Testing'?",
-                "options": {
-                    "A": "Testing the software as a whole.",
-                    "B": "Testing the interfaces between combined units/modules.",
-                    "C": "Testing individual functions.",
-                    "D": "Testing the installation process."
-                },
-                "answer": "B",
-                "detailedexplanation": "Integration Testing is the level of software testing where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units."
-            },
-            {
-                "id": 21,
-                "domain": "Testing Terms",
-                "difficulty": "Medium",
-                "question": "What is 'Retesting'?",
-                "options": {
-                    "A": "Running all tests again on a new build.",
-                    "B": "Testing the system for performance.",
-                    "C": "Executing specifically the test cases that failed in the previous execution to verify the fix.",
-                    "D": "Randomly clicking on buttons to find bugs."
-                },
-                "answer": "C",
-                "detailedexplanation": "Retesting is specifically the act of repeating a test that previously failed to confirm that the defect has been successfully repaired. It is different from Regression Testing, which checks for unintended side effects in other parts of the system."
-            },
-            {
-                "id": 22,
-                "domain": "Testing Strategy",
-                "difficulty": "Medium",
-                "question": "Which of the following is an example of 'Non-Functional' testing?",
-                "options": {
-                    "A": "Checking the login functionality.",
-                    "B": "Testing the 'Add to Cart' button.",
-                    "C": "Testing how the app behaves when the network speed is slow.",
-                    "D": "Verifying that the correct error message appears for wrong passwords."
-                },
-                "answer": "C",
-                "detailedexplanation": "Functional testing (Options A, B, D) checks 'what' the system does. Non-functional testing checks 'how' the system performs. Network speed, security, usability, and reliability are all non-functional attributes."
-            },
-            {
-                "id": 23,
-                "domain": "Black Box Techniques",
-                "difficulty": "Hard",
-                "question": "Which technique is most effective for testing a sequence of events or screen navigation?",
-                "options": {
-                    "A": "Boundary Value Analysis",
-                    "B": "State Transition Testing",
-                    "C": "Decision Table",
-                    "D": "Equivalence Partitioning"
-                },
-                "answer": "B",
-                "detailedexplanation": "State Transition Testing is used where the output is influenced by what has happened in the past (the state of the system). It is excellent for testing navigation flows, workflow systems, or ATM software where the system moves from one 'state' to another based on inputs."
-            },
-            {
-                "id": 24,
-                "domain": "Testing Fundamentals",
-                "difficulty": "Easy",
-                "question": "What is the 'Pesticide Paradox' in software testing?",
-                "options": {
-                    "A": "Finding too many bugs in one module.",
-                    "B": "Running the same tests repeatedly will eventually stop finding new bugs.",
-                    "C": "Testing should start as early as possible.",
-                    "D": "Using automated tools causes more bugs."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Pesticide Paradox states that if you keep running the same set of tests over and over, they will eventually fail to find any new defects. To overcome this, test cases need to be regularly reviewed and updated, and new tests need to be written to exercise different parts of the software."
-            },
-            {
-                "id": 25,
-                "domain": "Defect Management",
-                "difficulty": "Medium",
-                "question": "A cosmetic bug (e.g., a spelling mistake on a page) that doesn't affect functionality usually has:",
-                "options": {
-                    "A": "High Severity, High Priority",
-                    "B": "Low Severity, Low Priority",
-                    "C": "High Severity, Low Priority",
-                    "D": "Low Severity, High Priority"
-                },
-                "answer": "B",
-                "detailedexplanation": "Severity relates to technical impact, while Priority relates to business urgency. A spelling error is 'Low Severity' because it doesn't break any functionality. Usually, it is also 'Low Priority' unless it's on a prominent page like the company logo or homepage (in which case it might become High Priority but remain Low Severity)."
-            },
-            {
-                "id": 26,
-                "domain": "Testing Types",
-                "difficulty": "Medium",
-                "question": "What is 'End-to-End Testing'?",
-                "options": {
-                    "A": "Testing a single unit of code.",
-                    "B": "Testing the entire application flow from start to finish, including integration with external interfaces.",
-                    "C": "Testing only the UI components.",
-                    "D": "Testing only the database."
-                },
-                "answer": "B",
-                "detailedexplanation": "End-to-End (E2E) testing involves testing a complete application environment in a situation that mimics real-world use, such as interacting with a database, using network communications, or interacting with other hardware, applications, or systems."
-            },
-            {
-                "id": 27,
-                "domain": "Testing Terms",
-                "difficulty": "Hard",
-                "question": "What is the difference between Verification and Validation?",
-                "options": {
-                    "A": "Verification is 'Are we building the product right?'; Validation is 'Are we building the right product?'",
-                    "B": "Verification is 'Are we building the right product?'; Validation is 'Are we building the product right?'",
-                    "C": "Verification is dynamic; Validation is static.",
-                    "D": "There is no difference."
-                },
-                "answer": "A",
-                "detailedexplanation": "Verification (Static) involves evaluating work products (requirements, design) to ensure they meet specified requirements. Validation (Dynamic) involves evaluating the actual software to ensure it meets the user's needs and requirements. Verification focuses on the process, while Validation focuses on the final product."
-            },
-            {
-                "id": 28,
-                "domain": "Automation Testing",
-                "difficulty": "Medium",
-                "question": "When should you NOT automate a test?",
-                "options": {
-                    "A": "When the test is performed frequently.",
-                    "B": "When the test is very time-consuming for humans.",
-                    "C": "When the requirements are changing frequently and the feature is unstable.",
-                    "D": "When the test involves repetitive data entry."
-                },
-                "answer": "C",
-                "detailedexplanation": "Automation requires maintenance. If a feature is unstable or requirements are changing daily, the cost of updating the automation scripts will far outweigh the benefits. It is better to use manual or exploratory testing for unstable features until they mature."
-            },
-            {
-                "id": 29,
-                "domain": "Testing Levels",
-                "difficulty": "Easy",
-                "question": "Which testing level focuses on verifying the whole system's compliance with specified requirements?",
-                "options": {
-                    "A": "Unit Testing",
-                    "B": "Integration Testing",
-                    "C": "System Testing",
-                    "D": "Component Testing"
-                },
-                "answer": "C",
-                "detailedexplanation": "System Testing is the first level where the application is tested as a whole. The goal is to verify that the integrated system meets the specified functional and non-functional requirements. It is typically conducted in an environment that closely resembles the production environment."
-            },
-            {
-                "id": 30,
-                "domain": "Testing Strategy",
-                "difficulty": "Medium",
-                "question": "What is 'Exploratory Testing'?",
-                "options": {
-                    "A": "Testing based on a rigid set of pre-written test cases.",
-                    "B": "Simultaneous learning, test design, and test execution.",
-                    "C": "Testing the software without looking at the code.",
-                    "D": "Automation testing."
-                },
-                "answer": "B",
-                "detailedexplanation": "Exploratory testing is an unscripted approach to software testing. In this approach, the tester's skill and intuition guide the test. Testers 'explore' the application to understand its behavior and design tests on the fly, which is highly effective at finding bugs that scripted tests might miss."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30 essential software testing interview questions. We've covered everything from fundamental principles to complex black-box techniques. Remember, the key to a successful interview is not just knowing the answer, but understanding the 'why' behind every testing strategy.",
-            "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more QA career tips. Don't forget to check out our full-length practice test on Udemy for even more challenging scenarios.",
-            "next_steps": "Check the description for the link to the Software Testing Interview Questions Practice Test and take your preparation to the next level. Good luck with your interview!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Use a smooth slide-in for each question and a clear green highlight for the correct answer after the timer ends. Use detailed call-out boxes for the 'detailedexplanation' sections."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Top Automation Testing Interview Questions and Answers",
                 "Automation Testing Mastery: Practice Exam Questions",
                 "Selenium and Automation Testing Interview Prep Guide",
@@ -4714,7 +4224,7 @@
                     "D": "A system log that tracks failed nodes."
                 },
                 "answer": "B",
-                "detailedexplanation": "Since SSTables are immutable, Cassandra cannot simply delete data from a file. When a delete command is issued, Cassandra writes a 'Tombstone'—a special marker with a timestamp. During a read, the tombstone tells Cassandra to ignore the older data. During compaction, the tombstone and the shadowed data are finally removed."
+                "detailedexplanation": "Since SSTables are immutable, Cassandra cannot simply delete data from a file. When a delete command is issued, Cassandra writes a 'Tombstone'\u2014a special marker with a timestamp. During a read, the tombstone tells Cassandra to ignore the older data. During compaction, the tombstone and the shadowed data are finally removed."
             },
             {
                 "id": 19,
@@ -5018,7 +4528,7 @@
                     "D": "Amazon CloudFront"
                 },
                 "answer": "C",
-                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement—from milliseconds to microseconds—even at millions of requests per second. Unlike ElastiCache, DAX is API-compatible with DynamoDB, meaning you don't need to rewrite your application logic to manage cache invalidation or data population."
+                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement\u2014from milliseconds to microseconds\u2014even at millions of requests per second. Unlike ElastiCache, DAX is API-compatible with DynamoDB, meaning you don't need to rewrite your application logic to manage cache invalidation or data population."
             },
             {
                 "id": 6,
@@ -5938,7 +5448,7 @@
                 "question": "An organization is considering a third-party cloud service provider. Which of the following is the MOST important factor to ensure the organization's security requirements are met continuously?",
                 "options": {
                     "A": "A right-to-audit clause in the Service Level Agreement (SLA).",
-                    "B": "The provider’s reputation in the industry.",
+                    "B": "The provider\u2019s reputation in the industry.",
                     "C": "A signed Non-Disclosure Agreement (NDA).",
                     "D": "The implementation of a hardware security module (HSM) by the provider."
                 },
@@ -6335,7 +5845,7 @@
                     "D": "A PIN"
                 },
                 "answer": "C",
-                "detailedexplanation": "'Something you are' refers to biometrics—physical characteristics unique to the individual, such as fingerprints, retina patterns, or facial geometry (C). Passwords/PINs are 'something you know', and smart cards are 'something you have'."
+                "detailedexplanation": "'Something you are' refers to biometrics\u2014physical characteristics unique to the individual, such as fingerprints, retina patterns, or facial geometry (C). Passwords/PINs are 'something you know', and smart cards are 'something you have'."
             },
             {
                 "id": 30,
@@ -6354,7 +5864,7 @@
         ],
         "outro_script": {
             "closing": "That wraps up our 30-question deep dive for the CISSP. Remember, this exam tests your ability to make risk-based decisions, not just recite definitions.",
-            "cta_final": "How many did you get right? Let me know your score in the comments! If you struggled with the architecture or risk domains, don't worry—those are historically the toughest sections.",
+            "cta_final": "How many did you get right? Let me know your score in the comments! If you struggled with the architecture or risk domains, don't worry\u2014those are historically the toughest sections.",
             "next_steps": "Check the description for a link to the full CISSP course to continue your journey. Good luck with your studies, and I'll see you in the next video."
         },
         "on_screen_elements": {
@@ -6377,7 +5887,7 @@
                 "Become a Microsoft Certified Hybrid Administrator: AZ-801 Training"
             ],
             "intro_script": {
-                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional—it's essential for the modern IT professional.",
+                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional\u2014it's essential for the modern IT professional.",
                 "summary": "In this comprehensive guide, we are diving deep into the AZ-801: Configuring Windows Server Hybrid Advanced Services certification. We will cover high availability, security, migration, and monitoring across 30 expert-level practice questions.",
                 "cta_intro": "Make sure to grab a notebook, because these questions are designed to mirror the actual exam environment to help you pass on your first attempt.",
                 "checkfullexamlinkindescription": "For the full premium practice exam and expert-led training, check out the link in the description below."
@@ -6524,7 +6034,7 @@
                 "id": 8,
                 "domain": "Secure Windows Server on-premises and hybrid infrastructures",
                 "difficulty": "Medium",
-                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft’s recommended security baselines?",
+                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft\u2019s recommended security baselines?",
                 "options": {
                     "A": "Azure Advisor",
                     "B": "Microsoft Security Compliance Toolkit",
@@ -6844,7 +6354,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics—from security hardening to high availability and disaster recovery—are the pillars of a successful hybrid cloud strategy.",
+            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics\u2014from security hardening to high availability and disaster recovery\u2014are the pillars of a successful hybrid cloud strategy.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Microsoft certification content.",
             "next_steps": "Ready to take your skills to the next level? Click the link in the description to access our full AZ-801 practice exams and comprehensive training materials. Good luck with your certification journey!"
         },
@@ -6868,7 +6378,7 @@
                 "Become a Microsoft Certified Hybrid Administrator: AZ-801 Training"
             ],
             "intro_script": {
-                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional—it's essential for the modern IT professional.",
+                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional\u2014it's essential for the modern IT professional.",
                 "summary": "In this comprehensive guide, we are diving deep into the AZ-801: Configuring Windows Server Hybrid Advanced Services certification. We will cover high availability, security, migration, and monitoring across 30 expert-level practice questions.",
                 "cta_intro": "Make sure to grab a notebook, because these questions are designed to mirror the actual exam environment to help you pass on your first attempt.",
                 "checkfullexamlinkindescription": "For the full premium practice exam and expert-led training, check out the link in the description below."
@@ -7015,7 +6525,7 @@
                 "id": 8,
                 "domain": "Secure Windows Server on-premises and hybrid infrastructures",
                 "difficulty": "Medium",
-                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft’s recommended security baselines?",
+                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft\u2019s recommended security baselines?",
                 "options": {
                     "A": "Azure Advisor",
                     "B": "Microsoft Security Compliance Toolkit",
@@ -7335,7 +6845,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics—from security hardening to high availability and disaster recovery—are the pillars of a successful hybrid cloud strategy.",
+            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics\u2014from security hardening to high availability and disaster recovery\u2014are the pillars of a successful hybrid cloud strategy.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Microsoft certification content.",
             "next_steps": "Ready to take your skills to the next level? Click the link in the description to access our full AZ-801 practice exams and comprehensive training materials. Good luck with your certification journey!"
         },
@@ -7426,7 +6936,7 @@
                     "D": "Governance is no longer necessary as the provider manages the infrastructure."
                 },
                 "answer": "B",
-                "detailedexplanation": "In cloud computing, specifically public cloud, you can outsource responsibility for managing certain controls, but you can never outsource the ultimate accountability for the risk. The risk profile changes because you lose direct control over the underlying infrastructure (the 'how'), but you must still ensure that the 'what' (security requirements) is being met. Governance becomes a matter of verifying the provider’s claims through audits and contracts."
+                "detailedexplanation": "In cloud computing, specifically public cloud, you can outsource responsibility for managing certain controls, but you can never outsource the ultimate accountability for the risk. The risk profile changes because you lose direct control over the underlying infrastructure (the 'how'), but you must still ensure that the 'what' (security requirements) is being met. Governance becomes a matter of verifying the provider\u2019s claims through audits and contracts."
             },
             {
                 "id": 3,
@@ -7594,7 +7104,7 @@
                     "D": "Storing all data in a single central data center."
                 },
                 "answer": "A",
-                "detailedexplanation": "Edge computing involves moving the processing of data away from centralized cloud data centers and closer to the 'edge' of the network—near the devices and sensors collecting the data. This reduces latency and bandwidth usage, but it also creates new security challenges because the 'edge' devices may be in physically insecure locations."
+                "detailedexplanation": "Edge computing involves moving the processing of data away from centralized cloud data centers and closer to the 'edge' of the network\u2014near the devices and sensors collecting the data. This reduces latency and bandwidth usage, but it also creates new security challenges because the 'edge' devices may be in physically insecure locations."
             },
             {
                 "id": 15,
@@ -7846,7 +7356,7 @@
                 "ISC2 CC Certification Practice Questions - 2026 Updated"
             ],
             "intro_script": {
-                "hook": "Are you ready to kickstart your career in cybersecurity but feeling overwhelmed by the ISC2 CC exam? Don't sweat it—today, we’re breaking down 30 exam-style questions that cover every single domain you need to master.",
+                "hook": "Are you ready to kickstart your career in cybersecurity but feeling overwhelmed by the ISC2 CC exam? Don't sweat it\u2014today, we\u2019re breaking down 30 exam-style questions that cover every single domain you need to master.",
                 "summary": "This video is a comprehensive mock exam for the ISC2 Certified in Cybersecurity (CC) certification. We will dive deep into Security Principles, Incident Response, Access Controls, Network Security, and Security Operations. Each question is designed to mimic the actual exam's difficulty and logic.",
                 "cta_intro": "Grab a notebook, pause the video before the answers, and let's see how many you can get right!",
                 "checkfullexamlinkindescription": "For a full-length simulation with over 500 questions, check the link in the description below."
@@ -8168,7 +7678,7 @@
                     "D": "The impact of a successful attack"
                 },
                 "answer": "C",
-                "detailedexplanation": "A vulnerability is a flaw or weakness in a system’s design, implementation, or operation and management that could be exploited to violate the system's security policy. A 'Threat' is the potential cause of harm, while the 'Risk' is the intersection of threat, vulnerability, and impact."
+                "detailedexplanation": "A vulnerability is a flaw or weakness in a system\u2019s design, implementation, or operation and management that could be exploited to violate the system's security policy. A 'Threat' is the potential cause of harm, while the 'Risk' is the intersection of threat, vulnerability, and impact."
             },
             {
                 "id": 21,
@@ -8497,7 +8007,7 @@
                 "id": 9,
                 "domain": "Networking",
                 "difficulty": "Hard",
-                "question": "A network administrator wants to segregate the accounting department’s traffic from the rest of the network for security purposes, using the existing switch hardware. Which technology should be implemented?",
+                "question": "A network administrator wants to segregate the accounting department\u2019s traffic from the rest of the network for security purposes, using the existing switch hardware. Which technology should be implemented?",
                 "options": {
                     "A": "VPN",
                     "B": "VLAN",
@@ -8827,7 +8337,7 @@
                 "Salesforce Admin Exam Prep: Master Agentforce and Data Management"
             ],
             "intro_script": {
-                "hook": "Are you ready to become a Salesforce Certified Administrator in 2026? With the new focus on Agentforce AI and Data Management, the exam just got a lot more interesting—and a bit tougher.",
+                "hook": "Are you ready to become a Salesforce Certified Administrator in 2026? With the new focus on Agentforce AI and Data Management, the exam just got a lot more interesting\u2014and a bit tougher.",
                 "summary": "In this video, we dive deep into 30 high-yield, scenario-based questions that mirror the current Salesforce Admin exam. We'll cover everything from Object Manager and Flow to the brand-new Agentforce AI requirements.",
                 "cta_intro": "Before we jump into the first question, make sure to hit that subscribe button for more Salesforce certification content.",
                 "checkfullexamlinkindescription": "For a full-length 60-question mock exam with 1,000+ practice questions, check out the link in the description below."
@@ -9293,7 +8803,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question mock exam. How did you do? If you found some of the Agentforce or Flow questions tricky, don't worry—those are the areas where most candidates need the most practice.",
+            "closing": "That wraps up our 30-question mock exam. How did you do? If you found some of the Agentforce or Flow questions tricky, don't worry\u2014those are the areas where most candidates need the most practice.",
             "cta_final": "If you want to access the full 60-question simulated exam and detailed study guides, check the link in the description.",
             "next_steps": "I'll be releasing a deep dive into Salesforce Flow logic next week, so make sure to turn on notifications so you don't miss it!"
         },
@@ -10502,7 +10012,7 @@
                     "D": "To allow users to type data directly into a chart."
                 },
                 "answer": "B",
-                "detailedexplanation": "By default, clicking a data point in one visual filters or highlights all other visuals on the page. Edit Interactions allows the report author to customize this behavior—for example, preventing a slicer from affecting a specific total cards or changing a 'highlight' interaction into a 'filter' interaction."
+                "detailedexplanation": "By default, clicking a data point in one visual filters or highlights all other visuals on the page. Edit Interactions allows the report author to customize this behavior\u2014for example, preventing a slicer from affecting a specific total cards or changing a 'highlight' interaction into a 'filter' interaction."
             },
             {
                 "id": 13,
@@ -11256,494 +10766,494 @@
         }
     },
     {
-  "video_assets": {
-    "titles": [
-      "Top Data Structure Interview Questions and Answers",
-      "Data Structures and Algorithms Mastery Guide",
-      "Cracking the Coding Interview: Data Structures",
-      "Ultimate Data Structure Interview Preparation",
-      "DSA Interview Questions for Software Engineers",
-      "Common Data Structure Patterns and Solutions",
-      "Technical Interview Success: Data Structures",
-      "Most Frequent Data Structure Exam Questions",
-      "Data Structures and Algorithms Essential Training",
-      "Coding Interview Bootcamp: Data Structures"
-    ],
-    "intro_script": {
-      "hook": "Are you ready to ace your technical interview? Most engineering candidates fail because they lack a deep understanding of core data structures.",
-      "summary": "In this video, we cover 30 essential Data Structure questions that frequently appear in interviews at top tech companies like Google, Amazon, and Meta. From Arrays and Linked Lists to Graphs and Heaps, we break down the logic behind every answer.",
-      "cta_intro": "Make sure to pause the video after each question to see if you can solve it yourself before the answer is revealed.",
-      "checkfullexamlinkindescription": "For a full-length practice exam and detailed study guides, check the link in the description below."
-    },
-    "youtube_metadata": {
-      "courselink": "https://trk.udemy.com/aNRkmo",
-      "youtubetitle": "Data Structure Interview Questions and Answers Guide",
-      "description": "Master your technical coding interview with this comprehensive guide on Data Structure interview questions. This video provides 30 high-yield multiple-choice questions covering Arrays, Stacks, Queues, Linked Lists, Trees, Graphs, and Hash Tables. Each question includes a detailed explanation to help you understand the 'why' behind the solution. Perfect for computer science students and software developers preparing for FAANG interviews.",
-      "tags": "data structures, algorithms, coding interview, dsa, software engineering, programming interview, technical interview, computer science, array, linked list, binary tree, graph theory",
-      "hashtags": [
-        "#DataStructures",
-        "#Algorithms",
-        "#CodingInterview",
-        "#DSA",
-        "#TechInterview",
-        "#Programming"
-      ],
-      "keywords": [
-        "Data Structure MCQ",
-        "Coding Interview Questions",
-        "DSA Interview Prep",
-        "Binary Search Tree Questions",
-        "Graph Algorithm Interview",
-        "Time Complexity Analysis",
-        "Array Interview Questions",
-        "Linked List Problems",
-        "Stack and Queue MCQ",
-        "Hash Table Performance"
-      ],
-      "mostsearchedongoogle": [
-        "data structures interview questions for freshers",
-        "top 50 data structures interview questions",
-        "dsa questions for software engineer",
-        "binary tree interview questions",
-        "graph data structure interview questions",
-        "linked list vs array interview questions",
-        "time complexity of data structures table",
-        "hashmap interview questions",
-        "stack and queue interview questions",
-        "dynamic programming interview questions"
-      ]
+        "video_assets": {
+            "titles": [
+                "Top Data Structure Interview Questions and Answers",
+                "Data Structures and Algorithms Mastery Guide",
+                "Cracking the Coding Interview: Data Structures",
+                "Ultimate Data Structure Interview Preparation",
+                "DSA Interview Questions for Software Engineers",
+                "Common Data Structure Patterns and Solutions",
+                "Technical Interview Success: Data Structures",
+                "Most Frequent Data Structure Exam Questions",
+                "Data Structures and Algorithms Essential Training",
+                "Coding Interview Bootcamp: Data Structures"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to ace your technical interview? Most engineering candidates fail because they lack a deep understanding of core data structures.",
+                "summary": "In this video, we cover 30 essential Data Structure questions that frequently appear in interviews at top tech companies like Google, Amazon, and Meta. From Arrays and Linked Lists to Graphs and Heaps, we break down the logic behind every answer.",
+                "cta_intro": "Make sure to pause the video after each question to see if you can solve it yourself before the answer is revealed.",
+                "checkfullexamlinkindescription": "For a full-length practice exam and detailed study guides, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/aNRkmo",
+                "youtubetitle": "Data Structure Interview Questions and Answers Guide",
+                "description": "Master your technical coding interview with this comprehensive guide on Data Structure interview questions. This video provides 30 high-yield multiple-choice questions covering Arrays, Stacks, Queues, Linked Lists, Trees, Graphs, and Hash Tables. Each question includes a detailed explanation to help you understand the 'why' behind the solution. Perfect for computer science students and software developers preparing for FAANG interviews.",
+                "tags": "data structures, algorithms, coding interview, dsa, software engineering, programming interview, technical interview, computer science, array, linked list, binary tree, graph theory",
+                "hashtags": [
+                    "#DataStructures",
+                    "#Algorithms",
+                    "#CodingInterview",
+                    "#DSA",
+                    "#TechInterview",
+                    "#Programming"
+                ],
+                "keywords": [
+                    "Data Structure MCQ",
+                    "Coding Interview Questions",
+                    "DSA Interview Prep",
+                    "Binary Search Tree Questions",
+                    "Graph Algorithm Interview",
+                    "Time Complexity Analysis",
+                    "Array Interview Questions",
+                    "Linked List Problems",
+                    "Stack and Queue MCQ",
+                    "Hash Table Performance"
+                ],
+                "mostsearchedongoogle": [
+                    "data structures interview questions for freshers",
+                    "top 50 data structures interview questions",
+                    "dsa questions for software engineer",
+                    "binary tree interview questions",
+                    "graph data structure interview questions",
+                    "linked list vs array interview questions",
+                    "time complexity of data structures table",
+                    "hashmap interview questions",
+                    "stack and queue interview questions",
+                    "dynamic programming interview questions"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Arrays",
+                "difficulty": "Easy",
+                "question": "Which of the following describes the 'Random Access' property of an Array?",
+                "options": {
+                    "A": "Elements can be accessed in any order in O(n) time.",
+                    "B": "Any element can be accessed in O(1) time if its index is known.",
+                    "C": "Elements are stored in non-contiguous memory locations.",
+                    "D": "The size of the array can be changed dynamically during runtime."
+                },
+                "answer": "B",
+                "detailedexplanation": "Arrays are stored in contiguous memory locations. Because each element occupies a fixed amount of space, the address of any element can be calculated using a simple mathematical formula: Base Address + (Index * Size of Element). This allows the CPU to jump directly to any index in constant time, or O(1). Option A is incorrect because O(n) would be linear search. Option C describes linked lists. Option D describes dynamic arrays, but not the random access property itself."
+            },
+            {
+                "id": 2,
+                "domain": "Linked Lists",
+                "difficulty": "Medium",
+                "question": "What is the primary disadvantage of a Singly Linked List compared to a Doubly Linked List?",
+                "options": {
+                    "A": "It requires more memory per node.",
+                    "B": "Deletion of a node is always O(n).",
+                    "C": "It cannot be traversed in reverse direction efficiently.",
+                    "D": "It does not support the insertion of elements at the head."
+                },
+                "answer": "C",
+                "detailedexplanation": "In a Singly Linked List, each node only contains a pointer to the 'next' node. Therefore, you can only move forward. To find a previous node, you would have to start from the head and traverse again. A Doubly Linked List solves this by adding a 'prev' pointer to each node, allowing bidirectional traversal at the cost of extra memory. Deletion is O(1) if you have the pointer to the node in a Doubly Linked List, but C is the most defining structural disadvantage."
+            },
+            {
+                "id": 3,
+                "domain": "Stacks",
+                "difficulty": "Easy",
+                "question": "Which data structure is typically used to implement the 'Undo' feature in text editors?",
+                "options": {
+                    "A": "Queue",
+                    "B": "Stack",
+                    "C": "Linked List",
+                    "D": "Hash Map"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Undo' feature follows the Last-In-First-Out (LIFO) principle. The last action performed by the user is the first one to be reversed. Stacks are the perfect data structure for this because the 'Push' operation adds a new action to the top, and the 'Pop' operation retrieves and removes the most recent action."
+            },
+            {
+                "id": 4,
+                "domain": "Queues",
+                "difficulty": "Easy",
+                "question": "Which principle does a standard Queue data structure follow?",
+                "options": {
+                    "A": "LIFO",
+                    "B": "LILO",
+                    "C": "FIFO",
+                    "D": "FILO"
+                },
+                "answer": "C",
+                "detailedexplanation": "Queues follow the First-In-First-Out (FIFO) principle. This means the first element added to the queue will be the first one to be removed. This is similar to a real-world line at a grocery store. LIFO (Last-In-First-Out) is the principle for Stacks."
+            },
+            {
+                "id": 5,
+                "domain": "Hash Tables",
+                "difficulty": "Medium",
+                "question": "What is a 'Collision' in a Hash Table?",
+                "options": {
+                    "A": "Two different keys produce the same hash value.",
+                    "B": "The hash table runs out of memory.",
+                    "C": "The hash function returns a null value.",
+                    "D": "The key is larger than the size of the array."
+                },
+                "answer": "A",
+                "detailedexplanation": "A collision occurs when two distinct keys, when passed through a hash function, result in the same index (hash value) in the underlying array. Since each array slot can typically hold only one value (unless using chaining), strategies like Linear Probing or Chaining must be used to resolve the conflict. High collision rates degrade the performance of a Hash Table from O(1) toward O(n)."
+            },
+            {
+                "id": 6,
+                "domain": "Trees",
+                "difficulty": "Medium",
+                "question": "In a Binary Search Tree (BST), where would you find the node with the minimum value?",
+                "options": {
+                    "A": "The root node.",
+                    "B": "The rightmost leaf node.",
+                    "C": "The leftmost node in the tree.",
+                    "D": "The node with no children."
+                },
+                "answer": "C",
+                "detailedexplanation": "By the definition of a Binary Search Tree, for any given node, all values in its left subtree are smaller than its own value. To find the minimum value, you must start at the root and continually follow the 'left' child pointers until you reach a node that has no left child. That node will contain the minimum value in the BST."
+            },
+            {
+                "id": 7,
+                "domain": "Graphs",
+                "difficulty": "Hard",
+                "question": "Which algorithm is most efficient for finding the shortest path between all pairs of vertices in a weighted graph?",
+                "options": {
+                    "A": "Dijkstra\u2019s Algorithm",
+                    "B": "Bellman-Ford Algorithm",
+                    "C": "Floyd-Warshall Algorithm",
+                    "D": "Prim\u2019s Algorithm"
+                },
+                "answer": "C",
+                "detailedexplanation": "Floyd-Warshall is a dynamic programming algorithm specifically designed for the 'All-Pairs Shortest Path' problem. While Dijkstra's can be run 'V' times to achieve this, Floyd-Warshall is more straightforward for dense graphs with a complexity of O(V^3). Dijkstra's is typically used for Single-Source Shortest Path. Prim's is used for Minimum Spanning Trees, not shortest paths."
+            },
+            {
+                "id": 8,
+                "domain": "Complexity Analysis",
+                "difficulty": "Medium",
+                "question": "What is the worst-case time complexity of searching for an element in a balanced Binary Search Tree?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(n)",
+                    "C": "O(log n)",
+                    "D": "O(n log n)"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a balanced BST (like an AVL tree or Red-Black tree), the height of the tree is kept at logarithmic levels relative to the number of nodes (n). Since each comparison in a search allows you to discard half of the remaining tree, the total number of comparisons is proportional to the height, which is O(log n). If the tree were unbalanced (skewed), the worst case would be O(n)."
+            },
+            {
+                "id": 9,
+                "domain": "Linked Lists",
+                "difficulty": "Easy",
+                "question": "In a circular linked list, what does the 'next' pointer of the last node point to?",
+                "options": {
+                    "A": "NULL",
+                    "B": "The second node",
+                    "C": "The middle node",
+                    "D": "The head node"
+                },
+                "answer": "D",
+                "detailedexplanation": "By definition, a circular linked list is a variation where there is no NULL at the end. Instead, the last node's 'next' pointer points back to the first node (the head), creating a continuous loop. This is useful for applications like round-robin CPU scheduling."
+            },
+            {
+                "id": 10,
+                "domain": "Heaps",
+                "difficulty": "Medium",
+                "question": "Which property must a Max-Heap satisfy?",
+                "options": {
+                    "A": "The root is the smallest element.",
+                    "B": "Every node is smaller than its children.",
+                    "C": "The value of a parent node is always greater than or equal to its children.",
+                    "D": "The tree must be a full binary tree."
+                },
+                "answer": "C",
+                "detailedexplanation": "In a Max-Heap, for every node 'i' other than the root, the value of the parent is greater than or equal to the value of 'i'. This ensures that the maximum element is always at the root. Heaps must also be 'Complete Binary Trees' (all levels filled except possibly the last, which is filled from left to right), but the Max-Heap property specifically refers to the value relationship."
+            },
+            {
+                "id": 11,
+                "domain": "Arrays",
+                "difficulty": "Medium",
+                "question": "If you need to insert an element at the beginning of an array of size n, what is the time complexity?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(log n)",
+                    "C": "O(n)",
+                    "D": "O(n^2)"
+                },
+                "answer": "C",
+                "detailedexplanation": "Inserting at the beginning of an array (index 0) requires all existing elements to be shifted one position to the right to make room. Since there are 'n' elements to shift, the operation takes O(n) time. This is why arrays are efficient for access but inefficient for frequent insertions at arbitrary positions."
+            },
+            {
+                "id": 12,
+                "domain": "Stacks",
+                "difficulty": "Medium",
+                "question": "Which of the following is an application of a Stack?",
+                "options": {
+                    "A": "Breadth-First Search (BFS)",
+                    "B": "Infix to Postfix conversion",
+                    "C": "Handling multiple print jobs in a printer",
+                    "D": "Implementing a LRU Cache"
+                },
+                "answer": "B",
+                "detailedexplanation": "Converting an expression from Infix (e.g., A+B) to Postfix (e.g., AB+) requires a stack to manage operators and maintain the correct order of operations (precedence). BFS uses a Queue. Printer jobs use a Queue. LRU Cache usually uses a combination of a Hash Map and a Doubly Linked List."
+            },
+            {
+                "id": 13,
+                "domain": "Trees",
+                "difficulty": "Easy",
+                "question": "How many children can a node in a Binary Tree have?",
+                "options": {
+                    "A": "Exactly 2",
+                    "B": "At most 2",
+                    "C": "At least 2",
+                    "D": "Any number of children"
+                },
+                "answer": "B",
+                "detailedexplanation": "By definition, a 'Binary' tree restricts each node to a maximum of two children, commonly referred to as the 'left' child and the 'right' child. A node can have 0 (leaf), 1, or 2 children."
+            },
+            {
+                "id": 14,
+                "domain": "Sorting",
+                "difficulty": "Medium",
+                "question": "Which sorting algorithm uses the Divide and Conquer strategy and has a worst-case complexity of O(n^2)?",
+                "options": {
+                    "A": "Merge Sort",
+                    "B": "Quick Sort",
+                    "C": "Heap Sort",
+                    "D": "Bubble Sort"
+                },
+                "answer": "B",
+                "detailedexplanation": "Quick Sort is a Divide and Conquer algorithm. Its average case is O(n log n). However, if the pivot selection is poor (e.g., picking the smallest or largest element in an already sorted array), the partitioning becomes highly unbalanced, leading to a worst-case complexity of O(n^2). Merge Sort is also Divide and Conquer but guarantees O(n log n) even in the worst case."
+            },
+            {
+                "id": 15,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "Which data structure is used to implement Breadth-First Search (BFS) on a graph?",
+                "options": {
+                    "A": "Stack",
+                    "B": "Queue",
+                    "C": "Tree",
+                    "D": "Priority Queue"
+                },
+                "answer": "B",
+                "detailedexplanation": "BFS explores a graph layer by layer. To ensure that nodes are visited in the order they were discovered, a Queue (FIFO) is used. When a node is visited, all its unvisited neighbors are added to the back of the queue. Depth-First Search (DFS), on the other hand, uses a Stack (or recursion)."
+            },
+            {
+                "id": 16,
+                "domain": "Tries",
+                "difficulty": "Hard",
+                "question": "What is the primary advantage of using a Trie (Prefix Tree) over a Hash Table for storing strings?",
+                "options": {
+                    "A": "It uses less memory for all cases.",
+                    "B": "It allows for efficient prefix-based searching.",
+                    "C": "It has a faster average search time.",
+                    "D": "It is easier to implement."
+                },
+                "answer": "B",
+                "detailedexplanation": "While Hash Tables have O(1) average search time, they cannot easily perform prefix matches (e.g., 'find all words starting with 'auto''). Tries are structured such that all strings sharing a common prefix share the same nodes in the tree, making prefix searches and auto-complete features very efficient."
+            },
+            {
+                "id": 17,
+                "domain": "Recursion",
+                "difficulty": "Medium",
+                "question": "What happens if a recursive function does not have a base case?",
+                "options": {
+                    "A": "The function returns 0.",
+                    "B": "The function executes once and stops.",
+                    "C": "It leads to infinite recursion and a Stack Overflow error.",
+                    "D": "The compiler will catch the error and won't run."
+                },
+                "answer": "C",
+                "detailedexplanation": "A base case is the condition that stops the recursion. Without it, the function keeps calling itself, adding a new frame to the call stack with each call. Eventually, the memory allocated for the call stack is exhausted, resulting in a 'Stack Overflow' error."
+            },
+            {
+                "id": 18,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "In an Adjacency Matrix representation of a graph with V vertices, what is the space complexity?",
+                "options": {
+                    "A": "O(V)",
+                    "B": "O(E)",
+                    "C": "O(V + E)",
+                    "D": "O(V^2)"
+                },
+                "answer": "D",
+                "detailedexplanation": "An Adjacency Matrix is a 2D array of size V x V, where the cell at row 'i' and column 'j' indicates whether an edge exists between vertex 'i' and vertex 'j'. Because it stores a value for every possible pair of vertices, it always requires V^2 space, regardless of the number of edges (E)."
+            },
+            {
+                "id": 19,
+                "domain": "Complexity Analysis",
+                "difficulty": "Easy",
+                "question": "What does 'Space Complexity' of an algorithm refer to?",
+                "options": {
+                    "A": "The physical disk space required to store the code.",
+                    "B": "The amount of memory (RAM) used by the algorithm relative to the input size.",
+                    "C": "The time it takes for the algorithm to complete.",
+                    "D": "The number of lines of code in the algorithm."
+                },
+                "answer": "B",
+                "detailedexplanation": "Space complexity is a measure of the amount of working memory an algorithm needs to run to completion, as a function of the input size 'n'. This includes both the space taken by the inputs and the auxiliary space (extra space used by the algorithm)."
+            },
+            {
+                "id": 20,
+                "domain": "Hash Tables",
+                "difficulty": "Medium",
+                "question": "In 'Chaining', how are collisions handled in a Hash Table?",
+                "options": {
+                    "A": "By finding the next available slot in the array.",
+                    "B": "By using a second hash function.",
+                    "C": "By storing multiple elements in a linked list at the same index.",
+                    "D": "By increasing the size of the hash table immediately."
+                },
+                "answer": "C",
+                "detailedexplanation": "Chaining (Open Hashing) handles collisions by making each cell of the hash table point to a linked list (or other data structure) of records that have the same hash function value. Option A describes 'Open Addressing' (specifically Linear Probing)."
+            },
+            {
+                "id": 21,
+                "domain": "Trees",
+                "difficulty": "Medium",
+                "question": "What is the height of a balanced Binary Tree with n nodes?",
+                "options": {
+                    "A": "O(n)",
+                    "B": "O(log n)",
+                    "C": "O(n log n)",
+                    "D": "O(1)"
+                },
+                "answer": "B",
+                "detailedexplanation": "A balanced tree ensures that the height difference between left and right subtrees is minimal. For a tree with 'n' nodes, the height 'h' is roughly log base 2 of 'n'. This logarithmic height is what allows for efficient O(log n) search, insertion, and deletion."
+            },
+            {
+                "id": 22,
+                "domain": "Sorting",
+                "difficulty": "Easy",
+                "question": "Which of the following is an In-place sorting algorithm?",
+                "options": {
+                    "A": "Merge Sort",
+                    "B": "Quick Sort",
+                    "C": "Radix Sort",
+                    "D": "Counting Sort"
+                },
+                "answer": "B",
+                "detailedexplanation": "An In-place algorithm is one that uses a small, constant amount of extra space (auxiliary space) regardless of the input size. Quick Sort is in-place because it sorts by swapping elements within the original array. Merge Sort is NOT in-place because it requires an auxiliary array of size O(n) to merge the sub-arrays."
+            },
+            {
+                "id": 23,
+                "domain": "Linked Lists",
+                "difficulty": "Medium",
+                "question": "How can you detect a cycle in a linked list efficiently?",
+                "options": {
+                    "A": "By counting the total number of nodes.",
+                    "B": "Using two pointers moving at different speeds (Floyd\u2019s Cycle-Finding Algorithm).",
+                    "C": "By checking if the head is equal to the tail.",
+                    "D": "By reversing the linked list."
+                },
+                "answer": "B",
+                "detailedexplanation": "Floyd\u2019s Cycle-Finding Algorithm (also known as the 'Tortoise and the Hare' algorithm) uses two pointers: one moves one step at a time (slow), and the other moves two steps at a time (fast). If there is a cycle, the fast pointer will eventually catch up to the slow pointer inside the loop."
+            },
+            {
+                "id": 24,
+                "domain": "Heaps",
+                "difficulty": "Medium",
+                "question": "What is the time complexity to extract the minimum element from a Min-Heap of size n?",
+                "options": {
+                    "A": "O(1)",
+                    "B": "O(log n)",
+                    "C": "O(n)",
+                    "D": "O(n log n)"
+                },
+                "answer": "B",
+                "detailedexplanation": "While 'finding' the minimum is O(1) (it's at the root), 'extracting' it involves removing the root, replacing it with the last element, and then 'heapifying' (shifting the element down) to restore the heap property. The heapify process takes time proportional to the height of the tree, which is O(log n)."
+            },
+            {
+                "id": 25,
+                "domain": "Queues",
+                "difficulty": "Medium",
+                "question": "In a Circular Queue implemented with an array of size N, what is the condition for the queue being 'Full'?",
+                "options": {
+                    "A": "front == rear",
+                    "B": "(rear + 1) % N == front",
+                    "C": "rear == N - 1",
+                    "D": "front == 0"
+                },
+                "answer": "B",
+                "detailedexplanation": "In a circular queue, the 'rear' pointer wraps around to the beginning of the array. To distinguish between an empty queue and a full queue, we typically leave one space empty. The 'full' condition is satisfied when the next position after 'rear' (calculated using modulo N) is the same as the 'front' position."
+            },
+            {
+                "id": 26,
+                "domain": "Hash Tables",
+                "difficulty": "Hard",
+                "question": "What is the 'Load Factor' of a Hash Table?",
+                "options": {
+                    "A": "The time taken by the hash function.",
+                    "B": "The number of collisions divided by total keys.",
+                    "C": "The ratio of the number of elements stored to the total capacity of the table.",
+                    "D": "The maximum number of elements a single bucket can hold."
+                },
+                "answer": "C",
+                "detailedexplanation": "The load factor (\u03b1) is defined as n/m, where 'n' is the number of entries and 'm' is the number of buckets (slots). It indicates how 'full' the hash table is. A high load factor increases the probability of collisions, leading most implementations to 'resize' or 'rehash' once the load factor exceeds a certain threshold (typically 0.7 or 0.75)."
+            },
+            {
+                "id": 27,
+                "domain": "Trees",
+                "difficulty": "Medium",
+                "question": "Which tree traversal visits the nodes in the order: Left, Right, Root?",
+                "options": {
+                    "A": "Pre-order",
+                    "B": "In-order",
+                    "C": "Post-order",
+                    "D": "Level-order"
+                },
+                "answer": "C",
+                "detailedexplanation": "In Post-order traversal, the algorithm visits the left subtree first, then the right subtree, and finally the root node. This is often used for deleting a tree (since you delete children before parents) or evaluating postfix expressions."
+            },
+            {
+                "id": 28,
+                "domain": "Graphs",
+                "difficulty": "Medium",
+                "question": "What is a 'Spanning Tree' of a graph?",
+                "options": {
+                    "A": "A subgraph that contains all the vertices and is a tree.",
+                    "B": "A subgraph that contains all the edges.",
+                    "C": "A cycle that visits every node once.",
+                    "D": "The shortest path between two nodes."
+                },
+                "answer": "A",
+                "detailedexplanation": "A spanning tree is a subset of a Graph 'G', which has all the vertices covered with the minimum possible number of edges. Hence, a spanning tree does not have cycles and it cannot be disconnected. If a graph has V vertices, a spanning tree has V-1 edges."
+            },
+            {
+                "id": 29,
+                "domain": "Arrays",
+                "difficulty": "Easy",
+                "question": "Which of these is a drawback of using a Static Array?",
+                "options": {
+                    "A": "Accessing elements takes O(n) time.",
+                    "B": "The size must be known at compile time and cannot be changed.",
+                    "C": "It consumes more memory than a Linked List.",
+                    "D": "It cannot store integer values."
+                },
+                "answer": "B",
+                "detailedexplanation": "Static arrays have a fixed size allocated during declaration/compile time. This leads to issues where you might allocate too much memory (wasted space) or too little memory (leading to overflow). Dynamic arrays (like ArrayList in Java or vector in C++) solve this by resizing themselves."
+            },
+            {
+                "id": 30,
+                "domain": "Complexity Analysis",
+                "difficulty": "Hard",
+                "question": "What is the time complexity of building a heap from an unsorted array of n elements?",
+                "options": {
+                    "A": "O(n log n)",
+                    "B": "O(n)",
+                    "C": "O(log n)",
+                    "D": "O(n^2)"
+                },
+                "answer": "B",
+                "detailedexplanation": "While inserting elements one by one into a heap takes O(n log n), the 'Build-Heap' algorithm (starting from the last non-leaf node and heapifying down) takes O(n) time. This is because the amount of work decreases as we move up the tree (more nodes at the bottom require less work than the fewer nodes at the top)."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our deep dive into the top 30 Data Structure interview questions. We hope these detailed explanations helped clarify these fundamental concepts.",
+            "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more technical interview preparation content.",
+            "next_steps": "Don't forget to practice coding these structures from scratch. Check out the link in the description for a comprehensive course to master DSA."
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds",
+            "transition_effect_hints": "Use smooth fade transitions between questions. Highlight the correct answer in green after the timer ends."
+        }
     }
-  },
-  "mcq_data": [
-    {
-      "id": 1,
-      "domain": "Arrays",
-      "difficulty": "Easy",
-      "question": "Which of the following describes the 'Random Access' property of an Array?",
-      "options": {
-        "A": "Elements can be accessed in any order in O(n) time.",
-        "B": "Any element can be accessed in O(1) time if its index is known.",
-        "C": "Elements are stored in non-contiguous memory locations.",
-        "D": "The size of the array can be changed dynamically during runtime."
-      },
-      "answer": "B",
-      "detailedexplanation": "Arrays are stored in contiguous memory locations. Because each element occupies a fixed amount of space, the address of any element can be calculated using a simple mathematical formula: Base Address + (Index * Size of Element). This allows the CPU to jump directly to any index in constant time, or O(1). Option A is incorrect because O(n) would be linear search. Option C describes linked lists. Option D describes dynamic arrays, but not the random access property itself."
-    },
-    {
-      "id": 2,
-      "domain": "Linked Lists",
-      "difficulty": "Medium",
-      "question": "What is the primary disadvantage of a Singly Linked List compared to a Doubly Linked List?",
-      "options": {
-        "A": "It requires more memory per node.",
-        "B": "Deletion of a node is always O(n).",
-        "C": "It cannot be traversed in reverse direction efficiently.",
-        "D": "It does not support the insertion of elements at the head."
-      },
-      "answer": "C",
-      "detailedexplanation": "In a Singly Linked List, each node only contains a pointer to the 'next' node. Therefore, you can only move forward. To find a previous node, you would have to start from the head and traverse again. A Doubly Linked List solves this by adding a 'prev' pointer to each node, allowing bidirectional traversal at the cost of extra memory. Deletion is O(1) if you have the pointer to the node in a Doubly Linked List, but C is the most defining structural disadvantage."
-    },
-    {
-      "id": 3,
-      "domain": "Stacks",
-      "difficulty": "Easy",
-      "question": "Which data structure is typically used to implement the 'Undo' feature in text editors?",
-      "options": {
-        "A": "Queue",
-        "B": "Stack",
-        "C": "Linked List",
-        "D": "Hash Map"
-      },
-      "answer": "B",
-      "detailedexplanation": "The 'Undo' feature follows the Last-In-First-Out (LIFO) principle. The last action performed by the user is the first one to be reversed. Stacks are the perfect data structure for this because the 'Push' operation adds a new action to the top, and the 'Pop' operation retrieves and removes the most recent action."
-    },
-    {
-      "id": 4,
-      "domain": "Queues",
-      "difficulty": "Easy",
-      "question": "Which principle does a standard Queue data structure follow?",
-      "options": {
-        "A": "LIFO",
-        "B": "LILO",
-        "C": "FIFO",
-        "D": "FILO"
-      },
-      "answer": "C",
-      "detailedexplanation": "Queues follow the First-In-First-Out (FIFO) principle. This means the first element added to the queue will be the first one to be removed. This is similar to a real-world line at a grocery store. LIFO (Last-In-First-Out) is the principle for Stacks."
-    },
-    {
-      "id": 5,
-      "domain": "Hash Tables",
-      "difficulty": "Medium",
-      "question": "What is a 'Collision' in a Hash Table?",
-      "options": {
-        "A": "Two different keys produce the same hash value.",
-        "B": "The hash table runs out of memory.",
-        "C": "The hash function returns a null value.",
-        "D": "The key is larger than the size of the array."
-      },
-      "answer": "A",
-      "detailedexplanation": "A collision occurs when two distinct keys, when passed through a hash function, result in the same index (hash value) in the underlying array. Since each array slot can typically hold only one value (unless using chaining), strategies like Linear Probing or Chaining must be used to resolve the conflict. High collision rates degrade the performance of a Hash Table from O(1) toward O(n)."
-    },
-    {
-      "id": 6,
-      "domain": "Trees",
-      "difficulty": "Medium",
-      "question": "In a Binary Search Tree (BST), where would you find the node with the minimum value?",
-      "options": {
-        "A": "The root node.",
-        "B": "The rightmost leaf node.",
-        "C": "The leftmost node in the tree.",
-        "D": "The node with no children."
-      },
-      "answer": "C",
-      "detailedexplanation": "By the definition of a Binary Search Tree, for any given node, all values in its left subtree are smaller than its own value. To find the minimum value, you must start at the root and continually follow the 'left' child pointers until you reach a node that has no left child. That node will contain the minimum value in the BST."
-    },
-    {
-      "id": 7,
-      "domain": "Graphs",
-      "difficulty": "Hard",
-      "question": "Which algorithm is most efficient for finding the shortest path between all pairs of vertices in a weighted graph?",
-      "options": {
-        "A": "Dijkstra’s Algorithm",
-        "B": "Bellman-Ford Algorithm",
-        "C": "Floyd-Warshall Algorithm",
-        "D": "Prim’s Algorithm"
-      },
-      "answer": "C",
-      "detailedexplanation": "Floyd-Warshall is a dynamic programming algorithm specifically designed for the 'All-Pairs Shortest Path' problem. While Dijkstra's can be run 'V' times to achieve this, Floyd-Warshall is more straightforward for dense graphs with a complexity of O(V^3). Dijkstra's is typically used for Single-Source Shortest Path. Prim's is used for Minimum Spanning Trees, not shortest paths."
-    },
-    {
-      "id": 8,
-      "domain": "Complexity Analysis",
-      "difficulty": "Medium",
-      "question": "What is the worst-case time complexity of searching for an element in a balanced Binary Search Tree?",
-      "options": {
-        "A": "O(1)",
-        "B": "O(n)",
-        "C": "O(log n)",
-        "D": "O(n log n)"
-      },
-      "answer": "C",
-      "detailedexplanation": "In a balanced BST (like an AVL tree or Red-Black tree), the height of the tree is kept at logarithmic levels relative to the number of nodes (n). Since each comparison in a search allows you to discard half of the remaining tree, the total number of comparisons is proportional to the height, which is O(log n). If the tree were unbalanced (skewed), the worst case would be O(n)."
-    },
-    {
-      "id": 9,
-      "domain": "Linked Lists",
-      "difficulty": "Easy",
-      "question": "In a circular linked list, what does the 'next' pointer of the last node point to?",
-      "options": {
-        "A": "NULL",
-        "B": "The second node",
-        "C": "The middle node",
-        "D": "The head node"
-      },
-      "answer": "D",
-      "detailedexplanation": "By definition, a circular linked list is a variation where there is no NULL at the end. Instead, the last node's 'next' pointer points back to the first node (the head), creating a continuous loop. This is useful for applications like round-robin CPU scheduling."
-    },
-    {
-      "id": 10,
-      "domain": "Heaps",
-      "difficulty": "Medium",
-      "question": "Which property must a Max-Heap satisfy?",
-      "options": {
-        "A": "The root is the smallest element.",
-        "B": "Every node is smaller than its children.",
-        "C": "The value of a parent node is always greater than or equal to its children.",
-        "D": "The tree must be a full binary tree."
-      },
-      "answer": "C",
-      "detailedexplanation": "In a Max-Heap, for every node 'i' other than the root, the value of the parent is greater than or equal to the value of 'i'. This ensures that the maximum element is always at the root. Heaps must also be 'Complete Binary Trees' (all levels filled except possibly the last, which is filled from left to right), but the Max-Heap property specifically refers to the value relationship."
-    },
-    {
-      "id": 11,
-      "domain": "Arrays",
-      "difficulty": "Medium",
-      "question": "If you need to insert an element at the beginning of an array of size n, what is the time complexity?",
-      "options": {
-        "A": "O(1)",
-        "B": "O(log n)",
-        "C": "O(n)",
-        "D": "O(n^2)"
-      },
-      "answer": "C",
-      "detailedexplanation": "Inserting at the beginning of an array (index 0) requires all existing elements to be shifted one position to the right to make room. Since there are 'n' elements to shift, the operation takes O(n) time. This is why arrays are efficient for access but inefficient for frequent insertions at arbitrary positions."
-    },
-    {
-      "id": 12,
-      "domain": "Stacks",
-      "difficulty": "Medium",
-      "question": "Which of the following is an application of a Stack?",
-      "options": {
-        "A": "Breadth-First Search (BFS)",
-        "B": "Infix to Postfix conversion",
-        "C": "Handling multiple print jobs in a printer",
-        "D": "Implementing a LRU Cache"
-      },
-      "answer": "B",
-      "detailedexplanation": "Converting an expression from Infix (e.g., A+B) to Postfix (e.g., AB+) requires a stack to manage operators and maintain the correct order of operations (precedence). BFS uses a Queue. Printer jobs use a Queue. LRU Cache usually uses a combination of a Hash Map and a Doubly Linked List."
-    },
-    {
-      "id": 13,
-      "domain": "Trees",
-      "difficulty": "Easy",
-      "question": "How many children can a node in a Binary Tree have?",
-      "options": {
-        "A": "Exactly 2",
-        "B": "At most 2",
-        "C": "At least 2",
-        "D": "Any number of children"
-      },
-      "answer": "B",
-      "detailedexplanation": "By definition, a 'Binary' tree restricts each node to a maximum of two children, commonly referred to as the 'left' child and the 'right' child. A node can have 0 (leaf), 1, or 2 children."
-    },
-    {
-      "id": 14,
-      "domain": "Sorting",
-      "difficulty": "Medium",
-      "question": "Which sorting algorithm uses the Divide and Conquer strategy and has a worst-case complexity of O(n^2)?",
-      "options": {
-        "A": "Merge Sort",
-        "B": "Quick Sort",
-        "C": "Heap Sort",
-        "D": "Bubble Sort"
-      },
-      "answer": "B",
-      "detailedexplanation": "Quick Sort is a Divide and Conquer algorithm. Its average case is O(n log n). However, if the pivot selection is poor (e.g., picking the smallest or largest element in an already sorted array), the partitioning becomes highly unbalanced, leading to a worst-case complexity of O(n^2). Merge Sort is also Divide and Conquer but guarantees O(n log n) even in the worst case."
-    },
-    {
-      "id": 15,
-      "domain": "Graphs",
-      "difficulty": "Medium",
-      "question": "Which data structure is used to implement Breadth-First Search (BFS) on a graph?",
-      "options": {
-        "A": "Stack",
-        "B": "Queue",
-        "C": "Tree",
-        "D": "Priority Queue"
-      },
-      "answer": "B",
-      "detailedexplanation": "BFS explores a graph layer by layer. To ensure that nodes are visited in the order they were discovered, a Queue (FIFO) is used. When a node is visited, all its unvisited neighbors are added to the back of the queue. Depth-First Search (DFS), on the other hand, uses a Stack (or recursion)."
-    },
-    {
-      "id": 16,
-      "domain": "Tries",
-      "difficulty": "Hard",
-      "question": "What is the primary advantage of using a Trie (Prefix Tree) over a Hash Table for storing strings?",
-      "options": {
-        "A": "It uses less memory for all cases.",
-        "B": "It allows for efficient prefix-based searching.",
-        "C": "It has a faster average search time.",
-        "D": "It is easier to implement."
-      },
-      "answer": "B",
-      "detailedexplanation": "While Hash Tables have O(1) average search time, they cannot easily perform prefix matches (e.g., 'find all words starting with 'auto''). Tries are structured such that all strings sharing a common prefix share the same nodes in the tree, making prefix searches and auto-complete features very efficient."
-    },
-    {
-      "id": 17,
-      "domain": "Recursion",
-      "difficulty": "Medium",
-      "question": "What happens if a recursive function does not have a base case?",
-      "options": {
-        "A": "The function returns 0.",
-        "B": "The function executes once and stops.",
-        "C": "It leads to infinite recursion and a Stack Overflow error.",
-        "D": "The compiler will catch the error and won't run."
-      },
-      "answer": "C",
-      "detailedexplanation": "A base case is the condition that stops the recursion. Without it, the function keeps calling itself, adding a new frame to the call stack with each call. Eventually, the memory allocated for the call stack is exhausted, resulting in a 'Stack Overflow' error."
-    },
-    {
-      "id": 18,
-      "domain": "Graphs",
-      "difficulty": "Medium",
-      "question": "In an Adjacency Matrix representation of a graph with V vertices, what is the space complexity?",
-      "options": {
-        "A": "O(V)",
-        "B": "O(E)",
-        "C": "O(V + E)",
-        "D": "O(V^2)"
-      },
-      "answer": "D",
-      "detailedexplanation": "An Adjacency Matrix is a 2D array of size V x V, where the cell at row 'i' and column 'j' indicates whether an edge exists between vertex 'i' and vertex 'j'. Because it stores a value for every possible pair of vertices, it always requires V^2 space, regardless of the number of edges (E)."
-    },
-    {
-      "id": 19,
-      "domain": "Complexity Analysis",
-      "difficulty": "Easy",
-      "question": "What does 'Space Complexity' of an algorithm refer to?",
-      "options": {
-        "A": "The physical disk space required to store the code.",
-        "B": "The amount of memory (RAM) used by the algorithm relative to the input size.",
-        "C": "The time it takes for the algorithm to complete.",
-        "D": "The number of lines of code in the algorithm."
-      },
-      "answer": "B",
-      "detailedexplanation": "Space complexity is a measure of the amount of working memory an algorithm needs to run to completion, as a function of the input size 'n'. This includes both the space taken by the inputs and the auxiliary space (extra space used by the algorithm)."
-    },
-    {
-      "id": 20,
-      "domain": "Hash Tables",
-      "difficulty": "Medium",
-      "question": "In 'Chaining', how are collisions handled in a Hash Table?",
-      "options": {
-        "A": "By finding the next available slot in the array.",
-        "B": "By using a second hash function.",
-        "C": "By storing multiple elements in a linked list at the same index.",
-        "D": "By increasing the size of the hash table immediately."
-      },
-      "answer": "C",
-      "detailedexplanation": "Chaining (Open Hashing) handles collisions by making each cell of the hash table point to a linked list (or other data structure) of records that have the same hash function value. Option A describes 'Open Addressing' (specifically Linear Probing)."
-    },
-    {
-      "id": 21,
-      "domain": "Trees",
-      "difficulty": "Medium",
-      "question": "What is the height of a balanced Binary Tree with n nodes?",
-      "options": {
-        "A": "O(n)",
-        "B": "O(log n)",
-        "C": "O(n log n)",
-        "D": "O(1)"
-      },
-      "answer": "B",
-      "detailedexplanation": "A balanced tree ensures that the height difference between left and right subtrees is minimal. For a tree with 'n' nodes, the height 'h' is roughly log base 2 of 'n'. This logarithmic height is what allows for efficient O(log n) search, insertion, and deletion."
-    },
-    {
-      "id": 22,
-      "domain": "Sorting",
-      "difficulty": "Easy",
-      "question": "Which of the following is an In-place sorting algorithm?",
-      "options": {
-        "A": "Merge Sort",
-        "B": "Quick Sort",
-        "C": "Radix Sort",
-        "D": "Counting Sort"
-      },
-      "answer": "B",
-      "detailedexplanation": "An In-place algorithm is one that uses a small, constant amount of extra space (auxiliary space) regardless of the input size. Quick Sort is in-place because it sorts by swapping elements within the original array. Merge Sort is NOT in-place because it requires an auxiliary array of size O(n) to merge the sub-arrays."
-    },
-    {
-      "id": 23,
-      "domain": "Linked Lists",
-      "difficulty": "Medium",
-      "question": "How can you detect a cycle in a linked list efficiently?",
-      "options": {
-        "A": "By counting the total number of nodes.",
-        "B": "Using two pointers moving at different speeds (Floyd’s Cycle-Finding Algorithm).",
-        "C": "By checking if the head is equal to the tail.",
-        "D": "By reversing the linked list."
-      },
-      "answer": "B",
-      "detailedexplanation": "Floyd’s Cycle-Finding Algorithm (also known as the 'Tortoise and the Hare' algorithm) uses two pointers: one moves one step at a time (slow), and the other moves two steps at a time (fast). If there is a cycle, the fast pointer will eventually catch up to the slow pointer inside the loop."
-    },
-    {
-      "id": 24,
-      "domain": "Heaps",
-      "difficulty": "Medium",
-      "question": "What is the time complexity to extract the minimum element from a Min-Heap of size n?",
-      "options": {
-        "A": "O(1)",
-        "B": "O(log n)",
-        "C": "O(n)",
-        "D": "O(n log n)"
-      },
-      "answer": "B",
-      "detailedexplanation": "While 'finding' the minimum is O(1) (it's at the root), 'extracting' it involves removing the root, replacing it with the last element, and then 'heapifying' (shifting the element down) to restore the heap property. The heapify process takes time proportional to the height of the tree, which is O(log n)."
-    },
-    {
-      "id": 25,
-      "domain": "Queues",
-      "difficulty": "Medium",
-      "question": "In a Circular Queue implemented with an array of size N, what is the condition for the queue being 'Full'?",
-      "options": {
-        "A": "front == rear",
-        "B": "(rear + 1) % N == front",
-        "C": "rear == N - 1",
-        "D": "front == 0"
-      },
-      "answer": "B",
-      "detailedexplanation": "In a circular queue, the 'rear' pointer wraps around to the beginning of the array. To distinguish between an empty queue and a full queue, we typically leave one space empty. The 'full' condition is satisfied when the next position after 'rear' (calculated using modulo N) is the same as the 'front' position."
-    },
-    {
-      "id": 26,
-      "domain": "Hash Tables",
-      "difficulty": "Hard",
-      "question": "What is the 'Load Factor' of a Hash Table?",
-      "options": {
-        "A": "The time taken by the hash function.",
-        "B": "The number of collisions divided by total keys.",
-        "C": "The ratio of the number of elements stored to the total capacity of the table.",
-        "D": "The maximum number of elements a single bucket can hold."
-      },
-      "answer": "C",
-      "detailedexplanation": "The load factor (α) is defined as n/m, where 'n' is the number of entries and 'm' is the number of buckets (slots). It indicates how 'full' the hash table is. A high load factor increases the probability of collisions, leading most implementations to 'resize' or 'rehash' once the load factor exceeds a certain threshold (typically 0.7 or 0.75)."
-    },
-    {
-      "id": 27,
-      "domain": "Trees",
-      "difficulty": "Medium",
-      "question": "Which tree traversal visits the nodes in the order: Left, Right, Root?",
-      "options": {
-        "A": "Pre-order",
-        "B": "In-order",
-        "C": "Post-order",
-        "D": "Level-order"
-      },
-      "answer": "C",
-      "detailedexplanation": "In Post-order traversal, the algorithm visits the left subtree first, then the right subtree, and finally the root node. This is often used for deleting a tree (since you delete children before parents) or evaluating postfix expressions."
-    },
-    {
-      "id": 28,
-      "domain": "Graphs",
-      "difficulty": "Medium",
-      "question": "What is a 'Spanning Tree' of a graph?",
-      "options": {
-        "A": "A subgraph that contains all the vertices and is a tree.",
-        "B": "A subgraph that contains all the edges.",
-        "C": "A cycle that visits every node once.",
-        "D": "The shortest path between two nodes."
-      },
-      "answer": "A",
-      "detailedexplanation": "A spanning tree is a subset of a Graph 'G', which has all the vertices covered with the minimum possible number of edges. Hence, a spanning tree does not have cycles and it cannot be disconnected. If a graph has V vertices, a spanning tree has V-1 edges."
-    },
-    {
-      "id": 29,
-      "domain": "Arrays",
-      "difficulty": "Easy",
-      "question": "Which of these is a drawback of using a Static Array?",
-      "options": {
-        "A": "Accessing elements takes O(n) time.",
-        "B": "The size must be known at compile time and cannot be changed.",
-        "C": "It consumes more memory than a Linked List.",
-        "D": "It cannot store integer values."
-      },
-      "answer": "B",
-      "detailedexplanation": "Static arrays have a fixed size allocated during declaration/compile time. This leads to issues where you might allocate too much memory (wasted space) or too little memory (leading to overflow). Dynamic arrays (like ArrayList in Java or vector in C++) solve this by resizing themselves."
-    },
-    {
-      "id": 30,
-      "domain": "Complexity Analysis",
-      "difficulty": "Hard",
-      "question": "What is the time complexity of building a heap from an unsorted array of n elements?",
-      "options": {
-        "A": "O(n log n)",
-        "B": "O(n)",
-        "C": "O(log n)",
-        "D": "O(n^2)"
-      },
-      "answer": "B",
-      "detailedexplanation": "While inserting elements one by one into a heap takes O(n log n), the 'Build-Heap' algorithm (starting from the last non-leaf node and heapifying down) takes O(n) time. This is because the amount of work decreases as we move up the tree (more nodes at the bottom require less work than the fewer nodes at the top)."
-    }
-  ],
-  "outro_script": {
-    "closing": "That concludes our deep dive into the top 30 Data Structure interview questions. We hope these detailed explanations helped clarify these fundamental concepts.",
-    "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more technical interview preparation content.",
-    "next_steps": "Don't forget to practice coding these structures from scratch. Check out the link in the description for a comprehensive course to master DSA."
-  },
-  "on_screen_elements": {
-    "timer_duration": "10 seconds",
-    "transition_effect_hints": "Use smooth fade transitions between questions. Highlight the correct answer in green after the timer ends."
-  }
-}
 ]
