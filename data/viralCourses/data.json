@@ -2,497 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Top Automation Testing Interview Questions and Answers",
-                "Automation Testing Mastery: Practice Exam Questions",
-                "Selenium and Automation Testing Interview Prep Guide",
-                "Most Common Automation Testing Interview Questions",
-                "How to Ace Your Automation Testing Job Interview",
-                "SDET Interview Questions and Answers Comprehensive Guide",
-                "Automation Testing Framework Interview Questions",
-                "Java and Selenium Automation Testing Practice Test",
-                "Crack the Automation Testing Interview First Try",
-                "Essential Automation Testing Concepts for Interviews"
-            ],
-            "intro_script": {
-                "hook": "Are you tired of feeling unprepared when the interviewer asks deep-dive questions about automation frameworks and sync strategies?",
-                "summary": "In this video, we cover 30 essential Automation Testing interview questions that span across Selenium, Java, TestNG, and framework design patterns to ensure you are ready for any SDET or QA Automation role.",
-                "cta_intro": "Before we dive in, make sure to subscribe for more career-boosting content.",
-                "checkfullexamlinkindescription": "For the full practice exam and premium preparation materials, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/bkb9e9",
-                "youtubetitle": "Automation Testing Interview Questions and Answers | SDET Prep Guide",
-                "description": "Master your next technical interview with these comprehensive Automation Testing practice questions. We cover Selenium, TestNG, Cucumber, and Java concepts specifically designed for QA Automation Engineers and SDETs. This video provides detailed explanations for each answer to help you understand the 'why' behind the logic. Check out our full course on Udemy for even more practice tests!",
-                "tags": "automation testing, selenium interview questions, SDET interview, QA automation, Java for selenium, TestNG questions, framework design patterns, software testing, selenium webdriver, automation engineer",
-                "hashtags": [
-                    "#AutomationTesting",
-                    "#SDET",
-                    "#Selenium",
-                    "#QAInterview",
-                    "#SoftwareTesting",
-                    "#CodingInterview"
-                ],
-                "keywords": [
-                    "Automation Testing Interview Questions",
-                    "Selenium Webdriver MCQ",
-                    "SDET Interview Prep",
-                    "Java for Automation Testing",
-                    "TestNG Interview Questions",
-                    "Page Object Model Interview Questions",
-                    "Automation Framework MCQ",
-                    "Behavior Driven Development Questions",
-                    "CI/CD for Testers",
-                    "Automation Testing Career"
-                ],
-                "mostsearchedongoogle": [
-                    "selenium interview questions for 5 years experience",
-                    "automation testing interview questions for freshers",
-                    "top 50 automation testing interview questions",
-                    "sdet interview coding questions",
-                    "selenium webdriver mcq with answers",
-                    "advanced automation testing interview questions",
-                    "java selenium interview questions and answers for experienced",
-                    "framework interview questions in selenium",
-                    "test automation strategy interview questions",
-                    "cucumber bdd interview questions"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Automation Fundamentals",
-                "difficulty": "Intermediate",
-                "question": "Which of the following is the primary advantage of using a Page Object Model (POM) in automation testing?",
-                "options": {
-                    "A": "It speeds up the execution time of the test scripts.",
-                    "B": "It improves script maintenance and reduces code duplication.",
-                    "C": "It eliminates the need for any wait commands in Selenium.",
-                    "D": "It allows the scripts to run without a browser driver."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Page Object Model (POM) is a design pattern that creates an object repository for web elements. The main advantage is that if a UI change occurs (like a button ID changing), you only need to update the locator in one place (the Page Class) rather than in every test script. This significantly enhances maintainability and follows the DRY (Don't Repeat Yourself) principle."
-            },
-            {
-                "id": 2,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Intermediate",
-                "question": "Which Selenium command is used to delete all cookies in the current browser session?",
-                "options": {
-                    "A": "driver.manage().clearCookies();",
-                    "B": "driver.manage().deleteAllCookies();",
-                    "C": "driver.cookies().delete();",
-                    "D": "driver.window().deleteCookies();"
-                },
-                "answer": "B",
-                "detailedexplanation": "In Selenium WebDriver, the `driver.manage()` method returns an Options interface, which contains the `deleteAllCookies()` method. This is frequently used in the @BeforeMethod or setup phase of a test to ensure a clean state by removing session data and cache-related cookies."
-            },
-            {
-                "id": 3,
-                "domain": "Synchronization",
-                "difficulty": "Hard",
-                "question": "What is the key difference between Implicit Wait and Explicit Wait in Selenium?",
-                "options": {
-                    "A": "Implicit wait is defined globally; Explicit wait is applied to specific elements.",
-                    "B": "Explicit wait is defined globally; Implicit wait is applied to specific elements.",
-                    "C": "Implicit wait polls the DOM every 250ms; Explicit wait polls every 1 second.",
-                    "D": "Implicit wait is only for Chrome; Explicit wait works for all browsers."
-                },
-                "answer": "A",
-                "detailedexplanation": "Implicit wait is a global setting that tells the WebDriver to poll the DOM for a certain amount of time when trying to find any element. Explicit wait is more surgical; it allows the code to halt execution until a specific condition (like visibility or clickability) is met for a specific element. Mixing both is generally discouraged as it can cause unpredictable wait times."
-            },
-            {
-                "id": 4,
-                "domain": "TestNG",
-                "difficulty": "Intermediate",
-                "question": "In TestNG, which attribute would you use if you want a test method to run multiple times with different data sets?",
-                "options": {
-                    "A": "invocationCount",
-                    "B": "dataProvider",
-                    "C": "dependsOnMethods",
-                    "D": "groups"
-                },
-                "answer": "B",
-                "detailedexplanation": "The `dataProvider` attribute in the @Test annotation links the test method to a method annotated with @DataProvider. This allows Data-Driven Testing, where the same test logic is executed repeatedly using different rows of data (usually from an Excel sheet or an Object array)."
-            },
-            {
-                "id": 5,
-                "domain": "Locators",
-                "difficulty": "Hard",
-                "question": "When using XPath, what does the 'following-sibling' axis do?",
-                "options": {
-                    "A": "Selects all siblings that appear before the current node.",
-                    "B": "Selects all children of the current node.",
-                    "C": "Selects all nodes that have the same parent and appear after the current node.",
-                    "D": "Selects the parent of the current node."
-                },
-                "answer": "C",
-                "detailedexplanation": "The `following-sibling` axis in XPath is used to locate elements that share the same parent as the current node but are positioned after it in the HTML document. This is extremely useful for dynamic tables where you find a label and then need to interact with a checkbox or input field in the next column."
-            },
-            {
-                "id": 6,
-                "domain": "Automation Frameworks",
-                "difficulty": "Intermediate",
-                "question": "What is the purpose of the 'Config.properties' file in an automation framework?",
-                "options": {
-                    "A": "To store the test execution results.",
-                    "B": "To store environment-specific data like URL, browser, and credentials.",
-                    "C": "To store the locators for the web pages.",
-                    "D": "To store the Java compiled bytecode."
-                },
-                "answer": "B",
-                "detailedexplanation": "A properties file is used to store configuration data outside of the source code. This allows testers to change the environment (e.g., from QA to Staging) or the browser type without modifying the Java code or recompiling the project."
-            },
-            {
-                "id": 7,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Easy",
-                "question": "Which method is used to navigate to a specific URL in Selenium?",
-                "options": {
-                    "A": "driver.url(\"url\");",
-                    "B": "driver.navigate(\"url\");",
-                    "C": "driver.get(\"url\");",
-                    "D": "driver.set(\"url\");"
-                },
-                "answer": "C",
-                "detailedexplanation": "The `driver.get(\"URL\")` method is the most common way to open a webpage. While `driver.navigate().to(\"URL\")` also works, `get()` is more direct and waits for the page to load completely before moving to the next line of code."
-            },
-            {
-                "id": 8,
-                "domain": "Exception Handling",
-                "difficulty": "Hard",
-                "question": "Which exception is thrown when an element is present in the DOM but is not in a state that can be interacted with?",
-                "options": {
-                    "A": "NoSuchElementException",
-                    "B": "StaleElementReferenceException",
-                    "C": "ElementNotInteractableException",
-                    "D": "TimeoutException"
-                },
-                "answer": "C",
-                "detailedexplanation": "ElementNotInteractableException (or its subtypes like ElementNotVisibleException) occurs when the WebDriver finds the element in the HTML code, but it is hidden, covered by another element, or disabled. StaleElementReferenceException, on the other hand, happens when the element is no longer attached to the DOM."
-            },
-            {
-                "id": 9,
-                "domain": "TestNG",
-                "difficulty": "Intermediate",
-                "question": "How can you prioritize test execution in TestNG?",
-                "options": {
-                    "A": "By naming methods in alphabetical order.",
-                    "B": "Using the 'priority' attribute in the @Test annotation.",
-                    "C": "By placing tests in different classes.",
-                    "D": "TestNG executes tests in the order they are written by default."
-                },
-                "answer": "B",
-                "detailedexplanation": "TestNG allows you to set the execution order using the `priority` attribute (e.g., `@Test(priority = 1)`). Lower numbers have higher priority and run first. If no priority is set, TestNG defaults to alphabetical order based on method names."
-            },
-            {
-                "id": 10,
-                "domain": "Java for Automation",
-                "difficulty": "Intermediate",
-                "question": "In Java, which keyword is used to inherit a class?",
-                "options": {
-                    "A": "implements",
-                    "B": "inherits",
-                    "C": "extends",
-                    "D": "includes"
-                },
-                "answer": "C",
-                "detailedexplanation": "The `extends` keyword is used in Java to create a subclass that inherits the fields and methods of a superclass. This is fundamental in automation for creating Base classes (BaseTest) that provide common functionality to all test classes."
-            },
-            {
-                "id": 11,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Intermediate",
-                "question": "How do you switch to a pop-up window or alert in Selenium?",
-                "options": {
-                    "A": "driver.switchTo().alert();",
-                    "B": "driver.alert().accept();",
-                    "C": "driver.manage().window().alert();",
-                    "D": "driver.switchTo().window(\"alert\");"
-                },
-                "answer": "A",
-                "detailedexplanation": "The `driver.switchTo().alert()` method moves the focus of the WebDriver from the main window to the active JavaScript alert. Once switched, you can use methods like `accept()`, `dismiss()`, or `getText()`."
-            },
-            {
-                "id": 12,
-                "domain": "Reporting",
-                "difficulty": "Intermediate",
-                "question": "Which listener interface in TestNG is commonly used to take a screenshot on test failure?",
-                "options": {
-                    "A": "ISuiteListener",
-                    "B": "IInvokedMethodListener",
-                    "C": "ITestListener",
-                    "D": "IReporter"
-                },
-                "answer": "C",
-                "detailedexplanation": "The `ITestListener` interface provides the `onTestFailure` method. By overriding this method, you can write logic to capture a screenshot automatically whenever a test case fails, which is crucial for debugging in CI/CD pipelines."
-            },
-            {
-                "id": 13,
-                "domain": "BDD / Cucumber",
-                "difficulty": "Intermediate",
-                "question": "In Cucumber, what is a 'Step Definition'?",
-                "options": {
-                    "A": "A line in the .feature file describing the scenario.",
-                    "B": "The Java code that maps to the Gherkin steps in the feature file.",
-                    "C": "A configuration file for the test runner.",
-                    "D": "The HTML report generated after execution."
-                },
-                "answer": "B",
-                "detailedexplanation": "A Step Definition is a Java method with an annotation (like @Given, @When, @Then) that matches a line in the Gherkin feature file using regular expressions or Cucumber expressions. It contains the actual automation code to execute that specific step."
-            },
-            {
-                "id": 14,
-                "domain": "Automation Strategy",
-                "difficulty": "Intermediate",
-                "question": "What is the 'Test Automation Pyramid'?",
-                "options": {
-                    "A": "A strategy to automate the UI first, then the API.",
-                    "B": "A concept suggesting more unit tests, fewer API tests, and even fewer UI tests.",
-                    "C": "A tool used for performance testing.",
-                    "D": "A way to organize tests based on their difficulty."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Test Automation Pyramid suggests that the bulk of your tests should be Unit tests (bottom), followed by Service/API tests (middle), and the smallest portion should be UI/End-to-End tests (top). This ensures a fast, reliable, and cost-effective testing suite."
-            },
-            {
-                "id": 15,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Hard",
-                "question": "Which class is used to perform complex user interactions like drag and drop or mouse hover?",
-                "options": {
-                    "A": "Action",
-                    "B": "Interaction",
-                    "C": "Actions",
-                    "D": "Robot"
-                },
-                "answer": "C",
-                "detailedexplanation": "The `Actions` class in Selenium is used for advanced user interactions. It allows for chaining actions (like `moveToElement().click().build().perform()`). Note that you must call `.perform()` at the end for the actions to actually execute."
-            },
-            {
-                "id": 16,
-                "domain": "Wait Strategies",
-                "difficulty": "Intermediate",
-                "question": "What happens if a Fluent Wait timeout is reached and the element is still not found?",
-                "options": {
-                    "A": "The script continues to the next line.",
-                    "B": "The browser closes automatically.",
-                    "C": "It throws a TimeoutException.",
-                    "D": "It restarts the test."
-                },
-                "answer": "C",
-                "detailedexplanation": "Like Explicit Wait, Fluent Wait will throw a `TimeoutException` if the defined condition is not met within the specified timeout duration. Fluent Wait is unique because it allows you to configure the polling frequency and ignore specific exceptions (like NoSuchElementException)."
-            },
-            {
-                "id": 17,
-                "domain": "Locators",
-                "difficulty": "Easy",
-                "question": "Which locator is generally considered the fastest and most reliable in Selenium?",
-                "options": {
-                    "A": "XPath",
-                    "B": "CSS Selector",
-                    "C": "ID",
-                    "D": "Link Text"
-                },
-                "answer": "C",
-                "detailedexplanation": "The `ID` locator is the fastest because browsers have highly optimized methods (like `getElementById`) to find elements by ID. IDs are also generally unique on a page, making them the most stable choice for automation."
-            },
-            {
-                "id": 18,
-                "domain": "Java for Automation",
-                "difficulty": "Intermediate",
-                "question": "How do you handle multiple windows in Selenium?",
-                "options": {
-                    "A": "Using driver.getWindowHandle()",
-                    "B": "Using driver.getWindowHandles()",
-                    "C": "Using driver.switchTo().nextWindow()",
-                    "D": "Using driver.manage().windows()"
-                },
-                "answer": "B",
-                "detailedexplanation": "The `getWindowHandles()` method returns a Set of window handles (unique IDs for each open window/tab). You can then iterate through this set and use `driver.switchTo().window(handle)` to move the WebDriver's focus to the desired window."
-            },
-            {
-                "id": 19,
-                "domain": "Maven",
-                "difficulty": "Intermediate",
-                "question": "What is the purpose of the pom.xml file in a Maven project?",
-                "options": {
-                    "A": "To store the test data.",
-                    "B": "To manage project dependencies, plugins, and build configurations.",
-                    "C": "To store the Page Object Model classes.",
-                    "D": "To act as the main entry point for the Java application."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Project Object Model (POM) file is the fundamental unit of work in Maven. It contains information about the project and configuration details used by Maven to build the project, such as Selenium and TestNG dependencies."
-            },
-            {
-                "id": 20,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Hard",
-                "question": "What is the use of JavascriptExecutor in Selenium?",
-                "options": {
-                    "A": "To execute Java code in the browser.",
-                    "B": "To interact with elements when standard Selenium methods fail.",
-                    "C": "To write test cases in JavaScript.",
-                    "D": "To speed up the execution of the driver."
-                },
-                "answer": "B",
-                "detailedexplanation": "JavascriptExecutor is an interface that allows WebDriver to execute JavaScript within the context of the current window. It's often used for scrolling, clicking hidden elements, or handling complex web components that don't respond to standard Selenium commands."
-            },
-            {
-                "id": 21,
-                "domain": "TestNG",
-                "difficulty": "Intermediate",
-                "question": "In TestNG, what does 'enabled = false' do in the @Test annotation?",
-                "options": {
-                    "A": "It marks the test as failed.",
-                    "B": "It ignores the test during execution.",
-                    "C": "It runs the test only if other tests pass.",
-                    "D": "It deletes the test method."
-                },
-                "answer": "B",
-                "detailedexplanation": "Setting `@Test(enabled = false)` tells TestNG to skip this specific test method during the execution run. This is useful for temporarily disabling tests that are broken or under development."
-            },
-            {
-                "id": 22,
-                "domain": "CI/CD",
-                "difficulty": "Intermediate",
-                "question": "Which tool is most commonly used for orchestrating the execution of automation scripts in a CI/CD pipeline?",
-                "options": {
-                    "A": "Eclipse",
-                    "B": "Jenkins",
-                    "C": "Selenium Grid",
-                    "D": "Postman"
-                },
-                "answer": "B",
-                "detailedexplanation": "Jenkins is an open-source automation server used to build, deploy, and automate projects. In automation, it triggers the execution of test suites (usually via Maven commands) whenever new code is pushed to the repository."
-            },
-            {
-                "id": 23,
-                "domain": "Locators",
-                "difficulty": "Intermediate",
-                "question": "What is the difference between '/' and '//' in XPath?",
-                "options": {
-                    "A": "/ is for ID, // is for Class.",
-                    "B": "/ starts searching from the root, // searches anywhere in the document.",
-                    "C": "/ is for relative path, // is for absolute path.",
-                    "D": "There is no difference."
-                },
-                "answer": "B",
-                "detailedexplanation": "A single slash `/` indicates an absolute path (starting from the root node). A double slash `//` indicates a relative path, which tells the engine to search for the element anywhere in the DOM, making scripts much more robust to UI changes."
-            },
-            {
-                "id": 24,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Hard",
-                "question": "How can you handle a 'StaleElementReferenceException'?",
-                "options": {
-                    "A": "By increasing the implicit wait time.",
-                    "B": "By refreshing the page and re-finding the element.",
-                    "C": "By using a Thread.sleep() before the interaction.",
-                    "D": "By switching to a different browser."
-                },
-                "answer": "B",
-                "detailedexplanation": "A StaleElementReferenceException occurs when the DOM is updated or refreshed, and the previously found element reference is no longer valid. The standard solution is to re-locate the element using `findElement` again before interacting with it, or using a try-catch block to retry the operation."
-            },
-            {
-                "id": 25,
-                "domain": "Automation Frameworks",
-                "difficulty": "Intermediate",
-                "question": "What is the Data-Driven Framework?",
-                "options": {
-                    "A": "A framework where test data is separated from test logic.",
-                    "B": "A framework where tests are driven by Excel macros.",
-                    "C": "A framework used only for database testing.",
-                    "D": "A framework that doesn't use any external files."
-                },
-                "answer": "A",
-                "detailedexplanation": "In a Data-Driven framework, test inputs and expected results are stored in external files (like Excel, CSV, or XML). The script reads this data and executes the same steps for each row, allowing for high test coverage with minimal code."
-            },
-            {
-                "id": 26,
-                "domain": "Selenium WebDriver",
-                "difficulty": "Intermediate",
-                "question": "Which method is used to get the text of an element in Selenium?",
-                "options": {
-                    "A": "element.getValue()",
-                    "B": "element.getAttribute(\"text\")",
-                    "C": "element.getText()",
-                    "D": "element.fetchText()"
-                },
-                "answer": "C",
-                "detailedexplanation": "The `getText()` method retrieves the visible inner text of an element, including any sub-elements. If you need the value typed into an input box, you would use `getAttribute(\"value\")` instead."
-            },
-            {
-                "id": 27,
-                "domain": "Grid",
-                "difficulty": "Intermediate",
-                "question": "What is Selenium Grid used for?",
-                "options": {
-                    "A": "To generate reports for test execution.",
-                    "B": "To run tests in parallel across different browsers and operating systems.",
-                    "C": "To find elements more accurately.",
-                    "D": "To debug Java code."
-                },
-                "answer": "B",
-                "detailedexplanation": "Selenium Grid allows for distributed test execution. It consists of a Hub (central point) and Nodes (machines where tests run). This is essential for cross-browser testing and reducing the total execution time of large test suites."
-            },
-            {
-                "id": 28,
-                "domain": "Java for Automation",
-                "difficulty": "Intermediate",
-                "question": "What is the difference between '==' and '.equals()' in Java when comparing Strings?",
-                "options": {
-                    "A": "They are identical.",
-                    "B": "== compares references (memory location), .equals() compares content.",
-                    "C": "== compares content, .equals() compares references.",
-                    "D": "== is only for numbers, .equals() is for objects."
-                },
-                "answer": "B",
-                "detailedexplanation": "In Java, `==` is a relational operator that checks if two string references point to the same object in memory. The `.equals()` method is a method that checks if the actual sequence of characters (the content) of the two strings is the same. In automation assertions, we almost always use `.equals()`."
-            },
-            {
-                "id": 29,
-                "domain": "TestNG",
-                "difficulty": "Intermediate",
-                "question": "How do you run tests in parallel in TestNG?",
-                "options": {
-                    "A": "By using the 'parallel' attribute in the testng.xml file.",
-                    "B": "By adding @Parallel to each test method.",
-                    "C": "By running multiple instances of Eclipse.",
-                    "D": "TestNG cannot run tests in parallel."
-                },
-                "answer": "A",
-                "detailedexplanation": "TestNG supports parallel execution by configuring the `testng.xml` file. You can set the `parallel` attribute at the `<suite>` or `<test>` level to 'methods', 'classes', or 'tests', and specify the `thread-count` to control how many threads run simultaneously."
-            },
-            {
-                "id": 30,
-                "domain": "Automation Strategy",
-                "difficulty": "Intermediate",
-                "question": "Which of the following should NOT be automated?",
-                "options": {
-                    "A": "Smoke tests.",
-                    "B": "Regression tests.",
-                    "C": "One-time exploratory tests.",
-                    "D": "Data-intensive calculations."
-                },
-                "answer": "C",
-                "detailedexplanation": "Exploratory testing relies on human intuition, creativity, and the ability to find bugs through 'random' paths. Because these tests are not repetitive and change every time, the cost of automating them far outweighs the benefits. Focus automation on stable, repetitive, and high-risk regression tests."
-            }
-        ],
-        "outro_script": {
-            "closing": "That's it for our top 30 Automation Testing interview questions. Remember, understanding the concept is more important than just memorizing the answer.",
-            "cta_final": "If you found this helpful, hit the like button and share it with your fellow QA engineers.",
-            "next_steps": "Ready to take your skills to the next level? Click the link in the description to access our full Automation Testing Interview Practice Course on Udemy, featuring hundreds of realistic exam questions!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Smooth fade between questions; highlighted correct answer in green; pop-up icons for 'Pro Tip' explanations."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Data Structures Interview Questions and Answers",
                 "Top 30 Data Structures MCQs for Technical Interviews",
                 "Data Structures and Algorithms Mastery Quiz",
@@ -12613,7 +12122,7 @@
                     "D": "Creating a press release for the media."
                 },
                 "answer": "B",
-                "detailedexplanation": "The Recovery phase focuses on getting the business back to 'business as usual'. This involves restoring from clean backups, patching the original vulnerability, and—crucially—monitoring the systems closely to ensure the attacker doesn't return or that no hidden malware remains."
+                "detailedexplanation": "The Recovery phase focuses on getting the business back to 'business as usual'. This involves restoring from clean backups, patching the original vulnerability, and\u2014crucially\u2014monitoring the systems closely to ensure the attacker doesn't return or that no hidden malware remains."
             },
             {
                 "id": 24,
@@ -14097,7 +13606,7 @@
                     "D": "The NIC is hardware damaged"
                 },
                 "answer": "C",
-                "detailedexplanation": "If you can ping an IP address (e.g., 8.8.8.8) successfully, your network connection and routing are working. If you cannot reach the site by its name (e.g., google.com), the issue lies with Name Resolution. This points to a DNS problem—either the DNS server is down or the client is configured with an incorrect DNS IP."
+                "detailedexplanation": "If you can ping an IP address (e.g., 8.8.8.8) successfully, your network connection and routing are working. If you cannot reach the site by its name (e.g., google.com), the issue lies with Name Resolution. This points to a DNS problem\u2014either the DNS server is down or the client is configured with an incorrect DNS IP."
             },
             {
                 "id": 25,
@@ -14185,7 +13694,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30 essential networking interview questions. How many did you get right? If you struggled with some of the harder subnetting or protocol questions, don't worry—practice makes perfect.",
+            "closing": "That concludes our 30 essential networking interview questions. How many did you get right? If you struggled with some of the harder subnetting or protocol questions, don't worry\u2014practice makes perfect.",
             "cta_final": "If you found this helpful, hit the like button and subscribe for more IT career prep content.",
             "next_steps": "Ready to get certified? Click the link in the description to access full-length practice exams and comprehensive networking courses."
         },
@@ -14392,7 +13901,7 @@
                     "D": "There is no difference; both are used for the same purpose."
                 },
                 "answer": "B",
-                "detailedexplanation": "A CountDownLatch is initialized with a count, and threads call countDown() until it reaches zero. Once it hits zero, it cannot be reset. It’s a one-time use gate. A CyclicBarrier, however, is used when a fixed number of threads must wait for each other at a common barrier point. Once all threads arrive, the barrier is tripped, and it can be reused (hence 'cyclic') for the next round of synchronization."
+                "detailedexplanation": "A CountDownLatch is initialized with a count, and threads call countDown() until it reaches zero. Once it hits zero, it cannot be reset. It\u2019s a one-time use gate. A CyclicBarrier, however, is used when a fixed number of threads must wait for each other at a common barrier point. Once all threads arrive, the barrier is tripped, and it can be reused (hence 'cyclic') for the next round of synchronization."
             },
             {
                 "id": 11,
@@ -14532,7 +14041,7 @@
                     "D": "Set the thread object to null."
                 },
                 "answer": "C",
-                "detailedexplanation": "The stop() and destroy() methods are deprecated because they are unsafe—they force the thread to stop immediately, potentially leaving shared resources in a corrupted or 'locked' state. The correct approach is 'cooperative' cancellation: use a volatile flag that the thread checks periodically, or use thread.interrupt() and handle the InterruptedException to clean up and exit gracefully."
+                "detailedexplanation": "The stop() and destroy() methods are deprecated because they are unsafe\u2014they force the thread to stop immediately, potentially leaving shared resources in a corrupted or 'locked' state. The correct approach is 'cooperative' cancellation: use a volatile flag that the thread checks periodically, or use thread.interrupt() and handle the InterruptedException to clean up and exit gracefully."
             },
             {
                 "id": 21,
@@ -15254,7 +14763,7 @@
                 "id": 2,
                 "domain": "Memory Management",
                 "difficulty": "Hard",
-                "question": "In the context of Paging, what is 'Belady’s Anomaly'?",
+                "question": "In the context of Paging, what is 'Belady\u2019s Anomaly'?",
                 "options": {
                     "A": "The page fault rate increases as the number of page frames increases.",
                     "B": "The page fault rate decreases as the number of page frames increases.",
@@ -15262,7 +14771,7 @@
                     "D": "The CPU utilization drops when more processes are added."
                 },
                 "answer": "A",
-                "detailedexplanation": "Belady’s Anomaly is a counter-intuitive phenomenon where increasing the number of page frames results in an increase in the number of page faults for certain access patterns. This is specifically observed in the First-In-First-Out (FIFO) page replacement algorithm. Most other algorithms, like LRU (Least Recently Used), do not suffer from this because they belong to a class of 'stack algorithms' where the set of pages in a frame size N is always a subset of pages in frame size N+1."
+                "detailedexplanation": "Belady\u2019s Anomaly is a counter-intuitive phenomenon where increasing the number of page frames results in an increase in the number of page faults for certain access patterns. This is specifically observed in the First-In-First-Out (FIFO) page replacement algorithm. Most other algorithms, like LRU (Least Recently Used), do not suffer from this because they belong to a class of 'stack algorithms' where the set of pages in a frame size N is always a subset of pages in frame size N+1."
             },
             {
                 "id": 3,
