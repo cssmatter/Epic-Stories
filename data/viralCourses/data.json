@@ -43198,8 +43198,8 @@
             "timer_duration": "10 seconds per question",
             "transition_effect_hints": "Fade out after each explanation, smooth slide-in for the next question domain header."
         }
-    }
-{
+    },
+    {
         "video_assets": {
             "titles": [
                 "Python File Handling Mastery: Exam Practice Questions",
