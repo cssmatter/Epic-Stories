@@ -73852,7 +73852,6 @@
                     "B": "ignoring()",
                     "C": "group_left()",
                     "D": "group_right()"
-"
                 },
                 "answer": "C",
                 "detailedexplanation": "In PromQL, when performing binary operations between two vectors with different labels, you use 'on' or 'ignoring' for matching. To perform a many-to-one match (similar to a SQL left join), you use 'group_left'. This allows you to take labels from the 'one' side and include them in the result of the 'many' side."
@@ -93629,6 +93628,495 @@
         "on_screen_elements": {
             "timer_duration": "15 seconds",
             "transition_effect_hints": "Subtle slide-in for questions, checkmark sound effect for the correct answer, and a progress bar at the bottom."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "ECBA Exam Practice Questions and Answers",
+                "How to Pass ECBA Exam on First Attempt",
+                "IIBA ECBA Certification Exam Preparation Guide",
+                "Entry Certificate in Business Analysis Mock Test",
+                "ECBA Business Analysis Training Questions",
+                "Mastering the ECBA Exam BABOK Guide Content",
+                "ECBA Certification Questions and Detailed Explanations",
+                "Business Analysis Entry Level Certification Study Guide",
+                "Top ECBA Exam Practice Questions for Beginners",
+                "IIBA ECBA Exam Prep Strategy and Mock Questions"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to kickstart your career in Business Analysis but feeling overwhelmed by the BABOK Guide? Passing the IIBA ECBA exam is the first major step toward becoming a professional analyst, but the questions can be tricky and highly specific.",
+                "summary": "In this comprehensive guide, we are diving deep into 30 exam-style practice questions that cover all the key domains of the Entry Certificate in Business Analysis. From Business Analysis Planning to Requirements Life Cycle Management, we'll break down the concepts you need to know.",
+                "cta_intro": "Before we begin, make sure to grab a notebook. If you find these questions helpful, don't forget to like and subscribe for more certification prep content.",
+                "checkfullexamlinkindescription": "For a full-length simulator and the complete set of practice exams, check out the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/xJE0YR",
+                "youtubetitle": "ECBA Exam Practice Questions | IIBA Entry Certificate in Business Analysis Mock Test",
+                "description": "Boost your preparation for the IIBA Entry Certificate in Business Analysis (ECBA) with this comprehensive mock exam video. We cover 30 essential questions based on the BABOK Guide v3, ensuring you understand the core concepts, techniques, and underlying competencies required for the exam. Each question is followed by a detailed explanation to help you understand the 'why' behind the correct answer.\n\nTopics covered:\n- Business Analysis Planning and Monitoring\n- Elicitation and Collaboration\n- Requirements Life Cycle Management\n- Requirements Analysis and Design Definition\n- Business Analysis Key Concepts",
+                "tags": "ECBA, IIBA, Business Analysis, ECBA Exam Prep, Entry Certificate in Business Analysis, BABOK Guide, Business Analyst Certification, ECBA Practice Questions, ECBA Mock Exam, Business Analysis Training",
+                "hashtags": [
+                    "#ECBA",
+                    "#BusinessAnalysis",
+                    "#IIBA",
+                    "#BACertification",
+                    "#CareerInBA",
+                    "#BABOK"
+                ],
+                "keywords": [
+                    "ECBA exam questions",
+                    "Entry Certificate in Business Analysis study guide",
+                    "IIBA certification prep",
+                    "Business Analysis basics",
+                    "BABOK guide summary",
+                    "ECBA mock test 2024",
+                    "how to become a business analyst",
+                    "BA certification for beginners"
+                ],
+                "mostsearchedongoogle": [
+                    "ECBA exam passing score",
+                    "IIBA ECBA practice exam free",
+                    "ECBA vs CCBA",
+                    "BABOK guide v3 summary",
+                    "ECBA exam difficulty",
+                    "ECBA certification cost",
+                    "business analysis planning and monitoring questions",
+                    "requirements life cycle management ecba",
+                    "elicitation techniques for ecba",
+                    "entry level business analyst certification"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Business Analysis Planning and Monitoring",
+                "difficulty": "Medium",
+                "question": "Which of the following describes the purpose of the 'Plan Stakeholder Engagement' task?",
+                "options": {
+                    "A": "To define the requirements for stakeholder communication.",
+                    "B": "To develop an approach to involve stakeholders in decision making.",
+                    "C": "To identify all stakeholders affected by the change.",
+                    "D": "To ensure stakeholders agree with the project budget."
+                },
+                "answer": "B",
+                "detailedexplanation": "According to the BABOK Guide, the purpose of Planning Stakeholder Engagement is to develop an approach to involve stakeholders in the business analysis process. It focuses on building and maintaining effective working relationships. While communication is a part of it, the broader goal is engagement and involvement in the decision-making process. Identifying stakeholders is a precursor to this task, and managing the budget is typically a project management function, not a BA planning task."
+            },
+            {
+                "id": 2,
+                "domain": "Elicitation and Collaboration",
+                "difficulty": "Easy",
+                "question": "What is the primary goal of the 'Confirm Elicitation Results' task?",
+                "options": {
+                    "A": "To get formal sign-off on the business requirements document.",
+                    "B": "To ensure that the information gathered matches the stakeholders' intentions.",
+                    "C": "To distribute the elicitation results to all project team members.",
+                    "D": "To identify new stakeholders who were missed in the initial phase."
+                },
+                "answer": "B",
+                "detailedexplanation": "The purpose of Confirm Elicitation Results is to check the information gathered during an elicitation session for accuracy and consistency with other information. This task ensures that the business analyst's understanding of the stakeholder's needs is correct. It is not about formal approval (which happens later in the life cycle) but about validating that the notes or models accurately reflect what the stakeholder intended to communicate."
+            },
+            {
+                "id": 3,
+                "domain": "Requirements Life Cycle Management",
+                "difficulty": "Hard",
+                "question": "A business analyst is ensuring that requirements at different levels are aligned with one another. Which task is being performed?",
+                "options": {
+                    "A": "Maintain Requirements",
+                    "B": "Prioritize Requirements",
+                    "C": "Trace Requirements",
+                    "D": "Approve Requirements"
+                },
+                "answer": "C",
+                "detailedexplanation": "Tracing requirements involves establishing and maintaining relationships between requirements, designs, and other work products. The goal of 'Trace Requirements' is to ensure that requirements and designs at different levels (e.g., business requirements vs. stakeholder requirements) are aligned and that the solution fulfills the business need. It helps in impact analysis and ensuring nothing is lost during the development process."
+            },
+            {
+                "id": 4,
+                "domain": "Business Analysis Key Concepts",
+                "difficulty": "Easy",
+                "question": "In the Business Analysis Core Concept Model (BACCM), what is defined as 'a specific way of satisfying one or more needs in a context'?",
+                "options": {
+                    "A": "Change",
+                    "B": "Solution",
+                    "C": "Value",
+                    "D": "Stakeholder"
+                },
+                "answer": "B",
+                "detailedexplanation": "The BACCM defines a Solution as a specific way of satisfying one or more needs in a context. A solution satisfies a need by resolving a problem faced by stakeholders or enabling stakeholders to take advantage of an opportunity. The other concepts are Change (the act of transformation), Value (worth or importance), and Stakeholders (those with a relationship to the change)."
+            },
+            {
+                "id": 5,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Medium",
+                "question": "Which of the following is a characteristic of a 'Requirement' according to the BABOK Guide?",
+                "options": {
+                    "A": "A usable representation of a solution.",
+                    "B": "A document that explains the project's financial ROI.",
+                    "C": "A definition of the internal structure of the software.",
+                    "D": "A condition or capability needed by a stakeholder to achieve an objective."
+                },
+                "answer": "D",
+                "detailedexplanation": "The BABOK Guide defines a requirement as a condition or capability needed by a stakeholder to achieve an objective or solve a problem. It can also be a condition or capability that must be met or possessed by a solution or a solution component to satisfy a contract, standard, specification, or other formally imposed documents. A 'usable representation of a solution' is the definition of a Design."
+            },
+            {
+                "id": 6,
+                "domain": "Elicitation and Collaboration",
+                "difficulty": "Medium",
+                "question": "Which technique is best suited for gathering requirements by observing a user's actual workflow in their work environment?",
+                "options": {
+                    "A": "Interviews",
+                    "B": "Brainstorming",
+                    "C": "Job Shadowing",
+                    "D": "Focus Groups"
+                },
+                "answer": "C",
+                "detailedexplanation": "Job Shadowing (also known as Observation) provides direct access to how a task is performed. It allows the BA to see what users actually do, rather than what they say they do. This is particularly useful for identifying 'invisible' steps in a process or requirements that stakeholders might forget to mention in an interview because the tasks are so routine to them."
+            },
+            {
+                "id": 7,
+                "domain": "Business Analysis Planning and Monitoring",
+                "difficulty": "Medium",
+                "question": "What is the primary purpose of the 'Business Analysis Performance Assessment'?",
+                "options": {
+                    "A": "To track the hours spent by the BA team on the project.",
+                    "B": "To compare actual BA performance against planned performance and identify improvements.",
+                    "C": "To evaluate the quality of the final software product.",
+                    "D": "To determine the salary bonuses for the business analysts."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Business Analysis Performance Assessment is a key output of the 'Monitor Business Analysis Performance' task. Its purpose is to compare how the BA work was actually performed against how it was planned. By doing this, the BA can identify areas for improvement, adjust the BA approach for future tasks, and ensure that the BA process remains efficient and effective."
+            },
+            {
+                "id": 8,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Medium",
+                "question": "Which task involves organizing requirements into a meaningful hierarchy or structure?",
+                "options": {
+                    "A": "Verify Requirements",
+                    "B": "Validate Requirements",
+                    "C": "Specify and Model Requirements",
+                    "D": "Architecture Requirements"
+                },
+                "answer": "D",
+                "detailedexplanation": "Requirement Architecture is the task where requirements are organized and related to one another to ensure they work together to achieve the overall business objectives. This architecture provides a structure that allows for consistent communication and ensures that the requirements are cohesive and complete. While 'Specify and Model' creates the requirements, 'Architecture' organizes them."
+            },
+            {
+                "id": 9,
+                "domain": "Requirements Life Cycle Management",
+                "difficulty": "Medium",
+                "question": "When should a Business Analyst prioritize requirements?",
+                "options": {
+                    "A": "Only at the beginning of the project.",
+                    "B": "Only after the solution has been built.",
+                    "C": "Ongoing throughout the life cycle of the project.",
+                    "D": "Only when there is a budget shortfall."
+                },
+                "answer": "C",
+                "detailedexplanation": "Prioritization is an ongoing process. As new requirements are elicited, as constraints change, or as stakeholders provide feedback, the priority of requirements may shift. Continuous prioritization ensures that the team is always working on the most valuable items first. While a major prioritization exercise often happens early, it must be revisited regularly."
+            },
+            {
+                "id": 10,
+                "domain": "Business Analysis Key Concepts",
+                "difficulty": "Hard",
+                "question": "What is the definition of 'Context' in the Business Analysis Core Concept Model?",
+                "options": {
+                    "A": "The stakeholders involved in the change.",
+                    "B": "The circumstances that influence, are influenced by, and provide understanding of the change.",
+                    "C": "The document that contains the project scope.",
+                    "D": "The specific software application being used."
+                },
+                "answer": "B",
+                "detailedexplanation": "In the BACCM, Context is defined as the circumstances that influence, are influenced by, and provide understanding of the change. Context is everything relevant to the change within the environment, such as culture, technology, competitors, government regulations, and business processes. Understanding the context is vital for determining the appropriate solution."
+            },
+            {
+                "id": 11,
+                "domain": "Elicitation and Collaboration",
+                "difficulty": "Easy",
+                "question": "Which of the following is an example of an 'Unstructured' elicitation technique?",
+                "options": {
+                    "A": "A survey with pre-defined multiple-choice questions.",
+                    "B": "An interview with a fixed script of 10 questions.",
+                    "C": "An open-ended brainstorming session.",
+                    "D": "A process model diagram walkthrough."
+                },
+                "answer": "C",
+                "detailedexplanation": "Unstructured elicitation techniques allow for free-flowing conversation and exploration without a rigid script. Brainstorming is a classic example where participants are encouraged to generate ideas without immediate evaluation or structure. Surveys and scripted interviews are 'structured' because they follow a specific, predetermined format."
+            },
+            {
+                "id": 12,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Medium",
+                "question": "What is the goal of 'Verify Requirements'?",
+                "options": {
+                    "A": "To ensure the requirements deliver business value.",
+                    "B": "To ensure the requirements are ready for use by stakeholders and meet quality standards.",
+                    "C": "To ensure the developer has written the code correctly.",
+                    "D": "To ensure the stakeholder has signed the document."
+                },
+                "answer": "B",
+                "detailedexplanation": "Verification is about quality and fitness for use. The purpose of 'Verify Requirements' is to ensure that a set of requirements or designs has been developed in enough detail to be usable by a particular stakeholder, is internally consistent, and of high quality. Validation (Option A) is about ensuring the requirements actually achieve the business goal."
+            },
+            {
+                "id": 13,
+                "domain": "Business Analysis Planning and Monitoring",
+                "difficulty": "Medium",
+                "question": "The 'Business Analysis Approach' is usually influenced by which factor?",
+                "options": {
+                    "A": "The personal preference of the Lead Developer.",
+                    "B": "The project's complexity and the organization's culture.",
+                    "C": "The color scheme of the company logo.",
+                    "D": "The location of the offshore development team."
+                },
+                "answer": "B",
+                "detailedexplanation": "When planning the BA approach, the analyst must consider factors like the organizational standards, the project’s complexity, the level of risk, and the organizational culture (e.g., whether they favor a predictive/waterfall or adaptive/agile approach). These factors determine how much documentation is needed and how often stakeholders will be engaged."
+            },
+            {
+                "id": 14,
+                "domain": "Requirements Life Cycle Management",
+                "difficulty": "Medium",
+                "question": "Which relationship type in tracing describes a requirement being a more detailed version of another?",
+                "options": {
+                    "A": "Derive",
+                    "B": "Depend",
+                    "C": "Satisfy",
+                    "D": "Validate"
+                },
+                "answer": "A",
+                "detailedexplanation": "In requirements tracing, 'Derive' indicates that a requirement is derived from another, usually at a more granular level. For example, a stakeholder requirement is derived from a business requirement. 'Depend' means one requirement needs another to be implemented, and 'Satisfy' means a design element meets a requirement."
+            },
+            {
+                "id": 15,
+                "domain": "Business Analysis Key Concepts",
+                "difficulty": "Easy",
+                "question": "Which level of requirement describes the needs of stakeholders that must be met in order to achieve the business requirements?",
+                "options": {
+                    "A": "Business Requirements",
+                    "B": "Stakeholder Requirements",
+                    "C": "Solution Requirements",
+                    "D": "Transition Requirements"
+                },
+                "answer": "B",
+                "detailedexplanation": "Stakeholder Requirements describe the needs of stakeholders that must be met in order to achieve the business requirements. They serve as a bridge between high-level business goals and specific solution capabilities. Solution requirements are even more granular, describing the functional and non-functional qualities of the solution."
+            },
+            {
+                "id": 16,
+                "domain": "Elicitation and Collaboration",
+                "difficulty": "Medium",
+                "question": "During elicitation, a BA discovers a conflict between the needs of two different stakeholders. What should the BA do first?",
+                "options": {
+                    "A": "Ignore the conflict and follow the project manager's advice.",
+                    "B": "Choose the requirement of the most senior stakeholder.",
+                    "C": "Facilitate a discussion between the stakeholders to resolve the conflict.",
+                    "D": "Delete both requirements until a consensus is reached."
+                },
+                "answer": "C",
+                "detailedexplanation": "Conflict resolution is a key part of the BA's role in collaboration. The analyst should facilitate communication between the disagreeing stakeholders to find a common ground or a compromise. Simply choosing the 'boss's' requirement or ignoring the issue can lead to project failure later on."
+            },
+            {
+                "id": 17,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Medium",
+                "question": "Which of the following is considered a 'Non-Functional Requirement'?",
+                "options": {
+                    "A": "The system must allow users to log in with an email address.",
+                    "B": "The system must process a transaction in less than 2 seconds.",
+                    "C": "The system must calculate sales tax automatically.",
+                    "D": "The system must generate a monthly report of all sales."
+                },
+                "answer": "B",
+                "detailedexplanation": "Non-functional requirements (also known as quality of service requirements) describe the conditions under which a solution must remain effective or qualities that the solution must have. Performance (speed), security, and reliability are classic examples. The other options (A, C, D) describe specific behaviors/actions of the system, which are functional requirements."
+            },
+            {
+                "id": 18,
+                "domain": "Business Analysis Planning and Monitoring",
+                "difficulty": "Hard",
+                "question": "Which output is produced from the 'Plan Business Analysis Information Management' task?",
+                "options": {
+                    "A": "Governance Approach",
+                    "B": "Information Management Approach",
+                    "C": "Stakeholder Engagement Approach",
+                    "D": "Requirements Management Plan"
+                },
+                "answer": "B",
+                "detailedexplanation": "The output of 'Plan Business Analysis Information Management' is the Information Management Approach. This approach defines how all the BA work products (requirements, models, etc.) will be stored, accessed, and organized throughout the project. While often part of a larger management plan, the BABOK specifically identifies this approach as the primary output."
+            },
+            {
+                "id": 19,
+                "domain": "Requirements Life Cycle Management",
+                "difficulty": "Easy",
+                "question": "What is the definition of 'Requirements Life Cycle'?",
+                "options": {
+                    "A": "The time it takes to code a requirement.",
+                    "B": "The sequence of phases a project goes through from start to finish.",
+                    "C": "The stages a requirement passes through from inception to retirement.",
+                    "D": "The process of training users on new requirements."
+                },
+                "answer": "C",
+                "detailedexplanation": "The requirements life cycle begins with the representation of a business need as a requirement, continues through the development of a solution, and ends when a requirement is retired. It includes management and maintenance from the moment they are identified until they are no longer in use."
+            },
+            {
+                "id": 20,
+                "domain": "Business Analysis Key Concepts",
+                "difficulty": "Medium",
+                "question": "Which of the following is NOT a technique mentioned in the BABOK Guide?",
+                "options": {
+                    "A": "Data Modeling",
+                    "B": "SWOT Analysis",
+                    "C": "Prototyping",
+                    "D": "Project Budgeting"
+                },
+                "answer": "D",
+                "detailedexplanation": "While Business Analysts often work within budget constraints, 'Project Budgeting' is specifically a Project Management task, not one of the 50 BABOK techniques. Data Modeling, SWOT Analysis, and Prototyping are all standard BABOK techniques used for analysis and elicitation."
+            },
+            {
+                "id": 21,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Hard",
+                "question": "What is the difference between a Requirement and a Design?",
+                "options": {
+                    "A": "Requirements are for developers; designs are for business users.",
+                    "B": "Requirements focus on the 'need'; designs focus on the 'solution' or 'how'.",
+                    "C": "Requirements are text-based; designs are always diagrams.",
+                    "D": "There is no difference; the terms are used interchangeably."
+                },
+                "answer": "B",
+                "detailedexplanation": "Requirements focus on the need—what must be achieved. Designs focus on the solution—how that need will be met. For example, a requirement might say 'The user needs to see their balance.' The design might say 'The balance will be displayed in a red font at the top-right corner of the mobile app home screen.'"
+            },
+            {
+                "id": 22,
+                "domain": "Elicitation and Collaboration",
+                "difficulty": "Medium",
+                "question": "Which elicitation technique involves a moderated discussion with a group of people to share their perspectives on a specific topic?",
+                "options": {
+                    "A": "Interview",
+                    "B": "Focus Group",
+                    "C": "Workshop",
+                    "D": "Survey"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Focus Group is a moderated discussion intended to elicit ideas and opinions about a specific product, service, or opportunity. Unlike a workshop, which often has the goal of creating a specific work product (like a process map), a focus group is primarily about gathering qualitative feedback and understanding attitudes."
+            },
+            {
+                "id": 23,
+                "domain": "Business Analysis Planning and Monitoring",
+                "difficulty": "Easy",
+                "question": "Which stakeholder is responsible for providing the project budget and resources?",
+                "options": {
+                    "A": "Project Manager",
+                    "B": "Sponsor",
+                    "C": "Domain Subject Matter Expert",
+                    "D": "Regulator"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Sponsor is the person or group responsible for initiating the project and providing the necessary authority and resources (budget). They are the ultimate decision-makers regarding the project's direction and are accountable for its success from a business perspective."
+            },
+            {
+                "id": 24,
+                "domain": "Requirements Life Cycle Management",
+                "difficulty": "Medium",
+                "question": "When a change request is submitted, what is the first step the BA should take?",
+                "options": {
+                    "A": "Implement the change immediately to save time.",
+                    "B": "Reject the change if it wasn't in the original scope.",
+                    "C": "Perform an impact analysis on the requirements.",
+                    "D": "Ask the developer if they have time to do it."
+                },
+                "answer": "C",
+                "detailedexplanation": "Before approving or rejecting a change, the BA must perform an impact analysis. This involves looking at how the change affects existing requirements, designs, project scope, schedule, and cost. This information is then provided to the governance body to make an informed decision."
+            },
+            {
+                "id": 25,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Medium",
+                "question": "What is the purpose of a 'Use Case' diagram?",
+                "options": {
+                    "A": "To show the data flow between systems.",
+                    "B": "To define the internal database structure.",
+                    "C": "To describe the interactions between an actor and a system to achieve a goal.",
+                    "D": "To list all the functional requirements in a spreadsheet format."
+                },
+                "answer": "C",
+                "detailedexplanation": "A Use Case diagram describes how a person (actor) or another system interacts with the system being modeled to achieve a specific goal. It helps to define the functional scope of the system and ensures that all user-system interactions are accounted for."
+            },
+            {
+                "id": 26,
+                "domain": "Business Analysis Key Concepts",
+                "difficulty": "Medium",
+                "question": "In the context of Business Analysis, 'Value' can be...",
+                "options": {
+                    "A": "Only tangible (like money saved).",
+                    "B": "Only intangible (like brand reputation).",
+                    "C": "Either tangible or intangible.",
+                    "D": "Only determined by the Project Manager."
+                },
+                "answer": "C",
+                "detailedexplanation": "Value is the worth, importance, or usefulness of something to a stakeholder within a context. It can be tangible (e.g., increased revenue, decreased costs) or intangible (e.g., improved customer satisfaction, reduced risk, better brand image). The goal of a solution is to provide value."
+            },
+            {
+                "id": 27,
+                "domain": "Business Analysis Planning and Monitoring",
+                "difficulty": "Hard",
+                "question": "Which of the following describes 'Plan Business Analysis Governance'?",
+                "options": {
+                    "A": "Determining who will write the code.",
+                    "B": "Defining how decisions are made regarding requirements and changes.",
+                    "C": "Creating a schedule for all project meetings.",
+                    "D": "Identifying which stakeholders need to be trained on the system."
+                },
+                "answer": "B",
+                "detailedexplanation": "Business Analysis Governance defines the components of business analysis that are used to manage changes to requirements and designs. It identifies who has the authority to approve requirements, how changes will be requested, and the process for prioritizing and authorizing those changes."
+            },
+            {
+                "id": 28,
+                "domain": "Requirements Analysis and Design Definition",
+                "difficulty": "Medium",
+                "question": "Which technique uses a 'Current State' and 'Future State' comparison?",
+                "options": {
+                    "A": "Data Flow Diagramming",
+                    "B": "Gap Analysis",
+                    "C": "User Stories",
+                    "D": "State Modeling"
+                },
+                "answer": "B",
+                "detailedexplanation": "Gap Analysis is the process of comparing the current state of an organization or system to a desired future state. By identifying the 'gaps' between the two, the business analyst can determine what needs to change and define the requirements necessary to reach the future state."
+            },
+            {
+                "id": 29,
+                "domain": "Elicitation and Collaboration",
+                "difficulty": "Easy",
+                "question": "Which of the following is an 'output' of the 'Prepare for Elicitation' task?",
+                "options": {
+                    "A": "Elicitation Activity Plan",
+                    "B": "Confirmed Elicitation Results",
+                    "C": "Stakeholder Engagement Approach",
+                    "D": "Business Analysis Approach"
+                },
+                "answer": "A",
+                "detailedexplanation": "The primary output of Preparing for Elicitation is the Elicitation Activity Plan. This includes the logistics of the elicitation (who, when, where), the techniques to be used, and the necessary materials. It ensures that elicitation sessions are organized and productive."
+            },
+            {
+                "id": 30,
+                "domain": "Requirements Life Cycle Management",
+                "difficulty": "Medium",
+                "question": "Which task ensures that requirements are available for future use in other projects?",
+                "options": {
+                    "A": "Approve Requirements",
+                    "B": "Maintain Requirements",
+                    "C": "Prioritize Requirements",
+                    "D": "Trace Requirements"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Maintain Requirements' task is about keeping requirements accurate and consistent throughout and beyond the change. A key part of maintenance is ensuring requirements are formatted and stored in a way that allows them to be reused in the future, saving time on subsequent projects."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question mock exam for the ECBA certification. How did you do? Remember, the ECBA isn't just about memorizing definitions; it's about understanding how these concepts apply to real-world business analysis scenarios.",
+            "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe to our channel for more Business Analysis tips and exam prep videos.",
+            "next_steps": "Ready to take the next step? Click the link in the description to access our full ECBA practice test simulator on Udemy, featuring hundreds of questions to ensure you pass your exam with confidence. Good luck with your studies!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Fade between question and answer slides; use a distinct sound effect when the timer hits zero; display the domain name at the top of each question slide."
         }
     }
 ]
