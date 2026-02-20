@@ -81031,21 +81031,7 @@
                 },
                 "answer": "C",
                 "detailedexplanation": "A standard Fenwick Tree is designed for cumulative operations where the operation is invertible (like addition or multiplication). Range Sum Queries are easily performed as `Query(R) - Query(L-1)`. However, Range Minimum Query (RMQ) is not natively supported in O(log N) for updates because 'minimum' is not an invertible operation. While you can implement RMQ on a BIT, updates would take O(log^2 N) or involve complex logic. Segment Trees are generally preferred for RMQ."
-            },
-            {
-                "id": 6,
-                "domain": "Advanced Applications",
-                "difficulty": "Hard",
-                "question": "How can a Fenwick Tree be used to perform Range Updates and Range Queries simultaneously?",
-                "options": {
-                    "A": "By using a single BIT and a prefix sum array.",
-                    "B": "By using two separate Fenwick Trees to track different components of the linear equation.",
-                    "C": "It is impossible; only Segment Trees can do this.",
-                    "D": "By using a 2D Fenwick Tree."
-                },
-                "answer": "B",
-                "detailedexplanation": "To perform range updates `[L, R]` with a value `v` and still perform range queries, we use the fact that the prefix sum $S_i = \sum A_i$. A range update can be viewed as adding $v$ to $A_j$ for $j \ge L$ and subtracting $v$ from $A_j$ for $j \ge R+1$. To handle the query side, the formula for $\sum A_i$ becomes $i \cdot \sum B1_i - \sum B2_i$. Therefore, we maintain two BITs: BIT1 to store the difference array and BIT2 to store the corrective factor $(L-1) \cdot v$."
-            },
+            }
             {
                 "id": 7,
                 "domain": "Foundations & Concept",
