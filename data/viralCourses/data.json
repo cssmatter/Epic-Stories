@@ -50549,8 +50549,8 @@
             "timer_duration": "10 seconds",
             "transition_effect_hints": "Smooth fade between questions, highlight the correct option in green after the timer ends, and display the detailed explanation on the side."
         }
-    }
-{
+    },
+    {
         "video_assets": {
             "titles": [
                 "Python Modules and Packages Certification Practice Test",
