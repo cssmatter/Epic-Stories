@@ -94118,5 +94118,492 @@
             "timer_duration": "15 seconds",
             "transition_effect_hints": "Fade between question and answer slides; use a distinct sound effect when the timer hits zero; display the domain name at the top of each question slide."
         }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Certified Blockchain Expert Exam Prep - Full Practice Test",
+                "Blockchain Expert Certification Questions and Answers",
+                "How to Pass the Certified Blockchain Expert Exam",
+                "Mastering Blockchain Technology Certification Guide",
+                "Certified Blockchain Expert Mock Exam Detailed Walkthrough",
+                "Top 30 Blockchain Certification Exam Questions",
+                "Blockchain Architecture and Ecosystem Practice Exam",
+                "Ultimate Certified Blockchain Expert Study Resource",
+                "Blockchain Professional Certification Practice Questions",
+                "Complete Blockchain Expert Training and Exam Prep"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to become a globally recognized authority in the world of Web3 and Ledger Technology? Today, we are diving into a comprehensive practice exam for the Certified Blockchain Expert certification to test your skills and ensure you pass on your first attempt!",
+                "summary": "In this video, we cover 30 high-yield multiple-choice questions spanning blockchain architecture, smart contracts, consensus algorithms, and real-world use cases. Each question is followed by an in-depth explanation to deepen your technical understanding.",
+                "cta_intro": "Make sure to grab a notebook and follow along to track your score.",
+                "checkfullexamlinkindescription": "For the full 500+ question bank and timed mock exams, click the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/L0az9o",
+                "youtubetitle": "Certified Blockchain Expert Certification Exam Prep Practice Questions and Explanations",
+                "description": "Unlock your potential as a Certified Blockchain Expert with this comprehensive mock exam. This video provides a deep dive into the core domains of the certification, including blockchain fundamentals, Ethereum, Hyperledger, and decentralized application development. Use these practice questions to identify your knowledge gaps and master the logic behind blockchain solutions. Check the link below for the complete course and full-length practice tests.",
+                "tags": "Blockchain Expert, Blockchain Certification, Crypto Exam, Ethereum, Smart Contracts, Hyperledger, Web3 Training, Blockchain Architecture, CBE Exam Prep",
+                "hashtags": [
+                    "#BlockchainExpert",
+                    "#Web3Certification",
+                    "#BlockchainExam",
+                    "#SmartContracts",
+                    "#CryptoEducation"
+                ],
+                "keywords": [
+                    "Certified Blockchain Expert study guide",
+                    "Blockchain exam questions",
+                    "How to learn blockchain",
+                    "Blockchain professional certification",
+                    "Ethereum vs Hyperledger exam",
+                    "Consensus algorithms explained",
+                    "Blockchain developer mock test"
+                ],
+                "mostsearchedongoogle": [
+                    "Certified Blockchain Expert exam dumps",
+                    "Blockchain certification worth it",
+                    "Blockchain expert salary",
+                    "Certified Blockchain Expert syllabus",
+                    "How to pass blockchain certification",
+                    "Blockchain interview questions and answers",
+                    "Ethereum developer certification",
+                    "Blockchain architect exam preparation",
+                    "Free blockchain practice test",
+                    "Best blockchain certifications for career"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Blockchain Fundamentals",
+                "difficulty": "Intermediate",
+                "question": "What is the primary function of a 'Nonce' in the Proof of Work (PoW) consensus mechanism?",
+                "options": {
+                    "A": "To identify the transaction sender's public key.",
+                    "B": "To serve as a random value that miners change to produce a hash below the target difficulty.",
+                    "C": "To store the metadata of the block's timestamp.",
+                    "D": "To encrypt the block's data using asymmetric cryptography."
+                },
+                "answer": "B",
+                "detailedexplanation": "In Proof of Work, a Nonce (number used once) is a 32-bit field whose value is adjusted by miners so that the hash of the block will be less than or equal to the current target of the network. The process of finding this hash is what consumes computational power. Once a valid hash is found, the block is broadcast to the network. It has no role in encryption or identity verification; it is strictly a brute-force variable for meeting difficulty requirements."
+            },
+            {
+                "id": 2,
+                "domain": "Blockchain Ecosystem",
+                "difficulty": "Easy",
+                "question": "Which type of blockchain allows anyone to join, read, and participate in the consensus process without prior approval?",
+                "options": {
+                    "A": "Private Blockchain",
+                    "B": "Consortium Blockchain",
+                    "C": "Public Blockchain",
+                    "D": "Hybrid Blockchain"
+                },
+                "answer": "C",
+                "detailedexplanation": "Public blockchains are permissionless and completely decentralized. Examples like Bitcoin and Ethereum allow any user to participate as a node, verify transactions, and view the entire history of the ledger. In contrast, private and consortium blockchains restrict access and participation to specific authorized entities or organizations."
+            },
+            {
+                "id": 3,
+                "domain": "Ethereum",
+                "difficulty": "Hard",
+                "question": "In the context of the Ethereum Virtual Machine (EVM), what happens to the remaining Gas if a transaction is completed successfully but used less than the 'Gas Limit'?",
+                "options": {
+                    "A": "The remaining gas is burned and removed from circulation.",
+                    "B": "The remaining gas is kept by the miner as an extra tip.",
+                    "C": "The remaining gas is returned to the sender's account.",
+                    "D": "The remaining gas is distributed among all network nodes."
+                },
+                "answer": "C",
+                "detailedexplanation": "When you send a transaction in Ethereum, you set a Gas Limit, which is the maximum amount of work you're willing to pay for. If the execution uses less than the limit, the unused gas (multiplied by the gas price) is refunded to the originator's address. However, if the transaction fails due to an 'Out of Gas' error, no refund is provided, and the miner keeps the full amount as compensation for the work performed."
+            },
+            {
+                "id": 4,
+                "domain": "Smart Contracts",
+                "difficulty": "Intermediate",
+                "question": "What is a 'Reentrancy Attack' in Solidity smart contracts?",
+                "options": {
+                    "A": "An attack where the miner reorders transactions to gain profit.",
+                    "B": "An attack where an external contract calls back into the original contract before the first execution is finished.",
+                    "C": "An attack that overflows the maximum value of an integer.",
+                    "D": "An attack that guesses the private key of the contract owner."
+                },
+                "answer": "B",
+                "detailedexplanation": "Reentrancy is a common vulnerability where a malicious contract calls a function in a victim contract (often a withdrawal function). If the victim contract sends funds before updating its internal state (like the user's balance), the attacker can recursively call the withdrawal function again before the first balance update occurs, effectively draining the contract's funds. This was the primary exploit used in the famous DAO hack."
+            },
+            {
+                "id": 5,
+                "domain": "Hyperledger",
+                "difficulty": "Intermediate",
+                "question": "Which component in Hyperledger Fabric is responsible for maintaining the ledger and running chaincode?",
+                "options": {
+                    "A": "Orderer Node",
+                    "B": "Certificate Authority",
+                    "C": "Peer Node",
+                    "D": "MSP (Membership Service Provider)"
+                },
+                "answer": "C",
+                "detailedexplanation": "In Hyperledger Fabric, Peer nodes are the fundamental elements of the network because they host the ledger and the chaincode (smart contracts). Peers execute chaincode and provide responses to applications. The Orderer is responsible for transaction ordering and block creation, while the MSP manages identities, but it is the Peer that actually maintains the state of the ledger."
+            },
+            {
+                "id": 6,
+                "domain": "Consensus Mechanisms",
+                "difficulty": "Intermediate",
+                "question": "What is the 'Nothing at Stake' problem specifically associated with?",
+                "options": {
+                    "A": "Proof of Work",
+                    "B": "Proof of Stake",
+                    "C": "Proof of Elapsed Time",
+                    "D": "Practical Byzantine Fault Tolerance"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Nothing at Stake' problem occurs in Proof of Stake (PoS) systems where validators have no economic incentive to choose one fork over another during a chain split. Because it costs nothing (no electricity or hardware wear) to validate blocks on both forks, validators might support all versions of the truth to ensure they receive rewards regardless of which fork wins, potentially preventing consensus from ever resolving."
+            },
+            {
+                "id": 7,
+                "domain": "Blockchain Architecture",
+                "difficulty": "Hard",
+                "question": "What is a 'Merkle Root' and why is it used in a block header?",
+                "options": {
+                    "A": "It is the hash of the previous block's header to ensure chain integrity.",
+                    "B": "It is a single hash representing all transactions in a block, allowing for efficient verification of transaction inclusion.",
+                    "C": "It is the public key of the miner who discovered the block.",
+                    "D": "It is a unique identifier for the specific blockchain network (e.g., Mainnet vs. Testnet)."
+                },
+                "answer": "B",
+                "detailedexplanation": "A Merkle Root is the final hash at the top of a Merkle Tree, constructed by hashing pairs of transaction IDs until only one hash remains. By including the Merkle Root in the block header, a node can verify if a specific transaction is part of a block without downloading the entire block. This is essential for Simple Payment Verification (SPV) and overall network efficiency."
+            },
+            {
+                "id": 8,
+                "domain": "Security",
+                "difficulty": "Easy",
+                "question": "In a 51% attack, what is the attacker primarily able to do?",
+                "options": {
+                    "A": "Steal coins from any wallet they choose.",
+                    "B": "Change the total supply of the cryptocurrency.",
+                    "C": "Reverse their own recent transactions (double-spending).",
+                    "D": "Modify the rules of the protocol indefinitely."
+                },
+                "answer": "C",
+                "detailedexplanation": "A 51% attack allows an entity controlling the majority of the hashrate to prevent new transactions from gaining confirmations and, most critically, to reverse their own transactions that were completed while they were in control. This leads to 'double-spending.' They cannot steal coins from wallets they don't own (because they lack the private keys) or change the fundamental protocol rules that the rest of the nodes follow."
+            },
+            {
+                "id": 9,
+                "domain": "Use Cases",
+                "difficulty": "Intermediate",
+                "question": "Which blockchain feature is most critical for improving transparency in supply chain management?",
+                "options": {
+                    "A": "Privacy",
+                    "B": "Immutability",
+                    "C": "High Transaction Throughput",
+                    "D": "Turing Completeness"
+                },
+                "answer": "B",
+                "detailedexplanation": "Immutability is the most critical feature for supply chains because it ensures that once data regarding a product's origin, temperature, or handling is recorded, it cannot be altered or deleted. This creates a permanent, auditable trail that builds trust between suppliers, manufacturers, and consumers, preventing fraud and unauthorized record tampering."
+            },
+            {
+                "id": 10,
+                "domain": "Blockchain Fundamentals",
+                "difficulty": "Easy",
+                "question": "What does the term 'Hard Fork' refer to in blockchain technology?",
+                "options": {
+                    "A": "A backward-compatible upgrade to the software.",
+                    "B": "A temporary glitch in the network that resolves itself.",
+                    "C": "A permanent divergence in the blockchain that requires all nodes to upgrade to the new rules.",
+                    "D": "The process of splitting a private key into multiple parts."
+                },
+                "answer": "C",
+                "detailedexplanation": "A Hard Fork is a permanent change to the protocol that is not backward-compatible. This means nodes running the old version of the software will no longer be compatible with the new version. This often results in the creation of two separate chains (e.g., Bitcoin and Bitcoin Cash) if a portion of the community refuses to upgrade to the new rules."
+            },
+            {
+                "id": 11,
+                "domain": "Cryptography",
+                "difficulty": "Intermediate",
+                "question": "Which cryptographic primitive is used to derive a Public Key from a Private Key?",
+                "options": {
+                    "A": "SHA-256 Hashing",
+                    "B": "Elliptic Curve Multiplication",
+                    "C": "Symmetric AES Encryption",
+                    "D": "Base64 Encoding"
+                },
+                "answer": "B",
+                "detailedexplanation": "In most modern blockchains (like Bitcoin and Ethereum), Elliptic Curve Cryptography (ECC) is used. A public key is generated from a private key using elliptic curve point multiplication. This is a one-way function, meaning it is computationally easy to generate the public key from the private key, but virtually impossible to calculate the private key from the public key."
+            },
+            {
+                "id": 12,
+                "domain": "Ethereum",
+                "difficulty": "Intermediate",
+                "question": "What is the purpose of the 'ERC-20' standard?",
+                "options": {
+                    "A": "To define the protocol for Non-Fungible Tokens (NFTs).",
+                    "B": "To provide a standard interface for fungible tokens on the Ethereum network.",
+                    "C": "To optimize the gas costs of the Ethereum network.",
+                    "D": "To create private channels for enterprise users on Ethereum."
+                },
+                "answer": "B",
+                "detailedexplanation": "ERC-20 (Ethereum Request for Comments 20) is the technical standard used for all smart contracts on the Ethereum blockchain for fungible token implementations. It defines a list of rules and functions (like transfer and balance) that a token must follow, allowing different tokens to be easily integrated into wallets, exchanges, and other smart contracts."
+            },
+            {
+                "id": 13,
+                "domain": "Hyperledger",
+                "difficulty": "Hard",
+                "question": "In Hyperledger Fabric, what is a 'Channel'?",
+                "options": {
+                    "A": "A public broadcast frequency for all nodes.",
+                    "B": "A private 'subnet' of communication between two or more specific network members for private transactions.",
+                    "C": "A bridge that connects Hyperledger to the Ethereum Mainnet.",
+                    "D": "The storage layer where the world state is kept."
+                },
+                "answer": "B",
+                "detailedexplanation": "Channels in Hyperledger Fabric provide data isolation and confidentiality. Members of a channel have their own ledger and can see transactions only within that channel. This allows competitors to participate on the same network while keeping their specific business transactions private from other network participants who are not part of that channel."
+            },
+            {
+                "id": 14,
+                "domain": "Consensus Mechanisms",
+                "difficulty": "Intermediate",
+                "question": "Which consensus algorithm is specifically designed for high-performance and low-energy consumption using leader-based voting?",
+                "options": {
+                    "A": "Proof of Work (PoW)",
+                    "B": "Practical Byzantine Fault Tolerance (PBFT)",
+                    "C": "Proof of Capacity",
+                    "D": "Proof of Burn"
+                },
+                "answer": "B",
+                "detailedexplanation": "PBFT is a consensus algorithm used mainly in permissioned blockchains (like Hyperledger Fabric or Ripple). It relies on a system of rounds where a leader is selected to propose a block, and other nodes 'vote' on its validity. It is highly efficient and requires very little energy compared to PoW, but it does not scale well to thousands of participants due to high communication overhead."
+            },
+            {
+                "id": 15,
+                "domain": "Blockchain Fundamentals",
+                "difficulty": "Easy",
+                "question": "What does 'DApp' stand for?",
+                "options": {
+                    "A": "Digital Application",
+                    "B": "Decentralized Application",
+                    "C": "Distributed Apparatus",
+                    "D": "Data-driven Application"
+                },
+                "answer": "B",
+                "detailedexplanation": "A DApp is a Decentralized Application. It is an application that runs on a distributed computing system, usually a blockchain. Unlike traditional apps where the backend runs on a centralized server (like AWS or Google), DApps have their backend logic governed by smart contracts on a peer-to-peer network."
+            },
+            {
+                "id": 16,
+                "domain": "Smart Contracts",
+                "difficulty": "Intermediate",
+                "question": "What is an 'Oracle' in the context of blockchain?",
+                "options": {
+                    "A": "A special type of miner that solves blocks faster.",
+                    "B": "A database that stores the history of the blockchain off-chain.",
+                    "C": "A service that provides external data to smart contracts.",
+                    "D": "The person who founded the blockchain project."
+                },
+                "answer": "C",
+                "detailedexplanation": "Blockchains are closed systems and cannot natively access data from the outside world (like weather, stock prices, or sports scores). Oracles act as bridges that fetch and verify external data, feeding it into smart contracts so the contracts can execute based on real-world events. Examples include Chainlink and Band Protocol."
+            },
+            {
+                "id": 17,
+                "domain": "Security",
+                "difficulty": "Intermediate",
+                "question": "What is a 'Sybil Attack'?",
+                "options": {
+                    "A": "When an attacker gains control of a single high-power node.",
+                    "B": "When an attacker creates a large number of pseudonymous identities to gain disproportionate influence in a network.",
+                    "C": "When a miner hides their blocks to release them all at once later.",
+                    "D": "When an attacker floods the network with invalid transactions to cause a crash."
+                },
+                "answer": "B",
+                "detailedexplanation": "A Sybil attack involves one person creating many accounts, nodes, or identities to manipulate a decentralized network. In a voting system or a consensus mechanism, this could allow them to outvote legitimate users. Blockchains defend against this by requiring 'proof' of some resource (like hash power in PoW or stake in PoS) which is expensive to multiply."
+            },
+            {
+                "id": 18,
+                "domain": "Blockchain Ecosystem",
+                "difficulty": "Hard",
+                "question": "What is the primary difference between 'Stateful' and 'Stateless' smart contract platforms?",
+                "options": {
+                    "A": "Stateful platforms store the current values of all variables; Stateless do not.",
+                    "B": "Stateless platforms are only used for private blockchains.",
+                    "C": "Stateful platforms do not require gas for transactions.",
+                    "D": "Stateless platforms cannot run Turing-complete code."
+                },
+                "answer": "A",
+                "detailedexplanation": "Stateful platforms like Ethereum maintain a 'World State'—a database of the current balance and data of every account and contract. Every transaction updates this state. Stateless systems (or UTXO-based systems like Bitcoin) do not store a current 'balance' per se; instead, they track individual pieces of value (UTXOs) and the history of their movements."
+            },
+            {
+                "id": 19,
+                "domain": "Ethereum",
+                "difficulty": "Intermediate",
+                "question": "What is 'Geth'?",
+                "options": {
+                    "A": "A specific type of cryptocurrency token.",
+                    "B": "A programming language used for smart contracts.",
+                    "C": "A command-line interface for running a full Ethereum node implemented in Go.",
+                    "D": "The consensus algorithm used in Ethereum 2.0."
+                },
+                "answer": "C",
+                "detailedexplanation": "Geth (Go Ethereum) is one of the three original implementations of the Ethereum protocol. It is a client that allows users to run an Ethereum node, mine ether, transfer funds between addresses, create contracts, and explore block history. It is written in the Go programming language."
+            },
+            {
+                "id": 20,
+                "domain": "Hyperledger",
+                "difficulty": "Intermediate",
+                "question": "What is 'Chaincode' in the Hyperledger Fabric ecosystem?",
+                "options": {
+                    "A": "The encryption key for the ledger.",
+                    "B": "The smart contract that defines the business logic of the network.",
+                    "C": "The sequence of blocks in the chain.",
+                    "D": "The code used to invite new members to a consortium."
+                },
+                "answer": "B",
+                "detailedexplanation": "In Hyperledger Fabric, smart contracts are called 'Chaincode.' Chaincode is a program, written in Go, JavaScript (node.js), or Java, that implements the business logic agreed upon by the members of the network. It initializes and manages the ledger state through transactions submitted by applications."
+            },
+            {
+                "id": 21,
+                "domain": "Cryptography",
+                "difficulty": "Easy",
+                "question": "Which of the following is a 'One-Way' function?",
+                "options": {
+                    "A": "Symmetric Encryption",
+                    "B": "Hashing",
+                    "C": "Asymmetric Encryption",
+                    "D": "Data Compression"
+                },
+                "answer": "B",
+                "detailedexplanation": "Hashing is a one-way function because you can easily convert input data into a fixed-size hash string, but it is mathematically impossible to reverse the hash back into the original input. Encryption, on the other hand, is designed to be two-way (reversible) provided you have the correct key."
+            },
+            {
+                "id": 22,
+                "domain": "Blockchain Architecture",
+                "difficulty": "Intermediate",
+                "question": "What is the function of a 'Genesis Block'?",
+                "options": {
+                    "A": "It is the last block of a retired blockchain.",
+                    "B": "It is the first block of a blockchain, typically hardcoded into the software.",
+                    "C": "It is a block that contains only administrative metadata.",
+                    "D": "It is the block where the 51% attack originated."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Genesis Block is the very first block of a blockchain (Block 0 or 1). It is unique because it does not refer to a previous block. It serves as the foundation of the entire chain, and all subsequent blocks are linked back to it. In Bitcoin, the Genesis Block contained a famous message about bank bailouts."
+            },
+            {
+                "id": 23,
+                "domain": "Consensus Mechanisms",
+                "difficulty": "Intermediate",
+                "question": "How does Proof of Stake (PoS) primarily secure the network?",
+                "options": {
+                    "A": "By requiring nodes to solve complex mathematical puzzles.",
+                    "B": "By requiring nodes to lock up a certain amount of the native currency as collateral.",
+                    "C": "By using a centralized server to verify all transactions.",
+                    "D": "By limiting the number of transactions per second."
+                },
+                "answer": "B",
+                "detailedexplanation": "In Proof of Stake, the probability of validating a new block is determined by a user's 'stake' (the amount of cryptocurrency they hold and have locked up). This secures the network because if a validator attempts to act maliciously, they risk losing their 'staked' funds (slashing), creating a strong economic incentive for honesty."
+            },
+            {
+                "id": 24,
+                "domain": "Use Cases",
+                "difficulty": "Intermediate",
+                "question": "What is 'DeFi'?",
+                "options": {
+                    "A": "Deferred Finance",
+                    "B": "Decentralized Finance",
+                    "C": "Digital Fiduciary",
+                    "D": "Distributed Filing"
+                },
+                "answer": "B",
+                "detailedexplanation": "Decentralized Finance (DeFi) is an ecosystem of financial applications built on blockchain technology. It aims to recreate traditional financial systems (like lending, borrowing, and trading) without the need for central intermediaries like banks or brokerage firms, using smart contracts instead."
+            },
+            {
+                "id": 25,
+                "domain": "Security",
+                "difficulty": "Hard",
+                "question": "What is 'Eclipse Attack'?",
+                "options": {
+                    "A": "An attack where a node's incoming and outgoing connections are redirected to the attacker's nodes.",
+                    "B": "An attack that shuts down the entire blockchain network globally.",
+                    "C": "An attack that uses a solar flare to disrupt satellite-based nodes.",
+                    "D": "An attack that steals funds from a cold wallet."
+                },
+                "answer": "A",
+                "detailedexplanation": "An Eclipse attack occurs when an attacker manages to isolate a specific node from the rest of the peer-to-peer network. By surrounding the victim node with nodes controlled by the attacker, the attacker can feed the victim false information, leading to double-spending or tricking the node into wasting its hash power."
+            },
+            {
+                "id": 26,
+                "domain": "Smart Contracts",
+                "difficulty": "Intermediate",
+                "question": "Which of these is NOT a characteristic of a Smart Contract?",
+                "options": {
+                    "A": "Self-executing",
+                    "B": "Immutable once deployed",
+                    "C": "Requires a lawyer to trigger the execution",
+                    "D": "Deterministic"
+                },
+                "answer": "C",
+                "detailedexplanation": "Smart contracts are designed to remove the need for intermediaries. They are self-executing programs where the terms of the agreement are written directly into code. Once specific conditions are met, the contract executes automatically without the need for a lawyer or any manual intervention."
+            },
+            {
+                "id": 27,
+                "domain": "Ethereum",
+                "difficulty": "Easy",
+                "question": "Which programming language is most commonly used for writing Ethereum smart contracts?",
+                "options": {
+                    "A": "Python",
+                    "B": "Solidity",
+                    "C": "C++",
+                    "D": "Rust"
+                },
+                "answer": "B",
+                "detailedexplanation": "Solidity is an object-oriented, high-level language for implementing smart contracts. It was influenced by C++, Python, and JavaScript and is designed to target the Ethereum Virtual Machine (EVM). It is the most widely used language for blockchain development on Ethereum and EVM-compatible chains."
+            },
+            {
+                "id": 28,
+                "domain": "Blockchain Fundamentals",
+                "difficulty": "Intermediate",
+                "question": "What is the 'Double Spending' problem?",
+                "options": {
+                    "A": "The risk that a digital currency can be spent more than once.",
+                    "B": "The risk that transaction fees will be higher than the transaction amount.",
+                    "C": "The process of a user holding two different wallets.",
+                    "D": "A strategy where a user buys and sells the same asset instantly."
+                },
+                "answer": "A",
+                "detailedexplanation": "Double spending is a potential flaw in a digital cash scheme where the same single digital token can be spent more than once. Unlike physical cash, digital information can be reproduced easily. Blockchains solve this by using a distributed ledger and a consensus mechanism to ensure that once a token is spent, it cannot be used again."
+            },
+            {
+                "id": 29,
+                "domain": "Hyperledger",
+                "difficulty": "Hard",
+                "question": "What is 'Hyperledger Sawtooth'?",
+                "options": {
+                    "A": "A tool for monitoring blockchain performance.",
+                    "B": "A modular blockchain platform that uses a novel consensus called Proof of Elapsed Time (PoET).",
+                    "C": "The wallet application for Hyperledger Fabric.",
+                    "D": "A compiler for translating Solidity to Hyperledger code."
+                },
+                "answer": "B",
+                "detailedexplanation": "Hyperledger Sawtooth is an enterprise blockchain platform designed for creating, deploying, and running distributed ledgers. It is unique for its support of Proof of Elapsed Time (PoET), a consensus algorithm that uses trusted execution environments (like Intel SGX) to achieve high scalability with low power consumption."
+            },
+            {
+                "id": 30,
+                "domain": "Blockchain Architecture",
+                "difficulty": "Intermediate",
+                "question": "What is 'Sharding'?",
+                "options": {
+                    "A": "The process of splitting a private key into shards for backup.",
+                    "B": "A database partitioning technique used to scale blockchains by dividing the network into smaller pieces.",
+                    "C": "A method of encrypting data before sending it to the blockchain.",
+                    "D": "The act of deleting old blocks to save storage space."
+                },
+                "answer": "B",
+                "detailedexplanation": "Sharding is a scalability solution that breaks the blockchain network into smaller, manageable pieces called 'shards.' Each shard is responsible for processing its own set of transactions and smart contracts, rather than having every single node process every single transaction. This significantly increases the total throughput of the network."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question mock exam for the Certified Blockchain Expert certification. How did you do? Remember, the world of blockchain is evolving fast, and staying certified is the best way to prove your expertise.",
+            "cta_final": "If you found this helpful, please like the video and subscribe for more certification prep content.",
+            "next_steps": "Check out the full course and practice exams in the link below to get certified today!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds",
+            "transition_effect_hints": "Smooth fade between question and answer slides; green highlight for the correct answer; detailed explanation text appearing after the answer reveal."
+        }
     }
 ]
