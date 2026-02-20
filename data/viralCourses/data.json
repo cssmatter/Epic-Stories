@@ -80738,21 +80738,7 @@
                 },
                 "answer": "B",
                 "detailedexplanation": "In Rod Cutting, you have a rod of length $L$ and you want to cut it into pieces to maximize profit. Since you can cut multiple pieces of the same length, it is exactly like the Unbounded Knapsack problem where the 'weight' is the length of the piece and the 'capacity' is the total length of the rod."
-            },
-            {
-                "id": 19,
-                "domain": "Subset Sum Problem",
-                "difficulty": "Medium",
-                "question": "In the Subset Sum problem, what is the value of $dp[i][j]$ if we can form the sum $j$ using a subset of the first $i$ elements?",
-                "options": {
-                    "A": "The number of elements in the subset.",
-                    "B": "The maximum sum possible.",
-                    "C": "A boolean value (True/False).",
-                    "D": "The product of the elements in the subset."
-                },
-                "answer": "C",
-                "detailedexplanation": "Subset Sum is a decision problem: 'Is there a subset that adds up to exactly $K$?' Therefore, the DP table stores booleans. $dp[i][j] = dp[i-1][j]$ (excluding the current element) OR $dp[i-1][j - arr[i]]$ (including the current element, if $j \ge arr[i]$)."
-            },
+            }
             {
                 "id": 20,
                 "domain": "Space Optimization",
@@ -94604,6 +94590,984 @@
         "on_screen_elements": {
             "timer_duration": "10 seconds",
             "transition_effect_hints": "Smooth fade between question and answer slides; green highlight for the correct answer; detailed explanation text appearing after the answer reveal."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "CCSP Mock Exam Questions and Answers",
+                "Certified Cloud Security Professional Full Practice Test",
+                "Ultimate CCSP Exam Prep Guide",
+                "CCSP Certification Practice Questions",
+                "Mastering CCSP Cloud Security Concepts",
+                "CCSP Domain-by-Domain Exam Review",
+                "How to Pass the CCSP Exam on Your First Attempt",
+                "CCSP Exam Simulation: 30 Realistic Questions",
+                "Top CCSP Exam Questions Explained",
+                "ISC2 CCSP Exam Study Session"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to join the elite ranks of Certified Cloud Security Professionals? Most candidates fail the CCSP exam because they don't understand the nuances of the cloud shared responsibility model.",
+                "summary": "In this video, we dive deep into 30 high-quality practice questions covering all six domains of the CCSP body of knowledge, from Cloud Data Security to Legal, Risk, and Compliance.",
+                "cta_intro": "Make sure to pause the video after each question to test your knowledge before we reveal the detailed explanation.",
+                "checkfullexamlinkindescription": "For a full-length, timed mock exam experience with hundreds of questions, check out the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/vDzo7y",
+                "youtubetitle": "Certified Cloud Security Professional CCSP Mock Exam | Practice Questions & Detailed Explanations",
+                "description": "Prepare for the ISC2 CCSP certification with this comprehensive mock exam. This video features 30 realistic practice questions designed to mimic the actual exam difficulty. We cover Cloud Concepts, Architecture and Design, Cloud Data Security, Cloud Platform & Infrastructure Security, Cloud Application Security, Cloud Security Operations, and Legal, Risk, and Compliance. Each question includes a deep-dive explanation to ensure you understand the 'why' behind the correct answer.",
+                "tags": "CCSP, Certified Cloud Security Professional, ISC2, Cloud Security, Cybersecurity Certification, CCSP Practice Exam, Cloud Computing Security, CCSP Training, Information Security, CCSP Mock Test",
+                "hashtags": [
+                    "#CCSP",
+                    "#CloudSecurity",
+                    "#ISC2",
+                    "#CyberSecurity",
+                    "#CloudComputing",
+                    "#Infosec"
+                ],
+                "keywords": [
+                    "CCSP Exam Questions",
+                    "Cloud Security Professional",
+                    "CCSP Study Guide",
+                    "ISC2 Certification",
+                    "Cloud Governance",
+                    "Cloud Data Lifecycle",
+                    "SDN Security",
+                    "CASB",
+                    "Shared Responsibility Model"
+                ],
+                "mostsearchedongoogle": [
+                    "CCSP exam passing score",
+                    "is CCSP harder than CISSP",
+                    "CCSP domain weights",
+                    "CCSP practice test free",
+                    "CCSP study material",
+                    "Certified Cloud Security Professional salary",
+                    "CCSP exam requirements",
+                    "ISC2 CCSP official study guide",
+                    "cloud security certification roadmap",
+                    "CCSP exam dumps vs practice tests"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Cloud Concepts, Architecture and Design",
+                "difficulty": "Medium",
+                "question": "Which of the following cloud service categories provides the highest level of consumer control over the underlying operating system and network configuration?",
+                "options": {
+                    "A": "Software as a Service (SaaS)",
+                    "B": "Platform as a Service (PaaS)",
+                    "C": "Infrastructure as a Service (IaaS)",
+                    "D": "Desktop as a Service (DaaS)"
+                },
+                "answer": "C",
+                "detailedexplanation": "Infrastructure as a Service (IaaS) provides the consumer with the most control among the main cloud service models. In IaaS, the provider manages the physical hardware and virtualization layer, while the consumer is responsible for managing the operating system, middleware, runtime, and data. In PaaS, the consumer only manages applications and data, and in SaaS, the consumer only manages configuration and usage. Understanding the shared responsibility model is fundamental to the CCSP exam."
+            },
+            {
+                "id": 2,
+                "domain": "Cloud Data Security",
+                "difficulty": "Hard",
+                "question": "A cloud security architect is implementing a data-at-rest encryption strategy where the keys are stored on-premises while the data resides in the cloud. What is this approach called?",
+                "options": {
+                    "A": "Server-Side Encryption (SSE)",
+                    "B": "Client-Side Encryption",
+                    "C": "Bring Your Own Key (BYOK)",
+                    "D": "Hold Your Own Key (HYOK)"
+                },
+                "answer": "D",
+                "detailedexplanation": "Hold Your Own Key (HYOK) refers to a scenario where the data owner maintains physical possession and control of the cryptographic keys in their own infrastructure (on-premises), and the cloud provider never has access to the keys. This is often used for highly sensitive data or strict regulatory requirements. BYOK (C) usually involves the customer generating the key but uploading it to the cloud provider's Key Management Service (KMS)."
+            },
+            {
+                "id": 3,
+                "domain": "Cloud Platform & Infrastructure Security",
+                "difficulty": "Medium",
+                "question": "Which technology is primarily used to isolate different tenants sharing the same physical hardware in a public cloud environment?",
+                "options": {
+                    "A": "Firewalls",
+                    "B": "Hypervisor",
+                    "C": "Software-Defined Networking (SDN)",
+                    "D": "Identity and Access Management (IAM)"
+                },
+                "answer": "B",
+                "detailedexplanation": "The hypervisor (or Virtual Machine Monitor) is the core technology that enables multi-tenancy by abstracting the physical hardware into multiple virtual machines. It ensures that one tenant cannot access the memory or processing space of another tenant. While SDN and Firewalls provide network-level isolation, the hypervisor provides the foundational isolation of the compute resources."
+            },
+            {
+                "id": 4,
+                "domain": "Cloud Application Security",
+                "difficulty": "Medium",
+                "question": "In the context of Software Development Life Cycle (SDLC), what is the primary purpose of Dynamic Application Security Testing (DAST)?",
+                "options": {
+                    "A": "To analyze source code for vulnerabilities without executing it.",
+                    "B": "To test the application while it is running to identify security flaws.",
+                    "C": "To review third-party libraries for known vulnerabilities.",
+                    "D": "To verify the identity of the developers committing code."
+                },
+                "answer": "B",
+                "detailedexplanation": "DAST is a 'black-box' testing method that interacts with a running application to find security vulnerabilities such as SQL injection or Cross-Site Scripting (XSS). Unlike SAST (Static Analysis), which looks at the code itself, DAST evaluates the application from the outside in its operating state. This is crucial for catching configuration issues and flaws that only appear during execution."
+            },
+            {
+                "id": 5,
+                "domain": "Cloud Security Operations",
+                "difficulty": "Hard",
+                "question": "A cloud provider undergoes an audit where the auditor verifies that the provider's controls are designed effectively and have been operating effectively over a six-month period. Which report is the auditor likely producing?",
+                "options": {
+                    "A": "SOC 1 Type 1",
+                    "B": "SOC 2 Type 1",
+                    "C": "SOC 2 Type 2",
+                    "D": "SOC 3"
+                },
+                "answer": "C",
+                "detailedexplanation": "A SOC 2 Type 2 report evaluates the suitability of the design and the operating effectiveness of controls over a period of time (typically 6-12 months). Type 1 reports only assess the design of controls at a specific point in time. SOC 2 is focused on Security, Availability, Processing Integrity, Confidentiality, and Privacy, making it the standard for cloud service providers. SOC 3 is a summary version of SOC 2 for public consumption."
+            },
+            {
+                "id": 6,
+                "domain": "Legal, Risk and Compliance",
+                "difficulty": "Medium",
+                "question": "Which of the following refers to the legal requirement for an organization to take reasonable steps to protect its assets and data?",
+                "options": {
+                    "A": "Due Diligence",
+                    "B": "Due Care",
+                    "C": "Liability",
+                    "D": "Sovereignty"
+                },
+                "answer": "B",
+                "detailedexplanation": "Due Care is the act of implementing the actual protections and taking the steps necessary to protect the organization (the 'doing' part). Due Diligence is the research and analysis performed to understand the risks and ensure that the due care requirements are being met (the 'checking' part). In a legal context, a failure to exercise due care can lead to a finding of negligence."
+            },
+            {
+                "id": 7,
+                "domain": "Cloud Concepts, Architecture and Design",
+                "difficulty": "Medium",
+                "question": "According to ISO/IEC 17788, which cloud characteristic allows consumers to unilaterally provision computing capabilities as needed without requiring human interaction with the service provider?",
+                "options": {
+                    "A": "Broad network access",
+                    "B": "Resource pooling",
+                    "C": "Measured service",
+                    "D": "On-demand self-service"
+                },
+                "answer": "D",
+                "detailedexplanation": "On-demand self-service is one of the five essential characteristics of cloud computing. It empowers the user to provision resources like CPU, storage, and networks automatically through a web portal or API. This eliminates the traditional bottleneck of manual procurement and ticketing systems, enabling the agility that defines cloud computing."
+            },
+            {
+                "id": 8,
+                "domain": "Cloud Data Security",
+                "difficulty": "Hard",
+                "question": "When decommissioning a storage device in a cloud environment where physical destruction is not possible, which method is most effective for ensuring data remains unrecoverable?",
+                "options": {
+                    "A": "Formatting",
+                    "B": "Overwriting",
+                    "C": "Crypto-shredding",
+                    "D": "Degaussing"
+                },
+                "answer": "C",
+                "detailedexplanation": "Crypto-shredding is the practice of deleting the encryption keys that were used to encrypt the data. Without the keys, the data remains on the media in its encrypted form and is computationally infeasible to decrypt, effectively destroying the data. This is the preferred method in cloud environments because the physical disks are shared and cannot be individually destroyed or degaussed by the consumer."
+            },
+            {
+                "id": 9,
+                "domain": "Cloud Platform & Infrastructure Security",
+                "difficulty": "Medium",
+                "question": "In a Software-Defined Data Center (SDDC), which plane is responsible for making decisions about where traffic is sent?",
+                "options": {
+                    "A": "Data Plane",
+                    "B": "Control Plane",
+                    "C": "Management Plane",
+                    "D": "Storage Plane"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Control Plane is the 'brain' of the network in an SDN/SDDC environment. It defines the routing tables and network logic. The Data Plane (or Forwarding Plane) simply follows the instructions from the control plane to move packets. Separating these planes allows for centralized management and greater flexibility in network configuration."
+            },
+            {
+                "id": 10,
+                "domain": "Cloud Application Security",
+                "difficulty": "Medium",
+                "question": "Which of the following is a primary security concern when using Open Source Software (OSS) in cloud application development?",
+                "options": {
+                    "A": "High licensing costs",
+                    "B": "Lack of documentation",
+                    "C": "Transitive dependencies",
+                    "D": "Incompatibility with CI/CD pipelines"
+                },
+                "answer": "C",
+                "detailedexplanation": "Transitive dependencies occur when an application uses a library, which in turn depends on other libraries. This creates a supply chain risk where a vulnerability deep in the dependency tree can compromise the entire application. Organizations must use Software Bill of Materials (SBOM) and SCA (Software Composition Analysis) tools to track and secure these hidden dependencies."
+            },
+            {
+                "id": 11,
+                "domain": "Cloud Security Operations",
+                "difficulty": "Easy",
+                "question": "What is the primary goal of Incident Management?",
+                "options": {
+                    "A": "To determine the root cause of an issue.",
+                    "B": "To restore normal service operation as quickly as possible.",
+                    "C": "To prevent future incidents from occurring.",
+                    "D": "To document the infrastructure for compliance."
+                },
+                "answer": "B",
+                "detailedexplanation": "The primary objective of Incident Management is to restore service to the user as quickly as possible and minimize the adverse impact on business operations. Root cause analysis and prevention of future incidents fall under 'Problem Management.' Understanding the distinction between these two ITIL processes is important for the Operations domain."
+            },
+            {
+                "id": 12,
+                "domain": "Legal, Risk and Compliance",
+                "difficulty": "Hard",
+                "question": "Which legal concept describes the power of a government to exercise authority over data because it is physically located within its borders?",
+                "options": {
+                    "A": "Data Residency",
+                    "B": "Data Sovereignty",
+                    "C": "Jurisdiction",
+                    "D": "Extraterritoriality"
+                },
+                "answer": "B",
+                "detailedexplanation": "Data Sovereignty is the principle that data is subject to the laws and governance structures within the nation it is collected or stored. This is a critical issue in cloud computing where data might be moved across borders, potentially subjecting it to different legal requirements regarding privacy, surveillance, and law enforcement access."
+            },
+            {
+                "id": 13,
+                "domain": "Cloud Concepts, Architecture and Design",
+                "difficulty": "Medium",
+                "question": "Which cloud deployment model is operated solely for a single organization, though it may be managed by the organization or a third party?",
+                "options": {
+                    "A": "Public Cloud",
+                    "B": "Community Cloud",
+                    "C": "Hybrid Cloud",
+                    "D": "Private Cloud"
+                },
+                "answer": "D",
+                "detailedexplanation": "A Private Cloud is dedicated to a single organization. It provides the highest level of control and security but lacks the massive scale and cost-efficiency of a Public Cloud. Community Clouds are shared by several organizations with similar requirements (e.g., healthcare or government), and Hybrid Clouds combine two or more distinct deployment models."
+            },
+            {
+                "id": 14,
+                "domain": "Cloud Data Security",
+                "difficulty": "Medium",
+                "question": "Which phase of the cloud data lifecycle involves the creation or modification of data?",
+                "options": {
+                    "A": "Create",
+                    "B": "Store",
+                    "C": "Use",
+                    "D": "Share"
+                },
+                "answer": "A",
+                "detailedexplanation": "The 'Create' phase is the first step in the Cloud Data Life Cycle. It involves the generation of new data or the alteration of existing data. Security controls at this phase include classification and tagging, which dictate how the data will be handled in subsequent phases like Store, Use, Share, Archive, and Destroy."
+            },
+            {
+                "id": 15,
+                "domain": "Cloud Platform & Infrastructure Security",
+                "difficulty": "Hard",
+                "question": "In a cloud environment, what is 'Management Plane' breach specifically dangerous?",
+                "options": {
+                    "A": "It allows access to a single virtual machine's data.",
+                    "B": "It allows an attacker to take control of the entire cloud infrastructure.",
+                    "C": "It only impacts the physical security of the data center.",
+                    "D": "It results in a DDoS attack on the customer application."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Management Plane is the administrative interface (GUI or API) used to manage all cloud resources. If an attacker gains access to the management plane, they can potentially delete accounts, create new resources, access any data, or shut down the entire environment. This is considered one of the highest risks in cloud computing, necessitating strong MFA and IAM controls."
+            },
+            {
+                "id": 16,
+                "domain": "Cloud Application Security",
+                "difficulty": "Medium",
+                "question": "What is the function of a Web Application Firewall (WAF) that differentiates it from a traditional network firewall?",
+                "options": {
+                    "A": "It filters traffic based on IP addresses.",
+                    "B": "It operates at Layer 7 and inspects HTTP/HTTPS traffic.",
+                    "C": "It prevents unauthorized SSH access.",
+                    "D": "It manages VPN connections for remote users."
+                },
+                "answer": "B",
+                "detailedexplanation": "A WAF specifically operates at the Application Layer (Layer 7 of the OSI model). It is designed to protect web applications by inspecting the content of HTTP/HTTPS requests to block common attacks like SQLi and XSS. Traditional network firewalls operate at Layers 3 and 4, focusing on IP addresses and ports."
+            },
+            {
+                "id": 17,
+                "domain": "Cloud Security Operations",
+                "difficulty": "Medium",
+                "question": "What is the primary purpose of a 'Honeypot' in cloud security operations?",
+                "options": {
+                    "A": "To provide a backup of critical data.",
+                    "B": "To attract and detect unauthorized access attempts.",
+                    "C": "To encrypt sensitive files automatically.",
+                    "D": "To improve the performance of the cloud network."
+                },
+                "answer": "B",
+                "detailedexplanation": "A honeypot is a decoy system designed to be probed, attacked, or compromised. Its purpose is to divert attackers from production systems and to gather intelligence on the techniques and motives of the attackers. In a cloud environment, honeypots help security teams detect breaches early and improve their overall defense posture."
+            },
+            {
+                "id": 18,
+                "domain": "Legal, Risk and Compliance",
+                "difficulty": "Medium",
+                "question": "Which of the following describes a Service Level Agreement (SLA)?",
+                "options": {
+                    "A": "A contract specifying the technical implementation of security controls.",
+                    "B": "A legal document outlining the penalties for data breaches.",
+                    "C": "A commitment between a service provider and a client regarding service quality and uptime.",
+                    "D": "The internal policy for employee computer usage."
+                },
+                "answer": "C",
+                "detailedexplanation": "An SLA is a formal document that defines the level of service a customer can expect from a provider. In cloud computing, this often includes metrics like 99.9% uptime, response times for support, and penalties (usually service credits) if the provider fails to meet these targets."
+            },
+            {
+                "id": 19,
+                "domain": "Cloud Concepts, Architecture and Design",
+                "difficulty": "Medium",
+                "question": "Which cloud role is responsible for the orchestration and delivery of the cloud service to the consumer?",
+                "options": {
+                    "A": "Cloud Service Consumer",
+                    "B": "Cloud Service Provider",
+                    "C": "Cloud Service Partner",
+                    "D": "Cloud Auditor"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Cloud Service Provider (CSP) is the entity that owns and operates the infrastructure, provides the cloud services, and is responsible for maintaining the availability and security of the platform according to the shared responsibility model."
+            },
+            {
+                "id": 20,
+                "domain": "Cloud Data Security",
+                "difficulty": "Hard",
+                "question": "Data masking that is applied at the time the data is being retrieved from a database is known as:",
+                "options": {
+                    "A": "Static Data Masking",
+                    "B": "Dynamic Data Masking",
+                    "C": "Tokenization",
+                    "D": "Homomorphic Encryption"
+                },
+                "answer": "B",
+                "detailedexplanation": "Dynamic Data Masking (DDM) happens 'on-the-fly' as a user queries the data. The underlying data in the database remains unchanged, but the output is masked based on the user's permissions. Static data masking, on the other hand, creates a permanent copy of the data with sensitive values replaced, often used for non-production environments."
+            },
+            {
+                "id": 21,
+                "domain": "Cloud Platform & Infrastructure Security",
+                "difficulty": "Medium",
+                "question": "Which of the following is a key advantage of using Containers over Virtual Machines?",
+                "options": {
+                    "A": "Better hardware-level isolation.",
+                    "B": "They include a full copy of the operating system.",
+                    "C": "Lower overhead and faster startup times.",
+                    "D": "They are immune to kernel-level vulnerabilities."
+                },
+                "answer": "C",
+                "detailedexplanation": "Containers share the host OS kernel and are much more lightweight than VMs, which require a full guest OS for every instance. This leads to faster deployment and more efficient use of system resources. However, because they share the kernel, they generally offer less isolation than VMs."
+            },
+            {
+                "id": 22,
+                "domain": "Cloud Application Security",
+                "difficulty": "Medium",
+                "question": "What does the term 'API Key' primarily provide in cloud application communication?",
+                "options": {
+                    "A": "Encryption of the data payload.",
+                    "B": "Authentication of the calling application.",
+                    "C": "Authorization of specific user actions.",
+                    "D": "Non-repudiation of the transaction."
+                },
+                "answer": "B",
+                "detailedexplanation": "An API Key is a unique identifier used to authenticate a project or application calling an API. It tells the provider 'who' is calling. While it provides authentication, it is often considered less secure than tokens like OAuth for authorization because if a key is leaked, it can be easily reused."
+            },
+            {
+                "id": 23,
+                "domain": "Cloud Security Operations",
+                "difficulty": "Hard",
+                "question": "In the context of digital forensics in the cloud, what is the 'Chain of Custody'?",
+                "options": {
+                    "A": "The sequence of servers a packet travels through.",
+                    "B": "The hierarchy of administrators in a cloud company.",
+                    "C": "A chronological record showing the seizure, custody, control, and transfer of evidence.",
+                    "D": "The process of renewing digital certificates."
+                },
+                "answer": "C",
+                "detailedexplanation": "Chain of Custody is critical in legal proceedings. It proves that evidence has not been tampered with from the moment it was collected until it is presented in court. In the cloud, this is difficult because the consumer often doesn't have physical access to the hardware, making logs and provider cooperation essential."
+            },
+            {
+                "id": 24,
+                "domain": "Legal, Risk and Compliance",
+                "difficulty": "Medium",
+                "question": "Under the GDPR, what is a 'Data Processor'?",
+                "options": {
+                    "A": "The person who decides why and how personal data is processed.",
+                    "B": "The individual to whom the personal data belongs.",
+                    "C": "An entity that processes personal data on behalf of a controller.",
+                    "D": "The government agency that enforces privacy laws."
+                },
+                "answer": "C",
+                "detailedexplanation": "Under GDPR, the Cloud Service Provider is typically the 'Data Processor' because they process data as instructed by the customer. The customer is the 'Data Controller' as they determine the purpose of the processing. This distinction is vital for determining legal liability and responsibilities."
+            },
+            {
+                "id": 25,
+                "domain": "Cloud Concepts, Architecture and Design",
+                "difficulty": "Medium",
+                "question": "Which of the following best describes 'Cloud Bursting'?",
+                "options": {
+                    "A": "A failure of a cloud service due to excessive traffic.",
+                    "B": "Moving an application from a private cloud to a public cloud to handle peak loads.",
+                    "C": "The process of migrating all data to the cloud at once.",
+                    "D": "A security attack that floods the cloud management plane."
+                },
+                "answer": "B",
+                "detailedexplanation": "Cloud Bursting is a configuration where an application runs in a private cloud or data center and 'bursts' into a public cloud when the demand for computing capacity spikes. This allows organizations to pay for extra resources only when they are needed, rather than over-provisioning their own hardware."
+            },
+            {
+                "id": 26,
+                "domain": "Cloud Data Security",
+                "difficulty": "Medium",
+                "question": "Which technology can be used to prevent sensitive data from being uploaded to a cloud storage service by an unauthorized user?",
+                "options": {
+                    "A": "SIEM",
+                    "B": "IDS",
+                    "C": "DLP",
+                    "D": "IPS"
+                },
+                "answer": "C",
+                "detailedexplanation": "Data Loss Prevention (DLP) tools are designed to monitor and control data transfers. Cloud DLP can identify sensitive data (like credit card numbers or PII) based on patterns or labels and block the transfer if it violates a security policy. This is essential for preventing data exfiltration."
+            },
+            {
+                "id": 27,
+                "domain": "Cloud Platform & Infrastructure Security",
+                "difficulty": "Medium",
+                "question": "What is the primary security risk associated with 'VM Sprawl'?",
+                "options": {
+                    "A": "Excessive costs for unused resources.",
+                    "B": "Loss of visibility and difficulty in patching unmonitored systems.",
+                    "C": "Increased latency in the network.",
+                    "D": "Physical theft of the host server."
+                },
+                "answer": "B",
+                "detailedexplanation": "VM Sprawl occurs when the number of virtual machines in an environment grows beyond the organization's ability to manage them. Unmanaged VMs often lack security patches and proper configuration, making them easy targets for attackers who can then use them as a foothold to move laterally through the network."
+            },
+            {
+                "id": 28,
+                "domain": "Cloud Application Security",
+                "difficulty": "Hard",
+                "question": "In a Federated Identity system using SAML, what is the role of the 'Identity Provider' (IdP)?",
+                "options": {
+                    "A": "To provide the service or application the user wants to access.",
+                    "B": "To authenticate the user and issue an assertion to the service provider.",
+                    "C": "To act as a firewall for the application.",
+                    "D": "To store the user's credit card information."
+                },
+                "answer": "B",
+                "detailedexplanation": "In SAML (Security Assertion Markup Language), the IdP is the system that holds the user's credentials and performs the actual authentication. Once authenticated, it sends a 'SAML Assertion' to the Service Provider (SP), which then trusts that assertion and grants access to the user."
+            },
+            {
+                "id": 29,
+                "domain": "Cloud Security Operations",
+                "difficulty": "Medium",
+                "question": "Which of the following is an example of 'Continuous Monitoring' in a cloud environment?",
+                "options": {
+                    "A": "Performing a vulnerability scan once a year.",
+                    "B": "Reviewing logs only after a breach has occurred.",
+                    "C": "Automated, real-time tracking of security controls and system state.",
+                    "D": "Conducting an annual audit of the provider's SOC report."
+                },
+                "answer": "C",
+                "detailedexplanation": "Continuous Monitoring is a key tenet of cloud security (and NIST frameworks). It involves using automation to constantly check the status of security controls and the security posture of the environment, allowing for rapid response to threats or misconfigurations rather than waiting for a periodic audit."
+            },
+            {
+                "id": 30,
+                "domain": "Legal, Risk and Compliance",
+                "difficulty": "Medium",
+                "question": "A Cloud Service Provider (CSP) is located in the US, but the data is owned by a French company and stored in a data center in Germany. Which laws might apply to the data?",
+                "options": {
+                    "A": "Only US laws.",
+                    "B": "Only German laws.",
+                    "C": "Only French laws.",
+                    "D": "Laws from the US, France, and Germany could potentially apply."
+                },
+                "answer": "D",
+                "detailedexplanation": "This scenario highlights the complexity of jurisdictional issues in the cloud. Data can be subject to the laws of the country where the owner resides (France), the laws where the data is physically stored (Germany), and the laws where the provider is headquartered (US - e.g., the CLOUD Act). This is why legal review is a critical part of the CCSP domain."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question CCSP mock exam session. How did you do? Remember, the CCSP isn't just about memorizing facts; it's about understanding how to apply security principles in a shared responsibility environment.",
+            "cta_final": "If you found this helpful, please give the video a thumbs up and subscribe for more cybersecurity certification prep content.",
+            "next_steps": "Don't forget to check the link in the description for the full Udemy course, which includes more practice exams, video lectures, and study guides to help you pass the CCSP with confidence!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Smooth fade between questions, highlighted 'Correct Answer' indicator, and domain headers at the top of the screen."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "CCNA 200-301 Full Exam Practice Questions",
+                "Cisco CCNA Certification Training: Top 30 Exam MCQs",
+                "CCNA 200-301 Practice Test | Master Networking Fundamentals",
+                "Pass the CCNA Exam: Real Practice Questions and Explanations",
+                "CCNA 200-301 Exam Prep: Domain-by-Domain Review",
+                "Cisco Networking Associate Certification Guide & Practice",
+                "CCNA Most Common Exam Questions and Detailed Answers",
+                "Ultimate CCNA 200-301 Review for Network Engineers",
+                "Cisco CCNA Certification Course: Expert Practice MCQs",
+                "How to Pass CCNA 200-301: Question Bank and Study Guide"
+            ],
+            "intro_script": {
+                "hook": "Ever wondered why some IT professionals skyrocket their careers while others stay stagnant? It often comes down to one credential: the Cisco Certified Network Associate.",
+                "summary": "In this video, we are diving deep into 30 high-yield practice questions for the CCNA 200-301 exam. We’ll cover everything from IP connectivity and security fundamentals to automation and programmability.",
+                "cta_intro": "Make sure you have a notepad ready because we aren't just giving answers; we are explaining the logic behind every single one.",
+                "checkfullexamlinkindescription": "For a complete, high-quality CCNA practice exam experience, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/aNRBvZ",
+                "youtubetitle": "CCNA 200-301 Practice Exam Questions and Answers - Full Cisco Certification Training",
+                "description": "Master the Cisco CCNA 200-301 certification with this comprehensive practice exam video. We cover 30 essential questions across all major domains, including Network Fundamentals, Network Access, IP Connectivity, IP Services, Security Fundamentals, and Automation. Each question includes a deep-dive explanation to ensure you understand the 'why' behind the technology. Perfect for aspiring network engineers and IT professionals.",
+                "tags": "CCNA, CCNA 200-301, Cisco Certification, Networking, Cisco Exam, Network Engineer, IP Routing, VLAN, OSPF, Subnetting, Network Security, Cisco Training",
+                "hashtags": [
+                    "#CCNA",
+                    "#CiscoCert",
+                    "#Networking",
+                    "#200301",
+                    "#ITCertification",
+                    "#NetworkEngineer"
+                ],
+                "keywords": [
+                    "CCNA practice test",
+                    "Cisco CCNA 200-301 study guide",
+                    "Networking fundamentals",
+                    "CCNA exam questions",
+                    "Cisco certification path",
+                    "IP connectivity CCNA",
+                    "Cisco routing and switching"
+                ],
+                "mostsearchedongoogle": [
+                    "CCNA 200-301 exam cost",
+                    "Cisco CCNA practice exam free",
+                    "CCNA certification salary",
+                    "CCNA syllabus pdf",
+                    "CCNA exam duration",
+                    "how to pass CCNA in 30 days",
+                    "CCNA 200-301 study material",
+                    "Cisco networking basics",
+                    "CCNA vs Network+",
+                    "Cisco certification hierarchy"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Network Fundamentals",
+                "difficulty": "Medium",
+                "question": "Which of the following describes the function of a Layer 2 switch?",
+                "options": {
+                    "A": "It routes traffic between different IP subnets based on logical addresses.",
+                    "B": "It forwards frames based on destination MAC addresses using a CAM table.",
+                    "C": "It provides encryption and decryption for data traveling over a WAN.",
+                    "D": "It assigns IP addresses to hosts using DHCP."
+                },
+                "answer": "B",
+                "detailedexplanation": "A Layer 2 switch operates at the Data Link layer of the OSI model. Its primary job is to forward Ethernet frames within a single local area network (LAN). It maintains a Content Addressable Memory (CAM) table, also known as a MAC address table, which maps MAC addresses to specific physical ports. When a frame arrives, the switch looks at the destination MAC address and sends it only out of the port where that device is located, reducing collisions compared to a hub."
+            },
+            {
+                "id": 2,
+                "domain": "IP Connectivity",
+                "difficulty": "Hard",
+                "question": "A router has two paths to the 10.10.10.0/24 network: one via OSPF with a metric of 20 and one via EIGRP with a metric of 3000. Which route will be installed in the routing table?",
+                "options": {
+                    "A": "The OSPF route because it has a lower metric.",
+                    "B": "The EIGRP route because it has a lower administrative distance.",
+                    "C": "Both routes will be installed for load balancing.",
+                    "D": "The OSPF route because OSPF is a link-state protocol."
+                },
+                "answer": "B",
+                "detailedexplanation": "Administrative Distance (AD) is the first criterion a router uses to determine which routing protocol to trust when it receives the same route from multiple sources. EIGRP has a default AD of 90, while OSPF has a default AD of 110. Since 90 is lower than 110, the router trusts EIGRP more and installs that route. Metrics (like OSPF cost or EIGRP bandwidth/delay) are only compared if the AD for both paths is identical."
+            },
+            {
+                "id": 3,
+                "domain": "Network Access",
+                "difficulty": "Medium",
+                "question": "What is the purpose of the Spanning Tree Protocol (STP) in a switched network?",
+                "options": {
+                    "A": "To provide redundant paths while preventing Layer 2 loops.",
+                    "B": "To allow VLANs to communicate across multiple switches.",
+                    "C": "To dynamically assign IP addresses to network devices.",
+                    "D": "To monitor network traffic for security threats."
+                },
+                "answer": "A",
+                "detailedexplanation": "Spanning Tree Protocol (STP), defined as IEEE 802.1D, is designed to prevent loops in networks with redundant paths. Without STP, broadcast frames would circulate indefinitely (broadcast storms), and the MAC address table would become unstable. STP elects a Root Bridge and places specific ports in 'Blocking' or 'Forwarding' states to ensure there is only one logical path between any two points on the network."
+            },
+            {
+                "id": 4,
+                "domain": "IP Services",
+                "difficulty": "Medium",
+                "question": "Which NAT type maps multiple private IP addresses to a single public IP address by using different source port numbers?",
+                "options": {
+                    "A": "Static NAT",
+                    "B": "Dynamic NAT",
+                    "C": "Port Address Translation (PAT)",
+                    "D": "NAT Overlap"
+                },
+                "answer": "C",
+                "detailedexplanation": "Port Address Translation (PAT), also known as NAT Overload, allows many internal hosts to share a single public IP address. It achieves this by tracking 'Source Port' numbers for each session. When a packet returns from the internet, the router looks at the destination port to determine which internal host the traffic belongs to. This is the most common form of NAT used in home and small business routers."
+            },
+            {
+                "id": 5,
+                "domain": "Security Fundamentals",
+                "difficulty": "Easy",
+                "question": "Which of the following is considered a 'Strong' password according to Cisco best practices?",
+                "options": {
+                    "A": "Cisco123",
+                    "B": "Password!",
+                    "C": "n3tW0rk!@#2024",
+                    "D": "admin"
+                },
+                "answer": "C",
+                "detailedexplanation": "A strong password should be complex, long, and unpredictable. Option C uses a combination of lowercase letters, uppercase letters, numbers, and special characters. It avoids dictionary words and common sequences. Cisco recommends passwords be at least 8-10 characters long and changed regularly to prevent brute-force attacks."
+            },
+            {
+                "id": 6,
+                "domain": "Automation and Programmability",
+                "difficulty": "Medium",
+                "question": "Which data format is commonly used in APIs and characterized by its use of key-value pairs and curly braces { }?",
+                "options": {
+                    "A": "XML",
+                    "B": "YAML",
+                    "C": "JSON",
+                    "D": "HTML"
+                },
+                "answer": "C",
+                "detailedexplanation": "JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse. It is the primary data format used by modern RESTful APIs in network automation. XML uses tags like <tag>, and YAML is indentation-based, often used for configuration files like Ansible playbooks."
+            },
+            {
+                "id": 7,
+                "domain": "Network Fundamentals",
+                "difficulty": "Hard",
+                "question": "How many usable host addresses are available in a /28 subnet?",
+                "options": {
+                    "A": "14",
+                    "B": "16",
+                    "C": "30",
+                    "D": "62"
+                },
+                "answer": "A",
+                "detailedexplanation": "A /28 subnet mask has 28 network bits and 4 host bits (32 - 28 = 4). The total number of addresses is calculated as 2^n, where n is the number of host bits. 2^4 = 16. However, you must subtract 2 for the Network ID and the Broadcast Address. 16 - 2 = 14 usable host addresses."
+            },
+            {
+                "id": 8,
+                "domain": "Network Access",
+                "difficulty": "Medium",
+                "question": "What happens when a switch receives a frame with a destination MAC address that is not in its CAM table?",
+                "options": {
+                    "A": "The switch drops the frame.",
+                    "B": "The switch sends the frame to the default gateway.",
+                    "C": "The switch floods the frame out of all ports except the receiving port.",
+                    "D": "The switch sends an ARP request to find the owner."
+                },
+                "answer": "C",
+                "detailedexplanation": "When a destination MAC address is unknown, the switch performs 'Unknown Unicast Flooding.' It sends the frame out every port in that specific VLAN, except for the port where the frame originally arrived. If a device responds, the switch then learns that MAC address and adds it to the CAM table for future use."
+            },
+            {
+                "id": 9,
+                "domain": "IP Connectivity",
+                "difficulty": "Medium",
+                "question": "Which command is used to set the default gateway on a Cisco Layer 2 switch?",
+                "options": {
+                    "A": "ip route 0.0.0.0 0.0.0.0 [gateway-ip]",
+                    "B": "ip default-gateway [gateway-ip]",
+                    "C": "gateway-address [gateway-ip]",
+                    "D": "switchport default-gateway [gateway-ip]"
+                },
+                "answer": "B",
+                "detailedexplanation": "For a Layer 2 switch to be reachable from a different subnet (for management purposes like SSH or Telnet), it needs a default gateway. The command 'ip default-gateway' is used in global configuration mode. 'ip route 0.0.0.0...' is used for Layer 3 devices (routers or multilayer switches) that are actively making routing decisions."
+            },
+            {
+                "id": 10,
+                "domain": "Security Fundamentals",
+                "difficulty": "Medium",
+                "question": "Which type of attack involves an attacker injecting themselves between a client and a server to intercept or alter communication?",
+                "options": {
+                    "A": "Denial of Service (DoS)",
+                    "B": "Man-in-the-Middle (MitM)",
+                    "C": "Phishing",
+                    "D": "SQL Injection"
+                },
+                "answer": "B",
+                "detailedexplanation": "In a Man-in-the-Middle (MitM) attack, the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other. Common methods in networking include ARP Poisoning and DHCP Spoofing."
+            },
+            {
+                "id": 11,
+                "domain": "IP Services",
+                "difficulty": "Medium",
+                "question": "Which protocol is used to synchronize the clocks of network devices?",
+                "options": {
+                    "A": "SNMP",
+                    "B": "SMTP",
+                    "C": "NTP",
+                    "D": "FTP"
+                },
+                "answer": "C",
+                "detailedexplanation": "Network Time Protocol (NTP) is used to synchronize the time on all devices within a network. Precise time is critical for logging, troubleshooting with Syslog, and for security certificates which are time-sensitive."
+            },
+            {
+                "id": 12,
+                "domain": "Automation and Programmability",
+                "difficulty": "Hard",
+                "question": "In the SDN architecture, which plane is responsible for making decisions about where traffic should be sent?",
+                "options": {
+                    "A": "Data Plane",
+                    "B": "Control Plane",
+                    "C": "Management Plane",
+                    "D": "Application Plane"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Control Plane is the 'brain' of the network. It handles the intelligence, such as building routing tables and determining the best path for data. The Data Plane (or Forwarding Plane) simply follows the instructions from the Control Plane to move actual user traffic."
+            },
+            {
+                "id": 13,
+                "domain": "Network Fundamentals",
+                "difficulty": "Medium",
+                "question": "Which of the following is a private IPv4 address as defined by RFC 1918?",
+                "options": {
+                    "A": "172.31.255.1",
+                    "B": "172.32.0.1",
+                    "C": "11.0.0.1",
+                    "D": "200.1.1.1"
+                },
+                "answer": "A",
+                "detailedexplanation": "RFC 1918 defines the following private ranges: 10.0.0.0 - 10.255.255.255, 172.16.0.0 - 172.31.255.255, and 192.168.0.0 - 192.168.255.255. 172.31.255.1 falls within the Class B private range. 172.32.0.1 is a public IP address."
+            },
+            {
+                "id": 14,
+                "domain": "Network Access",
+                "difficulty": "Hard",
+                "question": "What is the default native VLAN on a Cisco switch?",
+                "options": {
+                    "A": "VLAN 0",
+                    "B": "VLAN 1",
+                    "C": "VLAN 10",
+                    "D": "VLAN 99"
+                },
+                "answer": "B",
+                "detailedexplanation": "By default, all ports on a Cisco switch are assigned to VLAN 1, and VLAN 1 is designated as the Native VLAN. The native VLAN is used for untagged traffic passing over an 802.1Q trunk link. For security reasons, it is a best practice to change the native VLAN to something other than VLAN 1."
+            },
+            {
+                "id": 15,
+                "domain": "IP Connectivity",
+                "difficulty": "Medium",
+                "question": "What is the purpose of the 'Floating Static Route'?",
+                "options": {
+                    "A": "To provide a backup route when the primary route fails.",
+                    "B": "To load balance traffic across two identical links.",
+                    "C": "To route traffic to the internet.",
+                    "D": "To increase the speed of the routing table lookups."
+                },
+                "answer": "A",
+                "detailedexplanation": "A floating static route is a static route configured with a higher Administrative Distance (AD) than the primary routing protocol. As long as the primary route is active in the routing table, the floating static route stays 'hidden.' If the primary link goes down, the floating route is installed as a backup."
+            },
+            {
+                "id": 16,
+                "domain": "IP Services",
+                "difficulty": "Medium",
+                "question": "Which protocol provides remote access to a device and is more secure than Telnet?",
+                "options": {
+                    "A": "SSH",
+                    "B": "HTTP",
+                    "C": "SNMPv2",
+                    "D": "TFTP"
+                },
+                "answer": "A",
+                "detailedexplanation": "Secure Shell (SSH) provides a secure, encrypted command-line connection to a remote device. Telnet transmits data (including passwords) in plain text, making it vulnerable to packet sniffing. SSH uses TCP port 22."
+            },
+            {
+                "id": 17,
+                "domain": "Security Fundamentals",
+                "difficulty": "Hard",
+                "question": "What is the primary function of DHCP Snooping?",
+                "options": {
+                    "A": "To speed up IP address assignment.",
+                    "B": "To prevent unauthorized DHCP servers from handing out IP addresses.",
+                    "C": "To allow multiple DHCP servers to work together.",
+                    "D": "To log all DHCP requests for auditing."
+                },
+                "answer": "B",
+                "detailedexplanation": "DHCP Snooping is a Layer 2 security feature that acts like a firewall between untrusted hosts and trusted DHCP servers. It prevents 'DHCP Spoofing' or 'Rogue DHCP' attacks by ensuring that only authorized ports (trusted ports) can send DHCP server responses."
+            },
+            {
+                "id": 18,
+                "domain": "Automation and Programmability",
+                "difficulty": "Medium",
+                "question": "Which component in a Cisco DNA Center architecture is used for managing policies and network devices?",
+                "options": {
+                    "A": "The Southbound Interface",
+                    "B": "The Northbound Interface",
+                    "C": "The Controller",
+                    "D": "The ASIC"
+                },
+                "answer": "C",
+                "detailedexplanation": "In an SDN environment like Cisco DNA Center, the Controller is the centralized management point. It uses Northbound Interfaces (APIs) to communicate with applications/users and Southbound Interfaces (like SSH or SNMP) to communicate with and configure physical network devices."
+            },
+            {
+                "id": 19,
+                "domain": "Network Fundamentals",
+                "difficulty": "Medium",
+                "question": "Which OSI layer is responsible for end-to-end error recovery and flow control?",
+                "options": {
+                    "A": "Network Layer",
+                    "B": "Transport Layer",
+                    "C": "Session Layer",
+                    "D": "Data Link Layer"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Transport Layer (Layer 4) is responsible for end-to-end communication, flow control, and error correction. Protocols like TCP operate at this layer to ensure that data arrives correctly and in the right order."
+            },
+            {
+                "id": 20,
+                "domain": "Network Access",
+                "difficulty": "Medium",
+                "question": "Which command displays the VLANs currently configured on a switch?",
+                "options": {
+                    "A": "show vlan brief",
+                    "B": "show ip vlan",
+                    "C": "show interface status",
+                    "D": "show running-config vlan"
+                },
+                "answer": "A",
+                "detailedexplanation": "The command 'show vlan brief' provides a concise table of all configured VLANs, their names, status, and which physical ports are assigned to them."
+            },
+            {
+                "id": 21,
+                "domain": "IP Connectivity",
+                "difficulty": "Medium",
+                "question": "What is the purpose of the 'HSRP' protocol?",
+                "options": {
+                    "A": "To provide default gateway redundancy.",
+                    "B": "To automate the configuration of routing protocols.",
+                    "C": "To provide high-speed data transfers.",
+                    "D": "To secure the management plane of a router."
+                },
+                "answer": "A",
+                "detailedexplanation": "Hot Standby Router Protocol (HSRP) is a Cisco proprietary First Hop Redundancy Protocol (FHRP). It allows two or more routers to present a single 'Virtual IP' as a default gateway to end hosts. If the active router fails, the standby router takes over the Virtual IP seamlessly."
+            },
+            {
+                "id": 22,
+                "domain": "Security Fundamentals",
+                "difficulty": "Medium",
+                "question": "Which of the following is an example of Multi-Factor Authentication (MFA)?",
+                "options": {
+                    "A": "A username and a complex password.",
+                    "B": "A password and a security question about your first pet.",
+                    "C": "A password and a one-time code sent to a mobile app.",
+                    "D": "Using the same password for two different websites."
+                },
+                "answer": "C",
+                "detailedexplanation": "MFA requires at least two of the three categories: Something you know (password), something you have (phone/token), or something you are (fingerprint). Option C uses something you know and something you have. Option B uses two things you 'know', which is technically not true MFA."
+            },
+            {
+                "id": 23,
+                "domain": "IP Services",
+                "difficulty": "Hard",
+                "question": "Which SNMP version introduced encryption and authentication for improved security?",
+                "options": {
+                    "A": "SNMPv1",
+                    "B": "SNMPv2c",
+                    "C": "SNMPv3",
+                    "D": "SNMPv4"
+                },
+                "answer": "C",
+                "detailedexplanation": "SNMPv3 is the current standard for network management because it provides three key security features: Message Integrity (ensures data wasn't changed), Authentication (verifies source), and Encryption (prevents eavesdropping). Older versions used simple community strings in plain text."
+            },
+            {
+                "id": 24,
+                "domain": "Network Fundamentals",
+                "difficulty": "Easy",
+                "question": "What does a Router do when it receives a packet for a destination network that is not in its routing table and no default route is configured?",
+                "options": {
+                    "A": "It broadcasts the packet to all interfaces.",
+                    "B": "It drops the packet.",
+                    "C": "It sends the packet back to the sender.",
+                    "D": "It stores the packet until the network is available."
+                },
+                "answer": "B",
+                "detailedexplanation": "A router will only forward a packet if it has a specific match for the destination in its routing table or a 'Gateway of Last Resort' (default route). If no match is found, the router discards the packet and usually sends an ICMP 'Destination Unreachable' message back to the source."
+            },
+            {
+                "id": 25,
+                "domain": "Network Access",
+                "difficulty": "Medium",
+                "question": "Which wireless standard operates in both the 2.4 GHz and 5 GHz frequency bands?",
+                "options": {
+                    "A": "802.11a",
+                    "B": "802.11b",
+                    "C": "802.11g",
+                    "D": "802.11n"
+                },
+                "answer": "D",
+                "detailedexplanation": "802.11n (Wi-Fi 4) was the first major standard to support both 2.4 GHz and 5 GHz bands. 802.11b and g only use 2.4 GHz, while 802.11a and ac only use 5 GHz."
+            },
+            {
+                "id": 26,
+                "domain": "IP Connectivity",
+                "difficulty": "Medium",
+                "question": "Which of the following is the OSPF 'Hello' interval default for Ethernet links?",
+                "options": {
+                    "A": "5 seconds",
+                    "B": "10 seconds",
+                    "C": "30 seconds",
+                    "D": "60 seconds"
+                },
+                "answer": "B",
+                "detailedexplanation": "On multi-access networks like Ethernet, OSPF routers send Hello packets every 10 seconds to maintain neighbor relationships. The 'Dead Interval' is typically four times the Hello interval, which would be 40 seconds."
+            },
+            {
+                "id": 27,
+                "domain": "Security Fundamentals",
+                "difficulty": "Medium",
+                "question": "What is the purpose of an Access Control List (ACL)?",
+                "options": {
+                    "A": "To speed up packet forwarding.",
+                    "B": "To filter traffic based on defined criteria.",
+                    "C": "To assign IP addresses to devices.",
+                    "D": "To create a secure tunnel across the internet."
+                },
+                "answer": "B",
+                "detailedexplanation": "ACLs are a set of rules used by routers and firewalls to permit or deny traffic. They can filter based on source/destination IP, protocol (TCP/UDP), or port numbers. They are essential for controlling flow and improving network security."
+            },
+            {
+                "id": 28,
+                "domain": "Automation and Programmability",
+                "difficulty": "Medium",
+                "question": "In an Ansible environment, what is the file called that contains a list of the managed hosts?",
+                "options": {
+                    "A": "Playbook",
+                    "B": "Inventory",
+                    "C": "Manifest",
+                    "D": "Cookbook"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Inventory' file (often named 'hosts') contains the IP addresses or hostnames of the devices you want Ansible to manage. A 'Playbook' contains the tasks to be executed on those hosts."
+            },
+            {
+                "id": 29,
+                "domain": "Network Fundamentals",
+                "difficulty": "Medium",
+                "question": "Which field in the IPv4 header is used to prevent packets from looping endlessly?",
+                "options": {
+                    "A": "Protocol",
+                    "B": "Checksum",
+                    "C": "Time to Live (TTL)",
+                    "D": "Differentiated Services"
+                },
+                "answer": "C",
+                "detailedexplanation": "The TTL (Time to Live) field is an 8-bit value that is decremented by 1 by every router that processes the packet. When the TTL reaches 0, the packet is discarded. This prevents packets from circulating forever in the event of a routing loop."
+            },
+            {
+                "id": 30,
+                "domain": "IP Connectivity",
+                "difficulty": "Hard",
+                "question": "Which command would you use to verify the Administrative Distance of a route learned via OSPF?",
+                "options": {
+                    "A": "show ip route",
+                    "B": "show ip protocols",
+                    "C": "show ip ospf neighbor",
+                    "D": "show ip ospf interface"
+                },
+                "answer": "A",
+                "detailedexplanation": "The 'show ip route' command displays the routing table. Within the brackets for each entry, such as [110/20], the first number (110) is the Administrative Distance and the second number (20) is the metric. 'show ip protocols' can also show global AD values, but 'show ip route' is the best for specific route verification."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30-question deep dive into the CCNA 200-301 curriculum.",
+            "cta_final": "If you found these explanations helpful, please give this video a thumbs up and subscribe for more IT certification content. Don't forget to check the link in the description for the full practice course!",
+            "next_steps": "Comment below with your score! Which domain was the hardest for you? I'll be replying to as many as possible to help you on your journey."
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Use smooth slide-ins for questions and a high-contrast 'Correct Answer' pop-up with a green checkmark."
         }
     }
 ]
