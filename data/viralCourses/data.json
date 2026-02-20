@@ -80738,7 +80738,7 @@
                 },
                 "answer": "B",
                 "detailedexplanation": "In Rod Cutting, you have a rod of length $L$ and you want to cut it into pieces to maximize profit. Since you can cut multiple pieces of the same length, it is exactly like the Unbounded Knapsack problem where the 'weight' is the length of the piece and the 'capacity' is the total length of the rod."
-            }
+            },
             {
                 "id": 20,
                 "domain": "Space Optimization",
@@ -95568,6 +95568,495 @@
         "on_screen_elements": {
             "timer_duration": "15 seconds",
             "transition_effect_hints": "Use smooth slide-ins for questions and a high-contrast 'Correct Answer' pop-up with a green checkmark."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Microsoft Azure AI Fundamentals AI-900 Full Exam Prep",
+                "AI-900 Certification Training: Azure AI Fundamentals Practice Test",
+                "Mastering Azure AI Fundamentals AI-900 Exam Questions",
+                "AI-900 Exam Crash Course: Microsoft Azure AI Fundamentals",
+                "Top AI-900 Exam Questions and Answers for Success",
+                "Complete Guide to Microsoft Azure AI Fundamentals AI-900",
+                "Azure AI Fundamentals Certification (AI-900) Real Exam Questions",
+                "Pass the AI-900 Exam: Azure AI Fundamentals Practice Questions",
+                "Microsoft Certified: Azure AI Fundamentals AI-900 Study Guide",
+                "AI-900 Exam Prep: AI Concepts and Azure Services"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to kickstart your career in Artificial Intelligence? Whether you are a developer, a business leader, or just tech-curious, the Microsoft AI-900 certification is your first step into the future.",
+                "summary": "In this video, we cover 30 high-quality practice questions that mirror the actual AI-900 exam. We'll dive deep into AI workloads, Machine Learning, Computer Vision, Natural Language Processing, and Generative AI to ensure you pass on your first attempt.",
+                "cta_intro": "Before we dive in, make sure to hit that subscribe button and turn on notifications so you don't miss our latest certification guides.",
+                "checkfullexamlinkindescription": "For the full practice exam and additional study materials, check out the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/5kaXON",
+                "youtubetitle": "AI-900 Microsoft Azure AI Fundamentals Certification Full Exam Prep",
+                "description": "Prepare for the Microsoft AI-900: Azure AI Fundamentals exam with this comprehensive practice test. This video covers the five core domains of the exam: AI Workloads and Considerations, Fundamental Principles of Machine Learning on Azure, Features of Computer Vision Workloads on Azure, Features of Natural Language Processing (NLP) Workloads on Azure, and Features of Generative AI Workloads on Azure. Each question includes a detailed explanation to help you understand the 'why' behind the correct answer. Perfect for beginners and those looking to validate their AI knowledge on the Microsoft Cloud.",
+                "tags": "AI-900, Azure AI Fundamentals, Microsoft Certification, AI Exam Prep, Azure Machine Learning, Computer Vision, NLP, Generative AI, Azure AI Services, Azure Certification 2024",
+                "hashtags": [
+                    "#AI900",
+                    "#AzureAI",
+                    "#MicrosoftCertification",
+                    "#ArtificialIntelligence",
+                    "#CloudComputing",
+                    "#AzureFundamentals"
+                ],
+                "keywords": [
+                    "AI-900 practice test",
+                    "Azure AI Fundamentals tutorial",
+                    "Microsoft AI certification",
+                    "Azure ML studio questions",
+                    "Computer vision exam questions",
+                    "Generative AI on Azure",
+                    "AI-900 study guide",
+                    "Azure Cognitive Services"
+                ],
+                "mostsearchedongoogle": [
+                    "AI-900 exam questions",
+                    "Microsoft Azure AI Fundamentals certification cost",
+                    "AI-900 passing score",
+                    "Azure AI Fundamentals study material",
+                    "AI-900 vs DP-100",
+                    "Is AI-900 exam hard?",
+                    "Azure AI-900 free training",
+                    "AI-900 syllabus",
+                    "Microsoft AI certification path",
+                    "AI-900 dumps"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "AI Workloads and Considerations",
+                "difficulty": "Easy",
+                "question": "Which principle of Responsible AI ensures that AI systems should be understandable and explainable to users and developers?",
+                "options": {
+                    "A": "Reliability and Safety",
+                    "B": "Inclusiveness",
+                    "C": "Transparency",
+                    "D": "Accountability"
+                },
+                "answer": "C",
+                "detailedexplanation": "Transparency is the principle that AI systems should be understandable. Users should be made aware of why a system makes certain decisions and what the limitations of the AI are. This involves documenting the algorithms, data used for training, and the reasoning behind specific outputs. In contrast, Accountability refers to people being responsible for the AI system's actions, and Reliability ensures the system performs as expected under varying conditions."
+            },
+            {
+                "id": 2,
+                "domain": "Fundamental Principles of Machine Learning",
+                "difficulty": "Medium",
+                "question": "You are creating a machine learning model to predict the price of a house based on its square footage and location. What type of machine learning is this?",
+                "options": {
+                    "A": "Classification",
+                    "B": "Regression",
+                    "C": "Clustering",
+                    "D": "Anomaly Detection"
+                },
+                "answer": "B",
+                "detailedexplanation": "Regression is a supervised machine learning technique used to predict a numeric (continuous) value, such as a price, temperature, or stock value. Classification, on the other hand, is used to predict a label or category (e.g., Yes/No). Clustering is unsupervised learning used to group similar data points together without predefined labels, and Anomaly Detection identifies unusual patterns that deviate from the norm."
+            },
+            {
+                "id": 3,
+                "domain": "Features of Computer Vision Workloads",
+                "difficulty": "Medium",
+                "question": "You need to build a solution that can identify specific objects within an image and provide their exact coordinates. Which Computer Vision task should you use?",
+                "options": {
+                    "A": "Image Classification",
+                    "B": "Object Detection",
+                    "C": "Optical Character Recognition (OCR)",
+                    "D": "Face Detection"
+                },
+                "answer": "B",
+                "detailedexplanation": "Object Detection goes a step beyond Image Classification. While Image Classification tells you what is in the image, Object Detection identifies individual items within the image and provides bounding box coordinates for each. OCR is specifically for reading text, and Face Detection is specialized for identifying human faces rather than general objects like cars or trees."
+            },
+            {
+                "id": 4,
+                "domain": "Features of NLP Workloads",
+                "difficulty": "Easy",
+                "question": "Which NLP task is used to determine if a customer review is positive or negative?",
+                "options": {
+                    "A": "Entity Recognition",
+                    "B": "Sentiment Analysis",
+                    "C": "Key Phrase Extraction",
+                    "D": "Language Detection"
+                },
+                "answer": "B",
+                "detailedexplanation": "Sentiment Analysis is the process of evaluating text to determine the emotional tone or opinion expressed. It typically returns scores indicating how positive, negative, or neutral a statement is. Entity Recognition identifies specific names of people, places, or dates, while Key Phrase Extraction identifies the main concepts in a body of text."
+            },
+            {
+                "id": 5,
+                "domain": "Generative AI Workloads",
+                "difficulty": "Hard",
+                "question": "What is the primary purpose of the 'Temperature' parameter in a Large Language Model (LLM) request?",
+                "options": {
+                    "A": "To control the speed of the response",
+                    "B": "To limit the number of tokens in the output",
+                    "C": "To control the randomness or creativity of the output",
+                    "D": "To set the maximum cost for the API call"
+                },
+                "answer": "C",
+                "detailedexplanation": "Temperature is a hyperparameter used to control the randomness of the model's output. A lower temperature (e.g., 0.1) makes the model more deterministic and focused, choosing the most likely next word. A higher temperature (e.g., 0.8 or 1.0) makes the output more creative and diverse by allowing less likely words to be selected. It does not affect speed or the maximum token count directly."
+            },
+            {
+                "id": 6,
+                "domain": "AI Workloads and Considerations",
+                "difficulty": "Medium",
+                "question": "A loan application AI system consistently denies loans to individuals from a specific zip code despite their high credit scores. Which Responsible AI principle is being violated?",
+                "options": {
+                    "A": "Privacy and Security",
+                    "B": "Fairness",
+                    "C": "Reliability",
+                    "D": "Transparency"
+                },
+                "answer": "B",
+                "detailedexplanation": "Fairness ensures that AI systems treat all people equally and do not exhibit bias based on characteristics such as race, gender, or location. In this scenario, the system is demonstrating demographic bias by penalizing users based on their zip code, which violates the principle of fairness. This often occurs when training data contains historical biases."
+            },
+            {
+                "id": 7,
+                "domain": "Fundamental Principles of Machine Learning",
+                "difficulty": "Medium",
+                "question": "In Azure Machine Learning Studio, which component allows you to create a visual workflow for training and deploying models without writing code?",
+                "options": {
+                    "A": "Notebooks",
+                    "B": "Designer",
+                    "C": "Automated ML",
+                    "D": "Data Labeling"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Machine Learning Designer provides a drag-and-drop interface (canvas) where you can connect modules for data ingestion, preprocessing, training, and evaluation. This 'no-code' approach is ideal for users who prefer a visual representation of their machine learning pipeline. Automated ML (AutoML) automates the selection of algorithms and hyperparameters, while Notebooks are for code-based development."
+            },
+            {
+                "id": 8,
+                "domain": "Features of Computer Vision Workloads",
+                "difficulty": "Medium",
+                "question": "Which Azure AI service would you use to extract text, key-value pairs, and tables from scanned invoices and receipts?",
+                "options": {
+                    "A": "Azure AI Vision",
+                    "B": "Azure AI Document Intelligence",
+                    "C": "Azure AI Custom Vision",
+                    "D": "Azure AI Video Indexer"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure AI Document Intelligence (formerly Form Recognizer) is a specialized service for processing documents. It uses machine learning to extract not just text, but also the structure of the document, such as tables and specific fields (e.g., 'Total Amount' or 'Date'). Azure AI Vision is for general image analysis, and Custom Vision is for training your own specific image classifiers."
+            },
+            {
+                "id": 9,
+                "domain": "Features of NLP Workloads",
+                "difficulty": "Easy",
+                "question": "Which service should you use to build a conversational interface that can answer frequently asked questions (FAQs) from a website?",
+                "options": {
+                    "A": "Azure AI Language (Question Answering)",
+                    "B": "Azure AI Speech",
+                    "C": "Azure AI Search",
+                    "D": "Azure AI Personalizer"
+                },
+                "answer": "A",
+                "detailedexplanation": "The Question Answering feature (formerly QnA Maker) within Azure AI Language allows you to ingest FAQs, manuals, and documents to create a knowledge base. Users can then query this base through a bot or interface. Azure AI Speech handles voice-to-text and text-to-voice, while Azure AI Search is a cloud search service for large datasets."
+            },
+            {
+                "id": 10,
+                "domain": "Generative AI Workloads",
+                "difficulty": "Medium",
+                "question": "What does the 'P' in GPT stand for in the context of Large Language Models?",
+                "options": {
+                    "A": "Processing",
+                    "B": "Programmable",
+                    "C": "Pre-trained",
+                    "D": "Predictive"
+                },
+                "answer": "C",
+                "detailedexplanation": "GPT stands for Generative Pre-trained Transformer. 'Generative' means it creates new content; 'Pre-trained' means it has been trained on a massive dataset of text before being fine-tuned for specific tasks; and 'Transformer' refers to the specific neural network architecture used to process sequences of data."
+            },
+            {
+                "id": 11,
+                "domain": "AI Workloads and Considerations",
+                "difficulty": "Medium",
+                "question": "Which AI workload type is used to identify a malfunctioning sensor in a manufacturing plant by detecting patterns that differ from normal operations?",
+                "options": {
+                    "A": "Anomaly Detection",
+                    "B": "Natural Language Processing",
+                    "C": "Computer Vision",
+                    "D": "Knowledge Mining"
+                },
+                "answer": "A",
+                "detailedexplanation": "Anomaly Detection is used to monitor data over time and identify unusual events or patterns that do not conform to expected behavior. It is widely used in predictive maintenance to detect equipment failure before it happens, as well as in fraud detection for financial transactions."
+            },
+            {
+                "id": 12,
+                "domain": "Fundamental Principles of Machine Learning",
+                "difficulty": "Medium",
+                "question": "Which metric is commonly used to evaluate the performance of a Classification model by measuring the proportion of actual positives that were correctly identified?",
+                "options": {
+                    "A": "Mean Absolute Error (MAE)",
+                    "B": "R-Squared",
+                    "C": "Recall",
+                    "D": "Root Mean Squared Error (RMSE)"
+                },
+                "answer": "C",
+                "detailedexplanation": "Recall (also known as Sensitivity) is a classification metric that measures how many of the actual positive cases the model correctly predicted. MAE, RMSE, and R-Squared are all metrics used to evaluate Regression models, not Classification models."
+            },
+            {
+                "id": 13,
+                "domain": "Features of Computer Vision Workloads",
+                "difficulty": "Easy",
+                "question": "Which feature of Azure AI Vision allows you to generate a human-readable sentence that describes the contents of an image?",
+                "options": {
+                    "A": "Tagging",
+                    "B": "Image Captioning",
+                    "C": "Object Detection",
+                    "D": "Color Detection"
+                },
+                "answer": "B",
+                "detailedexplanation": "Image Captioning uses a combination of computer vision and natural language processing to describe an image in plain English (e.g., 'A dog sitting on a green lawn'). Tagging provides a list of individual keywords related to the image, but does not form a complete sentence."
+            },
+            {
+                "id": 14,
+                "domain": "Features of NLP Workloads",
+                "difficulty": "Medium",
+                "question": "You want to translate a live speech from English to French in real-time. Which Azure service should you use?",
+                "options": {
+                    "A": "Azure AI Language",
+                    "B": "Azure AI Speech",
+                    "C": "Azure AI Translator",
+                    "D": "Azure AI Custom Vision"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure AI Speech includes Speech-to-Speech and Speech-to-Text translation capabilities designed for real-time scenarios. While Azure AI Translator is used for translating text, the Speech service is optimized for the nuances of spoken language and audio processing."
+            },
+            {
+                "id": 15,
+                "domain": "Generative AI Workloads",
+                "difficulty": "Medium",
+                "question": "Which concept refers to the practice of providing a few examples of a task within the prompt to help a Large Language Model understand what is expected?",
+                "options": {
+                    "A": "Zero-shot learning",
+                    "B": "Few-shot learning",
+                    "C": "Fine-tuning",
+                    "D": "System Message"
+                },
+                "answer": "B",
+                "detailedexplanation": "Few-shot learning involves including a small number of examples (shots) in the prompt to guide the model. Zero-shot learning is when the model is asked to perform a task without any examples. Fine-tuning is a more intensive process where the model's weights are actually updated based on a specific dataset."
+            },
+            {
+                "id": 16,
+                "domain": "AI Workloads and Considerations",
+                "difficulty": "Easy",
+                "question": "Ensuring that an AI system for hiring does not discriminate against candidates based on gender is an example of which Responsible AI principle?",
+                "options": {
+                    "A": "Fairness",
+                    "B": "Transparency",
+                    "C": "Accountability",
+                    "D": "Inclusiveness"
+                },
+                "answer": "A",
+                "detailedexplanation": "Fairness is about ensuring that AI systems do not have a negative impact on groups of people based on protected characteristics like gender, age, or ethnicity. In hiring, this means the algorithm should evaluate skills and experience without being biased by gender data."
+            },
+            {
+                "id": 17,
+                "domain": "Fundamental Principles of Machine Learning",
+                "difficulty": "Hard",
+                "question": "What is the purpose of a 'Validation Set' in the machine learning training process?",
+                "options": {
+                    "A": "To provide the final accuracy score of the model",
+                    "B": "To tune hyperparameters and prevent overfitting during training",
+                    "C": "To replace the training set when data is scarce",
+                    "D": "To store the model's weights permanently"
+                },
+                "answer": "B",
+                "detailedexplanation": "In ML, data is often split into Training, Validation, and Test sets. The Training set builds the model; the Validation set is used to fine-tune settings (hyperparameters) and check for overfitting during the process; the Test set is only used at the very end to provide an unbiased evaluation of the final model."
+            },
+            {
+                "id": 18,
+                "domain": "Features of Computer Vision Workloads",
+                "difficulty": "Medium",
+                "question": "You are developing an application for a self-driving car. Which vision task is required to identify the exact pixels belonging to the road vs. the sidewalk?",
+                "options": {
+                    "A": "Image Classification",
+                    "B": "Object Detection",
+                    "C": "Semantic Segmentation",
+                    "D": "OCR"
+                },
+                "answer": "C",
+                "detailedexplanation": "Semantic Segmentation is an advanced vision task where every pixel in an image is assigned a class label. This allows the system to understand the precise shape and boundaries of objects, which is critical for autonomous vehicles to know exactly where the drivable surface ends."
+            },
+            {
+                "id": 19,
+                "domain": "Features of NLP Workloads",
+                "difficulty": "Easy",
+                "question": "Which Azure AI Language feature is used to identify whether a document is about 'Sports', 'Politics', or 'Technology'?",
+                "options": {
+                    "A": "Sentiment Analysis",
+                    "B": "Key Phrase Extraction",
+                    "C": "Text Classification",
+                    "D": "Entity Linking"
+                },
+                "answer": "C",
+                "detailedexplanation": "Text Classification (specifically Custom Text Classification) allows you to train a model to categorize text into predefined labels. While Key Phrase Extraction tells you what the text is talking about in fragments, Classification assigns the entire text to a specific category."
+            },
+            {
+                "id": 20,
+                "domain": "Generative AI Workloads",
+                "difficulty": "Medium",
+                "question": "In Azure OpenAI Service, what is the 'System Message' used for?",
+                "options": {
+                    "A": "To notify the user of a system error",
+                    "B": "To define the persona, tone, and behavioral constraints of the AI",
+                    "C": "To display the cost of the current session",
+                    "D": "To provide the user's input to the model"
+                },
+                "answer": "B",
+                "detailedexplanation": "The System Message (or System Prompt) sets the stage for the AI's behavior. For example, you can use it to say 'You are a helpful assistant that speaks like a pirate.' It provides the high-level instructions that the model follows throughout the conversation."
+            },
+            {
+                "id": 21,
+                "domain": "AI Workloads and Considerations",
+                "difficulty": "Easy",
+                "question": "The requirement that 'AI systems should be safe and perform reliably under both normal and unexpected conditions' falls under which principle?",
+                "options": {
+                    "A": "Transparency",
+                    "B": "Reliability and Safety",
+                    "C": "Accountability",
+                    "D": "Privacy and Security"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Reliability and Safety principle states that AI systems must be rigorously tested to ensure they behave predictably and do not cause harm, even when they encounter edge cases or data they haven't seen before."
+            },
+            {
+                "id": 22,
+                "domain": "Fundamental Principles of Machine Learning",
+                "difficulty": "Medium",
+                "question": "You want to group customers into segments based on their purchasing habits, but you don't have any pre-existing labels for these segments. Which type of ML should you use?",
+                "options": {
+                    "A": "Supervised Learning",
+                    "B": "Unsupervised Learning",
+                    "C": "Reinforcement Learning",
+                    "D": "Regression"
+                },
+                "answer": "B",
+                "detailedexplanation": "Unsupervised Learning (specifically Clustering) is used when you have data but no labels. The algorithm looks for natural patterns or groupings within the data. Supervised Learning requires labeled data (e.g., 'this is a high-value customer')."
+            },
+            {
+                "id": 23,
+                "domain": "Features of Computer Vision Workloads",
+                "difficulty": "Medium",
+                "question": "Which service is part of Azure AI Vision and allows you to create a model to detect if workers are wearing safety helmets on a construction site?",
+                "options": {
+                    "A": "Face API",
+                    "B": "Optical Character Recognition",
+                    "C": "Custom Vision",
+                    "D": "Standard Image Analysis"
+                },
+                "answer": "C",
+                "detailedexplanation": "Custom Vision allows you to upload your own images and train a specific model for either Image Classification or Object Detection. Since 'safety helmets' is a niche use case not included in standard pre-trained models, Custom Vision is the correct choice."
+            },
+            {
+                "id": 24,
+                "domain": "Features of NLP Workloads",
+                "difficulty": "Medium",
+                "question": "Which NLP task identifies 'Microsoft' as an Organization and 'New York' as a Location in a sentence?",
+                "options": {
+                    "A": "Named Entity Recognition (NER)",
+                    "B": "Sentiment Analysis",
+                    "C": "Language Detection",
+                    "D": "Summarization"
+                },
+                "answer": "A",
+                "detailedexplanation": "Named Entity Recognition (NER) is a feature of Azure AI Language that identifies and categorizes entities in text into predefined types such as person, location, organization, date, and time."
+            },
+            {
+                "id": 25,
+                "domain": "Generative AI Workloads",
+                "difficulty": "Hard",
+                "question": "Which of the following describes 'Hallucination' in the context of Large Language Models?",
+                "options": {
+                    "A": "When the model responds too quickly",
+                    "B": "When the model generates factually incorrect information with high confidence",
+                    "C": "When the model refuses to answer a question due to safety filters",
+                    "D": "When the model repeats the same word over and over"
+                },
+                "answer": "B",
+                "detailedexplanation": "Hallucination occurs when an LLM generates text that is grammatically correct and sounds plausible but is factually false or nonsensical. This happens because LLMs predict the next likely token rather than 'knowing' facts from a database."
+            },
+            {
+                "id": 26,
+                "domain": "AI Workloads and Considerations",
+                "difficulty": "Medium",
+                "question": "Which principle is addressed when users are given the option to opt-out of data collection used to train an AI model?",
+                "options": {
+                    "A": "Transparency",
+                    "B": "Privacy and Security",
+                    "C": "Inclusiveness",
+                    "D": "Fairness"
+                },
+                "answer": "B",
+                "detailedexplanation": "Privacy and Security in AI involves ensuring that personal data is protected and that users have control over how their data is used. Providing opt-out options and ensuring data encryption are key aspects of this principle."
+            },
+            {
+                "id": 27,
+                "domain": "Fundamental Principles of Machine Learning",
+                "difficulty": "Easy",
+                "question": "What is the term for the 'features' in a dataset used for Machine Learning?",
+                "options": {
+                    "A": "The output variable being predicted",
+                    "B": "The individual data points or rows",
+                    "C": "The input variables or columns used for prediction",
+                    "D": "The accuracy score of the model"
+                },
+                "answer": "C",
+                "detailedexplanation": "In machine learning, 'Features' are the independent variables (columns) that the model uses to make predictions. For example, in house price prediction, features would be 'number of rooms' and 'square footage'. The value you are trying to predict is called the 'Label' or 'Target'."
+            },
+            {
+                "id": 28,
+                "domain": "Features of Computer Vision Workloads",
+                "difficulty": "Easy",
+                "question": "Which of the following is a common use case for the Azure AI Speech service?",
+                "options": {
+                    "A": "Identifying objects in a video",
+                    "B": "Converting a podcast into a written transcript",
+                    "C": "Translating a PDF from Japanese to English",
+                    "D": "Detecting anomalies in heart rate data"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure AI Speech provides Speech-to-Text capabilities, which is exactly what is needed to transcribe audio (like a podcast) into text. Translating PDFs is a task for Translator/Document Intelligence, and identifying objects in video is for Video Indexer."
+            },
+            {
+                "id": 29,
+                "domain": "Features of NLP Workloads",
+                "difficulty": "Medium",
+                "question": "You need to extract the main talking points from a 50-page document. Which Azure AI Language feature is most appropriate?",
+                "options": {
+                    "A": "Sentiment Analysis",
+                    "B": "Key Phrase Extraction",
+                    "C": "Language Detection",
+                    "D": "Entity Linking"
+                },
+                "answer": "B",
+                "detailedexplanation": "Key Phrase Extraction quickly identifies the main concepts and important terms within a document. This is perfect for summarizing the 'talking points' without having to read the entire text. Entity Linking is used to identify known entities and link them to external knowledge bases like Wikipedia."
+            },
+            {
+                "id": 30,
+                "domain": "Generative AI Workloads",
+                "difficulty": "Medium",
+                "question": "In the context of Azure OpenAI, what does 'Tokenization' refer to?",
+                "options": {
+                    "A": "The process of charging the user for API usage",
+                    "B": "Breaking down text into smaller units like words or characters for the model to process",
+                    "C": "Encrypting the communication between the client and the server",
+                    "D": "Generating an image from a text prompt"
+                },
+                "answer": "B",
+                "detailedexplanation": "Large Language Models don't read words like humans; they process 'tokens'. Tokenization is the process of breaking input text into these chunks (which can be whole words, parts of words, or punctuation) so the neural network can process the numerical representations of those tokens."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question deep dive into the AI-900 Microsoft Azure AI Fundamentals exam. How did you do? If you got more than 25 correct, you're in great shape for the actual test!",
+            "cta_final": "If you found this video helpful, please give it a thumbs up and share it with your fellow students. Don't forget to subscribe for more certification prep content.",
+            "next_steps": "Check the description for a link to the full course and practice exams. Good luck with your studies, and I'll see you in the next video!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds per question",
+            "transition_effect_hints": "Use smooth fade transitions between questions. Highlight the correct answer in green after the timer ends."
         }
     }
 ]
