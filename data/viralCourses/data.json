@@ -460,7 +460,7 @@
                     "A": "private",
                     "B": "protected",
                     "C": "public",
-                    "0": "internal"
+                    "D": "internal"
                 },
                 "answer": "C",
                 "detailedexplanation": "The 'public' access modifier allows a class, method, or variable to be accessed from any other class in any package. It provides the maximum level of visibility."
@@ -2122,7 +2122,7 @@
                     "D": "Amazon GuardDuty"
                 },
                 "answer": "B",
-                "detailedexplanation": "VPC Flow Logs capture metadata about the IP traffic (source, destination, port, protocol, and action\u2014Accept or Reject) for network interfaces. This is the primary tool for troubleshooting connectivity issues and verifying if Security Group or NACL rules are blocking traffic."
+                "detailedexplanation": "VPC Flow Logs capture metadata about the IP traffic (source, destination, port, protocol, and action—Accept or Reject) for network interfaces. This is the primary tool for troubleshooting connectivity issues and verifying if Security Group or NACL rules are blocking traffic."
             },
             {
                 "id": 9,
@@ -2434,7 +2434,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these networking concepts challenging, don't worry\u2014the Specialty exam is meant to be a deep dive.",
+            "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these networking concepts challenging, don't worry—the Specialty exam is meant to be a deep dive.",
             "cta_final": "For more practice and a much larger pool of questions with even more detailed scenarios, click the link in the description to access our full AWS Certified Advanced Networking Specialty Mock Exam course on Udemy.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more AWS certification prep content. Good luck with your studies!"
         },
@@ -2823,7 +2823,7 @@
                     "D": "To check the CPU usage of a Bot Runner"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Audit Log is a security feature that records every action taken in the Control Room\u2014such as logging in, creating a user, starting a bot, or changing a locker. It provides a non-repudiable trail for compliance and security auditing."
+                "detailedexplanation": "The Audit Log is a security feature that records every action taken in the Control Room—such as logging in, creating a user, starting a bot, or changing a locker. It provides a non-repudiable trail for compliance and security auditing."
             },
             {
                 "id": 24,
@@ -3241,7 +3241,7 @@
                     "D": "A system log that tracks failed nodes."
                 },
                 "answer": "B",
-                "detailedexplanation": "Since SSTables are immutable, Cassandra cannot simply delete data from a file. When a delete command is issued, Cassandra writes a 'Tombstone'\u2014a special marker with a timestamp. During a read, the tombstone tells Cassandra to ignore the older data. During compaction, the tombstone and the shadowed data are finally removed."
+                "detailedexplanation": "Since SSTables are immutable, Cassandra cannot simply delete data from a file. When a delete command is issued, Cassandra writes a 'Tombstone'—a special marker with a timestamp. During a read, the tombstone tells Cassandra to ignore the older data. During compaction, the tombstone and the shadowed data are finally removed."
             },
             {
                 "id": 19,
@@ -3545,7 +3545,7 @@
                     "D": "Amazon CloudFront"
                 },
                 "answer": "C",
-                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement\u2014from milliseconds to microseconds\u2014even at millions of requests per second. Unlike ElastiCache, DAX is API-compatible with DynamoDB, meaning you don't need to rewrite your application logic to manage cache invalidation or data population."
+                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement—from milliseconds to microseconds—even at millions of requests per second. Unlike ElastiCache, DAX is API-compatible with DynamoDB, meaning you don't need to rewrite your application logic to manage cache invalidation or data population."
             },
             {
                 "id": 6,
@@ -4465,7 +4465,7 @@
                 "question": "An organization is considering a third-party cloud service provider. Which of the following is the MOST important factor to ensure the organization's security requirements are met continuously?",
                 "options": {
                     "A": "A right-to-audit clause in the Service Level Agreement (SLA).",
-                    "B": "The provider\u2019s reputation in the industry.",
+                    "B": "The provider’s reputation in the industry.",
                     "C": "A signed Non-Disclosure Agreement (NDA).",
                     "D": "The implementation of a hardware security module (HSM) by the provider."
                 },
@@ -4862,7 +4862,7 @@
                     "D": "A PIN"
                 },
                 "answer": "C",
-                "detailedexplanation": "'Something you are' refers to biometrics\u2014physical characteristics unique to the individual, such as fingerprints, retina patterns, or facial geometry (C). Passwords/PINs are 'something you know', and smart cards are 'something you have'."
+                "detailedexplanation": "'Something you are' refers to biometrics—physical characteristics unique to the individual, such as fingerprints, retina patterns, or facial geometry (C). Passwords/PINs are 'something you know', and smart cards are 'something you have'."
             },
             {
                 "id": 30,
@@ -4881,7 +4881,7 @@
         ],
         "outro_script": {
             "closing": "That wraps up our 30-question deep dive for the CISSP. Remember, this exam tests your ability to make risk-based decisions, not just recite definitions.",
-            "cta_final": "How many did you get right? Let me know your score in the comments! If you struggled with the architecture or risk domains, don't worry\u2014those are historically the toughest sections.",
+            "cta_final": "How many did you get right? Let me know your score in the comments! If you struggled with the architecture or risk domains, don't worry—those are historically the toughest sections.",
             "next_steps": "Check the description for a link to the full CISSP course to continue your journey. Good luck with your studies, and I'll see you in the next video."
         },
         "on_screen_elements": {
@@ -4904,7 +4904,7 @@
                 "Become a Microsoft Certified Hybrid Administrator: AZ-801 Training"
             ],
             "intro_script": {
-                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional\u2014it's essential for the modern IT professional.",
+                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional—it's essential for the modern IT professional.",
                 "summary": "In this comprehensive guide, we are diving deep into the AZ-801: Configuring Windows Server Hybrid Advanced Services certification. We will cover high availability, security, migration, and monitoring across 30 expert-level practice questions.",
                 "cta_intro": "Make sure to grab a notebook, because these questions are designed to mirror the actual exam environment to help you pass on your first attempt.",
                 "checkfullexamlinkindescription": "For the full premium practice exam and expert-led training, check out the link in the description below."
@@ -5051,7 +5051,7 @@
                 "id": 8,
                 "domain": "Secure Windows Server on-premises and hybrid infrastructures",
                 "difficulty": "Medium",
-                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft\u2019s recommended security baselines?",
+                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft’s recommended security baselines?",
                 "options": {
                     "A": "Azure Advisor",
                     "B": "Microsoft Security Compliance Toolkit",
@@ -5371,7 +5371,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics\u2014from security hardening to high availability and disaster recovery\u2014are the pillars of a successful hybrid cloud strategy.",
+            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics—from security hardening to high availability and disaster recovery—are the pillars of a successful hybrid cloud strategy.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Microsoft certification content.",
             "next_steps": "Ready to take your skills to the next level? Click the link in the description to access our full AZ-801 practice exams and comprehensive training materials. Good luck with your certification journey!"
         },
@@ -5395,7 +5395,7 @@
                 "Become a Microsoft Certified Hybrid Administrator: AZ-801 Training"
             ],
             "intro_script": {
-                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional\u2014it's essential for the modern IT professional.",
+                "hook": "Are you struggling to bridge the gap between your on-premises Windows Servers and the power of Microsoft Azure? Mastering the hybrid environment is no longer optional—it's essential for the modern IT professional.",
                 "summary": "In this comprehensive guide, we are diving deep into the AZ-801: Configuring Windows Server Hybrid Advanced Services certification. We will cover high availability, security, migration, and monitoring across 30 expert-level practice questions.",
                 "cta_intro": "Make sure to grab a notebook, because these questions are designed to mirror the actual exam environment to help you pass on your first attempt.",
                 "checkfullexamlinkindescription": "For the full premium practice exam and expert-led training, check out the link in the description below."
@@ -5542,7 +5542,7 @@
                 "id": 8,
                 "domain": "Secure Windows Server on-premises and hybrid infrastructures",
                 "difficulty": "Medium",
-                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft\u2019s recommended security baselines?",
+                "question": "Which tool should you use to assess the security configuration of your on-premises Windows Servers against Microsoft’s recommended security baselines?",
                 "options": {
                     "A": "Azure Advisor",
                     "B": "Microsoft Security Compliance Toolkit",
@@ -5862,7 +5862,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics\u2014from security hardening to high availability and disaster recovery\u2014are the pillars of a successful hybrid cloud strategy.",
+            "closing": "That concludes our 30-question deep dive into the AZ-801: Configuring Windows Server Hybrid Advanced Services exam. These topics—from security hardening to high availability and disaster recovery—are the pillars of a successful hybrid cloud strategy.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Microsoft certification content.",
             "next_steps": "Ready to take your skills to the next level? Click the link in the description to access our full AZ-801 practice exams and comprehensive training materials. Good luck with your certification journey!"
         },
@@ -5953,7 +5953,7 @@
                     "D": "Governance is no longer necessary as the provider manages the infrastructure."
                 },
                 "answer": "B",
-                "detailedexplanation": "In cloud computing, specifically public cloud, you can outsource responsibility for managing certain controls, but you can never outsource the ultimate accountability for the risk. The risk profile changes because you lose direct control over the underlying infrastructure (the 'how'), but you must still ensure that the 'what' (security requirements) is being met. Governance becomes a matter of verifying the provider\u2019s claims through audits and contracts."
+                "detailedexplanation": "In cloud computing, specifically public cloud, you can outsource responsibility for managing certain controls, but you can never outsource the ultimate accountability for the risk. The risk profile changes because you lose direct control over the underlying infrastructure (the 'how'), but you must still ensure that the 'what' (security requirements) is being met. Governance becomes a matter of verifying the provider’s claims through audits and contracts."
             },
             {
                 "id": 3,
@@ -6121,7 +6121,7 @@
                     "D": "Storing all data in a single central data center."
                 },
                 "answer": "A",
-                "detailedexplanation": "Edge computing involves moving the processing of data away from centralized cloud data centers and closer to the 'edge' of the network\u2014near the devices and sensors collecting the data. This reduces latency and bandwidth usage, but it also creates new security challenges because the 'edge' devices may be in physically insecure locations."
+                "detailedexplanation": "Edge computing involves moving the processing of data away from centralized cloud data centers and closer to the 'edge' of the network—near the devices and sensors collecting the data. This reduces latency and bandwidth usage, but it also creates new security challenges because the 'edge' devices may be in physically insecure locations."
             },
             {
                 "id": 15,
@@ -6373,7 +6373,7 @@
                 "ISC2 CC Certification Practice Questions - 2026 Updated"
             ],
             "intro_script": {
-                "hook": "Are you ready to kickstart your career in cybersecurity but feeling overwhelmed by the ISC2 CC exam? Don't sweat it\u2014today, we\u2019re breaking down 30 exam-style questions that cover every single domain you need to master.",
+                "hook": "Are you ready to kickstart your career in cybersecurity but feeling overwhelmed by the ISC2 CC exam? Don't sweat it—today, we’re breaking down 30 exam-style questions that cover every single domain you need to master.",
                 "summary": "This video is a comprehensive mock exam for the ISC2 Certified in Cybersecurity (CC) certification. We will dive deep into Security Principles, Incident Response, Access Controls, Network Security, and Security Operations. Each question is designed to mimic the actual exam's difficulty and logic.",
                 "cta_intro": "Grab a notebook, pause the video before the answers, and let's see how many you can get right!",
                 "checkfullexamlinkindescription": "For a full-length simulation with over 500 questions, check the link in the description below."
@@ -6695,7 +6695,7 @@
                     "D": "The impact of a successful attack"
                 },
                 "answer": "C",
-                "detailedexplanation": "A vulnerability is a flaw or weakness in a system\u2019s design, implementation, or operation and management that could be exploited to violate the system's security policy. A 'Threat' is the potential cause of harm, while the 'Risk' is the intersection of threat, vulnerability, and impact."
+                "detailedexplanation": "A vulnerability is a flaw or weakness in a system’s design, implementation, or operation and management that could be exploited to violate the system's security policy. A 'Threat' is the potential cause of harm, while the 'Risk' is the intersection of threat, vulnerability, and impact."
             },
             {
                 "id": 21,
@@ -7024,7 +7024,7 @@
                 "id": 9,
                 "domain": "Networking",
                 "difficulty": "Hard",
-                "question": "A network administrator wants to segregate the accounting department\u2019s traffic from the rest of the network for security purposes, using the existing switch hardware. Which technology should be implemented?",
+                "question": "A network administrator wants to segregate the accounting department’s traffic from the rest of the network for security purposes, using the existing switch hardware. Which technology should be implemented?",
                 "options": {
                     "A": "VPN",
                     "B": "VLAN",
@@ -7354,7 +7354,7 @@
                 "Salesforce Admin Exam Prep: Master Agentforce and Data Management"
             ],
             "intro_script": {
-                "hook": "Are you ready to become a Salesforce Certified Administrator in 2026? With the new focus on Agentforce AI and Data Management, the exam just got a lot more interesting\u2014and a bit tougher.",
+                "hook": "Are you ready to become a Salesforce Certified Administrator in 2026? With the new focus on Agentforce AI and Data Management, the exam just got a lot more interesting—and a bit tougher.",
                 "summary": "In this video, we dive deep into 30 high-yield, scenario-based questions that mirror the current Salesforce Admin exam. We'll cover everything from Object Manager and Flow to the brand-new Agentforce AI requirements.",
                 "cta_intro": "Before we jump into the first question, make sure to hit that subscribe button for more Salesforce certification content.",
                 "checkfullexamlinkindescription": "For a full-length 60-question mock exam with 1,000+ practice questions, check out the link in the description below."
@@ -7820,7 +7820,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question mock exam. How did you do? If you found some of the Agentforce or Flow questions tricky, don't worry\u2014those are the areas where most candidates need the most practice.",
+            "closing": "That wraps up our 30-question mock exam. How did you do? If you found some of the Agentforce or Flow questions tricky, don't worry—those are the areas where most candidates need the most practice.",
             "cta_final": "If you want to access the full 60-question simulated exam and detailed study guides, check the link in the description.",
             "next_steps": "I'll be releasing a deep dive into Salesforce Flow logic next week, so make sure to turn on notifications so you don't miss it!"
         },
@@ -9029,7 +9029,7 @@
                     "D": "To allow users to type data directly into a chart."
                 },
                 "answer": "B",
-                "detailedexplanation": "By default, clicking a data point in one visual filters or highlights all other visuals on the page. Edit Interactions allows the report author to customize this behavior\u2014for example, preventing a slicer from affecting a specific total cards or changing a 'highlight' interaction into a 'filter' interaction."
+                "detailedexplanation": "By default, clicking a data point in one visual filters or highlights all other visuals on the page. Edit Interactions allows the report author to customize this behavior—for example, preventing a slicer from affecting a specific total cards or changing a 'highlight' interaction into a 'filter' interaction."
             },
             {
                 "id": 13,
@@ -9932,10 +9932,10 @@
                 "difficulty": "Hard",
                 "question": "Which algorithm is most efficient for finding the shortest path between all pairs of vertices in a weighted graph?",
                 "options": {
-                    "A": "Dijkstra\u2019s Algorithm",
+                    "A": "Dijkstra’s Algorithm",
                     "B": "Bellman-Ford Algorithm",
                     "C": "Floyd-Warshall Algorithm",
-                    "D": "Prim\u2019s Algorithm"
+                    "D": "Prim’s Algorithm"
                 },
                 "answer": "C",
                 "detailedexplanation": "Floyd-Warshall is a dynamic programming algorithm specifically designed for the 'All-Pairs Shortest Path' problem. While Dijkstra's can be run 'V' times to achieve this, Floyd-Warshall is more straightforward for dense graphs with a complexity of O(V^3). Dijkstra's is typically used for Single-Source Shortest Path. Prim's is used for Minimum Spanning Trees, not shortest paths."
@@ -10157,12 +10157,12 @@
                 "question": "How can you detect a cycle in a linked list efficiently?",
                 "options": {
                     "A": "By counting the total number of nodes.",
-                    "B": "Using two pointers moving at different speeds (Floyd\u2019s Cycle-Finding Algorithm).",
+                    "B": "Using two pointers moving at different speeds (Floyd’s Cycle-Finding Algorithm).",
                     "C": "By checking if the head is equal to the tail.",
                     "D": "By reversing the linked list."
                 },
                 "answer": "B",
-                "detailedexplanation": "Floyd\u2019s Cycle-Finding Algorithm (also known as the 'Tortoise and the Hare' algorithm) uses two pointers: one moves one step at a time (slow), and the other moves two steps at a time (fast). If there is a cycle, the fast pointer will eventually catch up to the slow pointer inside the loop."
+                "detailedexplanation": "Floyd’s Cycle-Finding Algorithm (also known as the 'Tortoise and the Hare' algorithm) uses two pointers: one moves one step at a time (slow), and the other moves two steps at a time (fast). If there is a cycle, the fast pointer will eventually catch up to the slow pointer inside the loop."
             },
             {
                 "id": 24,
@@ -10204,7 +10204,7 @@
                     "D": "The maximum number of elements a single bucket can hold."
                 },
                 "answer": "C",
-                "detailedexplanation": "The load factor (\u03b1) is defined as n/m, where 'n' is the number of entries and 'm' is the number of buckets (slots). It indicates how 'full' the hash table is. A high load factor increases the probability of collisions, leading most implementations to 'resize' or 'rehash' once the load factor exceeds a certain threshold (typically 0.7 or 0.75)."
+                "detailedexplanation": "The load factor (α) is defined as n/m, where 'n' is the number of entries and 'm' is the number of buckets (slots). It indicates how 'full' the hash table is. A high load factor increases the probability of collisions, leading most implementations to 'resize' or 'rehash' once the load factor exceeds a certain threshold (typically 0.7 or 0.75)."
             },
             {
                 "id": 27,
@@ -11630,7 +11630,7 @@
                     "D": "Creating a press release for the media."
                 },
                 "answer": "B",
-                "detailedexplanation": "The Recovery phase focuses on getting the business back to 'business as usual'. This involves restoring from clean backups, patching the original vulnerability, and\u2014crucially\u2014monitoring the systems closely to ensure the attacker doesn't return or that no hidden malware remains."
+                "detailedexplanation": "The Recovery phase focuses on getting the business back to 'business as usual'. This involves restoring from clean backups, patching the original vulnerability, and—crucially—monitoring the systems closely to ensure the attacker doesn't return or that no hidden malware remains."
             },
             {
                 "id": 24,
@@ -13114,7 +13114,7 @@
                     "D": "The NIC is hardware damaged"
                 },
                 "answer": "C",
-                "detailedexplanation": "If you can ping an IP address (e.g., 8.8.8.8) successfully, your network connection and routing are working. If you cannot reach the site by its name (e.g., google.com), the issue lies with Name Resolution. This points to a DNS problem\u2014either the DNS server is down or the client is configured with an incorrect DNS IP."
+                "detailedexplanation": "If you can ping an IP address (e.g., 8.8.8.8) successfully, your network connection and routing are working. If you cannot reach the site by its name (e.g., google.com), the issue lies with Name Resolution. This points to a DNS problem—either the DNS server is down or the client is configured with an incorrect DNS IP."
             },
             {
                 "id": 25,
@@ -13202,7 +13202,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30 essential networking interview questions. How many did you get right? If you struggled with some of the harder subnetting or protocol questions, don't worry\u2014practice makes perfect.",
+            "closing": "That concludes our 30 essential networking interview questions. How many did you get right? If you struggled with some of the harder subnetting or protocol questions, don't worry—practice makes perfect.",
             "cta_final": "If you found this helpful, hit the like button and subscribe for more IT career prep content.",
             "next_steps": "Ready to get certified? Click the link in the description to access full-length practice exams and comprehensive networking courses."
         },
@@ -13409,7 +13409,7 @@
                     "D": "There is no difference; both are used for the same purpose."
                 },
                 "answer": "B",
-                "detailedexplanation": "A CountDownLatch is initialized with a count, and threads call countDown() until it reaches zero. Once it hits zero, it cannot be reset. It\u2019s a one-time use gate. A CyclicBarrier, however, is used when a fixed number of threads must wait for each other at a common barrier point. Once all threads arrive, the barrier is tripped, and it can be reused (hence 'cyclic') for the next round of synchronization."
+                "detailedexplanation": "A CountDownLatch is initialized with a count, and threads call countDown() until it reaches zero. Once it hits zero, it cannot be reset. It’s a one-time use gate. A CyclicBarrier, however, is used when a fixed number of threads must wait for each other at a common barrier point. Once all threads arrive, the barrier is tripped, and it can be reused (hence 'cyclic') for the next round of synchronization."
             },
             {
                 "id": 11,
@@ -13549,7 +13549,7 @@
                     "D": "Set the thread object to null."
                 },
                 "answer": "C",
-                "detailedexplanation": "The stop() and destroy() methods are deprecated because they are unsafe\u2014they force the thread to stop immediately, potentially leaving shared resources in a corrupted or 'locked' state. The correct approach is 'cooperative' cancellation: use a volatile flag that the thread checks periodically, or use thread.interrupt() and handle the InterruptedException to clean up and exit gracefully."
+                "detailedexplanation": "The stop() and destroy() methods are deprecated because they are unsafe—they force the thread to stop immediately, potentially leaving shared resources in a corrupted or 'locked' state. The correct approach is 'cooperative' cancellation: use a volatile flag that the thread checks periodically, or use thread.interrupt() and handle the InterruptedException to clean up and exit gracefully."
             },
             {
                 "id": 21,
@@ -14271,7 +14271,7 @@
                 "id": 2,
                 "domain": "Memory Management",
                 "difficulty": "Hard",
-                "question": "In the context of Paging, what is 'Belady\u2019s Anomaly'?",
+                "question": "In the context of Paging, what is 'Belady’s Anomaly'?",
                 "options": {
                     "A": "The page fault rate increases as the number of page frames increases.",
                     "B": "The page fault rate decreases as the number of page frames increases.",
@@ -14279,7 +14279,7 @@
                     "D": "The CPU utilization drops when more processes are added."
                 },
                 "answer": "A",
-                "detailedexplanation": "Belady\u2019s Anomaly is a counter-intuitive phenomenon where increasing the number of page frames results in an increase in the number of page faults for certain access patterns. This is specifically observed in the First-In-First-Out (FIFO) page replacement algorithm. Most other algorithms, like LRU (Least Recently Used), do not suffer from this because they belong to a class of 'stack algorithms' where the set of pages in a frame size N is always a subset of pages in frame size N+1."
+                "detailedexplanation": "Belady’s Anomaly is a counter-intuitive phenomenon where increasing the number of page frames results in an increase in the number of page faults for certain access patterns. This is specifically observed in the First-In-First-Out (FIFO) page replacement algorithm. Most other algorithms, like LRU (Least Recently Used), do not suffer from this because they belong to a class of 'stack algorithms' where the set of pages in a frame size N is always a subset of pages in frame size N+1."
             },
             {
                 "id": 3,
@@ -15994,7 +15994,7 @@
                     "A": "3.333",
                     "B": "3",
                     "C": "1",
-                    "0": "4"
+                    "D": "4"
                 },
                 "answer": "B",
                 "detailedexplanation": "The '//' operator performs floor division. It divides the first number by the second and rounds down the result to the nearest whole integer. 10 divided by 3 is 3.333, and flooring it results in 3."
@@ -25463,119 +25463,6 @@
         "on_screen_elements": {
             "timer_duration": "10 seconds",
             "transition_effect_hints": "Use a subtle 'whoosh' sound between questions and a green highlight for the correct answer after the timer ends."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
-                "Master Java Interfaces and Abstract Classes - Practice Test",
-                "Java OOP Certification Training: Interfaces & Abstract Classes",
-                "Java Interfaces vs Abstract Classes: 30 Real Exam Questions",
-                "Ace Your Java Interview: Interface and Abstraction Deep Dive",
-                "Complete Java OOP Practice: Interfaces & Abstract Classes",
-                "Java Certification Prep: Understanding Abstract Methods & Default Methods",
-                "30 Java MCQ: Deep Dive into Interfaces and Abstract Classes",
-                "Java OOP Essentials: Interface, Abstract Class & Polymorphism",
-                "Advanced Java Interface Features: Default, Static, and Private Methods",
-                "Java Abstraction Quiz: 30 Exam-Style Questions with Explanations"
-            ],
-            "intro_script": {
-                "hook": "Ever wondered why you can't instantiate an abstract class, or how an interface can suddenly have a method body? If these questions keep you up at night, you're in the right place.",
-                "summary": "Today, we are tackling 30 high-yield, exam-style practice questions specifically focused on Java Interfaces and Abstract Classes. Whether you're preparing for an Oracle certification or a high-level technical interview, these questions cover everything from basic syntax to the latest Java 21 features.",
-                "cta_intro": "Grab a notebook, pause the video before each answer, and let's see how many you can get right!",
-                "checkfullexamlinkindescription": "For a complete, timed practice exam experience with over 300 questions, check out the full course link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/oNRZ1Y",
-                "youtubetitle": "Java Interfaces and Abstract Classes Practice Test - 30 Exam Questions",
-                "description": "Master the core concepts of Java Abstraction with this comprehensive practice test. \n\nIn this video, we cover:\n- Differences between Abstract Classes and Interfaces\n- Default, Static, and Private methods in Interfaces\n- Multiple Inheritance through Interfaces\n- Implementation rules and keyword constraints\n- Real-world coding scenarios for certification exams\n\nEach question includes a detailed explanation to ensure you understand the 'Why' behind every answer. This is an essential resource for anyone looking to pass their Java Certification or crush their next technical interview.",
-                "tags": "Java, Java Programming, Object Oriented Programming, Java Interfaces, Abstract Classes, Java Certification, OCJA, OCJP, Java Interview Questions, Java Tutorial, Programming Quiz",
-                "hashtags": [
-                    "#JavaProgramming",
-                    "#JavaCertification",
-                    "#OOP",
-                    "#CodingQuiz",
-                    "#JavaTutorial",
-                    "#SoftwareDevelopment"
-                ],
-                "keywords": [
-                    "Java interfaces practice questions",
-                    "Java abstract classes mcq",
-                    "Java OOP interview prep",
-                    "Java default methods in interface",
-                    "abstract class vs interface java 21",
-                    "java certification exam dumps",
-                    "java inheritance and polymorphism quiz",
-                    "java private methods in interface",
-                    "multiple inheritance java tutorial",
-                    "java abstraction examples"
-                ],
-                "mostsearchedongoogle": [
-                    "difference between abstract class and interface in java",
-                    "can interface have private methods in java",
-                    "java interface vs abstract class interview questions",
-                    "why we use abstract class in java",
-                    "default methods in java interface",
-                    "can we instantiate an abstract class in java",
-                    "java 8 interface features",
-                    "multiple inheritance in java using interface",
-                    "static methods in java interface",
-                    "java oops concepts with real time examples"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Abstraction Fundamentals",
-                "difficulty": "Easy",
-                "question": "Which of the following keywords is used to prevent a class from being inherited, effectively making it the opposite of an abstract class?",
-                "options": {
-                    "A": "static",
-                    "B": "final",
-                    "C": "private",
-                    "D": "volatile"
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'final' keyword when applied to a class prevents any other class from extending it. This is conceptually the opposite of an 'abstract' class, which *must* be extended to be useful. For example, the String class in Java is final. Using 'final' ensures that the implementation of the class cannot be altered by a subclass, which is crucial for security and immutability."
-            },
-            {
-                "id": 2,
-                "domain": "Interface vs Abstract Class",
-                "difficulty": "Medium",
-                "question": "Which statement is TRUE regarding the members of a Java interface?",
-                "options": {
-                    "A": "Fields are implicitly public, static, and final.",
-                    "B": "Methods are implicitly protected and abstract.",
-                    "C": "Constructors can be defined to initialize interface variables.",
-                    "D": "All methods must be abstract, even in Java 21."
-                },
-                "answer": "A",
-                "detailedexplanation": "In a Java interface, all fields (variables) are implicitly 'public static final', even if you don't declare them as such. This means they are constants. Options B and C are incorrect because interface methods are public by default (never protected), and interfaces cannot have constructors. Option D is false because interfaces have supported default and static methods since Java 8."
-            },
-            {
-                "id": 3,
-                "domain": "Method Implementation",
-                "difficulty": "Hard",
-                "question": "Consider an interface 'A' with a default method 'print()'. If class 'B' implements 'A' and also extends class 'C' which has a concrete method 'print()', which version of 'print()' is called on an instance of 'B'?",
-                "options": {
-                    "A": "The default method from interface A.",
-                    "B": "The concrete method from class C.",
-                    "C": "A compilation error occurs due to ambiguity.",
-                    "D": "The method must be overridden in class B to resolve the conflict."
-                },
-                "answer": "B",
-                "detailedexplanation": "This follows the 'Class Wins' rule in Java. When there is a conflict between a method provided by a superclass and a default method provided by an interface, the superclass method always takes priority. Java assumes that the class hierarchy is a more specific and intentional implementation than the interface's default behavior."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30 practice questions on Java Interfaces and Abstract Classes! How many did you get right? Let me know your score in the comments below.",
-            "cta_final": "If you found this helpful, hit that like button and subscribe for more Java certification deep dives. It really helps the channel reach more learners.",
-            "next_steps": "Don't stop here! Your next step should be mastering Polymorphism. Click the video on your screen right now to continue your journey. Happy coding!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Use a subtle 'whoosh' sound effect when revealing the answer and clear code blocks for explanations."
         }
     },
     {
@@ -35516,7 +35403,6 @@
                 "options": {
                     "A": "mouseout",
                     "B": "mouseleave",
-                    "C": "mouseexit",
                     "C": "mouseover"
                 },
                 "answer": "B",
@@ -47253,7 +47139,7 @@
                     "A": "for(let i=0; i<arr.length; i++) { if(arr[i]%2===0) evens.push(arr[i]); }",
                     "B": "arr.forEach(x => { if(x%2===0) evens.push(x); })",
                     "C": "const evens = arr.filter(x => x % 2 === 0);",
-                    "Refer to Option A": ""
+                    "D": "None of the above"
                 },
                 "answer": "C",
                 "detailedexplanation": "Declarative programming focuses on 'what' to do rather than 'how' to do it. Option C uses the filter method to declare the desired outcome (all elements that are even). Options A and B are imperative/procedural because they explicitly describe the loop mechanics and the steps to modify an external array."
@@ -55521,7 +55407,7 @@
                     "A": "@babel/core",
                     "B": "@babel/cli",
                     "C": "@babel/preset-env",
-                    "@D": "@babel/polyfill"
+                    "D": "@babel/polyfill"
                 },
                 "answer": "A",
                 "detailedexplanation": "@babel/core is the heart of the Babel compiler. While presets like @babel/preset-env tell Babel which features to transform, @babel/core is the actual engine that parses the code into an Abstract Syntax Tree (AST), applies transformations, and generates the new code."
@@ -65473,7 +65359,7 @@
                     "A": "Differential Privacy",
                     "B": "Federated Learning",
                     "C": "Homomorphic Encryption",
-                    "0": "Data Masking"
+                    "D": "Data Masking"
                 },
                 "answer": "B",
                 "detailedexplanation": "Federated Learning enables 'bringing the model to the data' rather than 'bringing the data to the model.' Multiple devices (like phones or hospital servers) train the model locally and only send the updated model weights to a central server, ensuring the raw sensitive data stays private on the local device."
@@ -73388,7 +73274,7 @@
                     "A": "2 months",
                     "B": "4 months",
                     "C": "6 months",
-                    "&D": "10 months"
+                    "D": "10 months"
                 },
                 "answer": "C",
                 "detailedexplanation": "This is a capacity planning calculation. Month 1: 60 * 1.1 = 66. Month 2: 66 * 1.1 = 72.6. Month 3: 72.6 * 1.1 = 79.8. Month 4: 79.8 * 1.1 = 87.8. Month 5: 87.8 * 1.1 = 96.6. Month 6: 96.6 * 1.1 = 106.2. You will exceed 100% in the 6th month. SREs must perform these projections to trigger infrastructure upgrades before a saturation point is reached."
@@ -81296,7 +81182,7 @@
                     "D": "To account for the fact that a range update at L affects all subsequent prefix sums S_k (where k >= L) by a factor of (k - L + 1)."
                 },
                 "answer": "D",
-                "detailedexplanation": "When we add `v` to `A[L...R]`, the prefix sum $S_i$ (for $i \ge L$) increases by $(i - L + 1) \cdot v$. Expanding this: $i \cdot v - (L - 1) \cdot v$. The $i \cdot v$ part is handled by the first BIT (storing $v$), and the $-(L - 1) \cdot v$ part is a constant corrective term handled by the second BIT."
+                "detailedexplanation": "When we add `v` to `A[L...R]`, the prefix sum $S_i$ (for $i \\ge L$) increases by $(i - L + 1) \\cdot v$. Expanding this: $i \\cdot v - (L - 1) \\cdot v$. The $i \\cdot v$ part is handled by the first BIT (storing $v$), and the $-(L - 1) \\cdot v$ part is a constant corrective term handled by the second BIT."
             },
             {
                 "id": 27,
@@ -81310,7 +81196,7 @@
                     "D": "Indices at the end of the array."
                 },
                 "answer": "B",
-                "detailedexplanation": "In the BIT structure, odd indices are always leaf nodes. Why? Because the LSB of an odd number is always 1 (the 2^0 bit). Since $i - (i \& -i)$ for an odd number $i$ is just $i - 1$, and $i + (i \& -i)$ is $i + 1$, odd indices only store their own value and do not 'cover' any other indices below them."
+                "detailedexplanation": "In the BIT structure, odd indices are always leaf nodes. Why? Because the LSB of an odd number is always 1 (the 2^0 bit). Since $i - (i \\& -i)$ for an odd number $i$ is just $i - 1$, and $i + (i \\& -i)$ is $i + 1$, odd indices only store their own value and do not 'cover' any other indices below them."
             },
             {
                 "id": 28,
@@ -81352,7 +81238,7 @@
                     "D": "No, BIT only works for Addition."
                 },
                 "answer": "B",
-                "detailedexplanation": "A Fenwick Tree works for any Binary Operation $(S, *)$ as long as the operation is associative and has an inverse. XOR is associative $(a \oplus b) \oplus c = a \oplus (b \oplus c)$ and it is its own inverse $(a \oplus b \oplus b = a)$. Therefore, you can replace the `+` with `^` in the BIT implementation to handle range XOR queries perfectly."
+                "detailedexplanation": "A Fenwick Tree works for any Binary Operation $(S, *)$ as long as the operation is associative and has an inverse. XOR is associative $(a \\oplus b) \\oplus c = a \\oplus (b \\oplus c)$ and it is its own inverse $(a \\oplus b \\oplus b = a)$. Therefore, you can replace the `+` with `^` in the BIT implementation to handle range XOR queries perfectly."
             }
         ],
         "outro_script": {
@@ -84196,7 +84082,7 @@
                     "D": "The height is O(log_d n), making 'Extract-Min' O(d log_d n)."
                 },
                 "answer": "B",
-                "detailedexplanation": "A d-ary heap is a generalization where each node has 'd' children. The height is indeed smaller ($log_d n$), which makes 'Insert' (Percolate Up) faster ($O(log_d n)$). However, 'Extract-Min' becomes slower because at each level you must compare 'd' children to find the smallest, leading to $O(d \cdot log_d n)$."
+                "detailedexplanation": "A d-ary heap is a generalization where each node has 'd' children. The height is indeed smaller ($log_d n$), which makes 'Insert' (Percolate Up) faster ($O(log_d n)$). However, 'Extract-Min' becomes slower because at each level you must compare 'd' children to find the smallest, leading to $O(d \\cdot log_d n)$."
             },
             {
                 "id": 24,
@@ -91313,12 +91199,12 @@
                 "question": "How does a Trie compare to a Balanced Binary Search Tree (BST) for storing $N$ strings of average length $L$?",
                 "options": {
                     "A": "BST is faster; Trie is slower.",
-                    "B": "Trie search is $O(L)$, while BST search is $O(L \cdot \log N)$.",
+                    "B": "Trie search is $O(L)$, while BST search is $O(L \\cdot \\log N)$.",
                     "C": "BST uses more memory than a Trie.",
                     "D": "Trie can only store integers, not strings."
                 },
                 "answer": "B",
-                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\log N)$ comparisons, leading to a total search time of $O(L \cdot \log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
+                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\\log N)$ comparisons, leading to a total search time of $O(L \\cdot \\log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
             },
             {
                 "id": 8,
@@ -91398,11 +91284,11 @@
                 "options": {
                     "A": "$O(N)$",
                     "B": "$O(L)$",
-                    "C": "$O(N \times L \times \Sigma)$",
+                    "C": "$O(N \times L \times \\Sigma)$",
                     "D": "$O(N + L)$"
                 },
                 "answer": "C",
-                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \Sigma)$, or $O(N \times L \times \Sigma)$."
+                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \\Sigma)$, or $O(N \times L \times \\Sigma)$."
             },
             {
                 "id": 14,
@@ -91801,12 +91687,12 @@
                 "question": "How does a Trie compare to a Balanced Binary Search Tree (BST) for storing $N$ strings of average length $L$?",
                 "options": {
                     "A": "BST is faster; Trie is slower.",
-                    "B": "Trie search is $O(L)$, while BST search is $O(L \cdot \log N)$.",
+                    "B": "Trie search is $O(L)$, while BST search is $O(L \\cdot \\log N)$.",
                     "C": "BST uses more memory than a Trie.",
                     "D": "Trie can only store integers, not strings."
                 },
                 "answer": "B",
-                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\log N)$ comparisons, leading to a total search time of $O(L \cdot \log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
+                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\\log N)$ comparisons, leading to a total search time of $O(L \\cdot \\log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
             },
             {
                 "id": 8,
@@ -91886,11 +91772,11 @@
                 "options": {
                     "A": "$O(N)$",
                     "B": "$O(L)$",
-                    "C": "$O(N \times L \times \Sigma)$",
+                    "C": "$O(N \times L \times \\Sigma)$",
                     "D": "$O(N + L)$"
                 },
                 "answer": "C",
-                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \Sigma)$, or $O(N \times L \times \Sigma)$."
+                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \\Sigma)$, or $O(N \times L \times \\Sigma)$."
             },
             {
                 "id": 14,
@@ -92289,12 +92175,12 @@
                 "question": "How does a Trie compare to a Balanced Binary Search Tree (BST) for storing $N$ strings of average length $L$?",
                 "options": {
                     "A": "BST is faster; Trie is slower.",
-                    "B": "Trie search is $O(L)$, while BST search is $O(L \cdot \log N)$.",
+                    "B": "Trie search is $O(L)$, while BST search is $O(L \\cdot \\log N)$.",
                     "C": "BST uses more memory than a Trie.",
                     "D": "Trie can only store integers, not strings."
                 },
                 "answer": "B",
-                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\log N)$ comparisons, leading to a total search time of $O(L \cdot \log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
+                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\\log N)$ comparisons, leading to a total search time of $O(L \\cdot \\log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
             },
             {
                 "id": 8,
@@ -92374,11 +92260,11 @@
                 "options": {
                     "A": "$O(N)$",
                     "B": "$O(L)$",
-                    "C": "$O(N \times L \times \Sigma)$",
+                    "C": "$O(N \times L \times \\Sigma)$",
                     "D": "$O(N + L)$"
                 },
                 "answer": "C",
-                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \Sigma)$, or $O(N \times L \times \Sigma)$."
+                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \\Sigma)$, or $O(N \times L \times \\Sigma)$."
             },
             {
                 "id": 14,
@@ -92777,12 +92663,12 @@
                 "question": "How does a Trie compare to a Balanced Binary Search Tree (BST) for storing $N$ strings of average length $L$?",
                 "options": {
                     "A": "BST is faster; Trie is slower.",
-                    "B": "Trie search is $O(L)$, while BST search is $O(L \cdot \log N)$.",
+                    "B": "Trie search is $O(L)$, while BST search is $O(L \\cdot \\log N)$.",
                     "C": "BST uses more memory than a Trie.",
                     "D": "Trie can only store integers, not strings."
                 },
                 "answer": "B",
-                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\log N)$ comparisons, leading to a total search time of $O(L \cdot \log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
+                "detailedexplanation": "In a BST, comparing two strings takes $O(L)$ time. Since there are $N$ strings, a balanced BST takes $O(\\log N)$ comparisons, leading to a total search time of $O(L \\cdot \\log N)$. A Trie, however, only takes $O(L)$ time because it processes each character once regardless of how many other strings are in the structure. This makes Tries significantly faster for large dictionaries."
             },
             {
                 "id": 8,
@@ -92862,11 +92748,11 @@
                 "options": {
                     "A": "$O(N)$",
                     "B": "$O(L)$",
-                    "C": "$O(N \times L \times \Sigma)$",
+                    "C": "$O(N \times L \times \\Sigma)$",
                     "D": "$O(N + L)$"
                 },
                 "answer": "C",
-                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \Sigma)$, or $O(N \times L \times \Sigma)$."
+                "detailedexplanation": "In the worst case where no words share any common prefixes, every character of every word will require a new node. Each node, in an array implementation, carries an overhead of the alphabet size $\\Sigma$ (e.g., 26). Thus, the total space is $O(TotalCharacters \times \\Sigma)$, or $O(N \times L \times \\Sigma)$."
             },
             {
                 "id": 14,
