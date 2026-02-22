@@ -2,497 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Automation Anywhere Advanced RPA Professional Certification Prep",
-                "Automation 360 Advanced Exam Mock Test and Explanations",
-                "Mastering Automation Anywhere Certified Advanced RPA Professional",
-                "Automation Anywhere A360 Certification Practice Questions",
-                "How to Pass Automation Anywhere Advanced RPA Exam",
-                "Automation 360 Advanced RPA Professional Training Guide",
-                "A360 RPA Certification Exam Dumps and Real Questions",
-                "Automation Anywhere Certified Advanced RPA Professional Mastery",
-                "Automation 360 Bot Developer Certification Mock Exam",
-                "Complete Guide to Automation Anywhere A360 Certification"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to level up your RPA career and clear the Automation Anywhere Advanced RPA Professional exam on your first try?",
-                "summary": "In this video, we dive deep into 30 high-yield practice questions for the Automation 360 certification, covering everything from Control Room management to advanced Recorder techniques.",
-                "cta_intro": "Make sure to grab a pen and paper to track your score as we go through these real-world scenarios.",
-                "checkfullexamlinkindescription": "For the full 100+ question practice set, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/m4RVBe",
-                "youtubetitle": "Automation Anywhere Certified Advanced RPA Professional A360 Exam Prep - Mock Test",
-                "description": "Unlock your potential with this comprehensive mock exam for the Automation Anywhere Certified Advanced RPA Professional (Automation 360) certification. This video covers the core domains including Bot Creator, Control Room, Packages, and Error Handling to ensure you are exam-ready. Each question is followed by a detailed explanation to help you understand the 'why' behind the correct answer.",
-                "tags": "Automation Anywhere, A360, RPA Certification, Advanced RPA Professional, Automation 360, Bot Developer, Robotic Process Automation, Automation Anywhere Training, A360 Certification Questions, Control Room",
-                "hashtags": [
-                    "#AutomationAnywhere",
-                    "#RPA",
-                    "#A360",
-                    "#CertificationPrep",
-                    "#AdvancedRPA",
-                    "#BotDeveloper"
-                ],
-                "keywords": [
-                    "Automation Anywhere Certified Advanced RPA Professional",
-                    "A360 Mock Test",
-                    "RPA Certification Questions",
-                    "Automation Anywhere A360 Tutorial",
-                    "Control Room Administration",
-                    "Automation Anywhere Exam Dumps",
-                    "Bot Creator Basics",
-                    "Advanced RPA Techniques",
-                    "Automation 360 Packages",
-                    "Error Handling in A360"
-                ],
-                "mostsearchedongoogle": [
-                    "Automation Anywhere Advanced Certification cost",
-                    "Automation 360 exam questions",
-                    "How to pass Automation Anywhere Advanced exam",
-                    "Automation Anywhere A360 training free",
-                    "RPA Professional certification benefits",
-                    "Automation Anywhere Control Room architecture",
-                    "Automation 360 Recorder vs Classic",
-                    "Automation Anywhere variable types",
-                    "Difference between A2019 and A360",
-                    "Automation Anywhere certification path"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Bot Creator",
-                "difficulty": "Intermediate",
-                "question": "Which variable type is best suited for storing a collection of data retrieved from an Excel spreadsheet for iteration?",
-                "options": {
-                    "A": "List",
-                    "B": "Dictionary",
-                    "C": "Table",
-                    "D": "Record"
-                },
-                "answer": "C",
-                "detailedexplanation": "The Table variable is specifically designed to store two-dimensional data, such as the rows and columns found in an Excel worksheet. While a Record variable can hold a single row during an iteration, the Table variable is the primary container for the entire dataset retrieved via the 'Get Worksheet as Table' command in the Excel Advanced package."
-            },
-            {
-                "id": 2,
-                "domain": "Control Room",
-                "difficulty": "Advanced",
-                "question": "A developer needs to ensure that a specific bot runs only on a particular Bot Runner machine. Where should this be configured?",
-                "options": {
-                    "A": "In the Bot Creator local settings",
-                    "B": "Within the Run Bot menu by selecting 'Run bot on specific device'",
-                    "C": "In the Device Pool settings only",
-                    "D": "By hardcoding the machine name in the bot script"
-                },
-                "answer": "B",
-                "detailedexplanation": "When deploying a bot from the Control Room, the user can choose the 'Run bot' option and specify the deployment target. By selecting a specific device from the list of available Bot Runners, the administrator ensures the workload is directed to that hardware specifically, which is crucial for tasks requiring unique local configurations or software licenses."
-            },
-            {
-                "id": 3,
-                "domain": "Recorder",
-                "difficulty": "Intermediate",
-                "question": "Which Capture action technology is most effective for interacting with legacy applications that do not have accessible UI objects?",
-                "options": {
-                    "A": "Object-based capturing",
-                    "B": "Image-based capturing",
-                    "C": "Coordinate-based capturing",
-                    "D": "Text-based capturing"
-                },
-                "answer": "B",
-                "detailedexplanation": "When the Universal Recorder cannot identify internal UI elements (common in Citrix environments or older legacy apps), Image-based capturing is the fallback. It uses visual pattern matching to find the UI component. While Coordinate-based is an option, it is less reliable than Image-based capturing which can adapt to slight screen shifts."
-            },
-            {
-                "id": 4,
-                "domain": "Error Handling",
-                "difficulty": "Advanced",
-                "question": "In the Try-Catch-Finally block, when does the 'Finally' block execute?",
-                "options": {
-                    "A": "Only if an error occurs in the Try block",
-                    "B": "Only if the Catch block fails to resolve the error",
-                    "C": "Every time, regardless of whether an error occurred or not",
-                    "D": "Only if no error occurs in the Try block"
-                },
-                "answer": "C",
-                "detailedexplanation": "The 'Finally' block is designed for cleanup activities (like closing an application or logging out). It is guaranteed to run whether the 'Try' block completed successfully or the 'Catch' block was triggered by an exception. This ensures that the system state is reset regardless of the automation's success."
-            },
-            {
-                "id": 5,
-                "domain": "Workload Management",
-                "difficulty": "Advanced",
-                "question": "What is the primary benefit of using a Work Queue in Automation 360?",
-                "options": {
-                    "A": "To speed up the development of individual bots",
-                    "B": "To distribute work items across multiple Bot Runners simultaneously",
-                    "C": "To store encrypted passwords",
-                    "D": "To schedule bots to run at specific times"
-                },
-                "answer": "B",
-                "detailedexplanation": "Work Queues allow for the 'Producer-Consumer' model. They enable high-volume data processing by allowing multiple Bot Runners (Consumers) to pull work items from a central queue (Workload) simultaneously, ensuring scalability and efficient resource utilization."
-            },
-            {
-                "id": 6,
-                "domain": "Credential Vault",
-                "difficulty": "Intermediate",
-                "question": "Which role in the Control Room is allowed to create 'Lockers' in the Credential Vault?",
-                "options": {
-                    "A": "Bot Developer",
-                    "B": "Locker Admin",
-                    "C": "Bot Runner",
-                    "D": "Guest User"
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'Locker Admin' role (or a custom role with equivalent permissions) is required to manage the lifecycle of Lockers. While Bot Developers can use credentials within Lockers they have access to, they do not have the inherent right to create the security containers (Lockers) themselves."
-            },
-            {
-                "id": 7,
-                "domain": "Variable Management",
-                "difficulty": "Intermediate",
-                "question": "Which of the following is a system-defined variable in Automation 360?",
-                "options": {
-                    "A": "$String:MyVariable$",
-                    "B": "$AA-ControlRoom$",
-                    "C": "$CPUBasedDelay$",
-                    "D": "$System:Date$"
-                },
-                "answer": "D",
-                "detailedexplanation": "Automation 360 provides built-in system variables like $System:Date$, $System:Day$, and $System:Hour$ to provide real-time environment data. Custom variables created by users do not have the 'System' prefix."
-            },
-            {
-                "id": 8,
-                "domain": "Excel Automation",
-                "difficulty": "Intermediate",
-                "question": "What is the difference between Excel Basic and Excel Advanced packages?",
-                "options": {
-                    "A": "Basic requires MS Excel to be installed, Advanced does not",
-                    "B": "Advanced requires MS Excel to be installed, Basic does not",
-                    "C": "Basic is only for .csv files",
-                    "D": "There is no difference"
-                },
-                "answer": "B",
-                "detailedexplanation": "Excel Advanced utilizes the Excel API and therefore requires Microsoft Excel to be installed on the Bot Runner machine. Excel Basic uses a driver-based approach to read/write Excel files (.xlsx) even if the Microsoft Office suite is not present on the machine."
-            },
-            {
-                "id": 9,
-                "domain": "Bot Insight",
-                "difficulty": "Advanced",
-                "question": "Which action must a developer take to ensure specific data is captured for business analytics in Bot Insight?",
-                "options": {
-                    "A": "Use the 'Analyze' variable property",
-                    "B": "Export the bot as a PDF",
-                    "C": "Use the 'Log to File' command",
-                    "D": "Tag variables as 'Tracked'"
-                },
-                "answer": "A",
-                "detailedexplanation": "In Automation 360, when creating or editing a variable, there is a checkbox to 'Include in Analytics'. By selecting this, the bot automatically sends the variable's value to Bot Insight during execution, allowing for the generation of operational and business dashboards."
-            },
-            {
-                "id": 10,
-                "domain": "Trigger",
-                "difficulty": "Intermediate",
-                "question": "Which trigger type would you use to start a bot as soon as a specific file is dropped into a folder?",
-                "options": {
-                    "A": "Email Trigger",
-                    "B": "Folder Trigger",
-                    "C": "Interface Trigger",
-                    "D": "Process Trigger"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Folder Trigger monitors local or network directories. It can be configured to fire based on several events: when a file is created, deleted, renamed, or modified. This is ideal for 'Hot Folder' automation patterns."
-            },
-            {
-                "id": 11,
-                "domain": "Packages",
-                "difficulty": "Advanced",
-                "question": "If a bot is using version 2.0.0 of the Mail package but the Control Room has version 3.0.0 available, what happens?",
-                "options": {
-                    "A": "The bot automatically upgrades to 3.0.0",
-                    "B": "The bot will fail to run",
-                    "C": "The bot continues to use 2.0.0 unless manually updated",
-                    "D": "The Control Room deletes the 2.0.0 version"
-                },
-                "answer": "C",
-                "detailedexplanation": "Automation 360 supports package versioning. A bot is compiled with a specific package version to ensure stability. Even if a newer version is uploaded to the Control Room, the bot will remain on its assigned version until a developer explicitly changes it in the Bot Creator."
-            },
-            {
-                "id": 12,
-                "domain": "Loops",
-                "difficulty": "Intermediate",
-                "question": "Which Loop iterator is most efficient for processing each row in a SQL query result?",
-                "options": {
-                    "A": "For each row in CSV/TXT",
-                    "B": "For each row in SQL query dataset",
-                    "C": "For each row in Excel",
-                    "D": "While Loop"
-                },
-                "answer": "B",
-                "detailedexplanation": "When using the Database package to execute a query, the 'For each row in SQL query dataset' iterator allows the bot to process the result set record by record, assigning each row's data to a Record variable for easy access to specific columns."
-            },
-            {
-                "id": 13,
-                "domain": "Dictionary",
-                "difficulty": "Intermediate",
-                "question": "How do you access a specific value in a Dictionary variable?",
-                "options": {
-                    "A": "Using an Index (Number)",
-                    "B": "Using a Key (String)",
-                    "C": "Using a Row ID",
-                    "D": "Dictionary values cannot be accessed individually"
-                },
-                "answer": "B",
-                "detailedexplanation": "Dictionaries are Key-Value pairs. To retrieve a value, you must provide the specific string key associated with it. This is useful for storing configuration data (e.g., Key: 'URL', Value: 'https://site.com')."
-            },
-            {
-                "id": 14,
-                "domain": "Recorder",
-                "difficulty": "Advanced",
-                "question": "When using the Recorder 'Capture' action, what is 'Object Resiliency' primarily used for?",
-                "options": {
-                    "A": "To make the bot run faster",
-                    "B": "To handle changes in UI properties like 'Path' or 'Name'",
-                    "C": "To encrypt the recorded data",
-                    "D": "To capture images instead of text"
-                },
-                "answer": "B",
-                "detailedexplanation": "Object Resiliency (or 'Smart Recording') allows the bot to identify a UI element even if some of its attributes change slightly between the time of recording and the time of execution. By selecting multiple attributes (DOMXPath, ID, Name), the bot has multiple ways to find the same object."
-            },
-            {
-                "id": 15,
-                "domain": "Administration",
-                "difficulty": "Intermediate",
-                "question": "What is the function of 'Device Pools' in Automation 360?",
-                "options": {
-                    "A": "To group Bot Creators for collaboration",
-                    "B": "To group Bot Runners for workload distribution",
-                    "C": "To store physical hardware specifications",
-                    "D": "To manage licenses for external APIs"
-                },
-                "answer": "B",
-                "detailedexplanation": "Device Pools allow administrators to group multiple Unattended Bot Runner machines together. When a workload is assigned to a pool, the Control Room automatically distributes the tasks to whichever device in the pool is currently available."
-            },
-            {
-                "id": 16,
-                "domain": "Bot Creator",
-                "difficulty": "Intermediate",
-                "question": "Which file extension is used for bots created in Automation 360?",
-                "options": {
-                    "A": ".atmx",
-                    "B": ".bot",
-                    "C": ".xml",
-                    "D": ".json"
-                },
-                "answer": "B",
-                "detailedexplanation": "In Automation 360 (formerly A2019), bots are saved with the '.bot' extension. This is a departure from the older version (v11), which used '.atmx' for TaskBots and '.mbot' for MetaBots."
-            },
-            {
-                "id": 17,
-                "domain": "Security",
-                "difficulty": "Advanced",
-                "question": "What happens when a credential is set to 'User-defined' in a Locker?",
-                "options": {
-                    "A": "The admin provides the value for everyone",
-                    "B": "Each user must provide their own value for that credential",
-                    "C": "The value is automatically generated by the Control Room",
-                    "D": "The credential can only be used by the Admin"
-                },
-                "answer": "B",
-                "detailedexplanation": "User-defined credentials allow for personalized security. For example, if a bot needs to log into a system using the user's personal ID, the Locker Admin defines the field, but each individual Bot Runner/Creator must input their own specific password in their profile."
-            },
-            {
-                "id": 18,
-                "domain": "String Operation",
-                "difficulty": "Intermediate",
-                "question": "Which String action would you use to separate a full name into First and Last names based on a space?",
-                "options": {
-                    "A": "Substring",
-                    "B": "Trim",
-                    "C": "Split",
-                    "D": "Replace"
-                },
-                "answer": "C",
-                "detailedexplanation": "The 'Split' action takes a string and a delimiter (like a space or comma) and breaks the string into a List variable. Each segment of the original string becomes an item in that list."
-            },
-            {
-                "id": 19,
-                "domain": "Automation 360 Overview",
-                "difficulty": "Intermediate",
-                "question": "Automation 360 is primarily a _____ platform.",
-                "options": {
-                    "A": "Desktop-only",
-                    "B": "Web-based",
-                    "C": "Command-line only",
-                    "D": "Mainframe-based"
-                },
-                "answer": "B",
-                "detailedexplanation": "Automation 360 is a cloud-native, web-based platform. This means both the Control Room and the Bot Creator (Integrated Development Environment) are accessed via a web browser, requiring no local installation for the IDE itself."
-            },
-            {
-                "id": 20,
-                "domain": "Error Handling",
-                "difficulty": "Intermediate",
-                "question": "What is the purpose of the 'Throw' action?",
-                "options": {
-                    "A": "To ignore an error",
-                    "B": "To manually trigger a custom exception",
-                    "C": "To restart the Bot Runner machine",
-                    "D": "To delete a variable"
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'Throw' action is used within a bot to signal that a specific condition has occurred which should be treated as an error (e.g., 'Insufficient Funds'). This 'throws' the execution to the nearest 'Catch' block."
-            },
-            {
-                "id": 21,
-                "domain": "Variable Management",
-                "difficulty": "Advanced",
-                "question": "Which variable type is required to pass a full row of data from a Table during a loop?",
-                "options": {
-                    "A": "String",
-                    "B": "Record",
-                    "C": "List",
-                    "D": "Any"
-                },
-                "answer": "B",
-                "detailedexplanation": "When looping through a Table or a CSV, the standard practice is to assign the 'current row' to a Record variable. You can then access columns within that record by index (e.g., $rCurrentRow[0]$) or by column name (e.g., $rCurrentRow{Email}$). "
-            },
-            {
-                "id": 22,
-                "domain": "Browser Automation",
-                "difficulty": "Intermediate",
-                "question": "Which package is recommended for web-based automation tasks in Automation 360?",
-                "options": {
-                    "A": "Web Automation package",
-                    "B": "Browser package",
-                    "C": "Recorder package",
-                    "D": "HTTP package"
-                },
-                "answer": "C",
-                "detailedexplanation": "While the Browser package handles things like opening and closing tabs, the Universal Recorder (within the Recorder package) is the primary and most powerful tool for capturing elements and performing actions (Click, Set Text) on web pages."
-            },
-            {
-                "id": 23,
-                "domain": "Control Room",
-                "difficulty": "Advanced",
-                "question": "What is the 'Audit Log' used for in the Control Room?",
-                "options": {
-                    "A": "To see the source code of a bot",
-                    "B": "To track all user and system activities for compliance",
-                    "C": "To debug a bot's variable values",
-                    "D": "To check the CPU usage of a Bot Runner"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Audit Log is a security feature that records every action taken in the Control Room\u2014such as logging in, creating a user, starting a bot, or changing a locker. It provides a non-repudiable trail for compliance and security auditing."
-            },
-            {
-                "id": 24,
-                "domain": "File Folders",
-                "difficulty": "Intermediate",
-                "question": "How can you check if a file exists before trying to open it?",
-                "options": {
-                    "A": "Use an 'If' condition with the 'File exists' check",
-                    "B": "Use a 'Wait' command with 'Wait for file'",
-                    "C": "Just open it; the Catch block will handle it",
-                    "D": "Both A and B"
-                },
-                "answer": "D",
-                "detailedexplanation": "Best practice involves checking for the file's existence using an 'If' condition or using a 'Wait for file' command if the file is expected to appear after a delay. This prevents unnecessary errors and makes the bot more robust."
-            },
-            {
-                "id": 25,
-                "domain": "Packages",
-                "difficulty": "Intermediate",
-                "question": "How do you add a new package to your Automation 360 Control Room?",
-                "options": {
-                    "A": "Upload it via the 'Packages' section in the Control Room",
-                    "B": "Install it on the local Bot Runner machine",
-                    "C": "Email it to Automation Anywhere support",
-                    "D": "Packages are updated automatically and cannot be added manually"
-                },
-                "answer": "A",
-                "detailedexplanation": "Administrators can navigate to the 'Packages' menu in the Control Room and use the 'Add Package' button to upload .jar or .zip files provided by Automation Anywhere or third-party developers via the Bot Store."
-            },
-            {
-                "id": 26,
-                "domain": "Bot Creator",
-                "difficulty": "Intermediate",
-                "question": "Which view in the Bot Creator allows you to see the bot as a flowchart?",
-                "options": {
-                    "A": "List View",
-                    "B": "Flow View",
-                    "C": "Dual View",
-                    "D": "Script View"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Bot Creator offers three views: List View (linear steps), Flow View (graphical flowchart), and Dual View (both side-by-side). Flow View is excellent for visualizing logical branches and loops."
-            },
-            {
-                "id": 27,
-                "domain": "Control Room",
-                "difficulty": "Advanced",
-                "question": "What is the purpose of 'Check-in' and 'Check-out' in the Control Room?",
-                "options": {
-                    "A": "To manage employee attendance",
-                    "B": "To manage version control and prevent multiple developers from editing the same bot",
-                    "C": "To license the Bot Runner",
-                    "D": "To upload a bot to the Bot Store"
-                },
-                "answer": "B",
-                "detailedexplanation": "Automation 360 uses a repository system. 'Check-out' locks a bot to a specific developer for editing, and 'Check-in' saves those changes back to the public repository (Control Room) and makes it available for deployment or others to edit."
-            },
-            {
-                "id": 28,
-                "domain": "Wait",
-                "difficulty": "Intermediate",
-                "question": "Which is more efficient: 'Wait for window' or a 'Static Delay' of 10 seconds?",
-                "options": {
-                    "A": "Static Delay",
-                    "B": "Wait for window",
-                    "C": "Both are equally efficient",
-                    "D": "Static Delay is better for security"
-                },
-                "answer": "B",
-                "detailedexplanation": "'Wait for window' is a dynamic wait. If the window appears in 1 second, the bot moves on immediately. A static delay of 10 seconds would waste 9 seconds. Dynamic waits make bots faster and more reliable."
-            },
-            {
-                "id": 29,
-                "domain": "Administration",
-                "difficulty": "Intermediate",
-                "question": "Which of these is NOT a type of Bot Runner license?",
-                "options": {
-                    "A": "Attended Bot Runner",
-                    "B": "Unattended Bot Runner",
-                    "C": "Bot Creator",
-                    "D": "Floating Bot Runner"
-                },
-                "answer": "D",
-                "detailedexplanation": "Standard licenses include Bot Creator (for development), Attended Bot Runner (requires human trigger), and Unattended Bot Runner (can be scheduled/triggered by Control Room). 'Floating' is not a standard Automation 360 license type."
-            },
-            {
-                "id": 30,
-                "domain": "Variables",
-                "difficulty": "Intermediate",
-                "question": "What is the primary use of a 'Global Value' in Automation 360?",
-                "options": {
-                    "A": "To store values that change frequently during a bot run",
-                    "B": "To share constant values (like a URL) across all bots in the Control Room",
-                    "C": "To store temporary calculation results",
-                    "D": "To store encrypted passwords"
-                },
-                "answer": "B",
-                "detailedexplanation": "Global Values are defined at the Control Room level. They are read-only for the bots and are perfect for environment-wide constants, such as a company website URL or a standard email address, ensuring consistency across all automated processes."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30-question mock exam for the Automation Anywhere Certified Advanced RPA Professional certification.",
-            "cta_final": "If you found this helpful, please hit the like button and subscribe for more RPA certification content. Don't forget to comment your score below!",
-            "next_steps": "Ready for the full exam experience? Click the Udemy link in the description to get the complete practice tests and pass your exam with confidence."
-        },
-        "on_screen_elements": {
-            "timer_duration": "15 seconds",
-            "transition_effect_hints": "Fade out question, slide in correct answer and explanation."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Apache Cassandra 3.x Developer Associate Certification Practice Test",
                 "Master Cassandra 3.x Developer Associate Exam Prep",
                 "Cassandra 3.x Developer Associate Certification Real Exam Questions",
@@ -98456,12 +97965,11 @@
                 "question": "Which of the following statements best describes the difference between testing and debugging?",
                 "options": {
                     "A": "Testing shows failures caused by defects; debugging finds, analyzes, and removes the causes of failures in software.",
-                    "B": "Testing is performed by developers; debugging is performed by testers.",
-                    "C": "Testing identifies the source of a bug; debugging shows that the system performs its functions correctly.",
-                    "B": "Testing and debugging are the same activity, just performed at different stages of the SDLC."
+                    "B": "Testing and debugging are the same activity, just performed at different stages of the SDLC.",
+                    "C": "Testing identifies the source of a bug; debugging shows that the system performs its functions correctly."
                 },
                 "answer": "A",
-                "detailedexplanation": "Testing and debugging are distinct activities. Testing is the process of executing software to find failures—it shows that a defect exists. Debugging is the development activity that starts after a failure is found; it involves locating the cause (the defect), fixing it, and then checking that the fix works. While testers often find the failures, developers are typically responsible for the debugging process."
+                "detailedexplanation": "Testing and debugging are distinct activities. Testing is the process of executing software to find failures\u2014it shows that a defect exists. Debugging is the development activity that starts after a failure is found; it involves locating the cause (the defect), fixing it, and then checking that the fix works. While testers often find the failures, developers are typically responsible for the debugging process."
             },
             {
                 "id": 2,
@@ -98629,7 +98137,7 @@
                     "D": "Small changes in code can lead to large failures."
                 },
                 "answer": "B",
-                "detailedexplanation": "The Pesticide Paradox states that if you run the same set of tests repeatedly, the system will eventually become 'immune' to them—meaning the tests will no longer find new bugs. To overcome this, test cases must be regularly reviewed and updated, and new tests should be written to exercise different parts of the software."
+                "detailedexplanation": "The Pesticide Paradox states that if you run the same set of tests repeatedly, the system will eventually become 'immune' to them\u2014meaning the tests will no longer find new bugs. To overcome this, test cases must be regularly reviewed and updated, and new tests should be written to exercise different parts of the software."
             },
             {
                 "id": 14,
@@ -101404,7 +100912,7 @@
                     "D": "SQL Injection"
                 },
                 "answer": "C",
-                "detailedexplanation": "Session Hijacking involves the exploitation of a valid computer session—sometimes called session sniffing—to gain unauthorized access to information or services in a computer system. By stealing a valid session ID (token), the attacker bypasses the authentication process entirely. A Replay attack is similar but involves re-sending captured data; Session Hijacking is the active takeover of an existing session."
+                "detailedexplanation": "Session Hijacking involves the exploitation of a valid computer session\u2014sometimes called session sniffing\u2014to gain unauthorized access to information or services in a computer system. By stealing a valid session ID (token), the attacker bypasses the authentication process entirely. A Replay attack is similar but involves re-sending captured data; Session Hijacking is the active takeover of an existing session."
             },
             {
                 "id": 3,
@@ -101907,7 +101415,7 @@
                     "D": "Bob's Public Key"
                 },
                 "answer": "D",
-                "detailedexplanation": "To ensure confidentiality in asymmetric encryption, the sender (Alice) must encrypt the data using the recipient's (Bob's) Public Key. Since the Public Key is mathematically paired with the Private Key, only Bob—who possesses the corresponding Private Key—can decrypt the message. Using Alice's Private Key would provide 'Non-repudiation' or a digital signature, but not confidentiality, as anyone with Alice's Public Key could decrypt it."
+                "detailedexplanation": "To ensure confidentiality in asymmetric encryption, the sender (Alice) must encrypt the data using the recipient's (Bob's) Public Key. Since the Public Key is mathematically paired with the Private Key, only Bob\u2014who possesses the corresponding Private Key\u2014can decrypt the message. Using Alice's Private Key would provide 'Non-repudiation' or a digital signature, but not confidentiality, as anyone with Alice's Public Key could decrypt it."
             },
             {
                 "id": 4,
@@ -102535,7 +102043,7 @@
                     "D": "A specific registry key created by malware"
                 },
                 "answer": "C",
-                "detailedexplanation": "IOCs (like hashes and IPs) are reactive—they tell you that you *have been* compromised. IOAs focus on the *intent* and the *actions* of the attacker as they happen (behavioral patterns). Unusual PowerShell execution suggests an attack is currently in progress, even if the tools used are 'living off the land' and have no known file hash."
+                "detailedexplanation": "IOCs (like hashes and IPs) are reactive\u2014they tell you that you *have been* compromised. IOAs focus on the *intent* and the *actions* of the attacker as they happen (behavioral patterns). Unusual PowerShell execution suggests an attack is currently in progress, even if the tools used are 'living off the land' and have no known file hash."
             },
             {
                 "id": 14,
@@ -102777,7 +102285,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question mock exam for the ISACA CCOA certification. How did you do? If you found some of the technical domains challenging, don't worry—it's all part of the learning process.",
+            "closing": "That concludes our 30-question mock exam for the ISACA CCOA certification. How did you do? If you found some of the technical domains challenging, don't worry\u2014it's all part of the learning process.",
             "cta_final": "If you enjoyed this video, please hit the like button and subscribe for more cybersecurity certification content.",
             "next_steps": "Ready for the real thing? Click the link in the description to access our full CCOA practice exam course on Udemy with over 300 unique questions and detailed study guides. Good luck with your studies!"
         },
@@ -102787,489 +102295,489 @@
         }
     },
     {
-  "video_assets": {
-    "titles": [
-      "ISC2 Certified in Cybersecurity (CC) Full Mock Exam Prep",
-      "ISC2 CC Exam Questions and Answers Explained",
-      "How to Pass ISC2 Certified in Cybersecurity Exam",
-      "ISC2 CC Certification Training: Domain Review",
-      "Certified in Cybersecurity (CC) Practice Test 2024",
-      "Ultimate ISC2 CC Exam Study Guide with MCQs",
-      "ISC2 Certified in Cybersecurity Certification Exam Prep",
-      "ISC2 CC Domain 1-5 Practice Questions",
-      "Passing the ISC2 CC Exam on Your First Attempt",
-      "ISC2 CC Free Training Course and Practice Exam"
-    ],
-    "intro_script": {
-      "hook": "Are you ready to jumpstart your career in cybersecurity with the world-renowned ISC2? Getting certified is the first step, but the CC exam can be trickier than it looks.",
-      "summary": "In this video, we are breaking down 30 high-quality mock exam questions that cover all five domains of the ISC2 Certified in Cybersecurity curriculum, including Security Principles, Incident Response, and Network Security.",
-      "cta_intro": "Make sure to grab a notebook, follow along, and see how many you can get right before we reveal the answers.",
-      "checkfullexamlinkindescription": "For a comprehensive 250+ question practice set with full simulations, check out the full exam link in the description below."
-    },
-    "youtube_metadata": {
-      "courselink": "https://trk.udemy.com/E0a0Nn",
-      "youtubetitle": "ISC2 Certified in Cybersecurity CC Exam Prep - Complete Practice Test and Explanations",
-      "description": "Unlock your future in IT security with this comprehensive ISC2 Certified in Cybersecurity (CC) Mock Exam. This video covers 30 essential questions across the official ISC2 domains to help you pass your exam. We provide detailed explanations for every answer to ensure you understand the 'why' behind the concepts.\n\nTopics covered:\n- Security Principles\n- Business Continuity (BC), Disaster Recovery (DR) & Incident Response\n- Access Control Concepts\n- Network Security\n- Security Operations\n\n🎯 Get the Full CC Practice Exam here: https://trk.udemy.com/E0a0Nn",
-      "tags": "ISC2 CC, Certified in Cybersecurity, ISC2 Exam Prep, Cybersecurity Certification, Entry level Cybersecurity, Security Principles, Network Security, ISC2 CC Questions",
-      "hashtags": [
-        "#ISC2",
-        "#CertifiedInCybersecurity",
-        "#CybersecurityTraining",
-        "#InfoSec",
-        "#ExamPrep"
-      ],
-      "keywords": [
-        "ISC2 CC exam questions",
-        "Certified in Cybersecurity practice test",
-        "ISC2 certification guide",
-        "Cybersecurity career path",
-        "Entry level security exam",
-        "ISC2 CC domains"
-      ],
-      "mostsearchedongoogle": [
-        "ISC2 CC exam pass rate",
-        "ISC2 CC practice exam free",
-        "how hard is ISC2 CC exam",
-        "Certified in Cybersecurity ISC2 study material",
-        "ISC2 CC vs Security+",
-        "ISC2 CC domain weightage",
-        "ISC2 CC certification cost",
-        "ISC2 CC exam voucher",
-        "ISC2 CC jobs",
-        "ISC2 CC syllabus"
-      ]
+        "video_assets": {
+            "titles": [
+                "ISC2 Certified in Cybersecurity (CC) Full Mock Exam Prep",
+                "ISC2 CC Exam Questions and Answers Explained",
+                "How to Pass ISC2 Certified in Cybersecurity Exam",
+                "ISC2 CC Certification Training: Domain Review",
+                "Certified in Cybersecurity (CC) Practice Test 2024",
+                "Ultimate ISC2 CC Exam Study Guide with MCQs",
+                "ISC2 Certified in Cybersecurity Certification Exam Prep",
+                "ISC2 CC Domain 1-5 Practice Questions",
+                "Passing the ISC2 CC Exam on Your First Attempt",
+                "ISC2 CC Free Training Course and Practice Exam"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to jumpstart your career in cybersecurity with the world-renowned ISC2? Getting certified is the first step, but the CC exam can be trickier than it looks.",
+                "summary": "In this video, we are breaking down 30 high-quality mock exam questions that cover all five domains of the ISC2 Certified in Cybersecurity curriculum, including Security Principles, Incident Response, and Network Security.",
+                "cta_intro": "Make sure to grab a notebook, follow along, and see how many you can get right before we reveal the answers.",
+                "checkfullexamlinkindescription": "For a comprehensive 250+ question practice set with full simulations, check out the full exam link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/E0a0Nn",
+                "youtubetitle": "ISC2 Certified in Cybersecurity CC Exam Prep - Complete Practice Test and Explanations",
+                "description": "Unlock your future in IT security with this comprehensive ISC2 Certified in Cybersecurity (CC) Mock Exam. This video covers 30 essential questions across the official ISC2 domains to help you pass your exam. We provide detailed explanations for every answer to ensure you understand the 'why' behind the concepts.\n\nTopics covered:\n- Security Principles\n- Business Continuity (BC), Disaster Recovery (DR) & Incident Response\n- Access Control Concepts\n- Network Security\n- Security Operations\n\n\ud83c\udfaf Get the Full CC Practice Exam here: https://trk.udemy.com/E0a0Nn",
+                "tags": "ISC2 CC, Certified in Cybersecurity, ISC2 Exam Prep, Cybersecurity Certification, Entry level Cybersecurity, Security Principles, Network Security, ISC2 CC Questions",
+                "hashtags": [
+                    "#ISC2",
+                    "#CertifiedInCybersecurity",
+                    "#CybersecurityTraining",
+                    "#InfoSec",
+                    "#ExamPrep"
+                ],
+                "keywords": [
+                    "ISC2 CC exam questions",
+                    "Certified in Cybersecurity practice test",
+                    "ISC2 certification guide",
+                    "Cybersecurity career path",
+                    "Entry level security exam",
+                    "ISC2 CC domains"
+                ],
+                "mostsearchedongoogle": [
+                    "ISC2 CC exam pass rate",
+                    "ISC2 CC practice exam free",
+                    "how hard is ISC2 CC exam",
+                    "Certified in Cybersecurity ISC2 study material",
+                    "ISC2 CC vs Security+",
+                    "ISC2 CC domain weightage",
+                    "ISC2 CC certification cost",
+                    "ISC2 CC exam voucher",
+                    "ISC2 CC jobs",
+                    "ISC2 CC syllabus"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Security Principles",
+                "difficulty": "Easy",
+                "question": "Which component of the CIA Triad is compromised if an unauthorized user modifies a database record?",
+                "options": {
+                    "A": "Confidentiality",
+                    "B": "Integrity",
+                    "C": "Availability",
+                    "D": "Authenticity"
+                },
+                "answer": "B",
+                "detailedexplanation": "Integrity refers to the accuracy and consistency of data over its entire lifecycle. If an unauthorized user modifies data, the integrity of that data is lost because it can no longer be trusted as accurate. Confidentiality focuses on preventing unauthorized access, while Availability ensures systems are accessible when needed."
+            },
+            {
+                "id": 2,
+                "domain": "Security Principles",
+                "difficulty": "Medium",
+                "question": "An organization implements a policy where two different individuals must approve a financial transaction. Which principle is being applied?",
+                "options": {
+                    "A": "Least Privilege",
+                    "B": "Need to Know",
+                    "C": "Separation of Duties",
+                    "D": "Defense in Depth"
+                },
+                "answer": "C",
+                "detailedexplanation": "Separation of Duties (SoD) is a security principle where more than one person is required to complete a critical task. This prevents fraud and errors by ensuring that no single individual has total control over a high-risk process. It is a fundamental internal control."
+            },
+            {
+                "id": 3,
+                "domain": "Incident Response, BC & DR",
+                "difficulty": "Hard",
+                "question": "What is the primary goal of the 'Containment' phase in the Incident Response lifecycle?",
+                "options": {
+                    "A": "To identify the root cause of the incident.",
+                    "B": "To restore systems to normal operation.",
+                    "C": "To limit the damage and prevent further spread of the threat.",
+                    "D": "To document the lessons learned from the incident."
+                },
+                "answer": "C",
+                "detailedexplanation": "Containment follows the Identification phase. Its specific purpose is to 'stop the bleeding'\u2014limiting the scope of the incident so it doesn't infect more systems or leak more data. Eradication comes after containment to remove the threat, and Recovery follows that to restore services."
+            },
+            {
+                "id": 4,
+                "domain": "Access Control Concepts",
+                "difficulty": "Medium",
+                "question": "Which of the following is an example of 'something you are' in Multi-Factor Authentication?",
+                "options": {
+                    "A": "A hardware token",
+                    "B": "A PIN code",
+                    "C": "A fingerprint scan",
+                    "D": "An SMS code"
+                },
+                "answer": "C",
+                "detailedexplanation": "Biometrics fall under the 'something you are' category. This includes fingerprints, retina scans, facial recognition, and voice patterns. A hardware token is 'something you have,' and a PIN is 'something you know.'"
+            },
+            {
+                "id": 5,
+                "domain": "Network Security",
+                "difficulty": "Medium",
+                "question": "Which OSI model layer is responsible for routing packets based on IP addresses?",
+                "options": {
+                    "A": "Layer 2 - Data Link",
+                    "B": "Layer 3 - Network",
+                    "C": "Layer 4 - Transport",
+                    "D": "Layer 7 - Application"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Network Layer (Layer 3) handles logical addressing and routing. This is where IP addresses live and where routers operate. Layer 2 uses MAC addresses, and Layer 4 handles end-to-end communication via TCP/UDP."
+            },
+            {
+                "id": 6,
+                "domain": "Security Operations",
+                "difficulty": "Easy",
+                "question": "Which of the following describes the 'Least Privilege' principle?",
+                "options": {
+                    "A": "Users should have access to everything to ensure productivity.",
+                    "B": "Users should only have the minimum permissions necessary to perform their jobs.",
+                    "C": "Security controls should be layered to protect data.",
+                    "D": "All users should have administrator rights."
+                },
+                "answer": "B",
+                "detailedexplanation": "Least Privilege ensures that users, processes, and systems only have the access rights they absolutely need. This minimizes the 'blast radius' if an account is compromised, as the attacker will only have limited permissions."
+            },
+            {
+                "id": 7,
+                "domain": "Security Principles",
+                "difficulty": "Medium",
+                "question": "Which term describes a weakness in a system that could be exploited by a threat?",
+                "options": {
+                    "A": "Risk",
+                    "B": "Exploit",
+                    "C": "Vulnerability",
+                    "D": "Threat"
+                },
+                "answer": "C",
+                "detailedexplanation": "A vulnerability is a flaw or weakness. A threat is a potential cause of an unwanted incident. Risk is the likelihood of a threat exploiting a vulnerability and the resulting impact. An exploit is the method used to take advantage of the vulnerability."
+            },
+            {
+                "id": 8,
+                "domain": "Incident Response, BC & DR",
+                "difficulty": "Hard",
+                "question": "What does 'RTO' stand for in Business Continuity planning?",
+                "options": {
+                    "A": "Recovery Target Objective",
+                    "B": "Recovery Time Objective",
+                    "C": "Return To Office",
+                    "D": "Response Time Optimization"
+                },
+                "answer": "B",
+                "detailedexplanation": "Recovery Time Objective (RTO) is the maximum acceptable length of time that a computer, system, network, or application can be down after a failure or disaster has occurred. It measures how quickly you need to get back up and running."
+            },
+            {
+                "id": 9,
+                "domain": "Access Control Concepts",
+                "difficulty": "Medium",
+                "question": "In a Mandatory Access Control (MAC) system, who decides who has access to a specific file?",
+                "options": {
+                    "A": "The file owner",
+                    "B": "The user",
+                    "C": "The system administrator/policy",
+                    "D": "The department manager"
+                },
+                "answer": "C",
+                "detailedexplanation": "In Mandatory Access Control (MAC), access is determined by a central authority (the system) based on security labels (confidential, secret, etc.) and user clearances. Unlike Discretionary Access Control (DAC), the owner cannot change permissions at their own discretion."
+            },
+            {
+                "id": 10,
+                "domain": "Network Security",
+                "difficulty": "Easy",
+                "question": "What is the purpose of a firewall?",
+                "options": {
+                    "A": "To speed up the network connection",
+                    "B": "To monitor and filter incoming and outgoing network traffic",
+                    "C": "To encrypt data at rest",
+                    "D": "To assign IP addresses to devices"
+                },
+                "answer": "B",
+                "detailedexplanation": "A firewall is a network security device that monitors traffic and decides whether to allow or block specific traffic based on a defined set of security rules. It acts as a barrier between a trusted internal network and untrusted external networks."
+            },
+            {
+                "id": 11,
+                "domain": "Security Operations",
+                "difficulty": "Hard",
+                "question": "Which of the following is a 'technical' control?",
+                "options": {
+                    "A": "A security policy document",
+                    "B": "Security awareness training",
+                    "C": "An Intrusion Detection System (IDS)",
+                    "D": "A fence around the building"
+                },
+                "answer": "C",
+                "detailedexplanation": "Technical controls (also called logical controls) use technology to protect systems. Examples include firewalls, IDS, and encryption. Policy and training are Administrative controls, while a fence is a Physical control."
+            },
+            {
+                "id": 12,
+                "domain": "Security Principles",
+                "difficulty": "Medium",
+                "question": "What is the purpose of 'Non-repudiation'?",
+                "options": {
+                    "A": "To ensure data is encrypted",
+                    "B": "To ensure a sender cannot deny sending a message",
+                    "C": "To prevent unauthorized users from seeing data",
+                    "D": "To ensure the system is always available"
+                },
+                "answer": "B",
+                "detailedexplanation": "Non-repudiation provides proof of the origin and integrity of data. It makes it impossible for someone to deny having performed a particular action, such as sending an email or signing a digital contract, usually achieved through digital signatures."
+            },
+            {
+                "id": 13,
+                "domain": "Incident Response, BC & DR",
+                "difficulty": "Medium",
+                "question": "During which phase of Incident Response is the 'Lessons Learned' report created?",
+                "options": {
+                    "A": "Preparation",
+                    "B": "Detection",
+                    "C": "Post-Incident Activity",
+                    "D": "Eradication"
+                },
+                "answer": "C",
+                "detailedexplanation": "Post-Incident Activity (also called Lessons Learned) is the final stage where the team analyzes what happened, how well the team responded, and what can be done to prevent future occurrences."
+            },
+            {
+                "id": 14,
+                "domain": "Access Control Concepts",
+                "difficulty": "Easy",
+                "question": "Which of these is considered a 'Physical' access control?",
+                "options": {
+                    "A": "Username and Password",
+                    "B": "Security Guard",
+                    "C": "Data Encryption",
+                    "D": "Antivirus software"
+                },
+                "answer": "B",
+                "detailedexplanation": "Physical controls are tangible objects or personnel used to prevent unauthorized access to physical areas. Security guards, locks, fences, and cameras are all examples of physical controls."
+            },
+            {
+                "id": 15,
+                "domain": "Network Security",
+                "difficulty": "Medium",
+                "question": "Which protocol is used to securely log into a remote server over a network?",
+                "options": {
+                    "A": "HTTP",
+                    "B": "Telnet",
+                    "C": "SSH",
+                    "D": "FTP"
+                },
+                "answer": "C",
+                "detailedexplanation": "SSH (Secure Shell) provides a secure, encrypted channel over an unsecure network. Telnet performs a similar function but sends data in plain text, making it highly insecure."
+            },
+            {
+                "id": 16,
+                "domain": "Security Operations",
+                "difficulty": "Medium",
+                "question": "Which of the following best describes 'Change Management'?",
+                "options": {
+                    "A": "Updating the password policy",
+                    "B": "A systematic approach to transitioning individuals or organizations from a current state to a future state",
+                    "C": "Ensuring that only authorized changes are made to IT systems",
+                    "D": "Rotating security logs daily"
+                },
+                "answer": "C",
+                "detailedexplanation": "In security operations, Change Management is the process of ensuring that changes to the IT environment (like software updates or hardware swaps) are documented, tested, and approved to avoid introducing vulnerabilities or downtime."
+            },
+            {
+                "id": 17,
+                "domain": "Security Principles",
+                "difficulty": "Hard",
+                "question": "Which risk management strategy involves purchasing insurance to cover potential losses?",
+                "options": {
+                    "A": "Risk Avoidance",
+                    "B": "Risk Mitigation",
+                    "C": "Risk Acceptance",
+                    "D": "Risk Transference"
+                },
+                "answer": "D",
+                "detailedexplanation": "Risk Transference (or Transfer) involves shifting the financial burden of a risk to a third party, such as an insurance company or an outsourced service provider."
+            },
+            {
+                "id": 18,
+                "domain": "Network Security",
+                "difficulty": "Easy",
+                "question": "What is the standard port number for HTTPS traffic?",
+                "options": {
+                    "A": "80",
+                    "B": "21",
+                    "C": "443",
+                    "D": "22"
+                },
+                "answer": "C",
+                "detailedexplanation": "HTTPS (Hypertext Transfer Protocol Secure) uses port 443. Standard HTTP uses port 80. Port 21 is for FTP, and Port 22 is for SSH."
+            },
+            {
+                "id": 19,
+                "domain": "Access Control Concepts",
+                "difficulty": "Medium",
+                "question": "What is the main difference between Identification and Authentication?",
+                "options": {
+                    "A": "They are the same thing.",
+                    "B": "Identification is claiming an identity; Authentication is proving that identity.",
+                    "C": "Authentication is claiming an identity; Identification is proving that identity.",
+                    "D": "Identification is for users; Authentication is for computers."
+                },
+                "answer": "B",
+                "detailedexplanation": "Identification happens when a user provides a username (claiming who they are). Authentication happens when the user provides a password or biometric (proving they are who they claim to be)."
+            },
+            {
+                "id": 20,
+                "domain": "Incident Response, BC & DR",
+                "difficulty": "Hard",
+                "question": "A company's primary data center is destroyed by a flood. They move operations to a location with electricity and heat but no pre-installed servers. What is this called?",
+                "options": {
+                    "A": "Hot Site",
+                    "B": "Warm Site",
+                    "C": "Cold Site",
+                    "D": "Mirror Site"
+                },
+                "answer": "C",
+                "detailedexplanation": "A Cold Site is an empty facility with basic utilities (power, cooling) but no active hardware or data backups. It is the cheapest option but takes the longest to get operational."
+            },
+            {
+                "id": 21,
+                "domain": "Security Operations",
+                "difficulty": "Medium",
+                "question": "What is the primary purpose of 'Patch Management'?",
+                "options": {
+                    "A": "To add new features to software",
+                    "B": "To fix vulnerabilities and bugs in software",
+                    "C": "To monitor user activity",
+                    "D": "To encrypt hard drives"
+                },
+                "answer": "B",
+                "detailedexplanation": "Patch management is the process of distributing and applying updates to software. These patches are often released to fix security vulnerabilities that could be exploited by hackers."
+            },
+            {
+                "id": 22,
+                "domain": "Security Principles",
+                "difficulty": "Medium",
+                "question": "Which of the following is an Administrative control?",
+                "options": {
+                    "A": "Encryption",
+                    "B": "A Locked Door",
+                    "C": "An Employee Background Check",
+                    "D": "A Firewall"
+                },
+                "answer": "C",
+                "detailedexplanation": "Administrative controls are policies, procedures, and guidelines defined by management. Background checks, security awareness training, and hiring policies are administrative."
+            },
+            {
+                "id": 23,
+                "domain": "Network Security",
+                "difficulty": "Hard",
+                "question": "Which type of attack involves an attacker positioning themselves between two communicating parties to intercept data?",
+                "options": {
+                    "A": "DDoS",
+                    "B": "Phishing",
+                    "C": "Man-in-the-Middle (MitM)",
+                    "D": "SQL Injection"
+                },
+                "answer": "C",
+                "detailedexplanation": "In a Man-in-the-Middle (MitM) attack, the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other."
+            },
+            {
+                "id": 24,
+                "domain": "Access Control Concepts",
+                "difficulty": "Medium",
+                "question": "What does the 'A' in the AAA security framework stand for?",
+                "options": {
+                    "A": "Authentication, Authorization, and Accessibility",
+                    "B": "Authentication, Authorization, and Accounting",
+                    "C": "Availability, Authorization, and Accounting",
+                    "D": "Access, Authentication, and Authorization"
+                },
+                "answer": "B",
+                "detailedexplanation": "The AAA framework stands for Authentication (Who are you?), Authorization (What can you do?), and Accounting (What did you do?)."
+            },
+            {
+                "id": 25,
+                "domain": "Security Operations",
+                "difficulty": "Medium",
+                "question": "What is a 'Zero-Day' vulnerability?",
+                "options": {
+                    "A": "A vulnerability that has been patched for zero days.",
+                    "B": "A vulnerability that is known only to the vendor.",
+                    "C": "A vulnerability that is unknown to the vendor and has no available patch.",
+                    "D": "A vulnerability that can be exploited in zero seconds."
+                },
+                "answer": "C",
+                "detailedexplanation": "A Zero-Day vulnerability is a security flaw that is unknown to those who should be interested in mitigating it (like the software vendor). Because it's unknown, no patch exists, making it very dangerous."
+            },
+            {
+                "id": 26,
+                "domain": "Security Principles",
+                "difficulty": "Hard",
+                "question": "What is 'Social Engineering'?",
+                "options": {
+                    "A": "Writing code to automate social media posts",
+                    "B": "Manipulating people into giving up confidential information",
+                    "C": "A type of firewall configuration",
+                    "D": "Designing a secure office layout"
+                },
+                "answer": "B",
+                "detailedexplanation": "Social engineering is a psychological attack where the attacker tricks people into breaking normal security procedures or divulging sensitive information like passwords or bank details."
+            },
+            {
+                "id": 27,
+                "domain": "Incident Response, BC & DR",
+                "difficulty": "Medium",
+                "question": "Which document outlines the steps to recover IT systems after a disaster?",
+                "options": {
+                    "A": "Acceptable Use Policy (AUP)",
+                    "B": "Disaster Recovery Plan (DRP)",
+                    "C": "Business Impact Analysis (BIA)",
+                    "D": "Service Level Agreement (SLA)"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Disaster Recovery Plan (DRP) focuses specifically on the technical recovery of IT systems, data, and networks after a major disruptive event."
+            },
+            {
+                "id": 28,
+                "domain": "Network Security",
+                "difficulty": "Easy",
+                "question": "What does a 'VPN' provide?",
+                "options": {
+                    "A": "Faster internet speeds",
+                    "B": "A secure, encrypted tunnel over a public network",
+                    "C": "Physical protection for servers",
+                    "D": "Automatic virus removal"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Virtual Private Network (VPN) creates an encrypted connection over a less secure network, such as the public internet, ensuring that data transmitted between a user and a network is private."
+            },
+            {
+                "id": 29,
+                "domain": "Access Control Concepts",
+                "difficulty": "Medium",
+                "question": "Which of the following is a logical access control?",
+                "options": {
+                    "A": "Biometric Eye Scanner",
+                    "B": "Security Badge",
+                    "C": "Password",
+                    "D": "Turnstile"
+                },
+                "answer": "C",
+                "detailedexplanation": "Logical (technical) access controls are software-based mechanisms used to manage access to data and systems. Passwords, encryption, and ACLs are logical. While a biometric scanner involves technology, it is often used for physical entry."
+            },
+            {
+                "id": 30,
+                "domain": "Security Principles",
+                "difficulty": "Medium",
+                "question": "What is the primary goal of Information Security?",
+                "options": {
+                    "A": "To stop all hackers",
+                    "B": "To ensure 100% security for all data",
+                    "C": "To protect the CIA of information",
+                    "D": "To install the best antivirus on every computer"
+                },
+                "answer": "C",
+                "detailedexplanation": "The primary goal of Information Security is to protect the Confidentiality, Integrity, and Availability (the CIA Triad) of data and systems against unauthorized access, use, or destruction."
+            }
+        ],
+        "outro_script": {
+            "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these challenging, don't worry\u2014it's better to learn now than on exam day.",
+            "cta_final": "If this video helped you, please give it a thumbs up and subscribe for more cybersecurity certification prep.",
+            "next_steps": "To take your prep to the next level, click the link in the description for our full-length ISC2 CC Practice Test series on Udemy."
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds",
+            "transition_effect_hints": "Subtle slide-in for each question, highlight the correct answer in green after the timer ends."
+        }
     }
-  },
-  "mcq_data": [
-    {
-      "id": 1,
-      "domain": "Security Principles",
-      "difficulty": "Easy",
-      "question": "Which component of the CIA Triad is compromised if an unauthorized user modifies a database record?",
-      "options": {
-        "A": "Confidentiality",
-        "B": "Integrity",
-        "C": "Availability",
-        "D": "Authenticity"
-      },
-      "answer": "B",
-      "detailedexplanation": "Integrity refers to the accuracy and consistency of data over its entire lifecycle. If an unauthorized user modifies data, the integrity of that data is lost because it can no longer be trusted as accurate. Confidentiality focuses on preventing unauthorized access, while Availability ensures systems are accessible when needed."
-    },
-    {
-      "id": 2,
-      "domain": "Security Principles",
-      "difficulty": "Medium",
-      "question": "An organization implements a policy where two different individuals must approve a financial transaction. Which principle is being applied?",
-      "options": {
-        "A": "Least Privilege",
-        "B": "Need to Know",
-        "C": "Separation of Duties",
-        "D": "Defense in Depth"
-      },
-      "answer": "C",
-      "detailedexplanation": "Separation of Duties (SoD) is a security principle where more than one person is required to complete a critical task. This prevents fraud and errors by ensuring that no single individual has total control over a high-risk process. It is a fundamental internal control."
-    },
-    {
-      "id": 3,
-      "domain": "Incident Response, BC & DR",
-      "difficulty": "Hard",
-      "question": "What is the primary goal of the 'Containment' phase in the Incident Response lifecycle?",
-      "options": {
-        "A": "To identify the root cause of the incident.",
-        "B": "To restore systems to normal operation.",
-        "C": "To limit the damage and prevent further spread of the threat.",
-        "D": "To document the lessons learned from the incident."
-      },
-      "answer": "C",
-      "detailedexplanation": "Containment follows the Identification phase. Its specific purpose is to 'stop the bleeding'—limiting the scope of the incident so it doesn't infect more systems or leak more data. Eradication comes after containment to remove the threat, and Recovery follows that to restore services."
-    },
-    {
-      "id": 4,
-      "domain": "Access Control Concepts",
-      "difficulty": "Medium",
-      "question": "Which of the following is an example of 'something you are' in Multi-Factor Authentication?",
-      "options": {
-        "A": "A hardware token",
-        "B": "A PIN code",
-        "C": "A fingerprint scan",
-        "D": "An SMS code"
-      },
-      "answer": "C",
-      "detailedexplanation": "Biometrics fall under the 'something you are' category. This includes fingerprints, retina scans, facial recognition, and voice patterns. A hardware token is 'something you have,' and a PIN is 'something you know.'"
-    },
-    {
-      "id": 5,
-      "domain": "Network Security",
-      "difficulty": "Medium",
-      "question": "Which OSI model layer is responsible for routing packets based on IP addresses?",
-      "options": {
-        "A": "Layer 2 - Data Link",
-        "B": "Layer 3 - Network",
-        "C": "Layer 4 - Transport",
-        "D": "Layer 7 - Application"
-      },
-      "answer": "B",
-      "detailedexplanation": "The Network Layer (Layer 3) handles logical addressing and routing. This is where IP addresses live and where routers operate. Layer 2 uses MAC addresses, and Layer 4 handles end-to-end communication via TCP/UDP."
-    },
-    {
-      "id": 6,
-      "domain": "Security Operations",
-      "difficulty": "Easy",
-      "question": "Which of the following describes the 'Least Privilege' principle?",
-      "options": {
-        "A": "Users should have access to everything to ensure productivity.",
-        "B": "Users should only have the minimum permissions necessary to perform their jobs.",
-        "C": "Security controls should be layered to protect data.",
-        "D": "All users should have administrator rights."
-      },
-      "answer": "B",
-      "detailedexplanation": "Least Privilege ensures that users, processes, and systems only have the access rights they absolutely need. This minimizes the 'blast radius' if an account is compromised, as the attacker will only have limited permissions."
-    },
-    {
-      "id": 7,
-      "domain": "Security Principles",
-      "difficulty": "Medium",
-      "question": "Which term describes a weakness in a system that could be exploited by a threat?",
-      "options": {
-        "A": "Risk",
-        "B": "Exploit",
-        "C": "Vulnerability",
-        "D": "Threat"
-      },
-      "answer": "C",
-      "detailedexplanation": "A vulnerability is a flaw or weakness. A threat is a potential cause of an unwanted incident. Risk is the likelihood of a threat exploiting a vulnerability and the resulting impact. An exploit is the method used to take advantage of the vulnerability."
-    },
-    {
-      "id": 8,
-      "domain": "Incident Response, BC & DR",
-      "difficulty": "Hard",
-      "question": "What does 'RTO' stand for in Business Continuity planning?",
-      "options": {
-        "A": "Recovery Target Objective",
-        "B": "Recovery Time Objective",
-        "C": "Return To Office",
-        "D": "Response Time Optimization"
-      },
-      "answer": "B",
-      "detailedexplanation": "Recovery Time Objective (RTO) is the maximum acceptable length of time that a computer, system, network, or application can be down after a failure or disaster has occurred. It measures how quickly you need to get back up and running."
-    },
-    {
-      "id": 9,
-      "domain": "Access Control Concepts",
-      "difficulty": "Medium",
-      "question": "In a Mandatory Access Control (MAC) system, who decides who has access to a specific file?",
-      "options": {
-        "A": "The file owner",
-        "B": "The user",
-        "C": "The system administrator/policy",
-        "D": "The department manager"
-      },
-      "answer": "C",
-      "detailedexplanation": "In Mandatory Access Control (MAC), access is determined by a central authority (the system) based on security labels (confidential, secret, etc.) and user clearances. Unlike Discretionary Access Control (DAC), the owner cannot change permissions at their own discretion."
-    },
-    {
-      "id": 10,
-      "domain": "Network Security",
-      "difficulty": "Easy",
-      "question": "What is the purpose of a firewall?",
-      "options": {
-        "A": "To speed up the network connection",
-        "B": "To monitor and filter incoming and outgoing network traffic",
-        "C": "To encrypt data at rest",
-        "D": "To assign IP addresses to devices"
-      },
-      "answer": "B",
-      "detailedexplanation": "A firewall is a network security device that monitors traffic and decides whether to allow or block specific traffic based on a defined set of security rules. It acts as a barrier between a trusted internal network and untrusted external networks."
-    },
-    {
-      "id": 11,
-      "domain": "Security Operations",
-      "difficulty": "Hard",
-      "question": "Which of the following is a 'technical' control?",
-      "options": {
-        "A": "A security policy document",
-        "B": "Security awareness training",
-        "C": "An Intrusion Detection System (IDS)",
-        "D": "A fence around the building"
-      },
-      "answer": "C",
-      "detailedexplanation": "Technical controls (also called logical controls) use technology to protect systems. Examples include firewalls, IDS, and encryption. Policy and training are Administrative controls, while a fence is a Physical control."
-    },
-    {
-      "id": 12,
-      "domain": "Security Principles",
-      "difficulty": "Medium",
-      "question": "What is the purpose of 'Non-repudiation'?",
-      "options": {
-        "A": "To ensure data is encrypted",
-        "B": "To ensure a sender cannot deny sending a message",
-        "C": "To prevent unauthorized users from seeing data",
-        "D": "To ensure the system is always available"
-      },
-      "answer": "B",
-      "detailedexplanation": "Non-repudiation provides proof of the origin and integrity of data. It makes it impossible for someone to deny having performed a particular action, such as sending an email or signing a digital contract, usually achieved through digital signatures."
-    },
-    {
-      "id": 13,
-      "domain": "Incident Response, BC & DR",
-      "difficulty": "Medium",
-      "question": "During which phase of Incident Response is the 'Lessons Learned' report created?",
-      "options": {
-        "A": "Preparation",
-        "B": "Detection",
-        "C": "Post-Incident Activity",
-        "D": "Eradication"
-      },
-      "answer": "C",
-      "detailedexplanation": "Post-Incident Activity (also called Lessons Learned) is the final stage where the team analyzes what happened, how well the team responded, and what can be done to prevent future occurrences."
-    },
-    {
-      "id": 14,
-      "domain": "Access Control Concepts",
-      "difficulty": "Easy",
-      "question": "Which of these is considered a 'Physical' access control?",
-      "options": {
-        "A": "Username and Password",
-        "B": "Security Guard",
-        "C": "Data Encryption",
-        "D": "Antivirus software"
-      },
-      "answer": "B",
-      "detailedexplanation": "Physical controls are tangible objects or personnel used to prevent unauthorized access to physical areas. Security guards, locks, fences, and cameras are all examples of physical controls."
-    },
-    {
-      "id": 15,
-      "domain": "Network Security",
-      "difficulty": "Medium",
-      "question": "Which protocol is used to securely log into a remote server over a network?",
-      "options": {
-        "A": "HTTP",
-        "B": "Telnet",
-        "C": "SSH",
-        "D": "FTP"
-      },
-      "answer": "C",
-      "detailedexplanation": "SSH (Secure Shell) provides a secure, encrypted channel over an unsecure network. Telnet performs a similar function but sends data in plain text, making it highly insecure."
-    },
-    {
-      "id": 16,
-      "domain": "Security Operations",
-      "difficulty": "Medium",
-      "question": "Which of the following best describes 'Change Management'?",
-      "options": {
-        "A": "Updating the password policy",
-        "B": "A systematic approach to transitioning individuals or organizations from a current state to a future state",
-        "C": "Ensuring that only authorized changes are made to IT systems",
-        "D": "Rotating security logs daily"
-      },
-      "answer": "C",
-      "detailedexplanation": "In security operations, Change Management is the process of ensuring that changes to the IT environment (like software updates or hardware swaps) are documented, tested, and approved to avoid introducing vulnerabilities or downtime."
-    },
-    {
-      "id": 17,
-      "domain": "Security Principles",
-      "difficulty": "Hard",
-      "question": "Which risk management strategy involves purchasing insurance to cover potential losses?",
-      "options": {
-        "A": "Risk Avoidance",
-        "B": "Risk Mitigation",
-        "C": "Risk Acceptance",
-        "D": "Risk Transference"
-      },
-      "answer": "D",
-      "detailedexplanation": "Risk Transference (or Transfer) involves shifting the financial burden of a risk to a third party, such as an insurance company or an outsourced service provider."
-    },
-    {
-      "id": 18,
-      "domain": "Network Security",
-      "difficulty": "Easy",
-      "question": "What is the standard port number for HTTPS traffic?",
-      "options": {
-        "A": "80",
-        "B": "21",
-        "C": "443",
-        "D": "22"
-      },
-      "answer": "C",
-      "detailedexplanation": "HTTPS (Hypertext Transfer Protocol Secure) uses port 443. Standard HTTP uses port 80. Port 21 is for FTP, and Port 22 is for SSH."
-    },
-    {
-      "id": 19,
-      "domain": "Access Control Concepts",
-      "difficulty": "Medium",
-      "question": "What is the main difference between Identification and Authentication?",
-      "options": {
-        "A": "They are the same thing.",
-        "B": "Identification is claiming an identity; Authentication is proving that identity.",
-        "C": "Authentication is claiming an identity; Identification is proving that identity.",
-        "D": "Identification is for users; Authentication is for computers."
-      },
-      "answer": "B",
-      "detailedexplanation": "Identification happens when a user provides a username (claiming who they are). Authentication happens when the user provides a password or biometric (proving they are who they claim to be)."
-    },
-    {
-      "id": 20,
-      "domain": "Incident Response, BC & DR",
-      "difficulty": "Hard",
-      "question": "A company's primary data center is destroyed by a flood. They move operations to a location with electricity and heat but no pre-installed servers. What is this called?",
-      "options": {
-        "A": "Hot Site",
-        "B": "Warm Site",
-        "C": "Cold Site",
-        "D": "Mirror Site"
-      },
-      "answer": "C",
-      "detailedexplanation": "A Cold Site is an empty facility with basic utilities (power, cooling) but no active hardware or data backups. It is the cheapest option but takes the longest to get operational."
-    },
-    {
-      "id": 21,
-      "domain": "Security Operations",
-      "difficulty": "Medium",
-      "question": "What is the primary purpose of 'Patch Management'?",
-      "options": {
-        "A": "To add new features to software",
-        "B": "To fix vulnerabilities and bugs in software",
-        "C": "To monitor user activity",
-        "D": "To encrypt hard drives"
-      },
-      "answer": "B",
-      "detailedexplanation": "Patch management is the process of distributing and applying updates to software. These patches are often released to fix security vulnerabilities that could be exploited by hackers."
-    },
-    {
-      "id": 22,
-      "domain": "Security Principles",
-      "difficulty": "Medium",
-      "question": "Which of the following is an Administrative control?",
-      "options": {
-        "A": "Encryption",
-        "B": "A Locked Door",
-        "C": "An Employee Background Check",
-        "D": "A Firewall"
-      },
-      "answer": "C",
-      "detailedexplanation": "Administrative controls are policies, procedures, and guidelines defined by management. Background checks, security awareness training, and hiring policies are administrative."
-    },
-    {
-      "id": 23,
-      "domain": "Network Security",
-      "difficulty": "Hard",
-      "question": "Which type of attack involves an attacker positioning themselves between two communicating parties to intercept data?",
-      "options": {
-        "A": "DDoS",
-        "B": "Phishing",
-        "C": "Man-in-the-Middle (MitM)",
-        "D": "SQL Injection"
-      },
-      "answer": "C",
-      "detailedexplanation": "In a Man-in-the-Middle (MitM) attack, the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other."
-    },
-    {
-      "id": 24,
-      "domain": "Access Control Concepts",
-      "difficulty": "Medium",
-      "question": "What does the 'A' in the AAA security framework stand for?",
-      "options": {
-        "A": "Authentication, Authorization, and Accessibility",
-        "B": "Authentication, Authorization, and Accounting",
-        "C": "Availability, Authorization, and Accounting",
-        "D": "Access, Authentication, and Authorization"
-      },
-      "answer": "B",
-      "detailedexplanation": "The AAA framework stands for Authentication (Who are you?), Authorization (What can you do?), and Accounting (What did you do?)."
-    },
-    {
-      "id": 25,
-      "domain": "Security Operations",
-      "difficulty": "Medium",
-      "question": "What is a 'Zero-Day' vulnerability?",
-      "options": {
-        "A": "A vulnerability that has been patched for zero days.",
-        "B": "A vulnerability that is known only to the vendor.",
-        "C": "A vulnerability that is unknown to the vendor and has no available patch.",
-        "D": "A vulnerability that can be exploited in zero seconds."
-      },
-      "answer": "C",
-      "detailedexplanation": "A Zero-Day vulnerability is a security flaw that is unknown to those who should be interested in mitigating it (like the software vendor). Because it's unknown, no patch exists, making it very dangerous."
-    },
-    {
-      "id": 26,
-      "domain": "Security Principles",
-      "difficulty": "Hard",
-      "question": "What is 'Social Engineering'?",
-      "options": {
-        "A": "Writing code to automate social media posts",
-        "B": "Manipulating people into giving up confidential information",
-        "C": "A type of firewall configuration",
-        "D": "Designing a secure office layout"
-      },
-      "answer": "B",
-      "detailedexplanation": "Social engineering is a psychological attack where the attacker tricks people into breaking normal security procedures or divulging sensitive information like passwords or bank details."
-    },
-    {
-      "id": 27,
-      "domain": "Incident Response, BC & DR",
-      "difficulty": "Medium",
-      "question": "Which document outlines the steps to recover IT systems after a disaster?",
-      "options": {
-        "A": "Acceptable Use Policy (AUP)",
-        "B": "Disaster Recovery Plan (DRP)",
-        "C": "Business Impact Analysis (BIA)",
-        "D": "Service Level Agreement (SLA)"
-      },
-      "answer": "B",
-      "detailedexplanation": "The Disaster Recovery Plan (DRP) focuses specifically on the technical recovery of IT systems, data, and networks after a major disruptive event."
-    },
-    {
-      "id": 28,
-      "domain": "Network Security",
-      "difficulty": "Easy",
-      "question": "What does a 'VPN' provide?",
-      "options": {
-        "A": "Faster internet speeds",
-        "B": "A secure, encrypted tunnel over a public network",
-        "C": "Physical protection for servers",
-        "D": "Automatic virus removal"
-      },
-      "answer": "B",
-      "detailedexplanation": "A Virtual Private Network (VPN) creates an encrypted connection over a less secure network, such as the public internet, ensuring that data transmitted between a user and a network is private."
-    },
-    {
-      "id": 29,
-      "domain": "Access Control Concepts",
-      "difficulty": "Medium",
-      "question": "Which of the following is a logical access control?",
-      "options": {
-        "A": "Biometric Eye Scanner",
-        "B": "Security Badge",
-        "C": "Password",
-        "D": "Turnstile"
-      },
-      "answer": "C",
-      "detailedexplanation": "Logical (technical) access controls are software-based mechanisms used to manage access to data and systems. Passwords, encryption, and ACLs are logical. While a biometric scanner involves technology, it is often used for physical entry."
-    },
-    {
-      "id": 30,
-      "domain": "Security Principles",
-      "difficulty": "Medium",
-      "question": "What is the primary goal of Information Security?",
-      "options": {
-        "A": "To stop all hackers",
-        "B": "To ensure 100% security for all data",
-        "C": "To protect the CIA of information",
-        "D": "To install the best antivirus on every computer"
-      },
-      "answer": "C",
-      "detailedexplanation": "The primary goal of Information Security is to protect the Confidentiality, Integrity, and Availability (the CIA Triad) of data and systems against unauthorized access, use, or destruction."
-    }
-  ],
-  "outro_script": {
-    "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these challenging, don't worry—it's better to learn now than on exam day.",
-    "cta_final": "If this video helped you, please give it a thumbs up and subscribe for more cybersecurity certification prep.",
-    "next_steps": "To take your prep to the next level, click the link in the description for our full-length ISC2 CC Practice Test series on Udemy."
-  },
-  "on_screen_elements": {
-    "timer_duration": "10 seconds",
-    "transition_effect_hints": "Subtle slide-in for each question, highlight the correct answer in green after the timer ends."
-  }
-}
 ]
