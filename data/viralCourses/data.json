@@ -2,492 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Alibaba Cloud ACP Cloud Computing Professional Exam Guide",
-                "Ultimate Alibaba Cloud ACP Certification Practice Questions",
-                "Pass the Alibaba Cloud ACP Cloud Computing Exam",
-                "Alibaba Cloud ACP Exam Preparation and Mock Questions",
-                "Master Alibaba Cloud ACP Cloud Computing Certification",
-                "Alibaba Cloud Professional ACP Exam Training",
-                "ACP-Cloud1 Exam Study Guide and Practice Test",
-                "Alibaba Cloud Computing Certification Questions and Answers",
-                "Alibaba Cloud ACP Certification Roadmap and Mock Exam",
-                "Top 30 Alibaba Cloud ACP Exam Questions Explained"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to validate your expertise in the world's leading cloud ecosystem for Asian markets? Today, we are diving deep into the Alibaba Cloud ACP Cloud Computing Professional exam.",
-                "summary": "This video covers 30 high-yield practice questions designed to mimic the actual ACP certification exam. We will explore Elastic Computing, Storage, Networking, Security, and Auto Scaling to ensure you are fully prepared.",
-                "cta_intro": "Make sure to subscribe and hit the bell icon so you don't miss our deep-dive certification series.",
-                "checkfullexamlinkindescription": "For the full 400+ question bank and timed mock exams, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/dyKjAM",
-                "youtubetitle": "Alibaba Cloud ACP Cloud Computing Professional Certification Full Mock Exam Prep",
-                "description": "Prepare for your Alibaba Cloud ACP Cloud Computing Professional Certification with this comprehensive mock exam. This video includes 30 expert-curated questions covering ECS, SLB, OSS, RDS, and Cloud Security. Each question includes a detailed explanation of the logic and architecture behind the correct answer to help you pass on your first attempt.\n\nKey Topics Covered:\n- Elastic Compute Service (ECS)\n- Server Load Balancer (SLB)\n- Object Storage Service (OSS)\n- Relational Database Service (RDS)\n- Auto Scaling and Cloud Security.",
-                "tags": "Alibaba Cloud, ACP Cloud Computing, ACP Certification, Alibaba Cloud Exam, Cloud Computing Professional, ECS, OSS, SLB, Alibaba Cloud Training, Cloud Certification 2025",
-                "hashtags": [
-                    "#AlibabaCloud",
-                    "#ACPCloudComputing",
-                    "#CloudCertification",
-                    "#AlibabaCloudACP",
-                    "#TechTraining"
-                ],
-                "keywords": [
-                    "Alibaba Cloud ACP Exam Questions",
-                    "Alibaba Cloud Professional Certification",
-                    "Alibaba Cloud Mock Test",
-                    "ACP Cloud Computing Study Guide",
-                    "Alibaba Cloud ECS OSS SLB RDS",
-                    "Cloud Computing Exam Prep"
-                ],
-                "mostsearchedongoogle": [
-                    "Alibaba Cloud ACP exam questions PDF",
-                    "ACP Cloud Computing Professional syllabus",
-                    "Alibaba Cloud certification path",
-                    "Alibaba Cloud vs AWS certification",
-                    "How to pass Alibaba Cloud ACP exam",
-                    "Alibaba Cloud free practice test",
-                    "ACP-Cloud1 exam dumps",
-                    "Alibaba Cloud cloud computing professional salary",
-                    "Alibaba Cloud ACP registration",
-                    "Alibaba Cloud learning path"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Elastic Compute Service (ECS)",
-                "difficulty": "Medium",
-                "question": "An administrator needs to ensure that an ECS instance can be recovered with the same metadata and configurations in another region. Which method is most efficient?",
-                "options": {
-                    "A": "Copy the system disk snapshot to the target region and create a new instance.",
-                    "B": "Create a custom image from the instance and use 'Image Copy' to move it to the target region.",
-                    "C": "Use the 'Move Instance' feature in the Alibaba Cloud console.",
-                    "D": "Take a backup using Cloud Backup Center and restore it in the new region."
-                },
-                "answer": "B",
-                "detailedexplanation": "Alibaba Cloud ECS does not support direct 'movement' of instances across regions. The standard professional workflow involves creating a Custom Image from the existing ECS instance (which captures the system and data disks). You then use the 'Copy Image' feature to replicate that image to the destination region. Once the image exists in the target region, you can launch a new ECS instance that is an exact replica of the original."
-            },
-            {
-                "id": 2,
-                "domain": "Server Load Balancer (SLB)",
-                "difficulty": "Hard",
-                "question": "A user is configuring an SLB instance to distribute traffic across several ECS instances. If 'Session Persistence' is enabled for an HTTP listener, how does the SLB identify the user?",
-                "options": {
-                    "A": "By the source IP address of the client.",
-                    "B": "By the MAC address of the client's router.",
-                    "C": "By inserting or observing a Cookie.",
-                    "D": "By the sequence number of the TCP packet."
-                },
-                "answer": "C",
-                "detailedexplanation": "For Layer 7 (HTTP/HTTPS) listeners, Alibaba Cloud SLB uses Cookies to implement session persistence. It can either use 'Server-inserted cookies' (where SLB adds a cookie to the response) or 'Server-rewritten cookies' (where the SLB tracks cookies set by the backend ECS). Layer 4 (TCP/UDP) session persistence, on the other hand, is based solely on the Client IP address."
-            },
-            {
-                "id": 3,
-                "domain": "Object Storage Service (OSS)",
-                "difficulty": "Medium",
-                "question": "Which OSS storage class is most cost-effective for data that must be stored for at least 180 days and can tolerate a data retrieval time of 1-5 minutes?",
-                "options": {
-                    "A": "Standard",
-                    "B": "IA (Infrequent Access)",
-                    "C": "Archive",
-                    "D": "Cold Archive"
-                },
-                "answer": "C",
-                "detailedexplanation": "Archive storage is designed for long-term retention (minimum 60 days, though often used for much longer). It offers lower storage costs than Standard or IA. However, the data must be restored before reading. For Archive storage, the restoration process typically takes 1 to 5 minutes. Cold Archive would take hours, and Standard/IA offer real-time access."
-            },
-            {
-                "id": 4,
-                "domain": "Auto Scaling",
-                "difficulty": "Medium",
-                "question": "In Auto Scaling, what happens to an ECS instance that was manually added to a scaling group when a scale-in event occurs?",
-                "options": {
-                    "A": "It is always the first to be removed.",
-                    "B": "It is never removed by a scale-in event; only auto-created ones are.",
-                    "C": "It can be removed, but it will only be detached from the group rather than released.",
-                    "D": "It is treated exactly like an automatically created instance and will be released."
-                },
-                "answer": "C",
-                "detailedexplanation": "Alibaba Cloud Auto Scaling distinguishes between instances it creates and instances you add manually. Automatically created instances are released (deleted) during scale-in. Manually added instances, however, are merely 'Detached' from the scaling group to protect your data, as the system assumes you may have other uses for those specific instances."
-            },
-            {
-                "id": 5,
-                "domain": "Relational Database Service (RDS)",
-                "difficulty": "Hard",
-                "question": "A company wants to improve the read performance of their RDS MySQL database which is experiencing high latency due to heavy query traffic. What is the best solution?",
-                "options": {
-                    "A": "Upgrade the instance to a higher CPU/RAM tier.",
-                    "B": "Create one or more Read-only instances and use the Read/Write Splitting endpoint.",
-                    "C": "Convert the instance to an RDS MariaDB instance.",
-                    "D": "Enable Multi-AZ deployment for better performance."
-                },
-                "answer": "B",
-                "detailedexplanation": "While upgrading the instance (Vertical Scaling) is an option, the most architectural sound and cost-effective way to handle high 'Read' volumes is Horizontal Scaling. By creating Read-only instances and using the 'Read/Write Splitting' address, the system automatically routes SELECT queries to read-only replicas and INSERT/UPDATE queries to the primary instance."
-            },
-            {
-                "id": 6,
-                "domain": "Virtual Private Cloud (VPC)",
-                "difficulty": "Medium",
-                "question": "Can two VPCs in the same region communicate with each other over the internal Alibaba Cloud network by default?",
-                "options": {
-                    "A": "Yes, all VPCs in the same region are connected by default.",
-                    "B": "No, VPCs are isolated by default; they require a Cloud Enterprise Network (CEN) or VPC Peering.",
-                    "C": "Yes, but only if they use the same CIDR block.",
-                    "D": "No, they can only communicate via the Public Internet."
-                },
-                "answer": "B",
-                "detailedexplanation": "Security and isolation are core features of VPCs. By default, VPCs are completely isolated. To connect two VPCs (even in the same region), you must use a service like Cloud Enterprise Network (CEN) or VBR/VPN Gateway. This ensures that traffic remains on the private backbone without being exposed to the public internet."
-            },
-            {
-                "id": 7,
-                "domain": "Cloud Security",
-                "difficulty": "Easy",
-                "question": "Which Alibaba Cloud service provides protection against volumetric DDoS attacks?",
-                "options": {
-                    "A": "Anti-DDoS Basic/Pro",
-                    "B": "Server Guard",
-                    "C": "Cloud Firewall",
-                    "D": "Resource Access Management (RAM)"
-                },
-                "answer": "A",
-                "detailedexplanation": "Anti-DDoS is the dedicated service for mitigating distributed denial-of-service attacks. 'Basic' is provided for free to all Alibaba Cloud users up to a certain threshold (usually 5Gbps), while 'Pro/Premium' offers much higher mitigation capacities for enterprise applications."
-            },
-            {
-                "id": 8,
-                "domain": "Elastic Compute Service (ECS)",
-                "difficulty": "Medium",
-                "question": "You have a preemptible ECS instance. How much notice does Alibaba Cloud give you before the instance is reclaimed?",
-                "options": {
-                    "A": "30 seconds",
-                    "B": "5 minutes",
-                    "C": "1 minute",
-                    "D": "10 minutes"
-                },
-                "answer": "B",
-                "detailedexplanation": "When the market price exceeds your bid or when resource capacity is insufficient, Alibaba Cloud will reclaim preemptible instances. A release notification is sent 5 minutes before the actual release, allowing you to save state or drain traffic."
-            },
-            {
-                "id": 9,
-                "domain": "Server Load Balancer (SLB)",
-                "difficulty": "Medium",
-                "question": "Which of the following scheduling algorithms is NOT supported by Alibaba Cloud SLB?",
-                "options": {
-                    "A": "Round Robin (RR)",
-                    "B": "Weighted Round Robin (WRR)",
-                    "C": "Weighted Least Connections (WLC)",
-                    "D": "Random Sequence (RS)"
-                },
-                "answer": "D",
-                "detailedexplanation": "SLB supports several algorithms including Round Robin, Weighted Round Robin (taking server weights into account), and Weighted Least Connections (routing to servers with fewer active sessions). 'Random Sequence' is not a standard scheduling algorithm provided by the SLB service."
-            },
-            {
-                "id": 10,
-                "domain": "Object Storage Service (OSS)",
-                "difficulty": "Medium",
-                "question": "What is the maximum size of a single object that can be uploaded to Alibaba Cloud OSS using a single PutObject request?",
-                "options": {
-                    "A": "500 MB",
-                    "B": "5 GB",
-                    "C": "5 TB",
-                    "D": "100 GB"
-                },
-                "answer": "B",
-                "detailedexplanation": "For a single upload operation (PutObject), the limit is 5 GB. If you need to upload larger files (up to 48.8 TB), you must use Multipart Upload, which breaks the file into smaller chunks."
-            },
-            {
-                "id": 11,
-                "domain": "Content Delivery Network (CDN)",
-                "difficulty": "Medium",
-                "question": "How does Alibaba Cloud CDN improve website performance?",
-                "options": {
-                    "A": "By increasing the CPU power of the origin server.",
-                    "B": "By caching static content at edge nodes closer to the user.",
-                    "C": "By compressing the database files on the RDS instance.",
-                    "D": "By providing a dedicated fiber line to the user's home."
-                },
-                "answer": "B",
-                "detailedexplanation": "CDN (Content Delivery Network) reduces latency by caching static assets (images, CSS, JS) on a global network of edge nodes. When a user requests content, it is served from the nearest node rather than the origin server, reducing physical distance and network hops."
-            },
-            {
-                "id": 12,
-                "domain": "Elastic Compute Service (ECS)",
-                "difficulty": "Hard",
-                "question": "A user wants to attach an additional disk to an ECS instance. What is the maximum number of total data disks (excluding system disk) that can be attached to a single ECS instance?",
-                "options": {
-                    "A": "4",
-                    "B": "8",
-                    "C": "16",
-                    "D": "64"
-                },
-                "answer": "C",
-                "detailedexplanation": "In most current ECS specifications on Alibaba Cloud, a single instance can have 1 system disk and up to 16 data disks attached simultaneously. This allows for significant storage expansion for databases or file servers."
-            },
-            {
-                "id": 13,
-                "domain": "Resource Access Management (RAM)",
-                "difficulty": "Easy",
-                "question": "Which of the following is the best practice for managing permissions in Alibaba Cloud?",
-                "options": {
-                    "A": "Sharing the Root account credentials with the IT team.",
-                    "B": "Using the Root account for daily operations.",
-                    "C": "Creating RAM users and following the Principle of Least Privilege.",
-                    "D": "Giving all users 'AdministratorAccess' to avoid permission errors."
-                },
-                "answer": "C",
-                "detailedexplanation": "The Root account has full control over all resources and billing. Best practice is to lock away Root credentials and create RAM (Resource Access Management) users. Each user should only be granted the minimum permissions required to perform their specific job (Least Privilege)."
-            },
-            {
-                "id": 14,
-                "domain": "Auto Scaling",
-                "difficulty": "Medium",
-                "question": "Which component of Auto Scaling defines 'how' the new ECS instances will look (e.g., CPU, RAM, Image)?",
-                "options": {
-                    "A": "Scaling Group",
-                    "B": "Scaling Rule",
-                    "C": "Scaling Configuration",
-                    "D": "Lifecycle Hook"
-                },
-                "answer": "C",
-                "detailedexplanation": "A Scaling Group defines 'where' and 'how many' (VPC, VSwitch, Min/Max size). A Scaling Rule defines 'when' to scale (e.g., add 2 instances). The 'Scaling Configuration' is the template that defines the instance properties like Instance Type, Image ID, and Security Groups."
-            },
-            {
-                "id": 15,
-                "domain": "Relational Database Service (RDS)",
-                "difficulty": "Hard",
-                "question": "What happens if the primary instance of an RDS High-Availability edition fails?",
-                "options": {
-                    "A": "The database becomes unavailable until manually restarted.",
-                    "B": "The system automatically fails over to the secondary instance and updates the DNS.",
-                    "C": "The data is lost because RDS does not support automatic failover.",
-                    "D": "The system creates a new instance from the last backup."
-                },
-                "answer": "B",
-                "detailedexplanation": "RDS High-Availability (HA) edition uses a primary-secondary architecture. The system monitors the primary instance 24/7. If a failure is detected, it automatically switches traffic to the secondary instance. The connection string (endpoint) remains the same, so no application code changes are needed."
-            },
-            {
-                "id": 16,
-                "domain": "Cloud Security",
-                "difficulty": "Medium",
-                "question": "Which Alibaba Cloud service acts as a virtual firewall for your ECS instances at the network interface level?",
-                "options": {
-                    "A": "Cloud Firewall",
-                    "B": "Network ACL",
-                    "C": "Security Group",
-                    "D": "WAF (Web Application Firewall)"
-                },
-                "answer": "C",
-                "detailedexplanation": "Security Groups are stateful virtual firewalls that control inbound and outbound traffic for one or more ECS instances. While Network ACLs work at the VSwitch level (subnet), Security Groups work directly at the instance (NIC) level."
-            },
-            {
-                "id": 17,
-                "domain": "Object Storage Service (OSS)",
-                "difficulty": "Easy",
-                "question": "A user wants to host a static website using OSS. Which feature must be enabled?",
-                "options": {
-                    "A": "Versioning",
-                    "B": "Static Website Hosting",
-                    "C": "Mirroring",
-                    "D": "Lifecycle Management"
-                },
-                "answer": "B",
-                "detailedexplanation": "OSS allows you to host static websites. Once you upload your HTML, CSS, and JS files, you must enable the 'Static Website Hosting' feature and configure the index document (e.g., index.html) and error document."
-            },
-            {
-                "id": 18,
-                "domain": "Server Load Balancer (SLB)",
-                "difficulty": "Medium",
-                "question": "What is the primary purpose of an SLB Health Check?",
-                "options": {
-                    "A": "To check if the client is still connected.",
-                    "B": "To monitor the CPU usage of the SLB itself.",
-                    "C": "To identify unhealthy backend ECS instances and stop routing traffic to them.",
-                    "D": "To verify the identity of the user."
-                },
-                "answer": "C",
-                "detailedexplanation": "Health Checks ensure high availability. The SLB periodically sends probes to the backend ECS instances. If an instance fails to respond correctly, it is marked as 'unhealthy' and the SLB stops sending traffic to it until it passes the health check again."
-            },
-            {
-                "id": 19,
-                "domain": "Elastic Compute Service (ECS)",
-                "difficulty": "Medium",
-                "question": "Which of the following disk categories provides the highest performance (IOPS) for Alibaba Cloud ECS?",
-                "options": {
-                    "A": "Standard Cloud Disk",
-                    "B": "Efficiency Cloud Disk",
-                    "C": "SSD Cloud Disk",
-                    "D": "ESSD (Enhanced SSD) Cloud Disk"
-                },
-                "answer": "D",
-                "detailedexplanation": "ESSD (Enhanced SSD) is the highest performance tier, offering up to 1 million IOPS and very low latency. It is designed for IO-intensive workloads like large-scale databases and real-time computing."
-            },
-            {
-                "id": 20,
-                "domain": "Virtual Private Cloud (VPC)",
-                "difficulty": "Easy",
-                "question": "What is a VSwitch used for within a VPC?",
-                "options": {
-                    "A": "To connect the VPC to the Internet.",
-                    "B": "To divide the VPC address space into smaller subnets.",
-                    "C": "To balance traffic between different regions.",
-                    "D": "To provide physical hardware to the user."
-                },
-                "answer": "B",
-                "detailedexplanation": "A VSwitch (Virtual Switch) is a basic network device of a VPC. It is used to segment the VPC's IP address range into one or more subnets. Instances must be launched within a VSwitch, and each VSwitch belongs to a single Availability Zone."
-            },
-            {
-                "id": 21,
-                "domain": "Content Delivery Network (CDN)",
-                "difficulty": "Medium",
-                "question": "If you update a file on your origin server, but the CDN continues to serve the old version, what action should you take?",
-                "options": {
-                    "A": "Delete the file from the origin server.",
-                    "B": "Wait 24 hours for the cache to expire.",
-                    "C": "Perform a 'Cache Refresh' or 'Purge' on the CDN console.",
-                    "D": "Restart the ECS instance serving as the origin."
-                },
-                "answer": "C",
-                "detailedexplanation": "CDN nodes cache content based on the TTL (Time To Live). If you need to update content immediately, you must use the 'Refresh' (Purge) feature in the Alibaba Cloud CDN console to force the edge nodes to delete the old version and fetch the new one from the origin."
-            },
-            {
-                "id": 22,
-                "domain": "Cloud Security",
-                "difficulty": "Medium",
-                "question": "Which tool provides a centralized security dashboard for identifying vulnerabilities and configuration risks across all Alibaba Cloud resources?",
-                "options": {
-                    "A": "Cloud Monitor",
-                    "B": "Cloud Config",
-                    "C": "Cloud Security Center",
-                    "D": "ActionTrail"
-                },
-                "answer": "C",
-                "detailedexplanation": "Cloud Security Center (formerly Server Guard) is a unified security management system. It identifies, analyzes, and handles security risks like vulnerabilities, suspicious logins, and malware across ECS, RDS, and other services."
-            },
-            {
-                "id": 23,
-                "domain": "Object Storage Service (OSS)",
-                "difficulty": "Hard",
-                "question": "What is the purpose of 'Bucket Policies' in OSS?",
-                "options": {
-                    "A": "To define the lifecycle of objects.",
-                    "B": "To grant or restrict access to the bucket for specific users or IP ranges.",
-                    "C": "To set the storage class (e.g., IA or Archive).",
-                    "D": "To enable cross-region replication."
-                },
-                "answer": "B",
-                "detailedexplanation": "While RAM is used for managing user-level permissions, Bucket Policies are resource-based policies. They allow you to define complex access rules directly on the bucket, such as 'Allow only IP 1.2.3.4 to download' or 'Grant anonymous access to a specific folder'."
-            },
-            {
-                "id": 24,
-                "domain": "Elastic Compute Service (ECS)",
-                "difficulty": "Easy",
-                "question": "Which payment method for ECS is best for long-term, predictable workloads to save the most money?",
-                "options": {
-                    "A": "Pay-As-You-Go",
-                    "B": "Preemptible Instances",
-                    "C": "Subscription",
-                    "D": "Spot Instances"
-                },
-                "answer": "C",
-                "detailedexplanation": "Subscription (Reserved) instances require upfront payment for a fixed term (monthly or yearly). This offers a significant discount (often 40-70%) compared to Pay-As-You-Go pricing, making it the best choice for stable, 24/7 workloads."
-            },
-            {
-                "id": 25,
-                "domain": "Relational Database Service (RDS)",
-                "difficulty": "Medium",
-                "question": "Which of these is NOT a supported database engine in Alibaba Cloud RDS?",
-                "options": {
-                    "A": "MySQL",
-                    "B": "SQL Server",
-                    "C": "PostgreSQL",
-                    "D": "Oracle Database"
-                },
-                "answer": "D",
-                "detailedexplanation": "Alibaba Cloud RDS supports MySQL, SQL Server, PostgreSQL, and MariaDB. While Alibaba Cloud offers solutions for Oracle migration (like PolarDB or OceanBase), 'Oracle Database' is not a standard engine choice within the 'RDS' product line itself."
-            },
-            {
-                "id": 26,
-                "domain": "Auto Scaling",
-                "difficulty": "Medium",
-                "question": "What is the 'Cooldown Period' in Auto Scaling?",
-                "options": {
-                    "A": "The time it takes for an instance to shut down.",
-                    "B": "A period after a scaling activity where the group does not execute new scaling activities.",
-                    "C": "The time required to warm up the cache on a new instance.",
-                    "D": "The time the system waits before deleting a snapshot."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Cooldown Period prevents 'flapping' or over-scaling. After an instance is added or removed, the system waits for the Cooldown period (e.g., 300 seconds) to allow the metrics (like CPU) to stabilize before triggering another scaling action."
-            },
-            {
-                "id": 27,
-                "domain": "Content Delivery Network (CDN)",
-                "difficulty": "Easy",
-                "question": "What must you do to your domain's DNS to start using Alibaba Cloud CDN?",
-                "options": {
-                    "A": "Delete the A record.",
-                    "B": "Change the nameservers to Alibaba Cloud.",
-                    "C": "Add a CNAME record pointing to the CDN domain provided by Alibaba Cloud.",
-                    "D": "No DNS changes are required."
-                },
-                "answer": "C",
-                "detailedexplanation": "To route user traffic through the CDN, you must go to your DNS provider and create a CNAME record. This record points your website (e.g., www.example.com) to the Alibaba Cloud assigned CNAME (e.g., www.example.com.w.kunlunsl.com)."
-            },
-            {
-                "id": 28,
-                "domain": "Virtual Private Cloud (VPC)",
-                "difficulty": "Medium",
-                "question": "Which service allows you to connect an on-premises data center to an Alibaba Cloud VPC via a physical leased line?",
-                "options": {
-                    "A": "VPN Gateway",
-                    "B": "Express Connect",
-                    "C": "Smart Access Gateway",
-                    "D": "Internet NAT Gateway"
-                },
-                "answer": "B",
-                "detailedexplanation": "Express Connect is the service used for physical, dedicated connections between on-premises environments and Alibaba Cloud. It provides high bandwidth and lower latency compared to a standard VPN over the public internet."
-            },
-            {
-                "id": 29,
-                "domain": "Elastic Compute Service (ECS)",
-                "difficulty": "Medium",
-                "question": "When creating a snapshot of an ECS disk, where is the snapshot data actually stored?",
-                "options": {
-                    "A": "On the same disk as the ECS instance.",
-                    "B": "On a hidden system disk.",
-                    "C": "In an internal Object Storage Service (OSS) bucket managed by Alibaba Cloud.",
-                    "D": "In a separate VPC."
-                },
-                "answer": "C",
-                "detailedexplanation": "ECS Snapshots are stored in an internal, high-reliability storage pool based on OSS technology. This ensures that the snapshot is physically separate from the ECS disk, protecting against local hardware failures."
-            },
-            {
-                "id": 30,
-                "domain": "Cloud Monitor",
-                "difficulty": "Easy",
-                "question": "Which service is used to set up alarms for CPU usage or Disk I/O on your Alibaba Cloud resources?",
-                "options": {
-                    "A": "Cloud Monitor",
-                    "B": "ActionTrail",
-                    "C": "Resource Manager",
-                    "D": "Log Service"
-                },
-                "answer": "A",
-                "detailedexplanation": "Cloud Monitor is the core monitoring service. It collects metrics from all Alibaba Cloud services and allows you to set up 'Alarm Rules' that notify you via Email or SMS when certain thresholds (like 80% CPU usage) are reached."
-            }
-        ],
-        "outro_script": {
-            "closing": "That concludes our 30-question mock exam for the Alibaba Cloud ACP Cloud Computing Professional certification.",
-            "cta_final": "If you found these explanations helpful, please give this video a thumbs up and share it with your fellow cloud enthusiasts.",
-            "next_steps": "Don't forget to click the link in the description to access the full course and practice tests. Good luck with your exam!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "15 seconds",
-            "transition_effect_hints": "Smooth fade between questions; highlight correct answer in green; display detailed explanation text after the timer expires."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "AWS Certified Advanced Networking Specialty Practice Exam",
                 "AWS ANS-C01 Certification Training Mock Test",
                 "AWS Advanced Networking Specialty Full Course Questions",
@@ -94969,7 +94483,7 @@
             ],
             "intro_script": {
                 "hook": "Are you ready to prove your expertise in building scalable and cloud-native applications on Google Cloud? The Professional Cloud Developer exam is one of the most challenging certifications in the ecosystem, requiring deep knowledge of GKE, Cloud Run, and CI/CD.",
-                "summary": "In this video, we go through 30 high-quality, exam-realistic multiple-choice questions covering all core domains—from designing cloud-native applications to managing performance and troubleshooting.",
+                "summary": "In this video, we go through 30 high-quality, exam-realistic multiple-choice questions covering all core domains\u2014from designing cloud-native applications to managing performance and troubleshooting.",
                 "cta_intro": "Before we dive in, make sure to subscribe for more GCP certification guides.",
                 "checkfullexamlinkindescription": "For a complete set of practice exams and the full study guide, check out the link in the description below."
             },
@@ -96172,7 +95686,7 @@
                     "D": "Lead"
                 },
                 "answer": "A",
-                "detailedexplanation": "In Dynamics 365 Customer Service, the 'Case' (internally known as 'Incident') is the fundamental entity used to track a customer's issue or request. Everything related to the resolution of that issue—emails, phone calls, and tasks—is linked to that specific Case record."
+                "detailedexplanation": "In Dynamics 365 Customer Service, the 'Case' (internally known as 'Incident') is the fundamental entity used to track a customer's issue or request. Everything related to the resolution of that issue\u2014emails, phone calls, and tasks\u2014is linked to that specific Case record."
             },
             {
                 "id": 14,
@@ -96733,7 +96247,7 @@
                     "D": "Saving a snapshot to a local file."
                 },
                 "answer": "C",
-                "detailedexplanation": "While the Open Source version allows manual snapshots via the CLI, the 'Snapshot Agent'—which runs as a background process to automate, rotate, and ship backups to cloud storage (like S3 or GCS)—is a feature exclusive to Consul Enterprise."
+                "detailedexplanation": "While the Open Source version allows manual snapshots via the CLI, the 'Snapshot Agent'\u2014which runs as a background process to automate, rotate, and ship backups to cloud storage (like S3 or GCS)\u2014is a feature exclusive to Consul Enterprise."
             },
             {
                 "id": 19,
@@ -96905,7 +96419,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question mock exam for the HashiCorp Certified Consul Associate. How did you do? If you found some of these challenging, don't worry—Consul is a deep product with many moving parts.",
+            "closing": "That wraps up our 30-question mock exam for the HashiCorp Certified Consul Associate. How did you do? If you found some of these challenging, don't worry\u2014Consul is a deep product with many moving parts.",
             "cta_final": "If you want to take your preparation to the next level, I highly recommend checking out the full practice test course on Udemy. It includes hundreds of more questions, timed exams, and even more detailed explanations.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more HashiCorp and DevOps certification content. Good luck with your exam!"
         },
@@ -97056,7 +96570,7 @@
                     "D": "Reducing the cost of AWS services by using fewer resources"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Principle of Least Privilege (PoLP) is a fundamental security concept where a user is granted the minimum levels of access—or permissions—needed to perform their job functions. This minimizes the risk of accidental or malicious changes to critical systems and data. In AWS, this is typically implemented using IAM policies."
+                "detailedexplanation": "The Principle of Least Privilege (PoLP) is a fundamental security concept where a user is granted the minimum levels of access\u2014or permissions\u2014needed to perform their job functions. This minimizes the risk of accidental or malicious changes to critical systems and data. In AWS, this is typically implemented using IAM policies."
             },
             {
                 "id": 7,
@@ -97070,7 +96584,7 @@
                     "D": "Amazon Lightsail"
                 },
                 "answer": "B",
-                "detailedexplanation": "AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume—there is no charge when your code is not running. It automatically scales your application by running code in response to triggers."
+                "detailedexplanation": "AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume\u2014there is no charge when your code is not running. It automatically scales your application by running code in response to triggers."
             },
             {
                 "id": 8,
@@ -97098,7 +96612,7 @@
                     "D": "Amazon EFS"
                 },
                 "answer": "C",
-                "detailedexplanation": "Amazon S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term retention and digital preservation for data that may be accessed once or twice a year. It is designed for customers—particularly those in highly regulated industries—that retain data sets for 7-10 years or longer to meet regulatory compliance requirements."
+                "detailedexplanation": "Amazon S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term retention and digital preservation for data that may be accessed once or twice a year. It is designed for customers\u2014particularly those in highly regulated industries\u2014that retain data sets for 7-10 years or longer to meet regulatory compliance requirements."
             },
             {
                 "id": 10,
@@ -97182,7 +96696,7 @@
                     "D": "Amazon Inspector"
                 },
                 "answer": "A",
-                "detailedexplanation": "AWS Artifact is your go-to, central resource for compliance-related information. It provides on-demand access to AWS’s security and compliance reports and select online agreements. This is critical for audits or when you need to prove the compliance of the AWS infrastructure."
+                "detailedexplanation": "AWS Artifact is your go-to, central resource for compliance-related information. It provides on-demand access to AWS\u2019s security and compliance reports and select online agreements. This is critical for audits or when you need to prove the compliance of the AWS infrastructure."
             },
             {
                 "id": 16,
@@ -97420,7 +96934,7 @@
                 "How to Pass AWS Developer Associate Exam on First Attempt"
             ],
             "intro_script": {
-                "hook": "Are you ready to pass the AWS Certified Developer Associate exam and level up your cloud career? Today, we’re diving into 30 exam-style questions that mirror the actual DVA-C02 challenge.",
+                "hook": "Are you ready to pass the AWS Certified Developer Associate exam and level up your cloud career? Today, we\u2019re diving into 30 exam-style questions that mirror the actual DVA-C02 challenge.",
                 "summary": "In this video, we cover the core domains of the AWS Developer Associate certification, including Deployment, Security, Development with AWS Services, and Troubleshooting. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind every answer.",
                 "cta_intro": "Before we start, make sure to hit that subscribe button for more AWS certification prep content.",
                 "checkfullexamlinkindescription": "For a full-length, timed mock exam experience with hundreds of questions, check the link in the description below."
@@ -97672,7 +97186,7 @@
                     "D": "It automatically scales the write capacity of the table"
                 },
                 "answer": "C",
-                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement—from milliseconds to microseconds—even at millions of requests per second."
+                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement\u2014from milliseconds to microseconds\u2014even at millions of requests per second."
             },
             {
                 "id": 16,
@@ -98217,7 +97731,7 @@
                     "D": "AWS Fargate"
                 },
                 "answer": "B",
-                "detailedexplanation": "AWS Lambda allows you to run code without provisioning or managing servers. You pay only for the compute time you consume—there is no charge when your code is not running. For a script that runs for only 2 minutes a day, Lambda is significantly cheaper than maintaining an EC2 instance or an ECS cluster."
+                "detailedexplanation": "AWS Lambda allows you to run code without provisioning or managing servers. You pay only for the compute time you consume\u2014there is no charge when your code is not running. For a script that runs for only 2 minutes a day, Lambda is significantly cheaper than maintaining an EC2 instance or an ECS cluster."
             },
             {
                 "id": 20,
@@ -98329,7 +97843,7 @@
                     "D": "S3 Batch Operations"
                 },
                 "answer": "B",
-                "detailedexplanation": "Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations to route data over the optimized AWS network path."
+                "detailedexplanation": "Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront\u2019s globally distributed edge locations to route data over the optimized AWS network path."
             },
             {
                 "id": 28,
@@ -98375,7 +97889,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question mock exam for the AWS Certified Solutions Architect Associate. How did you do? If you found some of these scenarios tricky, don't worry—architecting on AWS takes practice!",
+            "closing": "That concludes our 30-question mock exam for the AWS Certified Solutions Architect Associate. How did you do? If you found some of these scenarios tricky, don't worry\u2014architecting on AWS takes practice!",
             "cta_final": "If you want to take your preparation to the next level, I highly recommend checking out the full mock exam course linked in the description. It includes hundreds of questions just like these with even deeper explanations.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more AWS certification content. Good luck with your studies!"
         },
@@ -99355,7 +98869,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question CRISC mock exam. How did you do? If you found some of these concepts challenging, don't worry—risk management is a complex field that takes time to master.",
+            "closing": "That wraps up our 30-question CRISC mock exam. How did you do? If you found some of these concepts challenging, don't worry\u2014risk management is a complex field that takes time to master.",
             "cta_final": "If this video helped you, please give it a thumbs up and share it with your fellow certification seekers. Subscribe for more deep dives into ISACA and security certifications.",
             "next_steps": "Check the description for the full course link to access hundreds more questions and detailed study guides. Good luck with your exam!"
         },
