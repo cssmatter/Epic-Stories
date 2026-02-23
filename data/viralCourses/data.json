@@ -102291,5 +102291,2455 @@
             "timer_duration": "10 seconds",
             "transition_effect_hints": "Subtle slide-in for each question, highlight the correct answer in green after the timer ends."
         }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Microsoft Azure Administrator AZ-104 Exam Prep",
+                "AZ-104 Azure Administrator Associate Practice Questions",
+                "Mastering Microsoft Azure AZ-104 Mock Exam",
+                "Azure Administrator AZ-104 Certification Guide",
+                "Top 30 AZ-104 Exam Questions and Answers",
+                "Microsoft Azure Administrator Full Mock Test",
+                "How to Pass AZ-104 Azure Administrator Exam",
+                "Azure AZ-104 Training: Real Exam Scenarios",
+                "Azure Administrator Associate Certification Practice",
+                "Ultimate AZ-104 Exam Review and Explanations"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to pass the AZ-104 and become a Microsoft Certified Azure Administrator, or is a single configuration error about to cost you your certification?",
+                "summary": "In this video, we dive deep into 30 high-yield practice questions covering every major domain of the AZ-104 exam, from identity and governance to storage, compute, and networking.",
+                "cta_intro": "Make sure to grab a notepad, because we are breaking down the logic behind every correct and incorrect answer.",
+                "checkfullexamlinkindescription": "For the full-length, updated mock exam experience, click the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/n41R06",
+                "youtubetitle": "AZ-104 Microsoft Azure Administrator Associate Full Mock Exam Practice Test",
+                "description": "Prepare for the Microsoft Certified Azure Administrator Associate (AZ-104) exam with this comprehensive mock test. This video covers 30 realistic exam questions across key domains: Azure Identities and Governance, Storage, Compute Resources, Virtual Networking, and Monitoring. Each question includes a detailed explanation to ensure you understand the 'why' behind the solution. \n\nGet the full exam prep course here: https://trk.udemy.com/n41R06",
+                "tags": "AZ-104, Azure Administrator, Microsoft Azure, Azure Certification, Cloud Computing, AZ-104 Practice Test, Microsoft Certified Associate, Azure Networking, Azure Storage, Azure Active Directory",
+                "hashtags": [
+                    "#AZ104",
+                    "#AzureAdministrator",
+                    "#MicrosoftAzure",
+                    "#CloudCertification",
+                    "#AzureTraining"
+                ],
+                "keywords": [
+                    "AZ-104 exam questions",
+                    "Azure Administrator practice test",
+                    "Microsoft Azure Associate certification",
+                    "Azure RBAC",
+                    "Azure Virtual Network",
+                    "Azure Load Balancer",
+                    "Azure Active Directory",
+                    "Azure Storage Accounts",
+                    "Azure Monitor",
+                    "Azure ARM Templates"
+                ],
+                "mostsearchedongoogle": [
+                    "AZ-104 exam dumps",
+                    "AZ-104 study guide",
+                    "Azure Administrator certification path",
+                    "AZ-104 passing score",
+                    "Azure Administrator associate salary",
+                    "Microsoft Azure certification cost",
+                    "AZ-104 labs practice",
+                    "Azure networking interview questions",
+                    "Azure RBAC vs Azure AD roles",
+                    "AZ-104 free practice test"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Medium",
+                "question": "You have an Azure subscription. You need to ensure that users can only create virtual machines of a specific SKU (e.g., Standard_D2s_v3) in a specific resource group. What should you use?",
+                "options": {
+                    "A": "Azure Role-Based Access Control (RBAC)",
+                    "B": "Azure Policy",
+                    "C": "Resource Locks",
+                    "D": "Azure Management Groups"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Policy is the correct service for enforcing resource properties and compliance. While RBAC controls 'who' can do something, Azure Policy controls 'what' properties the resource can have (like SKU size or location). A policy definition using the 'Allowed virtual machine size SKUs' effect is the industry-standard way to restrict VM sizes."
+            },
+            {
+                "id": 2,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Hard",
+                "question": "Your company has multiple Azure subscriptions. You need to ensure that a specific set of compliance requirements is applied to all subscriptions automatically. What should you implement?",
+                "options": {
+                    "A": "Azure Blueprints",
+                    "B": "Azure Advisor",
+                    "C": "Azure Active Directory Administrative Units",
+                    "D": "Resource Tags"
+                },
+                "answer": "A",
+                "detailedexplanation": "Azure Blueprints allows cloud architects to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. It orchestrates the deployment of various resource templates and other artifacts such as Role Assignments, Policy Assignments, and Resource Groups across multiple subscriptions."
+            },
+            {
+                "id": 3,
+                "domain": "Implement and Manage Storage",
+                "difficulty": "Medium",
+                "question": "You are configuring an Azure Storage account. You need to ensure that any data written to the account is replicated to a secondary region and is available for read access even if the primary region experiences an outage. Which replication strategy should you choose?",
+                "options": {
+                    "A": "Locally-redundant storage (LRS)",
+                    "B": "Zone-redundant storage (ZRS)",
+                    "C": "Geo-redundant storage (GRS)",
+                    "D": "Read-access geo-redundant storage (RA-GRS)"
+                },
+                "answer": "D",
+                "detailedexplanation": "RA-GRS (Read-access geo-redundant storage) provides the highest level of availability by replicating data to a secondary region (like GRS) but also providing a secondary read-only endpoint. LRS and ZRS stay within a single region. Standard GRS only allows access to the secondary region if Microsoft initiates a failover."
+            },
+            {
+                "id": 4,
+                "domain": "Implement and Manage Storage",
+                "difficulty": "Medium",
+                "question": "You need to move 50 TB of data from an on-premises server to an Azure Storage account. The available internet bandwidth is limited. What is the most efficient way to transfer the data?",
+                "options": {
+                    "A": "Azure Storage Explorer",
+                    "B": "AzCopy",
+                    "C": "Azure Data Box",
+                    "D": "Azure File Sync"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Data Box is a physical device provided by Microsoft used to ship massive amounts of data (up to 100 TB) to Azure when network bandwidth is a bottleneck. AzCopy and Storage Explorer are software-based and rely on your internet connection, which would be too slow for 50 TB in this scenario."
+            },
+            {
+                "id": 5,
+                "domain": "Deploy and Manage Azure Compute Resources",
+                "difficulty": "Medium",
+                "question": "You have a web application running on 5 Virtual Machines. You need to ensure the application remains available if a single data center within an Azure region fails. What should you use?",
+                "options": {
+                    "A": "Availability Sets",
+                    "B": "Availability Zones",
+                    "C": "Virtual Machine Scale Sets with Basic Load Balancer",
+                    "D": "Azure Backup"
+                },
+                "answer": "B",
+                "detailedexplanation": "Availability Zones protect against the failure of an entire data center facility within a region by physically separating resources across different zones. Availability Sets only protect against hardware failures within a single data center (Fault Domains and Update Domains)."
+            },
+            {
+                "id": 6,
+                "domain": "Deploy and Manage Azure Compute Resources",
+                "difficulty": "Medium",
+                "question": "Which Azure feature allows you to automatically increase or decrease the number of VM instances in response to CPU usage spikes?",
+                "options": {
+                    "A": "Availability Sets",
+                    "B": "Virtual Machine Scale Sets",
+                    "C": "Azure App Service Plans",
+                    "D": "Azure Batch"
+                },
+                "answer": "B",
+                "detailedexplanation": "Virtual Machine Scale Sets (VMSS) provide the 'Autoscale' feature. You can define rules based on metrics like CPU, Memory, or Network demand to add (scale out) or remove (scale in) VM instances automatically to match demand and optimize costs."
+            },
+            {
+                "id": 7,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Hard",
+                "question": "You have two Virtual Networks, VNet1 and VNet2, in the same region. You want to allow resources in VNet1 to communicate with resources in VNet2 using private IP addresses. What should you implement?",
+                "options": {
+                    "A": "VPN Gateway",
+                    "B": "ExpressRoute",
+                    "C": "VNet Peering",
+                    "D": "Azure Bastion"
+                },
+                "answer": "C",
+                "detailedexplanation": "VNet Peering connects two virtual networks over the Azure backbone network. Once peered, the two VNets act as one for connectivity purposes, allowing traffic to flow privately with low latency. VPN Gateways are generally used for cross-region or site-to-site connectivity over the internet."
+            },
+            {
+                "id": 8,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Medium",
+                "question": "Which resource is used to filter network traffic to and from Azure resources in an Azure Virtual Network based on IP address, port, and protocol?",
+                "options": {
+                    "A": "Azure Firewall",
+                    "B": "Network Security Group (NSG)",
+                    "C": "Application Gateway",
+                    "D": "Azure Front Door"
+                },
+                "answer": "B",
+                "detailedexplanation": "Network Security Groups (NSGs) contain security rules that allow or deny inbound/outbound traffic based on 5-tuple information (source, source port, destination, destination port, and protocol). While Azure Firewall is more robust, NSGs are the primary tool for basic subnet and NIC level filtering."
+            },
+            {
+                "id": 9,
+                "domain": "Monitor and Back Up Azure Resources",
+                "difficulty": "Medium",
+                "question": "You need to be notified via email whenever a Virtual Machine is deleted in your subscription. What should you configure?",
+                "options": {
+                    "A": "Azure Monitor Metrics Alert",
+                    "B": "Azure Monitor Activity Log Alert",
+                    "C": "Application Insights",
+                    "D": "Log Analytics Workspace"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Activity Log records all 'Write' operations (PUT, POST, DELETE) on resources in a subscription. To be notified of a deletion (a management plane operation), you must create an Activity Log Alert and associate it with an Action Group that sends an email."
+            },
+            {
+                "id": 10,
+                "domain": "Monitor and Back Up Azure Resources",
+                "difficulty": "Hard",
+                "question": "You want to perform a 'point-in-time' restoration of an Azure file share. What must be enabled for this to work?",
+                "options": {
+                    "A": "Soft Delete",
+                    "B": "Storage Account Replication",
+                    "C": "Azure Backup for File Shares",
+                    "D": "Azure Site Recovery"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Backup for Azure File Shares provides a built-in backup solution that uses snapshots to allow for point-in-time restores. Soft delete only protects against accidental deletion of the entire share or files, but it doesn't allow for reverting to a specific state from 3 days ago like Backup does."
+            },
+            {
+                "id": 11,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Medium",
+                "question": "What is the minimum number of Azure AD (Entra ID) Directory Roles required to allow a user to reset passwords for non-administrative users?",
+                "options": {
+                    "A": "User Administrator",
+                    "B": "Global Administrator",
+                    "C": "Helpdesk Administrator",
+                    "D": "Security Administrator"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Helpdesk Administrator role is designed specifically to allow users to reset passwords for non-administrators and other limited roles. This follows the principle of least privilege, as giving Global or User Admin rights would grant unnecessary permissions."
+            },
+            {
+                "id": 12,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Medium",
+                "question": "You need to distribute incoming HTTP/HTTPS traffic to a backend pool of web servers based on the URL path. Which Azure load balancing solution should you use?",
+                "options": {
+                    "A": "Azure Load Balancer (Layer 4)",
+                    "B": "Azure Traffic Manager",
+                    "C": "Azure Application Gateway",
+                    "D": "Azure Front Door"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Application Gateway is a Layer 7 (HTTP/HTTPS) load balancer that supports URL path-based routing. For example, you can route traffic for /images to one server pool and /video to another. Standard Azure Load Balancer operates at Layer 4 and cannot 'see' the URL path."
+            },
+            {
+                "id": 13,
+                "domain": "Implement and Manage Storage",
+                "difficulty": "Medium",
+                "question": "Which tool provides a GUI to manage Azure Storage resources from Windows, macOS, or Linux without logging into the Azure Portal?",
+                "options": {
+                    "A": "AzCopy",
+                    "B": "Azure Storage Explorer",
+                    "C": "Azure PowerShell",
+                    "D": "Azure CLI"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Storage Explorer is a standalone app that allows you to easily work with Azure Storage data. AzCopy is a command-line tool, and PowerShell/CLI are scripting environments. Storage Explorer is the only one offering a full GUI experience."
+            },
+            {
+                "id": 14,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Medium",
+                "question": "A user named 'Admin1' needs to be able to assign permissions to other users in a specific Resource Group. Which RBAC role should be assigned to Admin1?",
+                "options": {
+                    "A": "Contributor",
+                    "B": "Reader",
+                    "C": "Owner",
+                    "D": "User Access Administrator"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'Owner' role has full access to all resources, including the ability to delegate access to others. The 'User Access Administrator' role also allows managing access but does not allow managing the resources themselves. 'Contributor' can manage resources but cannot grant access to others."
+            },
+            {
+                "id": 15,
+                "domain": "Deploy and Manage Azure Compute Resources",
+                "difficulty": "Medium",
+                "question": "You are deploying a containerized application that does not require the management of virtual machines. Which service should you choose for the simplest deployment?",
+                "options": {
+                    "A": "Azure Kubernetes Service (AKS)",
+                    "B": "Azure Container Instances (ACI)",
+                    "C": "Azure Virtual Machines",
+                    "D": "Azure App Service for Containers"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Container Instances (ACI) is the fastest and simplest way to run a container in Azure without having to manage VMs or orchestrators like Kubernetes. AKS is more complex and intended for large-scale orchestration."
+            },
+            {
+                "id": 16,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Medium",
+                "question": "You need to securely connect to an Azure Virtual Machine via RDP/SSH directly through the Azure Portal browser, without using a public IP address on the VM. Which service should you use?",
+                "options": {
+                    "A": "VPN Gateway",
+                    "B": "Azure Bastion",
+                    "C": "Azure Firewall",
+                    "D": "Just-In-Time (JIT) VM Access"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Bastion is a fully managed PaaS service that provides secure and seamless RDP/SSH access to your virtual machines directly in the Azure portal over SSL. It eliminates the need to expose your VMs to the public internet via public IP addresses."
+            },
+            {
+                "id": 17,
+                "domain": "Implement and Manage Storage",
+                "difficulty": "Hard",
+                "question": "You have a storage account with sensitive data. You want to ensure that only traffic from a specific subnet in a Virtual Network can access this storage account. What should you configure?",
+                "options": {
+                    "A": "Shared Access Signature (SAS)",
+                    "B": "Storage Account Access Keys",
+                    "C": "Virtual Network Service Endpoints",
+                    "D": "Azure AD Privileged Identity Management"
+                },
+                "answer": "C",
+                "detailedexplanation": "Virtual Network (VNet) service endpoints provide secure and direct connectivity to Azure services over the Azure backbone network. By configuring the 'Firewalls and virtual networks' settings on the storage account, you can restrict access to specific subnets."
+            },
+            {
+                "id": 18,
+                "domain": "Monitor and Back Up Azure Resources",
+                "difficulty": "Medium",
+                "question": "You need to track the availability, performance, and usage of your web application. Which service provides this functionality?",
+                "options": {
+                    "A": "Azure Monitor Metrics",
+                    "B": "Application Insights",
+                    "C": "Azure Advisor",
+                    "D": "Azure Service Health"
+                },
+                "answer": "B",
+                "detailedexplanation": "Application Insights is a feature of Azure Monitor that is an Application Performance Management (APM) service for developers and DevOps professionals. It allows you to monitor live applications, automatically detect performance anomalies, and see what users are actually doing in your app."
+            },
+            {
+                "id": 19,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Medium",
+                "question": "A resource group contains 10 Virtual Machines. You want to prevent any of the Virtual Machines from being accidentally deleted, while still allowing them to be modified. What should you apply?",
+                "options": {
+                    "A": "ReadOnly lock",
+                    "B": "CanNotDelete lock",
+                    "C": "Azure Policy",
+                    "D": "RBAC Reader Role"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'CanNotDelete' resource lock allows authorized users to read and modify a resource, but they cannot delete the resource. A 'ReadOnly' lock would prevent both deletion and modification."
+            },
+            {
+                "id": 20,
+                "domain": "Deploy and Manage Azure Compute Resources",
+                "difficulty": "Hard",
+                "question": "You need to deploy a series of Virtual Machines using an Azure Resource Manager (ARM) template. You want to ensure that the template is valid before attempting the deployment. Which command should you use?",
+                "options": {
+                    "A": "az deployment group create",
+                    "B": "az deployment group validate",
+                    "C": "az deployment group plan",
+                    "D": "az deployment group show"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'validate' command checks whether the template is syntactically correct and whether the resources you are trying to deploy are available and permitted within your subscription/quota, without actually creating any resources."
+            },
+            {
+                "id": 21,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Medium",
+                "question": "You have an on-premises network that requires a high-bandwidth, dedicated, private connection to Azure that does not travel over the public internet. Which service should you choose?",
+                "options": {
+                    "A": "Site-to-Site VPN",
+                    "B": "Point-to-Site VPN",
+                    "C": "Azure ExpressRoute",
+                    "D": "Virtual WAN"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider. ExpressRoute connections do not go over the public Internet, offering more reliability, faster speeds, and consistent latencies."
+            },
+            {
+                "id": 22,
+                "domain": "Implement and Manage Storage",
+                "difficulty": "Medium",
+                "question": "Which storage tier is optimized for storing data that is rarely accessed and stored for at least 180 days?",
+                "options": {
+                    "A": "Hot tier",
+                    "B": "Cool tier",
+                    "C": "Archive tier",
+                    "D": "Premium tier"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Archive tier has the lowest storage cost but higher data retrieval costs and latency. It is intended for data that can tolerate several hours of retrieval latency and must remain in the tier for at least 180 days to avoid early deletion charges."
+            },
+            {
+                "id": 23,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Medium",
+                "question": "You need to implement Multi-Factor Authentication (MFA) for certain users only when they are accessing Azure from outside the corporate office. Which feature should you use?",
+                "options": {
+                    "A": "Azure AD Privileged Identity Management (PIM)",
+                    "B": "Conditional Access Policies",
+                    "C": "Azure AD Identity Protection",
+                    "D": "Named Locations"
+                },
+                "answer": "B",
+                "detailedexplanation": "Conditional Access policies in Azure AD (Entra ID) allow you to enforce controls based on signals like user location (IP address), device state, or application. You can create a policy that requires MFA only if the user is not in a 'Trusted Location' (the office)."
+            },
+            {
+                "id": 24,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Medium",
+                "question": "What is the primary purpose of an Azure Peering Service?",
+                "options": {
+                    "A": "Connecting two VNets together",
+                    "B": "Enhancing connectivity to Microsoft SaaS services like Microsoft 365",
+                    "C": "Providing a dedicated line to Azure Data Centers",
+                    "D": "Load balancing traffic across regions"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Peering Service is a networking service that enhances customer connectivity to Microsoft cloud services such as Microsoft 365, Dynamics 365, or any Microsoft services accessible via the public internet."
+            },
+            {
+                "id": 25,
+                "domain": "Monitor and Back Up Azure Resources",
+                "difficulty": "Medium",
+                "question": "You need to visualize the relationships between various Azure resources and identify performance bottlenecks in a distributed system. Which tool is best?",
+                "options": {
+                    "A": "Azure Monitor Logs",
+                    "B": "Application Insights Map",
+                    "C": "Azure Dashboard",
+                    "D": "Resource Graph Explorer"
+                },
+                "answer": "B",
+                "detailedexplanation": "Application Map (part of Application Insights) automatically discovers the network topology of your application and identifies components and their interactions, making it easy to spot which part of a distributed system is causing latencies."
+            },
+            {
+                "id": 26,
+                "domain": "Manage Azure Identities and Governance",
+                "difficulty": "Hard",
+                "question": "You need to manage 'just-in-time' (JIT) elevated access for your Azure AD administrative roles. Which service provides this?",
+                "options": {
+                    "A": "Conditional Access",
+                    "B": "Azure AD Privileged Identity Management (PIM)",
+                    "C": "Azure AD Identity Protection",
+                    "D": "Azure Lighthouse"
+                },
+                "answer": "B",
+                "detailedexplanation": "Privileged Identity Management (PIM) provides time-bound and approval-based role activation to mitigate the risks of excessive, unnecessary, or misused access permissions to important resources. It is used specifically for Azure AD and Azure resource roles."
+            },
+            {
+                "id": 27,
+                "domain": "Implement and Manage Storage",
+                "difficulty": "Medium",
+                "question": "What is the purpose of a Shared Access Signature (SAS)?",
+                "options": {
+                    "A": "To provide full administrative access to the storage account",
+                    "B": "To grant limited, time-bound access to storage resources without sharing account keys",
+                    "C": "To encrypt data at rest",
+                    "D": "To replicate data to a secondary region"
+                },
+                "answer": "B",
+                "detailedexplanation": "A SAS is a URI that grants restricted access rights to Azure Storage resources. You can specify what resources the user can access, what permissions they have (read, write, delete), and how long the URI is valid."
+            },
+            {
+                "id": 28,
+                "domain": "Configure and Manage Virtual Networking",
+                "difficulty": "Medium",
+                "question": "Which component is required to allow communication between a Virtual Machine and the internet if the VM has no Public IP address?",
+                "options": {
+                    "A": "Azure NAT Gateway",
+                    "B": "Network Security Group",
+                    "C": "Azure Bastion",
+                    "D": "Application Gateway"
+                },
+                "answer": "A",
+                "detailedexplanation": "Azure NAT Gateway is a fully managed and highly resilient Network Address Translation (NAT) service. It provides outbound internet connectivity for one or more subnets of a virtual network, even if the VMs don't have public IPs."
+            },
+            {
+                "id": 29,
+                "domain": "Monitor and Back Up Azure Resources",
+                "difficulty": "Medium",
+                "question": "In Azure Backup, what is the 'Recovery Services Vault' used for?",
+                "options": {
+                    "A": "Storing temporary application data",
+                    "B": "A storage entity that houses backup data and recovery points",
+                    "C": "Managing Virtual Machine encryption keys",
+                    "D": "Monitoring network traffic logs"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Recovery Services vault is a storage entity in Azure that houses data. The data is typically copies of data, or configuration information for virtual machines, workloads, servers, or workstations. You use Recovery Services vaults to hold backup data for various Azure services."
+            },
+            {
+                "id": 30,
+                "domain": "Deploy and Manage Azure Compute Resources",
+                "difficulty": "Medium",
+                "question": "You have an App Service named 'WebApp1'. You want to test a new version of the app without affecting the production traffic. What should you use?",
+                "options": {
+                    "A": "App Service Environments",
+                    "B": "Deployment Slots",
+                    "C": "Traffic Manager",
+                    "D": "Scale Up the App Service Plan"
+                },
+                "answer": "B",
+                "detailedexplanation": "Deployment slots are live apps with their own host names. App content and configurations elements can be swapped between two deployment slots, including the production slot. This allows for 'blue-green' deployments and testing in a staging environment."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30-question mock exam for the AZ-104 Azure Administrator Associate certification. How did you do? Remember, understanding the concept is more important than memorizing the answer.",
+            "cta_final": "If you found this helpful, please give us a thumbs up and subscribe for more cloud certification content. Don't forget to check out the link in the description for the full-length practice tests on Udemy.",
+            "next_steps": "Check out our next video on Azure Networking deep dives to master the most challenging part of the exam!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Use a smooth slide transition between questions. Highlight the correct answer in green and incorrect ones in red during the explanation phase."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Microsoft Azure Fundamentals AZ-900 Full Course Prep",
+                "Azure Fundamentals AZ-900 Mock Exam Questions and Answers",
+                "Pass the AZ-900 Microsoft Azure Fundamentals Exam Fast",
+                "Azure Fundamentals Certification Training Complete Guide",
+                "AZ-900 Exam Prep: Practice Questions and Detailed Explanations",
+                "Mastering Microsoft Azure Fundamentals AZ-900",
+                "Azure AZ-900 Practice Test: Real Exam Scenarios",
+                "Microsoft Azure Training for Beginners AZ-900",
+                "Ultimate AZ-900 Azure Fundamentals Study Guide",
+                "AZ-900 Exam Simulation: 30 Critical Questions Explained"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to kickstart your cloud career? Microsoft Azure is the fastest-growing cloud platform, but passing the AZ-900 exam requires more than just knowing the basics—it requires understanding how Azure solves real-world business problems.",
+                "summary": "In this video, we are diving into a comprehensive mock exam for the Microsoft Azure Fundamentals AZ-900 certification. We will cover 30 high-yield questions spanning Cloud Concepts, Azure Architecture, Governance, and Security.",
+                "cta_intro": "Make sure to grab a notebook, as we will be breaking down the logic behind every single answer to ensure you're exam-ready.",
+                "checkfullexamlinkindescription": "If you want to practice with even more realistic simulations, check out the full exam course link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/YVgqOR",
+                "youtubetitle": "Microsoft Azure Fundamentals AZ-900 Mock Exam Prep - Practice Questions & Detailed Explanations",
+                "description": "Master the Microsoft Azure Fundamentals AZ-900 exam with this comprehensive mock test. This video covers the most important domains of the certification, including cloud services, security, privacy, compliance, and Azure pricing. Each question includes a deep-dive explanation to help you understand the 'why' behind the correct answer. Perfect for beginners and IT professionals looking to validate their cloud knowledge.\n\nTopics Covered:\n- Cloud Concepts (CapEx vs OpEx, IaaS, PaaS, SaaS)\n- Azure Architecture (Regions, Availability Zones)\n- Azure Management and Governance\n- Azure Security and Compliance\n\nCheck out the full practice exam here: https://trk.udemy.com/YVgqOR",
+                "tags": "Azure Fundamentals, AZ-900, Microsoft Azure, Cloud Computing, AZ-900 Mock Exam, Azure Certification, Microsoft Certified, Cloud Services, Azure Tutorial, AZ-900 Practice Test",
+                "hashtags": [
+                    "#Azure",
+                    "#AZ900",
+                    "#MicrosoftAzure",
+                    "#CloudCertification",
+                    "#AzureFundamentals",
+                    "#ITExam"
+                ],
+                "keywords": [
+                    "AZ-900 questions",
+                    "Azure Fundamentals study guide",
+                    "Microsoft cloud basics",
+                    "Azure architecture components",
+                    "Azure governance and compliance",
+                    "Azure pricing and support",
+                    "Pass AZ-900",
+                    "Azure for beginners",
+                    "Cloud service models",
+                    "Azure resource manager"
+                ],
+                "mostsearchedongoogle": [
+                    "AZ-900 exam questions pdf",
+                    "Microsoft Azure Fundamentals certification cost",
+                    "AZ-900 study material",
+                    "Azure Fundamentals exam duration",
+                    "Is AZ-900 worth it",
+                    "AZ-900 practice test free",
+                    "Azure regions vs availability zones",
+                    "Difference between PaaS and SaaS",
+                    "Azure subscription management",
+                    "Azure active directory vs entra id"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Cloud Concepts",
+                "difficulty": "Easy",
+                "question": "Which cloud model allows organizations to share resources between an on-premises data center and a public cloud provider?",
+                "options": {
+                    "A": "Public Cloud",
+                    "B": "Private Cloud",
+                    "C": "Hybrid Cloud",
+                    "D": "Community Cloud"
+                },
+                "answer": "C",
+                "detailedexplanation": "A Hybrid Cloud is a computing environment that combines a public cloud and a private cloud (on-premises infrastructure) by allowing data and applications to be shared between them. This gives businesses greater flexibility and more deployment options. Public cloud is owned by third-party providers; private cloud is used exclusively by one entity; community cloud is shared by several organizations with common concerns."
+            },
+            {
+                "id": 2,
+                "domain": "Cloud Concepts",
+                "difficulty": "Medium",
+                "question": "An organization wants to migrate to the cloud but keep its initial capital expenditure (CapEx) as low as possible. Which financial model does the cloud typically follow?",
+                "options": {
+                    "A": "Capital Expenditure (CapEx)",
+                    "B": "Operational Expenditure (OpEx)",
+                    "C": "Fixed Cost Model",
+                    "D": "Depreciation Model"
+                },
+                "answer": "B",
+                "detailedexplanation": "Cloud computing shifts costs from Capital Expenditure (CapEx)—where you spend money on physical infrastructure upfront—to Operational Expenditure (OpEx), where you pay for services as you use them. This pay-as-you-go model allows businesses to treat IT costs as a continuous operating expense, improving cash flow and reducing the need for massive upfront investments in hardware."
+            },
+            {
+                "id": 3,
+                "domain": "Cloud Concepts",
+                "difficulty": "Medium",
+                "question": "Which cloud service model provides the highest level of control over the underlying hardware and operating systems?",
+                "options": {
+                    "A": "Infrastructure as a Service (IaaS)",
+                    "B": "Platform as a Service (PaaS)",
+                    "C": "Software as a Service (SaaS)",
+                    "D": "Function as a Service (FaaS)"
+                },
+                "answer": "A",
+                "detailedexplanation": "Infrastructure as a Service (IaaS) provides the most control because it offers virtualized computing resources over the internet. Users are responsible for managing the operating systems, middleware, and applications. In PaaS, the provider manages the OS and runtime. In SaaS, the provider manages everything except for the user data."
+            },
+            {
+                "id": 4,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Medium",
+                "question": "What is the term for a specific geographical area containing at least one, but potentially multiple datacenters that are nearby and networked together with a low-latency network?",
+                "options": {
+                    "A": "Availability Zone",
+                    "B": "Azure Region",
+                    "C": "Edge Location",
+                    "D": "Geography"
+                },
+                "answer": "B",
+                "detailedexplanation": "An Azure Region is a set of datacenters deployed within a latency-defined perimeter and connected through a dedicated regional low-latency network. This allows users to deploy resources close to their customers for better performance. Availability Zones are unique physical locations within a region, and Geographies are larger boundaries typically containing two or more regions."
+            },
+            {
+                "id": 5,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Hard",
+                "question": "You need to ensure that your application remains available even if a single datacenter in an Azure region fails. Which feature should you use?",
+                "options": {
+                    "A": "Resource Groups",
+                    "B": "Availability Sets",
+                    "C": "Availability Zones",
+                    "D": "Azure Scale Sets"
+                },
+                "answer": "C",
+                "detailedexplanation": "Availability Zones are physically separate datacenter locations within an Azure region. Each zone has independent power, cooling, and networking. By deploying your application across multiple Availability Zones, you protect your services from the failure of an entire datacenter. Availability Sets only protect against hardware failures within a single datacenter."
+            },
+            {
+                "id": 6,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Medium",
+                "question": "Which Azure service is specifically designed for big data analytics and uses a massively parallel processing (MPP) architecture?",
+                "options": {
+                    "A": "Azure SQL Database",
+                    "B": "Azure Cosmos DB",
+                    "C": "Azure Synapse Analytics",
+                    "D": "Azure Functions"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Synapse Analytics (formerly SQL Data Warehouse) is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. It uses MPP to run complex queries quickly across petabytes of data. Azure SQL is a relational database; Cosmos DB is a NoSQL database; Azure Functions is a serverless compute service."
+            },
+            {
+                "id": 7,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Easy",
+                "question": "Which service allows you to run code in a serverless environment without worrying about the underlying infrastructure or servers?",
+                "options": {
+                    "A": "Azure Virtual Machines",
+                    "B": "Azure App Service",
+                    "C": "Azure Functions",
+                    "D": "Azure Container Instances"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure. You only pay for the time your code runs. While App Service is PaaS, it still requires you to define a plan/tier, whereas Functions scales automatically based on demand."
+            },
+            {
+                "id": 8,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Medium",
+                "question": "Which Azure storage redundancy option replicates your data to a secondary region hundreds of miles away from the primary region?",
+                "options": {
+                    "A": "Locally Redundant Storage (LRS)",
+                    "B": "Zone-Redundant Storage (ZRS)",
+                    "C": "Geo-Redundant Storage (GRS)",
+                    "D": "Read-Access Geo-Redundant Storage (RA-GRS)"
+                },
+                "answer": "C",
+                "detailedexplanation": "Geo-Redundant Storage (GRS) copies your data synchronously three times within a single physical location in the primary region using LRS, then copies your data asynchronously to a single physical location in a secondary region. This protects against regional outages. RA-GRS is similar but allows read-only access to the secondary region."
+            },
+            {
+                "id": 9,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Medium",
+                "question": "What can be used to manage multiple Azure subscriptions collectively, allowing for the application of policies and access control across all of them?",
+                "options": {
+                    "A": "Resource Groups",
+                    "B": "Management Groups",
+                    "C": "Azure Active Directory",
+                    "D": "Azure Policy"
+                },
+                "answer": "B",
+                "detailedexplanation": "Management Groups are containers that help you manage access, policy, and compliance for multiple subscriptions. All subscriptions within a management group automatically inherit the conditions applied to the group. Resource Groups are used to group resources within a single subscription."
+            },
+            {
+                "id": 10,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Easy",
+                "question": "Which tool provides a command-line interface for managing Azure resources and can be installed on Windows, macOS, and Linux?",
+                "options": {
+                    "A": "Azure Portal",
+                    "B": "Azure PowerShell",
+                    "C": "Azure CLI",
+                    "D": "Azure Cloud Shell"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Azure CLI (Command-Line Interface) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. Azure PowerShell is also a CLI but is based on PowerShell modules. Azure Cloud Shell is a browser-based shell."
+            },
+            {
+                "id": 11,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Medium",
+                "question": "Which service is a globally distributed, multi-model database service that supports NoSQL data?",
+                "options": {
+                    "A": "Azure SQL Database",
+                    "B": "Azure Cosmos DB",
+                    "C": "Azure Table Storage",
+                    "D": "Azure Blob Storage"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Cosmos DB is a fully managed NoSQL database service for modern app development. It offers single-digit millisecond response times, automatic and instant scalability, and guaranteed speed at any scale. It supports multiple APIs, including MongoDB, Cassandra, and Gremlin."
+            },
+            {
+                "id": 12,
+                "domain": "Management and Governance",
+                "difficulty": "Medium",
+                "question": "You want to receive an alert if your Azure spending exceeds a certain threshold. Which tool should you use?",
+                "options": {
+                    "A": "Azure Advisor",
+                    "B": "Azure Cost Management + Billing",
+                    "C": "Azure Monitor",
+                    "D": "Azure Policy"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Cost Management + Billing allows you to monitor your spend, create budgets, and set up alerts when spending reaches a specific percentage of your budget. This helps organizations maintain financial control over their cloud usage."
+            },
+            {
+                "id": 13,
+                "domain": "Management and Governance",
+                "difficulty": "Hard",
+                "question": "Which Azure tool provides personalized recommendations on how to optimize your resources for reliability, security, and cost-effectiveness?",
+                "options": {
+                    "A": "Azure Service Health",
+                    "B": "Azure Advisor",
+                    "C": "Azure Monitor",
+                    "D": "Azure Blueprints"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Advisor analyzes your configurations and usage telemetry and offers suggestions to help you improve the cost-effectiveness, performance, reliability, and security of your Azure resources. It categorizes recommendations into five buckets: Reliability, Security, Performance, Cost, and Operational Excellence."
+            },
+            {
+                "id": 14,
+                "domain": "Management and Governance",
+                "difficulty": "Medium",
+                "question": "Which Azure service allows you to define a repeatable set of Azure resources that implement and adhere to your organization's standards and requirements?",
+                "options": {
+                    "A": "Azure Policy",
+                    "B": "Azure Blueprints",
+                    "C": "Azure Resource Manager templates",
+                    "D": "Azure Management Groups"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Blueprints allows cloud architects and central IT groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Blueprints can orchestrate the deployment of various resource templates and other artifacts such as Role-Based Access Control and Policies."
+            },
+            {
+                "id": 15,
+                "domain": "Management and Governance",
+                "difficulty": "Easy",
+                "question": "Which of the following describes the purpose of Azure Policy?",
+                "options": {
+                    "A": "To provide a secure vault for secrets",
+                    "B": "To monitor application performance",
+                    "C": "To enforce organizational standards and assess compliance at scale",
+                    "D": "To manage user identities"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Policy helps to enforce organizational standards and to assess compliance at scale. Through its compliance dashboard, it provides an aggregated view to evaluate the overall state of the environment, with the ability to drill down to the per-resource, per-policy granularity."
+            },
+            {
+                "id": 16,
+                "domain": "Management and Governance",
+                "difficulty": "Medium",
+                "question": "A company wants to ensure that no one can accidentally delete a production database. What should they apply to the resource?",
+                "options": {
+                    "A": "Azure Policy",
+                    "B": "Role-Based Access Control (RBAC)",
+                    "C": "Resource Lock",
+                    "D": "Tag"
+                },
+                "answer": "C",
+                "detailedexplanation": "Resource Locks help you prevent accidental deletion or modification of your Azure resources. There are two types: CanNotDelete (users can read and modify but not delete) and ReadOnly (users can only read the resource). These locks apply regardless of the user's RBAC permissions."
+            },
+            {
+                "id": 17,
+                "domain": "Security and Compliance",
+                "difficulty": "Medium",
+                "question": "Which service provides a central place to manage and store application secrets, encryption keys, and certificates?",
+                "options": {
+                    "A": "Azure Sentinel",
+                    "B": "Azure Key Vault",
+                    "C": "Azure Dedicated Host",
+                    "D": "Azure Security Center"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Key Vault is a cloud service that provides a secure store for secrets. You can securely store keys, passwords, certificates, and other secrets. This eliminates the need for developers to store security information in their code."
+            },
+            {
+                "id": 18,
+                "domain": "Security and Compliance",
+                "difficulty": "Medium",
+                "question": "Which Azure service is a cloud-native Security Information and Event Management (SIEM) and Security Orchestration Automated Response (SOAR) solution?",
+                "options": {
+                    "A": "Microsoft Sentinel",
+                    "B": "Microsoft Defender for Cloud",
+                    "C": "Azure Firewall",
+                    "D": "Azure Bastion"
+                },
+                "answer": "A",
+                "detailedexplanation": "Microsoft Sentinel (formerly Azure Sentinel) is a scalable, cloud-native SIEM and SOAR solution. Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response."
+            },
+            {
+                "id": 19,
+                "domain": "Security and Compliance",
+                "difficulty": "Medium",
+                "question": "You need to limit the traffic that can flow in and out of a specific Azure Virtual Machine. Which resource should you use?",
+                "options": {
+                    "A": "Azure Firewall",
+                    "B": "Network Security Group (NSG)",
+                    "C": "Azure Application Gateway",
+                    "D": "Azure Front Door"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Network Security Group (NSG) contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify source and destination, port, and protocol. It is typically applied to a subnet or a network interface (NIC)."
+            },
+            {
+                "id": 20,
+                "domain": "Security and Compliance",
+                "difficulty": "Easy",
+                "question": "What is the primary goal of the Microsoft Trust Center?",
+                "options": {
+                    "A": "To provide technical support for Azure",
+                    "B": "To offer a place to purchase Azure services",
+                    "C": "To provide information on how Microsoft protects your data and complies with regulatory standards",
+                    "D": "To manage Azure subscriptions"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Microsoft Trust Center is a public-facing website that provides detailed information about Microsoft's security, privacy, and compliance offerings. It is a key resource for understanding how Microsoft maintains the integrity and confidentiality of customer data."
+            },
+            {
+                "id": 21,
+                "domain": "Security and Compliance",
+                "difficulty": "Hard",
+                "question": "Which concept refers to the security principle that requires users to provide two or more forms of evidence to verify their identity?",
+                "options": {
+                    "A": "Single Sign-On (SSO)",
+                    "B": "Multi-Factor Authentication (MFA)",
+                    "C": "Conditional Access",
+                    "D": "Role-Based Access Control (RBAC)"
+                },
+                "answer": "B",
+                "detailedexplanation": "Multi-Factor Authentication (MFA) is a process where a user is prompted during the sign-in process for an additional form of identification, such as a code on their cellphone or a fingerprint scan. It provides a layer of security by requiring more than just a password."
+            },
+            {
+                "id": 22,
+                "domain": "Security and Compliance",
+                "difficulty": "Medium",
+                "question": "Which Azure service provides a dedicated, private connection between your on-premises network and Azure?",
+                "options": {
+                    "A": "Azure VPN Gateway",
+                    "B": "Azure ExpressRoute",
+                    "C": "Azure Peering",
+                    "D": "Azure Virtual WAN"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection with the help of a connectivity provider. ExpressRoute connections do not go over the public Internet, offering more reliability, faster speeds, and lower latencies."
+            },
+            {
+                "id": 23,
+                "domain": "Pricing and Support",
+                "difficulty": "Easy",
+                "question": "Which tool can you use to estimate the cost of Azure services before you deploy them?",
+                "options": {
+                    "A": "TCO Calculator",
+                    "B": "Azure Pricing Calculator",
+                    "C": "Azure Cost Management",
+                    "D": "Azure Advisor"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Azure Pricing Calculator is a web-based tool that allows you to input your expected resource usage and get an estimate of what those resources will cost. The TCO (Total Cost of Ownership) Calculator is used to compare the costs of running on-premises vs. running on Azure."
+            },
+            {
+                "id": 24,
+                "domain": "Pricing and Support",
+                "difficulty": "Medium",
+                "question": "Which Azure support plan is the lowest tier that provides 24/7 access to technical support via email and phone?",
+                "options": {
+                    "A": "Basic",
+                    "B": "Developer",
+                    "C": "Standard",
+                    "D": "Professional Direct"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Standard support plan is the lowest tier that provides 24/7 technical support. The Basic plan only provides support for billing and subscription issues. The Developer plan provides technical support only during business hours."
+            },
+            {
+                "id": 25,
+                "domain": "Pricing and Support",
+                "difficulty": "Medium",
+                "question": "What is the purpose of an Azure Service Level Agreement (SLA)?",
+                "options": {
+                    "A": "To provide a list of recommended features",
+                    "B": "To document Microsoft's commitment to service availability and performance",
+                    "C": "To manage user access to services",
+                    "D": "To provide a quote for service costs"
+                },
+                "answer": "B",
+                "detailedexplanation": "A Service Level Agreement (SLA) describes Microsoft's commitments for uptime and connectivity for various Azure services. If a service fails to meet the specified SLA, customers may be eligible for service credits."
+            },
+            {
+                "id": 26,
+                "domain": "Cloud Concepts",
+                "difficulty": "Medium",
+                "question": "Which of the following cloud characteristics refers to the ability of a system to grow or shrink its resources based on demand?",
+                "options": {
+                    "A": "High Availability",
+                    "B": "Scalability",
+                    "C": "Agility",
+                    "D": "Disaster Recovery"
+                },
+                "answer": "B",
+                "detailedexplanation": "Scalability is the ability of a system to handle increased load by adding resources (vertical or horizontal scaling). Vertical scaling (scaling up) means adding more power (CPU, RAM) to an existing server, while horizontal scaling (scaling out) means adding more servers."
+            },
+            {
+                "id": 27,
+                "domain": "Cloud Concepts",
+                "difficulty": "Medium",
+                "question": "Under the Shared Responsibility Model, who is responsible for the security of data stored in an Azure SaaS application?",
+                "options": {
+                    "A": "Microsoft only",
+                    "B": "The Customer only",
+                    "C": "Both Microsoft and the Customer",
+                    "D": "Neither Microsoft nor the Customer"
+                },
+                "answer": "B",
+                "detailedexplanation": "In every cloud service model (IaaS, PaaS, SaaS), the customer is always responsible for the security and management of their data and identities. Microsoft manages the underlying infrastructure and software in a SaaS model, but the data itself remains the customer's responsibility."
+            },
+            {
+                "id": 28,
+                "domain": "Azure Architecture and Services",
+                "difficulty": "Hard",
+                "question": "Which Azure service provides a managed environment for running containerized applications without needing to manage the underlying Virtual Machines?",
+                "options": {
+                    "A": "Azure Virtual Machines",
+                    "B": "Azure Container Instances (ACI)",
+                    "C": "Azure Kubernetes Service (AKS)",
+                    "D": "Azure App Service"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Container Instances (ACI) is the fastest and simplest way to run a container in Azure, without having to manage any virtual machines and without having to adopt a higher-level service. AKS is for orchestrating multiple containers, while ACI is for simple, isolated containers."
+            },
+            {
+                "id": 29,
+                "domain": "Management and Governance",
+                "difficulty": "Easy",
+                "question": "Which tool provides a graphical user interface (GUI) for managing nearly all Azure resources in a single web-based application?",
+                "options": {
+                    "A": "Azure CLI",
+                    "B": "Azure PowerShell",
+                    "C": "Azure Portal",
+                    "D": "Azure Cloud Shell"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Azure Portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments."
+            },
+            {
+                "id": 30,
+                "domain": "Security and Compliance",
+                "difficulty": "Medium",
+                "question": "What is the function of Azure Bastion?",
+                "options": {
+                    "A": "To provide a firewall for web applications",
+                    "B": "To provide secure RDP and SSH access to VMs directly through the browser without public IP addresses",
+                    "C": "To store cryptographic keys",
+                    "D": "To monitor network traffic for DDoS attacks"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Bastion is a fully managed service that provides more secure and seamless Remote Desktop Protocol (RDP) and Secure Shell (SSH) access to virtual machines directly in the Azure portal over SSL. This eliminates the need for your VMs to have a public IP address, reducing the attack surface."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30-question mock exam for the Azure Fundamentals AZ-900 certification. How did you do? Remember, the cloud is all about understanding the shared responsibility model and choosing the right tool for the right job.",
+            "cta_final": "If you found this helpful, please hit the like button and subscribe for more IT certification content. If you want to take your prep to the next level, I've linked a full-length mock exam course in the description below.",
+            "next_steps": "Check out our next video on Azure Security best practices to further your knowledge. Good luck with your exam!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Smooth fade between questions, highlighted correct answer in green, incorrect in red."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "Microsoft Azure Solutions Architect Expert Certification Training",
+                "AZ-305 Exam Prep: Azure Solutions Architect Expert Mock Test",
+                "Pass the Azure Solutions Architect Expert Exam - AZ-305 Study Guide",
+                "Microsoft Certified Azure Solutions Architect Expert Practice Questions",
+                "Azure Solutions Architect Expert AZ-305 Exam Cram and Mock Exam",
+                "Top 30 Azure Solutions Architect Expert AZ-305 Practice Questions",
+                "How to Become a Microsoft Certified Azure Solutions Architect Expert",
+                "AZ-305 Azure Solutions Architect Expert Official Practice Test",
+                "Azure Architecture Design Mock Exam - AZ-305 Certification",
+                "Mastering Azure Solutions Architect Expert AZ-305 Exam Questions"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to claim one of the most prestigious certifications in the cloud industry? The Microsoft Certified Azure Solutions Architect Expert badge is a game-changer for your career, but the exam is notoriously tough.",
+                "summary": "In this video, we are diving deep into a comprehensive mock exam covering Design Identity, Governance, Monitoring, Data Storage, Business Continuity, and Infrastructure. We will tackle 30 high-level scenario-based questions that mirror the actual exam difficulty.",
+                "cta_intro": "Before we start, make sure to hit that subscribe button for more expert cloud certification training.",
+                "checkfullexamlinkindescription": "For the full-length practice exam with hundreds of questions, check the link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/Agoyx7",
+                "youtubetitle": "Azure Solutions Architect Expert AZ-305 Mock Exam Practice Questions and Answers",
+                "description": "Master the AZ-305 Microsoft Certified Azure Solutions Architect Expert exam with this comprehensive mock test. This video covers the core domains required to pass the certification, including identity, governance, data storage, and business continuity. Each question is designed to simulate the actual exam experience with detailed explanations provided for every answer. \n\nGet the full exam practice here: https://trk.udemy.com/Agoyx7",
+                "tags": "Azure Solutions Architect Expert, AZ-305, Microsoft Azure Certification, Azure Mock Exam, Azure Architecture, Cloud Architect Training, AZ-305 Practice Test, Microsoft Certified Expert",
+                "hashtags": [
+                    "#AzureSolutionsArchitect",
+                    "#AZ305",
+                    "#MicrosoftAzure",
+                    "#CloudCertification",
+                    "#AzureArchitect",
+                    "#ExamPrep"
+                ],
+                "keywords": [
+                    "AZ-305",
+                    "Azure Solutions Architect Expert",
+                    "Microsoft Certified Azure Solutions Architect",
+                    "Azure Architect Exam Questions",
+                    "AZ-305 Practice Exam",
+                    "Cloud Architect Certification",
+                    "Azure Design Identity",
+                    "Azure Business Continuity",
+                    "Azure Infrastructure Design",
+                    "Azure Solutions Architect Mock Test"
+                ],
+                "mostsearchedongoogle": [
+                    "AZ-305 exam questions",
+                    "Azure Solutions Architect Expert certification path",
+                    "AZ-305 study guide",
+                    "Azure architect expert salary",
+                    "How to pass AZ-305",
+                    "Azure design solutions mock test",
+                    "AZ-305 dumps free",
+                    "Microsoft certification AZ-305 practice test",
+                    "Azure architect expert skills",
+                    "AZ-305 certification cost"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Hard",
+                "question": "A company requires a solution to manage administrative access to Azure resources. The solution must ensure that users can only request access for a specific timeframe and that all requests require approval. Which service should you recommend?",
+                "options": {
+                    "A": "Azure Role-Based Access Control (RBAC)",
+                    "B": "Azure AD Privileged Identity Management (PIM)",
+                    "C": "Azure Policy",
+                    "D": "Azure AD Conditional Access"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure AD Privileged Identity Management (PIM) is the correct choice because it provides 'just-in-time' (JIT) privileged access. PIM allows you to manage, control, and monitor access to important resources. It supports time-bound access, approval workflows, and multi-factor authentication requirements for activation. Standard RBAC provides persistent access, which does not meet the 'timeframe' and 'request' requirements effectively."
+            },
+            {
+                "id": 2,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Medium",
+                "question": "You are designing a storage solution for a high-performance application that requires sub-millisecond latency for read and write operations on small data sets. Which Azure service should you choose?",
+                "options": {
+                    "A": "Azure Blob Storage (Hot Tier)",
+                    "B": "Azure Cache for Redis",
+                    "C": "Azure Files (Premium)",
+                    "D": "Azure Table Storage"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Cache for Redis provides an in-memory data store based on the Redis software. In-memory storage is significantly faster than disk-based storage, making it the ideal solution for sub-millisecond latency requirements. While Blob Storage and Azure Files offer high performance in their Premium tiers, they cannot match the ultra-low latency of an in-memory cache like Redis."
+            },
+            {
+                "id": 3,
+                "domain": "Design Business Continuity Solutions",
+                "difficulty": "Hard",
+                "question": "Your company has an application running on Azure Virtual Machines. You need to design a disaster recovery solution that ensures a Recovery Time Objective (RTO) of 4 hours and a Recovery Point Objective (RPO) of 15 minutes. Which service should you use?",
+                "options": {
+                    "A": "Azure Backup",
+                    "B": "Azure Site Recovery",
+                    "C": "Azure Virtual Machine Snapshots",
+                    "D": "Azure Traffic Manager"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Site Recovery (ASR) is a dedicated disaster recovery service that provides continuous replication of VMs. It is designed to meet low RPO and RTO requirements by maintaining a near-real-time copy of your infrastructure in a secondary region. Azure Backup is more suitable for long-term retention and higher RPOs/RTOs, typically measured in hours or days rather than minutes."
+            },
+            {
+                "id": 4,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Hard",
+                "question": "You need to design a network architecture that connects an on-premises data center to Azure. The connection must provide consistent bandwidth and not traverse the public internet. Which solution is best?",
+                "options": {
+                    "A": "Azure Point-to-Site VPN",
+                    "B": "Azure Site-to-Site VPN",
+                    "C": "Azure ExpressRoute",
+                    "D": "Azure Virtual WAN"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure ExpressRoute provides a private connection between your on-premises infrastructure and Azure data centers. Because it does not go over the public internet, it offers higher security, more reliability, and faster speeds with consistent latency compared to VPN-based solutions, which are subject to the performance fluctuations of the public internet."
+            },
+            {
+                "id": 5,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Medium",
+                "question": "An application needs to store large amounts of unstructured data and requires data to be accessible via a REST API. The data will be accessed infrequently but must be available immediately when requested. Which storage tier should you use?",
+                "options": {
+                    "A": "Hot Tier",
+                    "B": "Cool Tier",
+                    "C": "Archive Tier",
+                    "D": "Premium Tier"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Cool Tier is optimized for storing data that is infrequently accessed and stored for at least 30 days. It provides immediate availability (low latency) similar to the Hot tier but at a lower storage cost and higher access cost. The Archive tier would require a 'rehydration' process that can take hours, which fails the 'available immediately' requirement."
+            },
+            {
+                "id": 6,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Hard",
+                "question": "You are designing a governance strategy for a large Azure environment. You need to ensure that all new resources created in a specific resource group automatically have a 'Department' tag applied. What should you use?",
+                "options": {
+                    "A": "Azure Blueprints",
+                    "B": "Azure Policy",
+                    "C": "Azure RBAC",
+                    "D": "Management Groups"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Policy is used to enforce rules and effects over your resources. You can create a policy definition that uses the 'Modify' or 'Append' effect to automatically add or enforce tags during resource deployment. While Azure Blueprints can include policies, the primary tool for ongoing enforcement of resource configurations like tagging is Azure Policy."
+            },
+            {
+                "id": 7,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Hard",
+                "question": "You are designing a container-based solution. You need a managed service that can orchestrate complex deployments, handle scaling, and manage networking between containers. Which service should you choose?",
+                "options": {
+                    "A": "Azure Container Instances (ACI)",
+                    "B": "Azure Functions",
+                    "C": "Azure Kubernetes Service (AKS)",
+                    "D": "Azure App Service for Containers"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Kubernetes Service (AKS) is a fully managed Kubernetes offering that provides robust orchestration, including automated scaling, self-healing, and complex networking. ACI is better for simple, isolated containers without the need for full orchestration. AKS is the standard for complex, multi-container enterprise applications."
+            },
+            {
+                "id": 8,
+                "domain": "Design Business Continuity Solutions",
+                "difficulty": "Medium",
+                "question": "A SQL database requires a high availability solution that provides a zero data loss guarantee (RPO 0) and can automatically failover within a single Azure region. Which option should you recommend?",
+                "options": {
+                    "A": "Geo-Replication",
+                    "B": "Zone-redundant configuration",
+                    "C": "Failover Groups",
+                    "D": "Azure SQL Database Basic Tier"
+                },
+                "answer": "B",
+                "detailedexplanation": "A zone-redundant configuration for Azure SQL Database replicates your data across multiple Availability Zones within a single region. This provides synchronous replication (ensuring zero data loss if a zone fails) and automatic failover. Geo-replication is typically asynchronous and intended for multi-region disaster recovery, which may involve some data loss (RPO > 0)."
+            },
+            {
+                "id": 9,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Hard",
+                "question": "You need to recommend a database solution for a globally distributed application. The database must support multiple write regions and provide guaranteed single-digit millisecond latency at the 99th percentile. Which service fits these needs?",
+                "options": {
+                    "A": "Azure SQL Database",
+                    "B": "Azure Database for PostgreSQL",
+                    "C": "Azure Cosmos DB",
+                    "D": "Azure Table Storage"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Cosmos DB is Microsoft's globally distributed, multi-model database service. It is specifically designed to provide multi-region write capabilities and offers Service Level Agreements (SLAs) for single-digit millisecond latency for both reads and writes at the 99th percentile globally."
+            },
+            {
+                "id": 10,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Medium",
+                "question": "Your application is experiencing traffic spikes. You need a compute solution that automatically scales out when CPU usage exceeds 70% and scales in when it drops below 30%. Which feature should you implement?",
+                "options": {
+                    "A": "Azure Load Balancer",
+                    "B": "Virtual Machine Scale Sets (VMSS) with Autoscale",
+                    "C": "Azure Availability Sets",
+                    "D": "Azure Traffic Manager"
+                },
+                "answer": "B",
+                "detailedexplanation": "Virtual Machine Scale Sets (VMSS) with the Autoscale feature allow you to define rules based on metrics (like CPU or memory). When these thresholds are met, VMSS automatically adds or removes VM instances to match the load. Availability Sets only provide redundancy within a data center but do not handle automatic scaling of the number of instances."
+            },
+            {
+                "id": 11,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Hard",
+                "question": "You need to collect and correlate data from multiple sources across your Azure environment to detect and respond to security threats. Which service is the best fit?",
+                "options": {
+                    "A": "Azure Monitor",
+                    "B": "Azure Sentinel (Microsoft Sentinel)",
+                    "C": "Azure Advisor",
+                    "D": "Azure Network Watcher"
+                },
+                "answer": "B",
+                "detailedexplanation": "Microsoft Sentinel is a cloud-native Security Information and Event Management (SIEM) and Security Orchestration, Automation, and Response (SOAR) solution. It provides a single solution for alert detection, threat visibility, proactive hunting, and threat response. Azure Monitor is for general performance and health monitoring, not specifically for security threat correlation."
+            },
+            {
+                "id": 12,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Medium",
+                "question": "You are designing an internal-only web application that will be hosted on Azure. You need to provide load balancing for the application while ensuring it is not accessible from the internet. Which load balancer should you use?",
+                "options": {
+                    "A": "Public Azure Load Balancer",
+                    "B": "Internal Azure Load Balancer",
+                    "C": "Azure Front Door",
+                    "D": "Azure Traffic Manager"
+                },
+                "answer": "B",
+                "detailedexplanation": "An Internal (or Private) Azure Load Balancer is used to balance traffic within a virtual network or across a VPN. It uses a private IP address, ensuring that the traffic is not exposed to the public internet. Azure Front Door and Traffic Manager are global services typically used for public-facing endpoints."
+            },
+            {
+                "id": 13,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Hard",
+                "question": "A company wants to migrate an existing on-premises SQL Server to Azure. They want to maintain full control over the Operating System and the SQL Server configuration. Which migration target should you recommend?",
+                "options": {
+                    "A": "Azure SQL Database",
+                    "B": "Azure SQL Managed Instance",
+                    "C": "SQL Server on Azure Virtual Machines",
+                    "D": "Azure Cosmos DB"
+                },
+                "answer": "C",
+                "detailedexplanation": "SQL Server on Azure VMs is an Infrastructure-as-a-Service (IaaS) solution that gives the user full administrative control over the VM, the OS, and the SQL Server software. Managed Instance and Azure SQL Database are PaaS solutions where the underlying OS and many server-level configurations are managed by Microsoft."
+            },
+            {
+                "id": 14,
+                "domain": "Design Business Continuity Solutions",
+                "difficulty": "Hard",
+                "question": "You are designing a multi-region web application. You need a global load balancer that can handle SSL offloading and path-based routing. Which service should you choose?",
+                "options": {
+                    "A": "Azure Traffic Manager",
+                    "B": "Azure Load Balancer",
+                    "C": "Azure Front Door",
+                    "D": "Azure Application Gateway"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Front Door is a global, scalable entry point that uses the Microsoft global edge network. It supports SSL offloading, path-based routing, and WAF at the edge. Application Gateway also supports path-based routing and SSL offloading but is a regional service, not a global one like Front Door."
+            },
+            {
+                "id": 15,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Medium",
+                "question": "You need to provide a developer with the ability to create and manage virtual machines within a specific resource group, but they should not be able to manage permissions or delete the resource group itself. Which RBAC role should you assign?",
+                "options": {
+                    "A": "Owner",
+                    "B": "Contributor",
+                    "C": "Reader",
+                    "D": "User Access Administrator"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'Contributor' role allows users to create and manage all types of Azure resources but does not allow them to grant access to others (manage RBAC). The 'Owner' role has full access including permission management. 'User Access Administrator' only manages permissions, not the resources themselves."
+            },
+            {
+                "id": 16,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Hard",
+                "question": "You are designing a microservices architecture. You need a way for different services to communicate asynchronously without losing messages if a service is temporarily down. Which service is most appropriate?",
+                "options": {
+                    "A": "Azure Service Bus",
+                    "B": "Azure Event Grid",
+                    "C": "Azure Relay",
+                    "D": "Azure ExpressRoute"
+                },
+                "answer": "A",
+                "detailedexplanation": "Azure Service Bus is a reliable enterprise messaging service with 'pull' based delivery. It supports queues for one-to-one communication and topics for one-to-many. It ensures messages are stored until the receiving service is ready to process them. Event Grid is better for near-real-time event-driven architectures where 'push' delivery is preferred."
+            },
+            {
+                "id": 17,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Medium",
+                "question": "Your company needs to store massive amounts of log data for 7 years to meet compliance requirements. The data will rarely be accessed. What is the most cost-effective storage solution?",
+                "options": {
+                    "A": "Azure SQL Database",
+                    "B": "Azure Blob Storage Archive Tier",
+                    "C": "Azure Files Premium",
+                    "D": "Azure Data Lake Storage Gen2"
+                },
+                "answer": "B",
+                "detailedexplanation": "The Archive tier of Azure Blob Storage has the lowest storage costs. It is specifically designed for data that can tolerate several hours of retrieval latency (rehydration) and is intended for long-term retention of data that is rarely accessed."
+            },
+            {
+                "id": 18,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Hard",
+                "question": "You need to secure a virtual network by filtering traffic based on source/destination IP address, port, and protocol. Which Azure resource should you implement?",
+                "options": {
+                    "A": "Network Security Group (NSG)",
+                    "B": "Azure Bastion",
+                    "C": "Azure Front Door",
+                    "D": "Azure Private Link"
+                },
+                "answer": "A",
+                "detailedexplanation": "A Network Security Group (NSG) contains security rules that allow or deny inbound and outbound network traffic. It is the fundamental tool for filtering traffic within a virtual network. Azure Bastion is for secure RDP/SSH access, not general traffic filtering."
+            },
+            {
+                "id": 19,
+                "domain": "Design Business Continuity Solutions",
+                "difficulty": "Medium",
+                "question": "You want to automate the deployment of identical environments (VNet, Subnets, VMs) across different Azure regions. What is the best approach?",
+                "options": {
+                    "A": "Azure Portal manual creation",
+                    "B": "Azure Resource Manager (ARM) templates or Bicep",
+                    "C": "Azure Advisor",
+                    "D": "Azure Policy"
+                },
+                "answer": "B",
+                "detailedexplanation": "ARM templates or Bicep files provide Infrastructure as Code (IaC). This allows you to define your infrastructure in a declarative way, ensuring that deployments are consistent, repeatable, and automated across any number of regions."
+            },
+            {
+                "id": 20,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Hard",
+                "question": "You are required to store secrets, such as API keys and database connection strings, in a way that allows applications to retrieve them securely without storing them in code. Which service should you use?",
+                "options": {
+                    "A": "Azure Storage Account",
+                    "B": "Azure Key Vault",
+                    "C": "Azure Managed Identity",
+                    "D": "Azure App Configuration"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Key Vault is designed specifically to securely store and manage secrets, keys, and certificates. Applications can use Managed Identities to authenticate to the Key Vault and retrieve these secrets at runtime, ensuring no sensitive data is hard-coded."
+            },
+            {
+                "id": 21,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Medium",
+                "question": "A web application requires a solution to protect against common web-based attacks like SQL injection and cross-site scripting. Which Azure component provides this protection?",
+                "options": {
+                    "A": "Azure Firewall",
+                    "B": "Network Security Group (NSG)",
+                    "C": "Web Application Firewall (WAF)",
+                    "D": "Azure Traffic Manager"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities. It can be deployed with Azure Application Gateway or Azure Front Door. NSGs and Azure Firewall work at the network/transport layer and do not inspect the HTTP/S payload for web-specific attacks."
+            },
+            {
+                "id": 22,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Hard",
+                "question": "You need to design a big data analytics solution that can process millions of events per second in real-time. Which combination of services should you recommend?",
+                "options": {
+                    "A": "Azure Event Hubs and Azure Stream Analytics",
+                    "B": "Azure Service Bus and Azure SQL Database",
+                    "C": "Azure Files and Azure Backup",
+                    "D": "Azure ExpressRoute and Azure Cosmos DB"
+                },
+                "answer": "A",
+                "detailedexplanation": "Azure Event Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second. Azure Stream Analytics is a real-time analytics and complex event-processing engine that can analyze and process the data streaming from Event Hubs."
+            },
+            {
+                "id": 23,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Medium",
+                "question": "You need to provide developers with a way to access Azure Virtual Machines over the internet without exposing the RDP and SSH ports to the public internet. What should you implement?",
+                "options": {
+                    "A": "Azure Load Balancer",
+                    "B": "Azure Bastion",
+                    "C": "Azure VPN Gateway",
+                    "D": "Azure Traffic Manager"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Bastion is a fully managed service that provides secure and seamless RDP and SSH access to your virtual machines directly in the Azure portal over SSL. It eliminates the need for a public IP address on the VMs and protects them from port scanning."
+            },
+            {
+                "id": 24,
+                "domain": "Design Business Continuity Solutions",
+                "difficulty": "Hard",
+                "question": "Your application uses a storage account. You need to ensure the data is available even if an entire Azure region experiences an outage. Which replication strategy should you use?",
+                "options": {
+                    "A": "Locally-redundant storage (LRS)",
+                    "B": "Zone-redundant storage (ZRS)",
+                    "C": "Geo-redundant storage (GRS)",
+                    "D": "Premium SSD storage"
+                },
+                "answer": "C",
+                "detailedexplanation": "Geo-redundant storage (GRS) replicates your data to a secondary region hundreds of miles away from the primary region. This provides protection against a complete regional failure. LRS and ZRS only provide redundancy within a single region (LRS in one data center, ZRS across multiple zones)."
+            },
+            {
+                "id": 25,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Hard",
+                "question": "You need to ensure that an Azure resource can only be moved to another resource group if the user has specific permissions, but you also want to prevent accidental deletion of the resource by anyone, including owners. What should you use?",
+                "options": {
+                    "A": "Azure RBAC 'Delete' permission removal",
+                    "B": "Azure Resource Lock (CanNotDelete)",
+                    "C": "Azure Policy",
+                    "D": "Azure Blueprints"
+                },
+                "answer": "B",
+                "detailedexplanation": "A 'CanNotDelete' Resource Lock prevents users from deleting a resource even if they are an Owner. While RBAC can limit who has delete permissions, a Lock acts as an extra layer of protection against accidental deletion by authorized users."
+            },
+            {
+                "id": 26,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Medium",
+                "question": "Which Azure service allows you to run code in a serverless environment where you only pay for the time your code is executing?",
+                "options": {
+                    "A": "Azure Virtual Machines",
+                    "B": "Azure Functions",
+                    "C": "Azure Container Instances",
+                    "D": "Azure App Service (Dedicated Plan)"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure. Under the Consumption plan, you are only billed for the time your code runs."
+            },
+            {
+                "id": 27,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Medium",
+                "question": "You need to monitor the health of your Azure resources and receive an email notification when a VM's CPU usage exceeds 90%. Which service should you use?",
+                "options": {
+                    "A": "Azure Advisor",
+                    "B": "Azure Monitor Metrics and Alerts",
+                    "C": "Azure Service Health",
+                    "D": "Azure Activity Log"
+                },
+                "answer": "B",
+                "detailedexplanation": "Azure Monitor collects metrics from resources. You can create an 'Alert Rule' based on a metric (like Percentage CPU). When the threshold is crossed, an 'Action Group' can be triggered to send an email, SMS, or call a webhook."
+            },
+            {
+                "id": 28,
+                "domain": "Design Data Storage Solutions",
+                "difficulty": "Hard",
+                "question": "You are choosing a database for an application that requires ACID compliance and must support complex joins and relational data. Which is the best fit?",
+                "options": {
+                    "A": "Azure Cosmos DB (SQL API)",
+                    "B": "Azure Table Storage",
+                    "C": "Azure SQL Database",
+                    "D": "Azure Blob Storage"
+                },
+                "answer": "C",
+                "detailedexplanation": "Azure SQL Database is a fully managed relational database service based on the latest stable version of Microsoft SQL Server. It provides full ACID (Atomicity, Consistency, Isolation, Durability) compliance and is designed for relational data and complex querying."
+            },
+            {
+                "id": 29,
+                "domain": "Design Infrastructure Solutions",
+                "difficulty": "Medium",
+                "question": "You need to connect two Azure Virtual Networks (VNets) in the same region so that resources in either VNet can communicate using private IP addresses. What is the most efficient method?",
+                "options": {
+                    "A": "VNet Peering",
+                    "B": "VPN Gateway",
+                    "C": "ExpressRoute",
+                    "D": "Azure Front Door"
+                },
+                "answer": "A",
+                "detailedexplanation": "VNet Peering connects two VNets through the Azure backbone network. Once peered, the two VNets appear as one for connectivity purposes. Traffic is private and does not traverse the internet, making it the most efficient and highest-bandwidth method."
+            },
+            {
+                "id": 30,
+                "domain": "Design Identity, Governance, and Monitoring Solutions",
+                "difficulty": "Hard",
+                "question": "Your company wants to implement a centralized management system for its Azure subscriptions. They want to apply policies and RBAC roles across multiple subscriptions at once. What should they use?",
+                "options": {
+                    "A": "Resource Groups",
+                    "B": "Management Groups",
+                    "C": "Azure Active Directory Tenants",
+                    "D": "Azure Blueprints"
+                },
+                "answer": "B",
+                "detailedexplanation": "Management Groups provide a level of scope above subscriptions. By organizing subscriptions into management groups, you can apply governance conditions (like Azure Policy and RBAC) that are inherited by all subscriptions within that group, ensuring consistent management at scale."
+            }
+        ],
+        "outro_script": {
+            "closing": "That wraps up our 30-question mock exam for the Azure Solutions Architect Expert certification. How did you do? Remember, the AZ-305 isn't just about memorization; it's about understanding how to design solutions that are secure, scalable, and cost-effective.",
+            "cta_final": "If you found this helpful, please give this video a thumbs up and subscribe to the channel. If you want to take the full exam with even more challenging questions, click the link in the description.",
+            "next_steps": "Next, I recommend watching our deep dive into Azure Data Storage solutions or checking out our guide on Azure Networking best practices. Good luck with your studies!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds",
+            "transition_effect_hints": "Use a smooth 'slide' transition between the question and the answer slide. Use a ticking sound during the 15-second timer to build suspense."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "PCEP Certified Entry-Level Python Programmer Full Practice Test",
+                "Python PCEP Certification Exam Prep - 30 Real Exam Questions",
+                "How to Pass PCEP-30-02 Exam - Python Institute Certification Guide",
+                "PCEP Mock Exam Questions and Detailed Explanations",
+                "Certified Entry-Level Python Programmer Practice Questions",
+                "Python Institute PCEP Exam Study Guide and Practice Test",
+                "Crack the PCEP Certification - Essential Python Exam Prep",
+                "Top 30 PCEP Practice Questions for Python Certification",
+                "Ultimate PCEP Exam Review - Questions and Answers",
+                "PCEP Certification Training - Python Entry Level Practice Exam"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to jumpstart your career in software development by becoming a Certified Entry-Level Python Programmer? Most candidates fail because they focus on syntax but miss the logic used in the actual exam.",
+                "summary": "In this video, we cover 30 comprehensive practice questions that mirror the actual PCEP exam structure, covering basic concepts, data types, control flow, and functions.",
+                "cta_intro": "Before we begin, make sure to grab a pen and paper to track your score.",
+                "checkfullexamlinkindescription": "If you want to practice with full-length timed exams, check out our highly-rated mock test course link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/qWnErY",
+                "youtubetitle": "PCEP Certified Entry-Level Python Programmer Practice Exam - 30 Questions & Explanations",
+                "description": "Unlock your potential with this comprehensive PCEP - Certified Entry-Level Python Programmer practice test. This video covers the core domains of the PCEP exam including Computer Programming and Python Fundamentals, Control Flow, Data Collections, and Functions. Each question includes a detailed explanation to help you understand the 'why' behind every answer. Perfect for beginners looking to validate their Python skills.",
+                "tags": "PCEP, Python Certification, Python Institute, Python Programming, Entry Level Python, PCEP Exam Prep, Python Mock Test, Python MCQ, Learn Python, Python for Beginners",
+                "hashtags": [
+                    "#PCEP",
+                    "#PythonCertification",
+                    "#PythonProgramming",
+                    "#Coding",
+                    "#LearnPython",
+                    "#PythonInstitute"
+                ],
+                "keywords": [
+                    "PCEP certification questions",
+                    "Python entry level exam",
+                    "Python Institute PCEP practice",
+                    "PCEP-30-02 study guide",
+                    "Python programming basics MCQ",
+                    "Python mock exam with explanations"
+                ],
+                "mostsearchedongoogle": [
+                    "PCEP exam questions",
+                    "PCEP-30-02 practice test",
+                    "Python Institute certification cost",
+                    "PCEP exam syllabus",
+                    "Is PCEP certification worth it",
+                    "Python entry level certification",
+                    "PCEP vs PCAP",
+                    "PCEP free practice exam",
+                    "Python programming certification for beginners",
+                    "PCEP study material"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "Which of the following is a correct name for a Python variable?",
+                "options": {
+                    "A": "2_variable",
+                    "B": "my-variable",
+                    "C": "_my_variable",
+                    "D": "my variable"
+                },
+                "answer": "C",
+                "detailedexplanation": "In Python, variable names must start with a letter or an underscore (_). They cannot start with a digit (Rule A is wrong). They can only contain alpha-numeric characters and underscores (A-z, 0-9, and _). Hyphens (Rule B) and spaces (Rule D) are not allowed in variable names."
+            },
+            {
+                "id": 2,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Medium",
+                "question": "What is the output of the following snippet?\nprint(1 // 2 * 3)",
+                "options": {
+                    "A": "0",
+                    "B": "1.5",
+                    "C": "0.166",
+                    "D": "1"
+                },
+                "answer": "A",
+                "detailedexplanation": "Python follows operator precedence. Floor division (//) and multiplication (*) have the same priority and are evaluated from left to right. First, 1 // 2 results in 0 (since floor division discards the fractional part). Then, 0 * 3 results in 0."
+            },
+            {
+                "id": 3,
+                "domain": "Control Flow – Conditional Blocks and Loops",
+                "difficulty": "Medium",
+                "question": "What is the output of the following code?\ni = 5\nwhile i > 0:\n    i -= 1\n    if i == 2:\n        break\nelse:\n    print(\"Done\")",
+                "options": {
+                    "A": "Done",
+                    "B": "No output",
+                    "C": "i",
+                    "D": "2"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'else' block in a loop is only executed if the loop completes all its iterations without being interrupted by a 'break' statement. In this case, when i reaches 2, the 'break' statement is triggered, causing the program to exit the loop immediately and skip the 'else' block. Therefore, nothing is printed."
+            },
+            {
+                "id": 4,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Easy",
+                "question": "Which of the following is true about Python tuples?",
+                "options": {
+                    "A": "Tuples are mutable.",
+                    "B": "Tuples use square brackets [ ].",
+                    "C": "Tuples are immutable.",
+                    "D": "Tuples cannot store different data types."
+                },
+                "answer": "C",
+                "detailedexplanation": "Tuples are immutable sequences in Python, meaning once they are created, their elements cannot be changed, added, or removed. Lists are mutable (A), lists use square brackets while tuples use parentheses (B), and both can store mixed data types (D)."
+            },
+            {
+                "id": 5,
+                "domain": "Functions and Modules",
+                "difficulty": "Medium",
+                "question": "What is the output of the following code?\ndef fun(x):\n    return x + x\n\nprint(fun(fun(2)))",
+                "options": {
+                    "A": "4",
+                    "B": "8",
+                    "C": "2",
+                    "D": "16"
+                },
+                "answer": "B",
+                "detailedexplanation": "The inner function call fun(2) is executed first, returning 2 + 2 = 4. This result is then passed to the outer function call fun(4), which returns 4 + 4 = 8. This demonstrates how function returns can be used as arguments for other functions."
+            },
+            {
+                "id": 6,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "What is the output of the expression 2 ** 3 ** 2?",
+                "options": {
+                    "A": "64",
+                    "B": "512",
+                    "C": "36",
+                    "D": "81"
+                },
+                "answer": "B",
+                "detailedexplanation": "In Python, the exponentiation operator (**) is right-associative. This means the expression is evaluated from right to left: 3 ** 2 is calculated first (9), and then 2 ** 9 is calculated, which equals 512."
+            },
+            {
+                "id": 7,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Medium",
+                "question": "What is the output of the following code?\nlst = [1, 2, 3, 4]\ndel lst[1:3]\nprint(lst)",
+                "options": {
+                    "A": "[1, 4]",
+                    "B": "[1, 2, 4]",
+                    "C": "[1, 3, 4]",
+                    "D": "[4]"
+                },
+                "answer": "A",
+                "detailedexplanation": "Slicing in Python is start-inclusive and end-exclusive. lst[1:3] refers to elements at index 1 and 2 (which are 2 and 3). The 'del' statement removes these elements. After deletion, the list contains [1, 4]."
+            },
+            {
+                "id": 8,
+                "domain": "Control Flow – Conditional Blocks and Loops",
+                "difficulty": "Medium",
+                "question": "How many times will the following loop execute?\nfor i in range(1, 10, 2):\n    print(i)",
+                "options": {
+                    "A": "10",
+                    "B": "5",
+                    "C": "9",
+                    "D": "4"
+                },
+                "answer": "B",
+                "detailedexplanation": "The range(start, stop, step) function generates numbers starting from 'start' up to, but not including, 'stop', incrementing by 'step'. Here, it generates: 1, 3, 5, 7, 9. That is exactly 5 numbers, so the loop executes 5 times."
+            },
+            {
+                "id": 9,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "Which function is used to get the length of a string in Python?",
+                "options": {
+                    "A": "size()",
+                    "B": "count()",
+                    "C": "len()",
+                    "D": "length()"
+                },
+                "answer": "C",
+                "detailedexplanation": "The built-in len() function returns the number of items in an object. When the object is a string, it returns the number of characters in the string."
+            },
+            {
+                "id": 10,
+                "domain": "Functions and Modules",
+                "difficulty": "Medium",
+                "question": "What will be the output of the following code?\ndef test(a, b=2):\n    return a * b\n\nprint(test(3))",
+                "options": {
+                    "A": "6",
+                    "B": "3",
+                    "C": "Error",
+                    "D": "None"
+                },
+                "answer": "A",
+                "detailedexplanation": "Python supports default argument values. In the function definition, 'b' has a default value of 2. When test(3) is called, 3 is assigned to 'a', and since no second argument is provided, 'b' uses its default value of 2. 3 * 2 = 6."
+            },
+            {
+                "id": 11,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Medium",
+                "question": "Which of the following methods adds an element to the end of a list?",
+                "options": {
+                    "A": "add()",
+                    "B": "insert()",
+                    "C": "append()",
+                    "D": "extend()"
+                },
+                "answer": "C",
+                "detailedexplanation": "The append() method adds a single item to the end of the list. insert() adds an item at a specific index, and extend() adds all elements of an iterable to the end of the list."
+            },
+            {
+                "id": 12,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "What is the result of the following comparison?\n'apple' > 'Apple'",
+                "options": {
+                    "A": "True",
+                    "B": "False",
+                    "C": "Error",
+                    "D": "None"
+                },
+                "answer": "A",
+                "detailedexplanation": "In Python, string comparison is based on the Unicode/ASCII values of characters. Lowercase letters have higher numerical values (e.g., 'a' is 97) than uppercase letters (e.g., 'A' is 65). Therefore, 'apple' is greater than 'Apple'."
+            },
+            {
+                "id": 13,
+                "domain": "Control Flow – Conditional Blocks and Loops",
+                "difficulty": "Medium",
+                "question": "What does the 'continue' statement do in a loop?",
+                "options": {
+                    "A": "Terminates the loop completely.",
+                    "B": "Skips the rest of the current iteration and moves to the next one.",
+                    "C": "Restarts the loop from the first iteration.",
+                    "D": "Exits the current function."
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'continue' statement is used to skip the remaining code inside the loop for the current iteration only. The loop does not terminate; instead, it immediately proceeds to the next cycle."
+            },
+            {
+                "id": 14,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Hard",
+                "question": "What is the output of the following snippet?\ndct = {'one': 1, 'two': 2}\nlst = dct['one']\nprint(lst)",
+                "options": {
+                    "A": "{'one': 1}",
+                    "B": "1",
+                    "C": "one",
+                    "D": "KeyError"
+                },
+                "answer": "B",
+                "detailedexplanation": "Dictionaries store data in key-value pairs. You access values by referencing their corresponding keys in square brackets. dct['one'] accesses the value associated with the key 'one', which is the integer 1."
+            },
+            {
+                "id": 15,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "What will be the output of the following code?\nx = 1\ny = 2\nx, y = y, x\nprint(x, y)",
+                "options": {
+                    "A": "1 2",
+                    "B": "2 1",
+                    "C": "2 2",
+                    "D": "1 1"
+                },
+                "answer": "B",
+                "detailedexplanation": "This is a Pythonic way of swapping two variables. The expression on the right (y, x) creates a tuple (2, 1). This tuple is then unpacked into the variables x and y, effectively swapping their values."
+            },
+            {
+                "id": 16,
+                "domain": "Functions and Modules",
+                "difficulty": "Medium",
+                "question": "What is the value of x after the code is executed?\nx = 10\ndef change():\n    global x\n    x = 20\nchange()",
+                "options": {
+                    "A": "10",
+                    "B": "20",
+                    "C": "None",
+                    "D": "Error"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'global' keyword allows a function to modify a variable defined outside the function's scope. Without 'global', Python would create a new local variable 'x'. With it, the global 'x' is updated to 20."
+            },
+            {
+                "id": 17,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Medium",
+                "question": "What is the output of print(type(1 / 1))?",
+                "options": {
+                    "A": "<class 'int'>",
+                    "B": "<class 'float'>",
+                    "C": "<class 'double'>",
+                    "D": "<class 'number'>"
+                },
+                "answer": "B",
+                "detailedexplanation": "In Python 3, the division operator (/) always returns a floating-point number, even if the division results in a whole number. 1 / 1 equals 1.0, which is of type 'float'."
+            },
+            {
+                "id": 18,
+                "domain": "Control Flow – Conditional Blocks and Loops",
+                "difficulty": "Easy",
+                "question": "Which logical operator returns True if at least one operand is True?",
+                "options": {
+                    "A": "and",
+                    "B": "not",
+                    "C": "or",
+                    "D": "xor"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'or' operator is a logical operator that returns True if any of the expressions being compared are True. If both are False, it returns False."
+            },
+            {
+                "id": 19,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Medium",
+                "question": "What is the output of the following code?\ns = \"Python\"\nprint(s[1:4])",
+                "options": {
+                    "A": "Pyth",
+                    "B": "yth",
+                    "C": "ytho",
+                    "D": "yt"
+                },
+                "answer": "B",
+                "detailedexplanation": "String slicing works similarly to list slicing. Indices start at 0. Index 1 is 'y'. The slice ends at index 4 ('o'), but the end index is exclusive. So it takes characters at indices 1, 2, and 3: 'y', 't', 'h'."
+            },
+            {
+                "id": 20,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "What is the correct way to write a multi-line comment in Python?",
+                "options": {
+                    "A": "// comment //",
+                    "B": "/* comment */",
+                    "C": "# comment",
+                    "D": "''' comment '''"
+                },
+                "answer": "D",
+                "detailedexplanation": "While Python doesn't have a specific multi-line comment syntax, triple quotes (''' or \"\"\") are commonly used for this purpose because they allow strings to span multiple lines and are ignored if not assigned to a variable."
+            },
+            {
+                "id": 21,
+                "domain": "Functions and Modules",
+                "difficulty": "Medium",
+                "question": "What is the purpose of the 'None' value in Python?",
+                "options": {
+                    "A": "To represent the number 0.",
+                    "B": "To represent the absence of a value or a null value.",
+                    "C": "To represent a False boolean.",
+                    "D": "To delete a variable."
+                },
+                "answer": "B",
+                "detailedexplanation": "None is a special constant in Python that represents the absence of a value or a null object. It is often returned by functions that don't have an explicit return statement."
+            },
+            {
+                "id": 22,
+                "domain": "Control Flow – Conditional Blocks and Loops",
+                "difficulty": "Medium",
+                "question": "What will be the output of the following code?\nfor i in range(1):\n    print(i)\nelse:\n    print(\"Else\")",
+                "options": {
+                    "A": "0",
+                    "B": "Else",
+                    "C": "0\nElse",
+                    "D": "Error"
+                },
+                "answer": "C",
+                "detailedexplanation": "The range(1) generates the number 0. The loop runs once, printing 0. Since the loop finished normally (without a break), the 'else' block executes and prints 'Else'."
+            },
+            {
+                "id": 23,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Medium",
+                "question": "How do you check if the key 'a' exists in dictionary 'd'?",
+                "options": {
+                    "A": "d.contains('a')",
+                    "B": "'a' in d",
+                    "C": "if d['a']:",
+                    "D": "d.has_key('a')"
+                },
+                "answer": "B",
+                "detailedexplanation": "The 'in' operator is the standard way to check for the existence of a key in a dictionary. Using d['a'] directly (Option C) would raise a KeyError if the key doesn't exist."
+            },
+            {
+                "id": 24,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "What is the output of print(2 + 3 * 5)?",
+                "options": {
+                    "A": "25",
+                    "B": "17",
+                    "C": "10",
+                    "D": "30"
+                },
+                "answer": "B",
+                "detailedexplanation": "Operator precedence dictates that multiplication (*) happens before addition (+). So, 3 * 5 = 15, then 2 + 15 = 17."
+            },
+            {
+                "id": 25,
+                "domain": "Functions and Modules",
+                "difficulty": "Hard",
+                "question": "What is the output of the following code?\ndef my_func(a, b):\n    return a[0] + b[0]\n\nprint(my_func([10], [20]))",
+                "options": {
+                    "A": "30",
+                    "B": "[10, 20]",
+                    "C": "1020",
+                    "D": "Error"
+                },
+                "answer": "A",
+                "detailedexplanation": "The function takes two lists. a[0] is the first element of the first list (10), and b[0] is the first element of the second list (20). Their sum is 10 + 20 = 30."
+            },
+            {
+                "id": 26,
+                "domain": "Control Flow – Conditional Blocks and Loops",
+                "difficulty": "Medium",
+                "question": "Which of the following is used to handle exceptions in Python?",
+                "options": {
+                    "A": "try...except",
+                    "B": "catch...throw",
+                    "C": "if...then",
+                    "D": "error...handle"
+                },
+                "answer": "A",
+                "detailedexplanation": "Python uses the try...except block to handle errors (exceptions). The code inside the 'try' block is executed, and if an error occurs, the code inside the 'except' block runs."
+            },
+            {
+                "id": 27,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Easy",
+                "question": "What is the result of '1' + '1'?",
+                "options": {
+                    "A": "2",
+                    "B": "11",
+                    "C": "Error",
+                    "D": "None"
+                },
+                "answer": "B",
+                "detailedexplanation": "When the + operator is used with strings, it performs concatenation. Since '1' and '1' are string literals, they are joined together to form the string '11'."
+            },
+            {
+                "id": 28,
+                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "difficulty": "Hard",
+                "question": "What happens when you try to change an element in a tuple?",
+                "options": {
+                    "A": "The tuple is updated.",
+                    "B": "A new tuple is created.",
+                    "C": "It raises a TypeError.",
+                    "D": "Nothing happens."
+                },
+                "answer": "C",
+                "detailedexplanation": "Because tuples are immutable, Python does not allow assignment to its individual elements. Attempting to do so results in a TypeError."
+            },
+            {
+                "id": 29,
+                "domain": "Functions and Modules",
+                "difficulty": "Medium",
+                "question": "Which keyword is used to return a value from a function?",
+                "options": {
+                    "A": "give",
+                    "B": "back",
+                    "C": "return",
+                    "D": "send"
+                },
+                "answer": "C",
+                "detailedexplanation": "The 'return' statement is used to exit a function and send a result back to the caller."
+            },
+            {
+                "id": 30,
+                "domain": "Computer Programming and Python Fundamentals",
+                "difficulty": "Medium",
+                "question": "What is the output of print(bool(\"\"))?",
+                "options": {
+                    "A": "True",
+                    "B": "False",
+                    "C": "None",
+                    "D": "Error"
+                },
+                "answer": "B",
+                "detailedexplanation": "In Python, empty sequences (like strings, lists, or tuples) and the number 0 are evaluated as False in a boolean context. An empty string \"\" is thus False."
+            }
+        ],
+        "outro_script": {
+            "closing": "That concludes our 30-question PCEP practice test! How many did you get right? Let us know your score in the comments.",
+            "cta_final": "If you found this helpful, hit the like button and subscribe for more Python certification content.",
+            "next_steps": "Don't forget to check the description for the full-length practice exams on Udemy to ensure you are 100% exam-ready."
+        },
+        "on_screen_elements": {
+            "timer_duration": "10 seconds per question",
+            "transition_effect_hints": "Subtle slide transition between questions; highlight correct answer in green after the timer ends."
+        }
+    },
+    {
+        "video_assets": {
+            "titles": [
+                "PMP Exam Questions and Answers Full Training",
+                "PMP Mock Exam Prep: 30 Real-World Practice Questions",
+                "How to Pass the PMP Exam on Your First Attempt",
+                "PMP Practice Test: People, Process, and Business Environment",
+                "Ultimate PMP Exam Review: Detailed Explanations Included",
+                "PMP Certification Training: Master the PMP Exam Content",
+                "Pass the PMP: 30 Challenging Mock Exam Questions",
+                "Project Management Professional (PMP) Exam Simulator",
+                "PMP Exam Questions 2024: Predictive, Agile, and Hybrid",
+                "Ace the PMP Exam: Comprehensive Practice Questions"
+            ],
+            "intro_script": {
+                "hook": "Are you ready to tackle the toughest project management challenge of your career? Most PMP candidates fail because they don't practice with questions that mimic the actual situational logic of the exam.",
+                "summary": "In this video, we are breaking down 30 high-yield PMP mock exam questions covering the three domains: People, Process, and Business Environment. Each question includes a detailed explanation to help you understand the 'why' behind the correct answer.",
+                "cta_intro": "Before we dive in, make sure to grab a notepad and keep track of your score.",
+                "checkfullexamlinkindescription": "For a full-length, timed PMP mock exam experience, check out the comprehensive course link in the description below."
+            },
+            "youtube_metadata": {
+                "courselink": "https://trk.udemy.com/m4gXDM",
+                "youtubetitle": "PMP Exam Questions and Answers - Full PMP Mock Exam Practice Test",
+                "description": "Master the PMP exam with this comprehensive practice test! We cover 30 essential questions across Agile, Waterfall, and Hybrid methodologies. This video is designed to help you pass the Project Management Professional certification by explaining the PMI mindset.\n\nTopics covered: \n- People Domain (Conflict, Leadership, Teams)\n- Process Domain (Scope, Schedule, Risk, Procurement)\n- Business Environment Domain (Compliance, Value)\n\nEnroll in the full PMP Exam Simulator here: https://trk.udemy.com/m4gXDM",
+                "tags": "PMP exam, PMP practice questions, PMP mock exam, Project Management Professional, PMP certification, PMI, PMP training, Agile PMP questions, PMP exam prep, PMP 2024",
+                "hashtags": [
+                    "#PMP",
+                    "#ProjectManagement",
+                    "#PMPExam",
+                    "#PMBOK",
+                    "#PMPPrep",
+                    "#Agile"
+                ],
+                "keywords": [
+                    "PMP Exam Questions",
+                    "PMP Mock Test",
+                    "Project Management Certification",
+                    "PMP Practice Exam",
+                    "PMI Exam Prep",
+                    "Agile Practice Guide",
+                    "PMP People Domain",
+                    "PMP Process Domain",
+                    "How to pass PMP",
+                    "PMP Situational Questions"
+                ],
+                "mostsearchedongoogle": [
+                    "PMP exam questions and answers",
+                    "PMP mock exam free",
+                    "PMP certification requirements",
+                    "hardest PMP questions",
+                    "PMP agile practice questions",
+                    "PMP exam passing score",
+                    "PMI exam prep 2024",
+                    "PMP situational questions tips",
+                    "PMP exam simulator",
+                    "Project Management Professional exam guide"
+                ]
+            }
+        },
+        "mcq_data": [
+            {
+                "id": 1,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "Two team members are arguing over the technical architecture of a new feature. The conflict is starting to affect the team's morale. What should the project manager do first?",
+                "options": {
+                    "A": "Direct the team members to use a specific architecture to save time.",
+                    "B": "Ask the team members to meet in private and settle their differences.",
+                    "C": "Facilitate a meeting between the two to discuss the pros and cons of each approach.",
+                    "D": "Escalate the issue to the functional manager."
+                },
+                "answer": "C",
+                "detailedexplanation": "According to the PMBOK guide and the 'People' domain, conflict management is a key responsibility. The project manager should first attempt to facilitate a collaborative solution (Win-Win). Option C allows the team members to participate in the decision-making process by evaluating technical merits. Option A is 'Forcing' and should be avoided unless necessary. Option B avoids the issue, and Option D is unnecessary escalation."
+            },
+            {
+                "id": 2,
+                "domain": "Process",
+                "difficulty": "Hard",
+                "question": "During a project's execution phase, a key stakeholder requests a change that will increase the project scope but claims it is critical for business value. The project is being managed using a predictive methodology. What is the next step?",
+                "options": {
+                    "A": "Immediately update the project management plan to include the new scope.",
+                    "B": "Inform the stakeholder that no changes can be made during execution.",
+                    "C": "Analyze the impact of the change on project constraints and submit a change request.",
+                    "D": "Ask the team to start working on the change while the paperwork is processed."
+                },
+                "answer": "C",
+                "detailedexplanation": "In a predictive (Waterfall) environment, any change to the scope baseline must go through the formal Integrated Change Control process. The project manager must first assess the impact on cost, time, and quality before submitting the request to the Change Control Board (CCB). Options A and D bypass formal control, while B is incorrect because changes are allowed if they follow the process."
+            },
+            {
+                "id": 3,
+                "domain": "Business Environment",
+                "difficulty": "Medium",
+                "question": "A project is nearing completion when a new government regulation is passed that affects the product's compliance requirements. What should the project manager do?",
+                "options": {
+                    "A": "Ignore the regulation as the project was started before it was passed.",
+                    "B": "Assess the impact of the new regulation on the project and the product.",
+                    "C": "Immediately stop all work and wait for legal advice.",
+                    "D": "Ask the sponsor for more budget to fix the compliance issues."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Business Environment domain requires project managers to support compliance. The first step when a new regulation appears is to evaluate how it impacts the project's scope, deliverables, and success criteria. Once the impact is understood, the PM can follow the change control process to incorporate necessary adjustments."
+            },
+            {
+                "id": 4,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "An agile team is struggling to finish tasks within a sprint. The velocity is consistently lower than planned. What should the Scrum Master do during the Retrospective?",
+                "options": {
+                    "A": "Tell the team they must work overtime to meet the sprint goals.",
+                    "B": "Identify the root cause of the low velocity and brainstorm improvements with the team.",
+                    "C": "Remove the underperforming team members.",
+                    "D": "Reduce the length of the sprints."
+                },
+                "answer": "B",
+                "detailedexplanation": "In Agile, the Retrospective is the primary vehicle for process improvement. The Scrum Master acts as a servant leader to help the team identify bottlenecks and solve their own problems. Forcing overtime (A) or firing members (C) goes against Agile values. Changing sprint length (D) doesn't solve the underlying performance issue."
+            },
+            {
+                "id": 5,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "A project manager is leading a global team with members in different time zones. Communication is becoming fragmented. What is the best tool to use?",
+                "options": {
+                    "A": "A project management information system (PMIS) with a centralized communication hub.",
+                    "B": "Daily mandatory video calls at 2:00 AM for the offshore team.",
+                    "C": "Relying solely on email communication.",
+                    "D": "Allowing each team to work independently without synchronization."
+                },
+                "answer": "A",
+                "detailedexplanation": "A PMIS or a centralized collaboration platform helps bridge the gap in virtual teams by providing a single source of truth and asynchronous communication options. Mandatory 2 AM calls (B) harm morale and well-being. Email (C) is often too slow for complex coordination, and no synchronization (D) leads to silos."
+            },
+            {
+                "id": 6,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "A project is in the closing phase. What is the most important activity to perform before the project is considered officially closed?",
+                "options": {
+                    "A": "Throw a celebration party for the team.",
+                    "B": "Update the lessons learned repository and obtain formal acceptance.",
+                    "C": "Release the team members to their functional managers.",
+                    "D": "Archive the project charter."
+                },
+                "answer": "B",
+                "detailedexplanation": "The closing process requires the transfer of the final product, service, or result, and the archiving of project documents. Updating lessons learned and obtaining formal sign-off from the customer/sponsor are critical steps to ensure the project's knowledge is captured for the organization and that legal/contractual obligations are met."
+            },
+            {
+                "id": 7,
+                "domain": "People",
+                "difficulty": "Easy",
+                "question": "A project manager uses a 'servant leadership' style. Which of the following best describes this approach?",
+                "options": {
+                    "A": "Focusing on the needs of the team and removing impediments.",
+                    "B": "Making all decisions for the team to ensure efficiency.",
+                    "C": "Focusing strictly on the project schedule and budget.",
+                    "D": "Delegating all responsibilities to the sponsor."
+                },
+                "answer": "A",
+                "detailedexplanation": "Servant leadership is a cornerstone of Agile and modern project management. The leader’s primary role is to support the team, facilitate their work, remove blockers, and ensure the team has the resources they need to succeed."
+            },
+            {
+                "id": 8,
+                "domain": "Process",
+                "difficulty": "Hard",
+                "question": "During a risk assessment, the team identifies a high-impact risk that has a very low probability of occurring. What is the best strategy for this risk?",
+                "options": {
+                    "A": "Avoid the risk by changing the project plan.",
+                    "B": "Mitigate the risk by taking early action.",
+                    "C": "Accept the risk and establish a contingency reserve.",
+                    "D": "Transfer the risk to a third party."
+                },
+                "answer": "C",
+                "detailedexplanation": "For risks with low probability but high impact, 'Acceptance' is often the most cost-effective strategy, specifically by setting aside a contingency reserve (active acceptance). Avoiding or mitigating might cost more than the risk is worth given its rarity."
+            },
+            {
+                "id": 9,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "An influential stakeholder is unhappy with the project's progress and is complaining to senior management. The stakeholder's name is not in the stakeholder engagement plan. What should the PM do?",
+                "options": {
+                    "A": "Tell senior management that the stakeholder is not relevant.",
+                    "B": "Add the stakeholder to the register and analyze their needs and influence.",
+                    "C": "Ignore the stakeholder and focus on the project team.",
+                    "D": "Ask the sponsor to handle the stakeholder."
+                },
+                "answer": "B",
+                "detailedexplanation": "Stakeholder identification is an ongoing process. If a new or overlooked stakeholder emerges, the PM must immediately add them to the Stakeholder Register, analyze their power/interest, and update the Engagement Plan to address their concerns."
+            },
+            {
+                "id": 10,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "Which of the following describes the 'Definition of Done' (DoD)?",
+                "options": {
+                    "A": "A list of features the customer wants.",
+                    "B": "A checklist of technical requirements that must be met for a user story to be considered complete.",
+                    "C": "The project's final deadline.",
+                    "D": "The criteria for starting a new sprint."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Definition of Done (DoD) is a shared understanding within an Agile team of what constitutes a completed increment of work. It ensures quality and consistency by listing requirements like testing, documentation, and peer reviews."
+            },
+            {
+                "id": 11,
+                "domain": "Business Environment",
+                "difficulty": "Hard",
+                "question": "A project manager is reviewing the business case and notices that the expected ROI has dropped significantly due to market changes. What should the PM do?",
+                "options": {
+                    "A": "Continue the project as planned since it was already approved.",
+                    "B": "Close the project immediately.",
+                    "C": "Notify the sponsor and recommend a re-evaluation of the project's viability.",
+                    "D": "Cut the project budget to increase the ROI."
+                },
+                "answer": "C",
+                "detailedexplanation": "Project managers must ensure that projects continue to provide business value. If the business case is no longer valid, the PM must inform the sponsor so they can decide whether to continue, pivot, or terminate the project."
+            },
+            {
+                "id": 12,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "The project team is using a Kanban board to manage work. They notice that the 'Testing' column is always full, while the 'In Development' column is empty. What is this an example of?",
+                "options": {
+                    "A": "Efficiency.",
+                    "B": "A bottleneck.",
+                    "C": "Resource leveling.",
+                    "D": "Scope creep."
+                },
+                "answer": "B",
+                "detailedexplanation": "In Kanban, when work piles up in one stage of the process, it is called a bottleneck. It indicates that the capacity of the testing phase is lower than the input from development, slowing down the overall flow (Lead Time)."
+            },
+            {
+                "id": 13,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "A team member is not meeting performance expectations. How should the project manager handle this?",
+                "options": {
+                    "A": "Discuss the performance issue privately with the team member.",
+                    "B": "Criticize the team member during the daily stand-up.",
+                    "C": "Wait for the annual performance review.",
+                    "D": "Assign the team member's work to someone else."
+                },
+                "answer": "A",
+                "detailedexplanation": "Constructive feedback should always be given in private. The PM should address performance issues early to identify if the member needs training, more resources, or clearer instructions."
+            },
+            {
+                "id": 14,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "In a hybrid project, the hardware is developed using Waterfall, and the software is developed using Agile. How should the PM integrate these?",
+                "options": {
+                    "A": "Force the hardware team to use Agile.",
+                    "B": "Force the software team to use Waterfall.",
+                    "C": "Use 'touch points' or milestones to synchronize the two workstreams.",
+                    "D": "Manage them as two entirely separate projects."
+                },
+                "answer": "C",
+                "detailedexplanation": "Hybrid projects require integration. Using milestones in the Waterfall schedule that align with Agile sprint releases allows the two methodologies to coexist and provide a unified delivery."
+            },
+            {
+                "id": 15,
+                "domain": "Process",
+                "difficulty": "Hard",
+                "question": "A project manager has a SPI of 0.80 and a CPI of 1.20. What is the status of the project?",
+                "options": {
+                    "A": "Ahead of schedule and under budget.",
+                    "B": "Behind schedule and over budget.",
+                    "C": "Behind schedule and under budget.",
+                    "D": "Ahead of schedule and over budget."
+                },
+                "answer": "C",
+                "detailedexplanation": "SPI (Schedule Performance Index) < 1.0 means the project is behind schedule. CPI (Cost Performance Index) > 1.0 means the project is under budget. Therefore, 0.80 SPI and 1.20 CPI indicate the project is slow but cost-efficient."
+            },
+            {
+                "id": 16,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "What is the primary goal of a 'Team Charter'?",
+                "options": {
+                    "A": "To list the project's technical requirements.",
+                    "B": "To define the team values, communication guidelines, and conflict resolution processes.",
+                    "C": "To assign specific tasks to team members.",
+                    "D": "To document the project's budget."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Team Charter is a document created by the team to establish 'ground rules.' It helps in setting expectations regarding behavior, decision-making, and communication, which reduces friction during the 'Storming' phase."
+            },
+            {
+                "id": 17,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "A customer wants to add a new feature to an Agile project. When should this feature be added?",
+                "options": {
+                    "A": "In the middle of the current sprint.",
+                    "B": "To the Product Backlog for prioritization.",
+                    "C": "Only after the current project is finished.",
+                    "D": "By the PM without telling the team."
+                },
+                "answer": "B",
+                "detailedexplanation": "In Agile, new requirements go into the Product Backlog. The Product Owner then prioritizes them. The team only takes on new work at the start of the next Sprint during Sprint Planning."
+            },
+            {
+                "id": 18,
+                "domain": "Business Environment",
+                "difficulty": "Medium",
+                "question": "Which document authorizes the Project Manager to apply organizational resources to project activities?",
+                "options": {
+                    "A": "Project Management Plan",
+                    "B": "Business Case",
+                    "C": "Project Charter",
+                    "D": "Statement of Work"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Project Charter is the document that formally initiates the project and gives the project manager the authority to use company resources."
+            },
+            {
+                "id": 19,
+                "domain": "People",
+                "difficulty": "Hard",
+                "question": "During a project, the PM notices that some team members are more experienced than others, leading to a knowledge gap. What should the PM do?",
+                "options": {
+                    "A": "Only give the difficult tasks to the experienced members.",
+                    "B": "Ignore the gap as it is natural.",
+                    "C": "Encourage pair programming or mentoring to facilitate knowledge transfer.",
+                    "D": "Replace the less experienced members."
+                },
+                "answer": "C",
+                "detailedexplanation": "A servant leader promotes the growth of the team. Mentoring and pair work are excellent ways to build 'T-shaped' skills and ensure the team is cross-functional and resilient."
+            },
+            {
+                "id": 20,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "What is the 'Critical Path' in a project schedule?",
+                "options": {
+                    "A": "The list of the most important tasks.",
+                    "B": "The sequence of activities that represents the longest path through a project, which determines the shortest possible duration.",
+                    "C": "The path with the most resources assigned.",
+                    "D": "The path that includes the project's buffer."
+                },
+                "answer": "B",
+                "detailedexplanation": "The critical path is the longest duration path through the network diagram. Any delay in a critical path activity will delay the entire project. It has zero 'float' or 'slack'."
+            },
+            {
+                "id": 21,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "The team is estimating user stories. They use a technique where they hold up cards with Fibonacci numbers. What is this technique called?",
+                "options": {
+                    "A": "Parametric Estimating",
+                    "B": "Bottom-up Estimating",
+                    "C": "Planning Poker",
+                    "D": "Analogous Estimating"
+                },
+                "answer": "C",
+                "detailedexplanation": "Planning Poker is a consensus-based technique used in Agile to estimate the relative effort or size of user stories. It uses the Fibonacci sequence to account for uncertainty in larger tasks."
+            },
+            {
+                "id": 22,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "An emotional intelligence (EI) focused project manager would do which of the following?",
+                "options": {
+                    "A": "Focus only on logical data and ignore team feelings.",
+                    "B": "Self-regulate their own emotions and empathize with the team.",
+                    "C": "Avoid all conflicts to keep the team happy.",
+                    "D": "Use their power to force compliance."
+                },
+                "answer": "B",
+                "detailedexplanation": "EI involves self-awareness, self-regulation, motivation, empathy, and social skills. A PM with high EI can manage their own stress and understand the emotional state of the team to maintain a productive environment."
+            },
+            {
+                "id": 23,
+                "domain": "Process",
+                "difficulty": "Hard",
+                "question": "You are managing a project with a fixed-price contract. The customer asks for a small change that was not in the original scope. What should you do?",
+                "options": {
+                    "A": "Do it for free to maintain a good relationship.",
+                    "B": "Refuse the change as it is a fixed-price contract.",
+                    "C": "Explain that it requires a formal change request and may impact the price.",
+                    "D": "Tell the team to hide the change from the auditors."
+                },
+                "answer": "C",
+                "detailedexplanation": "Even with small changes, the formal change control process must be followed, especially in fixed-price contracts where the seller assumes the risk of cost overruns. Scope creep must be prevented."
+            },
+            {
+                "id": 24,
+                "domain": "Business Environment",
+                "difficulty": "Medium",
+                "question": "A project manager is asked to ensure the project aligns with the organization's strategic goals. Which document should they refer to?",
+                "options": {
+                    "A": "The Benefits Management Plan",
+                    "B": "The Project Schedule",
+                    "C": "The Risk Register",
+                    "D": "The Resource Histogram"
+                },
+                "answer": "A",
+                "detailedexplanation": "The Benefits Management Plan describes how and when the benefits of the project will be delivered and how they align with organizational strategy."
+            },
+            {
+                "id": 25,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "In a Scrum team, who is responsible for prioritizing the Product Backlog?",
+                "options": {
+                    "A": "The Scrum Master",
+                    "B": "The Project Manager",
+                    "C": "The Product Owner",
+                    "D": "The Development Team"
+                },
+                "answer": "C",
+                "detailedexplanation": "The Product Owner is the single point of accountability for the Product Backlog and for maximizing the value of the product. They prioritize the items based on value, risk, and necessity."
+            },
+            {
+                "id": 26,
+                "domain": "Process",
+                "difficulty": "Medium",
+                "question": "What is the purpose of a 'Sprint Review'?",
+                "options": {
+                    "A": "To review the team's internal processes.",
+                    "B": "To demonstrate the 'Done' increment to stakeholders and gather feedback.",
+                    "C": "To plan the work for the next sprint.",
+                    "D": "To fire underperforming team members."
+                },
+                "answer": "B",
+                "detailedexplanation": "The Sprint Review is held at the end of the sprint to inspect the increment and adapt the Product Backlog if needed. It is a collaborative session between the Scrum Team and stakeholders."
+            },
+            {
+                "id": 27,
+                "domain": "Process",
+                "difficulty": "Hard",
+                "question": "A project has many dependencies and a high level of uncertainty. Which lifecycle is most appropriate?",
+                "options": {
+                    "A": "Waterfall",
+                    "B": "Predictive",
+                    "C": "Adaptive/Agile",
+                    "D": "Linear"
+                },
+                "answer": "C",
+                "detailedexplanation": "Adaptive (Agile) lifecycles are specifically designed for projects with high uncertainty and high rates of change. They use iterative cycles to refine requirements and reduce risk."
+            },
+            {
+                "id": 28,
+                "domain": "People",
+                "difficulty": "Medium",
+                "question": "A team is in the 'Storming' phase of development. What should the PM do?",
+                "options": {
+                    "A": "Step back and let them fight it out.",
+                    "B": "Provide coaching and clarity on roles and responsibilities.",
+                    "C": "Disband the team.",
+                    "D": "Move them immediately to the 'Performing' phase."
+                },
+                "answer": "B",
+                "detailedexplanation": "In the Tuckman Ladder, 'Storming' is where conflict arises. The PM should be active in coaching the team, clarifying goals, and facilitating conflict resolution to help them reach the 'Norming' phase."
+            },
+            {
+                "id": 29,
+                "domain": "Process",
+                "difficulty": "Easy",
+                "question": "Which of the following is an example of an Enterprise Environmental Factor (EEF)?",
+                "options": {
+                    "A": "A company's formal project management templates.",
+                    "B": "Lessons learned from previous projects.",
+                    "C": "Market conditions and government regulations.",
+                    "D": "The organization's standard operating procedures."
+                },
+                "answer": "C",
+                "detailedexplanation": "EEFs are external or internal factors that are not under the control of the project team but influence the project. Market conditions and regulations are classic examples. Options A, B, and D are Organizational Process Assets (OPAs)."
+            },
+            {
+                "id": 30,
+                "domain": "Business Environment",
+                "difficulty": "Medium",
+                "question": "A project is finished, but the operations team refuses to take ownership of the product because it doesn't meet their maintenance standards. What was missed?",
+                "options": {
+                    "A": "The project was not funded well enough.",
+                    "B": "The PM failed to engage operations stakeholders during the project.",
+                    "C": "The team worked too fast.",
+                    "D": "The sponsor did not sign the charter."
+                },
+                "answer": "B",
+                "detailedexplanation": "Operational transition is a key part of project success. Stakeholders from the operations team should be engaged early in the project to ensure that the product is maintainable and meets their requirements for hand-off."
+            }
+        ],
+        "outro_script": {
+            "closing": "That's the end of our 30-question PMP mock exam prep! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry—PMP is all about mastering the mindset.",
+            "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Project Management training content.",
+            "next_steps": "Ready for the real thing? Click the link in the description to access our full-length PMP Mock Exam with over 180 questions and real-time performance tracking. Good luck with your certification journey!"
+        },
+        "on_screen_elements": {
+            "timer_duration": "15 seconds per question",
+            "transition_effect_hints": "Use a smooth slide transition between questions. Highlight the correct answer in green after the timer expires."
+        }
     }
 ]
