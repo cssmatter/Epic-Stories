@@ -2,497 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "AZ-140 Azure Virtual Desktop Certification Exam Prep",
-                "Mastering AZ-140: Configuring and Operating MS Azure Virtual Desktop",
-                "AZ-140 Exam Questions and Detailed Explanations",
-                "Complete Azure Virtual Desktop (AVD) Training Guide",
-                "AZ-140 Practice Test: 30 Essential Exam Questions",
-                "How to Pass the AZ-140 Azure Virtual Desktop Exam",
-                "Azure Virtual Desktop Administration Full Course Practice",
-                "AZ-140 Certification Study Guide and Mock Exam",
-                "Top 30 AZ-140 Exam Questions You Need to Know",
-                "Azure Virtual Desktop Mastery: AZ-140 Exam Prep"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to master the world of remote desktop services and land one of the most in-demand Azure certifications? Today, we are diving deep into the AZ-140 exam, covering everything from infrastructure to user experience.",
-                "summary": "In this video, we provide a comprehensive breakdown of 30 high-yield multiple-choice questions designed to mirror the actual AZ-140 Configuring and Operating Microsoft Azure Virtual Desktop exam. We will cover identity, networking, host pools, and storage.",
-                "cta_intro": "Before we start, make sure to hit that subscribe button and turn on notifications so you never miss a certification guide.",
-                "checkfullexamlinkindescription": "For a complete practice exam experience and more detailed study materials, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/X4y3kX",
-                "youtubetitle": "AZ-140 Azure Virtual Desktop Certification Exam Questions and Explanations",
-                "description": "Prepare for the AZ-140: Configuring and Operating Microsoft Azure Virtual Desktop certification with this comprehensive practice guide. This video covers the essential domains including planning an AVD infrastructure, implementing storage, managing host pools, and optimizing user experience. Each question comes with a detailed explanation to ensure you understand the 'why' behind the correct answer. Perfect for IT Professionals and Azure Administrators looking to validate their virtualization skills.",
-                "tags": "AZ-140, Azure Virtual Desktop, AVD, Microsoft Azure Certification, Azure Virtualization, Host Pools, FSLogix, MSIX App Attach, Azure Administration",
-                "hashtags": [
-                    "#AZ140",
-                    "#AzureVirtualDesktop",
-                    "#MicrosoftAzure",
-                    "#CloudCertification",
-                    "#AVD",
-                    "#AzureAdmin"
-                ],
-                "keywords": [
-                    "AZ-140 exam prep",
-                    "Azure Virtual Desktop practice test",
-                    "Configuring Azure Virtual Desktop",
-                    "AVD Host Pools",
-                    "FSLogix configuration",
-                    "MSIX app attach guide",
-                    "Azure Virtual Desktop identity",
-                    "AZ-140 study material",
-                    "Azure Virtualization exam",
-                    "Microsoft certification 2025"
-                ],
-                "mostsearchedongoogle": [
-                    "AZ-140 exam questions",
-                    "AZ-140 study guide pdf",
-                    "Azure Virtual Desktop certification path",
-                    "AZ-140 passing score",
-                    "how to configure AVD host pools",
-                    "FSLogix profile containers Azure",
-                    "AZ-140 vs AZ-104",
-                    "Azure Virtual Desktop pricing and scaling",
-                    "MSIX app attach vs App Masking",
-                    "AZ-140 exam duration"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "You are planning an Azure Virtual Desktop deployment. You need to ensure that the infrastructure can support a large number of users while minimizing latency. Which Azure region strategy should you prioritize?",
-                "options": {
-                    "A": "Deploy all resources in a single central region.",
-                    "B": "Deploy session hosts in the region closest to the users.",
-                    "C": "Deploy session hosts in the region with the lowest cost.",
-                    "D": "Deploy session hosts in a region that only supports Availability Zones."
-                },
-                "answer": "B",
-                "detailedexplanation": "To minimize latency in Azure Virtual Desktop (AVD), it is critical to place the session hosts (the VMs where user workloads run) as close to the physical location of the users as possible. While the AVD control plane (management service) is managed by Microsoft and distributed globally, the 'last mile' latency depends on the distance between the user's client and the session host. Cost and Availability Zones are important factors but are secondary to user experience regarding latency."
-            },
-            {
-                "id": 2,
-                "domain": "Manage Access and Security",
-                "difficulty": "Hard",
-                "question": "You have an Azure Virtual Desktop deployment. You need to implement the principle of least privilege for a team of help desk administrators who only need to disconnect users and restart session hosts. Which built-in RBAC role should you assign?",
-                "options": {
-                    "A": "Desktop Virtualization User",
-                    "B": "Desktop Virtualization Host Pool Contributor",
-                    "C": "Desktop Virtualization User Session Operator",
-                    "D": "Desktop Virtualization Virtual Machine Contributor"
-                },
-                "answer": "C",
-                "detailedexplanation": "The 'Desktop Virtualization User Session Operator' role is specifically designed for help desk scenarios. It allows users to view sessions, send messages to users, and disconnect or log off sessions. It provides the necessary permissions to manage user sessions without granting broader administrative rights over the infrastructure itself, such as changing network settings or deleting host pools."
-            },
-            {
-                "id": 3,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "Which component of Azure Virtual Desktop is responsible for managing user connections to the appropriate session host?",
-                "options": {
-                    "A": "Azure Gateway",
-                    "B": "Azure Load Balancer",
-                    "C": "Remote Desktop Connection Broker",
-                    "D": "Azure Traffic Manager"
-                },
-                "answer": "C",
-                "detailedexplanation": "In the Azure Virtual Desktop architecture, the Connection Broker is a service managed by Microsoft that handles the logic of connecting users to their assigned desktops or remote apps. When a user connects, the Broker determines which session host in the pool is available (based on load balancing settings) and facilitates the connection. The Gateway handles the RDP-over-HTTPS traffic, but the Broker is the 'brains' of the session routing."
-            },
-            {
-                "id": 4,
-                "domain": "Implement and Manage Storage for AVD",
-                "difficulty": "Medium",
-                "question": "You are using FSLogix profile containers for your AVD environment. Which storage solution provides the best performance and integration for FSLogix profiles in a native Azure environment?",
-                "options": {
-                    "A": "Azure Blob Storage",
-                    "B": "Azure SQL Database",
-                    "C": "Azure Files with AD DS Authentication",
-                    "D": "Azure Disk Storage attached to a single VM"
-                },
-                "answer": "C",
-                "detailedexplanation": "Azure Files (specifically the Premium tier) is the recommended storage solution for FSLogix profile containers. It supports SMB-based access and integrates with Active Directory Domain Services (AD DS) or Azure AD DS for NTFS permissions. This allows multiple session hosts to concurrently access profile VHDX files with high throughput and low latency, which is essential for a smooth login experience."
-            },
-            {
-                "id": 5,
-                "domain": "Manage User Environments and Experience",
-                "difficulty": "Medium",
-                "question": "You need to distribute a legacy Win32 application to your AVD users without installing it directly on the session host image. Which technology should you use?",
-                "options": {
-                    "A": "Azure DevBox",
-                    "B": "MSIX App Attach",
-                    "C": "Group Policy Objects",
-                    "D": "Azure App Service"
-                },
-                "answer": "B",
-                "detailedexplanation": "MSIX App Attach is a modern application delivery solution for Azure Virtual Desktop. It allows you to package applications into MSIX format and 'attach' them to the session host at login. The application behaves as if it were installed locally, but the files reside on a file share. This keeps the golden image 'thin' and simplifies application updates since the image does not need to be rebuilt to update the app."
-            },
-            {
-                "id": 6,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Easy",
-                "question": "Which host pool type should you choose if you want users to always connect to their own dedicated virtual machine?",
-                "options": {
-                    "A": "Pooled",
-                    "B": "Shared",
-                    "C": "Personal",
-                    "D": "Multi-session"
-                },
-                "answer": "C",
-                "detailedexplanation": "A Personal Host Pool assigns a specific session host to a specific user. This is often used for power users who need administrative rights to install their own software or for compliance reasons where data must remain isolated on a specific VM. Pooled/Shared host pools allow multiple users to share a single VM or a set of VMs to optimize costs."
-            },
-            {
-                "id": 7,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "You are configuring a pooled host pool. You want to ensure that new user sessions are distributed evenly across all available session hosts. Which load balancing algorithm should you use?",
-                "options": {
-                    "A": "Breadth-first",
-                    "B": "Depth-first",
-                    "C": "Round Robin",
-                    "D": "Weighted"
-                },
-                "answer": "A",
-                "detailedexplanation": "Breadth-first load balancing distributes new user sessions across all available session hosts in the host pool. This prevents any single host from becoming overloaded while others are idle, providing the best performance for users. Depth-first, on the other hand, fills one host to its maximum capacity before starting sessions on the next host, which is better for cost optimization (allowing you to shut down unused hosts)."
-            },
-            {
-                "id": 8,
-                "domain": "Manage Access and Security",
-                "difficulty": "Medium",
-                "question": "To secure Azure Virtual Desktop, you want to ensure that users can only connect from compliant devices. Which Azure feature should you use?",
-                "options": {
-                    "A": "Azure Bastion",
-                    "B": "Network Security Groups (NSG)",
-                    "C": "Conditional Access",
-                    "D": "Azure Firewall"
-                },
-                "answer": "C",
-                "detailedexplanation": "Conditional Access (part of Microsoft Entra ID) is the primary tool for securing AVD connections. You can create policies that require Multi-Factor Authentication (MFA), compliant devices (managed by Intune), or specific IP locations before a user is allowed to access the AVD workspace."
-            },
-            {
-                "id": 9,
-                "domain": "Monitor and Maintain an AVD Infrastructure",
-                "difficulty": "Medium",
-                "question": "You need to monitor the connection quality and latency for users in your AVD environment. Which tool provides a built-in dashboard for these metrics?",
-                "options": {
-                    "A": "Azure Advisor",
-                    "B": "Azure Virtual Desktop Insights",
-                    "C": "Azure Service Health",
-                    "D": "Event Viewer"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Virtual Desktop Insights is a dashboard based on Azure Monitor and Log Analytics. It provides detailed information about host health, connection success rates, and user-side latency (Round Trip Time). It is the standard tool for administrators to proactively monitor the performance and stability of their AVD environment."
-            },
-            {
-                "id": 10,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Hard",
-                "question": "What is the requirement for the 'Virtual Machine Contributor' role when deploying session hosts using the Azure portal?",
-                "options": {
-                    "A": "It is required to manage the AVD Workspace.",
-                    "B": "It is required to create and manage the VMs within the resource group.",
-                    "C": "It is required to assign users to application groups.",
-                    "D": "It is required to configure FSLogix registry keys."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Virtual Machine Contributor role is an Azure RBAC role that allows a user or service principal to create, manage, and delete virtual machines. When deploying session hosts into a host pool via the portal, the account performing the action needs this role on the target resource group to successfully provision the compute resources."
-            },
-            {
-                "id": 11,
-                "domain": "Implement and Manage Storage for AVD",
-                "difficulty": "Medium",
-                "question": "When configuring FSLogix, what is the purpose of the 'VHDLocations' registry setting?",
-                "options": {
-                    "A": "It specifies the size of the user profile disk.",
-                    "B": "It defines the path to the network share where user profiles are stored.",
-                    "C": "It lists the users who are excluded from FSLogix.",
-                    "D": "It determines the encryption level of the VHD files."
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'VHDLocations' registry key is the most critical configuration for FSLogix Profile Containers. It tells the FSLogix agent on the session host where to look for (or create) the user's VHDX profile file on the network (usually an Azure Files share)."
-            },
-            {
-                "id": 12,
-                "domain": "Manage User Environments and Experience",
-                "difficulty": "Easy",
-                "question": "Which of the following operating systems supports multi-session capabilities natively in Azure Virtual Desktop?",
-                "options": {
-                    "A": "Windows 10 Enterprise",
-                    "B": "Windows 11 Enterprise Multi-session",
-                    "C": "Windows Server 2022",
-                    "D": "All of the above"
-                },
-                "answer": "B",
-                "detailedexplanation": "While Windows Server supports multiple sessions via RDS, 'Windows 10/11 Enterprise Multi-session' is a specialized SKU available only on Azure Virtual Desktop. It provides the Windows 10/11 user experience while allowing multiple users to log into a single VM, significantly reducing costs compared to single-session VMs."
-            },
-            {
-                "id": 13,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "You need to automate the scaling of session hosts to reduce costs during off-peak hours. What is the native AVD feature for this?",
-                "options": {
-                    "A": "Azure Automation Runbooks",
-                    "B": "Autoscale",
-                    "C": "Virtual Machine Scale Sets",
-                    "D": "Azure Logic Apps"
-                },
-                "answer": "B",
-                "detailedexplanation": "Azure Virtual Desktop 'Autoscale' is a native scaling solution that allows you to create scaling plans. You can define schedules to start VMs during business hours and shut them down (or force logoff users) during evenings and weekends, based on capacity thresholds you define."
-            },
-            {
-                "id": 14,
-                "domain": "Manage Access and Security",
-                "difficulty": "Medium",
-                "question": "Which protocol is used by the Azure Virtual Desktop client to establish a secure connection to the Gateway without requiring inbound ports like 3389 to be open on the VM?",
-                "options": {
-                    "A": "Reverse Connect",
-                    "B": "Direct Server Return",
-                    "C": "SSH Tunneling",
-                    "D": "IPsec VPN"
-                },
-                "answer": "A",
-                "detailedexplanation": "Azure Virtual Desktop uses 'Reverse Connect' technology. The agent on the session host initiates an outbound connection to the AVD service over port 443 (HTTPS). This eliminates the need to open inbound port 3389 (RDP) on the VM's Network Security Group, greatly reducing the attack surface."
-            },
-            {
-                "id": 15,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "You want to group several RemoteApps together so they can be assigned to a specific group of users. Which AVD object should you create?",
-                "options": {
-                    "A": "Workspace",
-                    "B": "Application Group",
-                    "C": "Host Pool",
-                    "D": "Session Bundle"
-                },
-                "answer": "B",
-                "detailedexplanation": "An Application Group is a logical grouping of applications (either a full Desktop or specific RemoteApps) installed on session hosts in a host pool. You assign users to the Application Group to give them access to those specific resources."
-            },
-            {
-                "id": 16,
-                "domain": "Manage User Environments and Experience",
-                "difficulty": "Hard",
-                "question": "To optimize MS Teams performance in AVD, you must install the Teams Desktop app with a specific flag. What is the purpose of 'Media Optimization' in this context?",
-                "options": {
-                    "A": "It records all meetings automatically to Azure Storage.",
-                    "B": "It offloads audio and video processing from the session host to the local client device.",
-                    "C": "It increases the VM's RAM to handle video calls.",
-                    "D": "It disables video to save bandwidth."
-                },
-                "answer": "B",
-                "detailedexplanation": "Media Optimization for Microsoft Teams (WebRTC redirection) offloads the encoding and decoding of audio and video traffic from the Azure VM to the user's local hardware. This prevents the 'double hop' of media traffic and significantly reduces the CPU load on the session host, resulting in better call quality."
-            },
-            {
-                "id": 17,
-                "domain": "Implement and Manage Storage for AVD",
-                "difficulty": "Medium",
-                "question": "You are implementing FSLogix Cloud Cache. What is the primary benefit of Cloud Cache over standard Profile Containers?",
-                "options": {
-                    "A": "It encrypts profiles using AES-256.",
-                    "B": "It allows for profile redundancy by writing to multiple storage locations simultaneously.",
-                    "C": "It reduces the size of the profile disk.",
-                    "D": "It eliminates the need for an Azure Files share."
-                },
-                "answer": "B",
-                "detailedexplanation": "Cloud Cache is an extension of FSLogix that allows the agent to write profile data to multiple storage providers (e.g., two different Azure regions) at once. This provides high availability and disaster recovery for user profiles, ensuring users can still log in even if one storage location goes offline."
-            },
-            {
-                "id": 18,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Easy",
-                "question": "What is the maximum number of Application Groups you can associate with a single Host Pool if they are of different types (Desktop and RemoteApp)?",
-                "options": {
-                    "A": "One of each type",
-                    "B": "Unlimited",
-                    "C": "Five",
-                    "D": "Ten"
-                },
-                "answer": "A",
-                "detailedexplanation": "While a host pool can have multiple RemoteApp application groups, it can only have one Desktop application group. Furthermore, a user can only be assigned to either the Desktop or the RemoteApp group within the same host pool to avoid session conflicts, though recent updates have relaxed some of these restrictions in specific scenarios."
-            },
-            {
-                "id": 19,
-                "domain": "Manage User Environments and Experience",
-                "difficulty": "Medium",
-                "question": "Which RDP property should you modify to enable redirection of local printers to the AVD session?",
-                "options": {
-                    "A": "deviceredirection:s:1",
-                    "B": "redirectprinters:i:1",
-                    "C": "audiocapturemode:i:1",
-                    "D": "drivestoredirect:s:*"
-                },
-                "answer": "B",
-                "detailedexplanation": "RDP properties are configured at the Host Pool level. The property 'redirectprinters:i:1' (where 1 means enabled) allows the local printers connected to the user's physical device to be mapped and used within the Azure Virtual Desktop session."
-            },
-            {
-                "id": 20,
-                "domain": "Manage Access and Security",
-                "difficulty": "Hard",
-                "question": "You need to ensure that AVD session hosts are joined to a domain, but you do not want to manage a traditional Domain Controller VM. Which service should you use?",
-                "options": {
-                    "A": "Microsoft Entra Domain Services",
-                    "B": "Azure SQL Managed Instance",
-                    "C": "Azure Private Link",
-                    "D": "Microsoft Entra ID (Direct Join)"
-                },
-                "answer": "A",
-                "detailedexplanation": "Microsoft Entra Domain Services (formerly Azure AD DS) provides managed domain services such as domain join, group policy, and LDAP, without the need for you to manage, patch, or backup Domain Controller VMs. Alternatively, AVD now supports direct Entra ID join, but for legacy GPO support, Entra Domain Services is the correct managed option."
-            },
-            {
-                "id": 21,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "In AVD, what is the role of a 'Workspace'?",
-                "options": {
-                    "A": "It is where the virtual machines are stored.",
-                    "B": "It is a logical grouping of application groups that users see in their feed.",
-                    "C": "It defines the network subnet for the session hosts.",
-                    "D": "It acts as a load balancer for the traffic."
-                },
-                "answer": "B",
-                "detailedexplanation": "A Workspace is the top-level container in the AVD management hierarchy. It is what the user 'subscribes' to in their Remote Desktop client. You associate Application Groups with a Workspace so that when a user logs in, they see all the desktops and apps they are entitled to in one place."
-            },
-            {
-                "id": 22,
-                "domain": "Manage User Environments and Experience",
-                "difficulty": "Medium",
-                "question": "A user reports that their AVD session is slow when using graphics-intensive applications. Which VM series would be most appropriate to resolve this?",
-                "options": {
-                    "A": "D-Series",
-                    "B": "E-Series",
-                    "C": "NV-Series",
-                    "D": "F-Series"
-                },
-                "answer": "C",
-                "detailedexplanation": "The NV-series (and N-series in general) VMs in Azure are specifically designed for GPU acceleration. They utilize NVIDIA or AMD GPUs to handle graphics-heavy workloads like CAD, 3D rendering, or video editing, which standard D or E series VMs cannot handle efficiently."
-            },
-            {
-                "id": 23,
-                "domain": "Monitor and Maintain an AVD Infrastructure",
-                "difficulty": "Medium",
-                "question": "You want to automate the process of creating a custom image for your AVD session hosts. Which Azure service is designed for this purpose?",
-                "options": {
-                    "A": "Azure Image Builder",
-                    "B": "Azure Backup",
-                    "C": "Azure Site Recovery",
-                    "D": "Azure Update Manager"
-                },
-                "answer": "A",
-                "detailedexplanation": "Azure Image Builder is based on HashiCorp Packer and is a managed service that allows you to describe your image configurations in a template. It handles the creation of the VM, the installation of software, and the 'sysprepping' to create a reusable image in the Azure Compute Gallery."
-            },
-            {
-                "id": 24,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "Which network requirement is mandatory for AVD session hosts to communicate with the AVD management service?",
-                "options": {
-                    "A": "Inbound port 3389 must be open from the internet.",
-                    "B": "Outbound access to specific Microsoft URLs over port 443.",
-                    "C": "A Site-to-Site VPN to on-premises.",
-                    "D": "A public IP address assigned to every session host."
-                },
-                "answer": "B",
-                "detailedexplanation": "AVD session hosts must be able to reach the AVD control plane. This requires outbound communication over port 443 to several specific service URLs (like *.wvd.microsoft.com). If a firewall or NSG blocks this outbound traffic, the session host will show as 'Unavailable' in the portal."
-            },
-            {
-                "id": 25,
-                "domain": "Implement and Manage Storage for AVD",
-                "difficulty": "Medium",
-                "question": "What happens if you enable FSLogix 'Profile Containers' and 'Office Containers' at the same time?",
-                "options": {
-                    "A": "The system will crash due to conflict.",
-                    "B": "Office data (Outlook cache, OneDrive) will be stored in a separate VHDX file from the main profile.",
-                    "C": "The main profile disk will double in size.",
-                    "D": "Only the Office Container will be used."
-                },
-                "answer": "B",
-                "detailedexplanation": "Office Containers allow you to separate Office-specific data (like Outlook .OST files and OneDrive cache) from the main user profile. This is useful because Office data can be large and expendable, allowing you to manage backup and performance policies differently for the main profile versus the Office cache."
-            },
-            {
-                "id": 26,
-                "domain": "Manage User Environments and Experience",
-                "difficulty": "Hard",
-                "question": "You are using MSIX App Attach. You need to convert a standard MSI installer into an MSIX package. Which tool do you use?",
-                "options": {
-                    "A": "MSIX Packaging Tool",
-                    "B": "Azure CLI",
-                    "C": "Disk Management",
-                    "D": "PowerShell ISE"
-                },
-                "answer": "A",
-                "detailedexplanation": "The MSIX Packaging Tool is a free utility from Microsoft that monitors an installation process and captures the changes to create an MSIX package. This package can then be expanded into a VHDX/CIM for use with MSIX App Attach in AVD."
-            },
-            {
-                "id": 27,
-                "domain": "Manage Access and Security",
-                "difficulty": "Medium",
-                "question": "Which authentication method is required to use 'Single Sign-On' (SSO) with Azure Virtual Desktop using Entra ID joined VMs?",
-                "options": {
-                    "A": "Password Hash Synchronization only",
-                    "B": "Entra ID Kerberos or certificate-based authentication",
-                    "C": "Basic Authentication",
-                    "D": "SMS-based MFA"
-                },
-                "answer": "B",
-                "detailedexplanation": "To achieve a true SSO experience where a user is not prompted for credentials a second time when the VM starts, you must configure either Entra ID Kerberos or use certificate-based authentication. This allows the Entra ID token from the initial login to be used for the Windows logon session."
-            },
-            {
-                "id": 28,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "You are deploying AVD. Which component is responsible for providing the web-based portal (HTML5) that users can use to access their desktops via a browser?",
-                "options": {
-                    "A": "Remote Desktop Gateway",
-                    "B": "Remote Desktop Web Access",
-                    "C": "Azure Front Door",
-                    "D": "Azure App Service"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Web Access role is a managed service within the AVD infrastructure that provides the web interface. Users navigate to a specific URL (rdweb.wvd.microsoft.com), log in, and can launch their resources directly in the browser without installing a local client."
-            },
-            {
-                "id": 29,
-                "domain": "Monitor and Maintain an AVD Infrastructure",
-                "difficulty": "Medium",
-                "question": "A session host in your pool has a status of 'Needs Assistance'. What is the most common reason for this?",
-                "options": {
-                    "A": "The VM is turned off.",
-                    "B": "The AVD Agent or Bootloader is outdated or not communicating.",
-                    "C": "The user has too many open applications.",
-                    "D": "The storage share is full."
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'Needs Assistance' or 'Unavailable' status usually indicates a communication failure between the agent installed on the VM and the AVD management service. This can be caused by the agent service being stopped, network issues, or a failed automatic update of the agent."
-            },
-            {
-                "id": 30,
-                "domain": "Plan and Implement an Azure Virtual Desktop Infrastructure",
-                "difficulty": "Medium",
-                "question": "When configuring a host pool, what does the 'Max session limit' setting control?",
-                "options": {
-                    "A": "The maximum number of VMs in the pool.",
-                    "B": "The maximum number of concurrent users allowed on a single session host.",
-                    "C": "The total number of users who can be assigned to the pool.",
-                    "D": "The time limit for a disconnected session."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Max Session Limit is a host pool setting used in 'pooled' environments. It defines how many users can simultaneously log into one session host before the Connection Broker starts sending new users to a different host (in breadth-first) or stops sending users to that host (in depth-first)."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30-question deep dive into the AZ-140 exam. I hope these explanations helped clarify how Azure Virtual Desktop works behind the scenes.",
-            "cta_final": "If you found this video helpful, please give it a thumbs up and share it with your fellow cloud enthusiasts. Comment below which domain you find the most challenging!",
-            "next_steps": "Don't forget to check the link in the description for the full Udemy course and practice exams to ensure you pass on your first try. Good luck with your certification journey!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Smooth slide transitions between questions; color change for correct answer (green highlight); pop-up icons for 'Pro Tips' during explanations."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "CISSP Practice Questions and Full Exam Prep",
                 "Master the CISSP Exam: 30 Essential Practice Questions",
                 "CISSP Exam Pass Secret: Practice Question Deep Dive",
@@ -102311,7 +101820,7 @@
                 "AZ-900 Exam Simulation: 30 Critical Questions Explained"
             ],
             "intro_script": {
-                "hook": "Are you ready to kickstart your cloud career? Microsoft Azure is the fastest-growing cloud platform, but passing the AZ-900 exam requires more than just knowing the basics—it requires understanding how Azure solves real-world business problems.",
+                "hook": "Are you ready to kickstart your cloud career? Microsoft Azure is the fastest-growing cloud platform, but passing the AZ-900 exam requires more than just knowing the basics\u2014it requires understanding how Azure solves real-world business problems.",
                 "summary": "In this video, we are diving into a comprehensive mock exam for the Microsoft Azure Fundamentals AZ-900 certification. We will cover 30 high-yield questions spanning Cloud Concepts, Azure Architecture, Governance, and Security.",
                 "cta_intro": "Make sure to grab a notebook, as we will be breaking down the logic behind every single answer to ensure you're exam-ready.",
                 "checkfullexamlinkindescription": "If you want to practice with even more realistic simulations, check out the full exam course link in the description below."
@@ -102382,7 +101891,7 @@
                     "D": "Depreciation Model"
                 },
                 "answer": "B",
-                "detailedexplanation": "Cloud computing shifts costs from Capital Expenditure (CapEx)—where you spend money on physical infrastructure upfront—to Operational Expenditure (OpEx), where you pay for services as you use them. This pay-as-you-go model allows businesses to treat IT costs as a continuous operating expense, improving cash flow and reducing the need for massive upfront investments in hardware."
+                "detailedexplanation": "Cloud computing shifts costs from Capital Expenditure (CapEx)\u2014where you spend money on physical infrastructure upfront\u2014to Operational Expenditure (OpEx), where you pay for services as you use them. This pay-as-you-go model allows businesses to treat IT costs as a continuous operating expense, improving cash flow and reducing the need for massive upfront investments in hardware."
             },
             {
                 "id": 3,
@@ -103364,7 +102873,7 @@
             },
             {
                 "id": 3,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "What is the output of the following code?\ni = 5\nwhile i > 0:\n    i -= 1\n    if i == 2:\n        break\nelse:\n    print(\"Done\")",
                 "options": {
@@ -103378,7 +102887,7 @@
             },
             {
                 "id": 4,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Easy",
                 "question": "Which of the following is true about Python tuples?",
                 "options": {
@@ -103420,7 +102929,7 @@
             },
             {
                 "id": 7,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What is the output of the following code?\nlst = [1, 2, 3, 4]\ndel lst[1:3]\nprint(lst)",
                 "options": {
@@ -103434,7 +102943,7 @@
             },
             {
                 "id": 8,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "How many times will the following loop execute?\nfor i in range(1, 10, 2):\n    print(i)",
                 "options": {
@@ -103476,7 +102985,7 @@
             },
             {
                 "id": 11,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "Which of the following methods adds an element to the end of a list?",
                 "options": {
@@ -103504,7 +103013,7 @@
             },
             {
                 "id": 13,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "What does the 'continue' statement do in a loop?",
                 "options": {
@@ -103518,7 +103027,7 @@
             },
             {
                 "id": 14,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Hard",
                 "question": "What is the output of the following snippet?\ndct = {'one': 1, 'two': 2}\nlst = dct['one']\nprint(lst)",
                 "options": {
@@ -103574,7 +103083,7 @@
             },
             {
                 "id": 18,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Easy",
                 "question": "Which logical operator returns True if at least one operand is True?",
                 "options": {
@@ -103588,7 +103097,7 @@
             },
             {
                 "id": 19,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What is the output of the following code?\ns = \"Python\"\nprint(s[1:4])",
                 "options": {
@@ -103630,7 +103139,7 @@
             },
             {
                 "id": 22,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "What will be the output of the following code?\nfor i in range(1):\n    print(i)\nelse:\n    print(\"Else\")",
                 "options": {
@@ -103644,7 +103153,7 @@
             },
             {
                 "id": 23,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "How do you check if the key 'a' exists in dictionary 'd'?",
                 "options": {
@@ -103686,7 +103195,7 @@
             },
             {
                 "id": 26,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "Which of the following is used to handle exceptions in Python?",
                 "options": {
@@ -103714,7 +103223,7 @@
             },
             {
                 "id": 28,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Hard",
                 "question": "What happens when you try to change an element in a tuple?",
                 "options": {
@@ -103921,7 +103430,7 @@
                     "D": "Delegating all responsibilities to the sponsor."
                 },
                 "answer": "A",
-                "detailedexplanation": "Servant leadership is a cornerstone of Agile and modern project management. The leader’s primary role is to support the team, facilitate their work, remove blockers, and ensure the team has the resources they need to succeed."
+                "detailedexplanation": "Servant leadership is a cornerstone of Agile and modern project management. The leader\u2019s primary role is to support the team, facilitate their work, remove blockers, and ensure the team has the resources they need to succeed."
             },
             {
                 "id": 8,
@@ -104247,7 +103756,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That's the end of our 30-question PMP mock exam prep! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry—PMP is all about mastering the mindset.",
+            "closing": "That's the end of our 30-question PMP mock exam prep! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry\u2014PMP is all about mastering the mindset.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Project Management training content.",
             "next_steps": "Ready for the real thing? Click the link in the description to access our full-length PMP Mock Exam with over 180 questions and real-time performance tracking. Good luck with your certification journey!"
         },
