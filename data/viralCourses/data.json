@@ -2,497 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "CompTIA A+ 220-1101 Core 1 Full Mock Exam Training",
-                "Pass the CompTIA A+ 220-1101 Exam with These Practice Questions",
-                "CompTIA A+ Core 1 (220-1101) Real Exam Questions and Answers",
-                "The Ultimate CompTIA A+ 220-1101 Practice Test Guide",
-                "CompTIA A+ 220-1101 Core 1 Certification Exam Prep",
-                "Master the CompTIA A+ 220-1101 Core 1 Exam in One Video",
-                "CompTIA A+ 220-1101 Core 1 Questions and Detailed Explanations",
-                "Top 30 CompTIA A+ 220-1101 Core 1 Practice Exam Questions",
-                "How to Pass CompTIA A+ 220-1101 Core 1 on Your First Try",
-                "CompTIA A+ 220-1101 Core 1 Exam Simulation Practice Questions"
-            ],
-            "intro_script": {
-                "hook": "Are you ready to jumpstart your IT career and pass the CompTIA A+ 220-1101 exam on your very first attempt?",
-                "summary": "In this video, we are diving into 30 high-yield mock exam questions specifically designed for the CompTIA A+ Core 1 certification. We will cover mobile devices, networking, hardware, virtualization, and cloud computing.",
-                "cta_intro": "Make sure to grab a pen and paper to track your score as we go through these real-world scenarios.",
-                "checkfullexamlinkindescription": "If you want to take the full-length practice exam with hundreds of more questions, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/KBK31z",
-                "youtubetitle": "CompTIA A+ 220-1101 Core 1 Practice Exam Questions and Answers",
-                "description": "Master the CompTIA A+ 220-1101 (Core 1) exam with our comprehensive practice test. This video covers 30 essential questions across all exam domains, including hardware, networking, and mobile devices. Each question comes with a detailed explanation to help you understand the 'why' behind the correct answer, ensuring you are fully prepared for the certification. Don't forget to check out the full mock exam course link below for more practice!",
-                "tags": "CompTIA A+, 220-1101, Core 1, IT Certification, Practice Test, CompTIA Training, Hardware, Networking, Help Desk, IT Support",
-                "hashtags": [
-                    "#CompTIA",
-                    "#Aplus",
-                    "#ITCertification",
-                    "#Core1",
-                    "#2201101",
-                    "#TechCareer"
-                ],
-                "keywords": [
-                    "CompTIA A+ 220-1101",
-                    "Core 1 practice exam",
-                    "A+ certification questions",
-                    "IT support training",
-                    "CompTIA A+ study guide",
-                    "CompTIA Core 1 hardware",
-                    "Networking exam prep",
-                    "Cloud computing basics",
-                    "Virtualization MCQ",
-                    "Mobile device troubleshooting"
-                ],
-                "mostsearchedongoogle": [
-                    "CompTIA A+ 220-1101 practice test",
-                    "CompTIA A+ Core 1 exam questions",
-                    "How hard is CompTIA A+ 220-1101",
-                    "CompTIA A+ study material",
-                    "CompTIA A+ 220-1101 passing score",
-                    "A+ Core 1 hardware questions",
-                    "CompTIA A+ 220-1101 dumps",
-                    "Best A+ certification course",
-                    "CompTIA A+ Core 1 objectives",
-                    "A+ 220-1101 review"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Mobile Devices",
-                "difficulty": "Medium",
-                "question": "A user's laptop screen appears very dim, and the image is only visible when holding a flashlight directly against the glass. Which component most likely needs replacement?",
-                "options": {
-                    "A": "LCD Panel",
-                    "B": "Inverter",
-                    "C": "Video Cable",
-                    "D": "GPU"
-                },
-                "answer": "B",
-                "detailedexplanation": "The inverter is responsible for providing power to the backlight of older LCD screens. If the image is visible with an external light source (like a flashlight), it indicates that the LCD itself is functioning and receiving video signals, but the backlight system has failed. Since the inverter powers that backlight, it is the most probable cause of failure. Modern LED screens don't use inverters, but for the 220-1101 exam, this is a classic troubleshooting scenario."
-            },
-            {
-                "id": 2,
-                "domain": "Networking",
-                "difficulty": "Hard",
-                "question": "A technician is configuring a SOHO router. The client wants to ensure that specific internal servers are accessible from the internet while hiding the rest of the network. Which feature should be used?",
-                "options": {
-                    "A": "DHCP",
-                    "B": "Port Forwarding",
-                    "C": "MAC Filtering",
-                    "D": "UPnP"
-                },
-                "answer": "B",
-                "detailedexplanation": "Port Forwarding (or Destination NAT) allows external traffic from the internet to reach a specific device or service on a private internal network based on the port number. This is the standard method for hosting a web server or mail server behind a SOHO router. DHCP assigns IP addresses, MAC Filtering restricts access based on hardware IDs, and UPnP is used for automated port opening but is often disabled for security reasons."
-            },
-            {
-                "id": 3,
-                "domain": "Hardware",
-                "difficulty": "Medium",
-                "question": "Which of the following RAID levels provides both high performance and redundancy but requires at least four drives?",
-                "options": {
-                    "A": "RAID 0",
-                    "B": "RAID 1",
-                    "C": "RAID 5",
-                    "D": "RAID 10"
-                },
-                "answer": "D",
-                "detailedexplanation": "RAID 10, also known as RAID 1+0, combines the benefits of RAID 1 (mirroring for redundancy) and RAID 0 (striping for performance). Because it requires mirroring each striped set, it mandates a minimum of four disks. RAID 0 offers speed but no redundancy; RAID 1 offers redundancy but no speed gain; RAID 5 offers a balance with three or more disks using parity."
-            },
-            {
-                "id": 4,
-                "domain": "Virtualization and Cloud Computing",
-                "difficulty": "Medium",
-                "question": "A company is using a cloud service where they manage the OS, software applications, and data, while the provider manages the hardware and virtualization layer. Which cloud model is this?",
-                "options": {
-                    "A": "SaaS",
-                    "B": "PaaS",
-                    "C": "IaaS",
-                    "D": "DaaS"
-                },
-                "answer": "C",
-                "detailedexplanation": "Infrastructure as a Service (IaaS) provides the fundamental building blocks of computing: virtual servers, storage, and networking. The customer is responsible for managing the operating system, middleware, and applications. SaaS (Software as a Service) is managed entirely by the provider, and PaaS (Platform as a Service) provides a platform for developers to build applications without managing the underlying OS."
-            },
-            {
-                "id": 5,
-                "domain": "Hardware and Network Troubleshooting",
-                "difficulty": "Easy",
-                "question": "A user reports that their laser printer is producing documents with a vertical white line running down every page. What is the most likely cause?",
-                "options": {
-                    "A": "Fuser failure",
-                    "B": "Dirty primary corona wire",
-                    "C": "Low toner",
-                    "D": "Clogged print head"
-                },
-                "answer": "B",
-                "detailedexplanation": "In laser printing, a vertical white line usually indicates that something is blocking the toner from reaching the paper or that the corona wire (or transfer roller) is dirty/blocked, preventing the charge from being applied to that specific vertical strip of the drum. Low toner typically results in faded print across the whole page, and clogged print heads are an inkjet issue."
-            },
-            {
-                "id": 6,
-                "domain": "Networking",
-                "difficulty": "Medium",
-                "question": "Which port number is used by the SLP (Service Location Protocol) to help devices find services on a local area network?",
-                "options": {
-                    "A": "Port 427",
-                    "B": "Port 445",
-                    "C": "Port 548",
-                    "D": "Port 143"
-                },
-                "answer": "A",
-                "detailedexplanation": "SLP uses Port 427 (TCP/UDP). It is a service discovery protocol that allows computers and other devices to find services in a local area network without prior configuration. Port 445 is for SMB, Port 548 is for AFP (Apple Filing Protocol), and Port 143 is for IMAP."
-            },
-            {
-                "id": 7,
-                "domain": "Hardware",
-                "difficulty": "Medium",
-                "question": "Which type of RAM is specifically designed to detect and correct single-bit memory errors?",
-                "options": {
-                    "A": "Dual-channel",
-                    "B": "ECC",
-                    "C": "Non-parity",
-                    "D": "Buffered"
-                },
-                "answer": "B",
-                "detailedexplanation": "ECC (Error Correction Code) RAM is used in servers and workstations where data integrity is critical. It can detect and fix single-bit errors on the fly. Non-parity RAM has no error checking, and parity RAM can detect but not fix errors. Dual-channel is a memory architecture that increases bandwidth, not an error-correction feature."
-            },
-            {
-                "id": 8,
-                "domain": "Mobile Devices",
-                "difficulty": "Easy",
-                "question": "A technician needs to synchronize data from an iOS device to a PC over a USB connection. Which software must be installed on the PC?",
-                "options": {
-                    "A": "iCloud",
-                    "B": "iTunes",
-                    "C": "Finder",
-                    "D": "ActiveSync"
-                },
-                "answer": "B",
-                "detailedexplanation": "For Windows PCs, iTunes is the standard Apple application used to manage and sync data with iOS devices locally via USB. iCloud is used for cloud-based syncing, Finder is used on macOS (Catalina and later) for local syncing, and ActiveSync is a Microsoft protocol."
-            },
-            {
-                "id": 9,
-                "domain": "Networking",
-                "difficulty": "Hard",
-                "question": "A network administrator wants to segregate the accounting department\u2019s traffic from the rest of the network for security purposes, using the existing switch hardware. Which technology should be implemented?",
-                "options": {
-                    "A": "VPN",
-                    "B": "VLAN",
-                    "C": "NAT",
-                    "D": "DMZ"
-                },
-                "answer": "B",
-                "detailedexplanation": "A VLAN (Virtual Local Area Network) allows a technician to logically segment a physical switch into multiple virtual networks. This isolates traffic between departments at the Data Link layer (Layer 2) even though they share the same physical infrastructure. A VPN is for remote access, NAT is for address translation, and a DMZ is a subnetwork for external-facing services."
-            },
-            {
-                "id": 10,
-                "domain": "Hardware",
-                "difficulty": "Easy",
-                "question": "Which power connector is most commonly used to provide additional power to high-end PCIe video cards?",
-                "options": {
-                    "A": "24-pin ATX",
-                    "B": "4-pin Molex",
-                    "C": "6+2 pin",
-                    "D": "15-pin SATA"
-                },
-                "answer": "C",
-                "detailedexplanation": "High-performance Graphics Processing Units (GPUs) require more power than the PCIe slot can provide (75W). Therefore, they use supplemental 6-pin or 8-pin (6+2) power connectors directly from the power supply. 24-pin ATX is for the motherboard, Molex is for older legacy drives, and SATA is for modern storage drives."
-            },
-            {
-                "id": 11,
-                "domain": "Virtualization and Cloud Computing",
-                "difficulty": "Medium",
-                "question": "What is the primary difference between a Type 1 and a Type 2 hypervisor?",
-                "options": {
-                    "A": "Type 1 runs on top of an OS; Type 2 runs on bare metal.",
-                    "B": "Type 1 runs on bare metal; Type 2 runs on top of an OS.",
-                    "C": "Type 1 is for Linux; Type 2 is for Windows.",
-                    "D": "Type 1 supports more RAM than Type 2."
-                },
-                "answer": "B",
-                "detailedexplanation": "A Type 1 hypervisor (Bare Metal) installed directly onto the physical hardware (e.g., VMware ESXi). A Type 2 hypervisor (Hosted) runs as an application within an existing Operating System (e.g., Oracle VirtualBox or VMware Workstation). Type 1 is more efficient for data centers."
-            },
-            {
-                "id": 12,
-                "domain": "Hardware",
-                "difficulty": "Medium",
-                "question": "Which of the following describes the purpose of a 'Fin' or Heat Sink on a CPU?",
-                "options": {
-                    "A": "To increase the clock speed of the processor",
-                    "B": "To provide a mounting point for the RAM",
-                    "C": "To increase surface area for heat dissipation",
-                    "D": "To protect the CPU from electrostatic discharge"
-                },
-                "answer": "C",
-                "detailedexplanation": "A heat sink is a passive cooling component made of thermally conductive metal. Its design incorporates many 'fins' to maximize the surface area in contact with the air. This allows heat to be transferred away from the CPU more efficiently, usually assisted by a fan (active cooling)."
-            },
-            {
-                "id": 13,
-                "domain": "Networking",
-                "difficulty": "Easy",
-                "question": "Which protocol is used to automatically assign IP addresses, subnet masks, and default gateways to devices on a network?",
-                "options": {
-                    "A": "DNS",
-                    "B": "DHCP",
-                    "C": "SNMP",
-                    "D": "ARP"
-                },
-                "answer": "B",
-                "detailedexplanation": "DHCP (Dynamic Host Configuration Protocol) automates the IP addressing process. Without it, every device would need a manually configured static IP. DNS resolves hostnames to IPs, SNMP is for network management, and ARP resolves IP addresses to MAC addresses."
-            },
-            {
-                "id": 14,
-                "domain": "Hardware and Network Troubleshooting",
-                "difficulty": "Medium",
-                "question": "A user's computer fails to boot and emits a series of beep codes. Where should the technician look to interpret these beeps?",
-                "options": {
-                    "A": "The Windows Event Viewer",
-                    "B": "The Motherboard Manual",
-                    "C": "The Device Manager",
-                    "D": "The Disk Management utility"
-                },
-                "answer": "B",
-                "detailedexplanation": "Beep codes are generated by the BIOS/UEFI during the POST (Power-On Self-Test) before the Operating System loads. Since the OS hasn't started, software tools like Event Viewer are inaccessible. The specific meaning of beep codes varies by motherboard manufacturer, so the manual is the definitive source."
-            },
-            {
-                "id": 15,
-                "domain": "Mobile Devices",
-                "difficulty": "Medium",
-                "question": "Which mobile device synchronization method uses a 'Base Station' or 'Controller' to manage connections for multiple devices in an enterprise environment?",
-                "options": {
-                    "A": "Bluetooth",
-                    "B": "NFC",
-                    "C": "MDM",
-                    "D": "Wi-Fi"
-                },
-                "answer": "C",
-                "detailedexplanation": "MDM (Mobile Device Management) is a centralized software system used by IT departments to monitor, manage, and secure mobile devices (laptops, smartphones, tablets) across an organization. It allows for the remote pushing of configurations and security policies."
-            },
-            {
-                "id": 16,
-                "domain": "Hardware",
-                "difficulty": "Medium",
-                "question": "A technician is building a CAD workstation. Which of the following components should be prioritized?",
-                "options": {
-                    "A": "High-end sound card and large HDD",
-                    "B": "Maximum RAM and a powerful multicore CPU",
-                    "C": "Integrated graphics and a compact case",
-                    "D": "Standard cooling and a basic NIC"
-                },
-                "answer": "B",
-                "detailedexplanation": "CAD (Computer-Aided Design) applications are resource-intensive. They require significant processing power for complex calculations (Multicore CPU) and plenty of memory (RAM) to handle large 3D models. A high-end workstation-grade GPU (like Nvidia RTX/Quadro) is also essential, though not listed as the primary pair here."
-            },
-            {
-                "id": 17,
-                "domain": "Networking",
-                "difficulty": "Medium",
-                "question": "Which wireless standard operates ONLY in the 5GHz frequency band?",
-                "options": {
-                    "A": "802.11g",
-                    "B": "802.11n",
-                    "C": "802.11ac",
-                    "D": "802.11ax"
-                },
-                "answer": "C",
-                "detailedexplanation": "802.11ac (Wi-Fi 5) was designed to operate exclusively in the 5GHz band to avoid the congestion of the 2.4GHz band. 802.11g is 2.4GHz only, while 802.11n and 802.11ax (Wi-Fi 6) can operate in both 2.4GHz and 5GHz (and 6GHz for ax/Wi-Fi 6E)."
-            },
-            {
-                "id": 18,
-                "domain": "Hardware",
-                "difficulty": "Easy",
-                "question": "Which cable type is most commonly used to connect a modern external hard drive to a laptop for the fastest data transfer?",
-                "options": {
-                    "A": "USB 2.0",
-                    "B": "USB-C",
-                    "C": "VGA",
-                    "D": "FireWire"
-                },
-                "answer": "B",
-                "detailedexplanation": "USB-C (supporting USB 3.2 or Thunderbolt) offers the highest data transfer speeds available for external peripherals currently. USB 2.0 is significantly slower, VGA is for video only, and FireWire is an obsolete standard."
-            },
-            {
-                "id": 19,
-                "domain": "Virtualization and Cloud Computing",
-                "difficulty": "Medium",
-                "question": "In cloud computing, what is the term for the ability to scale resources up or down automatically based on demand?",
-                "options": {
-                    "A": "Resource Pooling",
-                    "B": "Measured Service",
-                    "C": "Rapid Elasticity",
-                    "D": "On-demand self-service"
-                },
-                "answer": "C",
-                "detailedexplanation": "Rapid Elasticity allows users to automatically request more computing resources (like CPU, RAM, or Storage) when needed and release them when they are not, ensuring the system can handle spikes in traffic without manual intervention."
-            },
-            {
-                "id": 20,
-                "domain": "Hardware and Network Troubleshooting",
-                "difficulty": "Hard",
-                "question": "A user complains that their smartphone is extremely hot and the battery is draining very quickly, even when not in use. What is the first thing a technician should check?",
-                "options": {
-                    "A": "The hardware battery health",
-                    "B": "Apps running in the background",
-                    "C": "The charging cable",
-                    "D": "The screen brightness"
-                },
-                "answer": "B",
-                "detailedexplanation": "While a failing battery can cause heat, the most common cause of sudden heat and drain on a functioning phone is a 'runaway' app or process that is pegging the CPU in the background. Checking the battery usage settings will reveal which app is consuming the most resources."
-            },
-            {
-                "id": 21,
-                "domain": "Networking",
-                "difficulty": "Medium",
-                "question": "Which of the following is a private IP address class B range?",
-                "options": {
-                    "A": "10.0.0.0 - 10.255.255.255",
-                    "B": "172.16.0.0 - 172.31.255.255",
-                    "C": "192.168.0.0 - 192.168.255.255",
-                    "D": "169.254.0.0 - 169.254.255.255"
-                },
-                "answer": "B",
-                "detailedexplanation": "The RFC 1918 private address range for Class B is 172.16.0.0 through 172.31.255.255. Option A is Class A, Option C is Class C, and Option D is the APIPA (Automatic Private IP Addressing) range."
-            },
-            {
-                "id": 22,
-                "domain": "Hardware",
-                "difficulty": "Medium",
-                "question": "What is the primary purpose of the 'Northbridge' in an older motherboard architecture?",
-                "options": {
-                    "A": "Connecting the CPU to the RAM and Video Card",
-                    "B": "Managing input/output for USB ports",
-                    "C": "Handling the BIOS/UEFI settings",
-                    "D": "Managing the SATA and IDE connections"
-                },
-                "answer": "A",
-                "detailedexplanation": "In older chipsets, the Northbridge was the high-speed controller that connected the CPU to the memory (RAM) and the high-speed graphics bus (AGP or PCIe). The Southbridge handled slower I/O like USB and SATA. In modern systems, these functions are mostly integrated into the CPU itself."
-            },
-            {
-                "id": 23,
-                "domain": "Mobile Devices",
-                "difficulty": "Hard",
-                "question": "A user wants to connect a laptop to a wired network but the laptop does not have an Ethernet port. Which is the best solution?",
-                "options": {
-                    "A": "Bluetooth dongle",
-                    "B": "USB to RJ-45 adapter",
-                    "C": "USB to Wi-Fi adapter",
-                    "D": "Crossover cable"
-                },
-                "answer": "B",
-                "detailedexplanation": "A USB to RJ-45 (Ethernet) adapter allows a device without a built-in Ethernet port to connect to a physical wired network. Bluetooth is too slow, a Wi-Fi adapter is for wireless, and a crossover cable is for connecting two similar devices directly but still requires a port."
-            },
-            {
-                "id": 24,
-                "domain": "Hardware",
-                "difficulty": "Easy",
-                "question": "Which of the following disk types has no moving parts and provides the fastest boot times for a laptop?",
-                "options": {
-                    "A": "HDD",
-                    "B": "NVMe SSD",
-                    "C": "Optical Drive",
-                    "D": "Magnetic Tape"
-                },
-                "answer": "B",
-                "detailedexplanation": "NVMe (Non-Volatile Memory Express) SSDs use flash memory and communicate over the PCIe bus, offering significantly higher speeds than traditional HDDs (which have spinning platters) and even older SATA-based SSDs."
-            },
-            {
-                "id": 25,
-                "domain": "Networking",
-                "difficulty": "Medium",
-                "question": "Which tool would a technician use to verify the integrity of a twisted-pair network cable and ensure the pins are terminated correctly?",
-                "options": {
-                    "A": "Tone Generator",
-                    "B": "Multimeter",
-                    "C": "Cable Tester",
-                    "D": "Loopback Plug"
-                },
-                "answer": "C",
-                "detailedexplanation": "A cable tester checks for continuity and ensures that the wires are mapped correctly to the pins on both ends (checking for shorts or crossed wires). A tone generator helps find a cable in a bundle, and a loopback plug tests a physical port's functionality."
-            },
-            {
-                "id": 26,
-                "domain": "Hardware and Network Troubleshooting",
-                "difficulty": "Hard",
-                "question": "A desktop computer shuts down randomly after about 15 minutes of heavy gaming. What is the most likely culprit?",
-                "options": {
-                    "A": "Failing Hard Drive",
-                    "B": "Overheating CPU or GPU",
-                    "C": "Corrupt OS files",
-                    "D": "Insufficient RAM"
-                },
-                "answer": "B",
-                "detailedexplanation": "Random shutdowns during intensive tasks (like gaming) are almost always related to heat. Modern hardware has built-in thermal protection that will shut the system down immediately if temperatures exceed a safe threshold to prevent permanent damage."
-            },
-            {
-                "id": 27,
-                "domain": "Mobile Devices",
-                "difficulty": "Medium",
-                "question": "Which technology is used to create a WPAN (Wireless Personal Area Network) for connecting a headset to a smartphone?",
-                "options": {
-                    "A": "NFC",
-                    "B": "Bluetooth",
-                    "C": "Infrared",
-                    "D": "LTE"
-                },
-                "answer": "B",
-                "detailedexplanation": "Bluetooth is the industry standard for WPANs, designed for short-range, low-power communication between devices like phones, headphones, and keyboards. NFC is for extremely close range (centimeters), and LTE is a long-range cellular technology."
-            },
-            {
-                "id": 28,
-                "domain": "Networking",
-                "difficulty": "Medium",
-                "question": "What is the function of a DNS server?",
-                "options": {
-                    "A": "To assign IP addresses to clients",
-                    "B": "To translate domain names into IP addresses",
-                    "C": "To provide secure remote access",
-                    "D": "To filter malicious web traffic"
-                },
-                "answer": "B",
-                "detailedexplanation": "DNS (Domain Name System) acts like a phonebook for the internet. It translates human-readable names like 'google.com' into the machine-readable IP addresses (like 142.250.xxx.xxx) that computers use to route data."
-            },
-            {
-                "id": 29,
-                "domain": "Hardware",
-                "difficulty": "Medium",
-                "question": "Which printer type uses an imaging drum and fuser assembly?",
-                "options": {
-                    "A": "Inkjet",
-                    "B": "Thermal",
-                    "C": "Laser",
-                    "D": "Impact"
-                },
-                "answer": "C",
-                "detailedexplanation": "Laser printers work by using a laser to draw an image on an electrostatic drum; toner is applied to the drum and then transferred to paper. The fuser then uses heat and pressure to melt the toner onto the paper permanently."
-            },
-            {
-                "id": 30,
-                "domain": "Virtualization and Cloud Computing",
-                "difficulty": "Medium",
-                "question": "A user wants to run a legacy Windows XP application on a Windows 11 machine. Which of the following is the most efficient solution?",
-                "options": {
-                    "A": "Dual-booting the PC",
-                    "B": "Using a Virtual Machine",
-                    "C": "Buying a second computer",
-                    "D": "Reinstalling Windows 11"
-                },
-                "answer": "B",
-                "detailedexplanation": "A Virtual Machine (VM) allows the user to run an entire 'guest' operating system (Windows XP) inside their current 'host' operating system (Windows 11). This is more efficient and convenient than dual-booting, as it doesn't require restarting the computer to switch apps."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30-question mock exam for the CompTIA A+ 220-1101 Core 1.",
-            "cta_final": "How many did you get right? Let us know your score in the comments! If you found this helpful, please give us a thumbs up and subscribe for the Core 2 practice test.",
-            "next_steps": "Ready for the real deal? Click the link in the description to access our full-length practice exams and guarantee your pass!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Fade between questions, highlight correct answer in green, incorrect in red."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Salesforce Administrator Certification Full Mock Exam",
                 "Salesforce Admin Practice Test 2026 - Agentforce & Flow Focus",
                 "Pass the Salesforce Admin Exam: 30 Real Scenario Questions",
@@ -101444,7 +100953,7 @@
                     "D": "To reduce the dimensionality of the input data."
                 },
                 "answer": "C",
-                "detailedexplanation": "The Wide & Deep model, introduced by Google, combines two strengths. The 'Wide' component is a linear model that is effective at 'memorization'—learning the direct correlation between specific feature pairs (e.g., 'User installed App A' and 'User likely to install App B'). This is great for handling niche or specific rules. The 'Deep' component (a Feed-forward Neural Network) is responsible for 'generalization'—identifying complex patterns in unseen feature combinations. By combining both, the system can provide both highly relevant specific suggestions and diverse general recommendations."
+                "detailedexplanation": "The Wide & Deep model, introduced by Google, combines two strengths. The 'Wide' component is a linear model that is effective at 'memorization'\u2014learning the direct correlation between specific feature pairs (e.g., 'User installed App A' and 'User likely to install App B'). This is great for handling niche or specific rules. The 'Deep' component (a Feed-forward Neural Network) is responsible for 'generalization'\u2014identifying complex patterns in unseen feature combinations. By combining both, the system can provide both highly relevant specific suggestions and diverse general recommendations."
             },
             {
                 "id": 6,
@@ -101556,7 +101065,7 @@
                     "D": "The user demographics are not well-defined."
                 },
                 "answer": "B",
-                "detailedexplanation": "In real-world systems (like Amazon or Netflix), there are millions of users and millions of items. An average user might only interact with 50-100 items. This means 99.9% of the user-item matrix consists of zeros or null values. This 'sparsity' makes it difficult for traditional neighborhood-based algorithms to find similar users, which is why Matrix Factorization and Deep Learning are preferred—they can learn dense representations from sparse data."
+                "detailedexplanation": "In real-world systems (like Amazon or Netflix), there are millions of users and millions of items. An average user might only interact with 50-100 items. This means 99.9% of the user-item matrix consists of zeros or null values. This 'sparsity' makes it difficult for traditional neighborhood-based algorithms to find similar users, which is why Matrix Factorization and Deep Learning are preferred\u2014they can learn dense representations from sparse data."
             },
             {
                 "id": 14,
@@ -101612,7 +101121,7 @@
                     "D": "When users have too many interests to model."
                 },
                 "answer": "B",
-                "detailedexplanation": "In many catalogs, a few items (the 'head') get most of the interactions, while the vast majority (the 'tail') have very few. Simple algorithms tend to favor popular items because they have more data. However, recommending from the 'long tail' is where the real value of personalization lies—finding the perfect niche item for a specific user. Metrics like 'Coverage' are used to measure how much of the long tail the system is actually utilizing."
+                "detailedexplanation": "In many catalogs, a few items (the 'head') get most of the interactions, while the vast majority (the 'tail') have very few. Simple algorithms tend to favor popular items because they have more data. However, recommending from the 'long tail' is where the real value of personalization lies\u2014finding the perfect niche item for a specific user. Metrics like 'Coverage' are used to measure how much of the long tail the system is actually utilizing."
             },
             {
                 "id": 18,
@@ -101668,7 +101177,7 @@
                     "D": "They reduce the need for any training data."
                 },
                 "answer": "B",
-                "detailedexplanation": "Traditional CF models only look at direct interactions (User A liked Item 1). GCNs treat the data as a graph where users and items are nodes. They can capture 'multi-hop' relationships—for example, if User A liked Item 1, and Item 1 is similar to Item 2, and User B liked Item 2, then User A might like Item 2. This allows the model to capture much richer structural information than simple matrix factorization."
+                "detailedexplanation": "Traditional CF models only look at direct interactions (User A liked Item 1). GCNs treat the data as a graph where users and items are nodes. They can capture 'multi-hop' relationships\u2014for example, if User A liked Item 1, and Item 1 is similar to Item 2, and User B liked Item 2, then User A might like Item 2. This allows the model to capture much richer structural information than simple matrix factorization."
             },
             {
                 "id": 22,
@@ -101935,7 +101444,7 @@
                     "D": "GANs are only used for text, while VAEs are only used for images."
                 },
                 "answer": "C",
-                "detailedexplanation": "VAEs and GANs are both generative models but follow different philosophies. A VAE is a probabilistic graphical model that tries to maximize the Evidence Lower Bound (ELBO) of the data likelihood, resulting in a structured latent space. A GAN, however, consists of two networks—a Generator and a Discriminator—competing against each other. The Generator tries to fool the Discriminator, and the Discriminator tries to distinguish real data from fake data. This 'adversarial' process typically leads to sharper, more realistic image generation than VAEs."
+                "detailedexplanation": "VAEs and GANs are both generative models but follow different philosophies. A VAE is a probabilistic graphical model that tries to maximize the Evidence Lower Bound (ELBO) of the data likelihood, resulting in a structured latent space. A GAN, however, consists of two networks\u2014a Generator and a Discriminator\u2014competing against each other. The Generator tries to fool the Discriminator, and the Discriminator tries to distinguish real data from fake data. This 'adversarial' process typically leads to sharper, more realistic image generation than VAEs."
             },
             {
                 "id": 6,
@@ -102075,7 +101584,7 @@
                     "D": "A model with 100% precision."
                 },
                 "answer": "C",
-                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. The AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 means the model is unable to distinguish between the positive and negative classes—essentially making a coin-flip guess."
+                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. The AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 means the model is unable to distinguish between the positive and negative classes\u2014essentially making a coin-flip guess."
             },
             {
                 "id": 16,
@@ -102563,7 +102072,7 @@
                     "D": "The number of users the system can support"
                 },
                 "answer": "B",
-                "detailedexplanation": "Adversarial Robustness refers to protecting a model against 'adversarial attacks'—small, often invisible perturbations to input data (like noise on an image) that are specifically engineered to trick a model into making a wrong prediction. Designing for this involves techniques like adversarial training."
+                "detailedexplanation": "Adversarial Robustness refers to protecting a model against 'adversarial attacks'\u2014small, often invisible perturbations to input data (like noise on an image) that are specifically engineered to trick a model into making a wrong prediction. Designing for this involves techniques like adversarial training."
             },
             {
                 "id": 16,
@@ -103423,7 +102932,7 @@
                 "id": 7,
                 "domain": "Second-Order Methods",
                 "difficulty": "Hard",
-                "question": "Why is Newton’s Method rarely used for training large-scale deep neural networks despite its fast convergence?",
+                "question": "Why is Newton\u2019s Method rarely used for training large-scale deep neural networks despite its fast convergence?",
                 "options": {
                     "A": "It only works for linear regression problems.",
                     "B": "It requires the computation and inversion of the Hessian matrix, which is computationally prohibitive.",
@@ -103697,7 +103206,7 @@
                     "D": "Conjugate Gradient"
                 },
                 "answer": "B",
-                "detailedexplanation": "L-BFGS (Limited-memory Broyden–Fletcher–Goldfarb–Shanno) is a popular Quasi-Newton method. Instead of storing the full $N \\times N$ Hessian matrix, it stores a few vectors that represent the approximation implicitly. This makes it much more scalable than standard BFGS for problems with many variables."
+                "detailedexplanation": "L-BFGS (Limited-memory Broyden\u2013Fletcher\u2013Goldfarb\u2013Shanno) is a popular Quasi-Newton method. Instead of storing the full $N \\times N$ Hessian matrix, it stores a few vectors that represent the approximation implicitly. This makes it much more scalable than standard BFGS for problems with many variables."
             },
             {
                 "id": 27,
@@ -103731,7 +103240,7 @@
                 "id": 29,
                 "domain": "Swarm Intelligence",
                 "difficulty": "Hard",
-                "question": "Which algorithm uses the concept of 'Lévy Flights' to enhance its exploration capabilities?",
+                "question": "Which algorithm uses the concept of 'L\u00e9vy Flights' to enhance its exploration capabilities?",
                 "options": {
                     "A": "Genetic Algorithm",
                     "B": "Cuckoo Search",
@@ -103739,7 +103248,7 @@
                     "D": "Newton's Method"
                 },
                 "answer": "B",
-                "detailedexplanation": "Cuckoo Search often employs Lévy flights, which are a type of random walk where the step lengths are distributed according to a heavy-tailed probability distribution. This allows the algorithm to perform occasional large jumps, significantly improving its ability to explore far-off regions and escape local optima compared to standard Gaussian walks."
+                "detailedexplanation": "Cuckoo Search often employs L\u00e9vy flights, which are a type of random walk where the step lengths are distributed according to a heavy-tailed probability distribution. This allows the algorithm to perform occasional large jumps, significantly improving its ability to explore far-off regions and escape local optima compared to standard Gaussian walks."
             },
             {
                 "id": 30,
@@ -104359,7 +103868,7 @@
                 "id": 4,
                 "domain": "Transformer Architecture",
                 "difficulty": "Hard",
-                "question": "In a Transformer's Multi-Head Attention mechanism, what is the specific purpose of the 'Scaling' factor (1/√dk)?",
+                "question": "In a Transformer's Multi-Head Attention mechanism, what is the specific purpose of the 'Scaling' factor (1/\u221adk)?",
                 "options": {
                     "A": "To normalize the input embeddings to a unit variance.",
                     "B": "To prevent the dot products from growing too large in magnitude, which would push the softmax function into regions with extremely small gradients.",
@@ -104423,7 +103932,7 @@
                     "D": "To increase the dimensionality of the input vectors."
                 },
                 "answer": "B",
-                "detailedexplanation": "RNNs process tokens sequentially (one after another), so the position is implicit in the time-step. Transformers use self-attention, which is permutation-invariant—meaning if you shuffle the words, the output remains the same. Positional encodings (often sine and cosine functions) are added to the input embeddings to provide the model with information about the relative or absolute position of the tokens."
+                "detailedexplanation": "RNNs process tokens sequentially (one after another), so the position is implicit in the time-step. Transformers use self-attention, which is permutation-invariant\u2014meaning if you shuffle the words, the output remains the same. Positional encodings (often sine and cosine functions) are added to the input embeddings to provide the model with information about the relative or absolute position of the tokens."
             },
             {
                 "id": 9,
@@ -104760,7 +104269,7 @@
             ],
             "intro_script": {
                 "hook": "Are you ready to master the core foundations of Artificial Intelligence? Beyond the code, it's the mathematics and logic that drive the world's most powerful neural networks.",
-                "summary": "In this comprehensive guide, we are diving into 30 essential practice questions covering Linear Algebra, Calculus, Probability, and Formal Logic—specifically designed for the AI Mathematics & Logic certification.",
+                "summary": "In this comprehensive guide, we are diving into 30 essential practice questions covering Linear Algebra, Calculus, Probability, and Formal Logic\u2014specifically designed for the AI Mathematics & Logic certification.",
                 "cta_intro": "Grab a pen and paper, and let's see how many you can get right. Don't forget to subscribe for more expert-level AI tutorials.",
                 "checkfullexamlinkindescription": "For the full practice exam and detailed study guides, check the link in the description below."
             },
@@ -104904,7 +104413,7 @@
                 "id": 8,
                 "domain": "Formal Logic",
                 "difficulty": "Medium",
-                "question": "In Predicate Logic, what does the symbol '∃' represent?",
+                "question": "In Predicate Logic, what does the symbol '\u2203' represent?",
                 "options": {
                     "A": "Universal Quantifier (For all)",
                     "B": "Negation (Not)",
@@ -104912,7 +104421,7 @@
                     "D": "Implication (If... then)"
                 },
                 "answer": "C",
-                "detailedexplanation": "The symbol '∃' is the existential quantifier in formal logic. It indicates that there is at least one element in the domain of discourse that satisfies the given property or predicate. This is in contrast to the universal quantifier '∀', which means the property must hold for every element."
+                "detailedexplanation": "The symbol '\u2203' is the existential quantifier in formal logic. It indicates that there is at least one element in the domain of discourse that satisfies the given property or predicate. This is in contrast to the universal quantifier '\u2200', which means the property must hold for every element."
             },
             {
                 "id": 9,
@@ -104921,12 +104430,12 @@
                 "question": "What are Eigenvalues?",
                 "options": {
                     "A": "The diagonal elements of any matrix.",
-                    "B": "Scalars such that Av = λv for a square matrix A and non-zero vector v.",
+                    "B": "Scalars such that Av = \u03bbv for a square matrix A and non-zero vector v.",
                     "C": "The inverse of a singular matrix.",
                     "D": "The cross product of two vectors in 3D space."
                 },
                 "answer": "B",
-                "detailedexplanation": "Eigenvalues (λ) are special scalars associated with a linear system of equations (square matrix). When a linear transformation is applied to an eigenvector (v), the vector's direction remains unchanged, and it is only scaled by the factor λ. This is expressed as Av = λv. They are crucial for Principal Component Analysis (PCA)."
+                "detailedexplanation": "Eigenvalues (\u03bb) are special scalars associated with a linear system of equations (square matrix). When a linear transformation is applied to an eigenvector (v), the vector's direction remains unchanged, and it is only scaled by the factor \u03bb. This is expressed as Av = \u03bbv. They are crucial for Principal Component Analysis (PCA)."
             },
             {
                 "id": 10,
@@ -104940,7 +104449,7 @@
                     "D": "P(A) / P(B)"
                 },
                 "answer": "C",
-                "detailedexplanation": "The General Addition Rule states P(A ∪ B) = P(A) + P(B) - P(A ∩ B). For independent events, the probability of the intersection P(A ∩ B) is the product of their individual probabilities P(A) * P(B). Therefore, the union for independent events is P(A) + P(B) - (P(A) * P(B))."
+                "detailedexplanation": "The General Addition Rule states P(A \u222a B) = P(A) + P(B) - P(A \u2229 B). For independent events, the probability of the intersection P(A \u2229 B) is the product of their individual probabilities P(A) * P(B). Therefore, the union for independent events is P(A) + P(B) - (P(A) * P(B))."
             },
             {
                 "id": 11,
@@ -105024,7 +104533,7 @@
                     "D": "Uniform Distribution"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Gaussian Distribution is the 'Normal Distribution,' characterized by a bell-shaped curve. It is defined by two parameters: the mean (μ), which is the peak of the curve, and the standard deviation (σ), which determines the spread. It is ubiquitous in AI for modeling noise and natural phenomena."
+                "detailedexplanation": "The Gaussian Distribution is the 'Normal Distribution,' characterized by a bell-shaped curve. It is defined by two parameters: the mean (\u03bc), which is the peak of the curve, and the standard deviation (\u03c3), which determines the spread. It is ubiquitous in AI for modeling noise and natural phenomena."
             },
             {
                 "id": 17,
@@ -105038,7 +104547,7 @@
                     "D": "A vector perpendicular to both."
                 },
                 "answer": "C",
-                "detailedexplanation": "The magnitude of the cross product of two vectors is given by |a| |b| sin(θ). If two vectors are parallel, the angle (θ) between them is 0 or 180 degrees. Since sin(0) = 0 and sin(180) = 0, the magnitude of the cross product is zero, resulting in the zero vector."
+                "detailedexplanation": "The magnitude of the cross product of two vectors is given by |a| |b| sin(\u03b8). If two vectors are parallel, the angle (\u03b8) between them is 0 or 180 degrees. Since sin(0) = 0 and sin(180) = 0, the magnitude of the cross product is zero, resulting in the zero vector."
             },
             {
                 "id": 18,
@@ -105066,7 +104575,7 @@
                     "D": "99.7%"
                 },
                 "answer": "B",
-                "detailedexplanation": "According to the Empirical Rule (or 68-95-99.7 rule), approximately 68% of the data in a normal distribution falls within one standard deviation (±1σ) of the mean, 95% within two (±2σ), and 99.7% within three (±3σ)."
+                "detailedexplanation": "According to the Empirical Rule (or 68-95-99.7 rule), approximately 68% of the data in a normal distribution falls within one standard deviation (\u00b11\u03c3) of the mean, 95% within two (\u00b12\u03c3), and 99.7% within three (\u00b13\u03c3)."
             },
             {
                 "id": 20,
@@ -105343,7 +104852,7 @@
                     "D": "Softmax"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Rectified Linear Unit (ReLU) function is defined as $f(x) = \\max(0, x)$. Unlike Sigmoid or Tanh, which 'saturate' (become very flat) for large positive or negative values—causing gradients to become nearly zero—ReLU maintains a constant gradient of 1 for all positive inputs. This helps weights update effectively even in very deep networks. Softmax is typically reserved for the output layer of multi-class classification problems."
+                "detailedexplanation": "The Rectified Linear Unit (ReLU) function is defined as $f(x) = \\max(0, x)$. Unlike Sigmoid or Tanh, which 'saturate' (become very flat) for large positive or negative values\u2014causing gradients to become nearly zero\u2014ReLU maintains a constant gradient of 1 for all positive inputs. This helps weights update effectively even in very deep networks. Softmax is typically reserved for the output layer of multi-class classification problems."
             },
             {
                 "id": 5,
@@ -105441,7 +104950,7 @@
                     "D": "Feedforward Neural Network"
                 },
                 "answer": "B",
-                "detailedexplanation": "Recurrent Neural Networks (RNNs) have 'memory'—loops that allow information to persist from one step of the sequence to the next. This makes them ideal for tasks where context matters, like predicting the next word in a sentence. CNNs (A) are specialized for spatial data like images, and GANs (C) are used for generating new data like deepfakes."
+                "detailedexplanation": "Recurrent Neural Networks (RNNs) have 'memory'\u2014loops that allow information to persist from one step of the sequence to the next. This makes them ideal for tasks where context matters, like predicting the next word in a sentence. CNNs (A) are specialized for spatial data like images, and GANs (C) are used for generating new data like deepfakes."
             },
             {
                 "id": 12,
@@ -105609,7 +105118,7 @@
                     "D": "The number of syllables in a word."
                 },
                 "answer": "B",
-                "detailedexplanation": "Word2Vec is a group of models that produce word embeddings—dense vectors where words that appear in similar contexts are placed close together in the vector space. This allows models to understand that 'King' and 'Queen' are related in a way that 'King' and 'Apple' are not. Option C describes 'Bag of Words' or TF-IDF."
+                "detailedexplanation": "Word2Vec is a group of models that produce word embeddings\u2014dense vectors where words that appear in similar contexts are placed close together in the vector space. This allows models to understand that 'King' and 'Queen' are related in a way that 'King' and 'Apple' are not. Option C describes 'Bag of Words' or TF-IDF."
             },
             {
                 "id": 24,
@@ -105623,7 +105132,7 @@
                     "D": "The model has high recall but low precision."
                 },
                 "answer": "B",
-                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 represents a model with no discriminative power—essentially flipping a coin. Anything below 0.5 means the model is actually performing worse than random (usually indicating the labels are swapped)."
+                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 represents a model with no discriminative power\u2014essentially flipping a coin. Anything below 0.5 means the model is actually performing worse than random (usually indicating the labels are swapped)."
             },
             {
                 "id": 25,
@@ -105711,7 +105220,7 @@
             }
         ],
         "outro_script": {
-            "closing": "And that's a wrap on our 30-question deep dive into AI and Machine Learning basics! How did you do? If you found some of the neural network or optimization questions tricky, don't sweat it—those are the toughest parts of the exam.",
+            "closing": "And that's a wrap on our 30-question deep dive into AI and Machine Learning basics! How did you do? If you found some of the neural network or optimization questions tricky, don't sweat it\u2014those are the toughest parts of the exam.",
             "cta_final": "If you're serious about passing your certification in 2026, click the link in the description for our full, updated practice exam suite.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more certification prep. Check out our 'Deep Learning Masterclass' next to level up your skills even further!"
         },
@@ -105735,7 +105244,7 @@
                 "Knowledge Graphs and Ontology Exam Preparation"
             ],
             "intro_script": {
-                "hook": "Ever wondered how machines actually 'know' things? It’s not just data; it’s Knowledge Representation. If you're aiming to master the logic behind AI and ace your certification, you're in the right place.",
+                "hook": "Ever wondered how machines actually 'know' things? It\u2019s not just data; it\u2019s Knowledge Representation. If you're aiming to master the logic behind AI and ace your certification, you're in the right place.",
                 "summary": "In this video, we dive deep into 30 high-yield practice questions designed to mirror the current AI Knowledge Representation certification exam, covering everything from Propositional Logic to Semantic Nets.",
                 "cta_intro": "Follow along, pause the video to answer for yourself, and check the detailed explanations to solidify your understanding.",
                 "checkfullexamlinkindescription": "For the complete exam simulator and additional resources, make sure to check the link in the description below."
@@ -105931,7 +105440,7 @@
                     "D": "The simplification of a logic gate circuit."
                 },
                 "answer": "B",
-                "detailedexplanation": "Unification is a key algorithm in automated theorem proving. It takes two symbolic expressions and tries to find a 'Most General Unifier' (MGU)—a set of variable assignments that makes the expressions match. For example, unifying P(x, Jerry) with P(Tom, y) results in the substitution {x/Tom, y/Jerry}. This is essential for applying the resolution rule in First-Order Logic."
+                "detailedexplanation": "Unification is a key algorithm in automated theorem proving. It takes two symbolic expressions and tries to find a 'Most General Unifier' (MGU)\u2014a set of variable assignments that makes the expressions match. For example, unifying P(x, Jerry) with P(Tom, y) results in the substitution {x/Tom, y/Jerry}. This is essential for applying the resolution rule in First-Order Logic."
             },
             {
                 "id": 12,
@@ -106029,7 +105538,7 @@
                     "D": "The definition of a triangle."
                 },
                 "answer": "C",
-                "detailedexplanation": "Procedural knowledge is 'knowing how' to do something. It is knowledge manifested in the performance of a task, often represented as a sequence of steps or actions. In contrast, 'Declarative Knowledge' (Options A, B, and D) is 'knowing that'—it consists of static facts and beliefs about the world."
+                "detailedexplanation": "Procedural knowledge is 'knowing how' to do something. It is knowledge manifested in the performance of a task, often represented as a sequence of steps or actions. In contrast, 'Declarative Knowledge' (Options A, B, and D) is 'knowing that'\u2014it consists of static facts and beliefs about the world."
             },
             {
                 "id": 19,
@@ -106057,7 +105566,7 @@
                     "D": "To simplify a semantic network."
                 },
                 "answer": "B",
-                "detailedexplanation": "Skolemization is a step in converting First-Order Logic formulas into Conjunctive Normal Form (CNF) for resolution. It eliminates existential quantifiers (∃). If the quantifier is not within the scope of a universal quantifier, the variable is replaced by a 'Skolem Constant'. If it is within the scope of a universal quantifier (∀x), the variable is replaced by a 'Skolem Function' of x."
+                "detailedexplanation": "Skolemization is a step in converting First-Order Logic formulas into Conjunctive Normal Form (CNF) for resolution. It eliminates existential quantifiers (\u2203). If the quantifier is not within the scope of a universal quantifier, the variable is replaced by a 'Skolem Constant'. If it is within the scope of a universal quantifier (\u2200x), the variable is replaced by a 'Skolem Function' of x."
             },
             {
                 "id": 21,
@@ -106091,7 +105600,7 @@
                 "id": 23,
                 "domain": "Logic",
                 "difficulty": "Easy",
-                "question": "In Propositional Logic, the symbol '¬' represents which logical operator?",
+                "question": "In Propositional Logic, the symbol '\u00ac' represents which logical operator?",
                 "options": {
                     "A": "AND",
                     "B": "OR",
@@ -106099,7 +105608,7 @@
                     "D": "IF...THEN"
                 },
                 "answer": "C",
-                "detailedexplanation": "The '¬' symbol is the negation operator. It simply flips the truth value of the proposition it precedes. If proposition P is true, then ¬P is false. It is one of the fundamental building blocks of logical expressions alongside ∧ (AND), ∨ (OR), and → (Implication)."
+                "detailedexplanation": "The '\u00ac' symbol is the negation operator. It simply flips the truth value of the proposition it precedes. If proposition P is true, then \u00acP is false. It is one of the fundamental building blocks of logical expressions alongside \u2227 (AND), \u2228 (OR), and \u2192 (Implication)."
             },
             {
                 "id": 24,
@@ -106189,7 +105698,7 @@
                 "id": 30,
                 "domain": "Logic",
                 "difficulty": "Hard",
-                "question": "Which rule of inference allows you to conclude 'Q' if you know 'P' and 'P → Q'?",
+                "question": "Which rule of inference allows you to conclude 'Q' if you know 'P' and 'P \u2192 Q'?",
                 "options": {
                     "A": "Modus Tollens",
                     "B": "Modus Ponens",
@@ -106777,13 +106286,13 @@
                 "difficulty": "Medium",
                 "question": "Which of the following defines a 'Support' of a fuzzy set A?",
                 "options": {
-                    "A": "The set of all points x in X such that μA(x) = 1.",
-                    "B": "The set of all points x in X such that μA(x) > 0.",
-                    "C": "The set of all points x in X such that μA(x) = 0.5.",
+                    "A": "The set of all points x in X such that \u03bcA(x) = 1.",
+                    "B": "The set of all points x in X such that \u03bcA(x) > 0.",
+                    "C": "The set of all points x in X such that \u03bcA(x) = 0.5.",
                     "D": "The maximum value of the membership function."
                 },
                 "answer": "B",
-                "detailedexplanation": "The support of a fuzzy set A is the crisp set that contains all elements of the universe of discourse X that have a non-zero membership grade in A. If μA(x) > 0, then x is part of the support. If the membership value is exactly 1, that is referred to as the 'Core' of the fuzzy set. Understanding the support is crucial for defining the boundaries of fuzzy sets in a controller."
+                "detailedexplanation": "The support of a fuzzy set A is the crisp set that contains all elements of the universe of discourse X that have a non-zero membership grade in A. If \u03bcA(x) > 0, then x is part of the support. If the membership value is exactly 1, that is referred to as the 'Core' of the fuzzy set. Understanding the support is crucial for defining the boundaries of fuzzy sets in a controller."
             },
             {
                 "id": 3,
@@ -106797,7 +106306,7 @@
                     "D": "0.24"
                 },
                 "answer": "C",
-                "detailedexplanation": "In standard Zadeh fuzzy logic, the intersection of two fuzzy sets (the AND operator) is calculated using the 'min' function: μ(A ∩ B) = min(μA, μB). In this case, min(0.6, 0.4) is 0.4. This is different from probabilistic logic where you might multiply the values (Product T-norm), though multiplication is an alternative valid T-norm used in some specific fuzzy systems."
+                "detailedexplanation": "In standard Zadeh fuzzy logic, the intersection of two fuzzy sets (the AND operator) is calculated using the 'min' function: \u03bc(A \u2229 B) = min(\u03bcA, \u03bcB). In this case, min(0.6, 0.4) is 0.4. This is different from probabilistic logic where you might multiply the values (Product T-norm), though multiplication is an alternative valid T-norm used in some specific fuzzy systems."
             },
             {
                 "id": 4,
@@ -106845,7 +106354,7 @@
                 "id": 7,
                 "domain": "Fuzzy Set Operations",
                 "difficulty": "Medium",
-                "question": "The 'Complement' of a fuzzy set A with membership μA(x) = 0.3 is:",
+                "question": "The 'Complement' of a fuzzy set A with membership \u03bcA(x) = 0.3 is:",
                 "options": {
                     "A": "0.3",
                     "B": "0.7",
@@ -106853,7 +106362,7 @@
                     "D": "0.0"
                 },
                 "answer": "B",
-                "detailedexplanation": "The complement of a fuzzy set (the NOT operator) is defined as 1 minus the membership value: μ(not A) = 1 - μA(x). Therefore, 1 - 0.3 = 0.7. This represents the degree to which an element does 'not' belong to the set A."
+                "detailedexplanation": "The complement of a fuzzy set (the NOT operator) is defined as 1 minus the membership value: \u03bc(not A) = 1 - \u03bcA(x). Therefore, 1 - 0.3 = 0.7. This represents the degree to which an element does 'not' belong to the set A."
             },
             {
                 "id": 8,
@@ -106867,7 +106376,7 @@
                     "D": "To define the linguistic variables of the system."
                 },
                 "answer": "C",
-                "detailedexplanation": "The Fuzzifier is the first stage of a Fuzzy Logic Controller. It takes real-time crisp inputs (like a temperature of 25.5°C) and maps them onto the defined membership functions to determine the degree to which the input belongs to various fuzzy sets (e.g., 0.8 'Warm' and 0.2 'Hot')."
+                "detailedexplanation": "The Fuzzifier is the first stage of a Fuzzy Logic Controller. It takes real-time crisp inputs (like a temperature of 25.5\u00b0C) and maps them onto the defined membership functions to determine the degree to which the input belongs to various fuzzy sets (e.g., 0.8 'Warm' and 0.2 'Hot')."
             },
             {
                 "id": 9,
@@ -106881,7 +106390,7 @@
                     "D": "A type of defuzzification used in Sugeno systems."
                 },
                 "answer": "B",
-                "detailedexplanation": "Linguistic hedges are mathematical modifiers that change the shape of a membership function to reflect natural language intensity. For example, the hedge 'very' is often implemented by squaring the membership value (μ²), which makes the fuzzy set narrower and more 'concentrated'. 'Somewhat' is often implemented by taking the square root, making the set 'dilated'."
+                "detailedexplanation": "Linguistic hedges are mathematical modifiers that change the shape of a membership function to reflect natural language intensity. For example, the hedge 'very' is often implemented by squaring the membership value (\u03bc\u00b2), which makes the fuzzy set narrower and more 'concentrated'. 'Somewhat' is often implemented by taking the square root, making the set 'dilated'."
             },
             {
                 "id": 10,
@@ -106915,7 +106424,7 @@
                 "id": 12,
                 "domain": "Fuzzy Set Operations",
                 "difficulty": "Medium",
-                "question": "If μA(x) = 0.8 and μB(x) = 0.5, what is the value of the Union (OR) of A and B using the standard Max operator?",
+                "question": "If \u03bcA(x) = 0.8 and \u03bcB(x) = 0.5, what is the value of the Union (OR) of A and B using the standard Max operator?",
                 "options": {
                     "A": "0.3",
                     "B": "0.5",
@@ -106923,7 +106432,7 @@
                     "D": "1.3"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Union of two fuzzy sets (the OR operator) is determined by the 'max' function: μ(A ∪ B) = max(μA, μB). Since 0.8 is greater than 0.5, the union result is 0.8. This reflects that an element belongs to 'A or B' to the extent of its strongest membership in either set."
+                "detailedexplanation": "The Union of two fuzzy sets (the OR operator) is determined by the 'max' function: \u03bc(A \u222a B) = max(\u03bcA, \u03bcB). Since 0.8 is greater than 0.5, the union result is 0.8. This reflects that an element belongs to 'A or B' to the extent of its strongest membership in either set."
             },
             {
                 "id": 13,
@@ -106951,7 +106460,7 @@
                     "D": "The linguistic labels used to describe data."
                 },
                 "answer": "B",
-                "detailedexplanation": "The Universe of Discourse is the domain of interest for a specific variable. For a temperature controller, the universe of discourse might be 0°C to 100°C. All fuzzy sets (Cold, Warm, Hot) for that variable must be defined within this range."
+                "detailedexplanation": "The Universe of Discourse is the domain of interest for a specific variable. For a temperature controller, the universe of discourse might be 0\u00b0C to 100\u00b0C. All fuzzy sets (Cold, Warm, Hot) for that variable must be defined within this range."
             },
             {
                 "id": 15,
@@ -107013,15 +106522,15 @@
                 "id": 19,
                 "domain": "Fuzzy Set Theory",
                 "difficulty": "Hard",
-                "question": "What is an α-cut (alpha-cut) of a fuzzy set?",
+                "question": "What is an \u03b1-cut (alpha-cut) of a fuzzy set?",
                 "options": {
                     "A": "The process of removing the top of a membership function.",
-                    "B": "A crisp set containing elements with membership grades greater than or equal to α.",
+                    "B": "A crisp set containing elements with membership grades greater than or equal to \u03b1.",
                     "C": "The derivative of the membership function.",
                     "D": "The intersection of a fuzzy set with its complement."
                 },
                 "answer": "B",
-                "detailedexplanation": "An alpha-cut is a way to relate fuzzy sets to crisp sets. For a given value α (between 0 and 1), the α-cut of set A is the crisp set of all elements x whose membership μA(x) ≥ α. This is frequently used in fuzzy arithmetic and interval analysis."
+                "detailedexplanation": "An alpha-cut is a way to relate fuzzy sets to crisp sets. For a given value \u03b1 (between 0 and 1), the \u03b1-cut of set A is the crisp set of all elements x whose membership \u03bcA(x) \u2265 \u03b1. This is frequently used in fuzzy arithmetic and interval analysis."
             },
             {
                 "id": 20,
@@ -107119,7 +106628,7 @@
                     "D": "Multiplying all values by 2."
                 },
                 "answer": "B",
-                "detailedexplanation": "Concentration is a linguistic hedge operation (like the word 'very'). By squaring the membership values (μ²), values closer to 1 remain high while lower values decrease significantly, effectively narrowing the fuzzy set and 'concentrating' its meaning."
+                "detailedexplanation": "Concentration is a linguistic hedge operation (like the word 'very'). By squaring the membership values (\u03bc\u00b2), values closer to 1 remain high while lower values decrease significantly, effectively narrowing the fuzzy set and 'concentrating' its meaning."
             },
             {
                 "id": 27,
@@ -107175,11 +106684,11 @@
                     "D": "Probability is for linguistic variables, fuzzy logic is for numeric variables."
                 },
                 "answer": "B",
-                "detailedexplanation": "Fuzzy logic models 'vagueness' (is the water hot?), while probability models 'uncertainty' (will it rain?). Even if an event is 100% certain (probability = 1), it can still be fuzzy (e.g., it is 100% certain that a 30°C day is 'somewhat warm')."
+                "detailedexplanation": "Fuzzy logic models 'vagueness' (is the water hot?), while probability models 'uncertainty' (will it rain?). Even if an event is 100% certain (probability = 1), it can still be fuzzy (e.g., it is 100% certain that a 30\u00b0C day is 'somewhat warm')."
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question practice session for the AI Fuzzy Logic Systems certification. How many did you get right? If you struggled with the inference methods or defuzzification, don't worry—these are some of the toughest concepts in AI.",
+            "closing": "That wraps up our 30-question practice session for the AI Fuzzy Logic Systems certification. How many did you get right? If you struggled with the inference methods or defuzzification, don't worry\u2014these are some of the toughest concepts in AI.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more AI certification prep. It really helps the channel!",
             "next_steps": "Ready for the real thing? Click the link in the description to access our full-length simulated exams and take your career to the next level. Good luck with your studies!"
         },
