@@ -138,15 +138,23 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
         sanitized_tags.append(clean_tag)
         total_chars += tag_length + (1 if len(sanitized_tags) > 1 else 0)
 
-    # Truncate description if it exceeds YouTube's limit (5000 chars)
-    # Using 4800 as safety margin as requested
-    if len(description) > 4800:
-        description = description[:4800] + "..."
+    # Sanitize and truncate title and description
+    def sanitize_text(text, limit):
+        if not text:
+            return ""
+        # YouTube forbids < and > in descriptions and titles
+        clean_text = text.replace('<', '').replace('>', '')
+        if len(clean_text) > limit:
+            clean_text = clean_text[:limit-3] + "..."
+        return clean_text
+
+    clean_title = sanitize_text(title, 100)
+    clean_description = sanitize_text(description, 4800)
 
     body = {
         'snippet': {
-            'title': title,
-            'description': description,
+            'title': clean_title,
+            'description': clean_description,
             'tags': sanitized_tags,
             'categoryId': category_id,
             'defaultLanguage': 'en'  # Set video language to English
@@ -157,14 +165,20 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
         }
     }
     
-    # Add course title if provided (for educational metadata)
+    # Required localization for default language
+    local_desc = clean_description
     if course_title:
-        body['localizations'] = {
-            'en': {
-                'title': title,
-                'description': f"{course_title}\n\n{description}"
-            }
+        local_desc = f"{course_title}\n\n{clean_description}"
+    
+    # Sanitize and truncate localization description strictly (max 5000)
+    local_desc = sanitize_text(local_desc, 5000)
+    
+    body['localizations'] = {
+        'en': {
+            'title': clean_title,
+            'description': local_desc
         }
+    }
 
     print(f"Uploading {file_path}...")
     media = MediaFileUpload(file_path, chunksize=-1, resumable=True)
