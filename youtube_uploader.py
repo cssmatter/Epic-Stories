@@ -138,6 +138,11 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
         sanitized_tags.append(clean_tag)
         total_chars += tag_length + (1 if len(sanitized_tags) > 1 else 0)
 
+    # Truncate description if it exceeds YouTube's limit (5000 chars)
+    # Using 4800 as safety margin as requested
+    if len(description) > 4800:
+        description = description[:4800] + "..."
+
     body = {
         'snippet': {
             'title': title,
