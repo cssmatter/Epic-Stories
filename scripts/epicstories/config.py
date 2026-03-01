@@ -20,12 +20,12 @@ os.makedirs(ASSETS_DIR, exist_ok=True)
 os.makedirs(SPOTIFY_ASSETS_DIR, exist_ok=True)
 
 # --- VIDEO SETTINGS ---
-WIDTH = 3840
-HEIGHT = 2160
-FPS = 60
+WIDTH = 1920
+HEIGHT = 1080
+FPS = 30  # Reduced from 60 for faster encoding
 CODEC = "libx264"
-CRF = 23  # Quality (lower = better, 18-28 recommended)
-PRESET = "medium"  # Encoding speed (ultrafast, fast, medium, slow)
+CRF = 28  # Higher CRF = lower quality but faster encoding (was 23)
+PRESET = "ultrafast"  # Fastest encoding preset (was "medium")
 
 # --- TTS SETTINGS ---
 TTS_LANGUAGE = "en"
