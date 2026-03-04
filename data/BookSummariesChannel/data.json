@@ -1,69 +1,6 @@
 [
     {
         "channel_intro": {
-            "welcome_hook": "Have you ever felt trapped by your past or weighed down by the constant need for approval from everyone around you?",
-            "intro_line": "Welcome to the Book Summaries Channel. Today, we are exploring the life-changing wisdom of 'The Courage to Be Disliked' by Ichiro Kishimi and Fumitake Koga, a book that uses Adlerian psychology to show you how to break free from your shackles and find true happiness."
-        },
-        "chapters": [
-            {
-                "chapter_number": "1",
-                "chapter_title": "The First Night: Deny Trauma",
-                "summary": "This opening section introduces the dialogue between a cynical youth and a wise philosopher who advocates for the teachings of Alfred Adler. The philosopher boldly claims that trauma does not exist, or more accurately, that our past experiences do not determine our current state. Instead of Freudian etiology, which looks for causes in the past, Adlerian psychology focuses on teleology, which is the study of purpose. We are not driven by past events, but rather we use those events to serve our current goals or excuses. For instance, someone might stay shut in their room not because of a past trauma, but to achieve the goal of gaining attention or avoiding the anxiety of the outside world. This perspective shifts the power back to the individual, suggesting that we choose our own lifestyles. The philosopher argues that if we live in a world of cause and effect, we remain victims of our history forever. By denying trauma, we accept that we have the freedom to change our response to life at any given moment. This radical idea suggests that unhappiness is a choice we make to suit a specific hidden purpose. Ultimately, the first night teaches us that our lives are determined by the meaning we give to the past, not by the past itself."
-            },
-            {
-                "chapter_number": "2",
-                "chapter_title": "The Second Night: All Problems Are Interpersonal Relationship Problems",
-                "summary": "On the second night, the philosopher introduces the shocking premise that all human problems are rooted in interpersonal relationships. If an individual were the only person in the universe, internal conflict and loneliness would effectively disappear. Many of our feelings of inferiority are not objective facts, but subjective interpretations based on comparisons with others. We often use our feelings of inferiority as an excuse to avoid the tasks of life, creating an 'inferiority complex' where we claim we cannot succeed because of a specific flaw. Conversely, some people develop a 'superiority complex' to hide their deep-seated insecurities by acting boastful or obsessed with status. The philosopher emphasizes that life is not a competition; we should focus on walking alongside others rather than trying to climb above them. True growth comes from comparing ourselves to our ideal selves rather than to the people around us. When we view others as comrades instead of enemies, the world becomes a much safer and more inviting place. Avoiding tasks like work, friendship, and love is often just an attempt to avoid the possibility of being hurt by others. Recognizing that we are the ones creating these hurdles allows us to begin dismantling our perceived limitations."
-            },
-            {
-                "chapter_number": "3",
-                "chapter_title": "The Third Night: Discard Other People's Tasks",
-                "summary": "The third night focuses on the concept of 'separation of tasks,' which is perhaps the most famous and practical part of Adlerian psychology. The philosopher explains that much of our stress comes from intruding on other people's tasks or allowing them to intrude on ours. We must ask ourselves: 'Whose task is this?' and look at who will ultimately receive the end result of the choice. For example, a child's studying is the child's task, not the parent's; the parent can support, but they cannot force the choice without creating conflict. Seeking recognition from others is a trap because it makes us live our lives according to their expectations rather than our own values. Having the courage to be disliked means you are living your life in freedom, unaffected by the judgments of others. If you are afraid of being disliked, you are essentially living a life of servitude to everyone else's opinions. You cannot control what others think of you, so worrying about it is an intrusion into their task. True freedom is found when we stop trying to satisfy everyone and focus solely on our own life tasks. This does not mean being selfish, but rather taking responsibility for our own happiness while letting others take responsibility for theirs."
-            },
-            {
-                "chapter_number": "4",
-                "chapter_title": "The Fourth Night: Where the Center of the World Is",
-                "summary": "In this section, the philosopher moves from the separation of tasks toward the goal of interpersonal relationships: 'community feeling.' While we must separate our tasks, we should also strive to see ourselves as part of a larger whole, ranging from our family to the entire universe. The philosopher warns against self-centeredness, noting that many people who seek recognition actually believe they are the center of the world. True community feeling involves moving from 'What will this person give me?' to 'What can I give to this person?' The dialogue also explores why we should neither praise nor rebuke others, as both are forms of vertical relationship used to manipulate. Instead, we should foster horizontal relationships based on equality and the expression of gratitude. When we praise someone, we are subtly looking down on them and passing judgment from a position of superiority. By using words of thanks, we help others realize their own worth and encourage them to contribute to the community. We find our value when we feel that we are beneficial to the community, even if that benefit is not immediately visible or productive. This shift in perspective allows us to feel at home in the world and connected to those around us."
-            },
-            {
-                "chapter_number": "5",
-                "chapter_title": "The Fifth Night: To Live in the Earnest Here and Now",
-                "summary": "The final night brings the conversation to a close by discussing the courage to be happy and the importance of the present moment. The philosopher introduces the concepts of self-acceptance, confidence in others, and contribution to others as the three steps to community feeling. Self-acceptance is different from self-affirmation; it means acknowledging what we cannot change and focusing on what we can. Confidence in others means trusting people unconditionally, even if there is a risk of being betrayed, because that is the only way to build deep relationships. Contribution to others does not mean self-sacrifice, but rather the subjective sense that 'I am of use to someone.' The philosopher argues that life is a series of moments, like a dance, rather than a linear path toward a distant goal. If you are dancing earnestly in the 'here and now,' it doesn't matter where you end up or if you ever reach a specific destination. The meaning of life is not something predetermined; it is something you give to your own life through your choices and contributions. You have the power to change your world starting from this very second. The dialogue ends with the youth realizing that he no longer needs the past or the future to define his worth. He is finally ready to step into his own freedom with the courage to be himself."
-            }
-        ],
-        "call_to_action": {
-            "subscribe": "Subscribe for more powerful book summaries",
-            "affiliate": "Check description to order this book"
-        },
-        "youtube_metadata": {
-            "title": "The Courage to Be Disliked | Ichiro Kishimi | Full Book Summary",
-            "author": "Ichiro Kishimi",
-            "category": "Self-Help",
-            "affiliate_link": "https://amzn.to/4cvDydR",
-            "cover_image": "https://m.media-amazon.com/images/I/81O2KXHVkDL._SL1500_.jpg",
-            "short_description": "Stop living for others and start living for yourself. This summary of 'The Courage to Be Disliked' explores Adlerian psychology through a powerful dialogue, teaching you how to find happiness by separating tasks and living in the moment.",
-            "tags": [
-                "The Courage to Be Disliked",
-                "Ichiro Kishimi",
-                "Adlerian Psychology",
-                "Alfred Adler",
-                "Personal Growth",
-                "Self-Help Book Summary",
-                "Happiness",
-                "Psychology",
-                "Mental Freedom",
-                "Stoicism",
-                "Overcoming Trauma"
-            ]
-        },
-        "screentext": {
-            "original_title": "The Courage to Be Disliked",
-            "author": "Ichiro Kishimi",
-            "thumbnail_id": "1443456624"
-        }
-    },
-    {
-        "channel_intro": {
             "welcome_hook": "Welcome back to Book Summaries Channel! Have you ever wondered why people do the things they do, or why you often find yourself repeating the same social mistakes?",
             "intro_line": "Today, we are diving deep into 'The Laws of Human Nature' by Robert Greene, a masterpiece that serves as a guide to decoding the behavior of everyone around you\u2014and, most importantly, yourself."
         },
