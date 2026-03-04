@@ -2,498 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Java Build Tools Mastery: Maven and Gradle Practice Exam",
-                "Maven vs Gradle: Ultimate Certification Practice Test",
-                "Java Build Automation Expert: Maven and Gradle Exam Prep",
-                "Top 30 Maven and Gradle Interview Questions and Answers",
-                "Mastering Java Build Tools: Maven & Gradle Comprehensive Guide",
-                "Maven Lifecycle and Gradle Build Script Practice Questions",
-                "Java DevOps Skills: Maven and Gradle Certification Prep",
-                "Gradle Dependency Management and Maven POM Explained",
-                "Crack Your Java Build Tools Certification: 30 Real Exam MCQs",
-                "Java Build Tools Fundamentals: Maven and Gradle Deep Dive"
-            ],
-            "intro_script": {
-                "hook": "Are you struggling to choose between Maven and Gradle, or do you find build lifecycle errors holding back your Java projects?",
-                "summary": "In this video, we dive deep into 30 high-yield practice questions covering the core domains of Java Build Tools, focusing on Maven and Gradle. We'll explore dependency management, build lifecycles, plugins, and the key differences that will help you ace your certification and professional projects.",
-                "cta_intro": "Before we start, make sure to grab a pen and paper to track your score. Let's see if you can get all 30 correct!",
-                "checkfullexamlinkindescription": "For the full practice exam and detailed study guides, check the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/ZVb3MX",
-                "youtubetitle": "Java Build Tools Maven and Gradle Certification Practice Questions and Explanations",
-                "description": "Master Java Build Tools with this comprehensive practice exam covering Maven and Gradle. This video features 30 realistic MCQ questions designed to simulate actual certification environments. We cover the Maven POM, Gradle DSL, build lifecycles, dependency resolution, and multi-module project configurations. Perfect for Java developers, DevOps engineers, and students preparing for build automation certifications.",
-                "tags": "Java, Maven, Gradle, Build Tools, DevOps, Java Programming, Software Engineering, Maven Tutorial, Gradle Tutorial, Build Automation, Dependency Management, POM.xml, build.gradle, Java Certification, Practice Exam",
-                "hashtags": [
-                    "#Java",
-                    "#Maven",
-                    "#Gradle",
-                    "#DevOps",
-                    "#BuildTools",
-                    "#SoftwareDevelopment",
-                    "#JavaCertification"
-                ],
-                "keywords": [
-                    "Maven vs Gradle",
-                    "Maven Build Lifecycle",
-                    "Gradle Tasks",
-                    "Java Dependency Management",
-                    "Maven Plugins",
-                    "Gradle Build Script",
-                    "Artifact Repository",
-                    "Multi-module Builds",
-                    "Transitive Dependencies",
-                    "Build Automation Tools"
-                ],
-                "mostsearchedongoogle": [
-                    "Maven vs Gradle performance comparison",
-                    "How to create a multi-module Maven project",
-                    "Gradle build lifecycle stages explained",
-                    "Difference between Maven clean and install",
-                    "How to manage dependencies in Gradle",
-                    "Maven central repository search",
-                    "Writing custom Gradle tasks",
-                    "Maven pom.xml structure",
-                    "Gradle wrapper vs local installation",
-                    "Best Java build tools for enterprise"
-                ]
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Maven Fundamentals",
-                "difficulty": "Easy",
-                "question": "Which file is the core configuration file for a Maven project?",
-                "options": {
-                    "A": "build.xml",
-                    "B": "pom.xml",
-                    "C": "settings.xml",
-                    "D": "maven.config"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Project Object Model (POM) is the fundamental unit of work in Maven. It is an XML file (pom.xml) that contains information about the project and configuration details used by Maven to build the project. It includes dependencies, plugins, goals, and various project metadata such as version, group ID, and artifact ID. Option A is for Ant, and Option C is for user-specific Maven configuration, not project-specific."
-            },
-            {
-                "id": 2,
-                "domain": "Gradle Basics",
-                "difficulty": "Easy",
-                "question": "What is the primary language used to write Gradle build scripts in modern versions?",
-                "options": {
-                    "A": "XML",
-                    "B": "Python",
-                    "C": "Groovy or Kotlin",
-                    "D": "YAML"
-                },
-                "answer": "C",
-                "detailedexplanation": "Unlike Maven, which uses XML, Gradle uses a Domain Specific Language (DSL) based on Groovy or Kotlin. This allows for much more flexible and programmatic build logic. Kotlin DSL is increasingly popular due to its type safety and better IDE support, while Groovy remains the legacy standard."
-            },
-            {
-                "id": 3,
-                "domain": "Maven Lifecycle",
-                "difficulty": "Medium",
-                "question": "In the Maven default lifecycle, which phase comes immediately after 'compile'?",
-                "options": {
-                    "A": "validate",
-                    "B": "package",
-                    "C": "test",
-                    "D": "install"
-                },
-                "answer": "C",
-                "detailedexplanation": "The Maven default lifecycle follows a specific sequence: validate -> compile -> test -> package -> verify -> install -> deploy. Therefore, after the code is compiled, Maven proceeds to execute the unit tests using a suitable testing framework like JUnit or TestNG."
-            },
-            {
-                "id": 4,
-                "domain": "Gradle Architecture",
-                "difficulty": "Medium",
-                "question": "What is the purpose of the 'Gradle Wrapper'?",
-                "options": {
-                    "A": "To encrypt build scripts for security",
-                    "B": "To ensure a project build uses a specific Gradle version consistently",
-                    "C": "To convert Maven POM files into Gradle files",
-                    "D": "To provide a GUI for Gradle commands"
-                },
-                "answer": "B",
-                "detailedexplanation": "The Gradle Wrapper (gradlew) is a batch script (for Windows) and a shell script (for Unix) that downloads and uses a specific version of Gradle defined in the project. This ensures that every developer and CI/CD environment builds the project with the exact same Gradle version, preventing 'it works on my machine' issues."
-            },
-            {
-                "id": 5,
-                "domain": "Dependency Management",
-                "difficulty": "Medium",
-                "question": "Which Maven dependency scope indicates that a dependency is required for compilation but will be provided by the JDK or a container at runtime?",
-                "options": {
-                    "A": "compile",
-                    "B": "runtime",
-                    "C": "provided",
-                    "D": "test"
-                },
-                "answer": "C",
-                "detailedexplanation": "The 'provided' scope is used for dependencies like the Servlet API or Java EE APIs. You need them to compile your code, but you don't want to include them in the final WAR/JAR file because the web server (like Tomcat) or the runtime environment already provides those libraries."
-            },
-            {
-                "id": 6,
-                "domain": "Gradle Tasks",
-                "difficulty": "Medium",
-                "question": "How are tasks executed in Gradle compared to Maven goals?",
-                "options": {
-                    "A": "Gradle tasks are always executed in alphabetical order",
-                    "B": "Gradle uses a Directed Acyclic Graph (DAG) to determine task order",
-                    "C": "Gradle tasks must be manually ordered in the XML file",
-                    "D": "Gradle does not support task dependencies"
-                },
-                "answer": "B",
-                "detailedexplanation": "Gradle build logic is based on a Directed Acyclic Graph (DAG). Before any task executes, Gradle builds a complete graph of all tasks and their dependencies. This allows Gradle to determine the most efficient execution order and avoid running the same task twice or running tasks that are already up-to-date."
-            },
-            {
-                "id": 7,
-                "domain": "Maven Repositories",
-                "difficulty": "Easy",
-                "question": "Where does Maven store downloaded dependencies by default on a local machine?",
-                "options": {
-                    "A": "/usr/bin/maven/repo",
-                    "B": "C:\\Program Files\\Maven\\Library",
-                    "C": "The .m2 directory in the user's home folder",
-                    "D": "The project's /lib folder"
-                },
-                "answer": "C",
-                "detailedexplanation": "Maven uses a local repository to cache downloaded artifacts. By default, this is located at ${user.home}/.m2/repository. This allows multiple projects on the same machine to share the same JAR files, saving disk space and reducing download times."
-            },
-            {
-                "id": 8,
-                "domain": "Gradle Performance",
-                "difficulty": "Hard",
-                "question": "Which Gradle feature allows it to skip tasks if the input and output files have not changed?",
-                "options": {
-                    "A": "Incremental Build",
-                    "B": "Build Cache",
-                    "C": "Daemon Mode",
-                    "D": "Parallel Execution"
-                },
-                "answer": "A",
-                "detailedexplanation": "Incremental Build is a core feature of Gradle. For every task, Gradle tracks the inputs (files, properties) and outputs. If the inputs and outputs remain the same since the last execution, Gradle marks the task as 'UP-TO-DATE' and skips it, significantly speeding up subsequent builds."
-            },
-            {
-                "id": 9,
-                "domain": "Maven Plugins",
-                "difficulty": "Medium",
-                "question": "Which Maven plugin is responsible for creating a JAR file from the compiled classes?",
-                "options": {
-                    "A": "maven-compiler-plugin",
-                    "B": "maven-deploy-plugin",
-                    "C": "maven-jar-plugin",
-                    "D": "maven-surefire-plugin"
-                },
-                "answer": "C",
-                "detailedexplanation": "The maven-jar-plugin provides the capability to build JARs. While the 'package' phase triggers the creation of the artifact, it is this specific plugin that handles the packaging of the classes and resources into the standard Java Archive format."
-            },
-            {
-                "id": 10,
-                "domain": "Gradle Configuration",
-                "difficulty": "Medium",
-                "question": "In Gradle, which block is used to define the external libraries the project depends on?",
-                "options": {
-                    "A": "libraries { }",
-                    "B": "dependencies { }",
-                    "C": "external { }",
-                    "D": "plugins { }"
-                },
-                "answer": "B",
-                "detailedexplanation": "The 'dependencies' block in a build.gradle file is where you declare the group, name, and version of the libraries your project needs. You also specify the configuration (e.g., implementation, testImplementation) which determines when the dependency is used."
-            },
-            {
-                "id": 11,
-                "domain": "Maven Troubleshooting",
-                "difficulty": "Hard",
-                "question": "If you have a version conflict where two different dependencies require different versions of the same library, how does Maven resolve it by default?",
-                "options": {
-                    "A": "It chooses the newest version",
-                    "B": "It throws a Build Failure error",
-                    "C": "Nearest Definition: It uses the version from the dependency closest to the project root in the tree",
-                    "D": "It includes both versions in the classpath"
-                },
-                "answer": "C",
-                "detailedexplanation": "Maven uses 'Nearest Definition' resolution. If project A depends on B (which depends on D v1.0) and C (which depends on D v2.0), and B and C are at the same depth, the one declared first in the POM usually wins. If D is declared directly in project A's POM, that version (the 'nearest' one) will always be used regardless of what B and C want."
-            },
-            {
-                "id": 12,
-                "domain": "Gradle Features",
-                "difficulty": "Medium",
-                "question": "What is the 'Gradle Daemon'?",
-                "options": {
-                    "A": "A background process that keeps Gradle running to improve startup time",
-                    "B": "A virus scanner for build scripts",
-                    "C": "A specialized plugin for deploying to cloud environments",
-                    "D": "The component that manages the local Maven repository"
-                },
-                "answer": "A",
-                "detailedexplanation": "The Gradle Daemon is a long-lived background process. By staying running between builds, it avoids the overhead of starting the JVM and loading the Gradle classes every time you run a command. This can reduce build start times by several seconds."
-            },
-            {
-                "id": 13,
-                "domain": "Maven Multi-Module",
-                "difficulty": "Medium",
-                "question": "In a Maven multi-module project, which XML element is used in the parent POM to list the sub-projects?",
-                "options": {
-                    "A": "<subprojects>",
-                    "B": "<children>",
-                    "C": "<modules>",
-                    "D": "<components>"
-                },
-                "answer": "C",
-                "detailedexplanation": "The <modules> section in a parent pom.xml lists the relative paths to the directories containing the child modules. When you run a command on the parent, Maven uses this list to determine the build order based on inter-module dependencies."
-            },
-            {
-                "id": 14,
-                "domain": "Gradle Dependency Scopes",
-                "difficulty": "Hard",
-                "question": "What is the difference between 'implementation' and 'api' configurations in the Gradle Java Library plugin?",
-                "options": {
-                    "A": "There is no difference",
-                    "B": "'api' leaks the dependency to consumers of the library, while 'implementation' does not",
-                    "C": "'implementation' is only for internal Java classes",
-                    "D": "'api' is faster to compile than 'implementation'"
-                },
-                "answer": "B",
-                "detailedexplanation": "'implementation' hides the dependency from the compile classpath of consumers (improving compilation speed and encapsulation). 'api' should be used if the dependency's types are exposed in the library's public API. Using 'implementation' where possible prevents 'polluting' the classpath of other modules that depend on your module."
-            },
-            {
-                "id": 15,
-                "domain": "Maven Commands",
-                "difficulty": "Easy",
-                "question": "Which command removes the 'target' directory in Maven to ensure a fresh build?",
-                "options": {
-                    "A": "mvn purge",
-                    "B": "mvn delete",
-                    "C": "mvn clean",
-                    "D": "mvn refresh"
-                },
-                "answer": "C",
-                "detailedexplanation": "The 'mvn clean' command invokes the clean lifecycle, which consists of a single phase: clean. This phase uses the maven-clean-plugin to delete the 'target' directory, which contains all the compiled classes and packaged artifacts from previous builds."
-            },
-            {
-                "id": 16,
-                "domain": "Build Comparison",
-                "difficulty": "Medium",
-                "question": "Which build tool is generally considered to have a steeper learning curve but offers more flexibility through its use of a programming language?",
-                "options": {
-                    "A": "Ant",
-                    "B": "Maven",
-                    "C": "Gradle",
-                    "D": "Make"
-                },
-                "answer": "C",
-                "detailedexplanation": "Gradle is more flexible because it uses Groovy/Kotlin, allowing for custom logic without writing separate plugins. However, this flexibility means developers need to understand the underlying language and the Gradle API, making it more complex than the declarative, strictly structured XML approach of Maven."
-            },
-            {
-                "id": 17,
-                "domain": "Maven Snapshots",
-                "difficulty": "Medium",
-                "question": "What does the 'SNAPSHOT' suffix in a Maven version (e.g., 1.0-SNAPSHOT) signify?",
-                "options": {
-                    "A": "The version is a stable release",
-                    "B": "The version is currently under development and can be updated frequently",
-                    "C": "The version is read-only",
-                    "D": "The version is only for local testing and cannot be deployed"
-                },
-                "answer": "B",
-                "detailedexplanation": "A SNAPSHOT version indicates that the artifact is the 'latest' code along a development branch. Unlike release versions, Maven will check the remote repository for updates to a SNAPSHOT every time it builds (depending on settings), ensuring developers have the most recent code from their teammates."
-            },
-            {
-                "id": 18,
-                "domain": "Gradle Repositories",
-                "difficulty": "Easy",
-                "question": "How do you tell Gradle to look for dependencies in the Maven Central repository?",
-                "options": {
-                    "A": "repositories { central() }",
-                    "B": "repositories { maven() }",
-                    "C": "repositories { mavenCentral() }",
-                    "D": "repositories { jcenter() }"
-                },
-                "answer": "C",
-                "detailedexplanation": "In the 'repositories' block of a Gradle build script, the `mavenCentral()` method is a shortcut provided by Gradle to configure the build to fetch dependencies from the official Maven Central repository."
-            },
-            {
-                "id": 19,
-                "domain": "Maven Profiles",
-                "difficulty": "Hard",
-                "question": "What is the purpose of Maven Profiles?",
-                "options": {
-                    "A": "To create user accounts for Maven Central",
-                    "B": "To allow different build configurations for different environments (e.g., dev, prod)",
-                    "C": "To store the developer's personal information",
-                    "D": "To manage the versions of Maven itself"
-                },
-                "answer": "B",
-                "detailedexplanation": "Maven Profiles allow you to customize the build for different target environments. You can override dependencies, plugin configurations, or properties based on the active profile. Profiles can be triggered by command-line flags, environment variables, or the presence of certain files."
-            },
-            {
-                "id": 20,
-                "domain": "Gradle Settings",
-                "difficulty": "Medium",
-                "question": "Which Gradle file is used to define the project name and include sub-modules?",
-                "options": {
-                    "A": "build.gradle",
-                    "B": "gradle.properties",
-                    "C": "settings.gradle",
-                    "D": "local.properties"
-                },
-                "answer": "C",
-                "detailedexplanation": "The settings.gradle (or settings.gradle.kts) file is executed during the initialization phase of the Gradle build. Its primary role is to define which modules should be included in the build and to set the root project name."
-            },
-            {
-                "id": 21,
-                "domain": "Maven Dependency Management",
-                "difficulty": "Hard",
-                "question": "What is the purpose of the <dependencyManagement> section in a parent POM?",
-                "options": {
-                    "A": "To force all child modules to include the listed dependencies",
-                    "B": "To centralize the versions of dependencies without actually adding them to children",
-                    "C": "To exclude dependencies from the build",
-                    "D": "To list the repositories where dependencies are located"
-                },
-                "answer": "B",
-                "detailedexplanation": "<dependencyManagement> is a mechanism to centralize dependency information. If a child module adds a dependency listed in the parent's <dependencyManagement>, it can omit the version number. This ensures version consistency across all modules in a large project."
-            },
-            {
-                "id": 22,
-                "domain": "Gradle Testing",
-                "difficulty": "Medium",
-                "question": "Which command is used to run tests in a Gradle project?",
-                "options": {
-                    "A": "./gradlew runTests",
-                    "B": "./gradlew test",
-                    "C": "./gradlew check",
-                    "D": "Both B and C (indirectly)"
-                },
-                "answer": "D",
-                "detailedexplanation": "While `./gradlew test` specifically runs the unit tests, `./gradlew check` is a lifecycle task that includes the 'test' task as well as other verification tasks like checkstyle or PMD. Usually, developers use 'test' for quick verification and 'check' for full validation."
-            },
-            {
-                "id": 23,
-                "domain": "Maven Plugins",
-                "difficulty": "Medium",
-                "question": "Which Maven plugin is used to run unit tests during the 'test' phase?",
-                "options": {
-                    "A": "maven-test-plugin",
-                    "B": "maven-junit-plugin",
-                    "C": "maven-surefire-plugin",
-                    "D": "maven-failsafe-plugin"
-                },
-                "answer": "C",
-                "detailedexplanation": "The Surefire Plugin is designed for running unit tests. It generates reports in XML and TXT formats. For integration tests, Maven typically uses the Failsafe Plugin, which is designed to not fail the build immediately during the test phase so that the environment can be torn down properly."
-            },
-            {
-                "id": 24,
-                "domain": "Gradle Customization",
-                "difficulty": "Hard",
-                "question": "In Gradle, what is a 'Task Action'?",
-                "options": {
-                    "A": "The command line argument passed to Gradle",
-                    "B": "A block of code (using doFirst or doLast) that defines what the task actually does",
-                    "C": "The dependency relationship between two tasks",
-                    "D": "The configuration block where task properties are set"
-                },
-                "answer": "B",
-                "detailedexplanation": "Tasks consist of a configuration phase and an execution phase. Actions are the logic that runs during the execution phase. You add actions to a task using `doFirst { ... }` or `doLast { ... }`. Configuration code runs every time Gradle starts, but Action code only runs if the task is actually executed."
-            },
-            {
-                "id": 25,
-                "domain": "Maven Concepts",
-                "difficulty": "Easy",
-                "question": "What does GAV stand for in Maven?",
-                "options": {
-                    "A": "General Archive Variable",
-                    "B": "GroupId, ArtifactId, Version",
-                    "C": "Gradle, Ant, VisualStudio",
-                    "D": "Generate, Analyze, Verify"
-                },
-                "answer": "B",
-                "detailedexplanation": "GAV is the unique identifier for any Maven artifact. The GroupId (usually a reversed domain name), ArtifactId (the name of the project), and Version together define exactly which coordinate in a repository refers to a specific piece of software."
-            },
-            {
-                "id": 26,
-                "domain": "Gradle Build Scan",
-                "difficulty": "Medium",
-                "question": "What is a 'Gradle Build Scan'?",
-                "options": {
-                    "A": "A tool that scans for security vulnerabilities in dependencies",
-                    "B": "A sharable record of a build that provides insights into performance and failures",
-                    "C": "A command to list all available plugins",
-                    "D": "The process of indexing the project files by the IDE"
-                },
-                "answer": "B",
-                "detailedexplanation": "A Build Scan is a powerful diagnostic tool. When you run a build with `--scan`, Gradle publishes data about the build (execution time, task details, dependency resolution) to a web interface, making it easy to share and debug build issues with team members."
-            },
-            {
-                "id": 27,
-                "domain": "Maven Repositories",
-                "difficulty": "Medium",
-                "question": "What is the difference between 'install' and 'deploy' in Maven?",
-                "options": {
-                    "A": "'install' puts the artifact in the local repo; 'deploy' puts it in a remote repo",
-                    "B": "'install' is for testing; 'deploy' is for production",
-                    "C": "'install' compiles the code; 'deploy' packages it",
-                    "D": "There is no difference"
-                },
-                "answer": "A",
-                "detailedexplanation": "The 'install' phase takes the packaged artifact (like a JAR) and copies it to your local repository (~/.m2/repository) so other local projects can use it. The 'deploy' phase takes that same artifact and pushes it to a remote repository (like Nexus or Artifactory) for the rest of the team or the public to use."
-            },
-            {
-                "id": 28,
-                "domain": "Gradle Scripts",
-                "difficulty": "Easy",
-                "question": "What is the default name for the Gradle build file using the Kotlin DSL?",
-                "options": {
-                    "A": "build.gradle",
-                    "B": "build.gradle.kts",
-                    "C": "build.kt",
-                    "D": "gradle.build.kts"
-                },
-                "answer": "B",
-                "detailedexplanation": "The `.kts` extension stands for Kotlin Script. When using the Kotlin DSL for Gradle, the build file must be named `build.gradle.kts` to be recognized by the build engine. Standard Groovy scripts use `build.gradle`."
-            },
-            {
-                "id": 29,
-                "domain": "Maven Inheritance",
-                "difficulty": "Medium",
-                "question": "In a child POM, how do you reference the parent project?",
-                "options": {
-                    "A": "Using the <extends> tag",
-                    "B": "Using the <parent> tag with GAV coordinates",
-                    "C": "By placing the child folder inside the parent folder",
-                    "D": "Maven automatically finds parents by file name"
-                },
-                "answer": "B",
-                "detailedexplanation": "A child POM must explicitly declare its parent using the <parent> element. This includes the parent's GroupId, ArtifactId, and Version. This allows the child to inherit settings, properties, and dependency management from the parent."
-            },
-            {
-                "id": 30,
-                "domain": "Advanced Build Tools",
-                "difficulty": "Hard",
-                "question": "Which tool uses 'Configuration on Demand' to improve performance in multi-project builds?",
-                "options": {
-                    "A": "Maven",
-                    "B": "Ant",
-                    "C": "Gradle",
-                    "D": "Bazel"
-                },
-                "answer": "C",
-                "detailedexplanation": "Configuration on Demand is a Gradle feature that attempts to configure only the projects that are relevant for the requested tasks. In a very large multi-project build, this avoids the time-consuming process of configuring every single sub-module if you are only working on one of them."
-            }
-        ],
-        "outro_script": {
-            "closing": "That concludes our 30 practice questions on Java Build Tools. How many did you get right? Whether you are a Maven veteran or a Gradle enthusiast, understanding these core concepts is vital for modern Java development.",
-            "cta_final": "If you found this helpful, please hit the like button and subscribe for more certification prep content. Don't forget to comment your score below!",
-            "next_steps": "Check out our next video on CI/CD pipelines where we show how to integrate these Maven and Gradle builds into Jenkins and GitHub Actions."
-        },
-        "on_screen_elements": {
-            "timer_duration": "15 seconds per question",
-            "transition_effect_hints": "Smooth fade between question and answer explanation; highlight correct option in green."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Java Advanced OOP Mastery: Practice Questions and Explanations",
                 "Mastering Advanced Object-Oriented Programming in Java",
                 "Java OOP Certification Exam Prep: Hardest Practice Questions",
@@ -104851,7 +104359,7 @@
                     "D": "The effect size of the experiment."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically ≤ 0.05) indicates that the observed data is unlikely under H0, leading researchers to reject the null hypothesis in favor of the alternative hypothesis."
+                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically \u2264 0.05) indicates that the observed data is unlikely under H0, leading researchers to reject the null hypothesis in favor of the alternative hypothesis."
             },
             {
                 "id": 6,
@@ -104991,7 +104499,7 @@
                     "D": "To act as a loss function for backpropagation."
                 },
                 "answer": "B",
-                "detailedexplanation": "Without a non-linear activation function, a neural network—no matter how many layers it has—would behave like a simple linear regression model because the composition of linear functions is still a linear function. Functions like ReLU (Rectified Linear Unit), Sigmoid, or Tanh allow the network to learn complex patterns and map non-linear relationships between inputs and outputs."
+                "detailedexplanation": "Without a non-linear activation function, a neural network\u2014no matter how many layers it has\u2014would behave like a simple linear regression model because the composition of linear functions is still a linear function. Functions like ReLU (Rectified Linear Unit), Sigmoid, or Tanh allow the network to learn complex patterns and map non-linear relationships between inputs and outputs."
             },
             {
                 "id": 16,
@@ -105131,7 +104639,7 @@
                     "D": "Using the wrong statistical test for the data."
                 },
                 "answer": "B",
-                "detailedexplanation": "A Type I error occurs when you 'see something that isn't there.' It is the mistake of rejecting a null hypothesis that is actually true. For example, a medical test saying a healthy person has a disease is a Type I error. The probability of a Type I error is denoted by alpha (α), which is usually set as the significance level (e.g., 0.05)."
+                "detailedexplanation": "A Type I error occurs when you 'see something that isn't there.' It is the mistake of rejecting a null hypothesis that is actually true. For example, a medical test saying a healthy person has a disease is a Type I error. The probability of a Type I error is denoted by alpha (\u03b1), which is usually set as the significance level (e.g., 0.05)."
             },
             {
                 "id": 26,
@@ -105201,7 +104709,7 @@
                     "D": "When the model takes too long to train."
                 },
                 "answer": "B",
-                "detailedexplanation": "Overfitting happens when a model is overly complex and 'memorizes' the training data, including its random noise and outliers. While such a model will have very high accuracy on the training set, it will fail to 'generalize'—meaning it will perform poorly on any data it hasn't seen before. Techniques like cross-validation, regularization, and pruning are used to combat overfitting."
+                "detailedexplanation": "Overfitting happens when a model is overly complex and 'memorizes' the training data, including its random noise and outliers. While such a model will have very high accuracy on the training set, it will fail to 'generalize'\u2014meaning it will perform poorly on any data it hasn't seen before. Techniques like cross-validation, regularization, and pruning are used to combat overfitting."
             }
         ],
         "outro_script": {
@@ -105231,7 +104739,7 @@
             "intro_script": {
                 "hook": "Are you looking to break into the world of Data Science but feeling overwhelmed by the certification exams? Most candidates struggle with the fundamental concepts of statistics, machine learning, and data ethics.",
                 "summary": "In this video, we dive deep into 30 essential practice questions for the Data Science Foundations certification. We cover everything from data exploration and visualization to model evaluation and big data concepts.",
-                "cta_intro": "Make sure to grab a notepad, because we aren't just giving you the answers—we're explaining the logic behind every single one.",
+                "cta_intro": "Make sure to grab a notepad, because we aren't just giving you the answers\u2014we're explaining the logic behind every single one.",
                 "checkfullexamlinkindescription": "For the full-length practice exams and premium study material, check the link in the description below."
             },
             "youtube_metadata": {
@@ -105424,7 +104932,7 @@
                     "D": "To calculate the average of the sample"
                 },
                 "answer": "C",
-                "detailedexplanation": "A P-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is correct. A small P-value (typically ≤ 0.05) indicates strong evidence against the null hypothesis, leading you to reject it in favor of the alternative hypothesis."
+                "detailedexplanation": "A P-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is correct. A small P-value (typically \u2264 0.05) indicates strong evidence against the null hypothesis, leading you to reject it in favor of the alternative hypothesis."
             },
             {
                 "id": 12,
@@ -106695,7 +106203,7 @@
                 "Data Governance and Privacy Protection for Analytics"
             ],
             "intro_script": {
-                "hook": "Did you know that a single ethical oversight in your data model could lead to massive legal penalties and a complete loss of public trust? In today's data-driven world, technical skill isn't enough—you must master the ethics of data.",
+                "hook": "Did you know that a single ethical oversight in your data model could lead to massive legal penalties and a complete loss of public trust? In today's data-driven world, technical skill isn't enough\u2014you must master the ethics of data.",
                 "summary": "In this video, we are diving deep into 30 essential practice questions for the Data Science Ethics & Data Privacy certification. We will cover everything from algorithmic bias and fairness to global privacy regulations like GDPR and HIPAA.",
                 "cta_intro": "Make sure you have a notebook ready, as we will be explaining the 'why' behind every correct answer to ensure you are fully prepared for the exam.",
                 "checkfullexamlinkindescription": "For the full-length practice exams and comprehensive study guides, check the link in the description below."
@@ -107811,7 +107319,7 @@
                     "D": "Always use dark themes for dashboards"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Data-Ink Ratio, popularized by Edward Tufte, suggests that the majority of the 'ink' used in a visualization should represent actual data information. Designers should remove 'chartjunk'—such as heavy gridlines, unnecessary 3D effects, and decorative borders—to ensure the viewer's attention remains on the data itself."
+                "detailedexplanation": "The Data-Ink Ratio, popularized by Edward Tufte, suggests that the majority of the 'ink' used in a visualization should represent actual data information. Designers should remove 'chartjunk'\u2014such as heavy gridlines, unnecessary 3D effects, and decorative borders\u2014to ensure the viewer's attention remains on the data itself."
             },
             {
                 "id": 8,
@@ -108372,7 +107880,7 @@
                     "D": "Platinum"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Medallion Architecture is a data design pattern used to organize data in a lakehouse. The Bronze layer contains raw data. The Silver layer (the correct answer) represents 'cleansed' and 'conformed' data—it's where you've joined tables, handled nulls, and standardized schemas. The Gold layer is the final stage, containing project-specific 'aggregates' or 'marts' ready for consumption by BI tools and business users."
+                "detailedexplanation": "The Medallion Architecture is a data design pattern used to organize data in a lakehouse. The Bronze layer contains raw data. The Silver layer (the correct answer) represents 'cleansed' and 'conformed' data\u2014it's where you've joined tables, handled nulls, and standardized schemas. The Gold layer is the final stage, containing project-specific 'aggregates' or 'marts' ready for consumption by BI tools and business users."
             },
             {
                 "id": 13,
@@ -108414,7 +107922,7 @@
                     "D": "The hierarchy of users allowed to access a dataset."
                 },
                 "answer": "B",
-                "detailedexplanation": "Data Lineage is a map of the data's journey. It helps organizations understand the 'provenance' of their data—tracking it from its source system, through various ETL steps, into the warehouse, and finally to a specific dashboard. This is crucial for troubleshooting errors, ensuring compliance (like GDPR), and performing impact analysis (e.g., 'If I change this source column, which reports will break?')."
+                "detailedexplanation": "Data Lineage is a map of the data's journey. It helps organizations understand the 'provenance' of their data\u2014tracking it from its source system, through various ETL steps, into the warehouse, and finally to a specific dashboard. This is crucial for troubleshooting errors, ensuring compliance (like GDPR), and performing impact analysis (e.g., 'If I change this source column, which reports will break?')."
             },
             {
                 "id": 16,
@@ -108512,7 +108020,7 @@
                     "D": "It ensures that data is always up-to-date across all tables."
                 },
                 "answer": "C",
-                "detailedexplanation": "In transactional systems (OLTP), we use 'Normalization' to reduce redundancy and ensure data integrity. In analytical systems (OLAP), we often 'Denormalize'—purposefully adding redundant data into a single table. This is because JOIN operations are computationally expensive in distributed systems. By having all necessary data in one 'Wide Table', queries run much faster, even if it uses more disk space (which is cheap in the cloud)."
+                "detailedexplanation": "In transactional systems (OLTP), we use 'Normalization' to reduce redundancy and ensure data integrity. In analytical systems (OLAP), we often 'Denormalize'\u2014purposefully adding redundant data into a single table. This is because JOIN operations are computationally expensive in distributed systems. By having all necessary data in one 'Wide Table', queries run much faster, even if it uses more disk space (which is cheap in the cloud)."
             },
             {
                 "id": 23,
@@ -108554,7 +108062,7 @@
                     "D": "Cloud Spanner"
                 },
                 "answer": "A",
-                "detailedexplanation": "Google Cloud Dataproc is the managed service for running Apache Spark, Hadoop, Presto, and Flink clusters. It allows you to create clusters in seconds and resize them as needed. Cloud Dataflow is different—it's based on Apache Beam and is a serverless unified stream/batch processing service. BigQuery is a data warehouse, and Spanner is a globally distributed relational database."
+                "detailedexplanation": "Google Cloud Dataproc is the managed service for running Apache Spark, Hadoop, Presto, and Flink clusters. It allows you to create clusters in seconds and resize them as needed. Cloud Dataflow is different\u2014it's based on Apache Beam and is a serverless unified stream/batch processing service. BigQuery is a data warehouse, and Spanner is a globally distributed relational database."
             },
             {
                 "id": 26,
@@ -109239,7 +108747,7 @@
                     "D": "The percentage of data points that fall within one standard deviation."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A very small p-value (typically ≤ 0.05) indicates that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of the alternative hypothesis. It is crucial to remember that a p-value does not measure the probability that H0 is true, but rather the compatibility of the data with H0."
+                "detailedexplanation": "The p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A very small p-value (typically \u2264 0.05) indicates that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of the alternative hypothesis. It is crucial to remember that a p-value does not measure the probability that H0 is true, but rather the compatibility of the data with H0."
             },
             {
                 "id": 5,
@@ -109323,7 +108831,7 @@
                     "D": "Bias and Variance are unrelated to model complexity."
                 },
                 "answer": "A",
-                "detailedexplanation": "Bias refers to the error introduced by approximating a real-world problem with a simplified model (leads to underfitting). Variance refers to the error introduced by the model's sensitivity to small fluctuations in the training set (leads to overfitting). As you increase model complexity (e.g., adding more features or more layers in a neural network), the model fits the training data better (lower bias), but it becomes more sensitive to noise (higher variance). The goal of a good machine learning model is to find the 'sweet spot' that minimizes the total error (Bias² + Variance + Irreducible Error)."
+                "detailedexplanation": "Bias refers to the error introduced by approximating a real-world problem with a simplified model (leads to underfitting). Variance refers to the error introduced by the model's sensitivity to small fluctuations in the training set (leads to overfitting). As you increase model complexity (e.g., adding more features or more layers in a neural network), the model fits the training data better (lower bias), but it becomes more sensitive to noise (higher variance). The goal of a good machine learning model is to find the 'sweet spot' that minimizes the total error (Bias\u00b2 + Variance + Irreducible Error)."
             },
             {
                 "id": 11,
@@ -109491,7 +108999,7 @@
                     "D": "Correlation only applies to linear relationships, while causation applies to all types."
                 },
                 "answer": "B",
-                "detailedexplanation": "Correlation is a statistical measure (like Pearson's r) that describes how two variables move together. However, just because two things are correlated doesn't mean one causes the other—there could be a third 'confounding' variable. For example, ice cream sales and drowning incidents are correlated (both increase in summer), but ice cream doesn't cause drowning. Causation requires rigorous experimental design (like A/B testing) to prove a direct cause-and-effect link."
+                "detailedexplanation": "Correlation is a statistical measure (like Pearson's r) that describes how two variables move together. However, just because two things are correlated doesn't mean one causes the other\u2014there could be a third 'confounding' variable. For example, ice cream sales and drowning incidents are correlated (both increase in summer), but ice cream doesn't cause drowning. Causation requires rigorous experimental design (like A/B testing) to prove a direct cause-and-effect link."
             },
             {
                 "id": 23,
@@ -109561,7 +109069,7 @@
                     "D": "The percentage of users who see version B."
                 },
                 "answer": "B",
-                "detailedexplanation": "Alpha (α) is the threshold for significance, often set at 0.05. It represents the risk you are willing to take of committing a Type I error (a 'false positive' where you think there is an effect, but there isn't). If your p-value is less than alpha, you reject the null hypothesis. Lowering alpha makes the test more stringent but increases the risk of a Type II error (failing to detect a real effect)."
+                "detailedexplanation": "Alpha (\u03b1) is the threshold for significance, often set at 0.05. It represents the risk you are willing to take of committing a Type I error (a 'false positive' where you think there is an effect, but there isn't). If your p-value is less than alpha, you reject the null hypothesis. Lowering alpha makes the test more stringent but increases the risk of a Type II error (failing to detect a real effect)."
             },
             {
                 "id": 28,
@@ -109603,7 +109111,7 @@
                     "D": "To predict the next value in a time-series sequence."
                 },
                 "answer": "B",
-                "detailedexplanation": "PCA is a dimensionality reduction technique. It transforms a large set of variables into a smaller one that still contains most of the information in the large set. It does this by identifying 'principal components'—new, uncorrelated variables that are linear combinations of the original ones and are ordered by the amount of variance they explain. This is useful for noise reduction, visualization, and making models run faster by reducing the 'curse of dimensionality'."
+                "detailedexplanation": "PCA is a dimensionality reduction technique. It transforms a large set of variables into a smaller one that still contains most of the information in the large set. It does this by identifying 'principal components'\u2014new, uncorrelated variables that are linear combinations of the original ones and are ordered by the amount of variance they explain. This is useful for noise reduction, visualization, and making models run faster by reducing the 'curse of dimensionality'."
             }
         ],
         "outro_script": {
@@ -110120,7 +109628,7 @@
                 "Core Competencies in Data Science and Business Analytics"
             ],
             "intro_script": {
-                "hook": "Did you know that 90% of business data goes unused? Mastering Data Science and Business Analytics is no longer a luxury—it is the ultimate competitive advantage in today's market.",
+                "hook": "Did you know that 90% of business data goes unused? Mastering Data Science and Business Analytics is no longer a luxury\u2014it is the ultimate competitive advantage in today's market.",
                 "summary": "In this comprehensive guide, we are diving deep into 30 essential practice questions designed to help you ace your Data Science and Business Analytics certification. We cover everything from statistical modeling and predictive analytics to data visualization and business strategy.",
                 "cta_intro": "Before we jump into the first question, make sure to hit that subscribe button and turn on notifications so you never miss a professional certification guide.",
                 "checkfullexamlinkindescription": "For those looking for the complete set of practice exams and in-depth study materials, check the official course link in the description below."
@@ -110176,7 +109684,7 @@
                     "D": "The probability of making a Type II error."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is a fundamental concept in frequentist statistics. It measures the strength of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically ≤ 0.05) indicates strong evidence against the null hypothesis, so you reject the null hypothesis. It is not the probability that the hypothesis itself is true or false, which is a common misconception."
+                "detailedexplanation": "The p-value is a fundamental concept in frequentist statistics. It measures the strength of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically \u2264 0.05) indicates strong evidence against the null hypothesis, so you reject the null hypothesis. It is not the probability that the hypothesis itself is true or false, which is a common misconception."
             },
             {
                 "id": 2,
@@ -110372,7 +109880,7 @@
                     "D": "The probability of correctly identifying a true effect."
                 },
                 "answer": "B",
-                "detailedexplanation": "A Type I error, also known as a 'false positive,' occurs when the investigator rejects a null hypothesis that is actually true in the population. The probability of committing a Type I error is denoted by the Greek letter alpha (α) and is usually set at 0.05. Conversely, a Type II error (Option A) is a 'false negative,' occurring when you fail to reject a null hypothesis that is actually false."
+                "detailedexplanation": "A Type I error, also known as a 'false positive,' occurs when the investigator rejects a null hypothesis that is actually true in the population. The probability of committing a Type I error is denoted by the Greek letter alpha (\u03b1) and is usually set at 0.05. Conversely, a Type II error (Option A) is a 'false negative,' occurring when you fail to reject a null hypothesis that is actually false."
             },
             {
                 "id": 16,
@@ -110582,7 +110090,7 @@
                     "D": "The model has too many outliers."
                 },
                 "answer": "B",
-                "detailedexplanation": "Heteroscedasticity occurs when the 'spread' or variance of the residuals changes as the value of the independent variable changes. This violates one of the key assumptions of Ordinary Least Squares (OLS) regression—homoscedasticity (constant variance). If heteroscedasticity is present, the OLS estimates remain unbiased, but the standard errors are unreliable, leading to incorrect p-values and confidence intervals."
+                "detailedexplanation": "Heteroscedasticity occurs when the 'spread' or variance of the residuals changes as the value of the independent variable changes. This violates one of the key assumptions of Ordinary Least Squares (OLS) regression\u2014homoscedasticity (constant variance). If heteroscedasticity is present, the OLS estimates remain unbiased, but the standard errors are unreliable, leading to incorrect p-values and confidence intervals."
             }
         ],
         "outro_script": {
@@ -110610,7 +110118,7 @@
                 "Ultimate Big Data Certification Practice Questions"
             ],
             "intro_script": {
-                "hook": "Are you ready to master the massive world of Big Data? Most Data Science candidates struggle with the infrastructure side of the equation—Hadoop, Spark, and NoSQL. Today, we are diving into 30 high-yield practice questions designed to help you ace your Big Data Tools certification on the first try.",
+                "hook": "Are you ready to master the massive world of Big Data? Most Data Science candidates struggle with the infrastructure side of the equation\u2014Hadoop, Spark, and NoSQL. Today, we are diving into 30 high-yield practice questions designed to help you ace your Big Data Tools certification on the first try.",
                 "summary": "This video covers the essential domains of the Data Science Big Data Tools certification, including distributed computing, data ingestion, storage architectures, and real-time processing frameworks. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the 'what'.",
                 "cta_intro": "Before we jump into the first question, make sure to grab a pen and paper to track your score. Don't forget to subscribe for more professional certification prep content.",
                 "checkfullexamlinkindescription": "For the full-length simulated exam and additional study resources, check the link in the description below."
@@ -110904,7 +110412,7 @@
                     "D": "CSV"
                 },
                 "answer": "C",
-                "detailedexplanation": "Apache Avro is a data serialization system that provides rich data structures and a compact, fast, binary data format. One of its key strengths is its support for schema evolution—meaning you can change the schema of the data over time (add or remove fields) without breaking older readers, which is vital for long-term Big Data storage."
+                "detailedexplanation": "Apache Avro is a data serialization system that provides rich data structures and a compact, fast, binary data format. One of its key strengths is its support for schema evolution\u2014meaning you can change the schema of the data over time (add or remove fields) without breaking older readers, which is vital for long-term Big Data storage."
             },
             {
                 "id": 19,
@@ -110932,7 +110440,7 @@
                     "D": "Visualization"
                 },
                 "answer": "B",
-                "detailedexplanation": "The traditional definition of Big Data (introduced by Gartner/Doug Laney) revolves around the 3 Vs: Volume (the scale of data), Velocity (the speed of data inflow and processing), and Variety (the different forms of data—structured, semi-structured, and unstructured). Later definitions added Veracity and Value, but Variety is the classic third V."
+                "detailedexplanation": "The traditional definition of Big Data (introduced by Gartner/Doug Laney) revolves around the 3 Vs: Volume (the scale of data), Velocity (the speed of data inflow and processing), and Variety (the different forms of data\u2014structured, semi-structured, and unstructured). Later definitions added Veracity and Value, but Variety is the classic third V."
             },
             {
                 "id": 21,
@@ -111076,7 +110584,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the Data Science Big Data Tools certification. How did you do? If you scored above 80%, you are well on your way. If not, don't worry—Big Data is a vast field and consistency is key.",
+            "closing": "That wraps up our 30 practice questions for the Data Science Big Data Tools certification. How did you do? If you scored above 80%, you are well on your way. If not, don't worry\u2014Big Data is a vast field and consistency is key.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and share it with your study group. Subscribe to the channel for more deep dives into data engineering and data science certifications.",
             "next_steps": "Check out our 'Mastering Apache Spark' playlist or the 'Hadoop Ecosystem' crash course linked on the screen now. Good luck with your exam!"
         },
@@ -111100,7 +110608,7 @@
                 "Full Data Science Project Workflow Practice Exam"
             ],
             "intro_script": {
-                "hook": "Ever wondered why most data science models fail when they hit production? It’s not the math—it’s the application.",
+                "hook": "Ever wondered why most data science models fail when they hit production? It\u2019s not the math\u2014it\u2019s the application.",
                 "summary": "In this video, we are breaking down 30 comprehensive practice questions for the Data Science Applied Projects certification. We will cover everything from data ingestion and exploratory analysis to model deployment and monitoring.",
                 "cta_intro": "Make sure to grab a notebook, as we'll be diving deep into the 'why' behind every correct answer.",
                 "checkfullexamlinkindescription": "For the full-length practice exam and premium study materials, check the link in the description below."
@@ -111406,7 +110914,7 @@
                     "D": "To calculate the final error of the model."
                 },
                 "answer": "B",
-                "detailedexplanation": "Without activation functions (Option B), a neural network—no matter how many layers it has—would behave just like a linear regression model because the composition of linear functions is still linear. Activation functions like ReLU, Sigmoid, or Tanh allow the network to learn non-linear relationships in the data."
+                "detailedexplanation": "Without activation functions (Option B), a neural network\u2014no matter how many layers it has\u2014would behave just like a linear regression model because the composition of linear functions is still linear. Activation functions like ReLU, Sigmoid, or Tanh allow the network to learn non-linear relationships in the data."
             },
             {
                 "id": 20,
@@ -111564,7 +111072,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the Data Science Applied Projects certification. We’ve covered everything from the initial data understanding to the final deployment and monitoring phases.",
+            "closing": "That wraps up our 30 practice questions for the Data Science Applied Projects certification. We\u2019ve covered everything from the initial data understanding to the final deployment and monitoring phases.",
             "cta_final": "If you found this helpful, please hit the like button and subscribe for more data science career guides. To practice with full-length exams and detailed case studies, visit the Udemy link in the description.",
             "next_steps": "Check out our next video on 'Top 10 Data Science Interview Case Studies' to further boost your career."
         },
@@ -111589,7 +111097,7 @@
             ],
             "intro_script": {
                 "hook": "Ever wondered why some machine learning models fail in production while others thrive? The secret lies in mastering the fundamental algorithms and techniques that drive data science.",
-                "summary": "In this video, we dive deep into 30 essential practice questions covering supervised learning, unsupervised learning, dimensionality reduction, and model evaluation—perfect for anyone preparing for their next big data science certification.",
+                "summary": "In this video, we dive deep into 30 essential practice questions covering supervised learning, unsupervised learning, dimensionality reduction, and model evaluation\u2014perfect for anyone preparing for their next big data science certification.",
                 "cta_intro": "Stick around until the end as we break down complex concepts into simple, digestible explanations.",
                 "checkfullexamlinkindescription": "For the full 2026 practice exam set and more resources, make sure to check the link in the description below."
             },
@@ -111755,7 +111263,7 @@
                     "D": "To increase the size of the training data."
                 },
                 "answer": "C",
-                "detailedexplanation": "A hold-out set (or test set) is a portion of the data that is never shown to the model during the training phase. Its sole purpose is to provide an unbiased evaluation of the final model's performance on new, unseen data. If a model performs well on the training data but poorly on the hold-out set, it is a clear indication of overfitting—the model has memorized the noise in the training data rather than learning the underlying patterns."
+                "detailedexplanation": "A hold-out set (or test set) is a portion of the data that is never shown to the model during the training phase. Its sole purpose is to provide an unbiased evaluation of the final model's performance on new, unseen data. If a model performs well on the training data but poorly on the hold-out set, it is a clear indication of overfitting\u2014the model has memorized the noise in the training data rather than learning the underlying patterns."
             },
             {
                 "id": 10,
@@ -111769,7 +111277,7 @@
                     "D": "Decision Trees"
                 },
                 "answer": "B",
-                "detailedexplanation": "Support Vector Machines (SVM) work by finding the hyperplane that best separates two classes. Specifically, it seeks the 'Maximum Margin Hyperplane'—the one that maximizes the distance between the hyperplane and the nearest data points from each class (called support vectors). By maximizing this margin, SVM aims to improve the generalization capability of the classifier."
+                "detailedexplanation": "Support Vector Machines (SVM) work by finding the hyperplane that best separates two classes. Specifically, it seeks the 'Maximum Margin Hyperplane'\u2014the one that maximizes the distance between the hyperplane and the nearest data points from each class (called support vectors). By maximizing this margin, SVM aims to improve the generalization capability of the classifier."
             },
             {
                 "id": 11,
@@ -111881,7 +111389,7 @@
                     "D": "0 to infinity"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Logit function is the log-odds: ln(p / (1-p)). While the probability (p) is bounded between 0 and 1, the logit function maps these values to the entire real number line (-∞ to +∞). This allows the linear combination of features to be equated to the log-odds, which can then be transformed back into a probability using the Logistic (Sigmoid) function."
+                "detailedexplanation": "The Logit function is the log-odds: ln(p / (1-p)). While the probability (p) is bounded between 0 and 1, the logit function maps these values to the entire real number line (-\u221e to +\u221e). This allows the linear combination of features to be equated to the log-odds, which can then be transformed back into a probability using the Logistic (Sigmoid) function."
             },
             {
                 "id": 19,
@@ -112007,7 +111515,7 @@
                     "D": "It indicates the size of the effect observed."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. A low p-value (typically ≤ 0.05) indicates that the observed data is unlikely to have occurred by chance under the null hypothesis, leading researchers to reject the null hypothesis in favor of the alternative. It does NOT measure the probability that the hypothesis is true or the magnitude of the effect."
+                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. A low p-value (typically \u2264 0.05) indicates that the observed data is unlikely to have occurred by chance under the null hypothesis, leading researchers to reject the null hypothesis in favor of the alternative. It does NOT measure the probability that the hypothesis is true or the magnitude of the effect."
             },
             {
                 "id": 28,
