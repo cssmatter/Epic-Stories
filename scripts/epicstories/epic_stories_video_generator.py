@@ -301,11 +301,11 @@ class EpicStoriesVideoGenerator:
         num_frames = int(process_duration * fps)
         
         # Render at high resolution for supersampling (smooth zoom)
-        # For 4K (3840), 1.1x = 4224 (approx 12M pixels per frame)
-        # For 1080p (1920), 1.25x = 2400
-        zoom_mult = 1.1 if config.WIDTH >= 3840 else 1.25
+        # EXTREME SMOOTHNESS: We use 4.0x multiplier to provide FFMPEG's zoompan 
+        # with massive precision to eliminate any rounding jitter.
+        zoom_mult = 4.0
         render_w = int(config.WIDTH * zoom_mult)
-        if render_w > 4800: render_w = 4800 # Sane cap for 4K+
+        if render_w > 12000: render_w = 12000 # Extreme cap for perfect smoothness
         render_h = int(config.HEIGHT * (render_w / config.WIDTH))
         
         # Ensure even dimensions
@@ -427,9 +427,12 @@ class EpicStoriesVideoGenerator:
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
             
-        zoom_mult = 1.1 if config.WIDTH >= 3840 else 1.25
+        # Render at high resolution for supersampling (smooth zoom)
+        # EXTREME SMOOTHNESS: We use 4.0x multiplier to provide FFMPEG's zoompan 
+        # with massive precision to eliminate any rounding jitter.
+        zoom_mult = 4.0
         render_w = int(config.WIDTH * zoom_mult)
-        if render_w > 4800: render_w = 4800 
+        if render_w > 12000: render_w = 12000 
         render_h = int(config.HEIGHT * (render_w / config.WIDTH))
         if render_w % 2 != 0: render_w += 1
         if render_h % 2 != 0: render_h += 1
