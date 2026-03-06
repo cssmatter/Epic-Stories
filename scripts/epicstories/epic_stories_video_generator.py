@@ -119,7 +119,7 @@ class EpicStoriesVideoGenerator:
                 description=full_description if 'full_description' in locals() else description,
                 keywords=tags,
                 thumbnail=thumbnail_path,
-                privacy_status='private'
+                privacy_status='public'
             )
             if video_id:
                 print(f"✓ Video published successfully! ID: {video_id}")
