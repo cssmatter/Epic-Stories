@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
 # Base URL for GitHub Pages
-BASE_URL = "https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/"
+BASE_URL = "https://cssmatter.github.io/Epic-Stories/"
 FEED_TITLE = "Book Summaries Podcast"
 FEED_LINK = BASE_URL + "assets/BookSummariesChannel/feed.xml"
 FEED_DESC = "Audio summaries of the world's best books, helping you learn and grow."

@@ -2,16 +2,16 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Book Summaries Podcast</title>
-    <link>https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/feed.xml</link>
+    <link>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/feed.xml</link>
     <description>Audio summaries of the world's best books, helping you learn and grow.</description>
     <language>en-us</language>
     <itunes:author>BookSummariesChannel</itunes:author>
     <image>
-      <url>https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/podcast_cover.jpg</url>
+      <url>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/podcast_cover.jpg</url>
       <title>Book Summaries Podcast</title>
-      <link>https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/feed.xml</link>
+      <link>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/feed.xml</link>
     </image>
-    <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/podcast_cover.jpg"/>
+    <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/podcast_cover.jpg"/>
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
@@ -23,10 +23,10 @@ https://amzn.to/3MgWtia</description>
 
 https://amzn.to/3MgWtia</itunes:summary>
       <pubDate>Sat, 07 Mar 2026 03:32:28 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Art%20of%20Seduction/The%20Art%20of%20Seduction.mp3" type="audio/mpeg" length="9700948"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Art%20of%20Seduction/The%20Art%20of%20Seduction.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Art%20of%20Seduction/The%20Art%20of%20Seduction.mp3" type="audio/mpeg" length="9700948"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Art%20of%20Seduction/The%20Art%20of%20Seduction.mp3</guid>
       <itunes:author>Robert Greene</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Art%20of%20Seduction/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Art%20of%20Seduction/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The Laws of Human Nature by Robert Greene | Full Book Summary</title>
@@ -37,10 +37,10 @@ https://amzn.to/4qJqLZ0</description>
 
 https://amzn.to/4qJqLZ0</itunes:summary>
       <pubDate>Wed, 04 Mar 2026 03:26:51 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Laws%20of%20Human%20Nature/The%20Laws%20of%20Human%20Nature.mp3" type="audio/mpeg" length="28089268"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Laws%20of%20Human%20Nature/The%20Laws%20of%20Human%20Nature.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Laws%20of%20Human%20Nature/The%20Laws%20of%20Human%20Nature.mp3" type="audio/mpeg" length="28089268"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Laws%20of%20Human%20Nature/The%20Laws%20of%20Human%20Nature.mp3</guid>
       <itunes:author>Robert Greene</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Laws%20of%20Human%20Nature/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Laws%20of%20Human%20Nature/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The Courage to Be Disliked | Ichiro Kishimi | Full Book Summary</title>
@@ -51,10 +51,10 @@ https://amzn.to/4cvDydR</description>
 
 https://amzn.to/4cvDydR</itunes:summary>
       <pubDate>Sun, 01 Mar 2026 03:55:54 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Courage%20to%20Be%20Disliked/The%20Courage%20to%20Be%20Disliked.mp3" type="audio/mpeg" length="9026548"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Courage%20to%20Be%20Disliked/The%20Courage%20to%20Be%20Disliked.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Courage%20to%20Be%20Disliked/The%20Courage%20to%20Be%20Disliked.mp3" type="audio/mpeg" length="9026548"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Courage%20to%20Be%20Disliked/The%20Courage%20to%20Be%20Disliked.mp3</guid>
       <itunes:author>Ichiro Kishimi</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Courage%20to%20Be%20Disliked/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Courage%20to%20Be%20Disliked/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The Psychology of Money by Morgan Housel | Full Book Summary</title>
@@ -65,10 +65,10 @@ https://amzn.to/4qKCWVt</description>
 
 https://amzn.to/4qKCWVt</itunes:summary>
       <pubDate>Wed, 25 Feb 2026 03:48:15 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Psychology%20of%20Money/The%20Psychology%20of%20Money.mp3" type="audio/mpeg" length="27392788"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Psychology%20of%20Money/The%20Psychology%20of%20Money.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Psychology%20of%20Money/The%20Psychology%20of%20Money.mp3" type="audio/mpeg" length="27392788"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Psychology%20of%20Money/The%20Psychology%20of%20Money.mp3</guid>
       <itunes:author>Morgan Housel</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Psychology%20of%20Money/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Psychology%20of%20Money/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>Emotional Intelligence by Daniel Goleman | Book Summary &amp; Key Takeaways</title>
@@ -79,8 +79,8 @@ https://amzn.to/4tFRYyl</description>
 
 https://amzn.to/4tFRYyl</itunes:summary>
       <pubDate>Sun, 22 Feb 2026 03:42:35 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Emotional%20Intelligence/Emotional%20Intelligence.mp3" type="audio/mpeg" length="23453908"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Emotional%20Intelligence/Emotional%20Intelligence.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Emotional%20Intelligence/Emotional%20Intelligence.mp3" type="audio/mpeg" length="23453908"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Emotional%20Intelligence/Emotional%20Intelligence.mp3</guid>
       <itunes:author>Daniel Goleman</itunes:author>
     </item>
     <item>
@@ -92,10 +92,10 @@ https://amzn.to/3OqT1Sz</description>
 
 https://amzn.to/3OqT1Sz</itunes:summary>
       <pubDate>Thu, 19 Feb 2026 04:12:02 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Mindset_%20The%20New%20Psychology%20of%20Success/Mindset_%20The%20New%20Psychology%20of%20Success.mp3" type="audio/mpeg" length="14476948"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Mindset_%20The%20New%20Psychology%20of%20Success/Mindset_%20The%20New%20Psychology%20of%20Success.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Mindset_%20The%20New%20Psychology%20of%20Success/Mindset_%20The%20New%20Psychology%20of%20Success.mp3" type="audio/mpeg" length="14476948"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Mindset_%20The%20New%20Psychology%20of%20Success/Mindset_%20The%20New%20Psychology%20of%20Success.mp3</guid>
       <itunes:author>Carol S. Dweck</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Mindset_%20The%20New%20Psychology%20of%20Success/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Mindset_%20The%20New%20Psychology%20of%20Success/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The 5AM Club by Robin Sharma | Book Summary &amp; Key Takeaways</title>
@@ -106,10 +106,10 @@ https://amzn.to/3NrwWmx</description>
 
 https://amzn.to/3NrwWmx</itunes:summary>
       <pubDate>Fri, 13 Feb 2026 04:05:17 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%205AM%20Club/The%205AM%20Club.mp3" type="audio/mpeg" length="23588788"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%205AM%20Club/The%205AM%20Club.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%205AM%20Club/The%205AM%20Club.mp3" type="audio/mpeg" length="23588788"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%205AM%20Club/The%205AM%20Club.mp3</guid>
       <itunes:author>Robin Sharma</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%205AM%20Club/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%205AM%20Club/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>Awaken The Giant Within by Tony Robbins | Book Summary &amp; Key Takeaways</title>
@@ -120,10 +120,10 @@ https://amzn.to/4jMlsGp</description>
 
 https://amzn.to/4jMlsGp</itunes:summary>
       <pubDate>Tue, 10 Feb 2026 04:11:09 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Awaken%20The%20Giant%20Within/Awaken%20The%20Giant%20Within.mp3" type="audio/mpeg" length="32426068"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Awaken%20The%20Giant%20Within/Awaken%20The%20Giant%20Within.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Awaken%20The%20Giant%20Within/Awaken%20The%20Giant%20Within.mp3" type="audio/mpeg" length="32426068"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Awaken%20The%20Giant%20Within/Awaken%20The%20Giant%20Within.mp3</guid>
       <itunes:author>Tony Robbins</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Awaken%20The%20Giant%20Within/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Awaken%20The%20Giant%20Within/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>You Are a Badass by Jen Sincero | Book Summary &amp; Key Takeaways</title>
@@ -134,10 +134,10 @@ https://amzn.to/4jUKNhu</description>
 
 https://amzn.to/4jUKNhu</itunes:summary>
       <pubDate>Sat, 07 Feb 2026 03:32:37 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/You%20Are%20a%20Badass/You%20Are%20a%20Badass.mp3" type="audio/mpeg" length="31065748"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/You%20Are%20a%20Badass/You%20Are%20a%20Badass.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/You%20Are%20a%20Badass/You%20Are%20a%20Badass.mp3" type="audio/mpeg" length="31065748"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/You%20Are%20a%20Badass/You%20Are%20a%20Badass.mp3</guid>
       <itunes:author>Jen Sincero</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/You%20Are%20a%20Badass/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/You%20Are%20a%20Badass/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The Mountain Is You by Brianna Wiest - Complete Book Summary</title>
@@ -148,10 +148,10 @@ https://amzn.to/49ssfS0</description>
 
 https://amzn.to/49ssfS0</itunes:summary>
       <pubDate>Wed, 04 Feb 2026 03:41:22 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Mountain%20Is%20You/The%20Mountain%20Is%20You.mp3" type="audio/mpeg" length="21828148"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Mountain%20Is%20You/The%20Mountain%20Is%20You.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Mountain%20Is%20You/The%20Mountain%20Is%20You.mp3" type="audio/mpeg" length="21828148"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Mountain%20Is%20You/The%20Mountain%20Is%20You.mp3</guid>
       <itunes:author>Brianna Wiest</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Mountain%20Is%20You/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Mountain%20Is%20You/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>Think Like a Monk by Jay Shetty - Complete Book Summary</title>
@@ -162,10 +162,10 @@ https://amzn.to/3YNRrMI</description>
 
 https://amzn.to/3YNRrMI</itunes:summary>
       <pubDate>Sun, 01 Feb 2026 03:58:31 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Think%20Like%20a%20Monk/Think%20Like%20a%20Monk.mp3" type="audio/mpeg" length="16506868"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Think%20Like%20a%20Monk/Think%20Like%20a%20Monk.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Think%20Like%20a%20Monk/Think%20Like%20a%20Monk.mp3" type="audio/mpeg" length="16506868"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Think%20Like%20a%20Monk/Think%20Like%20a%20Monk.mp3</guid>
       <itunes:author>Jay Shetty</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Think%20Like%20a%20Monk/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Think%20Like%20a%20Monk/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>DEEP WORK by Cal Newport | Animated Book Summary</title>
@@ -176,10 +176,10 @@ https://amzn.to/3ZjmeRB</description>
 
 https://amzn.to/3ZjmeRB</itunes:summary>
       <pubDate>Wed, 28 Jan 2026 11:59:04 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Deep%20Work/Deep%20Work.mp3" type="audio/mpeg" length="24002548"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Deep%20Work/Deep%20Work.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Deep%20Work/Deep%20Work.mp3" type="audio/mpeg" length="24002548"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Deep%20Work/Deep%20Work.mp3</guid>
       <itunes:author>Cal Newport</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/Deep%20Work/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Deep%20Work/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The Power of Habit by Charles Duhigg - Complete Book Summary</title>
@@ -190,10 +190,10 @@ https://amzn.to/3LJ1fVg</description>
 
 https://amzn.to/3LJ1fVg</itunes:summary>
       <pubDate>Wed, 28 Jan 2026 11:36:44 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Power%20of%20Habit/The%20Power%20of%20Habit.mp3" type="audio/mpeg" length="21783988"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Power%20of%20Habit/The%20Power%20of%20Habit.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Power%20of%20Habit/The%20Power%20of%20Habit.mp3" type="audio/mpeg" length="21783988"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Power%20of%20Habit/The%20Power%20of%20Habit.mp3</guid>
       <itunes:author>Charles Duhigg</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%20Power%20of%20Habit/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%20Power%20of%20Habit/thumbnail_3000x3000.jpg"/>
     </item>
     <item>
       <title>The 7 Habits of Highly Effective People by Stephen R. Covey - Complete Book Summary</title>
@@ -204,10 +204,10 @@ https://amzn.to/4qUiUbo</description>
 
 https://amzn.to/4qUiUbo</itunes:summary>
       <pubDate>Tue, 20 Jan 2026 16:18:23 +0530</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%207%20Habits%20of%20Highly%20Effective%20People/The%207%20Habits%20of%20Highly%20Effective%20People.mp3" type="audio/mpeg" length="22391668"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%207%20Habits%20of%20Highly%20Effective%20People/The%207%20Habits%20of%20Highly%20Effective%20People.mp3</guid>
+      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%207%20Habits%20of%20Highly%20Effective%20People/The%207%20Habits%20of%20Highly%20Effective%20People.mp3" type="audio/mpeg" length="22391668"/>
+      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%207%20Habits%20of%20Highly%20Effective%20People/The%207%20Habits%20of%20Highly%20Effective%20People.mp3</guid>
       <itunes:author>Stephen R. Covey</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories-All-youtube-automation-shorts/assets/BookSummariesChannel/The%207%20Habits%20of%20Highly%20Effective%20People/thumbnail_3000x3000.jpg"/>
+      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/The%207%20Habits%20of%20Highly%20Effective%20People/thumbnail_3000x3000.jpg"/>
     </item>
   </channel>
 </rss>
