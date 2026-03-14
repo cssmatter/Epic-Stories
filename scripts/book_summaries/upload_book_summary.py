@@ -285,11 +285,20 @@ def update_podcast_feed(book_data):
             from datetime import datetime
             now_str = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %z")
             
+            title = yt_meta.get("title", display_title)
+            if "audiobook" not in title.lower():
+                title = f"{title} (Audiobook)"
+                
+            description = yt_meta.get("short_description", "") + "\n\n" + yt_meta.get("affiliate_link", "")
+            yt_channel_link = "YouTube Channel: https://www.youtube.com/@BookSummariesChannel"
+            if yt_channel_link not in description:
+                description = f"{description}\n\n{yt_channel_link}"
+
             new_entry = {
                 "folder_name": folder_name,
                 "original_title": display_title,
-                "title": yt_meta.get("title", display_title),
-                "description": yt_meta.get("short_description", "") + "\n\n" + yt_meta.get("affiliate_link", ""),
+                "title": title,
+                "description": description,
                 "pubDate": now_str,
                 "author": yt_meta.get("author", "BookSummariesChannel")
             }

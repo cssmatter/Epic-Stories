@@ -10,7 +10,7 @@ from xml.dom import minidom
 BASE_URL = "https://cssmatter.github.io/Epic-Stories/"
 FEED_TITLE = "Book Summaries Podcast"
 FEED_LINK = BASE_URL + "assets/BookSummariesChannel/feed.xml"
-FEED_DESC = "Audio summaries of the world's best books, helping you learn and grow."
+FEED_DESC = "Audio summaries of the world's best books, helping you learn and grow. Subscribe on YouTube: https://www.youtube.com/@BookSummariesChannel"
 FEED_LANGUAGE = "en-us"
 FEED_AUTHOR = "BookSummariesChannel"
 FEED_IMAGE = BASE_URL + "assets/BookSummariesChannel/podcast_cover.jpg" # We should have a cover if possible, fallback to placeholder
@@ -65,9 +65,19 @@ def generate_rss(json_path, output_xml_path):
 
         item = ET.SubElement(channel, "item")
         
-        ET.SubElement(item, "title").text = item_data.get("title", folder_name)
-        ET.SubElement(item, "description").text = item_data.get("description", "")
-        ET.SubElement(item, "itunes:summary").text = item_data.get("description", "")
+        # Add Audiobook to title if not present
+        title = item_data.get("title", folder_name)
+        if "audiobook" not in title.lower():
+            title = f"{title} (Audiobook)"
+        ET.SubElement(item, "title").text = title
+        
+        description = item_data.get("description", "")
+        yt_link = "YouTube Channel: https://www.youtube.com/@BookSummariesChannel"
+        if yt_link not in description:
+            description = f"{description}\n\n{yt_link}"
+            
+        ET.SubElement(item, "description").text = description
+        ET.SubElement(item, "itunes:summary").text = description
 
         pub_date = parse_date(item_data.get("pubDate", ""))
         ET.SubElement(item, "pubDate").text = format_datetime(pub_date)
