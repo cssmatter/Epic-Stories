@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>Book Summaries Podcast</title>
+    <title>Audiobooks On Spotify</title>
     <link>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/feed.xml</link>
     <description>Audio summaries of the world's best books, helping you learn and grow. Subscribe on YouTube: https://www.youtube.com/@BookSummariesChannel</description>
     <language>en-us</language>
     <itunes:author>BookSummariesChannel</itunes:author>
     <image>
       <url>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/podcast_cover.jpg</url>
-      <title>Book Summaries Podcast</title>
+      <title>Audiobooks On Spotify</title>
       <link>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/feed.xml</link>
     </image>
     <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/podcast_cover.jpg"/>
