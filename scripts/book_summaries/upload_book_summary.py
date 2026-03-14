@@ -248,6 +248,67 @@ def update_spotify_metadata(book_data, video_url):
     else:
         print(f"[WARNING] Spotify metadata file not found at {meta_path}")
 
+def update_podcast_feed(book_data):
+    """Update podcast_data.json and regenerate feed.xml"""
+    yt_meta = book_data.get('youtube_metadata', {})
+    screentext = book_data.get('screentext', {})
+    
+    display_title = screentext.get('original_title', yt_meta.get('title', 'Untitled'))
+    import re
+    title_slug = re.sub(r'[^\w\-_\. ]', '_', display_title)
+    
+    # Check if folder exists in assets
+    folder_name = None
+    assets_dir = os.path.join(ROOT_DIR, "assets", "BookSummariesChannel")
+    for folder in os.listdir(assets_dir):
+        if os.path.isdir(os.path.join(assets_dir, folder)):
+            if title_slug == folder or display_title.lower() in folder.lower():
+                folder_name = folder
+                break
+    
+    if not folder_name:
+        print(f"[WARNING] Could not find asset folder for {display_title}. Podcast feed not updated.")
+        return
+        
+    podcast_json_path = os.path.join(assets_dir, "podcast_data.json")
+    
+    try:
+        if os.path.exists(podcast_json_path):
+            with open(podcast_json_path, 'r', encoding='utf-8') as f:
+                podcast_data = json.load(f)
+        else:
+            podcast_data = []
+            
+        # Check if already exists
+        exists = any(item.get("original_title") == display_title for item in podcast_data)
+        if not exists:
+            from datetime import datetime
+            now_str = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %z")
+            
+            new_entry = {
+                "folder_name": folder_name,
+                "original_title": display_title,
+                "title": yt_meta.get("title", display_title),
+                "description": yt_meta.get("short_description", "") + "\n\n" + yt_meta.get("affiliate_link", ""),
+                "pubDate": now_str,
+                "author": yt_meta.get("author", "BookSummariesChannel")
+            }
+            podcast_data.append(new_entry)
+            
+            with open(podcast_json_path, 'w', encoding='utf-8') as f:
+                json.dump(podcast_data, f, indent=4)
+            print(f"[SUCCESS] Appended new episode to podcast_data.json: {display_title}")
+            
+            # Now regenerate RSS
+            rss_script = os.path.join(ROOT_DIR, "scripts", "book_summaries", "generate_rss.py")
+            subprocess.run(["python", rss_script], check=True)
+            print("[SUCCESS] Podcast RSS feed regenerated.")
+        else:
+            print(f"[INFO] Episode already exists in podcast feed: {display_title}")
+            
+    except Exception as e:
+        print(f"[ERROR] Failed to update podcast feed: {e}")
+
 def upload_short_video(book_data):
     """Upload the short-form video to YouTube"""
     print("\n=== UPLOADING SHORT VIDEO ===")
@@ -342,6 +403,9 @@ def main():
             
             # Update Spotify Metadata
             update_spotify_metadata(book_data, video_url)
+            
+            # Update Podcast RSS Feed
+            update_podcast_feed(book_data)
             
             # Add to playlist
             category = yt_meta.get('category', 'Book Summaries')
