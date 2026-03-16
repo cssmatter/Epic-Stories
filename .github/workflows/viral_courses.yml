@@ -2,10 +2,8 @@ name: Viral Courses Automation
 
 on:
   schedule:
-    # Run every 8 hours
-    - cron: '0 */8 * * *'
-  workflow_dispatch: # Allow manual trigger
-
+  # Run every 1 days at 00:00 UTC
+    - cron: '0 0 */1 * *'
 jobs:
   build-and-deploy:
     runs-on: windows-latest
