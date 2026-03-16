@@ -1,37 +1,19 @@
 <?xml version="1.0" ?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>Book Summaries Podcast</title>
+    <title>Audiobooks On Spotify - Manish Salunke</title>
     <link>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/feed.xml</link>
     <description>Audio summaries of the world's best books, helping you learn and grow. Subscribe on YouTube: https://www.youtube.com/@BookSummariesChannel</description>
     <language>en-us</language>
-    <itunes:author>BookSummariesChannel</itunes:author>
+    <itunes:author>Manish Salunke</itunes:author>
     <image>
       <url>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/podcast_cover.jpg</url>
-      <title>Book Summaries Podcast</title>
+      <title>Audiobooks On Spotify - Manish Salunke</title>
       <link>https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/feed.xml</link>
     </image>
     <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/podcast_cover.jpg"/>
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>Pre-Suasion by Robert Cialdini | Master the Art of Influencing People (Audiobook)</title>
-      <description>Learn the science of setting the stage for persuasion. Robert Cialdini, author of 'Influence,' reveals how to use 'privileged moments' to make people say 'yes' before you even ask.
-
-https://amzn.to/4qHcjAH
-
-YouTube Channel: https://www.youtube.com/@BookSummariesChannel</description>
-      <itunes:summary>Learn the science of setting the stage for persuasion. Robert Cialdini, author of 'Influence,' reveals how to use 'privileged moments' to make people say 'yes' before you even ask.
-
-https://amzn.to/4qHcjAH
-
-YouTube Channel: https://www.youtube.com/@BookSummariesChannel</itunes:summary>
-      <pubDate>Mon, 16 Mar 2026 04:10:33 +0000</pubDate>
-      <enclosure url="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Pre-Suasion%20/Pre-Suasion%20.mp3" type="audio/mpeg" length="23163988"/>
-      <guid isPermaLink="true">https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Pre-Suasion%20/Pre-Suasion%20.mp3</guid>
-      <itunes:author>Robert Cialdini</itunes:author>
-      <itunes:image href="https://cssmatter.github.io/Epic-Stories/assets/BookSummariesChannel/Pre-Suasion%20/thumbnail_3000x3000.jpg"/>
-    </item>
     <item>
       <title>The Art of Seduction by Robert Greene | Full Book Summary &amp; Analysis (Audiobook)</title>
       <description>Unlock the psychology of attraction with our complete summary of 'The Art of Seduction' by Robert Greene. Discover the nine seductive characters and the 24 maneuvers of the seductive process.

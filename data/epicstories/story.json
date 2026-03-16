@@ -1,5 +1,666 @@
 [
     {
+        "video_title": "The Mahabharata's Moral Maze: Ancient Wisdom for Modern Ethics",
+        "image_style_for_all_images_generate": "Cinematic digital painting with dramatic lighting, ethereal beams of light breaking through darkness, concentric circular patterns suggesting cycles of karma and destiny, rich earth tones (browns, golds, teals), silhouetted or partially lit figures showing contemplation and moral struggle, atmospheric depth with layers of meaning, mystical yet grounded aesthetic reminiscent of epic mythology meeting contemporary philosophical introspection",
+        "youtube_thumbnail": {
+            "imageid": "cb4504ce"
+        },
+        "channel_intro": {
+            "overlay_background": "Faded paper texture",
+            "background_image_notext": "Cinematic digital painting of an ancient scroll unfurling against a backdrop of celestial warfare and earthly kingdoms, warm golden light illuminating Sanskrit symbols that fade into modern cityscapes, bridging past and present",
+            "overlay_text": [
+                "All Time Epic Stories",
+                "Presents",
+                "The Mahabharata's Moral Maze: Ancient Wisdom for Modern Ethics"
+            ],
+            "voice_over_text": "Welcome to All Time Epic Stories. Today, we present: The Mahabharata's Moral Maze: Ancient Wisdom for Modern Ethics."
+        },
+        "scenes": [
+            {
+                "scene_number": 1,
+                "text": "Five thousand years ago, on the fertile plains of ancient India, a war was brewing that would shake the foundations of civilization itself. But this was no ordinary conflict over land or wealth. This was a battle for the very soul of dharma, the cosmic order that holds reality together.",
+                "image_prompt": "Cinematic digital painting of vast ancient Indian plains at twilight, two massive armies facing each other in the distance, divine light breaking through storm clouds, the landscape divided by a meandering river symbolizing moral boundaries, warm earth tones with dramatic shadows"
+            },
+            {
+                "scene_number": 2,
+                "text": "The Mahabharata stands as humanity's longest epic poem, a labyrinth of stories within stories, each turn revealing new depths of moral complexity. Its pages contain not just the chronicle of a great war, but a mirror reflecting every ethical dilemma humans have ever faced.",
+                "image_prompt": "Cinematic digital painting of an enormous ancient book floating in cosmic space, its pages unfurling to reveal countless scenes of human drama, light emanating from within the text, stars and galaxies reflecting in the words, mystical and profound atmosphere"
+            },
+            {
+                "scene_number": 3,
+                "text": "At the heart of this epic stands a question that haunts us still: when duty conflicts with morality, when justice demands injustice, when love requires cruelty, what path should a righteous person walk? The Mahabharata does not offer easy answers. It offers something far more valuable: the courage to ask.",
+                "image_prompt": "Cinematic digital painting of a lone figure standing at a crossroads where multiple paths diverge into different colored lights, each path showing shadowy visions of different choices and consequences, dramatic backlighting creating a silhouette of contemplation"
+            },
+            {
+                "scene_number": 4,
+                "text": "Our story begins in the kingdom of Hastinapura, where two sets of cousins, the Pandavas and the Kauravas, were locked in a generational conflict that would consume everything they loved. Born of the same blood, raised in the same palace, taught by the same masters, yet destined to destroy each other.",
+                "image_prompt": "Cinematic digital painting of a grand palace split down the middle by a crack of golden light, five noble figures on one side in blue tones, one hundred figures on the other in red tones, childhood toys and weapons scattered between them, architectural grandeur meeting familial tragedy"
+            },
+            {
+                "scene_number": 5,
+                "text": "The eldest Pandava, Yudhishthira, embodied truth itself. He could not speak a lie, they said. His adherence to dharma was so complete that even the gods marveled. Yet it was this very truthfulness that would lead to catastrophe, teaching us that virtue without wisdom can become vice.",
+                "image_prompt": "Cinematic digital painting of a noble king with a crown of light, his face serene yet troubled, transparent images of truth and consequences swirling around him, sacred texts floating in the air, golden aura tinged with shadows of doubt"
+            },
+            {
+                "scene_number": 6,
+                "text": "Arjuna, the mighty warrior, was blessed with skills unmatched in all the world. His arrows flew like divine judgment, his aim never failed. But what use is perfect aim when you cannot decide what target deserves your arrow? What good is strength when you lack the conviction to use it?",
+                "image_prompt": "Cinematic digital painting of a warrior archer in silhouette, drawing a bow that emits ethereal light, multiple ghostly targets appearing in different directions each representing a different moral choice, dramatic side lighting, tension and uncertainty in every muscle"
+            },
+            {
+                "scene_number": 7,
+                "text": "Bhima possessed the strength of ten thousand elephants, a force of nature in human form. His rage against injustice burned like sacred fire. Yet anger, however righteous, can consume the angry along with their enemies. His story asks: when does justified fury become destructive vengeance?",
+                "image_prompt": "Cinematic digital painting of a powerful muscular figure wreathed in flames of red and gold, his shadow cast large and monstrous on ancient walls, hands clenched in fury, divine power crackling around him, beauty and terror intermingled"
+            },
+            {
+                "scene_number": 8,
+                "text": "The twins Nakula and Sahadeva, often overlooked in the shadow of their brothers, represented loyalty and wisdom. Their quiet devotion reminds us that not all heroism wears armor or wields weapons. Sometimes the greatest strength is in standing beside those we love when the whole world turns against them.",
+                "image_prompt": "Cinematic digital painting of two young men standing side by side in complementary poses, one looking to wisdom in stars above, one looking to loyalty in earthly bonds, gentle light surrounding them, understated nobility, constellation patterns echoing their unity"
+            },
+            {
+                "scene_number": 9,
+                "text": "And then there was Draupadi, wife to all five brothers, a woman of such fierce dignity that she would rather see the world burn than submit to dishonor. Her humiliation in the royal court would become the spark that ignited an apocalyptic war. Her story forces us to confront: what is the true price of justice?",
+                "image_prompt": "Cinematic digital painting of a regal woman with unbound hair standing in a court of silhouetted figures, divine light surrounding her like armor, her sari flowing in an impossible wind, defiance and dignity radiating from her posture, the room divided between those who look away in shame and those who stare in judgment"
+            },
+            {
+                "scene_number": 10,
+                "text": "On the other side stood the Kauravas, led by the bitter and ambitious Duryodhana. History remembers him as a villain, but his story is more complex. He was a product of jealousy, yes, but also of circumstance, of being told from birth that his cousins were superior, more virtuous, more deserving.",
+                "image_prompt": "Cinematic digital painting of a powerful prince seated on a throne that casts shadows shaped like demons, his face showing both arrogance and hidden pain, reflected images of his cousins' glory surrounding him like taunting mirrors, dark purples and reds dominating the palette"
+            },
+            {
+                "scene_number": 11,
+                "text": "Duryodhana's friendship with Karna reveals something profound about human nature. He alone saw past Karna's low birth to honor his immense worth. In a society obsessed with purity of blood, Duryodhana's acceptance of Karna as an equal was revolutionary. Can virtue exist in a villain? Can vice exist in a hero?",
+                "image_prompt": "Cinematic digital painting of two warriors clasping arms in brotherhood, one in royal armor, one in simple garb but radiating equal nobility, the background split between a palace of privilege and a humble home, their bond creating a bridge of golden light between two worlds"
+            },
+            {
+                "scene_number": 12,
+                "text": "Karna himself is perhaps the most tragic figure in all of literature. Born a prince but raised by a charioteer, blessed by the gods yet cursed by fate, possessing generosity that knew no bounds yet choosing to fight for a cause that would doom him. His life asks: is loyalty to friends worth betraying justice?",
+                "image_prompt": "Cinematic digital painting of a noble warrior standing between two armies, divine golden armor glowing on his body, his shadow stretching toward the morally wrong side where his friend stands, his face showing the agony of impossible choice, sunrise and sunset battling in the sky above"
+            },
+            {
+                "scene_number": 13,
+                "text": "The elders watched, paralyzed by their own loyalties. Bhishma, the grandfather who had taken a terrible vow of celibacy to secure his father's happiness, now found himself bound to protect a throne he knew was corrupt. His vow had seemed noble once. Now it chained him to evil.",
+                "image_prompt": "Cinematic digital painting of an ancient warrior in white, standing rigid as a statue before a throne, chains of light binding him to his oath, his eyes filled with knowledge and sorrow, generations of consequences visible in ghostly images around him"
+            },
+            {
+                "scene_number": 14,
+                "text": "Drona, the master teacher who had trained both sides with equal care, found himself forced to choose. He chose his patron, the blind king, over his conscience. His story teaches us that neutrality in the face of injustice is itself a choice, and not always the moral one.",
+                "image_prompt": "Cinematic digital painting of a sage-like teacher holding a bow and a book, students on both sides reaching toward him, his figure divided by a vertical line of light representing choice, wisdom and compromise warring in his expression, scrolls of teaching falling like leaves around him"
+            },
+            {
+                "scene_number": 15,
+                "text": "And above all these human players moved Krishna, the divine incarnate, playing a game whose rules only he fully understood. Was he a god? A philosopher? A manipulator? A savior? The Mahabharata suggests he was all of these, and that perhaps divinity itself is more morally complex than we dare imagine.",
+                "image_prompt": "Cinematic digital painting of a serene figure with a subtle smile, standing on a cosmic chess board where the pieces are human lives, multiple arms barely visible in the shadows suggesting divine nature, peacock feathers and lotuses surrounding him, layers of reality peeling back to reveal infinite depth"
+            },
+            {
+                "scene_number": 16,
+                "text": "The first great moral crisis came at a game of dice. Yudhishthira, the truthful king, was challenged to gamble. He knew it was wrong. He knew it was a trap. Yet dharma demanded that a warrior king never refuse a challenge. So he played, and lost everything.",
+                "image_prompt": "Cinematic digital painting of a dice game in a torch-lit hall, two players facing each other across a board, one sweating with addiction and doom visible in his eyes, dice frozen mid-roll glowing with malevolent energy, shadows of spectators looming large and judgmental"
+            },
+            {
+                "scene_number": 17,
+                "text": "First, he lost his wealth. The dice rolled against him. Then his kingdom. Still the dice betrayed him. Then his brothers, one by one. And finally, in a moment that would echo through eternity, he staked Draupadi herself. His wife. His queen. A person, treated as property.",
+                "image_prompt": "Cinematic digital painting showing a sequence of losses: coins, a crown, four noble figures, and finally a woman's silhouette, each fading into shadow, the dice at the center glowing red like coals, the game board transforming into an abyss"
+            },
+            {
+                "scene_number": 18,
+                "text": "When Draupadi was dragged into court, she asked a question that lawyers and philosophers debate to this day: can a man who has already lost himself stake another person? If Yudhishthira had no rights remaining, how could he give away her rights? The court fell silent. No one could answer.",
+                "image_prompt": "Cinematic digital painting of a woman standing proud despite dishevelment in a vast court, a single finger pointing upward in accusation and question, judges and nobles frozen in shame, the architecture of the hall itself seeming to lean away from the unanswerable query she poses"
+            },
+            {
+                "scene_number": 19,
+                "text": "Dushasana, Duryodhana's brother, attempted to disrobe her in front of the entire assembly. Elders who had praised dharma all their lives sat silent. Warriors who claimed honor closed their eyes. And Draupadi called out to Krishna, the only one who answered her prayer for protection.",
+                "image_prompt": "Cinematic digital painting of a woman's sari flowing endlessly, becoming an infinite spiral of cloth, divine blue hands barely visible protecting her dignity, the would-be attacker's hands unable to reach the end, holy light emanating from her faith while darkness surrounds the silent witnesses"
+            },
+            {
+                "scene_number": 20,
+                "text": "The miracle of the endless sari saved her body, but her humiliation remained. In that moment, the war became inevitable. Not because of kingdoms or inheritance, but because dignity, once violated, demands restoration. Justice delayed is not justice denied\u2014it is justice transformed into vengeance.",
+                "image_prompt": "Cinematic digital painting of cloth transforming into flames, a woman's tear crystallizing into a sword, the assembled court beginning to crack apart like a reflection in a broken mirror, the future war visible in the shards of the present moment"
+            },
+            {
+                "scene_number": 21,
+                "text": "The Pandavas were exiled for thirteen years. Twelve in the forest, one in hiding. If discovered during that final year, another twelve years would be added. The punishment was harsh, but they accepted it. Yet accepting injustice is not the same as forgiveness. They would remember.",
+                "image_prompt": "Cinematic digital painting of five figures walking into a dark forest, looking back at a distant glowing palace, their shadows stretching behind them toward home, a calendar of years forming in the clouds above, determination and sorrow in their retreating forms"
+            },
+            {
+                "scene_number": 22,
+                "text": "In the forest, they met sages who taught them that suffering can be a teacher. They encountered gods who tested their virtue. Each trial stripped away their arrogance, revealing the core of who they were. But here's the paradox: becoming humble can also make one more dangerous. A warrior with nothing to lose is unstoppable.",
+                "image_prompt": "Cinematic digital painting of five figures meditating under an ancient tree, visions of divine tests appearing as translucent beings around them, their mortal forms glowing brighter as material attachments fall away like autumn leaves, wisdom and danger growing simultaneously"
+            },
+            {
+                "scene_number": 23,
+                "text": "During their exile, Arjuna went to the heavens to acquire divine weapons. He trained with the gods themselves. When his father Indra offered him celestial dancing girls as a reward, Arjuna refused, seeing them as sisters. Indra blessed him for this. But these weapons Arjuna gained\u2014were they for defense or destruction?",
+                "image_prompt": "Cinematic digital painting of a warrior ascending through clouds on a path of light, divine beings offering gifts and weapons that glow with cosmic power, celestial architecture blending with his determined upward gaze, the weapons beautiful but ominous"
+            },
+            {
+                "scene_number": 24,
+                "text": "Yudhishthira faced a different test. A Yaksha, a nature spirit, had captured his brothers. To free them, Yudhishthira had to answer riddles. The most profound: what is the greatest wonder in the world? His answer: every day, people see others die, yet believe they themselves will never die. Awareness of mortality is humanity's greatest delusion.",
+                "image_prompt": "Cinematic digital painting of a king standing before a mysterious ethereal being emerging from a sacred lake, four bodies lying still on the shore, questions written in light floating in the air between them, the reflection in the water showing truth while the surface shows illusion"
+            },
+            {
+                "scene_number": 25,
+                "text": "The thirteenth year came. The Pandavas had to live incognito in the kingdom of Virata. Arjuna, the greatest warrior alive, disguised himself as a dance teacher for the princess. Yudhishthira became a dice counselor. Bhima worked in the kitchens. How does a hero hide his greatness? By remembering that greatness is not in power but in purpose.",
+                "image_prompt": "Cinematic digital painting showing five transparent overlaid images: a warrior teaching dance with bells on ankles, a king advising over game boards, a strong man cooking, each figure ghosted with their true noble forms visible beneath the disguises, truth hidden within illusion"
+            },
+            {
+                "scene_number": 26,
+                "text": "When the thirteenth year ended, the Pandavas returned to claim their kingdom. They asked for just five villages, a place for each brother. Such a modest demand. Such a reasonable request. Duryodhana refused. He would not give them land enough to drive a needle into. Pride makes compromise impossible.",
+                "image_prompt": "Cinematic digital painting of a grand court where five humble figures stand before an ornate throne, their request visualized as a small glowing map of five villages, the throne's occupant crushing it beneath his foot, the room divided by light and shadow representing possible peace and inevitable war"
+            },
+            {
+                "scene_number": 27,
+                "text": "Krishna himself went as a peace ambassador. The divine incarnate, counselor of cosmos, pleaded for peace. He offered compromises, solutions, paths to honor for both sides. Duryodhana tried to imprison him. To imprison god! When divine wisdom is rejected, human folly takes the throne.",
+                "image_prompt": "Cinematic digital painting of Krishna in a hostile court, chains of light appearing around him then shattering, his form momentarily revealing the entire universe within him, frightened courtiers falling back, his expression compassionate yet disappointed, divine patience meeting mortal arrogance"
+            },
+            {
+                "scene_number": 28,
+                "text": "War became inevitable. But before armies could march, each side sought allies. Krishna himself posed an interesting choice to Arjuna and Duryodhana: you can have my army, or you can have me, unarmed, as an advisor. Arjuna chose wisdom. Duryodhana chose force. This choice would determine everything.",
+                "image_prompt": "Cinematic digital painting of Krishna standing between two paths, one path showing vast armies with weapons gleaming, the other showing a single chariot with Krishna as charioteer, two princes choosing different paths, one taking the road of power, one the road of wisdom"
+            },
+            {
+                "scene_number": 29,
+                "text": "The armies gathered on the field of Kurukshetra. Millions of soldiers, they say. The entire subcontinent had taken sides. Kings who had nothing to gain in this family dispute chose sides anyway. Why? Because neutrality in a moral crisis is not wisdom\u2014it is cowardice disguised as prudence.",
+                "image_prompt": "Cinematic digital painting of an vast battlefield stretching to the horizon, two enormous armies like oceans of soldiers facing each other, banners and flags creating a forest of symbols, dust rising into clouds that obscure the sky, the scale overwhelming yet each soldier an individual tragedy waiting"
+            },
+            {
+                "scene_number": 30,
+                "text": "On the morning of battle, Arjuna asked Krishna to drive his chariot between the armies so he could see his opponents clearly. And there, in the ranks of his enemies, Arjuna saw his teachers, his cousins, his grandfather. People he loved. People he had to kill.",
+                "image_prompt": "Cinematic digital painting from behind a chariot, looking out at an enemy army where familiar faces become visible, each face showing a memory of better times, the warrior's hands beginning to shake on his bow, dawn light making everything too clear and too painful"
+            },
+            {
+                "scene_number": 31,
+                "text": "Arjuna's bow fell from his hands. His famous Gandiva, the divine weapon that had never failed him, slipped from nerveless fingers. He turned to Krishna and said words that would birth the Bhagavad Gita, perhaps the most important philosophical text ever written: I will not fight.",
+                "image_prompt": "Cinematic digital painting of a warrior's bow falling in slow motion, the weapon glowing with abandoned power, the warrior slumped in despair while beside him a serene figure watches with knowing eyes, the entire universe seeming to pause for this moment of crisis"
+            },
+            {
+                "scene_number": 32,
+                "text": "What followed was not just a conversation but a revolution in ethical thinking. Krishna did not comfort Arjuna with easy platitudes. He did not say the fight was just, or that his enemies deserved death. Instead, he taught Arjuna to see beyond the immediate moral crisis to the larger cosmic order.",
+                "image_prompt": "Cinematic digital painting of two figures in a chariot surrounded by a sphere of golden light, the battle frozen outside the sphere, inside the sphere visions and symbols representing philosophy and duty swirling around them, teacher and student in profound dialogue"
+            },
+            {
+                "scene_number": 33,
+                "text": "First, Krishna explained the immortality of the soul. Bodies die, but the essence continues. Therefore, Arjuna would not truly be killing anyone\u2014merely freeing their souls to continue their journey. But is this philosophy or rationalization? Does the permanence of the soul excuse the violence of the moment?",
+                "image_prompt": "Cinematic digital painting showing translucent human forms with glowing eternal souls visible within, bodies fading like smoke while the inner light remains constant, death and continuity presented simultaneously, comfort and troubling justification merged in the imagery"
+            },
+            {
+                "scene_number": 34,
+                "text": "Second, Krishna taught karma yoga\u2014the yoga of selfless action. Act without attachment to results. Do your duty without desire for reward. Fight not because you hate your enemies, but because it is your dharma as a warrior. But can action truly be selfless when it serves our interests? Is detachment possible in the heat of battle?",
+                "image_prompt": "Cinematic digital painting of a warrior performing his duty, chains of desire and attachment falling away from him like broken shackles, his actions becoming pure motion without emotional investment, serene determination replacing passionate anger, the paradox of caring deeply while being detached"
+            },
+            {
+                "scene_number": 35,
+                "text": "Third, Krishna revealed his cosmic form\u2014the Vishvarupa. Arjuna saw infinity itself. Time devouring all things. Past, present, and future merged. He saw all these warriors already dead, the battle already fought, destiny already written. If the outcome is fixed, does free will exist? If not, how can we speak of moral choice?",
+                "image_prompt": "Cinematic digital painting of a divine form containing countless galaxies, mouths consuming worlds and time itself, soldiers marching into those mouths in an endless stream, past and future visible simultaneously, the observer both terrified and enlightened, cosmic horror and divine beauty merged"
+            },
+            {
+                "scene_number": 36,
+                "text": "This vision broke Arjuna and remade him. He picked up his bow. But had Krishna convinced him or merely broken his will to resist? The Gita is praised as a spiritual masterpiece, yet it counsels a man to kill his family. Every great wisdom text contains within it the seeds of its own critique.",
+                "image_prompt": "Cinematic digital painting of a warrior picking up his weapon again, but now his eyes reflect cosmic understanding, doubt replaced by terrible certainty, the bow glowing with renewed purpose, his stance showing both acceptance and the weight of moral compromise"
+            },
+            {
+                "scene_number": 37,
+                "text": "The war began at dawn. Bhishma, the grand patriarch, led the Kaurava forces. He had promised not to kill the Pandavas, but that did not mean he would not fight. For ten days, he was unstoppable. Arrows fell like rain. Soldiers died in thousands. The field of Kurukshetra ran red with the blood of a generation.",
+                "image_prompt": "Cinematic digital painting of an ancient white-haired warrior in a chariot, arrows flying from his bow in perfect formation like deadly birds, his face showing sorrow even as his hands dealt death with precision, sunrise reflecting in rivers of blood, duty and grief united in his expression"
+            },
+            {
+                "scene_number": 38,
+                "text": "To defeat Bhishma, Krishna counseled an act that would stain the Pandavas forever. Shikhandi, a warrior who had been born female but lived as male, would face Bhishma. The old warrior, bound by his vows never to fight women, would lower his weapons. And Arjuna would shoot him from behind Shikhandi's cover.",
+                "image_prompt": "Cinematic digital painting showing a three-way confrontation, an old warrior lowering his weapons before a figure of complex identity, behind whom another warrior draws a bow with anguished reluctance, the technique brilliant but dishonorable, victory through moral compromise visualized"
+            },
+            {
+                "scene_number": 39,
+                "text": "Arjuna's arrows found their mark. Bhishma fell, but such was his power that he chose the moment of his death. He lay on a bed of arrows, waiting for the auspicious time to release his soul. For days, he lay dying, giving final counsel. Even in death, duty sustained him. But at what cost?",
+                "image_prompt": "Cinematic digital painting of a grand warrior lying on a bed made of arrows piercing the ground, his body elevated above the earth, disciples gathered around as he speaks his final wisdom, life and death suspended in dialogue, honor preserved in terrible suffering"
+            },
+            {
+                "scene_number": 40,
+                "text": "Next came Drona, the teacher who had loved both sides as his students. To defeat him, another deception was needed. Krishna told Yudhishthira to announce that Ashwatthama was dead. Ashwatthama was Drona's son. Yudhishthira, who could not lie, spoke the truth with a twist: Ashwatthama the elephant is dead.",
+                "image_prompt": "Cinematic digital painting of a truthful king speaking words that float in the air as visible text, half the letters glowing with truth, half shadowed with deception, a teacher hearing and breaking, an elephant dying in the background, technical truth enabling functional lie"
+            },
+            {
+                "scene_number": 41,
+                "text": "Drona heard that his son was dead. His will to fight collapsed. He laid down his weapons and began to meditate. And in that moment of divine trance, when he had made himself defenseless in the presence of god, Dhrishtadyumna beheaded him. Victory through deception. Righteousness through murder. The victors were becoming what they fought against.",
+                "image_prompt": "Cinematic digital painting of a sage in meditation, divine light beginning to surround him as he reaches for enlightenment, behind him a sword raised by a shadowy figure, the sacred and the brutal meeting in one frozen instant, spiritual ascent interrupted by mortal betrayal"
+            },
+            {
+                "scene_number": 42,
+                "text": "Karna's turn came. He faced Arjuna, his unknown brother, in single combat. Karna, who had given away his divine armor to honor a promise. Karna, who had been cursed that his weapons would fail him when he needed them most. Karna, whose chariot wheel stuck in the mud at the crucial moment.",
+                "image_prompt": "Cinematic digital painting of two supreme archers facing each other, one's chariot wheel sinking into earth that seems to grasp it deliberately, curses visible as dark energy around his weapons, fate itself conspiring against skill and courage, the unfairness of cosmic justice made visible"
+            },
+            {
+                "scene_number": 43,
+                "text": "Karna climbed down from his chariot to free the wheel. He asked Arjuna to wait, to honor the rules of fair combat. And Krishna whispered to Arjuna: where was fairness when Draupadi was humiliated? Where was honor when Abhimanyu, a boy, was surrounded and killed by multiple warriors? Now you speak of rules? Now you want dharma? Shoot him.",
+                "image_prompt": "Cinematic digital painting showing a warrior struggling with a stuck wheel, defenseless, looking up at an opponent, divine lips visible whispering harsh truths into the archer's ear, past injustices appearing as ghostly scenes around them, justification for the unjustifiable being crafted"
+            },
+            {
+                "scene_number": 44,
+                "text": "Arjuna shot. Karna fell. The greatest warrior of his generation died not in fair combat but in a moment of vulnerability, killed by a brother who did not know him. His last words were about the cruel ironies of his life: born a prince, lived as a commoner; possessed divine weapons, died helpless; championed dharma, served adharma.",
+                "image_prompt": "Cinematic digital painting of a fallen warrior, divine armor no longer protecting him, his life force leaving as golden light, revealing in death the noble birth marks hidden in life, his enemy standing above in victory and unknowing fratricide, tragedy written in cosmic scale"
+            },
+            {
+                "scene_number": 45,
+                "text": "Only Duryodhana remained. The man who started it all. He hid in a lake, using his powers to create an underwater chamber. The Pandavas found him and challenged him to single combat. He chose to fight Bhima with maces. It was to be a fair fight. Finally, after all the deception, an honest battle.",
+                "image_prompt": "Cinematic digital painting of a figure emerging from water, two massive warriors facing each other with raised maces, an arena cleared for honorable combat, spectators holding their breath, the promise of finally ending this war with dignity rather than trickery"
+            },
+            {
+                "scene_number": 46,
+                "text": "They fought for hours. Duryodhana, for all his faults, was a magnificent warrior. The fight was even. Too even. Krishna, watching, knew that Bhima might lose. So he signaled\u2014a slap on his own thigh. A reminder. Bhima understood. He struck Duryodhana's thigh with his mace. A blow below the belt. Literally. Against all rules of combat.",
+                "image_prompt": "Cinematic digital painting of two warriors locked in combat, one beginning to gain advantage, in the background a divine figure making a subtle gesture to his own thigh, the receiving warrior's eyes showing understanding, honor about to be sacrificed for victory, the crucial blow beginning its arc"
+            },
+            {
+                "scene_number": 47,
+                "text": "Duryodhana fell, his thighs shattered, dying slowly in agony. He looked at the Pandavas and laughed. You have won, he said, but you have lost yourselves. You claim righteousness but achieved victory through deceit, through breaking every rule you claimed to hold sacred. You are no better than me. Perhaps you are worse, for you pretend to be.",
+                "image_prompt": "Cinematic digital painting of a dying prince lying broken but laughing, blood pooling around him, victors standing above looking not triumphant but shamed, his accusatory words hanging in the air as visible indictments, the hollowness of victory apparent in every face"
+            },
+            {
+                "scene_number": 48,
+                "text": "His words cut deeper than any weapon. Because they were true. The Pandavas had begun this war for dharma. They would end it having violated nearly every principle they claimed to defend. They had lied. They had deceived. They had struck unfair blows. They had killed the defenseless. All for victory. All for righteousness.",
+                "image_prompt": "Cinematic digital painting showing five brothers reflected in a pool of blood, their reflections showing their younger, more innocent selves, while their actual forms stand aged and compromised, the distance between ideals and actions made visually painful, victory and defeat merged"
+            },
+            {
+                "scene_number": 49,
+                "text": "That night, as Duryodhana lay dying, three warriors who survived came to him: Ashwatthama, Kripacharya, and Kritavarma. Ashwatthama, Drona's son, was mad with grief. His father had been killed through deceit. His rage demanded vengeance. Duryodhana, with his dying breath, appointed Ashwatthama commander for one final mission.",
+                "image_prompt": "Cinematic digital painting of three warriors kneeling beside a dying prince under moonlight, his hand reaching out to appoint them with blood-stained fingers, grief and rage radiating from the new commander, shadows growing darker with intent for revenge, night becoming conspiracy"
+            },
+            {
+                "scene_number": 50,
+                "text": "That night, Ashwatthama crept into the Pandava camp. But the Pandavas were elsewhere, visiting Krishna. So Ashwatthama slaughtered everyone he found. The sons of the Pandavas. Children. The next generation, murdered in their sleep. He killed Draupadi's five sons, each born to a different father, each a prince of incomparable promise.",
+                "image_prompt": "Cinematic digital painting of a maddened warrior moving through sleeping tents at night, sword dripping with innocent blood, small forms lying still, the moon hidden behind clouds as if unable to watch, vengeance without discrimination, the future of a dynasty extinguished"
+            },
+            {
+                "scene_number": 51,
+                "text": "When the Pandavas returned and found the slaughter, Draupadi's scream shattered the night. Five sons, her children, butchered. The war was won, but what was the victory? A throne purchased with the blood of the next generation. A kingdom where the only heirs were ghosts. Justice achieved through mutual annihilation.",
+                "image_prompt": "Cinematic digital painting of a mother finding her children dead, her scream visualized as a shockwave of anguish radiating outward, the victorious brothers frozen in horror behind her, their won crown lying discarded in the dirt, triumph revealed as ash"
+            },
+            {
+                "scene_number": 52,
+                "text": "The Pandavas hunted Ashwatthama. When they cornered him, he used a divine weapon of mass destruction, aiming it at the womb of Uttara, who carried the last heir of the Pandava line. The unborn child, Parikshit, was struck dead before he could be born. The cycle of violence consuming even those not yet in the world.",
+                "image_prompt": "Cinematic digital painting of a desperate warrior unleashing a cosmic weapon toward a pregnant woman, divine energy reaching toward an unborn soul visible as light within her, multiple warriors rushing to intervene, the weaponization of the future, innocence under metaphysical assault"
+            },
+            {
+                "scene_number": 53,
+                "text": "Krishna intervened. He saved the child, reviving Parikshit in the womb. But he cursed Ashwatthama to immortality\u2014to wander the earth for thousands of years, his wounds never healing, his guilt never absolved, his pain never ending. Is eternal punishment justice or cruelty? Is there a point where even divine vengeance becomes excessive?",
+                "image_prompt": "Cinematic digital painting of a cursed warrior with a glowing wound on his forehead that will never heal, walking away into an endless landscape that stretches through centuries, his shadow showing countless repetitions of his form through time, eternal suffering as divine justice"
+            },
+            {
+                "scene_number": 54,
+                "text": "The war was over. Eighteen days of battle. Millions dead. Of the hundreds of thousands who marched to Kurukshetra, barely a handful survived. Entire bloodlines extinguished. The earth itself was said to have cried. Three generations destroyed for a conflict that could have been resolved with five villages.",
+                "image_prompt": "Cinematic digital painting of a battlefield after war, broken weapons scattered like a forest of death, carrion birds circling overhead, a few silhouetted figures walking among the countless dead, the scale of loss overwhelming, victory indistinguishable from defeat"
+            },
+            {
+                "scene_number": 55,
+                "text": "Yudhishthira was crowned emperor. The throne he had fought for was his at last. But as he sat there, wearing the crown stained with the blood of his teachers and cousins, he felt no joy. Only emptiness. Is a kingdom won through such means truly won at all? Or is it a prize poisoned by the method of its acquisition?",
+                "image_prompt": "Cinematic digital painting of a king on a throne in an empty hall, crown heavy on his bowed head, ghosts of all the dead filling the room as translucent witnesses, the throne room magnificent but silent, power achieved but joy absent, triumph hollow"
+            },
+            {
+                "scene_number": 56,
+                "text": "Gandhari, mother of the hundred Kauravas, came to the victory celebration. Blind like her husband, she had tied a cloth over her eyes in solidarity with him. When Krishna greeted her, she cursed him. Your wisdom could have prevented this war, she said. But you wanted it. You orchestrated it. You will die watching your own clan destroy itself, just as mine did.",
+                "image_prompt": "Cinematic digital painting of a blind woman in white mourning clothes pointing at a divine figure, her curse visible as dark energy leaving her finger, his serene expression showing acceptance of the curse, maternal grief given power to curse even god, consequences reaching even the divine"
+            },
+            {
+                "scene_number": 57,
+                "text": "And her curse came true. Years later, Krishna's own clan, the Yadavas, fell into drunken conflict and slaughtered each other. Krishna watched his people annihilate themselves, powerless to stop it. Even god, it seems, must live with the consequences of his choices. Even divine wisdom cannot escape the karma it creates.",
+                "image_prompt": "Cinematic digital painting of a divine figure watching from a distance as his own people fight and kill each other, unable or unwilling to intervene, the curse manifesting as his hands bound by chains of karma, the orchestrator becoming the bereaved observer"
+            },
+            {
+                "scene_number": 58,
+                "text": "The Pandavas ruled for years, but the joy never returned. Draupadi never recovered from the loss of her sons. Arjuna's hands shook when he remembered all he had killed. Bhima's strength seemed pointless now that there were no enemies left. Yudhishthira's truthfulness was forever compromised by the lie that killed Drona.",
+                "image_prompt": "Cinematic digital painting showing five rulers in different parts of a palace, each isolated in their private grief, one staring at empty cradles, one looking at trembling hands, one's strength useless in peace, one's tongue heavy with remembered deceit, loneliness in victory"
+            },
+            {
+                "scene_number": 59,
+                "text": "Finally, they decided to renounce their kingdom. They would take the great journey, the Mahaprasthana, walking north to the Himalayas and beyond, toward heaven or death or perhaps both. They put a dog they had befriended at the head of their procession and began to walk, leaving everything behind.",
+                "image_prompt": "Cinematic digital painting of five elderly figures and a dog walking away from a magnificent palace toward distant mountains, crowns and jewelry lying discarded behind them, the path ahead uncertain, renunciation as the final truth after victory proved hollow"
+            },
+            {
+                "scene_number": 60,
+                "text": "One by one, they fell. Draupadi fell first. Why? Because despite loving five husbands, she loved Arjuna most. Favoritism, even in love, is a flaw. Sahadeva fell next, proud of his wisdom. Then Nakula, proud of his beauty. Then Arjuna, proud of his skill. Pride in virtues is still pride.",
+                "image_prompt": "Cinematic digital painting showing figures falling one by one on a mountain path, each fall representing a different failing, their virtues and flaws written in fading light around them, the path narrowing as it climbs, human limitation revealed in divine judgment"
+            },
+            {
+                "scene_number": 61,
+                "text": "Only Yudhishthira remained, walking with the dog. Indra himself came in a chariot to take Yudhishthira to heaven. But there was a condition: the dog cannot come. Dogs are impure, Indra said. Leave it behind. Yudhishthira refused. I will not abandon a creature that has been loyal to me. If heaven requires abandoning the faithful, I will not enter.",
+                "image_prompt": "Cinematic digital painting of a old king standing firm beside a humble dog, facing a magnificent divine chariot with a god beckoning from it, choosing loyalty to the powerless over entrance to paradise, moral conviction stronger than desire for reward"
+            },
+            {
+                "scene_number": 62,
+                "text": "The dog transformed. It was Dharma itself, Yudhishthira's divine father, testing him one final time. You have passed, Dharma said. You refused heaven rather than betray loyalty. This is righteousness. But was it a test or manipulation? Do we praise Yudhishthira for his choice or condemn the gods for their games?",
+                "image_prompt": "Cinematic digital painting of a dog transforming into a radiant deity, the test revealed, the mortal king vindicated but also showing weariness at being tested even now, divine approval given but the ethics of divine testing left ambiguous"
+            },
+            {
+                "scene_number": 63,
+                "text": "Yudhishthira ascended to heaven. But when he arrived, he found a shock: the Kauravas were there, enjoying celestial pleasures. Duryodhana greeted him with a smile. Where are my brothers? Yudhishthira asked. Where is Draupadi? You will find them, he was told, in another place.",
+                "image_prompt": "Cinematic digital painting of a celestial realm where the former enemies live in bliss, the protagonist's confusion and anger visible as he sees those he fought in paradise while his loved ones are absent, divine justice appearing perverse"
+            },
+            {
+                "scene_number": 64,
+                "text": "That other place was hell. Yudhishthira descended and found his brothers and wife suffering in torment. The sight and sounds and smells of hell assaulted him. This is wrong! he cried. They were righteous! The gods replied: everyone must experience hell for their sins, and heaven for their virtues. Even the righteous have karma to burn.",
+                "image_prompt": "Cinematic digital painting showing the contrast between celestial paradise above and suffering below, a figure standing at the threshold refusing to enter one without the other, the moral confusion of seeing good people punished and bad people rewarded"
+            },
+            {
+                "scene_number": 65,
+                "text": "But Yudhishthira's hell was brief. It was yet another test. The vision dissolved. His brothers and Draupadi were in heaven after all. The gods explained: we showed you this to test your compassion, to see if you would abandon heaven to be with those you love in hell. You would have. Therefore, you pass.",
+                "image_prompt": "Cinematic digital painting of a hellish scene dissolving like smoke, revealing the truth of heaven beneath the illusion, the tested figure's relief and anger mixing, divine testing revealed as potentially cruel even when the outcome is positive"
+            },
+            {
+                "scene_number": 66,
+                "text": "And so the Mahabharata ends, but its questions do not. Every character made choices. Every choice had consequences. Some chose duty over conscience, like Bhishma. Some chose friendship over justice, like Karna. Some chose victory over honor, like the Pandavas. Were any of them purely right? Were any purely wrong?",
+                "image_prompt": "Cinematic digital painting showing all the major characters of the epic standing in a circle, each facing the others across a mandala of choices and consequences, no one clearly hero or villain, all connected in a web of moral complexity, judgment impossible"
+            },
+            {
+                "scene_number": 67,
+                "text": "The Mahabharata refuses to give us moral certainty. It gives us something more valuable: moral sophistication. The understanding that righteousness is not a destination but a direction. That purity is less important than integrity. That perfect choices are impossible, but intentional choices are essential.",
+                "image_prompt": "Cinematic digital painting of a compass where all directions are labeled with different virtues and all point slightly different ways, a hand hovering over it trying to choose, the background showing multiple paths through a moral landscape, complexity over simplicity"
+            },
+            {
+                "scene_number": 68,
+                "text": "Consider Yudhishthira's gambling. He knew it was wrong. He did it anyway because his dharma as a king demanded accepting challenges. But should dharma as he understood it override his conscience? Or was his real failing not that he gambled, but that he gambled with other people's freedom, treating his wife as property to be wagered?",
+                "image_prompt": "Cinematic digital painting of a scale balancing different moral considerations, dharma as warrior-king on one side, protection of human dignity on the other, the scale tilting while a figure watches in anguish, competing moral frameworks in conflict"
+            },
+            {
+                "scene_number": 69,
+                "text": "In modern terms, we might call this a conflict between rule-based ethics and consequentialist thinking. Should we follow rules regardless of outcome, or should outcomes determine our choices? The Mahabharata suggests both and neither. It suggests context matters. Wisdom matters. And sometimes, there simply is no good choice.",
+                "image_prompt": "Cinematic digital painting showing philosophical concepts as physical forces pulling a figure in different directions, rules written as rigid structures, consequences as flowing water, context as shifting sand beneath feet, wisdom as light trying to illuminate the complexity"
+            },
+            {
+                "scene_number": 70,
+                "text": "Think of Arjuna's crisis. A modern pacifist might praise his refusal to fight. A modern soldier might condemn his moment of weakness. But Krishna does neither. Instead, he teaches Arjuna to transcend the binary of fight or flee, teaching him to act without attachment, to do his duty without desire for results.",
+                "image_prompt": "Cinematic digital painting of a warrior in crisis transformed through teaching into a warrior in flow, the change shown as going from rigid conflict to fluid action, dharma not as external rule but as internalized understanding, peace found not in avoiding battle but in transcending desire"
+            },
+            {
+                "scene_number": 71,
+                "text": "Yet this teaching is deeply troubling to some modern readers. It seems to say: do your job, even if your job is killing, and don't think too hard about it. This philosophy was cited by some during the Nuremberg trials as a defense. If duty transcends morality, what stops duty from becoming an excuse for horror?",
+                "image_prompt": "Cinematic digital painting showing the same teaching interpreted two ways: one path showing enlightened action, the other showing moral abdication and atrocity justified by duty, the teaching itself neutral, the application dependent on conscience, wisdom's potential for misuse"
+            },
+            {
+                "scene_number": 72,
+                "text": "The text itself seems aware of this danger. Krishna's teaching in the Gita is complex, multilayered. He doesn't just say do your duty. He teaches devotion, wisdom, meditation. He shows Arjuna the unity of all beings. The full teaching is a holistic philosophy, but when we extract pieces from it, we can justify almost anything.",
+                "image_prompt": "Cinematic digital painting of a complete sacred teaching as an intricate mandala, showing how extracting single parts creates distortion, pieces removed casting different shadows, wholeness versus selective interpretation, the danger of partial wisdom"
+            },
+            {
+                "scene_number": 73,
+                "text": "Karna's story raises questions about nature versus nurture, about whether our circumstances determine our choices. He was noble by birth but raised in poverty. Society rejected him for his apparent low status. Duryodhana accepted him. Should we judge Karna for his loyalty to someone who showed him kindness, even if that person was morally compromised?",
+                "image_prompt": "Cinematic digital painting of a figure standing between two worlds, noble blood flowing in veins shown through translucent skin, humble upbringing shown in surroundings, the one person who accepted him standing in shadow, loyalty and justice in irreconcilable conflict"
+            },
+            {
+                "scene_number": 74,
+                "text": "In modern ethics, we might see this as a question of moral luck. How much credit do we deserve for our virtues if we were raised to value them? How much blame for our vices if we were never taught better? Karna was generous to a fault, brave beyond measure, loyal completely. His only sin was standing with the wrong side. But they were the side that stood with him.",
+                "image_prompt": "Cinematic digital painting showing virtue and vice not as pure opposites but as context-dependent manifestations, the same quality of loyalty showing as both noble and tragic depending on its object, character caught between competing moral frames"
+            },
+            {
+                "scene_number": 75,
+                "text": "Draupadi's humiliation speaks to every instance of gendered violence and public shaming throughout history. The men in that court who could have stopped it\u2014and didn't\u2014are complicit. Silence in the face of injustice is participation in injustice. The Mahabharata is clear on this: those who watched and did nothing were as guilty as those who acted.",
+                "image_prompt": "Cinematic digital painting of a assembly hall divided between active perpetrators in the light, silent witnesses in shadow, and a single victim whose dignity shines brighter than both, complicity visualized through the shadows that connect watchers to actors"
+            },
+            {
+                "scene_number": 76,
+                "text": "Her question to the court\u2014can a man who has lost himself stake another person?\u2014anticipates modern discussions of bodily autonomy and human rights. No person should be treated as property. No one's dignity should be wagered in another's game. Her question went unanswered in the text because there was no answer that preserved the system as it existed.",
+                "image_prompt": "Cinematic digital painting of a question mark forming from light in a dark court, the question so powerful it begins to crack the foundations of the building itself, legal and ethical systems unable to withstand the force of basic human dignity challenging them"
+            },
+            {
+                "scene_number": 77,
+                "text": "The Pandavas' use of deception in war troubles modern readers for good reason. They were the supposedly righteous side, yet they lied, cheated, and broke rules of combat. Does winning justify the means? Or did their victory become pyrrhic the moment they compromised their principles? Can you defeat evil by becoming evil?",
+                "image_prompt": "Cinematic digital painting of five heroes looking into a mirror that shows them transformed into the enemies they fought, the reflection revealing the cost of compromised principles, victory and defeat merged in the same image"
+            },
+            {
+                "scene_number": 78,
+                "text": "Krishna's role in counseling these deceptions is perhaps the most morally complex element of the entire epic. He is divine, yet he advocates lying. He is wisdom incarnate, yet he teaches that rules can be broken. One interpretation: Krishna represents pragmatic ethics. The world is messy. Absolute rules applied absolutely can create absolute horror.",
+                "image_prompt": "Cinematic digital painting of a divine figure standing at the intersection of ideal philosophy and messy reality, holding both absolute truth and necessary compromise, neither pure idealism nor pure pragmatism but a synthesis beyond simple categories"
+            },
+            {
+                "scene_number": 79,
+                "text": "Another interpretation: Krishna is testing whether the Pandavas will maintain their principles under pressure, and they fail. Their reward is victory, but the cost is their souls. They win the kingdom but lose themselves. Perhaps Krishna is not guiding them to triumph but showing them that triumph without principle is hollow.",
+                "image_prompt": "Cinematic digital painting of a divine teacher watching students make choices he knows will hollow them out, his expression unreadable, the test not of skill but of character, failure disguised as success, souls traded for thrones"
+            },
+            {
+                "scene_number": 80,
+                "text": "In modern corporate ethics, we see these same dilemmas. Do you lie to protect your company? Do you cut corners to meet deadlines? Do you sacrifice long-term values for short-term survival? Business schools teach the Mahabharata because it shows us that these questions are ancient, and that every generation must answer them anew.",
+                "image_prompt": "Cinematic digital painting showing ancient warriors transformed into modern business people facing identical moral dilemmas, boardrooms and battlefields overlapping, the setting changes but the moral architecture remains constant across millennia"
+            },
+            {
+                "scene_number": 81,
+                "text": "In medical ethics, we see Arjuna's dilemma reflected in end-of-life care. Sometimes all choices cause harm. Do you continue treatment that prolongs suffering, or do you cease treatment knowing death will follow? The Gita's teaching about detached action resonates here: act with compassion but without attachment to specific outcomes.",
+                "image_prompt": "Cinematic digital painting of a modern medical professional facing an impossible choice at a bedside, the patient existing in a state between life and death, options branching in different directions all leading to forms of suffering, compassion warring with helplessness"
+            },
+            {
+                "scene_number": 82,
+                "text": "In criminal justice, Karna's story raises questions about how we judge people. Should we consider their circumstances? Their lack of opportunity? If someone is raised in violence, are they fully responsible for perpetuating violence? Justice demands accountability, but wisdom demands context. How do we balance these?",
+                "image_prompt": "Cinematic digital painting of scales of justice where one side holds actions and the other holds contexts and circumstances, neither side clearly heavier, a judge figure trying to balance competing claims of accountability and understanding"
+            },
+            {
+                "scene_number": 83,
+                "text": "In political leadership, Yudhishthira's example teaches a hard lesson: good intentions are not enough. He meant well. He tried to be righteous. But his rigidity led to disaster. Modern leaders face the same challenge: too flexible and you stand for nothing; too rigid and you break when bending would save lives. Where is the balance?",
+                "image_prompt": "Cinematic digital painting of a leader trying to walk a narrow path between rigidity shown as brittle crystalline structures and flexibility shown as flowing water, both beautiful and dangerous, balance precarious, each step a choice between extremes"
+            },
+            {
+                "scene_number": 84,
+                "text": "In environmental ethics, the Mahabharata's description of the war's aftermath is haunting. The earth itself mourned. Millions dead. Ecosystems destroyed. Rivers running red. We see this today in how war destroys not just people but the planet itself. Agent Orange in Vietnam. Burning oil fields in Kuwait. The environmental cost of human conflict persists for generations.",
+                "image_prompt": "Cinematic digital painting showing ancient and modern environmental devastation merged, a battlefield where nature itself is wounded, the earth visualized as a living being showing injury, human conflict leaving scars that transcend human timelines"
+            },
+            {
+                "scene_number": 85,
+                "text": "In family systems therapy, the Mahabharata is a case study in generational trauma. The blind king Dhritarashtra favored his sons despite knowing they were wrong. His father Vichitraveerya died young. His stepfather Bhishma had taken a vow of celibacy. Dysfunction passed down through generations, each trying to compensate for the previous generation's failures, each creating new wounds.",
+                "image_prompt": "Cinematic digital painting of a family tree where each generation's pain flows down to the next like water, wounds becoming inherited, each person trying to heal but inadvertently passing trauma forward, the cycle visualized as a downward spiral of good intentions"
+            },
+            {
+                "scene_number": 86,
+                "text": "Gandhari's choice to blindfold herself in solidarity with her blind husband seems romantic but was arguably selfish. She chose not to see her sons growing corrupt. She chose not to witness their evil. When you voluntarily blind yourself to injustice, you become complicit in it. Good people who refuse to see do as much harm as bad people who refuse to change.",
+                "image_prompt": "Cinematic digital painting of a woman with a blindfold, the world behind her showing injustices she chooses not to see, her voluntary blindness creating shadows where corruption grows, solidarity transformed into abdication of responsibility"
+            },
+            {
+                "scene_number": 87,
+                "text": "The concept of dharma itself is multilayered. It means duty, righteousness, cosmic order, natural law, social obligation. When these different meanings conflict\u2014when your duty contradicts righteousness, when social obligation violates natural law\u2014which dharma do you follow? The Mahabharata suggests there is no universal answer, only the answer you can live with.",
+                "image_prompt": "Cinematic digital painting of the word dharma written in multiple scripts and languages, each definition pulling in a slightly different direction, the concept itself containing contradictions, no single path clearly marked as correct"
+            },
+            {
+                "scene_number": 88,
+                "text": "Modern philosophers call this moral particularism\u2014the idea that moral truths are context-dependent, that no rule applies universally in all situations. The Mahabharata is perhaps the oldest sustained argument for this position. It shows us that truth-telling can enable murder, that loyalty can support evil, that duty can destroy dharma.",
+                "image_prompt": "Cinematic digital painting of universal moral rules written as rigid structures crumbling when tested against specific contexts shown as flowing rivers of circumstance, each situation unique, one-size-fits-all ethics revealing their inadequacy"
+            },
+            {
+                "scene_number": 89,
+                "text": "Yet the text is not purely relativistic. Some things are condemned absolutely. The humiliation of Draupadi. The murder of sleeping children. The targeting of the unborn. Even in a text that questions every moral certainty, some acts remain beyond justification. There are lines that, once crossed, cannot be uncrossed.",
+                "image_prompt": "Cinematic digital painting showing a landscape of moral ambiguity with certain acts marked by absolute darkness that no context can illuminate, some lines drawn in permanent ink while others are written in water, absolute and relative coexisting"
+            },
+            {
+                "scene_number": 90,
+                "text": "The Mahabharata teaches us that moral growth requires moral courage. The courage to question authority, to stand alone if necessary, to choose the harder right over the easier wrong. Arjuna's initial refusal to fight showed more courage than his eventual acquiescence. Questioning is not weakness. Certainty can be a form of cowardice.",
+                "image_prompt": "Cinematic digital painting of a figure standing alone asking difficult questions while crowds follow easier paths around them, the lone questioner illuminated while the certain crowd walks in shadow, courage visualized as the willingness to stand in doubt"
+            },
+            {
+                "scene_number": 91,
+                "text": "It teaches us that wisdom is not about having all the answers but about asking better questions. Not what is right but what factors should I consider? Not what should I do but who am I becoming through my choices? Not whether this choice is justified but whether I can live with who I become if I make it.",
+                "image_prompt": "Cinematic digital painting of a figure surrounded by questions instead of answers, each question opening new dimensions of consideration, wisdom shown not as destination but as deepening complexity, better questions leading to better thinking"
+            },
+            {
+                "scene_number": 92,
+                "text": "It teaches us that consequences matter more than intentions. Yudhishthira meant well when he gambled. The Pandavas meant well when they used deception in war. But good intentions do not undo bad consequences. The children are still dead. The teachers are still betrayed. The world judges us not by what we meant to do but by what we did.",
+                "image_prompt": "Cinematic digital painting showing the road to hell paved with good intentions visualized literally, each stone an intention, the destination still suffering, consequences real regardless of the purity of motivation that led to them"
+            },
+            {
+                "scene_number": 93,
+                "text": "It teaches us humility. Everyone in this story was certain they were right. The Pandavas knew they deserved the throne. The Kauravas knew it belonged to them. Bhishma knew his vows were sacred. Drona knew he owed loyalty to his patron. Everyone was certain. Everyone was partially wrong. Certainty is the enemy of wisdom.",
+                "image_prompt": "Cinematic digital painting of multiple figures each standing in their own circle of light they think is complete truth, the circles overlapping to create areas of shadow none of them can see, certainty creating blindness to larger reality"
+            },
+            {
+                "scene_number": 94,
+                "text": "It teaches us about the tragedy of zero-sum thinking. The Pandavas and Kauravas saw only two possibilities: complete victory or total defeat. What if they had imagined shared power? What if they had thought beyond winner-takes-all? Most conflicts that seem zero-sum are actually manufactured scarcity. Most enemies could be partners if we reimagined the game.",
+                "image_prompt": "Cinematic digital painting of a chess board where the pieces refuse to see the possibility of both sides winning, the board itself starting to transform into a different game entirely that they cannot perceive because they are locked in binary thinking"
+            },
+            {
+                "scene_number": 95,
+                "text": "It teaches us that systems shape individuals more than individuals shape systems. Even good people became corrupted by the system of inherited power, divine right, caste hierarchy. Karna was denied opportunities because of his apparent birth. Draupadi was wagered because women were property. Reform requires changing systems, not just individuals.",
+                "image_prompt": "Cinematic digital painting of individuals as small figures within enormous architectural structures of social systems, the buildings shaping behavior, good people distorted by unjust structures, the need to rebuild the architecture itself rather than just rearrange the furniture"
+            },
+            {
+                "scene_number": 96,
+                "text": "It teaches us about masculine toxicity long before we had that term. The entire war was driven by masculine honor culture. Insults could not be borne. Challenges could not be refused. Compromise was weakness. Pride mattered more than peace. How many died for Duryodhana's ego? How many for Yudhishthira's rigid sense of honor?",
+                "image_prompt": "Cinematic digital painting showing the concept of honor as a cage that traps men inside rigid expectations, pride and violence fed by the culture that defines masculinity through domination and vengeance, bodies piled as offerings to an honor that demands blood"
+            },
+            {
+                "scene_number": 97,
+                "text": "Yet it also shows us alternative masculinities. Yudhishthira choosing the dog over heaven. Arjuna's moment of vulnerability before battle. Even Karna's generosity. The text contains both the toxic patterns and the seeds of their transcendence. It shows us what we are and what we might become.",
+                "image_prompt": "Cinematic digital painting showing different models of strength coexisting, vulnerability as courage, compassion as power, generosity as greatness, alternative paths through masculine identity that honor connection over domination"
+            },
+            {
+                "scene_number": 98,
+                "text": "In the end, the Mahabharata is not a story with a moral. It is a moral education disguised as a story. Each character's choices create ripples of consequence that expand through generations. Each decision has a cost. Each value, when taken to an extreme, becomes a vice. Balance is not weakness\u2014it is wisdom.",
+                "image_prompt": "Cinematic digital painting of a stone dropped in water creating ripples that become waves that become tsunamis across generations, small choices creating enormous consequences, the interconnection of action and result visualized across time and space"
+            },
+            {
+                "scene_number": 99,
+                "text": "The text asks us to hold contradictions. To see that Krishna is wise and manipulative. That the Pandavas are righteous and murderers. That Duryodhana is a villain and a victim. That justice and vengeance can be the same act seen from different angles. Moral maturity is the ability to hold complexity without collapsing into simplicity.",
+                "image_prompt": "Cinematic digital painting of a figure holding multiple contradictory truths like balls of light, some touching and creating new colors where they meet, the ability to contain paradox without resolving it visualized as a form of strength"
+            },
+            {
+                "scene_number": 100,
+                "text": "The Mahabharata ends with everyone in heaven, but the journey there cost everything. It asks: was it worth it? Could it have been different? What would you have done? These questions have no final answer because they are not meant to be answered. They are meant to be lived with, wrestled with, carried forward into our own moral lives.",
+                "image_prompt": "Cinematic digital painting of an open book whose pages transform into a mirror reflecting the reader, the ancient text becoming a personal question, the characters' choices becoming a template for examining our own, past and present merged in moral inquiry"
+            },
+            {
+                "scene_number": 101,
+                "text": "Today, we face our own Kurukshetras. Climate change demands we choose between present comfort and future survival. Technology forces us to balance innovation with ethics. Social media makes us choose between truth and tribal loyalty. The dilemmas are different. The underlying moral structure is identical.",
+                "image_prompt": "Cinematic digital painting showing modern scenarios\u2014a melting glacier, a corporate boardroom with an ethical dilemma, a person at a keyboard deciding what to share\u2014overlaid with shadowy ancient warriors, the moral architecture constant across time"
+            },
+            {
+                "scene_number": 102,
+                "text": "When corporations prioritize profit over people, they are Duryodhana refusing to give five villages. When we stay silent watching injustice, we are the elders in Draupadi's humiliation. When we follow orders without question, we risk becoming Arjuna without Krishna's wisdom. The patterns repeat because human nature persists.",
+                "image_prompt": "Cinematic digital painting of modern figures transparently overlaid with their ancient counterparts, the same moral failings in different costumes, history not repeating but rhyming, each generation facing the same essential tests in new contexts"
+            },
+            {
+                "scene_number": 103,
+                "text": "But the Mahabharata also offers hope. It shows us that even flawed people can seek wisdom. That even compromised victories can lead to eventual understanding. That the journey toward righteousness matters even if we never fully arrive. Perfection is not the goal. Continuous moral striving is.",
+                "image_prompt": "Cinematic digital painting of an ascending path with figures climbing, some falling and rising again, perfection visible as an impossible peak but the climb itself creating growth, the journey not the destination as the measure of worth"
+            },
+            {
+                "scene_number": 104,
+                "text": "The greatest gift of the Mahabharata is not answers but the right questions. Not what is dharma but how do we determine dharma in context? Not whether we should fight but what we are fighting for and who we become through fighting? Not if we will face moral dilemmas but how we will face them with integrity.",
+                "image_prompt": "Cinematic digital painting of a key made of questions unlocking doors to deeper understanding, each answered question revealing new questions beyond, wisdom as an infinite unfolding rather than a final destination"
+            },
+            {
+                "scene_number": 105,
+                "text": "Five thousand years separate us from Kurukshetra. Empires have risen and fallen. Technologies have transformed human life beyond recognition. Yet when we read of Arjuna's doubt, Draupadi's dignity, Karna's loyalty, Yudhishthira's struggles with truth, we recognize ourselves. The hardware has changed. The software remains remarkably consistent.",
+                "image_prompt": "Cinematic digital painting showing ancient and modern humans facing each other across a reflective surface, identical in their moral struggles despite different external circumstances, timeless humanity visible beneath temporal variations"
+            },
+            {
+                "scene_number": 106,
+                "text": "The Mahabharata does not make us better people simply by reading it. But it can make us more thoughtful people. More aware of how our choices ripple outward. More humble about our certainties. More willing to question, to doubt, to sit with discomfort rather than rushing to false clarity.",
+                "image_prompt": "Cinematic digital painting of a person reading an ancient text, their mind expanding with questions and considerations visualized as light radiating outward, wisdom growing not through answers but through enriched capacity for nuanced thinking"
+            },
+            {
+                "scene_number": 107,
+                "text": "In our age of absolute positions and instant judgments, the Mahabharata's moral ambiguity is revolutionary. It insists that we slow down. Consider context. Acknowledge competing goods. Accept that sometimes there is no right answer, only the answer we can defend to ourselves when we lie awake at night reviewing our choices.",
+                "image_prompt": "Cinematic digital painting of a figure pausing at a decision point while around them the world rushes past in blur, taking time to consider deeply while others choose instantly, revolutionary slowness in an age of reactive speed"
+            },
+            {
+                "scene_number": 108,
+                "text": "The text reminds us that ethics is not abstract philosophy but lived experience. Every day, we face smaller versions of the Mahabharata's dilemmas. Do we speak up or stay silent? Do we prioritize loyalty or honesty? Do we follow rules or trust our conscience? The stakes may be smaller, but the moral structure is identical.",
+                "image_prompt": "Cinematic digital painting showing epic ancient dilemmas scaled down to everyday modern choices, the same moral geometry at different sizes, revealing that daily life is where ethics actually happens, not just in dramatic moments"
+            },
+            {
+                "scene_number": 109,
+                "text": "Perhaps the deepest teaching is this: there is no way to live without causing some harm. The Pandavas learned this tragically. We are learning it ecologically\u2014our very existence impacts the planet. But this is not an excuse for passivity. It is a call for conscious choice. If harm is inevitable, let it be minimized, acknowledged, and mourned.",
+                "image_prompt": "Cinematic digital painting of a person walking carefully through a world where every step leaves a mark, impossible to walk without impact, but walking consciously versus carelessly making all the difference, responsibility without paralysis"
+            },
+            {
+                "scene_number": 110,
+                "text": "The Mahabharata teaches us to honor the weight of our choices. To recognize that every decision has a moral dimension. To understand that convenience is not the same as correctness. To know that history will judge us not by our intentions but by our actions and their consequences. To choose anyway, with as much wisdom as we can gather.",
+                "image_prompt": "Cinematic digital painting of a figure at a weighing scale where choices are measured not by their ease but by their integrity, consequence and intention both visible, the act of choosing shown as sacred responsibility rather than casual action"
+            },
+            {
+                "scene_number": 111,
+                "text": "And finally, it teaches us compassion\u2014for others who face impossible choices, and for ourselves when we fail to live up to our ideals. Everyone in the Mahabharata was trying their best with what they knew. They all failed in different ways. They were human. So are we. The point is not to avoid all failure but to fail forward, learning and growing.",
+                "image_prompt": "Cinematic digital painting showing figures helping each other up after falls, moral failure leading to growth rather than destruction when met with compassion, the path upward littered with mistakes that become lessons, humanity united in imperfection"
+            },
+            {
+                "scene_number": 112,
+                "text": "The ancient epic ends, but its moral maze continues in every generation. The characters may wear different clothes, speak different languages, fight different battles. But they face the same fundamental questions: What is right? What is just? What can I live with? What legacy do I leave? The Mahabharata cannot answer these questions for us. But it can teach us how to ask them better, and perhaps that is the greatest wisdom of all.",
+                "image_prompt": "Cinematic digital painting of an ancient manuscript transforming into a modern book transforming into a digital screen transforming into a neural pathway, the same wisdom transmitted across medium and millennium, questions evolving but remaining essentially human, the conversation continuing forever"
+            }
+        ],
+        "video_outro": {
+            "outro_scenes": [
+                {
+                    "scene_number": 113,
+                    "text": "The Mahabharata remains alive because its questions remain unanswered. Each generation must walk its own path through the moral maze. What choices will you make when dharma and duty conflict? When justice demands injustice? When love requires cruelty? The epic offers no final answers, only the wisdom to keep questioning.",
+                    "image_prompt": "Cinematic digital painting showing viewers as silhouettes standing at the entrance to their own moral mazes, paths ahead uncertain, the weight of choice visible in their postures, ancient wisdom lighting the entrance but not the path itself"
+                },
+                {
+                    "scene_number": 114,
+                    "text": "Thank you for joining us on this journey through the Mahabharata's timeless dilemmas. If this story resonated with you, share it with others who grapple with difficult choices. Subscribe for more explorations of ancient wisdom that speaks to modern life. Remember: the greatest stories don't give us answers\u2014they give us better questions. Until next time, may you walk your path with wisdom, compassion, and courage.",
+                    "image_prompt": "Cinematic digital painting of a book closing but light continuing to emanate from its pages, spreading outward to touch other books and other minds, wisdom as a gift meant to be shared, the end of one telling becoming the beginning of countless others"
+                }
+            ]
+        },
+        "youtube_metadata_for_better_seo": {
+            "video_title": "The Mahabharata's Moral Maze: Ancient Wisdom for Modern Ethics | Epic Stories Explained",
+            "description": "Dive deep into the timeless moral dilemmas of the Mahabharata, the ancient Indian epic that continues to illuminate our most challenging ethical questions today. This comprehensive exploration examines how characters like Arjuna, Yudhishthira, Krishna, Karna, and Draupadi navigated impossible choices between duty and dharma, justice and compassion, loyalty and righteousness. From the infamous dice game to the Bhagavad Gita's profound teachings, from the great war of Kurukshetra to the final journey to heaven, we uncover how these ancient struggles mirror modern dilemmas in business ethics, medical decisions, political leadership, and personal relationships. The Mahabharata offers no easy answers but provides something more valuable: the wisdom to ask better questions. Learn how this 5,000-year-old text speaks directly to contemporary challenges of moral complexity, teaching us that righteousness is not about perfection but about conscious, compassionate choice in the face of impossible situations. Whether you're a student of philosophy, a leader facing difficult decisions, or simply someone trying to live an ethical life, the Mahabharata's moral maze offers profound insights that transcend time and culture.",
+            "50_tags": [
+                "Mahabharata",
+                "Hindu mythology",
+                "ancient wisdom",
+                "moral philosophy",
+                "Bhagavad Gita",
+                "Krishna",
+                "Arjuna",
+                "dharma",
+                "ethics",
+                "moral dilemmas",
+                "Indian epic",
+                "Kurukshetra war",
+                "Pandavas",
+                "Kauravas",
+                "Draupadi",
+                "Karna",
+                "Yudhishthira",
+                "Bhishma",
+                "Drona",
+                "philosophical teachings",
+                "duty vs morality",
+                "justice and compassion",
+                "karma yoga",
+                "selfless action",
+                "moral complexity",
+                "ethical decision making",
+                "ancient ethics",
+                "modern dilemmas",
+                "wisdom tradition",
+                "epic stories",
+                "mythology explained",
+                "moral lessons",
+                "character analysis",
+                "virtue ethics",
+                "consequentialism",
+                "deontological ethics",
+                "moral relativism",
+                "contextual ethics",
+                "leadership lessons",
+                "moral courage",
+                "ethical frameworks",
+                "philosophy of war",
+                "just war theory",
+                "moral education",
+                "cultural wisdom",
+                "timeless teachings",
+                "spiritual philosophy",
+                "Hindu philosophy",
+                "Sanskrit literature",
+                "epic narrative"
+            ],
+            "10_hashtags": [
+                "#Mahabharata",
+                "#AncientWisdom",
+                "#MoralPhilosophy",
+                "#BhagavadGita",
+                "#Dharma",
+                "#Ethics",
+                "#HinduMythology",
+                "#EpicStories",
+                "#Wisdom",
+                "#Philosophy"
+            ]
+        }
+    },
+    {
         "video_title": "The Lost City of El Dorado: A Quest for Gold and Inhuman Resilience",
         "image_style_for_all_images_generate": "Cinematic digital painting with dramatic lighting, epic fantasy art style, rich golden tones mixed with deep jungle greens and earth browns, atmospheric perspective with volumetric light rays, painterly texture with visible brushwork, high contrast between light and shadow, mystical and adventurous mood, detailed environmental storytelling, Renaissance-inspired composition with central focal points, weathered and aged aesthetic suggesting historical authenticity",
         "youtube_thumbnail": {
