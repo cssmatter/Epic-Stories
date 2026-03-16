@@ -8,7 +8,7 @@ from xml.dom import minidom
 
 # Base URL for GitHub Pages
 BASE_URL = "https://cssmatter.github.io/Epic-Stories/"
-FEED_TITLE = "Book Summaries Podcast"
+FEED_TITLE = "Audiobooks On Spotify - Manish Salunke"
 FEED_LINK = BASE_URL + "assets/BookSummariesChannel/feed.xml"
 FEED_DESC = "Audio summaries of the world's best books, helping you learn and grow. Subscribe on YouTube: https://www.youtube.com/@BookSummariesChannel"
 FEED_LANGUAGE = "en-us"
