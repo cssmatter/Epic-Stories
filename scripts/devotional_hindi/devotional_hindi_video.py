@@ -164,11 +164,14 @@ def create_quote_overlay(quote_data, output_image_path):
     if not os.path.exists(font_path):
         font_path = "C:\\Windows\\Fonts\\Nirmala.ttc"
         
+    import re
     hook_text = quote_data.get("hook_text", "")
     quote_text = quote_data.get("quote_hindi_sansrikt", "")
+    # Strip trailing verse reference like "|| 4.20" or "|| 1.1" from the displayed quote
+    quote_text = re.sub(r'\|\|\s*[\d\.]+\s*$', '', quote_text).strip()
     
     # Handle both meaning key variations robustly
-    meaning_text = quote_data.get("meaning_meaning_simple_hindi", quote_data.get("meaning_simple_hindi", ""))
+    meaning_text = quote_data.get("meaning_simple_hindi", quote_data.get("meaning_meaning_simple_hindi", ""))
     
     # 1. Hook Text (Top)
     hook_y = 150
@@ -186,7 +189,7 @@ def create_quote_overlay(quote_data, output_image_path):
     # 3. Meaning (Below Quote)
     meaning_font_size = 38
     meaning_y = quote_start_y + actual_quote_h + 80
-    meaning_text = quote_data.get("meaning_meaning_simple_hindi", quote_data.get("meaning_simple_hindi", ""))
+    meaning_text = quote_data.get("meaning_simple_hindi", quote_data.get("meaning_meaning_simple_hindi", ""))
     actual_meaning_h = render_hindi_text(canvas, meaning_text, font_path, meaning_font_size, width - 150, meaning_y, skia.ColorWHITE)
     
     # 4. CTA (Below Meaning)
@@ -208,8 +211,13 @@ def create_quote_overlay(quote_data, output_image_path):
     return output_image_path
 
 # Initialize TTS globally to avoid reloading for every quote
-print("Loading Coqui TTS XTTS v2 model... (Might take a moment)")
-tts_engine = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
+tts_engine = None
+try:
+    print("Loading Coqui TTS XTTS v2 model... (Might take a moment)")
+    tts_engine = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
+except Exception as e:
+    print(f"Warning: Failed to initialize TTS engine: {e}")
+    print("Script will continue without voiceover (mock mode).")
 
 def clean_text_for_tts(text):
     """Sanitizes text for TTS, removing characters that trigger expansion errors (like decimals in Hindi)."""
@@ -279,8 +287,8 @@ def generate_meditative_voiceover(quote_data, output_path):
     hook = quote_data.get('hook_text', '').strip()
     quote = quote_data.get('quote_hindi_sansrikt', '').strip()
     
-    # Handle double "meaning" key typo from user edit, fallback to standard key
-    meaning = quote_data.get('meaning_meaning_simple_hindi', quote_data.get('meaning_simple_hindi', '')).strip()
+    # Handle meaning key variations, prefer simple_hindi
+    meaning = quote_data.get('meaning_simple_hindi', quote_data.get('meaning_meaning_simple_hindi', '')).strip()
     
     segments = []
     temp_files = []
@@ -293,22 +301,33 @@ def generate_meditative_voiceover(quote_data, output_path):
                 return
             path = get_output_path(f"temp_{label}.wav")
             print(f"Generating segment for {label} (Cleaned: {clean_text[:40]}...)...")
-            tts_engine.tts_to_file(
-                text=clean_text,
-                speaker="Kumar Dahl",
-                language="hi",
-                file_path=path
-            )
+            if tts_engine:
+                tts_engine.tts_to_file(
+                    text=clean_text,
+                    speaker="Kumar Dahl",
+                    language="hi",
+                    file_path=path
+                )
+            else:
+                # Mock audio: 2s silence
+                print(f"Mocking audio for {label} (TTS unavailable)")
+                subprocess.run([
+                    imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", 
+                    "-t", "2", "-ar", "24000", path
+                ], capture_output=True)
             segments.append(path)
             temp_files.append(path)
 
-    # 1. Quote
+    # 1. Hook
+    add_segment(hook, "hook")
+    
+    # 2. Quote
     add_segment(quote, "quote")
     
-    # 2. Meaning
+    # 3. Meaning
     add_segment(meaning, "meaning")
 
-    # 3. CTA
+    # 4. CTA
     cta_text = quote_data.get('cta', '').strip()
     add_segment(cta_text, "cta")
 
@@ -334,24 +353,23 @@ def generate_meditative_voiceover(quote_data, output_path):
     temp_files.append(start_delay_path)
 
     # Concatenate with pauses
-    # Flow: [2s Delay] -> Quote -> [3s Pause] -> Meaning -> [2s Pause] -> CTA
+    # Flow: [2s Delay] -> Hook -> [2s Pause] -> Quote -> [3s Pause] -> Meaning -> [2s Pause] -> CTA
     concat_list = []
     
     # Always add start delay
     concat_list.append(start_delay_path)
     
     if len(segments) > 0:
-        concat_list.append(segments[0]) # Quote
+        concat_list.append(segments[0]) # Hook
+        concat_list.append(start_delay_path) # 2s Pause
     if len(segments) > 1:
+        concat_list.append(segments[1]) # Quote
         concat_list.append(pause_path) # 3s Pause
-        concat_list.append(segments[1]) # Meaning
     if len(segments) > 2:
-        # Re-use the 2s pause (start delay) for between Meaning and CTA? Or make a new one?
-        # User requested pauses after punctuation, effectively handled by clean_text.
-        # But between major sections, explicit pause is good.
-        # Let's use the 2s delay path as a 2s separator
-        concat_list.append(start_delay_path) 
-        concat_list.append(segments[2]) # CTA
+        concat_list.append(segments[2]) # Meaning
+        concat_list.append(start_delay_path) # 2s Pause
+    if len(segments) > 3:
+        concat_list.append(segments[3]) # CTA
 
     # Create concat list for ffmpeg
     list_file_path = get_output_path("concat_list.txt")

@@ -59,7 +59,7 @@ def generate_social_metadata(quote_data):
     hook = quote_data.get("hook_text", "")
     verse = quote_data.get("verse_number", "")
     quote_sans = quote_data.get("quote_hindi_sansrikt", "")
-    meaning_hindi = quote_data.get("meaning_meaning_simple_hindi", quote_data.get("meaning_simple_hindi", ""))
+    meaning_hindi = quote_data.get("meaning_simple_hindi", quote_data.get("meaning_meaning_simple_hindi", ""))
     meaning_hinglish = quote_data.get("meaning_simple_hinglish", "")
     meaning_english = quote_data.get("meaning_english", "")
     cta = quote_data.get("cta", "")
