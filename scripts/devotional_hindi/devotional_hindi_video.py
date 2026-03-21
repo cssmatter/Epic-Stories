@@ -494,9 +494,9 @@ def create_quote_videos(limit=None):
         print("Error: No data found in JSON.")
         return
 
-    # Reverted to processing the FIRST one (Index 0)
-    quote = all_data[0]
-    print(f"\n--- Processing First Quote (Index 0): {quote.get('hook_text', 'No Hook')} (Verse {quote.get('verse_number', 'N/A')}) ---")
+    # Processing the LAST quote (most recent) instead of the first one
+    quote = all_data[-1]
+    print(f"\n--- Processing Latest Quote (Index {len(all_data)-1}): {quote.get('hook_text', 'No Hook')} (Verse {quote.get('verse_number', 'N/A')}) ---")
     
     # 5 Second Wait as requested
     print("Waiting 5 seconds before starting...")
