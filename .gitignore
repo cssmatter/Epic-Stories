@@ -21,6 +21,8 @@ ENV/
 # IDE
 .vscode/
 .idea/
+.claude/
+start_claude.ps1
 *.swp
 *.swo
 *~
