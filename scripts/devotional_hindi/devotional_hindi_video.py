@@ -494,9 +494,9 @@ def create_quote_videos(limit=None):
         print("Error: No data found in JSON.")
         return
 
-    # Processing the LAST quote (most recent) instead of the first one
-    quote = all_data[-1]
-    print(f"\n--- Processing Latest Quote (Index {len(all_data)-1}): {quote.get('hook_text', 'No Hook')} (Verse {quote.get('verse_number', 'N/A')}) ---")
+    # Processing the first quote instead of the last one
+    quote = all_data[0]
+    print(f"\n--- Processing Quote (Index 0): {quote.get('hook_text', 'No Hook')} (Verse {quote.get('verse_number', 'N/A')}) ---")
     
     # 5 Second Wait as requested
     print("Waiting 5 seconds before starting...")
@@ -507,8 +507,13 @@ def create_quote_videos(limit=None):
     prompt = quote.get('background_theme_detailed_prompt', 'A serene meditative background, ancient India, spiritual atmosphere, 4k.')
     
     if not download_ai_background(prompt, bg_path):
-        print("\n[ERROR] Could not acquire a fresh AI background.")
-        return
+        print("\n[WARNING] Could not acquire a fresh AI background. Using fallback.")
+        if not os.path.exists(bg_path):
+            surface = skia.Surface(720, 1280)
+            canvas = surface.getCanvas()
+            canvas.clear(skia.ColorSetARGB(255, 30, 30, 40))
+            image = surface.makeImageSnapshot()
+            image.save(bg_path, skia.kPNG)
 
     overlay_path = get_output_path("temp_overlay.png")
     create_quote_overlay(quote, overlay_path)
