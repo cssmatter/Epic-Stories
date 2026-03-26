@@ -5,6 +5,9 @@ token_base64.txt
 b64_token.txt
 session.json
 
+# Node
+node_modules/
+
 # Python
 __pycache__/
 *.py[cod]

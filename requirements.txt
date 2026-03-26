@@ -17,3 +17,4 @@ skia-python
 uharfbuzz
 pyttsx3
 setuptools
+yt-dlp

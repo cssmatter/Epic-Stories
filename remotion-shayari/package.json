@@ -1,0 +1,23 @@
+{
+  "name": "shayari-videos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "remotion studio src/index.tsx",
+    "build": "node scripts/render-shayari.js",
+    "render": "remotion render src/index.tsx ShayariVideo shayari-video.mp4 --props",
+    "list": "remotion list"
+  },
+  "dependencies": {
+    "@remotion/google-fonts": "^4.0.438",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.438"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.438",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

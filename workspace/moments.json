@@ -1,0 +1,59 @@
+{
+  "recordingStartMs": 0,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "moments": [
+    {
+      "timestamp_ms": 0,
+      "type": "navigate",
+      "label": "Open Google homepage",
+      "coords": {
+        "x": 960,
+        "y": 540
+      },
+      "url": "https://www.google.com"
+    },
+    {
+      "timestamp_ms": 5385,
+      "type": "type",
+      "label": "Type search query",
+      "coords": {
+        "x": 940,
+        "y": 402
+      },
+      "selector": "textarea[name='q'], input[name='q'], textarea[title='Search'], input[title='Search']"
+    },
+    {
+      "timestamp_ms": 49036,
+      "type": "type",
+      "label": "Press Enter to search",
+      "coords": {
+        "x": 960,
+        "y": 402
+      },
+      "selector": "textarea[name='q'], input[name='q'], textarea[title='Search'], input[title='Search']"
+    },
+    {
+      "timestamp_ms": 69986,
+      "type": "scroll",
+      "label": "Scroll down",
+      "coords": {
+        "x": 960,
+        "y": 1080
+      },
+      "scrollY": 800
+    },
+    {
+      "timestamp_ms": 72326,
+      "type": "scroll",
+      "label": "Scroll back up",
+      "coords": {
+        "x": 960,
+        "y": -260
+      },
+      "scrollY": -800
+    }
+  ]
+}

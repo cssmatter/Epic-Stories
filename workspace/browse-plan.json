@@ -1,0 +1,38 @@
+{
+  "viewport": { "width": 1920, "height": 1080 },
+  "url": "https://www.google.com",
+  "actions": [
+    {
+      "action": "navigate",
+      "url": "https://www.google.com",
+      "wait": 3000,
+      "label": "Open Google homepage"
+    },
+    {
+      "action": "type",
+      "selector": "textarea[name='q'], input[name='q'], textarea[title='Search'], input[title='Search']",
+      "text": "manish dnyandeos salunke",
+      "wait": 2000,
+      "label": "Type search query"
+    },
+    {
+      "action": "type",
+      "selector": "textarea[name='q'], input[name='q'], textarea[title='Search'], input[title='Search']",
+      "text": "\ue007",
+      "wait": 5000,
+      "label": "Press Enter to search"
+    },
+    {
+      "action": "scroll",
+      "y": 800,
+      "wait": 2000,
+      "label": "Scroll down"
+    },
+    {
+      "action": "scroll",
+      "y": -800,
+      "wait": 2000,
+      "label": "Scroll back up"
+    }
+  ]
+}
