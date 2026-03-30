@@ -19,12 +19,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Random Delay (Reach Optimization)
-      run: |
-        DELAY=$(( ( RANDOM % 1200 )  + 1 ))
-        echo "Waiting for $DELAY seconds before processing..."
-        sleep $DELAY
     
     - name: Set up Python
       uses: actions/setup-python@v5
