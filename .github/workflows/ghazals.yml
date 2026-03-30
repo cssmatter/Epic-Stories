@@ -1,0 +1,166 @@
+name: Upload Ghazal Reels
+
+on:
+  schedule:
+    # Run every day at 06:00 UTC
+    - cron: '0 6 * * *'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Required to commit changes back to the repository
+
+jobs:
+  upload-ghazals:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Random Delay (Reach Optimization)
+      run: |
+        DELAY=$(( ( RANDOM % 1200 )  + 1 ))
+        echo "Waiting for $DELAY seconds before processing..."
+        sleep $DELAY
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg fonts-liberation fonts-liberation2 fonts-indic fonts-noto-core libfontconfig1 libfreetype6 libgl1 libegl1 libopengl0
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Restore YouTube credentials
+      env:
+        CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+        SHAYARI_TOKEN_PICKLE: ${{ secrets.SHAYARI_TOKEN_PICKLE_BASE64 }}
+      run: |
+        echo "$CLIENT_SECRETS" > client_secrets.json
+        echo "$SHAYARI_TOKEN_PICKLE" | base64 -d > token_shayari.pickle
+    
+    - name: Check if ghazal songs are available
+      id: check_ghazals
+      run: |
+        song_count=$(python -c "import json; print(len(json.load(open('data/shayari/ghazal_songs.json', encoding='utf-8'))))")
+        echo "song_count=$song_count" >> $GITHUB_OUTPUT
+        if [ "$song_count" -eq 0 ]; then
+          echo "No ghazal songs remaining."
+          echo "songs_available=false" >> $GITHUB_OUTPUT
+        else
+          echo "Songs available: $song_count"
+          echo "songs_available=true" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Generate Reels via AI
+      if: steps.check_ghazals.outputs.songs_available == 'true'
+      env:
+        XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
+        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        # Generate the video
+        python scripts/shayari/youtube_mp3_transcript.py --auto
+
+    - name: Upload all generated reels to YouTube and Instagram
+      if: steps.check_ghazals.outputs.songs_available == 'true'
+      env:
+        IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN_SHAYARI }}
+        IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_SHAYARI }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        files=(downloads/upload_metadata_*.json)
+        if [ ! -e "${files[0]}" ]; then
+           echo "No metadata files found. Something failed."
+           exit 1
+        fi
+        
+        # We need youtube uploader path available
+        export PYTHONPATH=$(pwd)
+        total=${#files[@]}
+        count=1
+        
+        for meta_file in "${files[@]}"; do
+          echo "================================================="
+          echo "Processing upload $count of $total: $meta_file"
+          echo "================================================="
+          
+          # Extract values
+          desc=$(python -c "import json; print(json.load(open('$meta_file', encoding='utf-8'))['description'])")
+          title=$(python -c "import json; print(json.load(open('$meta_file', encoding='utf-8'))['title'])")
+          vid_path=$(python -c "import json; print(json.load(open('$meta_file', encoding='utf-8'))['video_path'])")
+          
+          # 1. YOUTUBE UPLOAD
+          echo "Uploading to YouTube Shorts: $title"
+          python -c "
+import sys, json, youtube_uploader
+with open('$meta_file', 'r', encoding='utf-8') as f:
+    meta = json.load(f)
+vid_id = youtube_uploader.upload_video(
+    meta['video_path'], meta['title'], meta['description'], category_id='22', 
+    keywords=meta['keywords'], token_file='token_shayari.pickle'
+)
+print(f'YouTube Video ID: {vid_id}')
+"
+          
+          # 2. INSTAGRAM UPLOAD via Temp Host
+          echo "Uploading to Instagram..."
+          chmod +x scripts/temp_upload.sh
+          VIDEO_URL=$(./scripts/temp_upload.sh "$vid_path")
+          if [[ $VIDEO_URL == http* ]]; then
+            echo "Public Video URL: $VIDEO_URL"
+            python instagram_graph_uploader.py "$VIDEO_URL" --metadata "$meta_file"
+          else
+            echo "Failed to get public URL for Instagram! Response: $VIDEO_URL"
+          fi
+          
+          # Clean up temp host release if it exists
+          if [ -f /tmp/github_release_tag.txt ]; then
+            RELEASE_TAG=$(cat /tmp/github_release_tag.txt)
+            chmod +x scripts/cleanup_release.sh
+            ./scripts/cleanup_release.sh "$RELEASE_TAG" "$GITHUB_TOKEN"
+            rm -f /tmp/github_release_tag.txt
+          fi
+          
+          # Wait 1 HOUR between multiple reels to avoid spam blocks!
+          if [ $count -lt $total ]; then
+             echo "Sleeping for 60 minutes before the next upload to prevent spam flagging..."
+             sleep 3600
+          fi
+          ((count++))
+        done
+        
+    - name: Commit updated ghazal queue
+      if: steps.check_ghazals.outputs.songs_available == 'true'
+      run: |
+        git config --local user.email "11308641+cssmatter@users.noreply.github.com"
+        git config --local user.name "cssmatter"
+        
+        if git diff --quiet data/shayari/ghazal_songs.json; then
+          echo "No changes to ghazal list"
+        else
+          git stash
+          git pull --rebase origin main
+          git stash pop || true
+          git add data/shayari/ghazal_songs.json
+          git commit -m "Remove published ghazal [skip ci]"
+          git push
+        fi
+
+    - name: Clean up credentials
+      if: always()
+      run: |
+        rm -f client_secrets.json token_shayari.pickle
