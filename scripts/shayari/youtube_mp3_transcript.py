@@ -461,7 +461,7 @@ def run_ffmpeg(*args, label: str = "ffmpeg") -> bool:
 # DOWNLOAD
 # ════════════════════════════════════════════════════════════════════════════
 
-def download_audio(url: str, output_dir: Path) -> tuple:
+def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str = None) -> tuple:
     """
     Download best audio as MP3.
     Returns (mp3_path, video_id, title).
@@ -487,7 +487,13 @@ def download_audio(url: str, output_dir: Path) -> tuple:
         "no_warnings": True,
         "extractor_args": {"youtube": {"skip": ["dash", "hls"]}},
         "socket_timeout": 30,
+        "nocheckcertificate": True,
     }
+
+    if cookies:
+        ydl_opts["cookiefile"] = cookies
+    if proxy:
+        ydl_opts["proxy"] = proxy
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
@@ -1521,6 +1527,8 @@ def main():
     parser = argparse.ArgumentParser(description="Bollywood Reel Generator")
     parser.add_argument("--url",        "-u", required=False, help="YouTube URL or song name")
     parser.add_argument("--auto",       action="store_true", help="Automatically pick first song from ghazal_songs.json")
+    parser.add_argument("--cookies",    help="Path to YouTube cookies text file")
+    parser.add_argument("--proxy",      help="Proxy URL for yt-dlp")
     parser.add_argument("--output",     "-o", default="downloads", help="Output directory")
     parser.add_argument("--skip-ai",    action="store_true", help="Skip AI reel suggestions")
     parser.add_argument("--skip-video", action="store_true", help="Skip video rendering")
@@ -1564,7 +1572,13 @@ def main():
             "no_warnings":    True,
             "extractor_args": {"youtube": {"skip": ["dash", "hls"]}},
             "socket_timeout": 30,
+            "nocheckcertificate": True,
         }
+        if args.cookies:
+            ydl_opts_resolve["cookiefile"] = args.cookies
+        if args.proxy:
+            ydl_opts_resolve["proxy"] = args.proxy
+
         with yt_dlp.YoutubeDL(ydl_opts_resolve) as ydl:
             info = ydl.extract_info(query, download=False)
             if "entries" in info:
@@ -1576,7 +1590,7 @@ def main():
         song_folder = output_dir / safe_filename(title)
         song_folder.mkdir(parents=True, exist_ok=True)
 
-        audio_path, video_id, final_title = download_audio(args.url, song_folder)
+        audio_path, video_id, final_title = download_audio(args.url, song_folder, cookies=args.cookies, proxy=args.proxy)
         log.info(f"Audio: {Path(audio_path).name}")
 
         transcript_text, txt_path = fetch_transcript(video_id, final_title, song_folder)

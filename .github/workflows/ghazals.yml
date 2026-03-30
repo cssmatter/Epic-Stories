@@ -43,9 +43,16 @@ jobs:
       env:
         CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
         SHAYARI_TOKEN_PICKLE: ${{ secrets.SHAYARI_TOKEN_PICKLE_BASE64 }}
+        YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
       run: |
         echo "$CLIENT_SECRETS" > client_secrets.json
         echo "$SHAYARI_TOKEN_PICKLE" | base64 -d > token_shayari.pickle
+        if [ -n "$YOUTUBE_COOKIES" ]; then
+          echo "$YOUTUBE_COOKIES" > cookies.txt
+          echo "Cookies restored."
+        else
+          echo "Warning: YOUTUBE_COOKIES secret is empty."
+        fi
     
     - name: Check if ghazal songs are available
       id: check_ghazals
@@ -70,8 +77,12 @@ jobs:
         NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
-        # Generate the video
-        python scripts/shayari/youtube_mp3_transcript.py --auto
+        # Generate the video with cookies if available
+        COOKIES_ARG=""
+        if [ -f "cookies.txt" ]; then
+          COOKIES_ARG="--cookies cookies.txt"
+        fi
+        python scripts/shayari/youtube_mp3_transcript.py --auto $COOKIES_ARG
 
     - name: Upload all generated reels to YouTube and Instagram
       if: steps.check_ghazals.outputs.songs_available == 'true'
