@@ -169,7 +169,6 @@ def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str =
         "outtmpl": str(output_dir / "%(title).50s.%(ext)s"),
         "postprocessors": [{"key": "FFmpegExtractAudio", "preferredcodec": "mp3", "preferredquality": "192"}],
         "quiet": True, "nocheckcertificate": True, "cookiefile": cookies, "proxy": proxy,
-        "extractor_args": {"youtube": {"skip": ["dash", "hls"]}},
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)

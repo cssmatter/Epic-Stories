@@ -29,6 +29,11 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y ffmpeg fonts-liberation fonts-liberation2 fonts-indic fonts-noto-core libfontconfig1 libfreetype6 libgl1 libegl1 libopengl0
+        
+    - name: Set up Node.js for yt-dlp JS execution
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
     
     - name: Install Python dependencies
       run: |
