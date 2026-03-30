@@ -81,6 +81,17 @@ jobs:
         IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN_SHAYARI }}
         IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_SHAYARI }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PYTHONPATH: ${{ github.workspace }}
+        PY_UPLOAD_SCRIPT: |
+          import sys, json, youtube_uploader
+          meta_file = sys.argv[1]
+          with open(meta_file, 'r', encoding='utf-8') as f:
+              meta = json.load(f)
+          vid_id = youtube_uploader.upload_video(
+              meta['video_path'], meta['title'], meta['description'], category_id='22', 
+              keywords=meta['keywords'], token_file='token_shayari.pickle'
+          )
+          print(f'YouTube Video ID: {vid_id}')
       run: |
         files=(downloads/upload_metadata_*.json)
         if [ ! -e "${files[0]}" ]; then
@@ -88,34 +99,23 @@ jobs:
            exit 1
         fi
         
-        # We need youtube uploader path available
-        export PYTHONPATH=$(pwd)
         total=${#files[@]}
         count=1
+        
+        # Save the runner script
+        echo "$PY_UPLOAD_SCRIPT" > run_upload.py
         
         for meta_file in "${files[@]}"; do
           echo "================================================="
           echo "Processing upload $count of $total: $meta_file"
           echo "================================================="
           
-          # Extract values
-          desc=$(python -c "import json; print(json.load(open('$meta_file', encoding='utf-8'))['description'])")
-          title=$(python -c "import json; print(json.load(open('$meta_file', encoding='utf-8'))['title'])")
-          vid_path=$(python -c "import json; print(json.load(open('$meta_file', encoding='utf-8'))['video_path'])")
+          # Extract values safely
+          title=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['title'])" "$meta_file")
+          vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'])" "$meta_file")
           
           # 1. YOUTUBE UPLOAD
           echo "Uploading to YouTube Shorts: $title"
-          cat << 'EOF' > run_upload.py
-import sys, json, youtube_uploader
-meta_file = sys.argv[1]
-with open(meta_file, 'r', encoding='utf-8') as f:
-    meta = json.load(f)
-vid_id = youtube_uploader.upload_video(
-    meta['video_path'], meta['title'], meta['description'], category_id='22', 
-    keywords=meta['keywords'], token_file='token_shayari.pickle'
-)
-print(f'YouTube Video ID: {vid_id}')
-EOF
           python run_upload.py "$meta_file"
           
           # 2. INSTAGRAM UPLOAD via Temp Host
