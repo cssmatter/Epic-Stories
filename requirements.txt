@@ -18,3 +18,7 @@ uharfbuzz
 pyttsx3
 setuptools
 yt-dlp
+youtube-transcript-api
+google-genai
+replicate
+xformers  # GPU memory optimization for Stable Diffusion

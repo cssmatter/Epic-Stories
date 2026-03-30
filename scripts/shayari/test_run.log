@@ -1,0 +1,9 @@
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[download]   0.0% of    5.47MiB at  770.87KiB/s ETA 00:07[download]   0.1% of    5.47MiB at    1.24MiB/s ETA 00:04[download]   0.1% of    5.47MiB at    2.89MiB/s ETA 00:01[download]   0.3% of    5.47MiB at    6.19MiB/s ETA 00:00[download]   0.6% of    5.47MiB at    3.14MiB/s ETA 00:01[download]   1.1% of    5.47MiB at    4.46MiB/s ETA 00:01[download]   2.3% of    5.47MiB at    5.97MiB/s ETA 00:00[download]   4.6% of    5.47MiB at    7.85MiB/s ETA 00:00[download]   9.1% of    5.47MiB at    9.26MiB/s ETA 00:00[download]  18.3% of    5.47MiB at    9.87MiB/s ETA 00:00[download]  36.5% of    5.47MiB at   10.26MiB/s ETA 00:00[download]  73.1% of    5.47MiB at   10.55MiB/s ETA 00:00[download] 100.0% of    5.47MiB at   10.67MiB/s ETA 00:00[download] 100% of    5.47MiB in 00:00:00 at 9.92MiB/s                                                         🎵 Audio downloaded: Aawaara Angaara (Full Video)： Tere Ishk Mein ｜ Dha.mp3
+📝 Fetching transcript for: Aawaara Angaara (Full Video): Tere Ishk Mein | Dhanush, Kriti | AR Rahman,Faheem|Aanand LR|Bhushan K...
+✅ Transcript saved: Aawaara Angaara (Full Video) Tere Ishk Mein  Dhanu.txt
+
+🤖 Asking NVIDIA AI for best Reel clips...
+❌ AI suggestion failed: Expecting ',' delimiter: line 25 column 2 (char 3426)
+
+✨ Done! Files are in: downloads\Aawaara Angaara (Full Video) Tere Ishk Mein  Dhanu

@@ -1,0 +1,678 @@
+WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+[download]   0.0% of    5.47MiB at  700.57KiB/s ETA 00:07[download]   0.1% of    5.47MiB at    1.19MiB/s ETA 00:04[download]   0.1% of    5.47MiB at    2.78MiB/s ETA 00:01[download]   0.3% of    5.47MiB at    4.75MiB/s ETA 00:01[download]   0.6% of    5.47MiB at    3.58MiB/s ETA 00:01[download]   1.1% of    5.47MiB at    5.78MiB/s ETA 00:00[download]   2.3% of    5.47MiB at    6.84MiB/s ETA 00:00[download]   4.6% of    5.47MiB at    9.34MiB/s ETA 00:00[download]   9.1% of    5.47MiB at   10.14MiB/s ETA 00:00[download]  18.3% of    5.47MiB at   10.68MiB/s ETA 00:00[download]  36.5% of    5.47MiB at   11.22MiB/s ETA 00:00[download]  73.1% of    5.47MiB at   11.74MiB/s ETA 00:00[download] 100.0% of    5.47MiB at   11.65MiB/s ETA 00:00[download] 100% of    5.47MiB in 00:00:00 at 10.36MiB/s                                                         The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+🎵 Audio downloaded: Aawaara Angaara (Full Video)： Tere Ishk Mein ｜ Dha.mp3
+📝 Fetching transcript for: Aawaara Angaara (Full Video): Tere Ishk Mein | Dhanush, Kriti | AR Rahman,Faheem|Aanand LR|Bhushan K...
+✅ Transcript saved: Aawaara Angaara (Full Video) Tere Ishk Mein  Dhanu.txt
+
+🤖 Asking NVIDIA AI for best Reel clips...
+✅ AI suggested 3 clips with style: watercolor painting on paper
+📄 Saved: reel_data.json, reel_suggestions.txt
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person standi...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:17,  4.27s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:05,  1.86s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:10<00:07,  3.88s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:12<00:08,  4.33s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person standi...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_000.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person clutch...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:17,  4.31s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:05,  1.84s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:06<00:04,  2.26s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person clutch...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_001.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person breath...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:05<00:20,  5.09s/it]Loading pipeline components...:  40%|████      | 2/5 [00:05<00:06,  2.16s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.47s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person breath...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_002.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person gazing...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:19,  4.81s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:06,  2.05s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.43s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person gazing...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_003.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person surrou...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:16,  4.22s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:04<00:02,  1.13s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:06<00:04,  2.18s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person surrou...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_004.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person walkin...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:18,  4.67s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:05,  2.00s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.38s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person walkin...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_005.jpg
+  🎬 Reel 1 video: reel_1.mp4
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person carryi...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:18,  4.69s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:06,  2.01s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.39s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person carryi...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_000.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person with a...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:05<00:20,  5.04s/it]Loading pipeline components...:  40%|████      | 2/5 [00:05<00:06,  2.19s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:05<00:02,  1.24s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:05,  2.54s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person with a...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_001.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person standi...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:07<00:29,  7.46s/it]Loading pipeline components...:  40%|████      | 2/5 [00:07<00:09,  3.20s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:10<00:06,  3.35s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person standi...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_002.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person surrou...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:18,  4.57s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:05,  1.95s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.34s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person surrou...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_003.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person with t...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:19,  4.89s/it]Loading pipeline components...:  40%|████      | 2/5 [00:05<00:06,  2.11s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:05,  2.50s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person with t...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_004.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person walkin...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:06<00:25,  6.36s/it]Loading pipeline components...:  40%|████      | 2/5 [00:06<00:08,  2.72s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:08<00:05,  2.98s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person walkin...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_005.jpg
+  🎬 Reel 2 video: reel_2.mp4
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person being ...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:05<00:23,  5.88s/it]Loading pipeline components...:  40%|████      | 2/5 [00:06<00:07,  2.51s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:08<00:05,  2.79s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person being ...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_000.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person learni...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:05<00:23,  5.94s/it]Loading pipeline components...:  40%|████      | 2/5 [00:06<00:07,  2.56s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:08<00:05,  2.84s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person learni...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_001.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person giving...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:19,  4.80s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:04<00:02,  1.30s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.40s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person giving...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_002.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person making...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:18,  4.62s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:06,  2.02s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:07<00:04,  2.38s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person making...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_003.jpg
+      [GEN] Generating via Stable Diffusion XL (local): a watercolor painting of a person walkin...
+      [DL] Loading Stable Diffusion XL model (stabilityai/sd-turbo)...
+      [LOAD] First time will download ~7GB model (one-time)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:04<00:17,  4.27s/it]Loading pipeline components...:  40%|████      | 2/5 [00:04<00:05,  1.83s/it]Loading pipeline components...:  60%|██████    | 3/5 [00:06<00:04,  2.25s/it]
+Traceback (most recent call last):
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 111, in load_state_dict
+    return safetensors.torch.load_file(checkpoint_file, device="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\safetensors\torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: The paging file is too small for this operation to complete. (os error 1455)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\youtube-automation\Epic-Stories-All-youtube-automation-shorts\scripts\shayari\youtube_mp3_transcript.py", line 295, in generate_with_stable_diffusion
+    pipeline = StableDiffusionXLPipeline.from_pretrained(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 1265, in from_pretrained
+    loaded_sub_model = load_sub_model(
+                       ^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 520, in load_sub_model
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 800, in from_pretrained
+    state_dict = load_state_dict(model_file, variant=variant)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manis\AppData\Local\Programs\Python\Python311\Lib\site-packages\diffusers\models\modeling_utils.py", line 115, in load_state_dict
+    if f.read().startswith("version"):
+       ^^^^^^^^
+MemoryError
+      ❌ Stable Diffusion failed: 
+      ⚠️ Stable Diffusion failed, falling back to gradient
+      [GEN] Generating AI image via Gemini 2.5 Flash: a watercolor painting of a person walkin...
+      ⚠️ Gemini API busy (attempt 1/3), retrying in 5s...
+      ⚠️ Gemini API busy (attempt 2/3), retrying in 10s...
+      ⚠️ Gemini API busy (attempt 3/3), retrying in 20s...
+      Gradient fallback for: frame_004.jpg
+  🎬 Reel 3 video: reel_3.mp4
+
+✨ Done! Files are in: downloads\Aawaara Angaara (Full Video) Tere Ishk Mein  Dhanu

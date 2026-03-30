@@ -1,0 +1,139 @@
+{
+  "youtube_title": "Tum Itna Jo Muskura Rahe Ho – Jagjit Singh | Arth (1983) Ghazal",
+  "youtube_description": "Jagjit Singh's haunting ghazal 'Tum Itna Jo Muskura Rahe Ho' from Arth (1983) whispers of hidden sorrow behind a smile. A timeless melody of love and loss.\\nSinger: Jagjit Singh | Composer: Jagjit Singh #JagjitSingh #TumItnaJoMuskuraRaheHo #Arth1983 #BollywoodGhazal #HindiMusic #ClassicSongs #Melancholy #LoveAndLoss #RetroMusic #IndianCinema #Ghazal #MusicTherapy #Soulful #Timeless #BollywoodClassics",
+  "background_color": "#0D1B2A",
+  "text_color": "#A8C6E2",
+  "image_style": "RDR2 ZOOLOGICAL COMPENDIUM",
+  "style_preset": "",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:22",
+      "end_time": "01:22",
+      "duration_seconds": 60,
+      "reason": "Opening hook that repeats the central question of hidden pain behind a smile, instantly relatable and emotionally resonant.",
+      "lines": [
+        {
+          "time": "00:22",
+          "text": "तुम इतना जो मुस्कुरा रहे हो",
+          "emotion": "melancholy",
+          "image_prompt": "A solitary figure with a gentle smile, eyes slightly veiled, standing under a dim lantern, evoking hidden sorrow, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:33",
+          "text": "तुम इतना जो मुस्कुरा रहे हो क्या गम है",
+          "emotion": "melancholy",
+          "image_prompt": "Close-up of the same figure, smile fading as a subtle tear forms, a wilted rose lying at their feet, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:40",
+          "text": "जिसको छुपा रहे हो क्या गम है जिसको छुपा",
+          "emotion": "melancholy",
+          "image_prompt": "The figure clutching a crumpled letter, symbolizing concealed grief, long shadows stretching across a parchment‑like ground, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:48",
+          "text": "रहे हो तुम इतना जो मुस्कुरा रहे हो",
+          "emotion": "melancholy",
+          "image_prompt": "The smiling silhouette repeats the pose, but a faint aura of darkness surrounds the head, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:21",
+          "text": "आंखों में",
+          "emotion": "melancholy",
+          "image_prompt": "Eyes rendered as deep storm‑cloud pools, reflecting inner turmoil, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:22",
+          "text": "नमी हसी लबों पर",
+          "emotion": "melancholy",
+          "image_prompt": "Moisture glistening on slightly curved lips, hint of a smile trembling, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:20",
+      "end_time": "03:11",
+      "duration_seconds": 51,
+      "reason": "Powerful verse describing self‑destructive drinking of poison and ink‑like tears, visually striking and emotionally intense.",
+      "lines": [
+        {
+          "time": "02:20",
+          "text": "जाएँगे जहर पीते पीते",
+          "emotion": "sad",
+          "image_prompt": "A forlorn silhouette sipping from a glass filled with dark, swirling poison, the liquid reflecting a stormy sky, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:29",
+          "text": "बल",
+          "emotion": "sad",
+          "image_prompt": "A scene showing sad emotion inspired by the song context of 'बल', fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:31",
+          "text": "जाएँगे जहर पीते पीते ये अश्क जो पीते जा",
+          "emotion": "sad",
+          "image_prompt": "Tears turning into black ink flow down the cheek of the figure, merging with the poison, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:38",
+          "text": "रहे हो यह अश्क जो पीते जा रहे हो",
+          "emotion": "sad",
+          "image_prompt": "A cascade of ink‑like tears pooling at the figure's feet, forming a dark puddle on parchment‑colored ground, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:11",
+          "text": "जिन जख्मों को वक्त भर चला",
+          "emotion": "sad",
+          "image_prompt": "Wounds etched into the bark of an ancient tree, time‑worn cracks attempting to heal, leaves falling around, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "04:09",
+      "end_time": "04:51",
+      "duration_seconds": 42,
+      "reason": "Philosophical closing segment about fate’s lines and hidden sorrow, offering a visually rich metaphor for illustration.",
+      "lines": [
+        {
+          "time": "04:09",
+          "text": "रेखाओं का खेल है",
+          "emotion": "reflective",
+          "image_prompt": "Intertwined ink lines like fate’s threads drawn across a parchment background, faint silhouettes of birds in the distance, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:18",
+          "text": "मुकदर रेखाओं का खेल है",
+          "emotion": "reflective",
+          "image_prompt": "Destiny depicted as tangled vines of ink curling around a lone tree, soft shadows, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:23",
+          "text": "मुकदर रेखाओं से मात खा रहे हो",
+          "emotion": "reflective",
+          "image_prompt": "A small figure being overrun by scribbled lines, appearing defeated beneath a storm of ink, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:35",
+          "text": "रेखाओं से मात खा रहे हो क्या गम है जिसको",
+          "emotion": "reflective",
+          "image_prompt": "The same figure, overwhelmed, wearing a mask of sorrow, ink lines dripping from the mask onto the ground, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:43",
+          "text": "छुपा रहे हो तुम इतना जो मुस्कुरा रहे हो",
+          "emotion": "reflective",
+          "image_prompt": "A smiling mask half‑removed, revealing a stormy interior of clouds and rain, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:51",
+          "text": "क्या हम है जिसको छुपा रहे हो",
+          "emotion": "reflective",
+          "image_prompt": "A shadowed silhouette standing before a cracked mirror, questioning its own hidden pain, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    }
+  ]
+}
