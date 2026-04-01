@@ -3,7 +3,7 @@ name: Epic Stories Automation
 on:
   schedule:
     # Run every 3 days at 00:00 UTC
-    - cron: '0 0 */3 * *'
+    - cron: '0 0 */30 * *'
   workflow_dispatch:
     # Allow manual triggering
 
