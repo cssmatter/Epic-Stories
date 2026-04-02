@@ -164,6 +164,13 @@ def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str =
     import yt_dlp
     url = url.strip()
     if not (url.startswith("http") or url.startswith("www.")): url = f"ytsearch1:{url}"
+    # Modern High-Reputation User-Agents
+    USER_AGENTS = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    ]
+    
     ydl_opts = {
         "format": "bestaudio/best",
         "outtmpl": str(output_dir / "%(title).50s.%(ext)s"),
@@ -172,14 +179,18 @@ def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str =
         "nocheckcertificate": True,
         "cookiefile": cookies,
         "proxy": proxy,
-        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "user_agent": random.choice(USER_AGENTS),
         "extractor_args": {
             "youtube": {
-                "player_client": ["ios", "web"],
+                "player_client": ["android", "web_embedded"],
                 "skip": ["dash", "hls"]
             }
         }
     }
+    
+    if cookies:
+        log.info(f"Applying cookies from {cookies}...")
+
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
         if "entries" in info: info = info["entries"][0]
