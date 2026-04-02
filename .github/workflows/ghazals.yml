@@ -111,7 +111,9 @@ jobs:
       run: |
         # Collect all metadata files (Daily Drip: We sort and pick ONLY the first one)
         shopt -s nullglob
-        sorted_files=($(ls -v downloads/*/upload_metadata_*.json 2>/dev/null))
+        
+        # Use readarray to safely handle filenames with spaces
+        readarray -t sorted_files < <(ls -v downloads/*/upload_metadata_*.json 2>/dev/null)
         
         if [ ${#sorted_files[@]} -eq 0 ]; then
            echo "Queue is empty. No pre-generated reels found in downloads/."
@@ -119,9 +121,9 @@ jobs:
         fi
         
         first_meta="${sorted_files[0]}"
-        echo "Daily Queue: Picking $first_meta"
+        echo "Daily Queue: Picking \"$first_meta\""
         
-        # Resolve the video path early for both
+        # Resolve the video path early for both (Using quoting to handle spaces)
         vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'].replace(chr(92), '/'))" "$first_meta")
         
         # 1. INSTAGRAM UPLOAD FIRST (Most fragile part)
@@ -150,9 +152,9 @@ jobs:
           rm -f /tmp/github_release_tag.txt
         fi
         
-        # Delete the processed files
+        # Delete the processed files (Use quoting for spaces)
         rm -f "$first_meta" "$vid_path"
-        echo "Finished processing $first_meta. Files removed from queue."
+        echo "Finished processing \"$first_meta\". Files removed from queue."
 
     - name: Commit cleanup (Remove uploaded videos from Queue)
       run: |
