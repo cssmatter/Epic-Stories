@@ -111,9 +111,12 @@ jobs:
               # Normalize Windows backslashes to Linux forward slashes
               clean_video_path = meta['video_path'].replace('\\', '/')
                   
+              raw_keywords = meta.get('keywords', ['ghazal', 'shayari'])
+              str_keywords = ",".join(raw_keywords) if isinstance(raw_keywords, list) else raw_keywords
+                  
               vid_id = youtube_uploader.upload_video(
                   clean_video_path, meta['title'], meta['description'], category_id='22', 
-                  keywords=meta['keywords'], token_file='token_shayari.pickle',
+                  keywords=str_keywords, token_file='token_shayari.pickle',
                   publish_at=publish_datetime
               )
               print(f'YouTube Video ID: {vid_id}')
