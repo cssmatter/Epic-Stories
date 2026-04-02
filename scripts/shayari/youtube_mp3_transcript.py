@@ -182,13 +182,16 @@ def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str =
         "user_agent": random.choice(USER_AGENTS),
         "extractor_args": {
             "youtube": {
-                "player_client": ["ios", "web"]
+                "player_client": ["web", "mweb"]
             }
         }
     }
     
     if cookies:
         log.info(f"Applying cookies from {cookies}...")
+    
+    # Add a small random jitter to avoid 429 rate limiting
+    time.sleep(random.uniform(3, 7))
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
