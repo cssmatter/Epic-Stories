@@ -75,25 +75,7 @@ jobs:
           echo "songs_available=true" >> $GITHUB_OUTPUT
         fi
     
-    - name: Generate Reels via AI
-      if: steps.check_ghazals.outputs.songs_available == 'true'
-      env:
-        XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-        HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
-        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
-        NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: |
-        # Generate the video with cookies if available
-        COOKIES_ARG=""
-        if [ -f "cookies.txt" ]; then
-          COOKIES_ARG="--cookies cookies.txt"
-        fi
-        python scripts/shayari/youtube_mp3_transcript.py --auto $COOKIES_ARG
-
-    - name: Upload all generated reels to YouTube and Instagram
-      if: steps.check_ghazals.outputs.songs_available == 'true'
+    - name: Process Uploads and Scheduling
       env:
         IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN_SHAYARI }}
         IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_SHAYARI }}
@@ -101,81 +83,95 @@ jobs:
         PYTHONPATH: ${{ github.workspace }}
         PY_UPLOAD_SCRIPT: |
           import sys, json, youtube_uploader
-          meta_file = sys.argv[1]
-          with open(meta_file, 'r', encoding='utf-8') as f:
-              meta = json.load(f)
-          vid_id = youtube_uploader.upload_video(
-              meta['video_path'], meta['title'], meta['description'], category_id='22', 
-              keywords=meta['keywords'], token_file='token_shayari.pickle'
-          )
-          print(f'YouTube Video ID: {vid_id}')
+          from datetime import datetime, timedelta, timezone
+
+          meta_files = sys.argv[1:]
+          if not meta_files:
+              print("No metadata files to process.")
+              sys.exit(0)
+              
+          for idx, meta_file in enumerate(meta_files):
+              print(f"\n=================================================")
+              print(f"Processing upload {idx+1} of {len(meta_files)}: {meta_file}")
+              print(f"=================================================")
+              
+              with open(meta_file, 'r', encoding='utf-8') as f:
+                  meta = json.load(f)
+                  
+              # Publish first immediately, Schedule rest 24h apart
+              publish_datetime = None
+              if idx > 0:
+                  # Calculate future date: current UTC + (days * 24h)
+                  future_date = datetime.now(timezone.utc) + timedelta(days=idx)
+                  publish_datetime = future_date.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+                  print(f"Scheduling to YouTube at {publish_datetime}")
+              else:
+                  print("Publishing to YouTube IMMEDIATELY")
+                  
+              vid_id = youtube_uploader.upload_video(
+                  meta['video_path'], meta['title'], meta['description'], category_id='22', 
+                  keywords=meta['keywords'], token_file='token_shayari.pickle',
+                  publish_at=publish_datetime
+              )
+              print(f'YouTube Video ID: {vid_id}')
       run: |
-        files=(downloads/upload_metadata_*.json)
-        if [ ! -e "${files[0]}" ]; then
-           echo "No metadata files found. Something failed."
-           exit 1
+        # Collect all metadata files from the downloads directory (including subdirectories)
+        shopt -s nullglob
+        files=(downloads/*/upload_metadata_*.json)
+        
+        if [ ${#files[@]} -eq 0 ]; then
+           echo "No pre-generated metadata files found in downloads/. Skipping upload."
+           exit 0
         fi
         
-        total=${#files[@]}
-        count=1
-        
-        # Save the runner script
+        # Save the python uploader script
         echo "$PY_UPLOAD_SCRIPT" > run_upload.py
         
-        for meta_file in "${files[@]}"; do
-          echo "================================================="
-          echo "Processing upload $count of $total: $meta_file"
-          echo "================================================="
-          
-          # Extract values safely
-          title=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['title'])" "$meta_file")
-          vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'])" "$meta_file")
-          
-          # 1. YOUTUBE UPLOAD
-          echo "Uploading to YouTube Shorts: $title"
-          python run_upload.py "$meta_file"
-          
-          # 2. INSTAGRAM UPLOAD via Temp Host
-          echo "Uploading to Instagram..."
-          chmod +x scripts/temp_upload.sh
-          VIDEO_URL=$(./scripts/temp_upload.sh "$vid_path")
-          if [[ $VIDEO_URL == http* ]]; then
-            echo "Public Video URL: $VIDEO_URL"
-            python instagram_graph_uploader.py "$VIDEO_URL" --metadata "$meta_file"
-          else
-            echo "Failed to get public URL for Instagram! Response: $VIDEO_URL"
-          fi
-          
-          # Clean up temp host release if it exists
-          if [ -f /tmp/github_release_tag.txt ]; then
-            RELEASE_TAG=$(cat /tmp/github_release_tag.txt)
-            chmod +x scripts/cleanup_release.sh
-            ./scripts/cleanup_release.sh "$RELEASE_TAG" "$GITHUB_TOKEN"
-            rm -f /tmp/github_release_tag.txt
-          fi
-          
-          # Wait 1 HOUR between multiple reels to avoid spam blocks!
-          if [ $count -lt $total ]; then
-             echo "Sleeping for 60 minutes before the next upload to prevent spam flagging..."
-             sleep 3600
-          fi
-          ((count++))
-        done
+        # Run YouTube processing logic
+        python run_upload.py "${files[@]}"
         
-    - name: Commit updated ghazal queue
-      if: steps.check_ghazals.outputs.songs_available == 'true'
+        # Note: Instagram Graph API does not natively support scheduling via basic access
+        # To avoid spam blocks, we only upload the FIRST video immediately to Instagram.
+        first_meta="${files[0]}"
+        vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'])" "$first_meta")
+        
+        echo "Uploading immediate video to Instagram..."
+        chmod +x scripts/temp_upload.sh
+        VIDEO_URL=$(./scripts/temp_upload.sh "$vid_path")
+        if [[ $VIDEO_URL == http* ]]; then
+          echo "Public Video URL: $VIDEO_URL"
+          python instagram_graph_uploader.py "$VIDEO_URL" --metadata "$first_meta"
+        else
+          echo "Failed to get public URL for Instagram! Response: $VIDEO_URL"
+        fi
+        
+        # Clean up temp host release if it exists
+        if [ -f /tmp/github_release_tag.txt ]; then
+          RELEASE_TAG=$(cat /tmp/github_release_tag.txt)
+          chmod +x scripts/cleanup_release.sh
+          ./scripts/cleanup_release.sh "$RELEASE_TAG" "$GITHUB_TOKEN"
+          rm -f /tmp/github_release_tag.txt
+        fi
+        
+        # Stage deletions to remove processed files from repo
+        for meta_file in "${files[@]}"; do
+           v_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'])" "$meta_file")
+           # We use standard rm, the next step will run git rm on deleted files
+           rm -f "$meta_file" "$v_path"
+        done
+
+    - name: Commit cleanup (Remove uploaded videos from Queue)
       run: |
         git config --local user.email "11308641+cssmatter@users.noreply.github.com"
         git config --local user.name "cssmatter"
         
-        if git diff --quiet data/shayari/ghazal_songs.json; then
-          echo "No changes to ghazal list"
+        # Add any deleted files in downloads/ to the commit
+        git add -u downloads/
+        
+        if git diff --staged --quiet; then
+          echo "No files were deleted/processed."
         else
-          git stash
-          git pull --rebase origin main
-          git stash pop || true
-          git add data/shayari/ghazal_songs.json
-          git commit -m "Remove published ghazal [skip ci]"
+          git commit -m "chore: remove published generated reels [skip ci]"
           git push
         fi
 

@@ -105,7 +105,7 @@ def get_authenticated_service(token_file='token.pickle'):
             
     return build('youtube', 'v3', credentials=creds)
 
-def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle', thumbnail=None, course_title=None, privacy_status='public'):
+def upload_video(file_path, title, description, category_id="22", keywords="quote,motivation", token_file='token.pickle', thumbnail=None, course_title=None, privacy_status='public', publish_at=None):
     """
     Uploads a video to YouTube.
     """
@@ -160,10 +160,14 @@ def upload_video(file_path, title, description, category_id="22", keywords="quot
             'defaultLanguage': 'en'  # Set video language to English
         },
         'status': {
-            'privacyStatus': privacy_status,
+            'privacyStatus': privacy_status if not publish_at else 'private',
             'selfDeclaredMadeForKids': False,
         }
     }
+    
+    if publish_at:
+        body['status']['publishAt'] = publish_at
+        print(f"Scheduling video for: {publish_at}")
     
     # Required localization for default language
     local_desc = clean_description
