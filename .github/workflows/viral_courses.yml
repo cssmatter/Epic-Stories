@@ -4,6 +4,7 @@ on:
   schedule:
   # Run every 1 days at 00:00 UTC
     - cron: '0 0 */1 * *'
+  workflow_dispatch:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
