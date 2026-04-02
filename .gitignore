@@ -51,3 +51,4 @@ temp/
 *.txt
 !requirements.txt
 !README.md
+!downloads/**
