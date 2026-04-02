@@ -182,8 +182,7 @@ def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str =
         "user_agent": random.choice(USER_AGENTS),
         "extractor_args": {
             "youtube": {
-                "player_client": ["android", "web_embedded"],
-                "skip": ["dash", "hls"]
+                "player_client": ["ios", "web"]
             }
         }
     }
