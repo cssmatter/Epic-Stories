@@ -40,6 +40,8 @@ jobs:
         python -m pip install --upgrade pip
         # Use requirements.txt which has been optimized for CI
         pip install -r requirements.txt
+        # Force update yt-dlp to latest to bypass bot detection
+        pip install -U yt-dlp
     
     - name: Restore YouTube credentials
       env:
@@ -51,7 +53,11 @@ jobs:
         echo "$SHAYARI_TOKEN_PICKLE" | base64 -d > token_shayari.pickle
         if [ -n "$YOUTUBE_COOKIES" ]; then
           echo "$YOUTUBE_COOKIES" > cookies.txt
-          echo "Cookies restored."
+          if head -n 1 cookies.txt | grep -q "# Netscape"; then
+            echo "Cookies restored and verified (Netscape format)."
+          else
+            echo "::warning::Cookies restored but do not follow Netscape format. Processing might fail."
+          fi
         else
           echo "Warning: YOUTUBE_COOKIES secret is empty."
         fi

@@ -168,7 +168,17 @@ def download_audio(url: str, output_dir: Path, cookies: str = None, proxy: str =
         "format": "bestaudio/best",
         "outtmpl": str(output_dir / "%(title).50s.%(ext)s"),
         "postprocessors": [{"key": "FFmpegExtractAudio", "preferredcodec": "mp3", "preferredquality": "192"}],
-        "quiet": True, "nocheckcertificate": True, "cookiefile": cookies, "proxy": proxy,
+        "quiet": True,
+        "nocheckcertificate": True,
+        "cookiefile": cookies,
+        "proxy": proxy,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["ios", "web"],
+                "skip": ["dash", "hls"]
+            }
+        }
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
