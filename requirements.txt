@@ -1,10 +1,10 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 requests
-torch==2.0.1
-torchvision
-diffusers
-transformers
-accelerate
+# torch==2.0.1  # Local GPU only - extremely slow/broken in CI
+# torchvision    # Local GPU only - extremely slow/broken in CI
+# diffusers      # Local GPU only
+# transformers   # Local GPU only
+# accelerate     # Local GPU only
 gTTS
 moviepy
 numpy
@@ -21,4 +21,4 @@ yt-dlp
 youtube-transcript-api
 google-genai
 replicate
-xformers  # GPU memory optimization for Stable Diffusion
+# xformers  # GPU memory optimization for Stable Diffusion - Broken in CI (403 error)
