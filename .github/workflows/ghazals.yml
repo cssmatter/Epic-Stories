@@ -108,8 +108,11 @@ jobs:
               else:
                   print("Publishing to YouTube IMMEDIATELY")
                   
+              # Normalize Windows backslashes to Linux forward slashes
+              clean_video_path = meta['video_path'].replace('\\', '/')
+                  
               vid_id = youtube_uploader.upload_video(
-                  meta['video_path'], meta['title'], meta['description'], category_id='22', 
+                  clean_video_path, meta['title'], meta['description'], category_id='22', 
                   keywords=meta['keywords'], token_file='token_shayari.pickle',
                   publish_at=publish_datetime
               )
@@ -133,7 +136,7 @@ jobs:
         # Note: Instagram Graph API does not natively support scheduling via basic access
         # To avoid spam blocks, we only upload the FIRST video immediately to Instagram.
         first_meta="${files[0]}"
-        vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'])" "$first_meta")
+        vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'].replace(chr(92), '/'))" "$first_meta")
         
         echo "Uploading immediate video to Instagram..."
         chmod +x scripts/temp_upload.sh
@@ -155,7 +158,7 @@ jobs:
         
         # Stage deletions to remove processed files from repo
         for meta_file in "${files[@]}"; do
-           v_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'])" "$meta_file")
+           v_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'].replace(chr(92), '/'))" "$meta_file")
            # We use standard rm, the next step will run git rm on deleted files
            rm -f "$meta_file" "$v_path"
         done
