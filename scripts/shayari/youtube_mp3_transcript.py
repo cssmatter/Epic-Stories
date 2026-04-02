@@ -638,20 +638,29 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     
     def process_url(target_url):
+        log.info(f"Resolving video for: {target_url}")
+        # 1. Resolve exact Video ID and Title first
         audio_p, vid_id, title = download_audio(target_url, output_dir, cookies=args.cookies, proxy=args.proxy)
+        
         song_folder = output_dir / safe_filename(title)
         song_folder.mkdir(parents=True, exist_ok=True)
         
+        # 2. Use the exact same ID for transcript
         transcript, _ = fetch_transcript(vid_id, title, song_folder)
-        if not transcript: raise ValueError("No transcript")
-        
+        if not transcript:
+            log.warning(f"No transcript found for {vid_id} ({title}). Cannot generate synced reels.")
+            return False # Non-fatal failure
+            
         ai_data = get_ai_reel_suggestions(transcript, title)
-        if not ai_data: raise ValueError("AI failed")
-        
+        if not ai_data:
+            log.warning(f"AI failed to generate suggestions for {title}.")
+            return False
+            
         bg_c, txt_c = _ensure_contrast(ai_data.get("background_color", "#000000"), ai_data.get("text_color", "#FFFFFF"))
         
         for clip in ai_data.get("clips", []):
             clip_num = clip.get("clip_number", 1)
+            # Pass original vid_id to ensure we are cutting the right audio
             vid_path = render_reel_video(clip, audio_p, song_folder, clip_num, bg_color=bg_c, text_color=txt_c)
             
             if vid_path:
@@ -695,17 +704,24 @@ def main():
             url = songs[0]  # Peek the first song
             log.info(f"\n--- Processing Auto Queue: {url} ({len(songs)} remaining) ---")
             try:
-                process_url(url)
-                # If successful, remove it and save
+                success = process_url(url)
+                
+                # We pop it regardless of success/fail to keep the queue moving
+                # (unless it was a network error, but for missing transcripts we skip)
                 songs.pop(0)
                 with open(json_path, "w", encoding="utf-8") as f:
                     json.dump(songs, f, indent=2, ensure_ascii=False)
+                
+                if not success:
+                    log.warning(f"Skipped {url} due to processing issues. Moving to next.")
                 
                 if songs:
                     log.info("Pausing for 10 seconds before next song...")
                     time.sleep(10)
             except Exception as e:
-                log.error(f"Failed to process {url}. Stopping queue to prevent infinite failure loops. Error: {e}")
+                log.error(f"Critical failure on {url}: {e}")
+                # For critical errors (lost auth, etc.), we stop. 
+                # For per-song errors, process_url already returns False.
                 sys.exit(1)
     else:
         if not args.url:

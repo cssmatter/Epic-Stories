@@ -85,73 +85,64 @@ jobs:
           import sys, json, youtube_uploader
           from datetime import datetime, timedelta, timezone
 
-          meta_files = sys.argv[1:]
-          if not meta_files:
-              print("No metadata files to process.")
+          if len(sys.argv) < 2:
+              print("No metadata file provided.")
               sys.exit(0)
               
-          for idx, meta_file in enumerate(meta_files):
-              print(f"\n=================================================")
-              print(f"Processing upload {idx+1} of {len(meta_files)}: {meta_file}")
-              print(f"=================================================")
+          meta_file = sys.argv[1]
+          print(f"\n[QUEUE] Processing the next reel: {meta_file}")
+          
+          with open(meta_file, 'r', encoding='utf-8') as f:
+              meta = json.load(f)
               
-              with open(meta_file, 'r', encoding='utf-8') as f:
-                  meta = json.load(f)
-                  
-              # Publish first immediately, Schedule rest 24h apart
-              publish_datetime = None
-              if idx > 0:
-                  # Calculate future date: current UTC + (days * 24h)
-                  future_date = datetime.now(timezone.utc) + timedelta(days=idx)
-                  publish_datetime = future_date.strftime("%Y-%m-%dT%H:%M:%S.000Z")
-                  print(f"Scheduling to YouTube at {publish_datetime}")
-              else:
-                  print("Publishing to YouTube IMMEDIATELY")
-                  
-              # Normalize Windows backslashes to Linux forward slashes
-              clean_video_path = meta['video_path'].replace('\\', '/')
-                  
-              raw_keywords = meta.get('keywords', ['ghazal', 'shayari'])
-              str_keywords = ",".join(raw_keywords) if isinstance(raw_keywords, list) else raw_keywords
-                  
-              vid_id = youtube_uploader.upload_video(
-                  clean_video_path, meta['title'], meta['description'], category_id='22', 
-                  keywords=str_keywords, token_file='token_shayari.pickle',
-                  publish_at=publish_datetime
-              )
-              print(f'YouTube Video ID: {vid_id}')
+          # Normalize Windows backslashes to Linux forward slashes
+          clean_video_path = meta['video_path'].replace('\\', '/')
+          
+          raw_keywords = meta.get('keywords', ['ghazal', 'shayari'])
+          str_keywords = ",".join(raw_keywords) if isinstance(raw_keywords, list) else raw_keywords
+          
+          print("Publishing to YouTube IMMEDIATELY")
+          vid_id = youtube_uploader.upload_video(
+              clean_video_path, meta['title'], meta['description'], category_id='22', 
+              keywords=str_keywords, token_file='token_shayari.pickle',
+              publish_at=None # Daily drip: Action runs daily, so all posts are immediate
+          )
+          print(f'YouTube Video ID: {vid_id}')
       run: |
-        # Collect all metadata files from the downloads directory (including subdirectories)
+        # Collect all metadata files (Daily Drip: We sort and pick ONLY the first one)
         shopt -s nullglob
-        files=(downloads/*/upload_metadata_*.json)
+        sorted_files=($(ls -v downloads/*/upload_metadata_*.json 2>/dev/null))
         
-        if [ ${#files[@]} -eq 0 ]; then
-           echo "No pre-generated metadata files found in downloads/. Skipping upload."
+        if [ ${#sorted_files[@]} -eq 0 ]; then
+           echo "Queue is empty. No pre-generated reels found in downloads/."
            exit 0
         fi
         
-        # Save the python uploader script
-        echo "$PY_UPLOAD_SCRIPT" > run_upload.py
+        first_meta="${sorted_files[0]}"
+        echo "Daily Queue: Picking $first_meta"
         
-        # Run YouTube processing logic
-        python run_upload.py "${files[@]}"
-        
-        # Note: Instagram Graph API does not natively support scheduling via basic access
-        # To avoid spam blocks, we only upload the FIRST video immediately to Instagram.
-        first_meta="${files[0]}"
+        # Resolve the video path early for both
         vid_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'].replace(chr(92), '/'))" "$first_meta")
         
-        echo "Uploading immediate video to Instagram..."
+        # 1. INSTAGRAM UPLOAD FIRST (Most fragile part)
+        echo "Uploading to Instagram..."
         chmod +x scripts/temp_upload.sh
         VIDEO_URL=$(./scripts/temp_upload.sh "$vid_path")
+        
         if [[ $VIDEO_URL == http* ]]; then
           echo "Public Video URL: $VIDEO_URL"
-          python instagram_graph_uploader.py "$VIDEO_URL" --metadata "$first_meta"
+          # Run instagram uploader. If it fails, the whole step fails.
+          python instagram_graph_uploader.py "$VIDEO_URL" --metadata "$first_meta" || exit 1
         else
-          echo "Failed to get public URL for Instagram! Response: $VIDEO_URL"
+          echo "::error::Failed to generate public video URL for Instagram. Response: $VIDEO_URL"
+          exit 1 # Stop here! YouTube won't happen and files won't be deleted.
         fi
         
-        # Clean up temp host release if it exists
+        # 2. YOUTUBE UPLOAD (Only if Instagram succeeded)
+        echo "$PY_UPLOAD_SCRIPT" > run_upload.py
+        python run_upload.py "$first_meta" || exit 1
+        
+        # 3. SUCCESS CLEANUP (Only if both platforms worked)
         if [ -f /tmp/github_release_tag.txt ]; then
           RELEASE_TAG=$(cat /tmp/github_release_tag.txt)
           chmod +x scripts/cleanup_release.sh
@@ -159,12 +150,9 @@ jobs:
           rm -f /tmp/github_release_tag.txt
         fi
         
-        # Stage deletions to remove processed files from repo
-        for meta_file in "${files[@]}"; do
-           v_path=$(python -c "import json, sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['video_path'].replace(chr(92), '/'))" "$meta_file")
-           # We use standard rm, the next step will run git rm on deleted files
-           rm -f "$meta_file" "$v_path"
-        done
+        # Delete the processed files
+        rm -f "$first_meta" "$vid_path"
+        echo "Finished processing $first_meta. Files removed from queue."
 
     - name: Commit cleanup (Remove uploaded videos from Queue)
       run: |
