@@ -1,0 +1,129 @@
+{
+  "image_style": "watercolor painting on paper",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:55",
+      "end_time": "01:17",
+      "reason": "Introduction to the heartbreak theme",
+      "lines": [
+        {
+          "time": "00:55",
+          "text": "दिल पे जख्म खाते हैं",
+          "image_prompt": "a watercolor painting of a person holding their heart with a crack in it"
+        },
+        {
+          "time": "01:00",
+          "text": "जान से गुजरते",
+          "image_prompt": "a watercolor painting of a person walking away from a fading silhouette"
+        },
+        {
+          "time": "01:02",
+          "text": "हैं",
+          "image_prompt": "a watercolor painting of a person looking back with a mix of sadness and longing"
+        },
+        {
+          "time": "01:04",
+          "text": "दिल पे जख्म खाते हैं",
+          "image_prompt": "a watercolor painting of a person with a bandaged heart"
+        },
+        {
+          "time": "01:08",
+          "text": "जान से गुजरते हैं",
+          "image_prompt": "a watercolor painting of a person disappearing into the distance"
+        },
+        {
+          "time": "01:13",
+          "text": "दिल",
+          "image_prompt": "a watercolor painting of a person touching their heart"
+        },
+        {
+          "time": "01:17",
+          "text": "पे जख्म खाते चांद से गुजरते हैं।",
+          "image_prompt": "a watercolor painting of a person standing under a full moon with a subtle glow"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:02",
+      "end_time": "02:33",
+      "reason": "Contrast between trust and heartbreak",
+      "lines": [
+        {
+          "time": "02:02",
+          "text": "ऐतबार बढ़ता है",
+          "image_prompt": "a watercolor painting of a person building a bridge with stones"
+        },
+        {
+          "time": "02:06",
+          "text": "और भी मोहब्बत का",
+          "image_prompt": "a watercolor painting of a person holding a blooming flower"
+        },
+        {
+          "time": "02:11",
+          "text": "एतबार",
+          "image_prompt": "a watercolor painting of a person standing on a mountain peak"
+        },
+        {
+          "time": "02:15",
+          "text": "बढ़ता है",
+          "image_prompt": "a watercolor painting of a person climbing a staircase"
+        },
+        {
+          "time": "02:19",
+          "text": "और भी मोहब्बत का",
+          "image_prompt": "a watercolor painting of a person surrounded by fluttering birds"
+        },
+        {
+          "time": "02:24",
+          "text": "जब वो अजनबी बनकर",
+          "image_prompt": "a watercolor painting of a person wearing a mask"
+        },
+        {
+          "time": "02:28",
+          "text": "पास से गुजरते हैं।",
+          "image_prompt": "a watercolor painting of a person passing by a stranger on a busy street"
+        },
+        {
+          "time": "02:33",
+          "text": "दिल पे जख्म खाते हैं।",
+          "image_prompt": "a watercolor painting of a person holding a broken heart"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "03:13",
+      "end_time": "03:31",
+      "reason": "Longing and memories",
+      "lines": [
+        {
+          "time": "03:13",
+          "text": "ए गम जमाना हम",
+          "image_prompt": "a watercolor painting of a person sitting on a couch with old photographs"
+        },
+        {
+          "time": "03:17",
+          "text": "तुझको याद करते हैं।",
+          "image_prompt": "a watercolor painting of a person looking at a fading polaroid"
+        },
+        {
+          "time": "03:22",
+          "text": "दिल में खाते हैं।",
+          "image_prompt": "a watercolor painting of a person with a thought bubble of memories"
+        },
+        {
+          "time": "03:26",
+          "text": "जान से गुजरते हैं।",
+          "image_prompt": "a watercolor painting of a person walking through a field of memories"
+        },
+        {
+          "time": "03:31",
+          "text": "दिल पे जख्म खाते हैं।",
+          "image_prompt": "a watercolor painting of a person holding a heart with a glowing scar"
+        }
+      ]
+    }
+  ]
+}

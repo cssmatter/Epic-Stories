@@ -1,0 +1,41 @@
+{
+  "youtube_title": "Tum Itna Jo Muskura Rahe Ho",
+  "youtube_description": "Tum Itna Jo Muskura Rahe Ho by Jagjit Singh from Arth 1983. Full lyrics with timestamps: \n[00:22] तुम इतना जो मुस्कुरा रहे हो \n[00:33] तुम इतना जो मुस्कुरा रहे हो क्या गम है \n[01:21] आंखों में नमी हसी लबों पर \n[01:31] आंखों में नमी हसी लबों पर क्या हाल है क्या दिखा \n[02:01] तुम इतना मुस्कुरा रहे हो \n[02:20] बन जाएंगे जहर पीते पीते \n[03:20] जिन जख्मों को वक्त भर चला \n[04:09] रेखाओं का खेल है \n[05:08] महबूब मेरे \nSinger: Jagjit Singh, Composer: Jagjit Singh, Film: Arth 1983. #JagjitSingh #Arth1983 #TumItnaJoMuskuraRaheHo #GhazalSong #ShabanaAzmi #HindiSongs #Ghazals #Bollywood #Music #IndianClassics #JagjitSinghSongs #ArthMovie #OldIsGold #EvergreenSongs #HindiGhazals #BollywoodClassics",
+  "image_style": "Fine ink crosshatching and stippling technique, subtle watercolor wash over etching, aged cream/parchment paper background, small watercolor vignette environment at subject's feet, muted warm earthy palette: sepia, amber, ochre, olive, soft faded atmospheric background, museum natural history plate aesthetic",
+  "style_preset": "RDR2 Zoological Compendium",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:22",
+      "end_time": "00:55",
+      "duration_seconds": 33,
+      "reason": "This clip is emotionally strong as it introduces the theme of hiding pain behind a smile. The lyrics 'तुम इतना जो मुस्कुरा रहे हो क्या गम है जिसको छुपा रहे हो' evoke a sense of curiosity and empathy.",
+      "lines": [
+        {
+          "time": "00:22",
+          "text": "तुम इतना जो मुस्कुरा रहे हो",
+          "emotion": "Curiosity",
+          "image_prompt": "A close-up of a person's face with a subtle smile, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark, with a faint image of a tear rolling down their cheek in the background"
+        },
+        {
+          "time": "00:33",
+          "text": "तुम इतना जो मुस्कुरा रहे हो क्या गम है जिसको छुपा रहे हो",
+          "emotion": "Empathy",
+          "image_prompt": "A person hiding their face behind a mask, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark, with a subtle hint of sadness in their eyes"
+        },
+        {
+          "time": "00:40",
+          "text": "जिसको छुपा रहे हो क्या गम है जिसको छुपा",
+          "emotion": "Curiosity",
+          "image_prompt": "inspired by the lyric 'जिसको छुपा रहे हो क्या गम है जिसको छुपा', showing Curiosity emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "00:48",
+          "text": "रहे हो तुम इतना जो मुस्कुरा रहे हो",
+          "emotion": "Curiosity",
+          "image_prompt": "inspired by the lyric 'रहे हो तुम इतना जो मुस्कुरा रहे हो', showing Curiosity emotion, expressive pose, symbolic scene from the song context"
+        }
+      ]
+    }
+  ]
+}

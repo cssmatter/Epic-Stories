@@ -1,0 +1,251 @@
+{
+  "YotubeTitle": "Aati Kya Khandala | Ghulam | Aamir Khan | Rani Mukherjee | Alka Yagnik",
+  "yotubeDescription": "Aati Kya Khandala song from Ghulam movie, starring Aamir Khan and Rani Mukherjee. Sung by Alka Yagnik. #AatiKyaKhandala #Ghulam #AamirKhan #RaniMukherjee #AlkaYagnik",
+  "image_style": "Indian-themed, vibrant, and playful visuals with an Indian man and woman in various fun and romantic scenarios",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:09",
+      "end_time": "00:59",
+      "reason": "Catchy and upbeat intro with a fun conversation between the two leads",
+      "lines": [
+        {
+          "time": "00:09",
+          "text": "Aye Kya Bolti Tu",
+          "image_prompt": "An Indian man looking curious and asking a question to an Indian woman, with a colorful background"
+        },
+        {
+          "time": "00:16",
+          "text": "Aye Kya Mein Bolun",
+          "image_prompt": "An Indian woman responding with a smile, with a fun and playful gesture"
+        },
+        {
+          "time": "00:21",
+          "text": "Sun",
+          "image_prompt": "An Indian man leaning in to listen, with a focused expression"
+        },
+        {
+          "time": "00:22",
+          "text": "Suna",
+          "image_prompt": "An Indian woman whispering, with a secretive and playful tone"
+        },
+        {
+          "time": "00:24",
+          "text": "Aati Kya Khandala",
+          "image_prompt": "An Indian man and woman standing in front of a scenic Khandala backdrop, with a excited and adventurous vibe"
+        },
+        {
+          "time": "00:27",
+          "text": "Kya Karoon Aake Mein Khandala",
+          "image_prompt": "An Indian man looking puzzled, with a thought bubble above his head"
+        },
+        {
+          "time": "00:31",
+          "text": "Ghoomenge Phirenge Nachenge Gaaenge",
+          "image_prompt": "An Indian man and woman dancing and singing together, with a lively and carefree atmosphere"
+        },
+        {
+          "time": "00:34",
+          "text": "Aish Karenge Aur Kya",
+          "image_prompt": "An Indian man and woman enjoying a fun activity together, with a joyful and playful tone"
+        },
+        {
+          "time": "00:37",
+          "text": "Aye Kya Bolti Tu",
+          "image_prompt": "An Indian woman speaking, with a colorful and vibrant background"
+        },
+        {
+          "time": "00:42",
+          "text": "Aye Kya Mein Bolun",
+          "image_prompt": "An Indian man responding, with a fun and playful gesture"
+        },
+        {
+          "time": "00:46",
+          "text": "Sun",
+          "image_prompt": "An Indian woman leaning in to listen, with a focused expression"
+        },
+        {
+          "time": "00:48",
+          "text": "Suna",
+          "image_prompt": "An Indian man whispering, with a secretive and playful tone"
+        },
+        {
+          "time": "00:49",
+          "text": "Aati Kya Khandala",
+          "image_prompt": "An Indian man and woman standing in front of a scenic Khandala backdrop, with a excited and adventurous vibe"
+        },
+        {
+          "time": "00:52",
+          "text": "Kya Karoon Aake Mein Khandala",
+          "image_prompt": "An Indian woman looking puzzled, with a thought bubble above her head"
+        },
+        {
+          "time": "00:56",
+          "text": "Arey Ghoomenge Phirenge Nachenge Gaaenge",
+          "image_prompt": "An Indian man and woman dancing and singing together, with a lively and carefree atmosphere"
+        },
+        {
+          "time": "00:59",
+          "text": "Aish Karenge Aur Kya",
+          "image_prompt": "An Indian man and woman enjoying a fun activity together, with a joyful and playful tone"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "01:31",
+      "end_time": "02:06",
+      "reason": "Fun and playful conversation with a romantic tone",
+      "lines": [
+        {
+          "time": "01:31",
+          "text": "Barsaat Ka Season Hai Khandala Jaake Kya Karna",
+          "image_prompt": "An Indian man and woman standing under an umbrella, with a rainy and romantic backdrop"
+        },
+        {
+          "time": "01:37",
+          "text": "Barsaat Ke Season Mein Hi To Mazaa Hai Meri Maina",
+          "image_prompt": "An Indian woman twirling in the rain, with a carefree and joyful expression"
+        },
+        {
+          "time": "01:42",
+          "text": "Bheegungi Mein Sardi Khaansi Ho Jayegi Mujhko",
+          "image_prompt": "An Indian man worrying about the woman, with a concerned expression"
+        },
+        {
+          "time": "01:47",
+          "text": "Chhata Leke Jayenge Paagal Samjhi Kya Mujhko",
+          "image_prompt": "An Indian woman laughing and teasing the man, with a playful and flirtatious tone"
+        },
+        {
+          "time": "01:51",
+          "text": "Kya Karoon Samajh Mein Aaye Na",
+          "image_prompt": "An Indian man looking puzzled, with a thought bubble above his head"
+        },
+        {
+          "time": "01:57",
+          "text": "Kya Kahoon Tujhse Mein Jaanu Na",
+          "image_prompt": "An Indian woman speaking, with a colorful and vibrant background"
+        },
+        {
+          "time": "02:01",
+          "text": "Arey Itna Tu Kyun Soche",
+          "image_prompt": "An Indian man and woman standing together, with a romantic and introspective atmosphere"
+        },
+        {
+          "time": "02:03",
+          "text": "Main Aage Tu Peeche",
+          "image_prompt": "An Indian man and woman walking together, with a fun and playful tone"
+        },
+        {
+          "time": "02:04",
+          "text": "Bas Ab Nikalte Hain Aur Kya",
+          "image_prompt": "An Indian man and woman enjoying a fun activity together, with a joyful and playful tone"
+        },
+        {
+          "time": "02:06",
+          "text": "Aye Kya Bolti Tu",
+          "image_prompt": "An Indian woman speaking, with a colorful and vibrant background"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "02:41",
+      "end_time": "03:37",
+      "reason": "Fun and adventurous scenarios with a romantic tone",
+      "lines": [
+        {
+          "time": "02:41",
+          "text": "Lonavle Mein Chikki Khaenge",
+          "image_prompt": "An Indian man and woman eating chikki, with a fun and playful tone"
+        },
+        {
+          "time": "02:44",
+          "text": "Waterfall Pe Jayenge",
+          "image_prompt": "An Indian man and woman standing in front of a waterfall, with a scenic and adventurous backdrop"
+        },
+        {
+          "time": "02:47",
+          "text": "Khandala Ke Ghat Ke Ooper",
+          "image_prompt": "An Indian man and woman standing on a hill, with a panoramic view of Khandala"
+        },
+        {
+          "time": "02:49",
+          "text": "Photu Kheechke Aaenge",
+          "image_prompt": "An Indian man and woman taking a photo together, with a fun and playful tone"
+        },
+        {
+          "time": "02:52",
+          "text": "Phone Laga Tu Apne Dil Ko Zara",
+          "image_prompt": "An Indian man speaking on the phone, with a romantic and introspective atmosphere"
+        },
+        {
+          "time": "02:57",
+          "text": "Pooch Le Aakhir Hai Kya Maajra",
+          "image_prompt": "An Indian woman asking a question, with a curious and playful expression"
+        },
+        {
+          "time": "03:01",
+          "text": "Arey Pal Mein Phisalta Hai Pal Mein Sambhalta Hai",
+          "image_prompt": "An Indian man and woman standing together, with a romantic and introspective atmosphere"
+        },
+        {
+          "time": "03:04",
+          "text": "Confuse Karta Hai Bas Kya",
+          "image_prompt": "An Indian man looking puzzled, with a thought bubble above his head"
+        },
+        {
+          "time": "03:07",
+          "text": "Aye Kya Bolti Tu",
+          "image_prompt": "An Indian woman speaking, with a colorful and vibrant background"
+        },
+        {
+          "time": "03:12",
+          "text": "Aye Kya Mein Bolun",
+          "image_prompt": "An Indian man responding, with a fun and playful gesture"
+        },
+        {
+          "time": "03:17",
+          "text": "Sun",
+          "image_prompt": "An Indian woman leaning in to listen, with a focused expression"
+        },
+        {
+          "time": "03:17",
+          "text": "Suna",
+          "image_prompt": "An Indian man whispering, with a secretive and playful tone"
+        },
+        {
+          "time": "03:19",
+          "text": "Aati Kya Khandala",
+          "image_prompt": "An Indian man and woman standing in front of a scenic Khandala backdrop, with a excited and adventurous vibe"
+        },
+        {
+          "time": "03:21",
+          "text": "Arey Kya Karoon Aake Mein Khandala",
+          "image_prompt": "An Indian woman looking puzzled, with a thought bubble above her head"
+        },
+        {
+          "time": "03:27",
+          "text": "Ghoomenge Phirenge Nachenge Gaaenge",
+          "image_prompt": "An Indian man and woman dancing and singing together, with a lively and carefree atmosphere"
+        },
+        {
+          "time": "03:29",
+          "text": "Aish Karenge Aur Kya",
+          "image_prompt": "An Indian man and woman enjoying a fun activity together, with a joyful and playful tone"
+        },
+        {
+          "time": "03:31",
+          "text": "Aye Kya Bolti Tu",
+          "image_prompt": "An Indian woman speaking, with a colorful and vibrant background"
+        },
+        {
+          "time": "03:37",
+          "text": "Aye Kya Mein Bolun",
+          "image_prompt": "An Indian man responding, with a fun and playful gesture"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "youtube_title": "Barsaat Ke Din Aaye",
+  "youtube_description": "Barsaat Ke Din Aaye | Barsaat (2005) | Bobby Deol | Priyanka Chopra | Rain Song | Filmigaane\n\nTranscript:\n[00:00] बरसात के दिन आए।\n[00:02] मुलाकात के दिन आए।\n[00:20] बीताियों के शरारे पीछे हैं। ये सावन की रिमझिम झड़ी है।\n[00:27] कदम बेखुदी में बहकने लगे हैं। ये मदहोशियों की घड़ी है।\n[00:31] बरसात के दिन आए।\n[00:34] मुलाकात के दिन आए।\n[00:39] हम सोच में थे जिनके उस रात के दिन आए\n[00:49] बरसात के दिन आए\n[01:03] जलते रहे हम ख्यालों खिलौ से सही हमने\n[01:06] बरसों जुदाई छमम छमम बरसती सुहानी घटा ने\n[01:11] अजब सी अगें लगाई बरसात के दिन आए\n[01:14] मुलाकात के दिन आए\n[01:18] हम सोच में थे जिनके उस रात के दिन आए\n[01:32] बरसात के दिन आए\n[01:37] बरसात रात के दिन आए\n[02:10] ना तुम होश में हो ना हम होश में हैं बहक जाए\n[02:16] ना तुम संभालो हमें गुजारिश यही है\n[02:22] तमन्ना की सनम बाजू में उठा लो हमें\n[02:32] जज्बा बात के दिन आए\n[02:37] मुलाकात के दिन आए\n[02:42] हम सोच में थे जिनके उस रात के दिन आए\n[02:51] बरसात के दिन आए\n[02:53] बरसात के दिन आए\n[03:10] दीवानी सांसों में है दीवाना दीवाना\n[03:22] समा है दीवाना जरा सी चाहत भी बेईमान है\n[03:34] धुआ सा उठे है कहीं जिस्म से कहो बाद\n[03:42] बरसते रहे सहा जाए ना ये जुदाई का गम भला\n[03:49] कब तलक हम तरसते रहे बारात के दिन आए\n[03:55] मुलाकात रात के दिन आए\n[04:03] हम सोच में थे जिनके उस रात के दिन आए\n[04:08] बरसात के दिन आए\n[04:14] बरसात के दिन आए\n\nSinger: \nComposer: \n\n#BarsaatKeDinAaye #Barsaat #BobbyDeol #PriyankaChopra #RainSong #Filmigaane #Bollywood #HindiSong #RainyDay #LoveSong #RomanticSong #IndianMusic",
+  "image_style": "Fine ink crosshatching and stippling technique, subtle watercolor wash over etching, aged cream/parchment paper background, single centered portrait subject, small watercolor vignette environment at subject's feet, muted warm earthy palette: sepia, amber, ochre, olive, soft faded atmospheric background, museum natural history plate aesthetic",
+  "style_preset": "RDR2 Zoological Compendium",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:20",
+      "end_time": "00:31",
+      "duration_seconds": 11,
+      "reason": "Emotionally strong and catchy, the lyrics describe the arrival of the rainy season and the excitement it brings.",
+      "lines": [
+        {
+          "time": "00:20",
+          "text": "बीताियों के शरारे पीछे हैं। ये सावन की रिमझिम झड़ी है।",
+          "emotion": "Nostalgic and romantic",
+          "image_prompt": "A couple standing together under an umbrella, fine ink crosshatching and stippling technique, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic"
+        },
+        {
+          "time": "00:27",
+          "text": "कदम बेखुदी में बहकने लगे हैं। ये मदहोशियों की घड़ी है।",
+          "emotion": "Dreamy and romantic",
+          "image_prompt": "A person lost in thought, with raindrops on their face, fine ink crosshatching and stippling technique, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:10",
+      "end_time": "02:22",
+      "duration_seconds": 12,
+      "reason": "Viral-worthy and catchy, the lyrics describe the excitement of being in love.",
+      "lines": [
+        {
+          "time": "02:10",
+          "text": "ना तुम होश में हो ना हम होश में हैं बहक जाए",
+          "emotion": "Romantic and playful",
+          "image_prompt": "A couple dancing in the rain, fine ink crosshatching and stippling technique, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic"
+        },
+        {
+          "time": "02:16",
+          "text": "ना तुम संभालो हमें गुजारिश यही है",
+          "emotion": "Romantic and intimate",
+          "image_prompt": "A person holding their loved one, fine ink crosshatching and stippling technique, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "03:10",
+      "end_time": "03:22",
+      "duration_seconds": 12,
+      "reason": "Emotionally strong and catchy, the lyrics describe the feeling of being in love.",
+      "lines": [
+        {
+          "time": "03:10",
+          "text": "दीवानी सांसों में है दीवाना दीवाना",
+          "emotion": "Romantic and passionate",
+          "image_prompt": "A person with their eyes closed, lost in thought, fine ink crosshatching and stippling technique, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic"
+        },
+        {
+          "time": "03:22",
+          "text": "समा है दीवाना जरा सी चाहत भी बेईमान है",
+          "emotion": "Romantic and intimate",
+          "image_prompt": "A couple embracing, fine ink crosshatching and stippling technique, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic"
+        }
+      ]
+    }
+  ]
+}

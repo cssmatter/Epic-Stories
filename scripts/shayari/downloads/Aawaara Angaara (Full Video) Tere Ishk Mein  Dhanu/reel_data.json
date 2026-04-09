@@ -1,0 +1,109 @@
+{
+  "image_style": "watercolor painting on paper",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:39",
+      "end_time": "01:14",
+      "reason": "Emotional and catchy introduction to the song's theme",
+      "lines": [
+        {
+          "time": "00:39",
+          "text": "तेरी कायनात मेरे खाली हाथ और तारतार सपने",
+          "image_prompt": "a watercolor painting of a person standing alone in a vast, empty landscape with a few scattered stars in the sky"
+        },
+        {
+          "time": "00:46",
+          "text": "गए जख्म जोग मेरे",
+          "image_prompt": "a watercolor painting of a person with a wounded heart, surrounded by fading scars"
+        },
+        {
+          "time": "00:49",
+          "text": "सांस सांस सांसे तपने",
+          "image_prompt": "a watercolor painting of a person's face with flames rising from their mouth as they breathe"
+        },
+        {
+          "time": "00:52",
+          "text": "तेरी कायनात",
+          "image_prompt": "a watercolor painting of a person looking up at a vast, starry sky"
+        },
+        {
+          "time": "00:58",
+          "text": "दर्दों से चूर गम का गुरूर कहूं क्या",
+          "image_prompt": "a watercolor painting of a person surrounded by dark, ominous clouds with a few tears falling from their eyes"
+        },
+        {
+          "time": "01:02",
+          "text": "मैं हाल अपने आवारा",
+          "image_prompt": "a watercolor painting of a person walking alone on a deserted road with a suitcase in hand"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:12",
+      "end_time": "02:50",
+      "reason": "Catchy and emotional melody with meaningful lyrics",
+      "lines": [
+        {
+          "time": "02:12",
+          "text": "कोई उधारी है सीने पे भारी है",
+          "image_prompt": "a watercolor painting of a person with a heavy weight on their chest, surrounded by chains and locks"
+        },
+        {
+          "time": "02:16",
+          "text": "पत्थर सर है या दिल है",
+          "image_prompt": "a watercolor painting of a person with a stone-like face, but with a few cracks revealing a heart inside"
+        },
+        {
+          "time": "02:20",
+          "text": "मैं ही अकेला हूं मैं ही तो मेरा हूं ये कैसी",
+          "image_prompt": "a watercolor painting of a person standing alone in a crowded room, looking confused and lost"
+        },
+        {
+          "time": "02:23",
+          "text": "महफिल है रूठे",
+          "image_prompt": "a watercolor painting of a person sitting alone at a table, surrounded by empty chairs and untouched drinks"
+        },
+        {
+          "time": "02:32",
+          "text": "तू है निगाहों में लवा है आंखों में बस सर्द शाम गहरे",
+          "image_prompt": "a watercolor painting of a person looking into the eyes of someone they love, with a warm glow surrounding them"
+        },
+        {
+          "time": "02:38",
+          "text": "आवारा",
+          "image_prompt": "a watercolor painting of a person walking alone on a deserted road, with a few stars shining in the sky"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "03:40",
+      "end_time": "04:14",
+      "reason": "Emotional and meaningful lyrics with a soaring melody",
+      "lines": [
+        {
+          "time": "03:40",
+          "text": "मेरा इम्तिहान तू जो ले रहा है अब ना",
+          "image_prompt": "a watercolor painting of a person standing in front of a judge's desk, with a few papers and pens scattered around"
+        },
+        {
+          "time": "03:44",
+          "text": "रियायतें कर मैंने इश्क सीखा मैंने प्यार सीखा",
+          "image_prompt": "a watercolor painting of a person holding a few books and papers, with a few flowers and hearts surrounding them"
+        },
+        {
+          "time": "03:49",
+          "text": "तू चाहे नफरतें कर मैंने दिल दिया है",
+          "image_prompt": "a watercolor painting of a person offering their heart to someone, with a few tears falling from their eyes"
+        },
+        {
+          "time": "03:54",
+          "text": "मैंने दुख लिया है तू सौदा ईमान",
+          "image_prompt": "a watercolor painting of a person standing in front of a scales, with a few weights and measures surrounding them"
+        }
+      ]
+    }
+  ]
+}

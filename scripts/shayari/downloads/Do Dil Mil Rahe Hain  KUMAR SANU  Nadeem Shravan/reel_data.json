@@ -1,0 +1,96 @@
+{
+  "YotubeTitle": "Do Dil Mil Rahe Hain | KUMAR SANU | Nadeem Shravan | Pardes | 1997",
+  "yotubeDescription": "Do Dil Mil Rahe Hain song from Pardes movie, sung by Kumar Sanu, music by Nadeem Shravan. #DoDilMilRaheHain #KumarSanu #NadeemShravan #Pardes #Bollywood",
+  "image_style": "Indian-themed, vibrant and colorful, with an Indian man or woman in traditional attire, expressing emotions through dance or romantic gestures",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:24",
+      "end_time": "01:20",
+      "reason": "Emotional and catchy lyrics, with a mix of romantic and playful tone",
+      "lines": [
+        {
+          "time": "00:24",
+          "text": "मैं",
+          "image_prompt": "Indian man looking introspective, with a hint of a smile, standing in a beautiful garden"
+        },
+        {
+          "time": "00:25",
+          "text": "दो दिल मिल रहे हैं",
+          "image_prompt": "Indian couple embracing, with a soft focus and warm lighting, conveying love and affection"
+        },
+        {
+          "time": "00:30",
+          "text": "दो दिल मिल रहे हैं",
+          "image_prompt": "Indian couple dancing together, with colorful outfits and joyful expressions, highlighting the happiness of being in love"
+        },
+        {
+          "time": "00:34",
+          "text": "मगर चुपके-चुपके",
+          "image_prompt": "Indian couple sharing a secret, with a whisper and a giggle, conveying the excitement of a new love"
+        },
+        {
+          "time": "01:02",
+          "text": "छुपके छुपके",
+          "image_prompt": "Indian couple hiding behind a tree or a curtain, with a playful and mischievous expression, highlighting the thrill of a secret love"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "01:31",
+      "end_time": "02:14",
+      "reason": "Soulful and emotional lyrics, with a focus on the longing and yearning of love",
+      "lines": [
+        {
+          "time": "01:31",
+          "text": "कि सांसो में बड़ी बेकरारी",
+          "image_prompt": "Indian woman sitting by a window, looking out at the moon, with a contemplative and dreamy expression, conveying the longing for love"
+        },
+        {
+          "time": "01:35",
+          "text": "ईएस आंखों में कहीं रथ",
+          "image_prompt": "Indian man looking into the eyes of his loved one, with a deep and intense gaze, highlighting the connection and love between them"
+        },
+        {
+          "time": "01:42",
+          "text": "कभी कहीं लग जाए दिल",
+          "image_prompt": "Indian couple holding hands, with a soft focus and warm lighting, conveying the comfort and security of being in love"
+        },
+        {
+          "time": "01:52",
+          "text": "अपना दिल मैं जरा गमलों",
+          "image_prompt": "Indian man sitting alone, looking at a photo or a memory, with a nostalgic and melancholic expression, highlighting the pain of lost love"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "02:38",
+      "end_time": "03:25",
+      "reason": "Catchy and upbeat lyrics, with a focus on the excitement and joy of love",
+      "lines": [
+        {
+          "time": "02:38",
+          "text": "जैसे कोई पाथ नही",
+          "image_prompt": "Indian couple walking together, hand in hand, with a bright and colorful background, conveying the happiness and freedom of being in love"
+        },
+        {
+          "time": "02:48",
+          "text": "आंच सब कुछ नजर आ रहा है",
+          "image_prompt": "Indian couple looking into each other's eyes, with a deep and intense gaze, highlighting the connection and love between them"
+        },
+        {
+          "time": "02:58",
+          "text": "होंठों पर है हम शुभ मगर बातें कर रही है",
+          "image_prompt": "Indian couple talking and laughing together, with a playful and flirtatious expression, conveying the excitement and joy of being in love"
+        },
+        {
+          "time": "03:14",
+          "text": "नजर",
+          "image_prompt": "Indian woman looking at her loved one, with a soft focus and warm lighting, conveying the love and adoration in her eyes"
+        }
+      ]
+    }
+  ]
+}

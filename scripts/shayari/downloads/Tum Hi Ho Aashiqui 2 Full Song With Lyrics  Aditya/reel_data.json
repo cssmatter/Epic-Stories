@@ -1,0 +1,125 @@
+{
+  "youtube_title": "Tum Hi Ho - Aashiqui 2",
+  "youtube_description": "Full lyrics with timestamps + singer/composer credits + 25 relevant Hindi and English hashtags. \nTum Hi Ho song from Aashiqui 2 movie, sung by Arijit Singh, starring Aditya Roy Kapur and Shraddha Kapoor. \n#TumHiHo #Aashiqui2 #ArijitSingh #AdityaRoyKapur #ShraddhaKapoor #Bollywood #HindiSongs #LoveSongs #RomanticSongs #Aashiqui2Songs #TumHiHoSong #ArijitSinghSongs",
+  "image_style": "19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching",
+  "style_preset": "RDR2 Zoological Compendium",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:10",
+      "end_time": "00:36",
+      "duration_seconds": 26,
+      "reason": "This clip is emotionally strong because it introduces the theme of longing and separation. The lyrics 'हम तेरे बिन अब रह नहीं सकते। तेरे बिना क्या वजूद मेरा' convey a sense of desperation and yearning.",
+      "lines": [
+        {
+          "time": "00:10",
+          "text": "हम तेरे बिन अब रह नहीं सकते। तेरे बिना",
+          "emotion": "longing",
+          "image_prompt": "A lone bird perched on a barren tree branch, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:17",
+          "text": "क्या वजूद मेरा",
+          "emotion": "desperation",
+          "image_prompt": "A close-up of a wilting flower, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:25",
+          "text": "हम तेरे बिन अब रह नहीं सकते तेरे बिना",
+          "emotion": "yearning",
+          "image_prompt": "A pair of birds flying together, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:32",
+          "text": "क्या वजूद मेरा",
+          "emotion": "longing",
+          "image_prompt": "A solitary figure standing on a cliff, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "01:29",
+      "end_time": "01:51",
+      "duration_seconds": 22,
+      "reason": "This clip is virally strong because it features a catchy and romantic melody. The lyrics 'तेरा मेरा रिश्ता है कैसा एक पल दूर गवारा नहीं' convey a sense of intimacy and closeness.",
+      "lines": [
+        {
+          "time": "01:29",
+          "text": "तेरा मेरा रिश्ता है कैसा एक पल दूर गवारा",
+          "emotion": "intimacy",
+          "image_prompt": "A pair of intertwined trees, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:38",
+          "text": "नहीं",
+          "emotion": "closeness",
+          "image_prompt": "A close-up of a pair of eyes, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:39",
+          "text": "तेरे लिए हर रोज है जीते",
+          "emotion": "devotion",
+          "image_prompt": "A figure kneeling in prayer, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:45",
+          "text": "तुझको दिया मेरा वक्त सभी कोई लम्हा मेरा",
+          "emotion": "sacrifice",
+          "image_prompt": "A pair of hands offering a gift, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:51",
+          "text": "ना हो तेरे बिना हर सांस पे नाम तेरा",
+          "emotion": "longing",
+          "image_prompt": "A solitary figure standing on a mountain peak, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "02:52",
+      "end_time": "03:20",
+      "duration_seconds": 28,
+      "reason": "This clip is emotionally strong because it features a sense of surrender and devotion. The lyrics 'तेरे लिए ही जिया मैं खुद को जो यूं दे दिया है तेरी वफा ने मुझको संभाला' convey a sense of trust and faith.",
+      "lines": [
+        {
+          "time": "02:52",
+          "text": "तेरे लिए",
+          "emotion": "devotion",
+          "image_prompt": "A figure standing in front of a altar, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:55",
+          "text": "ही जिया मैं खुद को जो यूं",
+          "emotion": "surrender",
+          "image_prompt": "A pair of wings spread wide, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:00",
+          "text": "दे दिया है तेरी वफा ने मुझको संभाला",
+          "emotion": "trust",
+          "image_prompt": "A pair of hands holding a delicate flower, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:08",
+          "text": "सारे गमों को दिल से निकाला।",
+          "emotion": "relief",
+          "image_prompt": "A figure standing in a sunny meadow, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:13",
+          "text": "तेरे साथ मेरा है नसीब जुड़ा तुझे पाके",
+          "emotion": "fate",
+          "image_prompt": "A pair of stars aligned in the sky, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:20",
+          "text": "अधूरा ना रहा।",
+          "emotion": "completion",
+          "image_prompt": "A pair of puzzle pieces fitting together, 19th century zoological engraving style, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    }
+  ]
+}

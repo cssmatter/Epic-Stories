@@ -167,6 +167,14 @@ jobs:
         if git diff --staged --quiet; then
           echo "No files were deleted/processed."
         else
+          # Handle potential race conditions by pulling before push
+          # We use the same pattern as other workflows for consistency
+          git stash
+          git pull --rebase origin main
+          git stash pop
+          
+          # Re-add and commit
+          git add -u downloads/
           git commit -m "chore: remove published generated reels [skip ci]"
           git push
         fi

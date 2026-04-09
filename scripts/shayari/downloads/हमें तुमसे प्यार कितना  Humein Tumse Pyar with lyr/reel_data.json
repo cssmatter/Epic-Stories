@@ -1,0 +1,191 @@
+{
+  "YotubeTitle": "हमें तुमसे प्यार कितना | Humein Tumse Pyar with lyrics | Kudrat | Rajesh Khanna | Hema Malini",
+  "yotubeDescription": "हमें तुमसे प्यार कितना यह हम नहीं जानते मगर जी नहीं सकते तुम्हारे बिना #HumeinTumsePyar #Kudrat #RajeshKhanna #HemaMalini",
+  "image_style": "Indian couple in a romantic setting with a mix of traditional and modern outfits, surrounded by flowers and soft lighting",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:33",
+      "end_time": "01:15",
+      "reason": "Introduction to the song's theme of love and longing",
+      "lines": [
+        {
+          "time": "00:33",
+          "text": "हमें तुमसे प्यार",
+          "image_prompt": "An Indian man looking longingly at his partner, with a soft focus on the woman's face"
+        },
+        {
+          "time": "00:38",
+          "text": "कितना यह हम",
+          "image_prompt": "A close-up of the man's face, with a subtle expression of love and uncertainty"
+        },
+        {
+          "time": "00:41",
+          "text": "नहीं",
+          "image_prompt": "A brief shot of the couple's hands touching, symbolizing their connection"
+        },
+        {
+          "time": "00:44",
+          "text": "जानते मगर जी नहीं",
+          "image_prompt": "The couple walking together, with a blurred background to emphasize their bond"
+        },
+        {
+          "time": "00:50",
+          "text": "सकते तुम्हारे",
+          "image_prompt": "A romantic dinner setup, with the couple gazing into each other's eyes"
+        },
+        {
+          "time": "00:55",
+          "text": "बिना हमें तुमसे प्यार कितना",
+          "image_prompt": "The man singing, with a guitar in hand, surrounded by candles and flowers"
+        },
+        {
+          "time": "01:00",
+          "text": "ये हम नहीं",
+          "image_prompt": "A shot of the couple's silhouettes, with a beautiful sunset in the background"
+        },
+        {
+          "time": "01:03",
+          "text": "जानते मगर जी नहीं",
+          "image_prompt": "The woman looking at the man, with a mix of love and sadness in her eyes"
+        },
+        {
+          "time": "01:06",
+          "text": "सकते तुम्हारे",
+          "image_prompt": "The couple embracing, with a soft focus on their faces"
+        },
+        {
+          "time": "01:10",
+          "text": "बिना हमें तुमसे प्यार कितना",
+          "image_prompt": "A shot of the couple's hands intertwined, with a beautiful garden in the background"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "01:46",
+      "end_time": "02:28",
+      "reason": "Expression of the pain of separation",
+      "lines": [
+        {
+          "time": "01:46",
+          "text": "सुना गम",
+          "image_prompt": "An Indian woman sitting alone, with a sad expression, surrounded by memories of her partner"
+        },
+        {
+          "time": "01:48",
+          "text": "जुदाई का उठाते हैं",
+          "image_prompt": "A shot of the couple's photos, with a clock ticking in the background, symbolizing the passage of time"
+        },
+        {
+          "time": "01:53",
+          "text": "लोग जाने",
+          "image_prompt": "The woman looking out of the window, with a mix of sadness and longing in her eyes"
+        },
+        {
+          "time": "01:56",
+          "text": "जिंदगी कैसे बिताते हैं",
+          "image_prompt": "A shot of the couple's daily routine, with a sense of emptiness and loneliness"
+        },
+        {
+          "time": "02:01",
+          "text": "लो दिन भी यहां तो लगे बरस के",
+          "image_prompt": "The woman sitting on a couch, with a calendar in the background, highlighting the days passing by"
+        },
+        {
+          "time": "02:09",
+          "text": "समान हमें",
+          "image_prompt": "A shot of the couple's memories, with a soft focus on the happy moments they shared"
+        },
+        {
+          "time": "02:11",
+          "text": "इंतजार कितना यह हम नहीं",
+          "image_prompt": "The woman waiting for her partner, with a mix of hope and uncertainty in her eyes"
+        },
+        {
+          "time": "02:16",
+          "text": "जानते मगर जी नहीं",
+          "image_prompt": "A shot of the couple's hands, with a subtle expression of love and longing"
+        },
+        {
+          "time": "02:20",
+          "text": "सकते तुम्हारे",
+          "image_prompt": "The woman looking at a photo of her partner, with a mix of sadness and love in her eyes"
+        },
+        {
+          "time": "02:24",
+          "text": "बिना हमें तुमसे प्यार",
+          "image_prompt": "A shot of the couple's love letter, with a soft focus on the words"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "03:02",
+      "end_time": "04:02",
+      "reason": "Expression of the intensity of love",
+      "lines": [
+        {
+          "time": "03:02",
+          "text": "तुम्हें कोई और देखे तो जलता है",
+          "image_prompt": "An Indian man looking at his partner, with a mix of jealousy and love in his eyes"
+        },
+        {
+          "time": "03:08",
+          "text": "दिल बड़ी",
+          "image_prompt": "A shot of the couple's hearts, with a subtle expression of love and passion"
+        },
+        {
+          "time": "03:11",
+          "text": "मुश्किलों से फिर संभलता है",
+          "image_prompt": "The couple embracing, with a soft focus on their faces"
+        },
+        {
+          "time": "03:16",
+          "text": "दिल क्या क्या जतन करते हैं तुम्हें क्या",
+          "image_prompt": "A shot of the couple's love story, with a mix of happy and sad moments"
+        },
+        {
+          "time": "03:23",
+          "text": "पता यह दिल",
+          "image_prompt": "The man looking at his partner, with a mix of love and adoration in his eyes"
+        },
+        {
+          "time": "03:26",
+          "text": "बेकरार कितना ये हम नहीं",
+          "image_prompt": "A shot of the couple's love letter, with a soft focus on the words"
+        },
+        {
+          "time": "03:31",
+          "text": "जानते मगर जी नहीं सकते तुम्हारे",
+          "image_prompt": "The couple walking together, with a blurred background to emphasize their bond"
+        },
+        {
+          "time": "03:39",
+          "text": "बिना हमें तुमसे प्यार कितना यह हम नहीं",
+          "image_prompt": "A shot of the couple's silhouettes, with a beautiful sunset in the background"
+        },
+        {
+          "time": "03:46",
+          "text": "जानते मगर जी नहीं",
+          "image_prompt": "The woman looking at the man, with a mix of love and sadness in her eyes"
+        },
+        {
+          "time": "03:50",
+          "text": "सकते तुम्हारे",
+          "image_prompt": "The couple embracing, with a soft focus on their faces"
+        },
+        {
+          "time": "03:54",
+          "text": "बिना हमें तुमसे",
+          "image_prompt": "A shot of the couple's hands intertwined, with a beautiful garden in the background"
+        },
+        {
+          "time": "03:58",
+          "text": "प्यार और",
+          "image_prompt": "The couple walking together, with a mix of happiness and love in their eyes"
+        }
+      ]
+    }
+  ]
+}

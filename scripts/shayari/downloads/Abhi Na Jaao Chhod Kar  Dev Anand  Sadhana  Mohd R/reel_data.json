@@ -1,0 +1,96 @@
+{
+  "YotubeTitle": "Abhi Na Jao Chhodkar | World Music Day Concert 24 | Sourendro-Soumyojit",
+  "yotubeDescription": "Abhi Na Jao Chhodkar song from World Music Day Concert 24 by Sourendro-Soumyojit. #AbhiNaJaoChhodkar #SourendroSoumyojit #WorldMusicDayConcert",
+  "image_style": "Indian-themed, vibrant, and emotive visuals with an Indian man or woman as the central figure, often surrounded by elements of nature, music, or traditional Indian architecture",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:45",
+      "end_time": "01:31",
+      "reason": "This clip captures the emotional beginning of the song, with the singer expressing their longing and the music building up to a crescendo",
+      "lines": [
+        {
+          "time": "00:45",
+          "text": "अभी ना जावो छोड़कर के दिल",
+          "image_prompt": "An Indian woman sitting alone on a traditional Indian doorstep, looking back with a mix of sadness and longing, surrounded by dimly lit diyas"
+        },
+        {
+          "time": "00:52",
+          "text": "अभ भरा नहीं",
+          "image_prompt": "A close-up of the Indian woman's face, with a single tear rolling down her cheek, symbolizing unfulfilled emotions"
+        },
+        {
+          "time": "01:15",
+          "text": "भरा अभी अभी तो आए हो",
+          "image_prompt": "An Indian man entering the frame, approaching the woman, with a warm and comforting smile, as the background transitions to a brighter, more vibrant setting"
+        },
+        {
+          "time": "01:21",
+          "text": "बहार बनके छाई हो बाबा जरा महक तो",
+          "image_prompt": "The Indian man and woman walking together in a lush garden, surrounded by blooming flowers and the warm glow of sunset, symbolizing the blossoming of love"
+        },
+        {
+          "time": "01:31",
+          "text": "नजर जरा बेहक तोले ये शाम ढल तो ले",
+          "image_prompt": "A romantic evening scene with the couple sitting together on a rooftop or a hill, watching the stars twinkle to life as night falls, with the cityscape in the background"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:01",
+      "end_time": "02:31",
+      "reason": "This part of the song highlights the yearning and the plea to stay, with the music and vocals intensifying the emotional appeal",
+      "lines": [
+        {
+          "time": "02:01",
+          "text": "नशे के घूंट भी दोन न अभी तो कुछ कहा नहीं",
+          "image_prompt": "A close-up of the Indian woman's hands holding a traditional Indian wine glass, with a look of longing in her eyes, as the background blurs into a soft, golden light"
+        },
+        {
+          "time": "02:11",
+          "text": "अभी तो कुछ सुना नहीं",
+          "image_prompt": "The Indian man and woman sitting across from each other, with an untouched wine glass between them, symbolizing unspoken words and unheard feelings"
+        },
+        {
+          "time": "02:20",
+          "text": "अभी ना जाओ छोड़कर के दिल",
+          "image_prompt": "A dramatic scene of the Indian woman reaching out to the man as he turns to leave, with a backdrop of a dimly lit, empty street or a long corridor, emphasizing the desperation in her plea"
+        },
+        {
+          "time": "02:31",
+          "text": "अभी भरा नहीं",
+          "image_prompt": "A solo shot of the Indian woman standing alone, looking upwards with tears in her eyes, as the camera pans out to reveal an empty, expansive landscape behind her, symbolizing the vastness of her unfulfilled emotions"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "03:02",
+      "end_time": "03:38",
+      "reason": "This segment offers a moment of reflection and realization, with the music taking a softer, more introspective turn",
+      "lines": [
+        {
+          "time": "03:02",
+          "text": "सितारे छिल मिला उठे",
+          "image_prompt": "A serene night sky filled with stars, as the camera pans down to reveal the Indian man and woman lying down together, looking up at the stars, symbolizing hope and new beginnings"
+        },
+        {
+          "time": "03:12",
+          "text": "बस अबना मुझको",
+          "image_prompt": "A gentle, intimate moment between the couple, with the man's hand reassuringly on the woman's, as they both look up at the stars, emphasizing the comfort and security of their relationship"
+        },
+        {
+          "time": "03:31",
+          "text": "अगर मैं रुक गई अभी तो जाना",
+          "image_prompt": "A poignant scene of the Indian woman standing at a crossroads or a railway station, looking back at the man as he waits, symbolizing the difficult choice between staying and leaving"
+        },
+        {
+          "time": "03:38",
+          "text": "पाओगे कभी यही",
+          "image_prompt": "The Indian man and woman embracing, as the background fades into a warm, golden light, symbolizing the promise of forever and the hope of finding each other again"
+        }
+      ]
+    }
+  ]
+}

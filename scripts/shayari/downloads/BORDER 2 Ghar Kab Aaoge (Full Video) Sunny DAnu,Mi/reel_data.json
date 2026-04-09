@@ -1,0 +1,191 @@
+{
+  "youtube_title": "BORDER 2: Ghar Kab Aaoge",
+  "youtube_description": "Full lyrics with timestamps + singer/composer credits + 25 relevant Hindi and English hashtags.\\nSingers: Anu, Mithoon, Sonu, Roop, Arijit, Vishal, Diljit, Javed, Manoj\\n#BORDER2 #GharKabAaoge #SunnyD #Anu #Mithoon #Sonu #Roop #Arijit #Vishal #Diljit #Javed #Manoj #Bollywood #NewSong #LatestSong #HindiSong #IndianSong #MusicVideo #FullVideo #SongLyrics",
+  "image_style": "Fine ink crosshatching and stippling technique, subtle watercolor wash over etching, aged cream/parchment paper background, small watercolor vignette environment at subject's feet, muted warm earthy palette: sepia, amber, ochre, olive, soft faded atmospheric background, museum natural history plate aesthetic",
+  "style_preset": "RDR2 Zoological Compendium",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:34",
+      "end_time": "01:03",
+      "duration_seconds": 29,
+      "reason": "Emotionally strong and catchy, the clip showcases the longing for a loved one to return home.",
+      "lines": [
+        {
+          "time": "00:34",
+          "text": "संदेश आते हैं हमें [संगीत] तड़पाते",
+          "emotion": "Longing",
+          "image_prompt": "A hand holding a letter, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:39",
+          "text": "हैं जो चिट्ठी आते [संगीत] हैं वो पूछे",
+          "emotion": "Longing",
+          "image_prompt": "inspired by the lyric 'हैं जो चिट्ठी आते  हैं वो पूछे', showing Longing emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "00:43",
+          "text": "जाते हैं कि घर कब आओगे [संगीत] के घर कब",
+          "emotion": "Yearning",
+          "image_prompt": "A person standing at a doorstep, looking out, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:49",
+          "text": "आओगे",
+          "emotion": "Impatience",
+          "image_prompt": "A clock ticking, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:50",
+          "text": "लिखो कब आओगे",
+          "emotion": "Longing",
+          "image_prompt": "inspired by the lyric 'लिखो कब आओगे', showing Longing emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "00:53",
+          "text": "कि तुम बिन ये घर शूना",
+          "emotion": "Longing",
+          "image_prompt": "inspired by the lyric 'कि तुम बिन ये घर शूना', showing Longing emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "00:58",
+          "text": "[संगीत] है संदेश आते हैं हमें तड़पाते",
+          "emotion": "Longing",
+          "image_prompt": "inspired by the lyric 'है संदेश आते हैं हमें तड़पाते', showing Longing emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:03",
+          "text": "हैं जो [संगीत] चिट्ठी आती है वो पूछे",
+          "emotion": "Longing",
+          "image_prompt": "inspired by the lyric 'हैं जो  चिट्ठी आती है वो पूछे', showing Longing emotion, expressive pose, symbolic scene from the song context"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "01:50",
+      "end_time": "02:25",
+      "duration_seconds": 35,
+      "reason": "Viral-worthy moment, the clip showcases the transformation of a person's life after meeting someone special.",
+      "lines": [
+        {
+          "time": "01:50",
+          "text": "ये दिल जो बरसों से था खाली खाली सा",
+          "emotion": "Emptiness",
+          "image_prompt": "A person sitting alone, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:55",
+          "text": "[संगीत] किसी के आने से सजा दिवाली",
+          "emotion": "Joy",
+          "image_prompt": "A person decorating a room, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:00",
+          "text": "सां [संगीत]",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'सां', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:03",
+          "text": "जगे हैं दरवाजे",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'जगे हैं दरवाजे', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:06",
+          "text": "[संगीत] किसी की आहट से सवेरा होता है",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'किसी की आहट से सवेरा होता है', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:11",
+          "text": "किसी की करवट से [संगीत]",
+          "emotion": "Hope",
+          "image_prompt": "A person waking up to a new day, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:17",
+          "text": "मैं सोचा करता हूं [संगीत]",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'मैं सोचा करता हूं', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:20",
+          "text": "यही तनहाई",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'यही तनहाई', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:22",
+          "text": "में ये चंदा उतरेगा",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'में ये चंदा उतरेगा', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:25",
+          "text": "[संगीत] मेरी अंगनाई",
+          "emotion": "Emptiness",
+          "image_prompt": "inspired by the lyric 'मेरी अंगनाई', showing Emptiness emotion, expressive pose, symbolic scene from the song context"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "06:01",
+      "end_time": "06:39",
+      "duration_seconds": 38,
+      "reason": "Emotionally impactful, the clip showcases the memories of a past love.",
+      "lines": [
+        {
+          "time": "06:01",
+          "text": "बड़ी याद आती है किसी की रातों में कलाई",
+          "emotion": "Nostalgia",
+          "image_prompt": "A person holding a locket, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "06:08",
+          "text": "रेशम सी अभी भी है हाथों में",
+          "emotion": "Nostalgia",
+          "image_prompt": "inspired by the lyric 'रेशम सी अभी भी है हाथों में', showing Nostalgia emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "06:15",
+          "text": "शायरी जैसी [संगीत]",
+          "emotion": "Nostalgia",
+          "image_prompt": "inspired by the lyric 'शायरी जैसी', showing Nostalgia emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "06:17",
+          "text": "वो लबों पे रहती है। मोहब्बत जैसी वो लबों",
+          "emotion": "Love",
+          "image_prompt": "A couple embracing, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "06:23",
+          "text": "[संगीत] में बहती है।",
+          "emotion": "Nostalgia",
+          "image_prompt": "inspired by the lyric 'में बहती है।', showing Nostalgia emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "06:28",
+          "text": "जो गुड़ियों से खेले वो गुड़िया याद आए कि",
+          "emotion": "Nostalgia",
+          "image_prompt": "inspired by the lyric 'जो गुड़ियों से खेले वो गुड़िया याद आए कि', showing Nostalgia emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "06:34",
+          "text": "[संगीत] बातों बातों में उसी की बात आए",
+          "emotion": "Longing",
+          "image_prompt": "A person playing with a doll, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "06:39",
+          "text": "मेरे दिलदारों",
+          "emotion": "Nostalgia",
+          "image_prompt": "inspired by the lyric 'मेरे दिलदारों', showing Nostalgia emotion, expressive pose, symbolic scene from the song context"
+        }
+      ]
+    }
+  ]
+}

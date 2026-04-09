@@ -1,0 +1,113 @@
+{
+  "youtube_title": "Duniya Haseeno Ka Mela",
+  "youtube_description": "Duniya Haseeno Ka Mela song from Gupt (1997) film.\nSinger: Udit Narayan\nComposer: Viju Shah\n#BollywoodPartySongs #Gupt #UditNarayan #VijuShah #BobbyDeol #90sBollywood #PartyAnthems #HindiSongs #FilmSongs #IndianMusic",
+  "image_style": "19th century zoological engraving illustration, fine ink crosshatching and stippling, subtle watercolor wash, aged cream parchment background, single centered full-body Indian portrait, small ground vignette at feet, muted sepia-amber-ochre palette, natural history museum plate aesthetic, no photorealism",
+  "style_preset": "romantic | sad | energetic | devotional | retro | longing | happy",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "01:01",
+      "end_time": "01:17",
+      "duration_seconds": 16,
+      "reason": "This clip is emotionally strong as it introduces the main theme of the song, with the lyrics 'He duniya haseeno ka mela, mela mein ye dil akela'. The melody and vocals are catchy and set the tone for the rest of the song.",
+      "lines": [
+        {
+          "time": "01:01",
+          "text": "हे दुनिया हसीनों का",
+          "emotion": "longing",
+          "image_prompt": "Single Indian man, standing with one arm outstretched, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:05",
+          "text": "मेला मेले में ये दिल अकेला हो दुनिया",
+          "emotion": "sad",
+          "image_prompt": "Single Indian man, slightly bowed head, one hand raised to face, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:11",
+          "text": "हसीनों का",
+          "emotion": "longing",
+          "image_prompt": "Single Indian man, looking into the distance, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:13",
+          "text": "मेला मेले में ये दिल",
+          "emotion": "sad",
+          "image_prompt": "Single Indian man, standing with a melancholy stance, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:17",
+          "text": "अकेला",
+          "emotion": "sad",
+          "image_prompt": "Single Indian man, sitting with a bowed head, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:51",
+      "end_time": "03:07",
+      "duration_seconds": 16,
+      "reason": "This clip is virally strong as it features a catchy and upbeat melody, with the lyrics 'यहां वहां इधर उधर चेहरे हैं कितने हसीन'. The vocals and instrumentation are energetic and engaging.",
+      "lines": [
+        {
+          "time": "02:51",
+          "text": "हो यहां वहां इधर उधर चेहरे हैं कितने",
+          "emotion": "energetic",
+          "image_prompt": "Single Indian man, dynamic dance pose, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:58",
+          "text": "हसीन",
+          "emotion": "happy",
+          "image_prompt": "Single Indian man, open arms, upright joyful posture, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:00",
+          "text": "मगर जहां रुके नजर सूरत वो देखी",
+          "emotion": "longing",
+          "image_prompt": "Single Indian man, looking into the distance, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:07",
+          "text": "नहीं",
+          "emotion": "sad",
+          "image_prompt": "Single Indian man, slightly bowed head, one hand raised to face, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "04:39",
+      "end_time": "04:54",
+      "duration_seconds": 15,
+      "reason": "This clip is emotionally strong as it features a romantic and introspective melody, with the lyrics 'अदा नशा नजर बतन सब कुछ तेरे पास'. The vocals and instrumentation are soothing and engaging.",
+      "lines": [
+        {
+          "time": "04:39",
+          "text": "अदा नशा नजर",
+          "emotion": "romantic",
+          "image_prompt": "Single Indian man, standing with a soft gaze, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:42",
+          "text": "बतन सब कुछ तेरे पास",
+          "emotion": "longing",
+          "image_prompt": "Single Indian man, looking into the distance, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:46",
+          "text": "है मगर तू वो घटा नहीं जिसकी मुझे प्यास",
+          "emotion": "sad",
+          "image_prompt": "Single Indian man, slightly bowed head, one hand raised to face, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:54",
+          "text": "है",
+          "emotion": "longing",
+          "image_prompt": "Single Indian man, standing with a melancholy stance, traditional Indian attire, aged parchment background, 19th century zoological engraving style, fine ink crosshatching and stippling, watercolor wash, centered full-body portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed, 8K, no text, no watermark"
+        }
+      ]
+    }
+  ]
+}

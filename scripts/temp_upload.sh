@@ -26,7 +26,7 @@ if [ -n "$GITHUB_TOKEN" ]; then
         RESPONSE=$("$SCRIPT_DIR/github_release_upload.sh" "$FILE_PATH" "$GITHUB_TOKEN" 2>&1)
         
         # Extract the URL (first line) and release info (stderr)
-        URL=$(echo "$RESPONSE" | grep -E '^https://' | head -1)
+        URL=$(echo "$RESPONSE" | grep -E '^https://' | head -n 1)
         
         if [[ $URL == https://* ]]; then
             # Save release tag for cleanup
@@ -65,7 +65,7 @@ log "0x0.st failed."
 log "Trying Pixeldrain.com..."
 RESPONSE=$(curl -sL -F "file=@$FILE_PATH" https://pixeldrain.com/api/file/)
 # Response: {"id":"XXXX","success":true}
-ID=$(echo "$RESPONSE" | grep -o '"id":"[^"]*"' | cut -d'"' -f4)
+ID=$(echo "$RESPONSE" | grep -o '"id":"[^"]*"' | cut -d'"' -f4 | head -n 1)
 if [ -n "$ID" ]; then
     echo "https://pixeldrain.com/api/file/$ID"
     exit 0
@@ -76,7 +76,7 @@ log "Pixeldrain failed."
 log "Trying File.io..."
 RESPONSE=$(curl -sL -F "file=@$FILE_PATH" https://file.io)
 # Response: {"success":true,"link":"https://file.io/XXXX",...}
-LINK=$(echo "$RESPONSE" | grep -o 'https://file.io/[a-zA-Z0-9]*')
+LINK=$(echo "$RESPONSE" | grep -o 'https://file.io/[a-zA-Z0-9]\{3,\}' | head -n 1)
 if [[ $LINK == http* ]]; then
     echo "$LINK"
     exit 0
@@ -96,7 +96,7 @@ log "Transfer.sh failed."
 # --- Try Bashupload.com ---
 log "Trying Bashupload.com..."
 RESPONSE=$(curl -sL --upload-file "$FILE_PATH" "https://bashupload.com/$(basename $FILE_PATH)")
-LINK=$(echo "$RESPONSE" | grep -o 'https://bashupload.com/[^ ]*')
+LINK=$(echo "$RESPONSE" | grep -o 'https://bashupload.com/[^ ]*' | head -n 1)
 if [[ $LINK == http* ]]; then
     echo "$LINK"
     exit 0
@@ -106,7 +106,7 @@ log "Bashupload failed."
 # --- Try Oshi.at ---
 log "Trying Oshi.at..."
 RESPONSE=$(curl -sL -F "f=@$FILE_PATH" https://oshi.at)
-LINK=$(echo "$RESPONSE" | grep -o 'https://oshi.at/[a-zA-Z0-9]*')
+LINK=$(echo "$RESPONSE" | grep -o 'https://oshi.at/[a-zA-Z0-9]\{3,\}' | head -n 1)
 if [[ $LINK == http* ]]; then
     echo "$LINK"
     exit 0

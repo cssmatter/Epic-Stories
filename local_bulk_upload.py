@@ -2,6 +2,8 @@ import os
 import json
 import glob
 import shutil
+import time
+import subprocess
 from datetime import datetime, timedelta, timezone
 import youtube_uploader
 
@@ -10,8 +12,8 @@ def bulk_upload_scheduled(directory="downloads", interval_hours=24):
     Scans directory for metadata, uploads first immediately, 
     and schedules subsequent ones at 24-hour intervals.
     """
-    # 1. Find all metadata files
-    meta_files = sorted(glob.glob(os.path.join(directory, "upload_metadata_*.json")))
+    # 1. Find all metadata files in subdirectories
+    meta_files = sorted(glob.glob(os.path.join(directory, "*", "upload_metadata_*.json"), recursive=True))
     
     if not meta_files:
         print(f"No metadata files found in {directory}.")
@@ -39,13 +41,19 @@ def bulk_upload_scheduled(directory="downloads", interval_hours=24):
                 scheduled_dt = base_time + timedelta(hours=interval_hours * i)
                 # YouTube API requires ISO 8601 format: YYYY-MM-DDThh:mm:ss.sZ
                 publish_at = scheduled_dt.strftime('%Y-%m-%dT%H:%M:%S.000Z')
+                print(f"Scheduling on YouTube for: {publish_at}")
+            else:
+                print("Publishing to YouTube IMMEDIATELY")
             
             # Perform upload
+            raw_keywords = meta.get('keywords', ['ghazal', 'shayari'])
+            str_keywords = ",".join(raw_keywords) if isinstance(raw_keywords, list) else raw_keywords
+            
             video_id = youtube_uploader.upload_video(
                 file_path=meta['video_path'],
                 title=meta['title'],
                 description=meta['description'],
-                keywords=meta.get('keywords', 'ghazal,shayari'),
+                keywords=str_keywords,
                 token_file='token_shayari.pickle',
                 publish_at=publish_at
             )
@@ -53,15 +61,15 @@ def bulk_upload_scheduled(directory="downloads", interval_hours=24):
             if video_id:
                 print(f"Successfully uploaded/scheduled: {video_id}")
                 
-                # Move to published folder
-                shutil.move(meta_file, os.path.join(published_dir, os.path.basename(meta_file)))
-                if os.path.exists(meta['video_path']):
-                    shutil.move(meta['video_path'], os.path.join(published_dir, os.path.basename(meta['video_path'])))
+                # Create song-specific published subfolder to keep it clean
+                parent_folder = os.path.basename(os.path.dirname(meta_file))
+                pub_song_dir = os.path.join(published_dir, parent_folder)
+                os.makedirs(pub_song_dir, exist_ok=True)
                 
-                # If there's an image path, move it too
-                img_path = meta.get('image_path')
-                if img_path and os.path.exists(img_path):
-                    shutil.move(img_path, os.path.join(published_dir, os.path.basename(img_path)))
+                # Move to published folder
+                shutil.move(meta_file, os.path.join(pub_song_dir, os.path.basename(meta_file)))
+                if os.path.exists(meta['video_path']):
+                    shutil.move(meta['video_path'], os.path.join(pub_song_dir, os.path.basename(meta['video_path'])))
             
         except Exception as e:
             print(f"Error processing {meta_file}: {e}")

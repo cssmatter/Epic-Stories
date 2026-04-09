@@ -1,0 +1,89 @@
+{
+  "youtube_title": "Aawaara Angaara: Tere Ishk Mein",
+  "youtube_description": "Full lyrics with timestamps + singer/composer credits + 25 relevant Hindi and English hashtags. \n#AawaaraAngaara #TereIshkMein #Dhanush #Kriti #ARRehman #FaheemAanand #LRBhushanK #Bollywood #HindiSongs #NewRelease #Trending #MusicLovers #SongLyrics #HindiCinema #BollywoodMusic #IndianMusic #TereIshkMeinAawaaraAngaara",
+  "image_style": "Fine ink crosshatching and stippling technique, subtle watercolor wash over etching, aged cream/parchment paper background, single centered portrait subject, small watercolor vignette environment at subject's feet, muted warm earthy palette: sepia, amber, ochre, olive, soft faded atmospheric background, museum natural history plate aesthetic",
+  "style_preset": "RDR2 Zoological Compendium",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:39",
+      "end_time": "01:12",
+      "duration_seconds": 33,
+      "reason": "Hook and chorus",
+      "lines": [
+        {
+          "time": "00:39",
+          "text": "तेरी कायनात मेरे खाली हाथ और",
+          "emotion": "Longing",
+          "image_prompt": "A portrait of a person with empty hands, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:46",
+          "text": "तारतार सपने",
+          "emotion": "Dreamy",
+          "image_prompt": "A portrait of a person with a thought bubble, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:02",
+          "text": "दर्दों से चूर गम का गुरूर कहूं क्या",
+          "emotion": "Pain",
+          "image_prompt": "A portrait of a person with a sad expression, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "02:13",
+      "end_time": "02:44",
+      "duration_seconds": 31,
+      "reason": "Emotionally impactful moment",
+      "lines": [
+        {
+          "time": "02:13",
+          "text": "कोई उधारी है सीने पे भारी है पत्थर है या",
+          "emotion": "Burdened",
+          "image_prompt": "A portrait of a person with a stone on their chest, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:26",
+          "text": "रूठे सवेरे हैं आधे ही मेरे हैं आधे",
+          "emotion": "Melancholy",
+          "image_prompt": "A portrait of a person with a half-lit background, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:33",
+          "text": "तू है निगाहों में",
+          "emotion": "Love",
+          "image_prompt": "A portrait of a person with a loving gaze, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "03:40",
+      "end_time": "04:07",
+      "duration_seconds": 27,
+      "reason": "Viral-worthy moment",
+      "lines": [
+        {
+          "time": "03:40",
+          "text": "मेरा इम्तिहान तू जो ले रहा है अब ना",
+          "emotion": "Determined",
+          "image_prompt": "A portrait of a person with a resolute expression, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:53",
+          "text": "मैंने दिल दिया है मैंने दुख लिया है",
+          "emotion": "Sacrificial",
+          "image_prompt": "A portrait of a person with a heart in their hand, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "04:01",
+          "text": "तुझ जो ले रहा है अब नारे आया कर आवारा",
+          "emotion": "Free-spirited",
+          "image_prompt": "A portrait of a person with a carefree expression, fine ink crosshatching, watercolor wash, centered portrait, small ground vignette at feet, muted sepia-amber palette, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    }
+  ]
+}

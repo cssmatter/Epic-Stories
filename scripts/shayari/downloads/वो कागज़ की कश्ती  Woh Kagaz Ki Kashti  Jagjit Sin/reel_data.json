@@ -1,0 +1,257 @@
+{
+  "youtube_title": "Woh Kagaz Ki Kashti – Jagjit Singh | Ghazal | Aaj",
+  "youtube_description": "A nostalgic yearning for lost childhood, Jagjit Singh’s soulful voice drifts through memories of paper boats, rainwater, and the gentle wisdom of a grandmother. Written by Sudarshan Faakir for the film Aaj, this ghazal captures the bittersweet longing for innocence.\\n\\nSinger: Jagjit Singh\\nLyricist: Sudarshan Faakir\\nFilm: Aaj\\n\\n#WohKagazKiKashti #JagjitSingh #Ghazal #Aaj #SudarshanFaakir #Bollywood #HindiMusic #Nostalgia #ChildhoodMemories #PaperBoat #Rain #Grandmother #OldDelhi #ClassicGhazal #MusicLovers #Soulful #IndianMusic #Retro #Poetry #Emotional #Instareels #MusicReels #BollywoodReels #DesiMusic #HindiSongs #Timeless",
+  "image_style": "RDR2 Zoological Compendium",
+  "style_preset": "RDR2 Zoological Compendium",
+  "clips": [
+    {
+      "clip_number": 1,
+      "start_time": "00:30",
+      "end_time": "01:12",
+      "duration_seconds": 42,
+      "reason": "Opening nostalgic hook where the singer pleads for the return of childhood, featuring the iconic paper boat and rain water imagery that resonates widely.",
+      "lines": [
+        {
+          "time": "00:30",
+          "text": "मगर मुझको लौटा दो बचपन का सा",
+          "emotion": "longing",
+          "image_prompt": "A wistful child reaching back to a golden era of childhood, fine ink crosshatching, subtle watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:38",
+          "text": "वो कागज़ की कश्ती",
+          "emotion": "nostalgic",
+          "image_prompt": "A delicate paper boat floating on a puddle of rainwater, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:42",
+          "text": "वो बारिश का पानी",
+          "emotion": "melancholic",
+          "image_prompt": "Rainwater shimmering on a rustic ground, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:46",
+          "text": "वो कागज़ की कश्ती",
+          "emotion": "nostalgic",
+          "image_prompt": "A delicate paper boat floating on a puddle of rainwater, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:49",
+          "text": "वो बारिश का पानी",
+          "emotion": "melancholic",
+          "image_prompt": "Rainwater shimmering on a rustic ground, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "00:57",
+          "text": "[प्रशंसा]",
+          "emotion": "longing",
+          "image_prompt": "inspired by the lyric '[प्रशंसा]', showing longing emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:12",
+          "text": "मोहल्ले",
+          "emotion": "longing",
+          "image_prompt": "inspired by the lyric 'मोहल्ले', showing longing emotion, expressive pose, symbolic scene from the song context"
+        }
+      ]
+    },
+    {
+      "clip_number": 2,
+      "start_time": "01:12",
+      "end_time": "01:58",
+      "duration_seconds": 46,
+      "reason": "Heart‑warming verses about the beloved grandmother and the magical tales of childhood, evoking deep emotional connection.",
+      "lines": [
+        {
+          "time": "01:12",
+          "text": "मोहल्ले",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'मोहल्ले', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:14",
+          "text": "की सबसे",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'की सबसे', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:16",
+          "text": "पुरानी",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'पुरानी', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:18",
+          "text": "निशानी",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'निशानी', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:20",
+          "text": "वो बुढ़िया जिसे बच्चे कहते थे नानी",
+          "emotion": "affectionate",
+          "image_prompt": "An elderly grandmother with a gentle smile surrounded by curious children, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:22",
+          "text": "जिसे बच्चे कहते",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'जिसे बच्चे कहते', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:25",
+          "text": "थे नानी वो नानी की बातों में परियों का",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'थे नानी वो नानी की बातों में परियों का', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:33",
+          "text": "वो नानी की बातों में परियों का डेरा",
+          "emotion": "magical",
+          "image_prompt": "A grandmother whispering fairy tales, ethereal aura of tiny fairies swirling around, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "01:41",
+          "text": "फेरा",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'फेरा', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:43",
+          "text": "भुलाए",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'भुलाए', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:44",
+          "text": "नहीं",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'नहीं', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:46",
+          "text": "भूल सकता है कोई",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'भूल सकता है कोई', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:50",
+          "text": "भुलाए",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'भुलाए', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:52",
+          "text": "नहीं",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'नहीं', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:54",
+          "text": "भूल भूल सकता है कोई",
+          "emotion": "affectionate",
+          "image_prompt": "inspired by the lyric 'भूल भूल सकता है कोई', showing affectionate emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "01:58",
+          "text": "वो छोटी सी रातें",
+          "emotion": "tender",
+          "image_prompt": "A quiet night scene with soft lantern light and gentle shadows, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    },
+    {
+      "clip_number": 3,
+      "start_time": "02:39",
+      "end_time": "03:34",
+      "duration_seconds": 55,
+      "reason": "Vivid collage of childhood adventures—birds, butterflies, dolls, and the recurring paper‑boat motif—perfect for a visually rich Reel.",
+      "lines": [
+        {
+          "time": "02:39",
+          "text": "कड़ी धूप में अपने घर से निकलना",
+          "emotion": "determined",
+          "image_prompt": "A child stepping out of a modest home under harsh sunlight, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:46",
+          "text": "वो चिड़िया",
+          "emotion": "joyful",
+          "image_prompt": "A small bird perched on a thin branch, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:48",
+          "text": "वो बुलबुल",
+          "emotion": "melodic",
+          "image_prompt": "A nightingale singing on a twig, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:50",
+          "text": "वो तितली",
+          "emotion": "playful",
+          "image_prompt": "A colorful butterfly fluttering over a garden, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:52",
+          "text": "पकड़ना",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'पकड़ना', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "02:54",
+          "text": "वो गुड़िया",
+          "emotion": "innocent",
+          "image_prompt": "A handmade doll lying on a wooden floor, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "02:56",
+          "text": "की शादी पे लड़ना",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'की शादी पे लड़ना', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "03:00",
+          "text": "झगड़ना",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'झगड़ना', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "03:02",
+          "text": "वो झूलों से गिरना",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'वो झूलों से गिरना', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "03:06",
+          "text": "वो गिर के संभलना",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'वो गिर के संभलना', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "03:10",
+          "text": "वो पीतल के छल्लों के प्यारे से",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'वो पीतल के छल्लों के प्यारे से', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "03:18",
+          "text": "वो पीतल के छल्लों के प्यारे सताफे",
+          "emotion": "determined",
+          "image_prompt": "inspired by the lyric 'वो पीतल के छल्लों के प्यारे सताफे', showing determined emotion, expressive pose, symbolic scene from the song context"
+        },
+        {
+          "time": "03:26",
+          "text": "वो टूटी हुई चूड़ियों की निशानी",
+          "emotion": "bittersweet",
+          "image_prompt": "Broken bangles scattered on a dusty ground, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        },
+        {
+          "time": "03:34",
+          "text": "वो कागज़ की कश्ती",
+          "emotion": "nostalgic",
+          "image_prompt": "A delicate paper boat floating on a puddle of rainwater, fine ink crosshatching, watercolor wash, natural history plate aesthetic, highly detailed etching, 8K, no text, no watermark"
+        }
+      ]
+    }
+  ]
+}
