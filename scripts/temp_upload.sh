@@ -36,9 +36,12 @@ if [ -n "$GITHUB_TOKEN" ]; then
             fi
             echo "$URL"
             exit 0
+        else
+            log "GitHub Releases failed or not available."
+            log "Response from github_release_upload.sh:"
+            log "$RESPONSE"
         fi
     fi
-    log "GitHub Releases failed or not available."
 else
     log "Skipping GitHub Releases (GITHUB_TOKEN not set)."
 fi
@@ -72,16 +75,17 @@ if [ -n "$ID" ]; then
 fi
 log "Pixeldrain failed."
 
-# --- Try File.io (Very reliable) ---
-log "Trying File.io..."
-RESPONSE=$(curl -sL -F "file=@$FILE_PATH" https://file.io)
-# Response: {"success":true,"link":"https://file.io/XXXX",...}
-LINK=$(echo "$RESPONSE" | grep -o 'https://file.io/[a-zA-Z0-9]\{3,\}' | head -n 1)
-if [[ $LINK == http* ]]; then
+# --- Try Uguu.se (Reliable direct links) ---
+log "Trying Uguu.se..."
+# Response: {"success":true,"files":[{"url":"https:\/\/h.uguu.se\/xxx.mp4"}]}
+RESPONSE=$(curl -sL -F "files[]=@$FILE_PATH" https://uguu.se/upload.php)
+LINK=$(echo "$RESPONSE" | grep -o 'https:\\/\\/[^"]*' | sed 's/\\//g' | head -n 1)
+if [[ $LINK == https://* ]]; then
     echo "$LINK"
     exit 0
 fi
-log "File.io failed."
+log "Uguu.se failed."
+
 
 # --- Try Transfer.sh ---
 log "Trying Transfer.sh..."
