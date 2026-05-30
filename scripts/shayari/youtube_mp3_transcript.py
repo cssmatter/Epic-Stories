@@ -170,7 +170,8 @@ def mmss_to_seconds(mmss: str) -> float:
     return int(parts[0])*60 + int(parts[1])
 
 def safe_filename(name: str, max_len: int = 50) -> str:
-    return re.sub(r'[\\/*?:"<>|]', "", name).strip()[:max_len].strip()
+    cleaned = re.sub(r'[\\/*?:"<>|]', "", name).strip()[:max_len]
+    return cleaned.rstrip(". ")
 
 def run_ffmpeg(*args, label: str = "ffmpeg") -> bool:
     cmd = ["ffmpeg", "-y"] + [str(a) for a in args]

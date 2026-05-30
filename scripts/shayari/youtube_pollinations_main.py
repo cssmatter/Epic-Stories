@@ -322,7 +322,8 @@ def mmss_to_seconds(mmss: str) -> float:
 
 def safe_filename(name: str, max_len: int = 50) -> str:
     """Strip illegal chars and truncate for Windows MAX_PATH safety."""
-    return re.sub(r'[\\/*?:"<>|]', "", name).strip()[:max_len].strip()
+    cleaned = re.sub(r'[\\/*?:"<>|]', "", name).strip()[:max_len]
+    return cleaned.rstrip(". ")
 
 
 def run_ffmpeg(*args, label: str = "ffmpeg") -> bool:
