@@ -1,58 +1,6 @@
 [
     {
         "channel_intro": {
-            "welcome_hook": "Have you ever felt like the universe was trying to tell you something, or that you were destined for a life far greater than the one you're currently living?",
-            "intro_line": "Today on Book Summaries Channel, we explore 'The Alchemist' by Paulo Coelho, a timeless tale about following your dreams, listening to your heart, and discovering the 'Personal Legend' that awaits us all."
-        },
-        "chapters": [
-            {
-                "chapter_number": "1",
-                "chapter_title": "Part One: The Shepherd\u2019s Dream",
-                "summary": "Santiago is a young Andalusian shepherd who loves his sheep but yearns to travel and see the world beyond the pastures of Spain. He chose to be a shepherd specifically because it allowed him the freedom to wander, yet he feels a recurring dream is pulling him toward something deeper. In this dream, a child tells him that a great treasure awaits him at the Egyptian Pyramids, a vision that both confuses and excites him. Seeking clarity, he visits a gypsy woman who confirms the dream's importance, though he remains skeptical until he meets an old man named Melchizedek, the King of Salem. Melchizedek introduces Santiago to the concept of a 'Personal Legend,' which is the one thing a person has always wanted to accomplish in life. He explains that when you truly want something, the entire universe conspires to help you achieve it. To help Santiago on his journey, the King gives him two stones, Urim and Thummim, to help read the omens of the world. Inspired and challenged, Santiago makes the difficult decision to sell his flock and cross the sea to Africa. However, upon arriving in Tangier, he is quickly robbed of all his money by a thief he trusted. Left with nothing in a foreign land, he is forced to find work to survive, eventually finding a job with a local crystal merchant. Through this initial hardship, Santiago learns that every journey has tests and that the first step toward a dream often involves facing significant obstacles."
-            },
-            {
-                "chapter_number": "2",
-                "chapter_title": "Part Two: The Crystal Merchant and the Desert",
-                "summary": "Santiago spends nearly a year working for the crystal merchant, transforming a struggling shop into a highly successful business through his innovative ideas. During this time, he learns about the merchant's own unfulfilled dream of visiting Mecca and realizes how fear often stops people from pursuing their Personal Legends. The merchant represents those who prefer the comfort of the status quo over the risk of change, even when change brings growth. Having saved enough money to either buy a new flock of sheep or continue his quest, Santiago chooses to persist toward Egypt. He joins a large caravan crossing the vast Sahara Desert, where he meets an Englishman who is obsessed with the intellectual study of alchemy. While the Englishman searches for the secret of the Philosopher's Stone in books, Santiago learns by observing the desert and the 'Language of the World.' During the journey, rumors of tribal wars begin to circulate, making the desert a dangerous place where life and death are balanced on the wind. The caravan eventually reaches the Al-Fayoum oasis, intended as a neutral refuge from the conflict. It is here that Santiago meets Fatima, a desert woman, and experiences love at first sight, which he realizes is a powerful part of the Language of the World. He also experiences a vision of an impending attack on the oasis after watching two hawks fighting in the sky. He bravely warns the tribal chieftains, an act that saves the oasis and brings him to the attention of a mysterious, powerful figure known as the Alchemist. The Alchemist recognizes Santiago as a true seeker and offers to lead him on the final leg of his journey toward the Pyramids."
-            },
-            {
-                "chapter_number": "3",
-                "chapter_title": "Part Three: The Alchemist and the Treasure",
-                "summary": "The Alchemist and Santiago set out into the dangerous desert, moving through territories occupied by warring tribes. During their travels, the Alchemist teaches Santiago that the heart is a person's greatest guide and that it must be listened to, even when it is afraid. He explains that alchemy is not just about turning lead into gold, but about the spiritual evolution of the soul and the world. When they are captured by a group of soldiers, the Alchemist saves their lives by claiming that Santiago is a powerful sorcerer who can transform himself into the wind. Santiago is terrified, as he has no idea how to perform such a feat, but he is given three days to prove it or face execution. On the third day, Santiago stands on a cliff and communicates with the desert, the wind, and the sun, eventually reaching the 'Soul of the World.' He realizes that he is one with all things and, in a moment of total surrender and faith, he disappears and reappears on the other side of the camp, effectively becoming the wind. The soldiers are so amazed and terrified that they allow the two men to leave in peace. Eventually, the Alchemist leaves Santiago to finish the last few hours of his journey alone, as he has learned everything necessary to fulfill his Legend. Santiago finally arrives at the Egyptian Pyramids and begins to dig where he saw a scarab beetle, an omen of good fortune. He is suddenly attacked and beaten by refugees of the war who demand to know what he is hiding. One of the attackers laughs at Santiago's dream, mentioning a recurring dream of his own about a treasure buried under a sycamore tree at an old church in Spain where shepherds sleep. Santiago realizes with a joyful heart that the treasure was at his starting point all along. He returns to Andalusia, digs under the tree, and finds a chest of gold and jewels, finally realizing that the journey was necessary to discover his own strength and wisdom."
-            }
-        ],
-        "call_to_action": {
-            "subscribe": "Subscribe for more powerful book summaries",
-            "affiliate": "Check description to order this book."
-        },
-        "youtube_metadata": {
-            "title": "The Alchemist by Paulo Coelho | Full Book Summary & Key Lessons",
-            "author": "Paulo Coelho",
-            "category": "Literature & Fiction",
-            "affiliate_link": "https://amzn.to/3Ohuhw9",
-            "cover_image": "https://m.media-amazon.com/images/I/71+2-t7M35L._SL1500_.jpg",
-            "short_description": "Unlock the secrets of following your heart with our summary of 'The Alchemist'. Learn about Personal Legends, the Language of the World, and why the universe conspires to help you achieve your dreams.",
-            "tags": [
-                "The Alchemist",
-                "Paulo Coelho",
-                "Book Summary",
-                "Personal Legend",
-                "Motivational Books",
-                "Success Mindset",
-                "Spiritual Journey",
-                "Alchemy",
-                "Self Improvement",
-                "The Alchemist Summary"
-            ]
-        },
-        "screentext": {
-            "original_title": "The Alchemist",
-            "author": "Paulo Coelho",
-            "thumbnail_id": "1443456624"
-        }
-    },
-    {
-        "channel_intro": {
             "welcome_hook": "Welcome back to Book Summaries Channel! If you've ever felt overwhelmed by a never-ending to-do list, today\u2019s book is the ultimate cure for your procrastination.",
             "intro_line": "We are breaking down 'Eat That Frog' by Brian Tracy, a legendary guide that reveals 21 practical ways to stop procrastinating and get more done in less time."
         },
