@@ -1,63 +1,6 @@
 [
     {
         "channel_intro": {
-            "welcome_hook": "Welcome back to Book Summaries Channel! If you've ever felt like you're trading your life away for a paycheck and waiting until 65 to actually start living, today's book is going to change everything for you.",
-            "intro_line": "We are diving into the global phenomenon, 'The 4-Hour Workweek' by Tim Ferriss. This book isn't just about working less; it's a blueprint for joining the 'New Rich' and designing a life of total freedom, mobility, and luxury right now."
-        },
-        "chapters": [
-            {
-                "chapter_number": "1",
-                "chapter_title": "First and Foremost: Definition",
-                "summary": "This chapter introduces the concept of the 'New Rich,' or individuals who abandon the deferred-life plan to create luxury lifestyles in the present. Ferriss explains that money alone is not the goal; rather, it is the 'relative income' and the freedom of time and mobility that truly matter. He challenges the traditional definition of retirement as a pot of gold at the end of a rainbow, arguing that life should be peppered with 'mini-retirements' instead. The author highlights that most people are caught in a cycle of working for work's sake, often using busywork as a way to avoid uncomfortable actions. By redefining what success looks like, you move away from being an employee or even an entrepreneur who is a slave to their business. The goal is to become an owner who controls the 'DEAL' framework: Definition, Elimination, Automation, and Liberation. Ferriss encourages readers to face their fears about lifestyle design by defining the worst-case scenarios and realizing they aren't that scary. He pushes the idea that being effective is far more important than being efficient. This section sets the stage for a total paradigm shift in how you view your career and your time."
-            },
-            {
-                "chapter_number": "2",
-                "chapter_title": "Elimination: The End of Time Management",
-                "summary": "In this section, Ferriss argues that time management is a trap and that the secret to productivity is actually doing less. He introduces the 80/20 Rule, or Pareto\u2019s Law, which suggests that 80% of your results come from 20% of your activities. By identifying and focusing on that vital 20%, you can drastically reduce your workload while increasing your output. Simultaneously, he discusses Parkinson\u2019s Law, which states that a task will swell in perceived importance and complexity to fill the time allotted for its completion. To combat this, you should set incredibly short deadlines to force focus and eliminate the unnecessary. Ferriss advocates for a 'low-information diet,' suggesting that most news and media are just distractions that don't contribute to your goals. He also teaches how to develop an 'art of non-finish,' where you stop reading bad books or watching boring movies halfway through. This chapter is about becoming a 'selective ignorant' to save your mental energy for what truly moves the needle. Communication is also streamlined by batching emails and phone calls into specific time blocks rather than checking them constantly. By the end of this stage, the goal is to cut your work hours by at least 50% without losing income."
-            },
-            {
-                "chapter_number": "3",
-                "chapter_title": "Automation: Outsourcing Life",
-                "summary": "Once you have eliminated the fluff, it is time to automate the remaining tasks so the business can run without you. Ferriss discusses the power of hiring Virtual Assistants (VAs) from countries like India or the Philippines to handle repetitive administrative tasks. He emphasizes that you should never outsource something that can be eliminated, as that is just wasting money. This chapter provides a step-by-step guide on how to find, vet, and manage remote assistants to act as your personal productivity leverage. The focus then shifts to creating a 'Muse,' which is a low-maintenance business that generates significant monthly income with minimal time investment. Unlike a traditional startup, a Muse is designed to fund your lifestyle, not to take over your life. Ferriss walks through the process of testing product ideas using Google Ads and landing pages before actually manufacturing anything. He explains the importance of 'niche' marketing and why trying to sell to everyone is a recipe for failure. By automating the fulfillment and customer service processes, you remove yourself as a bottleneck in your own business. The ultimate aim here is to build a self-sustaining cash flow machine that works 24/7."
-            },
-            {
-                "chapter_number": "4",
-                "chapter_title": "Liberation: Disappearing Act",
-                "summary": "The final stage of the DEAL framework is Liberation, which focuses on breaking the chains of a physical office and achieving geographic independence. Ferriss explains how employees can transition into remote work by slowly proving their increased productivity at home. He provides scripts and strategies for negotiating a 'work-from-home' arrangement that eventually leads to a full-time remote status. For the self-employed, liberation means setting up systems so they no longer need to be physically present to manage operations. A major part of this chapter is dedicated to the concept of 'Mini-Retirements,' which are extended trips of one to six months taken throughout one's life. Ferriss argues that moving to countries with a lower cost of living allows you to live like royalty on a modest budget\u2014a concept he calls 'geo-arbitrage.' He debunks the myth that travel is expensive by showing how slow travel is actually cheaper than staying at home. The chapter addresses the psychological hurdles of liberation, such as the 'emptiness' or 'boredom' that comes when you suddenly have an abundance of time. He concludes by urging readers to find a cause or a passion to fill their free time, ensuring that their new freedom is meaningful. This is the final step in becoming truly untethered from the 9-to-5 world."
-            }
-        ],
-        "call_to_action": {
-            "subscribe": "Subscribe for more powerful book summaries",
-            "affiliate": "Check description to order this book."
-        },
-        "youtube_metadata": {
-            "title": "The 4-Hour Workweek by Tim Ferriss | Full Book Summary & Key Lessons",
-            "author": "Tim Ferriss",
-            "category": "Entrepreneurship & Lifestyle Design",
-            "affiliate_link": "https://amzn.to/4akc8q3",
-            "cover_image": "https://m.media-amazon.com/images/I/6142S0D-PiL._SL1263_.jpg",
-            "short_description": "Stop trading time for money! Discover the DEAL framework (Definition, Elimination, Automation, and Liberation) to escape the 9-5, live anywhere, and join the New Rich.",
-            "tags": [
-                "4 hour workweek summary",
-                "Tim Ferriss",
-                "lifestyle design",
-                "productivity hacks",
-                "outsourcing",
-                "passive income",
-                "how to retire early",
-                "80/20 rule",
-                "remote work tips",
-                "New Rich"
-            ]
-        },
-        "screentext": {
-            "original_title": "4 Hour Workweek",
-            "author": "Tim Ferriss",
-            "thumbnail_id": "1443456624"
-        }
-    },
-    {
-        "channel_intro": {
             "welcome_hook": "Welcome back to Book Summaries Channel! If you've ever felt like you're working harder than ever but still not getting things done, today\u2019s video will change the way you look at your calendar forever.",
             "intro_line": "We are exploring 'The Productivity Project' by Chris Bailey, a book born from a year-long experiment where the author tested every productivity hack imaginable to find what actually works for the modern professional."
         },
