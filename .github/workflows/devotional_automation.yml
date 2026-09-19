@@ -80,8 +80,8 @@ jobs:
 
     - name: Commit and Push Changes
       run: |
-        git config --local user.email "11308641+cssmatter@users.noreply.github.com"
-        git config --local user.name "cssmatter"
+        git config --local user.email "cssmatter@gmail.com"
+        git config --local user.name "Manish Salunke"
         
         if git diff --quiet data/DevotionalHindiQuotes/data.json && git diff --staged --quiet data/DevotionalHindiQuotes/data.json; then
           echo "No changes to commit"
