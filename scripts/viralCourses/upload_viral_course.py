@@ -66,7 +66,16 @@ def generate_metadata(asset_data, timestamps=None):
     # Build clean description
     description_parts = []
     
-    # Course link (first)
+    # App Links (first)
+    playstore_link = meta.get("playstore_link", "https://play.google.com/store/apps/details?id=com.cssmatter.certificationprep")
+    ios_link = meta.get("ios_link", "https://apps.apple.com/us/app/certification-preparation/id6776616024")
+    
+    description_parts.append("📱 Download Our Certification Prep App:")
+    description_parts.append(f"Play Store: {playstore_link}")
+    description_parts.append(f"iOS: {ios_link}")
+    description_parts.append("")
+    
+    # Course link
     if course_link:
         description_parts.append(f"{course_title}: {course_link} ")
         description_parts.append("")
