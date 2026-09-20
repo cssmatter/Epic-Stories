@@ -2,499 +2,6 @@
     {
         "video_assets": {
             "titles": [
-                "Mastering Hashing and Hash Tables: DSA Practice Questions",
-                "Data Structures and Algorithms: Hashing Exam Prep",
-                "Top 30 Hashing MCQs for Technical Interviews",
-                "Hash Tables Explained: Comprehensive Practice Test",
-                "DSA Interview Questions: Hashing and Collision Resolution",
-                "Ultimate Hashing Tutorial with Practice Questions",
-                "Cracking the Coding Interview: Hashing Essentials",
-                "Hash Table Performance and Implementation MCQs",
-                "Advanced DSA: Hashing Techniques and Applications",
-                "The Complete Hashing and Hash Maps Quiz"
-            ],
-            "intro_script": {
-                "hook": "Ever wondered how modern databases find your data in a fraction of a second, regardless of how much information they store? The secret lies in Hashing.",
-                "summary": "In this comprehensive guide, we are diving deep into DSA Hashing and Hash Tables. We’ve compiled 30 exam-level practice questions covering everything from hash functions and collision resolution to time complexity and load factors.",
-                "cta_intro": "Before we jump into the first question, make sure to grab a pen and paper to track your score. Let's see if you can ace this DSA challenge!",
-                "checkfullexamlinkindescription": "For the full practice exam and certification prep, check out the link in the description below."
-            },
-            "youtube_metadata": {
-                "courselink": "https://trk.udemy.com/vDzYNO",
-                "youtubetitle": "DSA Hashing and Hash Tables Practice Questions Masterclass",
-                "description": "Master Data Structures and Algorithms with this deep dive into Hashing and Hash Tables. This video covers 30 essential practice questions designed to mimic real-world technical interviews and certification exams. You will learn about Open Addressing, Chaining, Load Factors, and the mathematical foundations of Hash Functions. Each question includes a detailed explanation to ensure you understand the 'why' behind every answer.",
-                "tags": "DSA, Hashing, Hash Tables, Data Structures, Algorithms, Coding Interview, Software Engineering, Hash Map, Collision Resolution, Programming Quiz",
-                "hashtags": [
-                    "#DSA",
-                    "#Hashing",
-                    "#HashTables",
-                    "#CodingInterview",
-                    "#DataStructures",
-                    "#Programming"
-                ],
-                "keywords": [
-                    "Hashing in DSA",
-                    "Hash Table Collision Resolution",
-                    "Open Addressing vs Chaining",
-                    "Hash Function Examples",
-                    "Time Complexity of Hashing",
-                    "Load Factor in Hash Tables",
-                    "Double Hashing",
-                    "Linear Probing",
-                    "Quadratic Probing",
-                    "DSA Practice Questions"
-                ],
-                "mostsearchedongoogle": [
-                    "What is a hash table in DSA?",
-                    "Difference between hashing and mapping",
-                    "How to handle collisions in hash tables",
-                    "Average time complexity of hash table search",
-                    "Best hash functions for strings",
-                    "What is a load factor in hashing?",
-                    "Linear probing vs Quadratic probing",
-                    "Why is hashing O(1)?",
-                    "Applications of hash tables",
-                    "Hashing algorithms for interviews"
-                ],
-                "playstore_link": "https://play.google.com/store/apps/details?id=com.cssmatter.certificationprep",
-                "ios_link": "https://apps.apple.com/us/app/certification-preparation/id6776616024"
-            }
-        },
-        "mcq_data": [
-            {
-                "id": 1,
-                "domain": "Hash Functions",
-                "difficulty": "Easy",
-                "question": "What is the primary purpose of a Hash Function in a Hash Table?",
-                "options": {
-                    "A": "To sort the elements in the table in ascending order.",
-                    "B": "To map a large range of keys to a smaller range of indices.",
-                    "C": "To increase the storage capacity of the underlying array.",
-                    "D": "To ensure that no two keys ever produce the same index."
-                },
-                "answer": "B",
-                "detailedexplanation": "A hash function is designed to transform a key (which could be a large integer, a string, or an object) into a fixed-size integer value, which serves as an index for the array. This allows the data structure to map a potentially infinite or very large set of keys into a finite number of slots in the hash table, enabling efficient data retrieval."
-            },
-            {
-                "id": 2,
-                "domain": "Complexity Analysis",
-                "difficulty": "Medium",
-                "question": "In a well-distributed hash table, what is the average case time complexity for searching for an element?",
-                "options": {
-                    "A": "O(1)",
-                    "B": "O(log n)",
-                    "C": "O(n)",
-                    "D": "O(n log n)"
-                },
-                "answer": "A",
-                "detailedexplanation": "One of the most powerful features of hash tables is that, on average, they provide O(1) or constant time complexity for search, insert, and delete operations. This assumes that the hash function distributes keys uniformly across the table and the load factor is kept within a reasonable limit to minimize collisions."
-            },
-            {
-                "id": 3,
-                "domain": "Collision Resolution",
-                "difficulty": "Easy",
-                "question": "Which collision resolution technique uses a linked list at each slot of the hash table?",
-                "options": {
-                    "A": "Linear Probing",
-                    "B": "Quadratic Probing",
-                    "C": "Chaining",
-                    "D": "Double Hashing"
-                },
-                "answer": "C",
-                "detailedexplanation": "Chaining (or Separate Chaining) handles collisions by allowing multiple elements to exist at the same index. Each slot in the hash table points to a linked list (or another dynamic container) of all items that hashed to that specific index. This is an 'out-of-table' resolution method."
-            },
-            {
-                "id": 4,
-                "domain": "Open Addressing",
-                "difficulty": "Medium",
-                "question": "In Linear Probing, if a collision occurs at index 'i', where is the next potential index checked?",
-                "options": {
-                    "A": "i * 2",
-                    "B": "(i + 1) % table_size",
-                    "C": "(i + hash2(key)) % table_size",
-                    "D": "(i + k^2) % table_size"
-                },
-                "answer": "B",
-                "detailedexplanation": "Linear Probing is an open-addressing strategy where the algorithm searches for the next available slot sequentially. If index 'i' is occupied, it checks (i+1), then (i+2), and so on, using the modulo operator to wrap around to the beginning of the table if necessary."
-            },
-            {
-                "id": 5,
-                "domain": "Load Factor",
-                "difficulty": "Medium",
-                "question": "What does the 'Load Factor' (λ) of a hash table represent?",
-                "options": {
-                    "A": "The speed of the hash function calculation.",
-                    "B": "The ratio of the number of stored elements to the total number of slots.",
-                    "C": "The number of collisions that have occurred during insertion.",
-                    "D": "The percentage of the table that remains empty."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Load Factor (λ) is defined as n/m, where 'n' is the number of elements currently stored and 'm' is the total number of slots (size) of the hash table. It serves as a measure of how 'full' the table is and is used to decide when to resize (rehash) the table to maintain performance."
-            },
-            {
-                "id": 6,
-                "domain": "Complexity Analysis",
-                "difficulty": "Hard",
-                "question": "What is the worst-case time complexity for a search operation in a hash table using Chaining?",
-                "options": {
-                    "A": "O(1)",
-                    "B": "O(log n)",
-                    "C": "O(n)",
-                    "D": "O(n^2)"
-                },
-                "answer": "C",
-                "detailedexplanation": "In the absolute worst case, all keys could hash to the same index (a 'catastrophic' collision). If this happens in a chaining-based hash table, the data structure effectively becomes a single linked list of length 'n'. Therefore, searching would require traversing all 'n' elements, resulting in O(n) time complexity."
-            },
-            {
-                "id": 7,
-                "domain": "Hash Functions",
-                "difficulty": "Medium",
-                "question": "Which of the following is a property of a 'Good' Hash Function?",
-                "options": {
-                    "A": "It should be computationally expensive to prevent hacking.",
-                    "B": "It should map all keys to the same index for consistency.",
-                    "C": "It should distribute keys uniformly across the table.",
-                    "D": "It should return a different value every time it is called for the same key."
-                },
-                "answer": "C",
-                "detailedexplanation": "A good hash function must be deterministic (same key always gives the same index), fast to compute, and most importantly, it should distribute keys uniformly. Uniform distribution minimizes clusters and collisions, which keeps operations close to O(1)."
-            },
-            {
-                "id": 8,
-                "domain": "Open Addressing",
-                "difficulty": "Medium",
-                "question": "What is a major disadvantage of Linear Probing known as?",
-                "options": {
-                    "A": "Secondary Clustering",
-                    "B": "Primary Clustering",
-                    "C": "Infinite Looping",
-                    "D": "Memory Leakage"
-                },
-                "answer": "B",
-                "detailedexplanation": "Primary Clustering occurs in linear probing because as slots get filled, long runs of occupied slots build up. Any key that hashes into a cluster will require several probes to find an empty slot, and it will also extend the cluster further, progressively degrading performance."
-            },
-            {
-                "id": 9,
-                "domain": "Double Hashing",
-                "difficulty": "Hard",
-                "question": "In Double Hashing, what is the purpose of the second hash function?",
-                "options": {
-                    "A": "To compute the initial index for the key.",
-                    "B": "To determine the step size for probing when a collision occurs.",
-                    "C": "To encrypt the data before it is stored.",
-                    "D": "To resize the table when it becomes too full."
-                },
-                "answer": "B",
-                "detailedexplanation": "Double Hashing reduces clustering by using a second hash function, hash2(key), to determine the probe sequence interval. Instead of a fixed step of 1 (linear) or a growing step (quadratic), the step size depends on the key itself, which helps spread keys more effectively."
-            },
-            {
-                "id": 10,
-                "domain": "Applications",
-                "difficulty": "Easy",
-                "question": "Which of these is NOT a common application of Hashing?",
-                "options": {
-                    "A": "Implementing Sets and Maps.",
-                    "B": "Database Indexing.",
-                    "C": "Sorting a list of numbers in O(n log n) time.",
-                    "D": "Password verification using cryptographic hashes."
-                },
-                "answer": "C",
-                "detailedexplanation": "While hashing is great for lookups and verification, it is not inherently a sorting algorithm. Standard hashing does not maintain any order of elements. Sorting is typically handled by algorithms like Merge Sort, Quick Sort, or Heap Sort."
-            },
-            {
-                "id": 11,
-                "domain": "Quadratic Probing",
-                "difficulty": "Medium",
-                "question": "Quadratic Probing helps to eliminate which problem specifically?",
-                "options": {
-                    "A": "Primary Clustering",
-                    "B": "Secondary Clustering",
-                    "C": "Hash collisions entirely",
-                    "D": "The need for a hash function"
-                },
-                "answer": "A",
-                "detailedexplanation": "Quadratic probing eliminates primary clustering (the buildup of long contiguous segments in the table) by using a quadratic function to find the next slot. However, it can still suffer from secondary clustering, where keys that hash to the same initial index follow the same probe sequence."
-            },
-            {
-                "id": 12,
-                "domain": "Resizing",
-                "difficulty": "Medium",
-                "question": "When a hash table is resized (Rehashing), why can't we just copy the old array elements to the first half of the new array?",
-                "options": {
-                    "A": "It would be too slow.",
-                    "B": "The hash function is based on the table size; indices will change.",
-                    "C": "The data would become corrupted during the copy.",
-                    "D": "The new array must be empty to start with."
-                },
-                "answer": "B",
-                "detailedexplanation": "Most hash functions use the formula `index = hash(key) % table_size`. When the `table_size` changes during resizing, the index for every existing key must be recalculated. If you simply copied them, you would never find the elements again using the new table size."
-            },
-            {
-                "id": 13,
-                "domain": "Collision Resolution",
-                "difficulty": "Easy",
-                "question": "Which collision resolution technique is considered 'Closed Hashing'?",
-                "options": {
-                    "A": "Chaining",
-                    "B": "Open Addressing",
-                    "C": "Rehashing",
-                    "D": "Perfect Hashing"
-                },
-                "answer": "B",
-                "detailedexplanation": "Open Addressing is often called 'Closed Hashing' because all elements are stored within the hash table (the array) itself. No elements are stored outside in separate structures like linked lists, which is the case in Open Hashing (Chaining)."
-            },
-            {
-                "id": 14,
-                "domain": "Load Factor",
-                "difficulty": "Hard",
-                "question": "In a Chaining-based hash table, what is the expected length of a chain if there are 'n' elements and 'm' slots?",
-                "options": {
-                    "A": "n * m",
-                    "B": "n - m",
-                    "C": "n / m",
-                    "D": "log(n/m)"
-                },
-                "answer": "C",
-                "detailedexplanation": "Under the assumption of simple uniform hashing, each key is equally likely to hash to any of the 'm' slots. Therefore, the expected number of keys in any given slot is simply the total number of keys divided by the total number of slots, which is n/m (the load factor λ)."
-            },
-            {
-                "id": 15,
-                "domain": "Implementation",
-                "difficulty": "Medium",
-                "question": "Why is the size of a hash table often chosen to be a Prime Number?",
-                "options": {
-                    "A": "Because prime numbers use less memory.",
-                    "B": "To reduce the number of collisions when using the division method.",
-                    "C": "To make the hash function run faster.",
-                    "D": "To ensure that the load factor is always less than 1."
-                },
-                "answer": "B",
-                "detailedexplanation": "When using the division method (key % table_size), if the table size is a power of 2 or a composite number, certain patterns in the input keys might lead to heavy collisions. Using a prime number that is not close to a power of 2 helps distribute keys more uniformly across the table."
-            },
-            {
-                "id": 16,
-                "domain": "Operations",
-                "difficulty": "Medium",
-                "question": "In an Open Addressing hash table, how is an element 'deleted' so that search still works?",
-                "options": {
-                    "A": "The slot is set back to NULL immediately.",
-                    "B": "The slot is marked with a special 'Deleted' flag (tombstone).",
-                    "C": "The entire table is rehashed immediately.",
-                    "D": "Elements are shifted back to fill the hole."
-                },
-                "answer": "B",
-                "detailedexplanation": "In open addressing, if you simply set a deleted slot to NULL, you might break a probe sequence. A search for a later element in the sequence would stop at the NULL slot and fail to find the element. Using a 'tombstone' tells the search algorithm to keep looking, but tells the insert algorithm that the slot is available."
-            },
-            {
-                "id": 17,
-                "domain": "Perfect Hashing",
-                "difficulty": "Hard",
-                "question": "What is 'Perfect Hashing'?",
-                "options": {
-                    "A": "A hash function that never has a collision for a specific static set of keys.",
-                    "B": "A hash function that produces indices in alphabetical order.",
-                    "C": "A hash table that has a load factor of exactly 1.0.",
-                    "D": "A hash table that uses O(n^2) space to ensure O(1) search."
-                },
-                "answer": "A",
-                "detailedexplanation": "Perfect hashing is a technique used when the set of keys is static (fixed and known in advance). A perfect hash function maps each key to a unique index with zero collisions. This is often implemented using a two-level hashing scheme to achieve O(1) worst-case search time."
-            },
-            {
-                "id": 18,
-                "domain": "String Hashing",
-                "difficulty": "Medium",
-                "question": "When hashing strings, what is the 'Polynomial Rolling Hash' primarily used for?",
-                "options": {
-                    "A": "To compress strings into smaller sizes.",
-                    "B": "To efficiently compute hash values for substrings (like in Rabin-Karp).",
-                    "C": "To sort strings by their ASCII values.",
-                    "D": "To encrypt strings for secure storage."
-                },
-                "answer": "B",
-                "detailedexplanation": "Polynomial rolling hashing allows for the computation of a hash for a sliding window of a string in O(1) time after an initial O(k) setup. This is the foundation of the Rabin-Karp string matching algorithm."
-            },
-            {
-                "id": 19,
-                "domain": "Complexity Analysis",
-                "difficulty": "Medium",
-                "question": "What is the space complexity of a Hash Table storing 'n' elements using Chaining with 'm' slots?",
-                "options": {
-                    "A": "O(m)",
-                    "B": "O(n)",
-                    "C": "O(n + m)",
-                    "D": "O(n * m)"
-                },
-                "answer": "C",
-                "detailedexplanation": "The space complexity is O(n + m) because you need 'm' slots for the array (the buckets) and 'n' nodes for the total elements stored in the linked lists across all buckets."
-            },
-            {
-                "id": 20,
-                "domain": "Java Specifics",
-                "difficulty": "Easy",
-                "question": "In Java, what is the default initial capacity and load factor for a HashMap?",
-                "options": {
-                    "A": "10 and 0.5",
-                    "B": "16 and 0.75",
-                    "C": "32 and 0.8",
-                    "D": "100 and 1.0"
-                },
-                "answer": "B",
-                "detailedexplanation": "Java's `java.util.HashMap` defaults to an initial capacity of 16 and a load factor of 0.75. This is considered a good balance between time and space costs for general-purpose usage."
-            },
-            {
-                "id": 21,
-                "domain": "Collision Resolution",
-                "difficulty": "Medium",
-                "question": "What happens in a Hash Table if the hash function is `h(k) = 1` for all keys?",
-                "options": {
-                    "A": "The table will be very fast because the index is constant.",
-                    "B": "The table will function like a Linked List (if using chaining).",
-                    "C": "The table will throw an Overflow exception.",
-                    "D": "The table will automatically resize to accommodate the keys."
-                },
-                "answer": "B",
-                "detailedexplanation": "If every key hashes to the same value, all elements will be placed in the same bucket. In a chaining-based implementation, this creates one long linked list, turning O(1) operations into O(n) operations."
-            },
-            {
-                "id": 22,
-                "domain": "Open Addressing",
-                "difficulty": "Hard",
-                "question": "Which of the following ensures that Linear Probing will eventually visit every slot in the table?",
-                "options": {
-                    "A": "The table size is a prime number.",
-                    "B": "The load factor is exactly 0.5.",
-                    "C": "The step size is 1 and the table size is at least 'n'.",
-                    "D": "The hash function is cryptographic."
-                },
-                "answer": "C",
-                "detailedexplanation": "Linear probing moves in steps of 1. As long as the step size (1) and the table size 'm' are relatively prime (which they always are since 1 divides everything), and there is at least one empty slot, the probe will visit every slot."
-            },
-            {
-                "id": 23,
-                "domain": "Hash Functions",
-                "difficulty": "Medium",
-                "question": "What is 'Universal Hashing'?",
-                "options": {
-                    "A": "A hash function that works for every possible data type.",
-                    "B": "Choosing a hash function randomly from a carefully designed family of functions.",
-                    "C": "A hash function that produces the same output on all operating systems.",
-                    "D": "A hash function that uses the entire universe of keys."
-                },
-                "answer": "B",
-                "detailedexplanation": "Universal Hashing involves picking a hash function at random from a family of hash functions at the start of execution. This prevents an adversary from choosing a 'bad' set of keys that specifically cause many collisions for a known, fixed hash function."
-            },
-            {
-                "id": 24,
-                "domain": "Performance",
-                "difficulty": "Easy",
-                "question": "How does increasing the table size (m) typically affect the number of collisions?",
-                "options": {
-                    "A": "It increases collisions because there is more space to collide.",
-                    "B": "It decreases collisions because the load factor (n/m) decreases.",
-                    "C": "It has no effect on collisions.",
-                    "D": "It makes collisions more expensive to resolve."
-                },
-                "answer": "B",
-                "detailedexplanation": "By increasing 'm', the load factor λ = n/m decreases. A lower load factor means the table is more sparse, which mathematically reduces the probability that two keys will hash to the same index."
-            },
-            {
-                "id": 25,
-                "domain": "Data Structures",
-                "difficulty": "Medium",
-                "question": "What is the advantage of using a Self-Balancing Binary Search Tree instead of a Linked List for Chaining?",
-                "options": {
-                    "A": "It uses less memory.",
-                    "B": "It improves worst-case search time from O(n) to O(log n) within a bucket.",
-                    "C": "It makes the hash function easier to write.",
-                    "D": "It prevents the need for rehashing."
-                },
-                "answer": "B",
-                "detailedexplanation": "Some modern implementations (like Java 8's HashMap) switch from a linked list to a balanced tree (like a Red-Black Tree) when a bucket exceeds a certain threshold. This ensures that even under heavy collisions, the search time in that bucket is O(log k) rather than O(k)."
-            },
-            {
-                "id": 26,
-                "domain": "Cryptography",
-                "difficulty": "Easy",
-                "question": "Which of these is a 'One-Way' property of cryptographic hash functions?",
-                "options": {
-                    "A": "It is easy to find a key from its hash value.",
-                    "B": "It is computationally infeasible to reverse the hash to find the original key.",
-                    "C": "The hash value is always the same length as the input key.",
-                    "D": "Two different keys should always produce the same hash."
-                },
-                "answer": "B",
-                "detailedexplanation": "A 'One-Way' (pre-image resistance) property means that given a hash value 'h', it is practically impossible to find the input 'x' such that Hash(x) = h. This is vital for security applications like password storage."
-            },
-            {
-                "id": 27,
-                "domain": "Operations",
-                "difficulty": "Medium",
-                "question": "If we insert elements 10, 20, 30, 40 into a hash table of size 10 using Linear Probing and h(k) = k % 10, what happens?",
-                "options": {
-                    "A": "They all go into index 0 using chaining.",
-                    "B": "They occupy indices 0, 1, 2, 3.",
-                    "C": "They all overwrite each other at index 0.",
-                    "D": "The table throws an error because the keys are multiples of the size."
-                },
-                "answer": "B",
-                "detailedexplanation": "All keys (10, 20, 30, 40) have a remainder of 0 when divided by 10. 10 goes to index 0. 20 collides at 0, probes to 1. 30 collides at 0 and 1, probes to 2. 40 collides at 0, 1, and 2, and probes to 3."
-            },
-            {
-                "id": 28,
-                "domain": "Implementation",
-                "difficulty": "Hard",
-                "question": "What is 'Cuckoo Hashing'?",
-                "options": {
-                    "A": "A method where an element can be stored in one of two locations.",
-                    "B": "A method where elements are deleted randomly.",
-                    "C": "A method where hash functions change every minute.",
-                    "D": "A method used only for bird migration data."
-                },
-                "answer": "A",
-                "detailedexplanation": "Cuckoo hashing uses two hash functions and two tables. An element can be at index h1(key) in table 1 or h2(key) in table 2. If both are full, it 'kicks out' an existing element to its alternative location, potentially triggering a chain of displacements. It provides O(1) worst-case lookup time."
-            },
-            {
-                "id": 29,
-                "domain": "Consistency",
-                "difficulty": "Medium",
-                "question": "What is 'Consistent Hashing' primarily used for?",
-                "options": {
-                    "A": "Local variable storage.",
-                    "B": "Distributed caching and load balancing.",
-                    "C": "Sorting large arrays.",
-                    "D": "Reducing the size of pointers."
-                },
-                "answer": "B",
-                "detailedexplanation": "Consistent hashing is used in distributed systems so that when a new node is added or removed from a cluster, only a small fraction of keys (k/n) need to be remapped. This prevents a total system re-shuffle, which would happen with standard `key % n` hashing."
-            },
-            {
-                "id": 30,
-                "domain": "Theory",
-                "difficulty": "Easy",
-                "question": "What is the Birthday Paradox's relevance to Hashing?",
-                "options": {
-                    "A": "It calculates the age of the hash table.",
-                    "B": "It shows that collisions are much more likely than intuitively expected.",
-                    "C": "It proves that hashing is impossible for large datasets.",
-                    "D": "It determines the best day to perform rehashing."
-                },
-                "answer": "B",
-                "detailedexplanation": "The Birthday Paradox shows that in a room of just 23 people, there's a 50% chance two share a birthday. In hashing, this implies that collisions occur much sooner than one might think, even if the table is relatively empty and the hash function is good."
-            }
-        ],
-        "outro_script": {
-            "closing": "That wraps up our 30-question deep dive into Hashing and Hash Tables! How many did you get right? Let us know your score in the comments below.",
-            "cta_final": "If you found this helpful, don't forget to hit the like button and subscribe for more DSA deep dives. It really helps the channel grow!",
-            "next_steps": "Ready for the next level? Click the link in the description to access our full Data Structures and Algorithms certification course. See you in the next one!"
-        },
-        "on_screen_elements": {
-            "timer_duration": "10 seconds",
-            "transition_effect_hints": "Smooth slide-in for questions, highlighting the correct option in green after the timer ends, and using callouts for key terms in the explanation."
-        }
-    },
-    {
-        "video_assets": {
-            "titles": [
                 "Master Heaps & Priority Queues | 30 Expert Practice Questions",
                 "DSA Interview Prep: Heaps and Priority Queues MCQs",
                 "Ultimate Priority Queue & Binary Heap Practice Exam",
@@ -976,7 +483,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 questions on Heaps and Priority Queues! How many did you get right? If you found some of the complexity or array indexing questions tricky, don't worry—those are the most common pitfalls in exams.",
+            "closing": "That wraps up our 30 questions on Heaps and Priority Queues! How many did you get right? If you found some of the complexity or array indexing questions tricky, don't worry\u2014those are the most common pitfalls in exams.",
             "cta_final": "If this video helped you clarify these concepts, please hit the like button and subscribe for more DSA practice sets.",
             "next_steps": "Want to tackle more topics? Click here to watch our next video on Graph Algorithms or check the description for the full Udemy practice exam link to get certified!"
         },
@@ -1292,12 +799,12 @@
                 "question": "How do you detect a cycle in a linked list efficiently?",
                 "options": {
                     "A": "Using a single pointer to traverse the list twice",
-                    "B": "Using Floyd’s Cycle-Finding Algorithm (Two Pointers)",
+                    "B": "Using Floyd\u2019s Cycle-Finding Algorithm (Two Pointers)",
                     "C": "Counting the number of nodes",
                     "D": "Checking if the last node points to NULL"
                 },
                 "answer": "B",
-                "detailedexplanation": "Floyd’s 'Tortoise and Hare' algorithm uses two pointers: one moving one step at a time and the other moving two steps. If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the loop."
+                "detailedexplanation": "Floyd\u2019s 'Tortoise and Hare' algorithm uses two pointers: one moving one step at a time and the other moving two steps. If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the loop."
             },
             {
                 "id": 19,
@@ -1493,7 +1000,7 @@
                 "Advanced Linked List Algorithms Practice"
             ],
             "intro_script": {
-                "hook": "Ever wondered why top tech companies like Google and Meta still obsess over Linked Lists in interviews when we have dynamic arrays? It’s because Linked Lists test your fundamental understanding of memory management and pointer logic.",
+                "hook": "Ever wondered why top tech companies like Google and Meta still obsess over Linked Lists in interviews when we have dynamic arrays? It\u2019s because Linked Lists test your fundamental understanding of memory management and pointer logic.",
                 "summary": "In this video, we dive deep into 30 essential Linked List questions that cover everything from basic traversal to complex cycle detection and memory optimization. Whether you're a beginner or a senior dev, these questions will sharpen your DSA skills.",
                 "cta_intro": "Before we start, make sure to grab a notebook. We'll be walking through detailed explanations for every single answer.",
                 "checkfullexamlinkindescription": "For the complete practice set and certification, check out the full course link in the description below."
@@ -1501,7 +1008,7 @@
             "youtube_metadata": {
                 "courselink": "https://trk.udemy.com/GbX7KV",
                 "youtubetitle": "Linked List Interview Questions and Answers | Data Structures and Algorithms Practice",
-                "description": "Master Linked Lists with these 30 comprehensive practice questions. This video covers Singly Linked Lists, Doubly Linked Lists, Circular Lists, and advanced algorithms like Floyd’s Cycle Finding and the Tortoise and Hare approach. Perfect for software engineering interviews and computer science exams.\n\nTopics Covered:\n- Memory Allocation (Contiguous vs Non-contiguous)\n- Time and Space Complexity\n- Reversing a Linked List\n- Loop Detection and Removal\n- Doubly and Circular Linked List Operations\n\nTake the full certification course here: https://trk.udemy.com/GbX7KV",
+                "description": "Master Linked Lists with these 30 comprehensive practice questions. This video covers Singly Linked Lists, Doubly Linked Lists, Circular Lists, and advanced algorithms like Floyd\u2019s Cycle Finding and the Tortoise and Hare approach. Perfect for software engineering interviews and computer science exams.\n\nTopics Covered:\n- Memory Allocation (Contiguous vs Non-contiguous)\n- Time and Space Complexity\n- Reversing a Linked List\n- Loop Detection and Removal\n- Doubly and Circular Linked List Operations\n\nTake the full certification course here: https://trk.udemy.com/GbX7KV",
                 "tags": "linked list, dsa, data structures, coding interview, programming, java, python, c++, algorithms, tech interview, leetcode linked list",
                 "hashtags": [
                     "DSA",
@@ -1574,12 +1081,12 @@
                 "question": "Which algorithm is most efficient for detecting a cycle in a Linked List?",
                 "options": {
                     "A": "Binary Search",
-                    "B": "Floyd’s Cycle-Finding Algorithm",
+                    "B": "Floyd\u2019s Cycle-Finding Algorithm",
                     "C": "Depth First Search",
                     "D": "Merge Sort"
                 },
                 "answer": "B",
-                "detailedexplanation": "Floyd’s Cycle-Finding Algorithm, also known as the 'Tortoise and Hare' algorithm, uses two pointers moving at different speeds (one node at a time and two nodes at a time). If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the loop. This method is highly efficient as it operates in $O(N)$ time complexity and $O(1)$ space complexity, as it doesn't require extra memory like a hash set."
+                "detailedexplanation": "Floyd\u2019s Cycle-Finding Algorithm, also known as the 'Tortoise and Hare' algorithm, uses two pointers moving at different speeds (one node at a time and two nodes at a time). If there is a cycle, the fast pointer will eventually catch up to the slow pointer within the loop. This method is highly efficient as it operates in $O(N)$ time complexity and $O(1)$ space complexity, as it doesn't require extra memory like a hash set."
             },
             {
                 "id": 4,
@@ -1985,15 +1492,15 @@
                 "Top 30 MST Interview Questions and Answers"
             ],
             "intro_script": {
-                "hook": "Ever wondered how GPS systems find the most efficient way to connect multiple cities with the least amount of cable or road? That’s the power of the Minimum Spanning Tree.",
-                "summary": "In this video, we are diving deep into 30 essential practice questions covering Kruskal’s, Prim’s, and the core properties of MSTs to get you ready for your DSA certification or technical interview.",
+                "hook": "Ever wondered how GPS systems find the most efficient way to connect multiple cities with the least amount of cable or road? That\u2019s the power of the Minimum Spanning Tree.",
+                "summary": "In this video, we are diving deep into 30 essential practice questions covering Kruskal\u2019s, Prim\u2019s, and the core properties of MSTs to get you ready for your DSA certification or technical interview.",
                 "cta_intro": "Make sure to grab a pen and paper to track your score as we walk through these challenges.",
                 "checkfullexamlinkindescription": "For the full interactive practice exam and more resources, check the link in the description below."
             },
             "youtube_metadata": {
                 "courselink": "https://trk.udemy.com/bkbYO9",
                 "youtubetitle": "Minimum Spanning Tree MST Algorithms Practice Questions and Explanations",
-                "description": "Master Minimum Spanning Trees (MST) with this comprehensive practice guide. We cover Kruskal’s Algorithm, Prim’s Algorithm, Disjoint Set Union (DSU), and Graph Theory properties. Perfect for students and professionals preparing for DSA certifications and coding interviews.\n\nIn this video, you will learn:\n- Key differences between Prim's and Kruskal's\n- Time complexity analysis of MST algorithms\n- Edge cases in weighted graphs\n- Real-world applications of Spanning Trees",
+                "description": "Master Minimum Spanning Trees (MST) with this comprehensive practice guide. We cover Kruskal\u2019s Algorithm, Prim\u2019s Algorithm, Disjoint Set Union (DSU), and Graph Theory properties. Perfect for students and professionals preparing for DSA certifications and coding interviews.\n\nIn this video, you will learn:\n- Key differences between Prim's and Kruskal's\n- Time complexity analysis of MST algorithms\n- Edge cases in weighted graphs\n- Real-world applications of Spanning Trees",
                 "tags": "Minimum Spanning Tree, MST, Prim's Algorithm, Kruskal's Algorithm, Data Structures, Algorithms, Graph Theory, DSA, Coding Interview, Greedy Algorithms",
                 "hashtags": [
                     "#DSA",
@@ -2061,7 +1568,7 @@
                 "id": 3,
                 "domain": "Prim's Algorithm",
                 "difficulty": "Medium",
-                "question": "In Prim’s Algorithm, how is the next vertex to be added to the MST selected?",
+                "question": "In Prim\u2019s Algorithm, how is the next vertex to be added to the MST selected?",
                 "options": {
                     "A": "The edge with the absolute minimum weight in the entire graph.",
                     "B": "The vertex with the highest degree in the remaining graph.",
@@ -2069,13 +1576,13 @@
                     "D": "A random vertex to ensure a diverse tree structure."
                 },
                 "answer": "C",
-                "detailedexplanation": "Prim’s Algorithm is a greedy approach that grows the MST from a starting source vertex. In each step, it looks at all edges connecting vertices already in the MST to vertices not yet in the MST. It picks the edge with the smallest weight among these. This is typically implemented using a Priority Queue (Min-Heap) to extract the minimum distance efficiently."
+                "detailedexplanation": "Prim\u2019s Algorithm is a greedy approach that grows the MST from a starting source vertex. In each step, it looks at all edges connecting vertices already in the MST to vertices not yet in the MST. It picks the edge with the smallest weight among these. This is typically implemented using a Priority Queue (Min-Heap) to extract the minimum distance efficiently."
             },
             {
                 "id": 4,
                 "domain": "Complexity Analysis",
                 "difficulty": "Hard",
-                "question": "What is the time complexity of Prim’s Algorithm when implemented with a Fibonacci Heap?",
+                "question": "What is the time complexity of Prim\u2019s Algorithm when implemented with a Fibonacci Heap?",
                 "options": {
                     "A": "O(E log V)",
                     "B": "O(V^2)",
@@ -2103,7 +1610,7 @@
                 "id": 6,
                 "domain": "Kruskal's Algorithm",
                 "difficulty": "Easy",
-                "question": "What is the first step in Kruskal’s Algorithm?",
+                "question": "What is the first step in Kruskal\u2019s Algorithm?",
                 "options": {
                     "A": "Pick a random starting vertex.",
                     "B": "Sort all edges in the graph by weight in non-decreasing order.",
@@ -2139,7 +1646,7 @@
                     "D": "Floyd-Warshall Algorithm"
                 },
                 "answer": "B",
-                "detailedexplanation": "Boruvka’s algorithm (the oldest MST algorithm) works in steps. In each step, every component in the forest finds its minimum-weight edge to a vertex outside itself. All these edges are added simultaneously. This 'multi-component' growth makes it more suitable for parallel processing compared to the sequential nature of Prim's or Kruskal's."
+                "detailedexplanation": "Boruvka\u2019s algorithm (the oldest MST algorithm) works in steps. In each step, every component in the forest finds its minimum-weight edge to a vertex outside itself. All these edges are added simultaneously. This 'multi-component' growth makes it more suitable for parallel processing compared to the sequential nature of Prim's or Kruskal's."
             },
             {
                 "id": 9,
@@ -2167,7 +1674,7 @@
                     "D": "It automatically connects the components with zero-weight edges."
                 },
                 "answer": "C",
-                "detailedexplanation": "If a graph is disconnected, you cannot form a single tree that spans all vertices. Kruskal’s algorithm will process all edges and connect vertices within their respective reachable components. The result will be a 'Minimum Spanning Forest,' which is a collection of MSTs—one for each connected component of the original graph."
+                "detailedexplanation": "If a graph is disconnected, you cannot form a single tree that spans all vertices. Kruskal\u2019s algorithm will process all edges and connect vertices within their respective reachable components. The result will be a 'Minimum Spanning Forest,' which is a collection of MSTs\u2014one for each connected component of the original graph."
             },
             {
                 "id": 11,
@@ -2428,12 +1935,12 @@
                 "question": "What is the complexity of Kruskal's algorithm if the edges are already sorted?",
                 "options": {
                     "A": "O(E log V)",
-                    "B": "O(E α(V))",
+                    "B": "O(E \u03b1(V))",
                     "C": "O(V^2)",
                     "D": "O(E + V)"
                 },
                 "answer": "B",
-                "detailedexplanation": "If the edges are already sorted, the only remaining cost is the DSU operations for each of the E edges. Using both path compression and union by rank, the time complexity of DSU operations is O(E α(V)), where α is the inverse Ackermann function. This is practically O(E) because α(V) grows extremely slowly."
+                "detailedexplanation": "If the edges are already sorted, the only remaining cost is the DSU operations for each of the E edges. Using both path compression and union by rank, the time complexity of DSU operations is O(E \u03b1(V)), where \u03b1 is the inverse Ackermann function. This is practically O(E) because \u03b1(V) grows extremely slowly."
             },
             {
                 "id": 30,
@@ -2447,7 +1954,7 @@
                     "D": "Yes, by adding auxiliary nodes."
                 },
                 "answer": "B",
-                "detailedexplanation": "A spanning tree, by definition, 'spans' the graph, meaning it must include *all* the original vertices—no more, no less. It is a subgraph with V vertices and V-1 edges."
+                "detailedexplanation": "A spanning tree, by definition, 'spans' the graph, meaning it must include *all* the original vertices\u2014no more, no less. It is a subgraph with V vertices and V-1 edges."
             }
         ],
         "outro_script": {
@@ -2632,7 +2139,7 @@
                     "D": "O(N log N)"
                 },
                 "answer": "B",
-                "detailedexplanation": "To find the maximum sum submatrix, we iterate through all possible pairs of columns (O(N^2) pairs). For each pair, we sum the elements in each row between these two columns to create a temporary 1D array of size N. We then apply the standard 1D Kadane’s algorithm (O(N)) on this temporary array to find the max sum for that vertical slice. The total complexity is O(N * N * N), which is O(N^3). Without this optimization, a brute-force check of all submatrices would take O(N^4) or O(N^6)."
+                "detailedexplanation": "To find the maximum sum submatrix, we iterate through all possible pairs of columns (O(N^2) pairs). For each pair, we sum the elements in each row between these two columns to create a temporary 1D array of size N. We then apply the standard 1D Kadane\u2019s algorithm (O(N)) on this temporary array to find the max sum for that vertical slice. The total complexity is O(N * N * N), which is O(N^3). Without this optimization, a brute-force check of all submatrices would take O(N^4) or O(N^6)."
             },
             {
                 "id": 9,
@@ -3279,7 +2786,7 @@
                     "D": "Shortest path in a graph"
                 },
                 "answer": "B",
-                "detailedexplanation": "A Suffix Tree is a compressed Trie containing all suffixes of a given string. Once built (using Ukkonen’s algorithm in O(n) time), it allows for pattern matching in O(m) time, where m is the length of the pattern, regardless of the length of the original text. It is a fundamental tool in bioinformatics and string processing."
+                "detailedexplanation": "A Suffix Tree is a compressed Trie containing all suffixes of a given string. Once built (using Ukkonen\u2019s algorithm in O(n) time), it allows for pattern matching in O(m) time, where m is the length of the pattern, regardless of the length of the original text. It is a fundamental tool in bioinformatics and string processing."
             },
             {
                 "id": 20,
@@ -3419,7 +2926,7 @@
                     "D": "All have the same asymptotic complexity"
                 },
                 "answer": "D",
-                "detailedexplanation": "Asymptotically, Search, Insertion, and Deletion all take O(log n) time in an AVL tree. While Deletion is slightly more complex in practice because it may require multiple rotations (up to the root) to restore balance—whereas Insertion requires at most two—their Big-O complexity remains the same."
+                "detailedexplanation": "Asymptotically, Search, Insertion, and Deletion all take O(log n) time in an AVL tree. While Deletion is slightly more complex in practice because it may require multiple rotations (up to the root) to restore balance\u2014whereas Insertion requires at most two\u2014their Big-O complexity remains the same."
             },
             {
                 "id": 30,
@@ -3721,7 +3228,7 @@
                 "id": 16,
                 "domain": "Algorithms",
                 "difficulty": "Medium",
-                "question": "What is the time complexity of the Kadane’s Algorithm used to find the maximum subarray sum?",
+                "question": "What is the time complexity of the Kadane\u2019s Algorithm used to find the maximum subarray sum?",
                 "options": {
                     "A": "O(n^2)",
                     "B": "O(n log n)",
@@ -3929,7 +3436,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our deep dive into Array Data Structures. How many did you get right? If you struggled with the complexity questions, don't worry—those are often the hardest part of the exam.",
+            "closing": "That concludes our deep dive into Array Data Structures. How many did you get right? If you struggled with the complexity questions, don't worry\u2014those are often the hardest part of the exam.",
             "cta_final": "If you found this helpful, hit the like button and subscribe for more DSA practice. It really helps the channel.",
             "next_steps": "Ready for the next level? Check out our next video on Linked Lists or click the link in the description to take the full certification mock exam."
         },
@@ -4808,7 +4315,7 @@
                     "D": "It is a directed acyclic graph."
                 },
                 "answer": "D",
-                "detailedexplanation": "All trees, including BSTs, are a specific type of Graph—specifically, a Directed Acyclic Graph (DAG) if you consider the edges to have direction from parent to child. Options A, B, and C are only true for specific types of trees (Complete, Full, or perfectly balanced trees) but not for all BSTs."
+                "detailedexplanation": "All trees, including BSTs, are a specific type of Graph\u2014specifically, a Directed Acyclic Graph (DAG) if you consider the edges to have direction from parent to child. Options A, B, and C are only true for specific types of trees (Complete, Full, or perfectly balanced trees) but not for all BSTs."
             },
             {
                 "id": 24,
@@ -4910,7 +4417,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question deep dive into Binary Search Trees! How many did you get right? If you struggled with the deletion or successor logic, don't worry—those are the toughest parts for everyone.",
+            "closing": "That wraps up our 30-question deep dive into Binary Search Trees! How many did you get right? If you struggled with the deletion or successor logic, don't worry\u2014those are the toughest parts for everyone.",
             "cta_final": "If this helped you clear up some confusion, hit that like button and subscribe for more DSA deep dives.",
             "next_steps": "Would you like me to create a similar practice set for AVL Trees or Red-Black Trees to help you master balanced structures?"
         },
@@ -5101,11 +4608,11 @@
                 "options": {
                     "A": "n/2",
                     "B": "log n",
-                    "C": "√n",
+                    "C": "\u221an",
                     "D": "n-1"
                 },
                 "answer": "C",
-                "detailedexplanation": "In Jump Search, the goal is to balance the number of jumps and the number of linear steps performed once the correct block is found. If the block size is 'm', the number of jumps is n/m and the maximum linear steps are m-1. To minimize the total (n/m + m), we take the derivative and set it to zero, which gives m = √n. This results in a time complexity of O(√n)."
+                "detailedexplanation": "In Jump Search, the goal is to balance the number of jumps and the number of linear steps performed once the correct block is found. If the block size is 'm', the number of jumps is n/m and the maximum linear steps are m-1. To minimize the total (n/m + m), we take the derivative and set it to zero, which gives m = \u221an. This results in a time complexity of O(\u221an)."
             },
             {
                 "id": 10,
@@ -5119,7 +4626,7 @@
                     "D": "They all have the same worst-case"
                 },
                 "answer": "A",
-                "detailedexplanation": "Comparing the worst-case complexities: Linear Search is O(n), Jump Search is O(√n), and Binary Search is O(log n). Among these, O(n) grows the fastest as the input size increases, making Linear Search the least efficient in terms of worst-case time complexity for large datasets."
+                "detailedexplanation": "Comparing the worst-case complexities: Linear Search is O(n), Jump Search is O(\u221an), and Binary Search is O(log n). Among these, O(n) grows the fastest as the input size increases, making Linear Search the least efficient in terms of worst-case time complexity for large datasets."
             },
             {
                 "id": 11,
@@ -5335,7 +4842,7 @@
                 "id": 26,
                 "domain": "Complexity Analysis",
                 "difficulty": "Medium",
-                "question": "Which of the following has O(√n) time complexity?",
+                "question": "Which of the following has O(\u221an) time complexity?",
                 "options": {
                     "A": "Binary Search",
                     "B": "Jump Search",
@@ -5343,7 +4850,7 @@
                     "D": "Exponential Search"
                 },
                 "answer": "B",
-                "detailedexplanation": "As discussed in question 9, Jump Search optimal block size is √n. This leads to at most √n jumps and √n linear steps in the worst case, giving an overall complexity of O(√n)."
+                "detailedexplanation": "As discussed in question 9, Jump Search optimal block size is \u221an. This leads to at most \u221an jumps and \u221an linear steps in the worst case, giving an overall complexity of O(\u221an)."
             },
             {
                 "id": 27,
@@ -5427,8 +4934,8 @@
                 "The Complete Sorting Algorithms Practice Set | DSA 2026"
             ],
             "intro_script": {
-                "hook": "Are you ready to master the backbone of Data Structures? Sorting algorithms are more than just arranging numbers—they are the key to efficiency in every major software system, from search engines to databases.",
-                "summary": "In this video, we dive deep into 30 comprehensive practice questions covering Bubble, Selection, Insertion, Merge, Quick, and Heap Sort. We’ll analyze time complexities, space constraints, and stability to ensure you're exam-ready.",
+                "hook": "Are you ready to master the backbone of Data Structures? Sorting algorithms are more than just arranging numbers\u2014they are the key to efficiency in every major software system, from search engines to databases.",
+                "summary": "In this video, we dive deep into 30 comprehensive practice questions covering Bubble, Selection, Insertion, Merge, Quick, and Heap Sort. We\u2019ll analyze time complexities, space constraints, and stability to ensure you're exam-ready.",
                 "cta_intro": "Make sure to pause the video after each question to test yourself before we reveal the detailed solution!",
                 "checkfullexamlinkindescription": "For the full DSA Sorting Algorithms practice exam and certification guide, check the link in the description below."
             },
@@ -5667,7 +5174,7 @@
                     "D": "Quick Sort"
                 },
                 "answer": "C",
-                "detailedexplanation": "Among the options, Merge Sort provides a guaranteed O(n log n) worst-case time complexity. Bubble and Selection Sort are O(n^2), and Quick Sort—while usually fast—has a worst-case of O(n^2). This makes Merge Sort more reliable for mission-critical systems where predictable performance is required."
+                "detailedexplanation": "Among the options, Merge Sort provides a guaranteed O(n log n) worst-case time complexity. Bubble and Selection Sort are O(n^2), and Quick Sort\u2014while usually fast\u2014has a worst-case of O(n^2). This makes Merge Sort more reliable for mission-critical systems where predictable performance is required."
             },
             {
                 "id": 15,
@@ -6643,7 +6150,7 @@
                 "id": 14,
                 "domain": "Bit Manipulation",
                 "difficulty": "Hard",
-                "question": "The Bitap algorithm (Baeza-Yates–Gonnet) is primarily used for:",
+                "question": "The Bitap algorithm (Baeza-Yates\u2013Gonnet) is primarily used for:",
                 "options": {
                     "A": "Exact and approximate string matching.",
                     "B": "Compressing large text files.",
@@ -7886,7 +7393,7 @@
                 "Standard Trie and Compressed Trie Practice Test"
             ],
             "intro_script": {
-                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic—it's the power of the Trie data structure.",
+                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic\u2014it's the power of the Trie data structure.",
                 "summary": "In this deep dive, we are tackling 30 high-frequency practice questions on Tries and Prefix Trees, covering everything from basic insertion to complex pattern matching and memory optimization.",
                 "cta_intro": "Before we jump in, make sure you have your notepad ready to track your score.",
                 "checkfullexamlinkindescription": "For the full interactive practice exam and certification prep, check out the link in the description below."
@@ -8376,7 +7883,7 @@
                 "Standard Trie and Compressed Trie Practice Test"
             ],
             "intro_script": {
-                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic—it's the power of the Trie data structure.",
+                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic\u2014it's the power of the Trie data structure.",
                 "summary": "In this deep dive, we are tackling 30 high-frequency practice questions on Tries and Prefix Trees, covering everything from basic insertion to complex pattern matching and memory optimization.",
                 "cta_intro": "Before we jump in, make sure you have your notepad ready to track your score.",
                 "checkfullexamlinkindescription": "For the full interactive practice exam and certification prep, check out the link in the description below."
@@ -8866,7 +8373,7 @@
                 "Standard Trie and Compressed Trie Practice Test"
             ],
             "intro_script": {
-                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic—it's the power of the Trie data structure.",
+                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic\u2014it's the power of the Trie data structure.",
                 "summary": "In this deep dive, we are tackling 30 high-frequency practice questions on Tries and Prefix Trees, covering everything from basic insertion to complex pattern matching and memory optimization.",
                 "cta_intro": "Before we jump in, make sure you have your notepad ready to track your score.",
                 "checkfullexamlinkindescription": "For the full interactive practice exam and certification prep, check out the link in the description below."
@@ -9356,7 +8863,7 @@
                 "Standard Trie and Compressed Trie Practice Test"
             ],
             "intro_script": {
-                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic—it's the power of the Trie data structure.",
+                "hook": "Ever wondered how Google autocompletes your search queries in milliseconds? It's not magic\u2014it's the power of the Trie data structure.",
                 "summary": "In this deep dive, we are tackling 30 high-frequency practice questions on Tries and Prefix Trees, covering everything from basic insertion to complex pattern matching and memory optimization.",
                 "cta_intro": "Before we jump in, make sure you have your notepad ready to track your score.",
                 "checkfullexamlinkindescription": "For the full interactive practice exam and certification prep, check out the link in the description below."
@@ -10558,7 +10065,7 @@
                     "D": "The location of the offshore development team."
                 },
                 "answer": "B",
-                "detailedexplanation": "When planning the BA approach, the analyst must consider factors like the organizational standards, the project’s complexity, the level of risk, and the organizational culture (e.g., whether they favor a predictive/waterfall or adaptive/agile approach). These factors determine how much documentation is needed and how often stakeholders will be engaged."
+                "detailedexplanation": "When planning the BA approach, the analyst must consider factors like the organizational standards, the project\u2019s complexity, the level of risk, and the organizational culture (e.g., whether they favor a predictive/waterfall or adaptive/agile approach). These factors determine how much documentation is needed and how often stakeholders will be engaged."
             },
             {
                 "id": 14,
@@ -10670,7 +10177,7 @@
                     "D": "There is no difference; the terms are used interchangeably."
                 },
                 "answer": "B",
-                "detailedexplanation": "Requirements focus on the need—what must be achieved. Designs focus on the solution—how that need will be met. For example, a requirement might say 'The user needs to see their balance.' The design might say 'The balance will be displayed in a red font at the top-right corner of the mobile app home screen.'"
+                "detailedexplanation": "Requirements focus on the need\u2014what must be achieved. Designs focus on the solution\u2014how that need will be met. For example, a requirement might say 'The user needs to see their balance.' The design might say 'The balance will be displayed in a red font at the top-right corner of the mobile app home screen.'"
             },
             {
                 "id": 22,
@@ -11117,7 +10624,7 @@
                     "D": "Stateless platforms cannot run Turing-complete code."
                 },
                 "answer": "A",
-                "detailedexplanation": "Stateful platforms like Ethereum maintain a 'World State'—a database of the current balance and data of every account and contract. Every transaction updates this state. Stateless systems (or UTXO-based systems like Bitcoin) do not store a current 'balance' per se; instead, they track individual pieces of value (UTXOs) and the history of their movements."
+                "detailedexplanation": "Stateful platforms like Ethereum maintain a 'World State'\u2014a database of the current balance and data of every account and contract. Every transaction updates this state. Stateless systems (or UTXO-based systems like Bitcoin) do not store a current 'balance' per se; instead, they track individual pieces of value (UTXOs) and the history of their movements."
             },
             {
                 "id": 19,
@@ -11806,7 +11313,7 @@
             ],
             "intro_script": {
                 "hook": "Ever wondered why some IT professionals skyrocket their careers while others stay stagnant? It often comes down to one credential: the Cisco Certified Network Associate.",
-                "summary": "In this video, we are diving deep into 30 high-yield practice questions for the CCNA 200-301 exam. We’ll cover everything from IP connectivity and security fundamentals to automation and programmability.",
+                "summary": "In this video, we are diving deep into 30 high-yield practice questions for the CCNA 200-301 exam. We\u2019ll cover everything from IP connectivity and security fundamentals to automation and programmability.",
                 "cta_intro": "Make sure you have a notepad ready because we aren't just giving answers; we are explaining the logic behind every single one.",
                 "checkfullexamlinkindescription": "For a complete, high-quality CCNA practice exam experience, check the link in the description below."
             },
@@ -13280,7 +12787,7 @@
             ],
             "intro_script": {
                 "hook": "Are you ready to prove your expertise in building scalable and cloud-native applications on Google Cloud? The Professional Cloud Developer exam is one of the most challenging certifications in the ecosystem, requiring deep knowledge of GKE, Cloud Run, and CI/CD.",
-                "summary": "In this video, we go through 30 high-quality, exam-realistic multiple-choice questions covering all core domains—from designing cloud-native applications to managing performance and troubleshooting.",
+                "summary": "In this video, we go through 30 high-quality, exam-realistic multiple-choice questions covering all core domains\u2014from designing cloud-native applications to managing performance and troubleshooting.",
                 "cta_intro": "Before we dive in, make sure to subscribe for more GCP certification guides.",
                 "checkfullexamlinkindescription": "For a complete set of practice exams and the full study guide, check out the link in the description below."
             },
@@ -14489,7 +13996,7 @@
                     "D": "Lead"
                 },
                 "answer": "A",
-                "detailedexplanation": "In Dynamics 365 Customer Service, the 'Case' (internally known as 'Incident') is the fundamental entity used to track a customer's issue or request. Everything related to the resolution of that issue—emails, phone calls, and tasks—is linked to that specific Case record."
+                "detailedexplanation": "In Dynamics 365 Customer Service, the 'Case' (internally known as 'Incident') is the fundamental entity used to track a customer's issue or request. Everything related to the resolution of that issue\u2014emails, phone calls, and tasks\u2014is linked to that specific Case record."
             },
             {
                 "id": 14,
@@ -15052,7 +14559,7 @@
                     "D": "Saving a snapshot to a local file."
                 },
                 "answer": "C",
-                "detailedexplanation": "While the Open Source version allows manual snapshots via the CLI, the 'Snapshot Agent'—which runs as a background process to automate, rotate, and ship backups to cloud storage (like S3 or GCS)—is a feature exclusive to Consul Enterprise."
+                "detailedexplanation": "While the Open Source version allows manual snapshots via the CLI, the 'Snapshot Agent'\u2014which runs as a background process to automate, rotate, and ship backups to cloud storage (like S3 or GCS)\u2014is a feature exclusive to Consul Enterprise."
             },
             {
                 "id": 19,
@@ -15224,7 +14731,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question mock exam for the HashiCorp Certified Consul Associate. How did you do? If you found some of these challenging, don't worry—Consul is a deep product with many moving parts.",
+            "closing": "That wraps up our 30-question mock exam for the HashiCorp Certified Consul Associate. How did you do? If you found some of these challenging, don't worry\u2014Consul is a deep product with many moving parts.",
             "cta_final": "If you want to take your preparation to the next level, I highly recommend checking out the full practice test course on Udemy. It includes hundreds of more questions, timed exams, and even more detailed explanations.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more HashiCorp and DevOps certification content. Good luck with your exam!"
         },
@@ -15377,7 +14884,7 @@
                     "D": "Reducing the cost of AWS services by using fewer resources"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Principle of Least Privilege (PoLP) is a fundamental security concept where a user is granted the minimum levels of access—or permissions—needed to perform their job functions. This minimizes the risk of accidental or malicious changes to critical systems and data. In AWS, this is typically implemented using IAM policies."
+                "detailedexplanation": "The Principle of Least Privilege (PoLP) is a fundamental security concept where a user is granted the minimum levels of access\u2014or permissions\u2014needed to perform their job functions. This minimizes the risk of accidental or malicious changes to critical systems and data. In AWS, this is typically implemented using IAM policies."
             },
             {
                 "id": 7,
@@ -15391,7 +14898,7 @@
                     "D": "Amazon Lightsail"
                 },
                 "answer": "B",
-                "detailedexplanation": "AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume—there is no charge when your code is not running. It automatically scales your application by running code in response to triggers."
+                "detailedexplanation": "AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume\u2014there is no charge when your code is not running. It automatically scales your application by running code in response to triggers."
             },
             {
                 "id": 8,
@@ -15419,7 +14926,7 @@
                     "D": "Amazon EFS"
                 },
                 "answer": "C",
-                "detailedexplanation": "Amazon S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term retention and digital preservation for data that may be accessed once or twice a year. It is designed for customers—particularly those in highly regulated industries—that retain data sets for 7-10 years or longer to meet regulatory compliance requirements."
+                "detailedexplanation": "Amazon S3 Glacier Deep Archive is Amazon S3's lowest-cost storage class and supports long-term retention and digital preservation for data that may be accessed once or twice a year. It is designed for customers\u2014particularly those in highly regulated industries\u2014that retain data sets for 7-10 years or longer to meet regulatory compliance requirements."
             },
             {
                 "id": 10,
@@ -15503,7 +15010,7 @@
                     "D": "Amazon Inspector"
                 },
                 "answer": "A",
-                "detailedexplanation": "AWS Artifact is your go-to, central resource for compliance-related information. It provides on-demand access to AWS’s security and compliance reports and select online agreements. This is critical for audits or when you need to prove the compliance of the AWS infrastructure."
+                "detailedexplanation": "AWS Artifact is your go-to, central resource for compliance-related information. It provides on-demand access to AWS\u2019s security and compliance reports and select online agreements. This is critical for audits or when you need to prove the compliance of the AWS infrastructure."
             },
             {
                 "id": 16,
@@ -15741,7 +15248,7 @@
                 "How to Pass AWS Developer Associate Exam on First Attempt"
             ],
             "intro_script": {
-                "hook": "Are you ready to pass the AWS Certified Developer Associate exam and level up your cloud career? Today, we’re diving into 30 exam-style questions that mirror the actual DVA-C02 challenge.",
+                "hook": "Are you ready to pass the AWS Certified Developer Associate exam and level up your cloud career? Today, we\u2019re diving into 30 exam-style questions that mirror the actual DVA-C02 challenge.",
                 "summary": "In this video, we cover the core domains of the AWS Developer Associate certification, including Deployment, Security, Development with AWS Services, and Troubleshooting. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind every answer.",
                 "cta_intro": "Before we start, make sure to hit that subscribe button for more AWS certification prep content.",
                 "checkfullexamlinkindescription": "For a full-length, timed mock exam experience with hundreds of questions, check the link in the description below."
@@ -15995,7 +15502,7 @@
                     "D": "It automatically scales the write capacity of the table"
                 },
                 "answer": "C",
-                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement—from milliseconds to microseconds—even at millions of requests per second."
+                "detailedexplanation": "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement\u2014from milliseconds to microseconds\u2014even at millions of requests per second."
             },
             {
                 "id": 16,
@@ -16542,7 +16049,7 @@
                     "D": "AWS Fargate"
                 },
                 "answer": "B",
-                "detailedexplanation": "AWS Lambda allows you to run code without provisioning or managing servers. You pay only for the compute time you consume—there is no charge when your code is not running. For a script that runs for only 2 minutes a day, Lambda is significantly cheaper than maintaining an EC2 instance or an ECS cluster."
+                "detailedexplanation": "AWS Lambda allows you to run code without provisioning or managing servers. You pay only for the compute time you consume\u2014there is no charge when your code is not running. For a script that runs for only 2 minutes a day, Lambda is significantly cheaper than maintaining an EC2 instance or an ECS cluster."
             },
             {
                 "id": 20,
@@ -16654,7 +16161,7 @@
                     "D": "S3 Batch Operations"
                 },
                 "answer": "B",
-                "detailedexplanation": "Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations to route data over the optimized AWS network path."
+                "detailedexplanation": "Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront\u2019s globally distributed edge locations to route data over the optimized AWS network path."
             },
             {
                 "id": 28,
@@ -16700,7 +16207,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question mock exam for the AWS Certified Solutions Architect Associate. How did you do? If you found some of these scenarios tricky, don't worry—architecting on AWS takes practice!",
+            "closing": "That concludes our 30-question mock exam for the AWS Certified Solutions Architect Associate. How did you do? If you found some of these scenarios tricky, don't worry\u2014architecting on AWS takes practice!",
             "cta_final": "If you want to take your preparation to the next level, I highly recommend checking out the full mock exam course linked in the description. It includes hundreds of questions just like these with even deeper explanations.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more AWS certification content. Good luck with your studies!"
         },
@@ -17684,7 +17191,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question CRISC mock exam. How did you do? If you found some of these concepts challenging, don't worry—risk management is a complex field that takes time to master.",
+            "closing": "That wraps up our 30-question CRISC mock exam. How did you do? If you found some of these concepts challenging, don't worry\u2014risk management is a complex field that takes time to master.",
             "cta_final": "If this video helped you, please give it a thumbs up and share it with your fellow certification seekers. Subscribe for more deep dives into ISACA and security certifications.",
             "next_steps": "Check the description for the full course link to access hundreds more questions and detailed study guides. Good luck with your exam!"
         },
@@ -17766,7 +17273,7 @@
                     "C": "Testing identifies the source of a bug; debugging shows that the system performs its functions correctly."
                 },
                 "answer": "A",
-                "detailedexplanation": "Testing and debugging are distinct activities. Testing is the process of executing software to find failures—it shows that a defect exists. Debugging is the development activity that starts after a failure is found; it involves locating the cause (the defect), fixing it, and then checking that the fix works. While testers often find the failures, developers are typically responsible for the debugging process."
+                "detailedexplanation": "Testing and debugging are distinct activities. Testing is the process of executing software to find failures\u2014it shows that a defect exists. Debugging is the development activity that starts after a failure is found; it involves locating the cause (the defect), fixing it, and then checking that the fix works. While testers often find the failures, developers are typically responsible for the debugging process."
             },
             {
                 "id": 2,
@@ -17934,7 +17441,7 @@
                     "D": "Small changes in code can lead to large failures."
                 },
                 "answer": "B",
-                "detailedexplanation": "The Pesticide Paradox states that if you run the same set of tests repeatedly, the system will eventually become 'immune' to them—meaning the tests will no longer find new bugs. To overcome this, test cases must be regularly reviewed and updated, and new tests should be written to exercise different parts of the software."
+                "detailedexplanation": "The Pesticide Paradox states that if you run the same set of tests repeatedly, the system will eventually become 'immune' to them\u2014meaning the tests will no longer find new bugs. To overcome this, test cases must be regularly reviewed and updated, and new tests should be written to exercise different parts of the software."
             },
             {
                 "id": 14,
@@ -20721,7 +20228,7 @@
                     "D": "SQL Injection"
                 },
                 "answer": "C",
-                "detailedexplanation": "Session Hijacking involves the exploitation of a valid computer session—sometimes called session sniffing—to gain unauthorized access to information or services in a computer system. By stealing a valid session ID (token), the attacker bypasses the authentication process entirely. A Replay attack is similar but involves re-sending captured data; Session Hijacking is the active takeover of an existing session."
+                "detailedexplanation": "Session Hijacking involves the exploitation of a valid computer session\u2014sometimes called session sniffing\u2014to gain unauthorized access to information or services in a computer system. By stealing a valid session ID (token), the attacker bypasses the authentication process entirely. A Replay attack is similar but involves re-sending captured data; Session Hijacking is the active takeover of an existing session."
             },
             {
                 "id": 3,
@@ -21226,7 +20733,7 @@
                     "D": "Bob's Public Key"
                 },
                 "answer": "D",
-                "detailedexplanation": "To ensure confidentiality in asymmetric encryption, the sender (Alice) must encrypt the data using the recipient's (Bob's) Public Key. Since the Public Key is mathematically paired with the Private Key, only Bob—who possesses the corresponding Private Key—can decrypt the message. Using Alice's Private Key would provide 'Non-repudiation' or a digital signature, but not confidentiality, as anyone with Alice's Public Key could decrypt it."
+                "detailedexplanation": "To ensure confidentiality in asymmetric encryption, the sender (Alice) must encrypt the data using the recipient's (Bob's) Public Key. Since the Public Key is mathematically paired with the Private Key, only Bob\u2014who possesses the corresponding Private Key\u2014can decrypt the message. Using Alice's Private Key would provide 'Non-repudiation' or a digital signature, but not confidentiality, as anyone with Alice's Public Key could decrypt it."
             },
             {
                 "id": 4,
@@ -21856,7 +21363,7 @@
                     "D": "A specific registry key created by malware"
                 },
                 "answer": "C",
-                "detailedexplanation": "IOCs (like hashes and IPs) are reactive—they tell you that you *have been* compromised. IOAs focus on the *intent* and the *actions* of the attacker as they happen (behavioral patterns). Unusual PowerShell execution suggests an attack is currently in progress, even if the tools used are 'living off the land' and have no known file hash."
+                "detailedexplanation": "IOCs (like hashes and IPs) are reactive\u2014they tell you that you *have been* compromised. IOAs focus on the *intent* and the *actions* of the attacker as they happen (behavioral patterns). Unusual PowerShell execution suggests an attack is currently in progress, even if the tools used are 'living off the land' and have no known file hash."
             },
             {
                 "id": 14,
@@ -22098,7 +21605,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question mock exam for the ISACA CCOA certification. How did you do? If you found some of the technical domains challenging, don't worry—it's all part of the learning process.",
+            "closing": "That concludes our 30-question mock exam for the ISACA CCOA certification. How did you do? If you found some of the technical domains challenging, don't worry\u2014it's all part of the learning process.",
             "cta_final": "If you enjoyed this video, please hit the like button and subscribe for more cybersecurity certification content.",
             "next_steps": "Ready for the real thing? Click the link in the description to access our full CCOA practice exam course on Udemy with over 300 unique questions and detailed study guides. Good luck with your studies!"
         },
@@ -22130,7 +21637,7 @@
             "youtube_metadata": {
                 "courselink": "https://trk.udemy.com/E0a0Nn",
                 "youtubetitle": "ISC2 Certified in Cybersecurity CC Exam Prep - Complete Practice Test and Explanations",
-                "description": "Unlock your future in IT security with this comprehensive ISC2 Certified in Cybersecurity (CC) Mock Exam. This video covers 30 essential questions across the official ISC2 domains to help you pass your exam. We provide detailed explanations for every answer to ensure you understand the 'why' behind the concepts.\n\nTopics covered:\n- Security Principles\n- Business Continuity (BC), Disaster Recovery (DR) & Incident Response\n- Access Control Concepts\n- Network Security\n- Security Operations\n\n🎯 Get the Full CC Practice Exam here: https://trk.udemy.com/E0a0Nn",
+                "description": "Unlock your future in IT security with this comprehensive ISC2 Certified in Cybersecurity (CC) Mock Exam. This video covers 30 essential questions across the official ISC2 domains to help you pass your exam. We provide detailed explanations for every answer to ensure you understand the 'why' behind the concepts.\n\nTopics covered:\n- Security Principles\n- Business Continuity (BC), Disaster Recovery (DR) & Incident Response\n- Access Control Concepts\n- Network Security\n- Security Operations\n\n\ud83c\udfaf Get the Full CC Practice Exam here: https://trk.udemy.com/E0a0Nn",
                 "tags": "ISC2 CC, Certified in Cybersecurity, ISC2 Exam Prep, Cybersecurity Certification, Entry level Cybersecurity, Security Principles, Network Security, ISC2 CC Questions",
                 "hashtags": [
                     "#ISC2",
@@ -22204,7 +21711,7 @@
                     "D": "To document the lessons learned from the incident."
                 },
                 "answer": "C",
-                "detailedexplanation": "Containment follows the Identification phase. Its specific purpose is to 'stop the bleeding'—limiting the scope of the incident so it doesn't infect more systems or leak more data. Eradication comes after containment to remove the threat, and Recovery follows that to restore services."
+                "detailedexplanation": "Containment follows the Identification phase. Its specific purpose is to 'stop the bleeding'\u2014limiting the scope of the incident so it doesn't infect more systems or leak more data. Eradication comes after containment to remove the threat, and Recovery follows that to restore services."
             },
             {
                 "id": 4,
@@ -22586,7 +22093,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these challenging, don't worry—it's better to learn now than on exam day.",
+            "closing": "That's it for our 30-question mock exam! How did you do? If you found some of these challenging, don't worry\u2014it's better to learn now than on exam day.",
             "cta_final": "If this video helped you, please give it a thumbs up and subscribe for more cybersecurity certification prep.",
             "next_steps": "To take your prep to the next level, click the link in the description for our full-length ISC2 CC Practice Test series on Udemy."
         },
@@ -23102,7 +22609,7 @@
                 "AZ-900 Exam Simulation: 30 Critical Questions Explained"
             ],
             "intro_script": {
-                "hook": "Are you ready to kickstart your cloud career? Microsoft Azure is the fastest-growing cloud platform, but passing the AZ-900 exam requires more than just knowing the basics—it requires understanding how Azure solves real-world business problems.",
+                "hook": "Are you ready to kickstart your cloud career? Microsoft Azure is the fastest-growing cloud platform, but passing the AZ-900 exam requires more than just knowing the basics\u2014it requires understanding how Azure solves real-world business problems.",
                 "summary": "In this video, we are diving into a comprehensive mock exam for the Microsoft Azure Fundamentals AZ-900 certification. We will cover 30 high-yield questions spanning Cloud Concepts, Azure Architecture, Governance, and Security.",
                 "cta_intro": "Make sure to grab a notebook, as we will be breaking down the logic behind every single answer to ensure you're exam-ready.",
                 "checkfullexamlinkindescription": "If you want to practice with even more realistic simulations, check out the full exam course link in the description below."
@@ -23175,7 +22682,7 @@
                     "D": "Depreciation Model"
                 },
                 "answer": "B",
-                "detailedexplanation": "Cloud computing shifts costs from Capital Expenditure (CapEx)—where you spend money on physical infrastructure upfront—to Operational Expenditure (OpEx), where you pay for services as you use them. This pay-as-you-go model allows businesses to treat IT costs as a continuous operating expense, improving cash flow and reducing the need for massive upfront investments in hardware."
+                "detailedexplanation": "Cloud computing shifts costs from Capital Expenditure (CapEx)\u2014where you spend money on physical infrastructure upfront\u2014to Operational Expenditure (OpEx), where you pay for services as you use them. This pay-as-you-go model allows businesses to treat IT costs as a continuous operating expense, improving cash flow and reducing the need for massive upfront investments in hardware."
             },
             {
                 "id": 3,
@@ -24161,7 +23668,7 @@
             },
             {
                 "id": 3,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "What is the output of the following code?\ni = 5\nwhile i > 0:\n    i -= 1\n    if i == 2:\n        break\nelse:\n    print(\"Done\")",
                 "options": {
@@ -24175,7 +23682,7 @@
             },
             {
                 "id": 4,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Easy",
                 "question": "Which of the following is true about Python tuples?",
                 "options": {
@@ -24217,7 +23724,7 @@
             },
             {
                 "id": 7,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What is the output of the following code?\nlst = [1, 2, 3, 4]\ndel lst[1:3]\nprint(lst)",
                 "options": {
@@ -24231,7 +23738,7 @@
             },
             {
                 "id": 8,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "How many times will the following loop execute?\nfor i in range(1, 10, 2):\n    print(i)",
                 "options": {
@@ -24273,7 +23780,7 @@
             },
             {
                 "id": 11,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "Which of the following methods adds an element to the end of a list?",
                 "options": {
@@ -24301,7 +23808,7 @@
             },
             {
                 "id": 13,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "What does the 'continue' statement do in a loop?",
                 "options": {
@@ -24315,7 +23822,7 @@
             },
             {
                 "id": 14,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Hard",
                 "question": "What is the output of the following snippet?\ndct = {'one': 1, 'two': 2}\nlst = dct['one']\nprint(lst)",
                 "options": {
@@ -24371,7 +23878,7 @@
             },
             {
                 "id": 18,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Easy",
                 "question": "Which logical operator returns True if at least one operand is True?",
                 "options": {
@@ -24385,7 +23892,7 @@
             },
             {
                 "id": 19,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "What is the output of the following code?\ns = \"Python\"\nprint(s[1:4])",
                 "options": {
@@ -24427,7 +23934,7 @@
             },
             {
                 "id": 22,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "What will be the output of the following code?\nfor i in range(1):\n    print(i)\nelse:\n    print(\"Else\")",
                 "options": {
@@ -24441,7 +23948,7 @@
             },
             {
                 "id": 23,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Medium",
                 "question": "How do you check if the key 'a' exists in dictionary 'd'?",
                 "options": {
@@ -24483,7 +23990,7 @@
             },
             {
                 "id": 26,
-                "domain": "Control Flow – Conditional Blocks and Loops",
+                "domain": "Control Flow \u2013 Conditional Blocks and Loops",
                 "difficulty": "Medium",
                 "question": "Which of the following is used to handle exceptions in Python?",
                 "options": {
@@ -24511,7 +24018,7 @@
             },
             {
                 "id": 28,
-                "domain": "Data Collections – Lists, Tuples, and Dictionaries",
+                "domain": "Data Collections \u2013 Lists, Tuples, and Dictionaries",
                 "difficulty": "Hard",
                 "question": "What happens when you try to change an element in a tuple?",
                 "options": {
@@ -24720,7 +24227,7 @@
                     "D": "Delegating all responsibilities to the sponsor."
                 },
                 "answer": "A",
-                "detailedexplanation": "Servant leadership is a cornerstone of Agile and modern project management. The leader’s primary role is to support the team, facilitate their work, remove blockers, and ensure the team has the resources they need to succeed."
+                "detailedexplanation": "Servant leadership is a cornerstone of Agile and modern project management. The leader\u2019s primary role is to support the team, facilitate their work, remove blockers, and ensure the team has the resources they need to succeed."
             },
             {
                 "id": 8,
@@ -25046,7 +24553,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That's the end of our 30-question PMP mock exam prep! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry—PMP is all about mastering the mindset.",
+            "closing": "That's the end of our 30-question PMP mock exam prep! How did you do? If you got more than 25 correct, you're in great shape. If not, don't worry\u2014PMP is all about mastering the mindset.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more Project Management training content.",
             "next_steps": "Ready for the real thing? Click the link in the description to access our full-length PMP Mock Exam with over 180 questions and real-time performance tracking. Good luck with your certification journey!"
         },
@@ -25185,7 +24692,7 @@
                     "D": "To reduce the dimensionality of the input data."
                 },
                 "answer": "C",
-                "detailedexplanation": "The Wide & Deep model, introduced by Google, combines two strengths. The 'Wide' component is a linear model that is effective at 'memorization'—learning the direct correlation between specific feature pairs (e.g., 'User installed App A' and 'User likely to install App B'). This is great for handling niche or specific rules. The 'Deep' component (a Feed-forward Neural Network) is responsible for 'generalization'—identifying complex patterns in unseen feature combinations. By combining both, the system can provide both highly relevant specific suggestions and diverse general recommendations."
+                "detailedexplanation": "The Wide & Deep model, introduced by Google, combines two strengths. The 'Wide' component is a linear model that is effective at 'memorization'\u2014learning the direct correlation between specific feature pairs (e.g., 'User installed App A' and 'User likely to install App B'). This is great for handling niche or specific rules. The 'Deep' component (a Feed-forward Neural Network) is responsible for 'generalization'\u2014identifying complex patterns in unseen feature combinations. By combining both, the system can provide both highly relevant specific suggestions and diverse general recommendations."
             },
             {
                 "id": 6,
@@ -25297,7 +24804,7 @@
                     "D": "The user demographics are not well-defined."
                 },
                 "answer": "B",
-                "detailedexplanation": "In real-world systems (like Amazon or Netflix), there are millions of users and millions of items. An average user might only interact with 50-100 items. This means 99.9% of the user-item matrix consists of zeros or null values. This 'sparsity' makes it difficult for traditional neighborhood-based algorithms to find similar users, which is why Matrix Factorization and Deep Learning are preferred—they can learn dense representations from sparse data."
+                "detailedexplanation": "In real-world systems (like Amazon or Netflix), there are millions of users and millions of items. An average user might only interact with 50-100 items. This means 99.9% of the user-item matrix consists of zeros or null values. This 'sparsity' makes it difficult for traditional neighborhood-based algorithms to find similar users, which is why Matrix Factorization and Deep Learning are preferred\u2014they can learn dense representations from sparse data."
             },
             {
                 "id": 14,
@@ -25353,7 +24860,7 @@
                     "D": "When users have too many interests to model."
                 },
                 "answer": "B",
-                "detailedexplanation": "In many catalogs, a few items (the 'head') get most of the interactions, while the vast majority (the 'tail') have very few. Simple algorithms tend to favor popular items because they have more data. However, recommending from the 'long tail' is where the real value of personalization lies—finding the perfect niche item for a specific user. Metrics like 'Coverage' are used to measure how much of the long tail the system is actually utilizing."
+                "detailedexplanation": "In many catalogs, a few items (the 'head') get most of the interactions, while the vast majority (the 'tail') have very few. Simple algorithms tend to favor popular items because they have more data. However, recommending from the 'long tail' is where the real value of personalization lies\u2014finding the perfect niche item for a specific user. Metrics like 'Coverage' are used to measure how much of the long tail the system is actually utilizing."
             },
             {
                 "id": 18,
@@ -25409,7 +24916,7 @@
                     "D": "They reduce the need for any training data."
                 },
                 "answer": "B",
-                "detailedexplanation": "Traditional CF models only look at direct interactions (User A liked Item 1). GCNs treat the data as a graph where users and items are nodes. They can capture 'multi-hop' relationships—for example, if User A liked Item 1, and Item 1 is similar to Item 2, and User B liked Item 2, then User A might like Item 2. This allows the model to capture much richer structural information than simple matrix factorization."
+                "detailedexplanation": "Traditional CF models only look at direct interactions (User A liked Item 1). GCNs treat the data as a graph where users and items are nodes. They can capture 'multi-hop' relationships\u2014for example, if User A liked Item 1, and Item 1 is similar to Item 2, and User B liked Item 2, then User A might like Item 2. This allows the model to capture much richer structural information than simple matrix factorization."
             },
             {
                 "id": 22,
@@ -25678,7 +25185,7 @@
                     "D": "GANs are only used for text, while VAEs are only used for images."
                 },
                 "answer": "C",
-                "detailedexplanation": "VAEs and GANs are both generative models but follow different philosophies. A VAE is a probabilistic graphical model that tries to maximize the Evidence Lower Bound (ELBO) of the data likelihood, resulting in a structured latent space. A GAN, however, consists of two networks—a Generator and a Discriminator—competing against each other. The Generator tries to fool the Discriminator, and the Discriminator tries to distinguish real data from fake data. This 'adversarial' process typically leads to sharper, more realistic image generation than VAEs."
+                "detailedexplanation": "VAEs and GANs are both generative models but follow different philosophies. A VAE is a probabilistic graphical model that tries to maximize the Evidence Lower Bound (ELBO) of the data likelihood, resulting in a structured latent space. A GAN, however, consists of two networks\u2014a Generator and a Discriminator\u2014competing against each other. The Generator tries to fool the Discriminator, and the Discriminator tries to distinguish real data from fake data. This 'adversarial' process typically leads to sharper, more realistic image generation than VAEs."
             },
             {
                 "id": 6,
@@ -25818,7 +25325,7 @@
                     "D": "A model with 100% precision."
                 },
                 "answer": "C",
-                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. The AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 means the model is unable to distinguish between the positive and negative classes—essentially making a coin-flip guess."
+                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. The AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 means the model is unable to distinguish between the positive and negative classes\u2014essentially making a coin-flip guess."
             },
             {
                 "id": 16,
@@ -26308,7 +25815,7 @@
                     "D": "The number of users the system can support"
                 },
                 "answer": "B",
-                "detailedexplanation": "Adversarial Robustness refers to protecting a model against 'adversarial attacks'—small, often invisible perturbations to input data (like noise on an image) that are specifically engineered to trick a model into making a wrong prediction. Designing for this involves techniques like adversarial training."
+                "detailedexplanation": "Adversarial Robustness refers to protecting a model against 'adversarial attacks'\u2014small, often invisible perturbations to input data (like noise on an image) that are specifically engineered to trick a model into making a wrong prediction. Designing for this involves techniques like adversarial training."
             },
             {
                 "id": 16,
@@ -27172,7 +26679,7 @@
                 "id": 7,
                 "domain": "Second-Order Methods",
                 "difficulty": "Hard",
-                "question": "Why is Newton’s Method rarely used for training large-scale deep neural networks despite its fast convergence?",
+                "question": "Why is Newton\u2019s Method rarely used for training large-scale deep neural networks despite its fast convergence?",
                 "options": {
                     "A": "It only works for linear regression problems.",
                     "B": "It requires the computation and inversion of the Hessian matrix, which is computationally prohibitive.",
@@ -27368,7 +26875,7 @@
                 "id": 21,
                 "domain": "Constrained Optimization",
                 "difficulty": "Medium",
-                "question": "In the context of the Method of Lagrange Multipliers, what does the '$λ$' (lambda) represent?",
+                "question": "In the context of the Method of Lagrange Multipliers, what does the '$\u03bb$' (lambda) represent?",
                 "options": {
                     "A": "The learning rate of the optimizer.",
                     "B": "The rate of change of the optimal value with respect to the constraint.",
@@ -27446,7 +26953,7 @@
                     "D": "Conjugate Gradient"
                 },
                 "answer": "B",
-                "detailedexplanation": "L-BFGS (Limited-memory Broyden–Fletcher–Goldfarb–Shanno) is a popular Quasi-Newton method. Instead of storing the full $N \\times N$ Hessian matrix, it stores a few vectors that represent the approximation implicitly. This makes it much more scalable than standard BFGS for problems with many variables."
+                "detailedexplanation": "L-BFGS (Limited-memory Broyden\u2013Fletcher\u2013Goldfarb\u2013Shanno) is a popular Quasi-Newton method. Instead of storing the full $N \\times N$ Hessian matrix, it stores a few vectors that represent the approximation implicitly. This makes it much more scalable than standard BFGS for problems with many variables."
             },
             {
                 "id": 27,
@@ -27480,7 +26987,7 @@
                 "id": 29,
                 "domain": "Swarm Intelligence",
                 "difficulty": "Hard",
-                "question": "Which algorithm uses the concept of 'Lévy Flights' to enhance its exploration capabilities?",
+                "question": "Which algorithm uses the concept of 'L\u00e9vy Flights' to enhance its exploration capabilities?",
                 "options": {
                     "A": "Genetic Algorithm",
                     "B": "Cuckoo Search",
@@ -27488,7 +26995,7 @@
                     "D": "Newton's Method"
                 },
                 "answer": "B",
-                "detailedexplanation": "Cuckoo Search often employs Lévy flights, which are a type of random walk where the step lengths are distributed according to a heavy-tailed probability distribution. This allows the algorithm to perform occasional large jumps, significantly improving its ability to explore far-off regions and escape local optima compared to standard Gaussian walks."
+                "detailedexplanation": "Cuckoo Search often employs L\u00e9vy flights, which are a type of random walk where the step lengths are distributed according to a heavy-tailed probability distribution. This allows the algorithm to perform occasional large jumps, significantly improving its ability to explore far-off regions and escape local optima compared to standard Gaussian walks."
             },
             {
                 "id": 30,
@@ -28112,7 +27619,7 @@
                 "id": 4,
                 "domain": "Transformer Architecture",
                 "difficulty": "Hard",
-                "question": "In a Transformer's Multi-Head Attention mechanism, what is the specific purpose of the 'Scaling' factor (1/√dk)?",
+                "question": "In a Transformer's Multi-Head Attention mechanism, what is the specific purpose of the 'Scaling' factor (1/\u221adk)?",
                 "options": {
                     "A": "To normalize the input embeddings to a unit variance.",
                     "B": "To prevent the dot products from growing too large in magnitude, which would push the softmax function into regions with extremely small gradients.",
@@ -28176,7 +27683,7 @@
                     "D": "To increase the dimensionality of the input vectors."
                 },
                 "answer": "B",
-                "detailedexplanation": "RNNs process tokens sequentially (one after another), so the position is implicit in the time-step. Transformers use self-attention, which is permutation-invariant—meaning if you shuffle the words, the output remains the same. Positional encodings (often sine and cosine functions) are added to the input embeddings to provide the model with information about the relative or absolute position of the tokens."
+                "detailedexplanation": "RNNs process tokens sequentially (one after another), so the position is implicit in the time-step. Transformers use self-attention, which is permutation-invariant\u2014meaning if you shuffle the words, the output remains the same. Positional encodings (often sine and cosine functions) are added to the input embeddings to provide the model with information about the relative or absolute position of the tokens."
             },
             {
                 "id": 9,
@@ -28513,7 +28020,7 @@
             ],
             "intro_script": {
                 "hook": "Are you ready to master the core foundations of Artificial Intelligence? Beyond the code, it's the mathematics and logic that drive the world's most powerful neural networks.",
-                "summary": "In this comprehensive guide, we are diving into 30 essential practice questions covering Linear Algebra, Calculus, Probability, and Formal Logic—specifically designed for the AI Mathematics & Logic certification.",
+                "summary": "In this comprehensive guide, we are diving into 30 essential practice questions covering Linear Algebra, Calculus, Probability, and Formal Logic\u2014specifically designed for the AI Mathematics & Logic certification.",
                 "cta_intro": "Grab a pen and paper, and let's see how many you can get right. Don't forget to subscribe for more expert-level AI tutorials.",
                 "checkfullexamlinkindescription": "For the full practice exam and detailed study guides, check the link in the description below."
             },
@@ -28659,7 +28166,7 @@
                 "id": 8,
                 "domain": "Formal Logic",
                 "difficulty": "Medium",
-                "question": "In Predicate Logic, what does the symbol '∃' represent?",
+                "question": "In Predicate Logic, what does the symbol '\u2203' represent?",
                 "options": {
                     "A": "Universal Quantifier (For all)",
                     "B": "Negation (Not)",
@@ -28667,7 +28174,7 @@
                     "D": "Implication (If... then)"
                 },
                 "answer": "C",
-                "detailedexplanation": "The symbol '∃' is the existential quantifier in formal logic. It indicates that there is at least one element in the domain of discourse that satisfies the given property or predicate. This is in contrast to the universal quantifier '∀', which means the property must hold for every element."
+                "detailedexplanation": "The symbol '\u2203' is the existential quantifier in formal logic. It indicates that there is at least one element in the domain of discourse that satisfies the given property or predicate. This is in contrast to the universal quantifier '\u2200', which means the property must hold for every element."
             },
             {
                 "id": 9,
@@ -28676,12 +28183,12 @@
                 "question": "What are Eigenvalues?",
                 "options": {
                     "A": "The diagonal elements of any matrix.",
-                    "B": "Scalars such that Av = λv for a square matrix A and non-zero vector v.",
+                    "B": "Scalars such that Av = \u03bbv for a square matrix A and non-zero vector v.",
                     "C": "The inverse of a singular matrix.",
                     "D": "The cross product of two vectors in 3D space."
                 },
                 "answer": "B",
-                "detailedexplanation": "Eigenvalues (λ) are special scalars associated with a linear system of equations (square matrix). When a linear transformation is applied to an eigenvector (v), the vector's direction remains unchanged, and it is only scaled by the factor λ. This is expressed as Av = λv. They are crucial for Principal Component Analysis (PCA)."
+                "detailedexplanation": "Eigenvalues (\u03bb) are special scalars associated with a linear system of equations (square matrix). When a linear transformation is applied to an eigenvector (v), the vector's direction remains unchanged, and it is only scaled by the factor \u03bb. This is expressed as Av = \u03bbv. They are crucial for Principal Component Analysis (PCA)."
             },
             {
                 "id": 10,
@@ -28695,7 +28202,7 @@
                     "D": "P(A) / P(B)"
                 },
                 "answer": "C",
-                "detailedexplanation": "The General Addition Rule states P(A ∪ B) = P(A) + P(B) - P(A ∩ B). For independent events, the probability of the intersection P(A ∩ B) is the product of their individual probabilities P(A) * P(B). Therefore, the union for independent events is P(A) + P(B) - (P(A) * P(B))."
+                "detailedexplanation": "The General Addition Rule states P(A \u222a B) = P(A) + P(B) - P(A \u2229 B). For independent events, the probability of the intersection P(A \u2229 B) is the product of their individual probabilities P(A) * P(B). Therefore, the union for independent events is P(A) + P(B) - (P(A) * P(B))."
             },
             {
                 "id": 11,
@@ -28779,7 +28286,7 @@
                     "D": "Uniform Distribution"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Gaussian Distribution is the 'Normal Distribution,' characterized by a bell-shaped curve. It is defined by two parameters: the mean (μ), which is the peak of the curve, and the standard deviation (σ), which determines the spread. It is ubiquitous in AI for modeling noise and natural phenomena."
+                "detailedexplanation": "The Gaussian Distribution is the 'Normal Distribution,' characterized by a bell-shaped curve. It is defined by two parameters: the mean (\u03bc), which is the peak of the curve, and the standard deviation (\u03c3), which determines the spread. It is ubiquitous in AI for modeling noise and natural phenomena."
             },
             {
                 "id": 17,
@@ -28793,7 +28300,7 @@
                     "D": "A vector perpendicular to both."
                 },
                 "answer": "C",
-                "detailedexplanation": "The magnitude of the cross product of two vectors is given by |a| |b| sin(θ). If two vectors are parallel, the angle (θ) between them is 0 or 180 degrees. Since sin(0) = 0 and sin(180) = 0, the magnitude of the cross product is zero, resulting in the zero vector."
+                "detailedexplanation": "The magnitude of the cross product of two vectors is given by |a| |b| sin(\u03b8). If two vectors are parallel, the angle (\u03b8) between them is 0 or 180 degrees. Since sin(0) = 0 and sin(180) = 0, the magnitude of the cross product is zero, resulting in the zero vector."
             },
             {
                 "id": 18,
@@ -28821,7 +28328,7 @@
                     "D": "99.7%"
                 },
                 "answer": "B",
-                "detailedexplanation": "According to the Empirical Rule (or 68-95-99.7 rule), approximately 68% of the data in a normal distribution falls within one standard deviation (±1σ) of the mean, 95% within two (±2σ), and 99.7% within three (±3σ)."
+                "detailedexplanation": "According to the Empirical Rule (or 68-95-99.7 rule), approximately 68% of the data in a normal distribution falls within one standard deviation (\u00b11\u03c3) of the mean, 95% within two (\u00b12\u03c3), and 99.7% within three (\u00b13\u03c3)."
             },
             {
                 "id": 20,
@@ -29100,7 +28607,7 @@
                     "D": "Softmax"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Rectified Linear Unit (ReLU) function is defined as $f(x) = \\max(0, x)$. Unlike Sigmoid or Tanh, which 'saturate' (become very flat) for large positive or negative values—causing gradients to become nearly zero—ReLU maintains a constant gradient of 1 for all positive inputs. This helps weights update effectively even in very deep networks. Softmax is typically reserved for the output layer of multi-class classification problems."
+                "detailedexplanation": "The Rectified Linear Unit (ReLU) function is defined as $f(x) = \\max(0, x)$. Unlike Sigmoid or Tanh, which 'saturate' (become very flat) for large positive or negative values\u2014causing gradients to become nearly zero\u2014ReLU maintains a constant gradient of 1 for all positive inputs. This helps weights update effectively even in very deep networks. Softmax is typically reserved for the output layer of multi-class classification problems."
             },
             {
                 "id": 5,
@@ -29198,7 +28705,7 @@
                     "D": "Feedforward Neural Network"
                 },
                 "answer": "B",
-                "detailedexplanation": "Recurrent Neural Networks (RNNs) have 'memory'—loops that allow information to persist from one step of the sequence to the next. This makes them ideal for tasks where context matters, like predicting the next word in a sentence. CNNs (A) are specialized for spatial data like images, and GANs (C) are used for generating new data like deepfakes."
+                "detailedexplanation": "Recurrent Neural Networks (RNNs) have 'memory'\u2014loops that allow information to persist from one step of the sequence to the next. This makes them ideal for tasks where context matters, like predicting the next word in a sentence. CNNs (A) are specialized for spatial data like images, and GANs (C) are used for generating new data like deepfakes."
             },
             {
                 "id": 12,
@@ -29366,7 +28873,7 @@
                     "D": "The number of syllables in a word."
                 },
                 "answer": "B",
-                "detailedexplanation": "Word2Vec is a group of models that produce word embeddings—dense vectors where words that appear in similar contexts are placed close together in the vector space. This allows models to understand that 'King' and 'Queen' are related in a way that 'King' and 'Apple' are not. Option C describes 'Bag of Words' or TF-IDF."
+                "detailedexplanation": "Word2Vec is a group of models that produce word embeddings\u2014dense vectors where words that appear in similar contexts are placed close together in the vector space. This allows models to understand that 'King' and 'Queen' are related in a way that 'King' and 'Apple' are not. Option C describes 'Bag of Words' or TF-IDF."
             },
             {
                 "id": 24,
@@ -29380,7 +28887,7 @@
                     "D": "The model has high recall but low precision."
                 },
                 "answer": "B",
-                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 represents a model with no discriminative power—essentially flipping a coin. Anything below 0.5 means the model is actually performing worse than random (usually indicating the labels are swapped)."
+                "detailedexplanation": "The ROC curve plots the True Positive Rate against the False Positive Rate. An AUC of 1.0 represents a perfect model, while an AUC of 0.5 represents a model with no discriminative power\u2014essentially flipping a coin. Anything below 0.5 means the model is actually performing worse than random (usually indicating the labels are swapped)."
             },
             {
                 "id": 25,
@@ -29468,7 +28975,7 @@
             }
         ],
         "outro_script": {
-            "closing": "And that's a wrap on our 30-question deep dive into AI and Machine Learning basics! How did you do? If you found some of the neural network or optimization questions tricky, don't sweat it—those are the toughest parts of the exam.",
+            "closing": "And that's a wrap on our 30-question deep dive into AI and Machine Learning basics! How did you do? If you found some of the neural network or optimization questions tricky, don't sweat it\u2014those are the toughest parts of the exam.",
             "cta_final": "If you're serious about passing your certification in 2026, click the link in the description for our full, updated practice exam suite.",
             "next_steps": "Don't forget to like this video if it helped you, and subscribe for more certification prep. Check out our 'Deep Learning Masterclass' next to level up your skills even further!"
         },
@@ -29492,7 +28999,7 @@
                 "Knowledge Graphs and Ontology Exam Preparation"
             ],
             "intro_script": {
-                "hook": "Ever wondered how machines actually 'know' things? It’s not just data; it’s Knowledge Representation. If you're aiming to master the logic behind AI and ace your certification, you're in the right place.",
+                "hook": "Ever wondered how machines actually 'know' things? It\u2019s not just data; it\u2019s Knowledge Representation. If you're aiming to master the logic behind AI and ace your certification, you're in the right place.",
                 "summary": "In this video, we dive deep into 30 high-yield practice questions designed to mirror the current AI Knowledge Representation certification exam, covering everything from Propositional Logic to Semantic Nets.",
                 "cta_intro": "Follow along, pause the video to answer for yourself, and check the detailed explanations to solidify your understanding.",
                 "checkfullexamlinkindescription": "For the complete exam simulator and additional resources, make sure to check the link in the description below."
@@ -29690,7 +29197,7 @@
                     "D": "The simplification of a logic gate circuit."
                 },
                 "answer": "B",
-                "detailedexplanation": "Unification is a key algorithm in automated theorem proving. It takes two symbolic expressions and tries to find a 'Most General Unifier' (MGU)—a set of variable assignments that makes the expressions match. For example, unifying P(x, Jerry) with P(Tom, y) results in the substitution {x/Tom, y/Jerry}. This is essential for applying the resolution rule in First-Order Logic."
+                "detailedexplanation": "Unification is a key algorithm in automated theorem proving. It takes two symbolic expressions and tries to find a 'Most General Unifier' (MGU)\u2014a set of variable assignments that makes the expressions match. For example, unifying P(x, Jerry) with P(Tom, y) results in the substitution {x/Tom, y/Jerry}. This is essential for applying the resolution rule in First-Order Logic."
             },
             {
                 "id": 12,
@@ -29788,7 +29295,7 @@
                     "D": "The definition of a triangle."
                 },
                 "answer": "C",
-                "detailedexplanation": "Procedural knowledge is 'knowing how' to do something. It is knowledge manifested in the performance of a task, often represented as a sequence of steps or actions. In contrast, 'Declarative Knowledge' (Options A, B, and D) is 'knowing that'—it consists of static facts and beliefs about the world."
+                "detailedexplanation": "Procedural knowledge is 'knowing how' to do something. It is knowledge manifested in the performance of a task, often represented as a sequence of steps or actions. In contrast, 'Declarative Knowledge' (Options A, B, and D) is 'knowing that'\u2014it consists of static facts and beliefs about the world."
             },
             {
                 "id": 19,
@@ -29816,7 +29323,7 @@
                     "D": "To simplify a semantic network."
                 },
                 "answer": "B",
-                "detailedexplanation": "Skolemization is a step in converting First-Order Logic formulas into Conjunctive Normal Form (CNF) for resolution. It eliminates existential quantifiers (∃). If the quantifier is not within the scope of a universal quantifier, the variable is replaced by a 'Skolem Constant'. If it is within the scope of a universal quantifier (∀x), the variable is replaced by a 'Skolem Function' of x."
+                "detailedexplanation": "Skolemization is a step in converting First-Order Logic formulas into Conjunctive Normal Form (CNF) for resolution. It eliminates existential quantifiers (\u2203). If the quantifier is not within the scope of a universal quantifier, the variable is replaced by a 'Skolem Constant'. If it is within the scope of a universal quantifier (\u2200x), the variable is replaced by a 'Skolem Function' of x."
             },
             {
                 "id": 21,
@@ -29850,7 +29357,7 @@
                 "id": 23,
                 "domain": "Logic",
                 "difficulty": "Easy",
-                "question": "In Propositional Logic, the symbol '¬' represents which logical operator?",
+                "question": "In Propositional Logic, the symbol '\u00ac' represents which logical operator?",
                 "options": {
                     "A": "AND",
                     "B": "OR",
@@ -29858,7 +29365,7 @@
                     "D": "IF...THEN"
                 },
                 "answer": "C",
-                "detailedexplanation": "The '¬' symbol is the negation operator. It simply flips the truth value of the proposition it precedes. If proposition P is true, then ¬P is false. It is one of the fundamental building blocks of logical expressions alongside ∧ (AND), ∨ (OR), and → (Implication)."
+                "detailedexplanation": "The '\u00ac' symbol is the negation operator. It simply flips the truth value of the proposition it precedes. If proposition P is true, then \u00acP is false. It is one of the fundamental building blocks of logical expressions alongside \u2227 (AND), \u2228 (OR), and \u2192 (Implication)."
             },
             {
                 "id": 24,
@@ -29948,7 +29455,7 @@
                 "id": 30,
                 "domain": "Logic",
                 "difficulty": "Hard",
-                "question": "Which rule of inference allows you to conclude 'Q' if you know 'P' and 'P → Q'?",
+                "question": "Which rule of inference allows you to conclude 'Q' if you know 'P' and 'P \u2192 Q'?",
                 "options": {
                     "A": "Modus Tollens",
                     "B": "Modus Ponens",
@@ -30540,13 +30047,13 @@
                 "difficulty": "Medium",
                 "question": "Which of the following defines a 'Support' of a fuzzy set A?",
                 "options": {
-                    "A": "The set of all points x in X such that μA(x) = 1.",
-                    "B": "The set of all points x in X such that μA(x) > 0.",
-                    "C": "The set of all points x in X such that μA(x) = 0.5.",
+                    "A": "The set of all points x in X such that \u03bcA(x) = 1.",
+                    "B": "The set of all points x in X such that \u03bcA(x) > 0.",
+                    "C": "The set of all points x in X such that \u03bcA(x) = 0.5.",
                     "D": "The maximum value of the membership function."
                 },
                 "answer": "B",
-                "detailedexplanation": "The support of a fuzzy set A is the crisp set that contains all elements of the universe of discourse X that have a non-zero membership grade in A. If μA(x) > 0, then x is part of the support. If the membership value is exactly 1, that is referred to as the 'Core' of the fuzzy set. Understanding the support is crucial for defining the boundaries of fuzzy sets in a controller."
+                "detailedexplanation": "The support of a fuzzy set A is the crisp set that contains all elements of the universe of discourse X that have a non-zero membership grade in A. If \u03bcA(x) > 0, then x is part of the support. If the membership value is exactly 1, that is referred to as the 'Core' of the fuzzy set. Understanding the support is crucial for defining the boundaries of fuzzy sets in a controller."
             },
             {
                 "id": 3,
@@ -30560,7 +30067,7 @@
                     "D": "0.24"
                 },
                 "answer": "C",
-                "detailedexplanation": "In standard Zadeh fuzzy logic, the intersection of two fuzzy sets (the AND operator) is calculated using the 'min' function: μ(A ∩ B) = min(μA, μB). In this case, min(0.6, 0.4) is 0.4. This is different from probabilistic logic where you might multiply the values (Product T-norm), though multiplication is an alternative valid T-norm used in some specific fuzzy systems."
+                "detailedexplanation": "In standard Zadeh fuzzy logic, the intersection of two fuzzy sets (the AND operator) is calculated using the 'min' function: \u03bc(A \u2229 B) = min(\u03bcA, \u03bcB). In this case, min(0.6, 0.4) is 0.4. This is different from probabilistic logic where you might multiply the values (Product T-norm), though multiplication is an alternative valid T-norm used in some specific fuzzy systems."
             },
             {
                 "id": 4,
@@ -30608,7 +30115,7 @@
                 "id": 7,
                 "domain": "Fuzzy Set Operations",
                 "difficulty": "Medium",
-                "question": "The 'Complement' of a fuzzy set A with membership μA(x) = 0.3 is:",
+                "question": "The 'Complement' of a fuzzy set A with membership \u03bcA(x) = 0.3 is:",
                 "options": {
                     "A": "0.3",
                     "B": "0.7",
@@ -30616,7 +30123,7 @@
                     "D": "0.0"
                 },
                 "answer": "B",
-                "detailedexplanation": "The complement of a fuzzy set (the NOT operator) is defined as 1 minus the membership value: μ(not A) = 1 - μA(x). Therefore, 1 - 0.3 = 0.7. This represents the degree to which an element does 'not' belong to the set A."
+                "detailedexplanation": "The complement of a fuzzy set (the NOT operator) is defined as 1 minus the membership value: \u03bc(not A) = 1 - \u03bcA(x). Therefore, 1 - 0.3 = 0.7. This represents the degree to which an element does 'not' belong to the set A."
             },
             {
                 "id": 8,
@@ -30630,7 +30137,7 @@
                     "D": "To define the linguistic variables of the system."
                 },
                 "answer": "C",
-                "detailedexplanation": "The Fuzzifier is the first stage of a Fuzzy Logic Controller. It takes real-time crisp inputs (like a temperature of 25.5°C) and maps them onto the defined membership functions to determine the degree to which the input belongs to various fuzzy sets (e.g., 0.8 'Warm' and 0.2 'Hot')."
+                "detailedexplanation": "The Fuzzifier is the first stage of a Fuzzy Logic Controller. It takes real-time crisp inputs (like a temperature of 25.5\u00b0C) and maps them onto the defined membership functions to determine the degree to which the input belongs to various fuzzy sets (e.g., 0.8 'Warm' and 0.2 'Hot')."
             },
             {
                 "id": 9,
@@ -30644,7 +30151,7 @@
                     "D": "A type of defuzzification used in Sugeno systems."
                 },
                 "answer": "B",
-                "detailedexplanation": "Linguistic hedges are mathematical modifiers that change the shape of a membership function to reflect natural language intensity. For example, the hedge 'very' is often implemented by squaring the membership value (μ²), which makes the fuzzy set narrower and more 'concentrated'. 'Somewhat' is often implemented by taking the square root, making the set 'dilated'."
+                "detailedexplanation": "Linguistic hedges are mathematical modifiers that change the shape of a membership function to reflect natural language intensity. For example, the hedge 'very' is often implemented by squaring the membership value (\u03bc\u00b2), which makes the fuzzy set narrower and more 'concentrated'. 'Somewhat' is often implemented by taking the square root, making the set 'dilated'."
             },
             {
                 "id": 10,
@@ -30678,7 +30185,7 @@
                 "id": 12,
                 "domain": "Fuzzy Set Operations",
                 "difficulty": "Medium",
-                "question": "If μA(x) = 0.8 and μB(x) = 0.5, what is the value of the Union (OR) of A and B using the standard Max operator?",
+                "question": "If \u03bcA(x) = 0.8 and \u03bcB(x) = 0.5, what is the value of the Union (OR) of A and B using the standard Max operator?",
                 "options": {
                     "A": "0.3",
                     "B": "0.5",
@@ -30686,7 +30193,7 @@
                     "D": "1.3"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Union of two fuzzy sets (the OR operator) is determined by the 'max' function: μ(A ∪ B) = max(μA, μB). Since 0.8 is greater than 0.5, the union result is 0.8. This reflects that an element belongs to 'A or B' to the extent of its strongest membership in either set."
+                "detailedexplanation": "The Union of two fuzzy sets (the OR operator) is determined by the 'max' function: \u03bc(A \u222a B) = max(\u03bcA, \u03bcB). Since 0.8 is greater than 0.5, the union result is 0.8. This reflects that an element belongs to 'A or B' to the extent of its strongest membership in either set."
             },
             {
                 "id": 13,
@@ -30714,7 +30221,7 @@
                     "D": "The linguistic labels used to describe data."
                 },
                 "answer": "B",
-                "detailedexplanation": "The Universe of Discourse is the domain of interest for a specific variable. For a temperature controller, the universe of discourse might be 0°C to 100°C. All fuzzy sets (Cold, Warm, Hot) for that variable must be defined within this range."
+                "detailedexplanation": "The Universe of Discourse is the domain of interest for a specific variable. For a temperature controller, the universe of discourse might be 0\u00b0C to 100\u00b0C. All fuzzy sets (Cold, Warm, Hot) for that variable must be defined within this range."
             },
             {
                 "id": 15,
@@ -30776,15 +30283,15 @@
                 "id": 19,
                 "domain": "Fuzzy Set Theory",
                 "difficulty": "Hard",
-                "question": "What is an α-cut (alpha-cut) of a fuzzy set?",
+                "question": "What is an \u03b1-cut (alpha-cut) of a fuzzy set?",
                 "options": {
                     "A": "The process of removing the top of a membership function.",
-                    "B": "A crisp set containing elements with membership grades greater than or equal to α.",
+                    "B": "A crisp set containing elements with membership grades greater than or equal to \u03b1.",
                     "C": "The derivative of the membership function.",
                     "D": "The intersection of a fuzzy set with its complement."
                 },
                 "answer": "B",
-                "detailedexplanation": "An alpha-cut is a way to relate fuzzy sets to crisp sets. For a given value α (between 0 and 1), the α-cut of set A is the crisp set of all elements x whose membership μA(x) ≥ α. This is frequently used in fuzzy arithmetic and interval analysis."
+                "detailedexplanation": "An alpha-cut is a way to relate fuzzy sets to crisp sets. For a given value \u03b1 (between 0 and 1), the \u03b1-cut of set A is the crisp set of all elements x whose membership \u03bcA(x) \u2265 \u03b1. This is frequently used in fuzzy arithmetic and interval analysis."
             },
             {
                 "id": 20,
@@ -30882,7 +30389,7 @@
                     "D": "Multiplying all values by 2."
                 },
                 "answer": "B",
-                "detailedexplanation": "Concentration is a linguistic hedge operation (like the word 'very'). By squaring the membership values (μ²), values closer to 1 remain high while lower values decrease significantly, effectively narrowing the fuzzy set and 'concentrating' its meaning."
+                "detailedexplanation": "Concentration is a linguistic hedge operation (like the word 'very'). By squaring the membership values (\u03bc\u00b2), values closer to 1 remain high while lower values decrease significantly, effectively narrowing the fuzzy set and 'concentrating' its meaning."
             },
             {
                 "id": 27,
@@ -30938,11 +30445,11 @@
                     "D": "Probability is for linguistic variables, fuzzy logic is for numeric variables."
                 },
                 "answer": "B",
-                "detailedexplanation": "Fuzzy logic models 'vagueness' (is the water hot?), while probability models 'uncertainty' (will it rain?). Even if an event is 100% certain (probability = 1), it can still be fuzzy (e.g., it is 100% certain that a 30°C day is 'somewhat warm')."
+                "detailedexplanation": "Fuzzy logic models 'vagueness' (is the water hot?), while probability models 'uncertainty' (will it rain?). Even if an event is 100% certain (probability = 1), it can still be fuzzy (e.g., it is 100% certain that a 30\u00b0C day is 'somewhat warm')."
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question practice session for the AI Fuzzy Logic Systems certification. How many did you get right? If you struggled with the inference methods or defuzzification, don't worry—these are some of the toughest concepts in AI.",
+            "closing": "That wraps up our 30-question practice session for the AI Fuzzy Logic Systems certification. How many did you get right? If you struggled with the inference methods or defuzzification, don't worry\u2014these are some of the toughest concepts in AI.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and subscribe for more AI certification prep. It really helps the channel!",
             "next_steps": "Ready for the real thing? Click the link in the description to access our full-length simulated exams and take your career to the next level. Good luck with your studies!"
         },
@@ -31923,7 +31430,7 @@
         ],
         "outro_script": {
             "closing": "That wraps up our 30 practice questions for C Language System Programming. We've covered the core pillars: Files, Processes, Memory, and IPC.",
-            "cta_final": "If you found these explanations helpful, please give this video a thumbs up and comment which topic you find the hardest—is it Pthreads or Signal handling?",
+            "cta_final": "If you found these explanations helpful, please give this video a thumbs up and comment which topic you find the hardest\u2014is it Pthreads or Signal handling?",
             "next_steps": "Don't forget to visit the link in the description to take the full-length timed mock exam and get your completion certificate. Happy coding!"
         },
         "on_screen_elements": {
@@ -32240,7 +31747,7 @@
                     "D": "The structure becomes read-only."
                 },
                 "answer": "C",
-                "detailedexplanation": "According to the C standard, if you provide an initializer list for a structure but it doesn't contain values for all members, the remaining members are automatically initialized as if they were static variables—meaning they are set to zero (or NULL for pointers)."
+                "detailedexplanation": "According to the C standard, if you provide an initializer list for a structure but it doesn't contain values for all members, the remaining members are automatically initialized as if they were static variables\u2014meaning they are set to zero (or NULL for pointers)."
             },
             {
                 "id": 19,
@@ -32352,7 +31859,7 @@
                     "D": "Yes, but only if they are the same type."
                 },
                 "answer": "B",
-                "detailedexplanation": "Unlike assignment (=), C does not provide a built-in '==' operator for structures. This is primarily because of structure padding—the 'gaps' between members might contain random garbage, so a bitwise comparison of the whole structure might fail even if the members are identical. You must compare members one by one."
+                "detailedexplanation": "Unlike assignment (=), C does not provide a built-in '==' operator for structures. This is primarily because of structure padding\u2014the 'gaps' between members might contain random garbage, so a bitwise comparison of the whole structure might fail even if the members are identical. You must compare members one by one."
             },
             {
                 "id": 27,
@@ -32904,7 +32411,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions on C string handling functions. How many did you get right? If you struggled with pointer-based questions or memory management, don't worry—these are some of the toughest concepts in C.",
+            "closing": "That wraps up our 30 practice questions on C string handling functions. How many did you get right? If you struggled with pointer-based questions or memory management, don't worry\u2014these are some of the toughest concepts in C.",
             "cta_final": "If you found this video helpful, please hit the like button and subscribe for more deep dives into C programming.",
             "next_steps": "Check out the full practice exam in the description to test your skills even further and get certified."
         },
@@ -32929,7 +32436,7 @@
             ],
             "intro_script": {
                 "hook": "Do you know the exact difference between a static global variable and a regular global variable in C? Misunderstanding storage classes is one of the biggest reasons for memory leaks and logical bugs in C programming.",
-                "summary": "In this comprehensive guide, we are diving deep into C Storage Classes—Auto, Register, Static, and Extern. We have compiled 30 high-quality, exam-standard practice questions to help you master scope, visibility, and lifetime of variables.",
+                "summary": "In this comprehensive guide, we are diving deep into C Storage Classes\u2014Auto, Register, Static, and Extern. We have compiled 30 high-quality, exam-standard practice questions to help you master scope, visibility, and lifetime of variables.",
                 "cta_intro": "Before we begin, make sure to grab a pen and paper to track your score. Let's see how many you can get right!",
                 "checkfullexamlinkindescription": "For the full practice exam suite and certification prep, check out the link in the description below."
             },
@@ -33418,7 +32925,7 @@
                 "Essential C Standard Library Questions for Exams"
             ],
             "intro_script": {
-                "hook": "Ever wondered why your C code feels like reinventing the wheel? It’s because you haven't mastered the power of the C Standard Libraries yet!",
+                "hook": "Ever wondered why your C code feels like reinventing the wheel? It\u2019s because you haven't mastered the power of the C Standard Libraries yet!",
                 "summary": "In this deep-dive session, we are covering 30 high-yield multiple-choice questions focusing on the C Standard Libraries. From memory management in stdlib.h to complex string manipulations in string.h, we cover everything you need to ace your certification or technical interview.",
                 "cta_intro": "Before we dive into the first question, make sure to grab a notepad. These explanations are designed to build your core programming logic.",
                 "checkfullexamlinkindescription": "For the complete C Language Standard Libraries Practice Questions 2026 set and full-length mock exams, check the link in the description below."
@@ -33826,7 +33333,7 @@
                     "D": "long"
                 },
                 "answer": "C",
-                "detailedexplanation": "The hypot(x, y) function computes the square root of (x² + y²). It is used to find the length of the hypotenuse of a right-angled triangle. Like most functions in <math.h>, it takes double arguments and returns a double to ensure precision and prevent overflow during the squaring process."
+                "detailedexplanation": "The hypot(x, y) function computes the square root of (x\u00b2 + y\u00b2). It is used to find the length of the hypotenuse of a right-angled triangle. Like most functions in <math.h>, it takes double arguments and returns a double to ensure precision and prevent overflow during the squaring process."
             },
             {
                 "id": 27,
@@ -34624,12 +34131,12 @@
                 "question": "What is the average case time complexity of Jump Search?",
                 "options": {
                     "A": "O(log n)",
-                    "B": "O(√n)",
+                    "B": "O(\u221an)",
                     "C": "O(n)",
                     "D": "O(n log n)"
                 },
                 "answer": "B",
-                "detailedexplanation": "Jump Search is an algorithm for sorted arrays. It checks fewer elements than Linear Search by jumping ahead by fixed steps (usually √n) and then performing a linear search within the block where the element is likely to be. The optimal step size is √n, making the time complexity O(√n)."
+                "detailedexplanation": "Jump Search is an algorithm for sorted arrays. It checks fewer elements than Linear Search by jumping ahead by fixed steps (usually \u221an) and then performing a linear search within the block where the element is likely to be. The optimal step size is \u221an, making the time complexity O(\u221an)."
             },
             {
                 "id": 14,
@@ -34895,7 +34402,7 @@
                 "System Level C Programming Project Questions"
             ],
             "intro_script": {
-                "hook": "Ever wondered why 90% of developers struggle when moving from basic C syntax to building a complex, real-world project? It’s not about knowing the 'if' statements; it's about mastering memory management, file I/O, and system-level architecture.",
+                "hook": "Ever wondered why 90% of developers struggle when moving from basic C syntax to building a complex, real-world project? It\u2019s not about knowing the 'if' statements; it's about mastering memory management, file I/O, and system-level architecture.",
                 "summary": "In this video, we are diving deep into 30 high-yield practice questions designed specifically for the C Language Real-World Projects Certification. We cover everything from pointer arithmetic in data structures to robust error handling in large-scale applications.",
                 "cta_intro": "Before we start, make sure to grab a notebook. We aren't just giving you the answers; we're explaining the 'why' behind every professional coding decision.",
                 "checkfullexamlinkindescription": "For the complete set of practice exams and the full certification prep course, check the link in the description below."
@@ -35217,7 +34724,7 @@
                     "D": "Only when working with three-dimensional arrays."
                 },
                 "answer": "B",
-                "detailedexplanation": "In C, everything is passed by value. If you want a function to change where a pointer points (for instance, allocating memory and returning it through a parameter, or updating the root of a linked list), you must pass the address of that pointer—hence, a pointer to a pointer."
+                "detailedexplanation": "In C, everything is passed by value. If you want a function to change where a pointer points (for instance, allocating memory and returning it through a parameter, or updating the root of a linked list), you must pass the address of that pointer\u2014hence, a pointer to a pointer."
             },
             {
                 "id": 21,
@@ -35361,7 +34868,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That concludes our 30-question deep dive into C Language Real-World Projects. How many did you get right? If you struggled with the memory management or pointer arithmetic sections, don't worry—those are the toughest parts of low-level programming.",
+            "closing": "That concludes our 30-question deep dive into C Language Real-World Projects. How many did you get right? If you struggled with the memory management or pointer arithmetic sections, don't worry\u2014those are the toughest parts of low-level programming.",
             "cta_final": "If you found this helpful, hit the like button and subscribe for more certification prep content. It really helps the channel.",
             "next_steps": "To take your C skills to the professional level, click the link in the description to access the full 'C Language Real-World Projects' practice exam course. Practice makes perfect, and we have hundreds more questions waiting for you there. See you in the next one!"
         },
@@ -35852,7 +35359,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30-question deep dive into C Preprocessor Directives! How did you do? If you found some of the macro expansion rules tricky, don't worry—they are designed to test your attention to detail.",
+            "closing": "That wraps up our 30-question deep dive into C Preprocessor Directives! How did you do? If you found some of the macro expansion rules tricky, don't worry\u2014they are designed to test your attention to detail.",
             "cta_final": "If you enjoyed this practice session, hit that like button and subscribe for more certification prep content.",
             "next_steps": "Ready for more? Watch our next video on 'C Pointers and Memory Management' or head over to the full course linked in the description for a complete exam simulation. Happy coding!"
         },
@@ -37638,7 +37145,7 @@
                     "D": "The variable is shared across different files."
                 },
                 "answer": "A",
-                "detailedexplanation": "The 'volatile' qualifier prevents the compiler from applying optimizations on a variable. It tells the compiler that the variable's value may change at any time—without any action being taken by the code—such as by a hardware interrupt or a memory-mapped I/O. This ensures the program always reads the most current value from memory."
+                "detailedexplanation": "The 'volatile' qualifier prevents the compiler from applying optimizations on a variable. It tells the compiler that the variable's value may change at any time\u2014without any action being taken by the code\u2014such as by a hardware interrupt or a memory-mapped I/O. This ensures the program always reads the most current value from memory."
             },
             {
                 "id": 19,
@@ -37834,7 +37341,7 @@
                 "Essential Bitwise Manipulation Techniques in C"
             ],
             "intro_script": {
-                "hook": "Ever wondered how top-tier programmers optimize code for speed and memory? It’s all in the bits! Today, we are mastering Bitwise Operations in C.",
+                "hook": "Ever wondered how top-tier programmers optimize code for speed and memory? It\u2019s all in the bits! Today, we are mastering Bitwise Operations in C.",
                 "summary": "This video covers 30 comprehensive MCQ practice questions on C Bitwise operations, ranging from basic logic gates to advanced bit manipulation techniques like masking and shifting.",
                 "cta_intro": "Before we dive in, make sure to grab a pen and paper. Let's see how many you can get right!",
                 "checkfullexamlinkindescription": "For the complete certification practice test suite, check the link in the description below."
@@ -38437,7 +37944,7 @@
                     "D": "The effect size of the experiment."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically ≤ 0.05) indicates that the observed data is unlikely under H0, leading researchers to reject the null hypothesis in favor of the alternative hypothesis."
+                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically \u2264 0.05) indicates that the observed data is unlikely under H0, leading researchers to reject the null hypothesis in favor of the alternative hypothesis."
             },
             {
                 "id": 6,
@@ -38577,7 +38084,7 @@
                     "D": "To act as a loss function for backpropagation."
                 },
                 "answer": "B",
-                "detailedexplanation": "Without a non-linear activation function, a neural network—no matter how many layers it has—would behave like a simple linear regression model because the composition of linear functions is still a linear function. Functions like ReLU (Rectified Linear Unit), Sigmoid, or Tanh allow the network to learn complex patterns and map non-linear relationships between inputs and outputs."
+                "detailedexplanation": "Without a non-linear activation function, a neural network\u2014no matter how many layers it has\u2014would behave like a simple linear regression model because the composition of linear functions is still a linear function. Functions like ReLU (Rectified Linear Unit), Sigmoid, or Tanh allow the network to learn complex patterns and map non-linear relationships between inputs and outputs."
             },
             {
                 "id": 16,
@@ -38717,7 +38224,7 @@
                     "D": "Using the wrong statistical test for the data."
                 },
                 "answer": "B",
-                "detailedexplanation": "A Type I error occurs when you 'see something that isn't there.' It is the mistake of rejecting a null hypothesis that is actually true. For example, a medical test saying a healthy person has a disease is a Type I error. The probability of a Type I error is denoted by alpha (α), which is usually set as the significance level (e.g., 0.05)."
+                "detailedexplanation": "A Type I error occurs when you 'see something that isn't there.' It is the mistake of rejecting a null hypothesis that is actually true. For example, a medical test saying a healthy person has a disease is a Type I error. The probability of a Type I error is denoted by alpha (\u03b1), which is usually set as the significance level (e.g., 0.05)."
             },
             {
                 "id": 26,
@@ -38787,7 +38294,7 @@
                     "D": "When the model takes too long to train."
                 },
                 "answer": "B",
-                "detailedexplanation": "Overfitting happens when a model is overly complex and 'memorizes' the training data, including its random noise and outliers. While such a model will have very high accuracy on the training set, it will fail to 'generalize'—meaning it will perform poorly on any data it hasn't seen before. Techniques like cross-validation, regularization, and pruning are used to combat overfitting."
+                "detailedexplanation": "Overfitting happens when a model is overly complex and 'memorizes' the training data, including its random noise and outliers. While such a model will have very high accuracy on the training set, it will fail to 'generalize'\u2014meaning it will perform poorly on any data it hasn't seen before. Techniques like cross-validation, regularization, and pruning are used to combat overfitting."
             }
         ],
         "outro_script": {
@@ -38817,7 +38324,7 @@
             "intro_script": {
                 "hook": "Are you looking to break into the world of Data Science but feeling overwhelmed by the certification exams? Most candidates struggle with the fundamental concepts of statistics, machine learning, and data ethics.",
                 "summary": "In this video, we dive deep into 30 essential practice questions for the Data Science Foundations certification. We cover everything from data exploration and visualization to model evaluation and big data concepts.",
-                "cta_intro": "Make sure to grab a notepad, because we aren't just giving you the answers—we're explaining the logic behind every single one.",
+                "cta_intro": "Make sure to grab a notepad, because we aren't just giving you the answers\u2014we're explaining the logic behind every single one.",
                 "checkfullexamlinkindescription": "For the full-length practice exams and premium study material, check the link in the description below."
             },
             "youtube_metadata": {
@@ -39012,7 +38519,7 @@
                     "D": "To calculate the average of the sample"
                 },
                 "answer": "C",
-                "detailedexplanation": "A P-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is correct. A small P-value (typically ≤ 0.05) indicates strong evidence against the null hypothesis, leading you to reject it in favor of the alternative hypothesis."
+                "detailedexplanation": "A P-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is correct. A small P-value (typically \u2264 0.05) indicates strong evidence against the null hypothesis, leading you to reject it in favor of the alternative hypothesis."
             },
             {
                 "id": 12,
@@ -40287,7 +39794,7 @@
                 "Data Governance and Privacy Protection for Analytics"
             ],
             "intro_script": {
-                "hook": "Did you know that a single ethical oversight in your data model could lead to massive legal penalties and a complete loss of public trust? In today's data-driven world, technical skill isn't enough—you must master the ethics of data.",
+                "hook": "Did you know that a single ethical oversight in your data model could lead to massive legal penalties and a complete loss of public trust? In today's data-driven world, technical skill isn't enough\u2014you must master the ethics of data.",
                 "summary": "In this video, we are diving deep into 30 essential practice questions for the Data Science Ethics & Data Privacy certification. We will cover everything from algorithmic bias and fairness to global privacy regulations like GDPR and HIPAA.",
                 "cta_intro": "Make sure you have a notebook ready, as we will be explaining the 'why' behind every correct answer to ensure you are fully prepared for the exam.",
                 "checkfullexamlinkindescription": "For the full-length practice exams and comprehensive study guides, check the link in the description below."
@@ -41409,7 +40916,7 @@
                     "D": "Always use dark themes for dashboards"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Data-Ink Ratio, popularized by Edward Tufte, suggests that the majority of the 'ink' used in a visualization should represent actual data information. Designers should remove 'chartjunk'—such as heavy gridlines, unnecessary 3D effects, and decorative borders—to ensure the viewer's attention remains on the data itself."
+                "detailedexplanation": "The Data-Ink Ratio, popularized by Edward Tufte, suggests that the majority of the 'ink' used in a visualization should represent actual data information. Designers should remove 'chartjunk'\u2014such as heavy gridlines, unnecessary 3D effects, and decorative borders\u2014to ensure the viewer's attention remains on the data itself."
             },
             {
                 "id": 8,
@@ -41972,7 +41479,7 @@
                     "D": "Platinum"
                 },
                 "answer": "B",
-                "detailedexplanation": "The Medallion Architecture is a data design pattern used to organize data in a lakehouse. The Bronze layer contains raw data. The Silver layer (the correct answer) represents 'cleansed' and 'conformed' data—it's where you've joined tables, handled nulls, and standardized schemas. The Gold layer is the final stage, containing project-specific 'aggregates' or 'marts' ready for consumption by BI tools and business users."
+                "detailedexplanation": "The Medallion Architecture is a data design pattern used to organize data in a lakehouse. The Bronze layer contains raw data. The Silver layer (the correct answer) represents 'cleansed' and 'conformed' data\u2014it's where you've joined tables, handled nulls, and standardized schemas. The Gold layer is the final stage, containing project-specific 'aggregates' or 'marts' ready for consumption by BI tools and business users."
             },
             {
                 "id": 13,
@@ -42014,7 +41521,7 @@
                     "D": "The hierarchy of users allowed to access a dataset."
                 },
                 "answer": "B",
-                "detailedexplanation": "Data Lineage is a map of the data's journey. It helps organizations understand the 'provenance' of their data—tracking it from its source system, through various ETL steps, into the warehouse, and finally to a specific dashboard. This is crucial for troubleshooting errors, ensuring compliance (like GDPR), and performing impact analysis (e.g., 'If I change this source column, which reports will break?')."
+                "detailedexplanation": "Data Lineage is a map of the data's journey. It helps organizations understand the 'provenance' of their data\u2014tracking it from its source system, through various ETL steps, into the warehouse, and finally to a specific dashboard. This is crucial for troubleshooting errors, ensuring compliance (like GDPR), and performing impact analysis (e.g., 'If I change this source column, which reports will break?')."
             },
             {
                 "id": 16,
@@ -42112,7 +41619,7 @@
                     "D": "It ensures that data is always up-to-date across all tables."
                 },
                 "answer": "C",
-                "detailedexplanation": "In transactional systems (OLTP), we use 'Normalization' to reduce redundancy and ensure data integrity. In analytical systems (OLAP), we often 'Denormalize'—purposefully adding redundant data into a single table. This is because JOIN operations are computationally expensive in distributed systems. By having all necessary data in one 'Wide Table', queries run much faster, even if it uses more disk space (which is cheap in the cloud)."
+                "detailedexplanation": "In transactional systems (OLTP), we use 'Normalization' to reduce redundancy and ensure data integrity. In analytical systems (OLAP), we often 'Denormalize'\u2014purposefully adding redundant data into a single table. This is because JOIN operations are computationally expensive in distributed systems. By having all necessary data in one 'Wide Table', queries run much faster, even if it uses more disk space (which is cheap in the cloud)."
             },
             {
                 "id": 23,
@@ -42154,7 +41661,7 @@
                     "D": "Cloud Spanner"
                 },
                 "answer": "A",
-                "detailedexplanation": "Google Cloud Dataproc is the managed service for running Apache Spark, Hadoop, Presto, and Flink clusters. It allows you to create clusters in seconds and resize them as needed. Cloud Dataflow is different—it's based on Apache Beam and is a serverless unified stream/batch processing service. BigQuery is a data warehouse, and Spanner is a globally distributed relational database."
+                "detailedexplanation": "Google Cloud Dataproc is the managed service for running Apache Spark, Hadoop, Presto, and Flink clusters. It allows you to create clusters in seconds and resize them as needed. Cloud Dataflow is different\u2014it's based on Apache Beam and is a serverless unified stream/batch processing service. BigQuery is a data warehouse, and Spanner is a globally distributed relational database."
             },
             {
                 "id": 26,
@@ -42843,7 +42350,7 @@
                     "D": "The percentage of data points that fall within one standard deviation."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A very small p-value (typically ≤ 0.05) indicates that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of the alternative hypothesis. It is crucial to remember that a p-value does not measure the probability that H0 is true, but rather the compatibility of the data with H0."
+                "detailedexplanation": "The p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A very small p-value (typically \u2264 0.05) indicates that the observed data is unlikely under the null hypothesis, leading us to reject H0 in favor of the alternative hypothesis. It is crucial to remember that a p-value does not measure the probability that H0 is true, but rather the compatibility of the data with H0."
             },
             {
                 "id": 5,
@@ -42927,7 +42434,7 @@
                     "D": "Bias and Variance are unrelated to model complexity."
                 },
                 "answer": "A",
-                "detailedexplanation": "Bias refers to the error introduced by approximating a real-world problem with a simplified model (leads to underfitting). Variance refers to the error introduced by the model's sensitivity to small fluctuations in the training set (leads to overfitting). As you increase model complexity (e.g., adding more features or more layers in a neural network), the model fits the training data better (lower bias), but it becomes more sensitive to noise (higher variance). The goal of a good machine learning model is to find the 'sweet spot' that minimizes the total error (Bias² + Variance + Irreducible Error)."
+                "detailedexplanation": "Bias refers to the error introduced by approximating a real-world problem with a simplified model (leads to underfitting). Variance refers to the error introduced by the model's sensitivity to small fluctuations in the training set (leads to overfitting). As you increase model complexity (e.g., adding more features or more layers in a neural network), the model fits the training data better (lower bias), but it becomes more sensitive to noise (higher variance). The goal of a good machine learning model is to find the 'sweet spot' that minimizes the total error (Bias\u00b2 + Variance + Irreducible Error)."
             },
             {
                 "id": 11,
@@ -43095,7 +42602,7 @@
                     "D": "Correlation only applies to linear relationships, while causation applies to all types."
                 },
                 "answer": "B",
-                "detailedexplanation": "Correlation is a statistical measure (like Pearson's r) that describes how two variables move together. However, just because two things are correlated doesn't mean one causes the other—there could be a third 'confounding' variable. For example, ice cream sales and drowning incidents are correlated (both increase in summer), but ice cream doesn't cause drowning. Causation requires rigorous experimental design (like A/B testing) to prove a direct cause-and-effect link."
+                "detailedexplanation": "Correlation is a statistical measure (like Pearson's r) that describes how two variables move together. However, just because two things are correlated doesn't mean one causes the other\u2014there could be a third 'confounding' variable. For example, ice cream sales and drowning incidents are correlated (both increase in summer), but ice cream doesn't cause drowning. Causation requires rigorous experimental design (like A/B testing) to prove a direct cause-and-effect link."
             },
             {
                 "id": 23,
@@ -43165,7 +42672,7 @@
                     "D": "The percentage of users who see version B."
                 },
                 "answer": "B",
-                "detailedexplanation": "Alpha (α) is the threshold for significance, often set at 0.05. It represents the risk you are willing to take of committing a Type I error (a 'false positive' where you think there is an effect, but there isn't). If your p-value is less than alpha, you reject the null hypothesis. Lowering alpha makes the test more stringent but increases the risk of a Type II error (failing to detect a real effect)."
+                "detailedexplanation": "Alpha (\u03b1) is the threshold for significance, often set at 0.05. It represents the risk you are willing to take of committing a Type I error (a 'false positive' where you think there is an effect, but there isn't). If your p-value is less than alpha, you reject the null hypothesis. Lowering alpha makes the test more stringent but increases the risk of a Type II error (failing to detect a real effect)."
             },
             {
                 "id": 28,
@@ -43207,7 +42714,7 @@
                     "D": "To predict the next value in a time-series sequence."
                 },
                 "answer": "B",
-                "detailedexplanation": "PCA is a dimensionality reduction technique. It transforms a large set of variables into a smaller one that still contains most of the information in the large set. It does this by identifying 'principal components'—new, uncorrelated variables that are linear combinations of the original ones and are ordered by the amount of variance they explain. This is useful for noise reduction, visualization, and making models run faster by reducing the 'curse of dimensionality'."
+                "detailedexplanation": "PCA is a dimensionality reduction technique. It transforms a large set of variables into a smaller one that still contains most of the information in the large set. It does this by identifying 'principal components'\u2014new, uncorrelated variables that are linear combinations of the original ones and are ordered by the amount of variance they explain. This is useful for noise reduction, visualization, and making models run faster by reducing the 'curse of dimensionality'."
             }
         ],
         "outro_script": {
@@ -43726,7 +43233,7 @@
                 "Core Competencies in Data Science and Business Analytics"
             ],
             "intro_script": {
-                "hook": "Did you know that 90% of business data goes unused? Mastering Data Science and Business Analytics is no longer a luxury—it is the ultimate competitive advantage in today's market.",
+                "hook": "Did you know that 90% of business data goes unused? Mastering Data Science and Business Analytics is no longer a luxury\u2014it is the ultimate competitive advantage in today's market.",
                 "summary": "In this comprehensive guide, we are diving deep into 30 essential practice questions designed to help you ace your Data Science and Business Analytics certification. We cover everything from statistical modeling and predictive analytics to data visualization and business strategy.",
                 "cta_intro": "Before we jump into the first question, make sure to hit that subscribe button and turn on notifications so you never miss a professional certification guide.",
                 "checkfullexamlinkindescription": "For those looking for the complete set of practice exams and in-depth study materials, check the official course link in the description below."
@@ -43784,7 +43291,7 @@
                     "D": "The probability of making a Type II error."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is a fundamental concept in frequentist statistics. It measures the strength of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically ≤ 0.05) indicates strong evidence against the null hypothesis, so you reject the null hypothesis. It is not the probability that the hypothesis itself is true or false, which is a common misconception."
+                "detailedexplanation": "The p-value is a fundamental concept in frequentist statistics. It measures the strength of evidence against the null hypothesis. Specifically, it is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis (H0) is correct. A small p-value (typically \u2264 0.05) indicates strong evidence against the null hypothesis, so you reject the null hypothesis. It is not the probability that the hypothesis itself is true or false, which is a common misconception."
             },
             {
                 "id": 2,
@@ -43980,7 +43487,7 @@
                     "D": "The probability of correctly identifying a true effect."
                 },
                 "answer": "B",
-                "detailedexplanation": "A Type I error, also known as a 'false positive,' occurs when the investigator rejects a null hypothesis that is actually true in the population. The probability of committing a Type I error is denoted by the Greek letter alpha (α) and is usually set at 0.05. Conversely, a Type II error (Option A) is a 'false negative,' occurring when you fail to reject a null hypothesis that is actually false."
+                "detailedexplanation": "A Type I error, also known as a 'false positive,' occurs when the investigator rejects a null hypothesis that is actually true in the population. The probability of committing a Type I error is denoted by the Greek letter alpha (\u03b1) and is usually set at 0.05. Conversely, a Type II error (Option A) is a 'false negative,' occurring when you fail to reject a null hypothesis that is actually false."
             },
             {
                 "id": 16,
@@ -44190,7 +43697,7 @@
                     "D": "The model has too many outliers."
                 },
                 "answer": "B",
-                "detailedexplanation": "Heteroscedasticity occurs when the 'spread' or variance of the residuals changes as the value of the independent variable changes. This violates one of the key assumptions of Ordinary Least Squares (OLS) regression—homoscedasticity (constant variance). If heteroscedasticity is present, the OLS estimates remain unbiased, but the standard errors are unreliable, leading to incorrect p-values and confidence intervals."
+                "detailedexplanation": "Heteroscedasticity occurs when the 'spread' or variance of the residuals changes as the value of the independent variable changes. This violates one of the key assumptions of Ordinary Least Squares (OLS) regression\u2014homoscedasticity (constant variance). If heteroscedasticity is present, the OLS estimates remain unbiased, but the standard errors are unreliable, leading to incorrect p-values and confidence intervals."
             }
         ],
         "outro_script": {
@@ -44218,7 +43725,7 @@
                 "Ultimate Big Data Certification Practice Questions"
             ],
             "intro_script": {
-                "hook": "Are you ready to master the massive world of Big Data? Most Data Science candidates struggle with the infrastructure side of the equation—Hadoop, Spark, and NoSQL. Today, we are diving into 30 high-yield practice questions designed to help you ace your Big Data Tools certification on the first try.",
+                "hook": "Are you ready to master the massive world of Big Data? Most Data Science candidates struggle with the infrastructure side of the equation\u2014Hadoop, Spark, and NoSQL. Today, we are diving into 30 high-yield practice questions designed to help you ace your Big Data Tools certification on the first try.",
                 "summary": "This video covers the essential domains of the Data Science Big Data Tools certification, including distributed computing, data ingestion, storage architectures, and real-time processing frameworks. Each question is followed by a deep-dive explanation to ensure you understand the 'why' behind the 'what'.",
                 "cta_intro": "Before we jump into the first question, make sure to grab a pen and paper to track your score. Don't forget to subscribe for more professional certification prep content.",
                 "checkfullexamlinkindescription": "For the full-length simulated exam and additional study resources, check the link in the description below."
@@ -44514,7 +44021,7 @@
                     "D": "CSV"
                 },
                 "answer": "C",
-                "detailedexplanation": "Apache Avro is a data serialization system that provides rich data structures and a compact, fast, binary data format. One of its key strengths is its support for schema evolution—meaning you can change the schema of the data over time (add or remove fields) without breaking older readers, which is vital for long-term Big Data storage."
+                "detailedexplanation": "Apache Avro is a data serialization system that provides rich data structures and a compact, fast, binary data format. One of its key strengths is its support for schema evolution\u2014meaning you can change the schema of the data over time (add or remove fields) without breaking older readers, which is vital for long-term Big Data storage."
             },
             {
                 "id": 19,
@@ -44542,7 +44049,7 @@
                     "D": "Visualization"
                 },
                 "answer": "B",
-                "detailedexplanation": "The traditional definition of Big Data (introduced by Gartner/Doug Laney) revolves around the 3 Vs: Volume (the scale of data), Velocity (the speed of data inflow and processing), and Variety (the different forms of data—structured, semi-structured, and unstructured). Later definitions added Veracity and Value, but Variety is the classic third V."
+                "detailedexplanation": "The traditional definition of Big Data (introduced by Gartner/Doug Laney) revolves around the 3 Vs: Volume (the scale of data), Velocity (the speed of data inflow and processing), and Variety (the different forms of data\u2014structured, semi-structured, and unstructured). Later definitions added Veracity and Value, but Variety is the classic third V."
             },
             {
                 "id": 21,
@@ -44686,7 +44193,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the Data Science Big Data Tools certification. How did you do? If you scored above 80%, you are well on your way. If not, don't worry—Big Data is a vast field and consistency is key.",
+            "closing": "That wraps up our 30 practice questions for the Data Science Big Data Tools certification. How did you do? If you scored above 80%, you are well on your way. If not, don't worry\u2014Big Data is a vast field and consistency is key.",
             "cta_final": "If you found this video helpful, please give it a thumbs up and share it with your study group. Subscribe to the channel for more deep dives into data engineering and data science certifications.",
             "next_steps": "Check out our 'Mastering Apache Spark' playlist or the 'Hadoop Ecosystem' crash course linked on the screen now. Good luck with your exam!"
         },
@@ -44710,7 +44217,7 @@
                 "Full Data Science Project Workflow Practice Exam"
             ],
             "intro_script": {
-                "hook": "Ever wondered why most data science models fail when they hit production? It’s not the math—it’s the application.",
+                "hook": "Ever wondered why most data science models fail when they hit production? It\u2019s not the math\u2014it\u2019s the application.",
                 "summary": "In this video, we are breaking down 30 comprehensive practice questions for the Data Science Applied Projects certification. We will cover everything from data ingestion and exploratory analysis to model deployment and monitoring.",
                 "cta_intro": "Make sure to grab a notebook, as we'll be diving deep into the 'why' behind every correct answer.",
                 "checkfullexamlinkindescription": "For the full-length practice exam and premium study materials, check the link in the description below."
@@ -45018,7 +44525,7 @@
                     "D": "To calculate the final error of the model."
                 },
                 "answer": "B",
-                "detailedexplanation": "Without activation functions (Option B), a neural network—no matter how many layers it has—would behave just like a linear regression model because the composition of linear functions is still linear. Activation functions like ReLU, Sigmoid, or Tanh allow the network to learn non-linear relationships in the data."
+                "detailedexplanation": "Without activation functions (Option B), a neural network\u2014no matter how many layers it has\u2014would behave just like a linear regression model because the composition of linear functions is still linear. Activation functions like ReLU, Sigmoid, or Tanh allow the network to learn non-linear relationships in the data."
             },
             {
                 "id": 20,
@@ -45176,7 +44683,7 @@
             }
         ],
         "outro_script": {
-            "closing": "That wraps up our 30 practice questions for the Data Science Applied Projects certification. We’ve covered everything from the initial data understanding to the final deployment and monitoring phases.",
+            "closing": "That wraps up our 30 practice questions for the Data Science Applied Projects certification. We\u2019ve covered everything from the initial data understanding to the final deployment and monitoring phases.",
             "cta_final": "If you found this helpful, please hit the like button and subscribe for more data science career guides. To practice with full-length exams and detailed case studies, visit the Udemy link in the description.",
             "next_steps": "Check out our next video on 'Top 10 Data Science Interview Case Studies' to further boost your career."
         },
@@ -45201,7 +44708,7 @@
             ],
             "intro_script": {
                 "hook": "Ever wondered why some machine learning models fail in production while others thrive? The secret lies in mastering the fundamental algorithms and techniques that drive data science.",
-                "summary": "In this video, we dive deep into 30 essential practice questions covering supervised learning, unsupervised learning, dimensionality reduction, and model evaluation—perfect for anyone preparing for their next big data science certification.",
+                "summary": "In this video, we dive deep into 30 essential practice questions covering supervised learning, unsupervised learning, dimensionality reduction, and model evaluation\u2014perfect for anyone preparing for their next big data science certification.",
                 "cta_intro": "Stick around until the end as we break down complex concepts into simple, digestible explanations.",
                 "checkfullexamlinkindescription": "For the full 2026 practice exam set and more resources, make sure to check the link in the description below."
             },
@@ -45369,7 +44876,7 @@
                     "D": "To increase the size of the training data."
                 },
                 "answer": "C",
-                "detailedexplanation": "A hold-out set (or test set) is a portion of the data that is never shown to the model during the training phase. Its sole purpose is to provide an unbiased evaluation of the final model's performance on new, unseen data. If a model performs well on the training data but poorly on the hold-out set, it is a clear indication of overfitting—the model has memorized the noise in the training data rather than learning the underlying patterns."
+                "detailedexplanation": "A hold-out set (or test set) is a portion of the data that is never shown to the model during the training phase. Its sole purpose is to provide an unbiased evaluation of the final model's performance on new, unseen data. If a model performs well on the training data but poorly on the hold-out set, it is a clear indication of overfitting\u2014the model has memorized the noise in the training data rather than learning the underlying patterns."
             },
             {
                 "id": 10,
@@ -45383,7 +44890,7 @@
                     "D": "Decision Trees"
                 },
                 "answer": "B",
-                "detailedexplanation": "Support Vector Machines (SVM) work by finding the hyperplane that best separates two classes. Specifically, it seeks the 'Maximum Margin Hyperplane'—the one that maximizes the distance between the hyperplane and the nearest data points from each class (called support vectors). By maximizing this margin, SVM aims to improve the generalization capability of the classifier."
+                "detailedexplanation": "Support Vector Machines (SVM) work by finding the hyperplane that best separates two classes. Specifically, it seeks the 'Maximum Margin Hyperplane'\u2014the one that maximizes the distance between the hyperplane and the nearest data points from each class (called support vectors). By maximizing this margin, SVM aims to improve the generalization capability of the classifier."
             },
             {
                 "id": 11,
@@ -45495,7 +45002,7 @@
                     "D": "0 to infinity"
                 },
                 "answer": "C",
-                "detailedexplanation": "The Logit function is the log-odds: ln(p / (1-p)). While the probability (p) is bounded between 0 and 1, the logit function maps these values to the entire real number line (-∞ to +∞). This allows the linear combination of features to be equated to the log-odds, which can then be transformed back into a probability using the Logistic (Sigmoid) function."
+                "detailedexplanation": "The Logit function is the log-odds: ln(p / (1-p)). While the probability (p) is bounded between 0 and 1, the logit function maps these values to the entire real number line (-\u221e to +\u221e). This allows the linear combination of features to be equated to the log-odds, which can then be transformed back into a probability using the Logistic (Sigmoid) function."
             },
             {
                 "id": 19,
@@ -45621,7 +45128,7 @@
                     "D": "It indicates the size of the effect observed."
                 },
                 "answer": "B",
-                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. A low p-value (typically ≤ 0.05) indicates that the observed data is unlikely to have occurred by chance under the null hypothesis, leading researchers to reject the null hypothesis in favor of the alternative. It does NOT measure the probability that the hypothesis is true or the magnitude of the effect."
+                "detailedexplanation": "The p-value is a measure of evidence against the null hypothesis. A low p-value (typically \u2264 0.05) indicates that the observed data is unlikely to have occurred by chance under the null hypothesis, leading researchers to reject the null hypothesis in favor of the alternative. It does NOT measure the probability that the hypothesis is true or the magnitude of the effect."
             },
             {
                 "id": 28,
