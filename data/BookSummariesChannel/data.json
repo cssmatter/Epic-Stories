@@ -1,1 +1,2782 @@
-[]
+[
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do tiny choices compound into remarkable change, while big resolutions often fade?",
+            "intro_line": "Today, we’re exploring Atomic Habits by James Clear, a practical guide to building better routines through small changes, clear cues, and a stronger sense of identity."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "The Plateau of Latent Potential",
+                "summary": "Clear argues that progress often appears slow because results lag behind effort. A habit can seem ineffective for weeks before its accumulated effects become visible. The lesson is to keep showing up through the quiet period, measure the process as well as outcomes, and recognize that small improvements compound once they cross a meaningful threshold."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Systems over Goals",
+                "summary": "Goals describe a result, while systems describe the repeated actions that make results more likely. A goal can give direction, but a system shapes what happens each day. Clear encourages readers to improve the routine, environment, and feedback loop behind a target so progress does not depend on a burst of motivation or a single finish line."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Identity-Based Change",
+                "summary": "Lasting behavior change grows from the kind of person someone believes they are. Rather than only aiming to run a race or write a book, a person can practice seeing themselves as a runner or writer. Each small action becomes evidence for that identity. The identity is built gradually through repeated votes, not through one dramatic declaration."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Make It Obvious",
+                "summary": "Habits begin with cues, so Clear recommends making desired behaviors visible and easy to notice. People can name a specific time and place for a new habit, attach it to an existing routine, and arrange their environment to bring useful cues forward. Observing current routines also reveals triggers that can be redesigned or removed."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Make It Attractive",
+                "summary": "A behavior is easier to repeat when it is associated with something appealing. Clear describes pairing an important action with a pleasant one and spending time in groups where the desired behavior feels normal. The goal is to change the anticipation around a habit, so the cue creates a pull toward the action rather than resistance."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Make It Easy",
+                "summary": "Reducing friction makes follow-through more likely. Preparing materials in advance, choosing a convenient location, and scaling a new routine down to a very small first step all lower the effort needed to begin. The two-minute version is a starting ritual, not the full achievement: it helps a behavior become automatic before its duration grows."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Make It Satisfying",
+                "summary": "Immediate feedback helps a habit stick because many worthwhile outcomes arrive later. Clear recommends tracking repetitions and creating a small, immediate sense of completion, while avoiding rewards that undermine the behavior. When a lapse happens, the useful rule is to return quickly rather than let one missed day turn into a pattern."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Review, Adapt, and Keep Going",
+                "summary": "A habit should fit a person’s circumstances and strengths, and it may need adjustment as those circumstances change. Clear connects progress to the right level of challenge: too easy can become boring, while too difficult can become discouraging. Regular review helps keep the system useful, and steady practice makes improvement more reliable than motivation alone."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Atomic Habits by James Clear | Full Book Summary & Key Lessons",
+            "author": "James Clear",
+            "category": "Self-Help / Habits",
+            "affiliate_link": "https://www.amazon.com/dp/0735211299",
+            "cover_image": "https://m.media-amazon.com/images/I/8106lPWfXpL._SL1500_.jpg",
+            "short_description": "Discover how small behavior changes compound over time. James Clear explains how to design cues, make good habits attractive and easy, and build an identity that supports lasting change.",
+            "tags": [
+                "Atomic Habits",
+                "James Clear",
+                "Habit Formation",
+                "Personal Growth",
+                "Productivity",
+                "Behavior Change",
+                "Self Improvement",
+                "Book Summary",
+                "Daily Habits",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Atomic Habits",
+            "author": "James Clear",
+            "thumbnail_id": "0735211299"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What if better relationships began with listening more carefully and making others feel respected?",
+            "intro_line": "Today, we’re exploring Dale Carnegie’s classic guide to communication, influence, and cooperation, with practical principles for building trust without turning every conversation into a contest."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Start with Respect",
+                "summary": "Carnegie opens with a simple premise: people rarely respond well to blame, ridicule, or constant correction. Criticism can make someone defensive without helping them improve. A more constructive approach tries to understand the pressures behind a behavior, acknowledges what is working, and speaks to the other person’s dignity while still addressing the issue."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Offer Sincere Appreciation",
+                "summary": "People want their efforts to matter. Carnegie distinguishes genuine appreciation from empty flattery: notice a specific contribution and explain why it helped. This shifts attention from self-interest toward the value another person creates. The practice works best when it is honest, timely, and connected to real strengths rather than used as a hidden technique."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Connect Ideas to Their Interests",
+                "summary": "Influence becomes more natural when a conversation begins with what the other person cares about. Instead of pushing a request as if it mattered only to the speaker, explain how it connects to shared needs and desired outcomes. The principle is not to manipulate someone’s preferences, but to understand them before proposing a useful next step."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Show Curiosity and Listen",
+                "summary": "Carnegie recommends giving people room to talk about their experiences and ideas. Ask questions that invite detail, listen without rushing to redirect the discussion, and respond to what was actually said. Curiosity builds rapport because it signals that the person is more than an obstacle or audience for a prepared speech."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Remember Names and Personal Details",
+                "summary": "Using someone’s name thoughtfully and remembering details from an earlier conversation helps a relationship feel personal. Carnegie presents this as a sign of attention, not a shortcut to control. It takes practice to listen for details, store them accurately, and follow up in a way that feels natural rather than performative."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Disagree Without Creating an Enemy",
+                "summary": "An argument may produce a momentary win while making future cooperation harder. Carnegie suggests beginning with common ground, admitting when the other person has a valid point, and asking questions that help both sides examine the issue. People are more willing to reconsider when they can preserve dignity and participate in the reasoning."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Help Others Own the Idea",
+                "summary": "People often support plans more strongly when they have helped shape them. Invite suggestions, give credit, and describe an idea as a shared solution when that is accurate. This principle is about participation: a leader can create the conditions for a good idea to emerge without needing to claim every insight as their own."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Encourage Change with Care",
+                "summary": "When a problem must be addressed, Carnegie recommends beginning with what is going well, describing the concern clearly, and offering a path forward that preserves confidence. Praise should be specific, expectations should be understandable, and improvement should feel achievable. The broader lesson is that respect and accountability can work together."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "How to Win Friends and Influence People by Dale Carnegie | Full Book Summary & Key Lessons",
+            "author": "Dale Carnegie",
+            "category": "Communication / Relationships",
+            "affiliate_link": "https://www.amazon.com/dp/0671027034",
+            "cover_image": "https://m.media-amazon.com/images/I/71vK0WVQ4rL._SL1500_.jpg",
+            "short_description": "Learn Carnegie’s enduring lessons on listening, sincere appreciation, disagreement, and helping people feel valued in everyday conversations and leadership.",
+            "tags": [
+                "Dale Carnegie",
+                "Communication Skills",
+                "People Skills",
+                "Leadership",
+                "Relationships",
+                "Influence",
+                "Emotional Intelligence",
+                "Book Summary",
+                "Personal Growth",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "How to Win Friends and Influence People",
+            "author": "Dale Carnegie",
+            "thumbnail_id": "0671027034"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why can careful listening create more leverage than a clever argument in a negotiation?",
+            "intro_line": "Today, we’re exploring Never Split the Difference, where former FBI negotiator Chris Voss turns high-stakes listening skills into practical tools for everyday conversations."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Listen Before You Bargain",
+                "summary": "Voss challenges the idea that negotiation is mainly about presenting strong arguments. People need to feel heard before they can consider a proposal. A calm tone, careful listening, and attention to emotion help reveal what matters beneath a stated demand. The negotiator’s first task is to understand the situation, not rush toward a compromise."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Use Mirroring and Labels",
+                "summary": "Repeating a few important words can encourage someone to expand on a point, while naming a likely emotion can show that it has been noticed. These tools are forms of tactical empathy: they help a listener map another person’s perspective without pretending to agree. Their value comes from curiosity and accuracy, not from reciting a script."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Prepare for Difficult Topics",
+                "summary": "An accusation audit brings likely criticisms into the open before they dominate the conversation. A negotiator can acknowledge how a request may sound, then invite the other person to correct or clarify the picture. This lowers surprise and defensiveness, making it easier to discuss constraints and interests directly."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Ask Calibrated Questions",
+                "summary": "Open questions beginning with how or what can shift a conversation from demands toward problem-solving. Instead of ordering someone to act, ask what would make a workable plan possible or how a constraint can be addressed. The answers reveal information and invite the counterpart to participate in building a solution."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Understand the Power of No",
+                "summary": "A quick yes may be a polite way to end a conversation rather than a real commitment. Voss treats no as a useful boundary that can make people feel safer and more in control. The next step is to learn what the no protects and whether another option meets the underlying need."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Look for Hidden Information",
+                "summary": "A Black Swan is a piece of information that changes how a situation should be understood. It may be a deadline, a personal concern, an unstated decision-maker, or a constraint neither side has named. Careful questions, observation, and listening for inconsistencies can surface facts that matter more than the visible bargaining positions."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Make Offers with a Plan",
+                "summary": "Voss outlines a structured bargaining method that starts with an ambitious but defensible opening, then moves in measured steps while using precise justifications. The technique is a reminder to prepare a range and a rationale before negotiating. Numbers should support a fair agreement, not become a substitute for understanding the other side."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Define What Agreement Means",
+                "summary": "A promising conversation still needs a clear, workable commitment. Confirm who will do what, by when, and how both sides will know it has happened. The book’s methods are strongest when used to reach agreements that people can honor; tactical empathy should support clarity and trust, not pressure someone into a deal."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Never Split the Difference by Chris Voss with Tahl Raz | Full Book Summary & Key Lessons",
+            "author": "Chris Voss with Tahl Raz",
+            "category": "Business / Negotiation",
+            "affiliate_link": "https://www.amazon.com/dp/0062407805",
+            "cover_image": "https://m.media-amazon.com/images/I/81PPq8CP4sL._SL1500_.jpg",
+            "short_description": "Chris Voss presents negotiation as a human, emotional process. This summary covers tactical empathy, calibrated questions, listening tools, hidden information, and a disciplined approach to reaching workable agreements.",
+            "tags": [
+                "Never Split the Difference",
+                "Chris Voss",
+                "Negotiation",
+                "Tactical Empathy",
+                "Business Skills",
+                "Communication",
+                "Persuasion",
+                "Book Summary",
+                "Conflict Resolution",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Never Split the Difference",
+            "author": "Chris Voss with Tahl Raz",
+            "thumbnail_id": "0062407805"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do confident judgments sometimes feel right even when the evidence is weak?",
+            "intro_line": "Today, we’re exploring Daniel Kahneman’s account of two modes of thought and the shortcuts that shape our judgments, memories, and choices."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Two Modes of Thought",
+                "summary": "Kahneman describes fast thinking as automatic, associative, and low-effort, while slow thinking is more deliberate and demanding. Both are useful: intuition handles routine recognition, and careful reasoning checks complex questions. The danger is assuming that a fluent first impression has been carefully examined when it may only be a quick response."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Attention Has Limits",
+                "summary": "Deliberate reasoning requires attention, and attention is a limited resource. When people are tired, distracted, or overloaded, they rely more on familiar patterns and intuitive answers. A useful decision process creates space for concentration, reduces unnecessary complexity, and recognizes that effortful analysis cannot be sustained at full intensity all day."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "How Heuristics Shape Judgments",
+                "summary": "People often answer a difficult question by substituting an easier one. Availability makes memorable examples feel common, and representativeness can cause a person to overvalue resemblance while ignoring base rates. These shortcuts are not signs of stupidity; they are efficient habits of thought. They become risky when the situation requires statistical or contextual judgment."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Confidence and the Illusion of Understanding",
+                "summary": "A coherent story can make an outcome seem predictable after it happens. Kahneman shows how hindsight and overconfidence can lead people to trust their explanations more than the evidence warrants. Keeping records of predictions, considering alternative causes, and asking what would change one’s mind can make judgments more calibrated."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Risk, Loss, and Reference Points",
+                "summary": "People often evaluate gains and losses relative to a reference point rather than in absolute terms. Losses can feel more powerful than equivalent gains, and the way a choice is framed can change what seems attractive. Prospect theory helps explain why people may avoid some risks, seek others, and react strongly to small changes in presentation."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Framing and Ownership",
+                "summary": "A choice can feel different depending on whether it is presented as a gain or a loss. Once people own something, they may value it more than an identical item they do not possess. These patterns matter in markets, policy, and everyday decisions, so a careful thinker asks whether the frame is shaping the judgment."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "The Experiencing and Remembering Selves",
+                "summary": "Kahneman distinguishes the self that experiences each moment from the self that later remembers and evaluates an event. Memory tends to emphasize peaks and endings, so a remembered experience may not match the total experience. This distinction raises a practical question: are we making choices for daily well-being, for the story we will recall, or for both?"
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Use Better Decision Habits",
+                "summary": "The book does not promise a bias-free mind. It encourages people to notice when intuition may be unreliable, seek outside perspectives, compare predictions with outcomes, and use simple checklists for repeated decisions. Better judgment comes from designing conditions that catch mistakes, rather than relying on confidence or willpower to eliminate them."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Thinking, Fast and Slow by Daniel Kahneman | Full Book Summary & Key Lessons",
+            "author": "Daniel Kahneman",
+            "category": "Psychology / Decision-Making",
+            "affiliate_link": "https://www.amazon.com/dp/0374533555",
+            "cover_image": "https://m.media-amazon.com/images/I/61fdrEuPJwL._SL1500_.jpg",
+            "short_description": "Kahneman explains how fast intuitive judgments and slower deliberate reasoning work together, and how mental shortcuts can produce predictable errors in decisions.",
+            "tags": [
+                "Thinking Fast and Slow",
+                "Daniel Kahneman",
+                "Psychology",
+                "Decision Making",
+                "Cognitive Bias",
+                "Behavioral Economics",
+                "Critical Thinking",
+                "Book Summary",
+                "Mental Models",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "thumbnail_id": "0374533555"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How can understanding power dynamics help you act with more awareness and avoid being blindsided?",
+            "intro_line": "Today, we’re examining Robert Greene’s history-based guide to power, reputation, timing, and social strategy, with a focus on reading these patterns critically and ethically."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Read the Room",
+                "summary": "Greene presents power as a set of relationships shaped by status, incentives, and perception. The first lesson is to notice who has influence, what each person values, and how decisions are actually made. Observation can protect someone from avoidable mistakes, but it should be paired with respect for people rather than suspicion toward everyone."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Protect Trust and Reputation",
+                "summary": "Reputation affects how others interpret the same action, so reliability and composure matter over time. The book warns that status conflicts can grow when people feel publicly diminished. In practice, a durable reputation comes from keeping commitments, sharing credit fairly, and addressing conflict without turning every disagreement into a contest for dominance."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Use Communication with Care",
+                "summary": "Greene emphasizes that timing, tone, and restraint can shape how a message lands. Speaking less can create room to listen, but withholding information can also damage trust. A responsible reading is to communicate deliberately: be concise, avoid needless provocation, and be clear about what others need to know to make an informed choice."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Create Value and Reciprocity",
+                "summary": "Influence often grows when a person becomes useful to others. Greene describes the advantage of understanding what people need and offering something valuable, but dependence can become exploitative if it removes their choice. Healthy influence creates mutual benefit, makes contributions visible, and leaves room for others to succeed independently."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Choose the Right Battles",
+                "summary": "The book repeatedly stresses that action should match the moment. Not every slight requires a response, and not every opportunity is worth taking. Strategic patience means gathering facts, understanding consequences, and deciding which outcome matters. It is not passivity; it is a way to keep short-term emotion from deciding long-term direction."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Offer Options, Not Pressure",
+                "summary": "Greene’s discussion of controlling the terms of a situation can be translated into a constructive skill: present clear options that meet shared goals. When people have meaningful choices, they can participate rather than feel cornered. The ethical line is important: an option set should clarify trade-offs, not hide costs or eliminate a person’s ability to say no."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Adapt without Losing Your Values",
+                "summary": "Power is fluid, so a strategy that works in one setting may fail in another. Greene encourages flexibility and attention to changing conditions. A useful practice is to update plans when evidence changes while keeping stable commitments about honesty, fairness, and the treatment of people who have less influence."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Study Power, Then Use Judgment",
+                "summary": "The laws are provocative generalizations drawn from historical stories, not universal rules for every workplace or relationship. Greene’s examples can help readers recognize tactics used around them, but uncritical imitation can erode trust. The strongest takeaway is awareness: understand incentives, protect your boundaries, and choose influence that does not depend on deception."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The 48 Laws of Power by Robert Greene | Full Book Summary & Key Lessons",
+            "author": "Robert Greene",
+            "category": "Strategy / Leadership",
+            "affiliate_link": "https://www.amazon.com/dp/0140280197",
+            "cover_image": "https://m.media-amazon.com/images/I/61GcH6gF0GL._SL1500_.jpg",
+            "short_description": "This summary distills Greene’s historical observations about status, influence, reputation, and timing. Use them as a lens for recognizing power dynamics, not as permission to manipulate people.",
+            "tags": [
+                "48 Laws of Power",
+                "Robert Greene",
+                "Leadership",
+                "Strategy",
+                "Power Dynamics",
+                "Communication",
+                "History",
+                "Book Summary",
+                "Critical Thinking",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The 48 Laws of Power",
+            "author": "Robert Greene",
+            "thumbnail_id": "0140280197"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Could a better life come from choosing fewer things to care about, and caring about them more deeply?",
+            "intro_line": "Today, we’re exploring Mark Manson’s blunt challenge to constant positivity and his case for choosing meaningful values, accepting limits, and taking responsibility."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Choose What Deserves Attention",
+                "summary": "Manson argues that attention is limited, so caring about everything leaves little energy for what matters. The title’s provocation is about selective commitment, not indifference. A meaningful life includes concerns and effort; the task is to choose which responsibilities and relationships deserve that investment."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Accept Ordinary Limits",
+                "summary": "The pursuit of being exceptional at everything can make people anxious and dissatisfied. Manson challenges constant comparison and suggests that a grounded life can be worthwhile without public recognition. Accepting limits does not mean giving up ambition; it means building a life around realistic values rather than an impossible need to be admired."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Problems Are Part of the Deal",
+                "summary": "Every choice brings difficulties, and avoiding all discomfort is not a workable life strategy. Manson shifts the question from how to escape problems to which problems are worth solving. This reframes hardship as a cost attached to goals, helping readers choose challenges that align with what they care about."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Take Responsibility for Your Response",
+                "summary": "A person may not control every circumstance, but they can often choose how to respond and what to do next. Manson distinguishes responsibility from blame: responsibility is about agency in the present, not claiming fault for everything that happened. This distinction makes it possible to act without denying real constraints."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Choose Better Values",
+                "summary": "Manson critiques values centered only on pleasure, status, or external approval because they depend on factors outside a person’s control. More durable values focus on honesty, curiosity, contribution, and personal growth. When values are specific and actionable, they help people evaluate progress by their conduct rather than by unpredictable outcomes."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Be Willing to Be Wrong",
+                "summary": "Certainty can protect a person’s ego while blocking learning. Manson encourages readers to question their assumptions, tolerate discomfort, and revise beliefs when evidence changes. Humility is not weakness; it is the willingness to notice when a story no longer fits and take responsibility for correcting course."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Set Boundaries and Say No",
+                "summary": "Commitments become meaningful when people can decline requests that conflict with their priorities. Healthy boundaries make relationships clearer because each person can state what they are willing to do. Saying no is not a way to dismiss others; it is a way to protect the limited attention needed for genuine yeses."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Remember That Life Is Finite",
+                "summary": "Manson uses mortality to sharpen the question of what deserves a person’s time. Knowing that life is limited can reduce the pull of trivial status contests and help people commit to relationships, work, and values that matter. The point is not to make every moment productive, but to live deliberately."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Subtle Art of Not Giving a F*ck by Mark Manson | Full Book Summary & Key Lessons",
+            "author": "Mark Manson",
+            "category": "Self-Help / Personal Growth",
+            "affiliate_link": "https://www.amazon.com/dp/0062457713",
+            "cover_image": "https://m.media-amazon.com/images/I/71QKQ9mwV7L._SL1500_.jpg",
+            "short_description": "Mark Manson argues that a good life is not a life without problems. This summary explores values, responsibility, failure, boundaries, uncertainty, and how to choose which struggles are worth having.",
+            "tags": [
+                "The Subtle Art of Not Giving a F*ck",
+                "Mark Manson",
+                "Personal Growth",
+                "Values",
+                "Resilience",
+                "Mindset",
+                "Self Improvement",
+                "Book Summary",
+                "Responsibility",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Subtle Art of Not Giving a F*ck",
+            "author": "Mark Manson",
+            "thumbnail_id": "0062457713"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do so many small businesses struggle even when their founders are talented at the work?",
+            "intro_line": "Today, we’re exploring Michael E. Gerber’s guide to small-business systems, the roles founders play, and how to build an operation that does not depend on one person doing everything."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "The Entrepreneurial Myth",
+                "summary": "Gerber challenges the assumption that a skilled technician will automatically thrive as a business owner. Many people start a company because they are good at the work, then discover that selling, managing, and building systems require different skills. The business must be designed as an organization, not merely as a job for its founder."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Three Roles in One Founder",
+                "summary": "Gerber describes the entrepreneur who imagines the future, the manager who creates order, and the technician who does the hands-on work. These roles pull in different directions, and a founder may overidentify with the technician because that work feels familiar. A healthy company gives each role a defined place and enough attention."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Understand the Business Lifecycle",
+                "summary": "A small firm can begin in a moment of enthusiasm, then encounter growing pains when demand exceeds the founder’s capacity. A business that never changes can remain dependent on one person and become difficult to scale. Gerber asks owners to recognize the stage they are in and build structures for the next one."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Work on the Business",
+                "summary": "Working in the business completes today’s tasks; working on the business improves how those tasks are chosen, assigned, and repeated. Gerber’s franchise prototype is a model for a company that can deliver a consistent customer experience across people and locations. The goal is not to make work impersonal, but to make quality reproducible."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Design Repeatable Systems",
+                "summary": "Processes, job roles, standards, and measurements reduce dependence on memory and improvisation. A useful system makes expectations visible and gives employees a reliable way to perform. Documentation should support judgment rather than replace it, and systems should be reviewed when they create needless friction or fail to serve customers."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Build a Management Structure",
+                "summary": "As a company grows, its owner needs clear responsibilities, decision rights, and communication paths. Gerber encourages designing a simple organizational chart and defining what success looks like for each role. This makes delegation possible because employees know what they own and where to raise problems."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Start with the Customer Promise",
+                "summary": "A business exists to create a customer, so its marketing must begin with the needs and expectations of a specific audience. The customer’s experience should match the promise made before purchase. Listening, measuring satisfaction, and correcting service failures connect the company’s internal operations to the reason customers choose it."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Innovate and Let the Business Mature",
+                "summary": "A mature business does more than repeat old routines; it tests improvements while maintaining dependable service. Gerber encourages owners to use systems as a foundation for learning rather than a reason to resist change. The objective is an enterprise that serves customers well and can keep operating without the founder carrying every detail."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The E-Myth Revisited by Michael E. Gerber | Full Book Summary & Key Lessons",
+            "author": "Michael E. Gerber",
+            "category": "Business / Entrepreneurship",
+            "affiliate_link": "https://www.amazon.com/dp/0887307280",
+            "cover_image": "https://m.media-amazon.com/images/I/41uWUlsA1QL.jpg",
+            "short_description": "Gerber explains why technical skill alone does not prepare someone to run a business, and how repeatable systems, clear roles, and a customer promise can make a company more resilient.",
+            "tags": [
+                "The E-Myth Revisited",
+                "Michael E Gerber",
+                "Small Business",
+                "Entrepreneurship",
+                "Business Systems",
+                "Management",
+                "Operations",
+                "Book Summary",
+                "Leadership",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The E-Myth Revisited",
+            "author": "Michael E. Gerber",
+            "thumbnail_id": "0887307280"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How can clear principles help people make better decisions when the path ahead is uncertain?",
+            "intro_line": "Today, we’re exploring Ray Dalio’s framework for turning experience into principles, testing ideas through feedback, and building teams that learn from mistakes."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Turn Experience into Principles",
+                "summary": "Dalio treats principles as rules that help people make decisions consistently across situations. A principle is useful when it is specific enough to guide action and tested against real outcomes. Writing down lessons from mistakes and successes can keep experience from being forgotten or applied only when convenient."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Practice Radical Truth and Transparency",
+                "summary": "Dalio argues that organizations improve when people can surface problems and discuss disagreements directly. Transparency makes information easier to inspect, while truthfulness helps a team correct errors early. These practices require care: candor should focus on the issue and the evidence, with clear respect for people’s dignity and privacy."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Diagnose Before Fixing",
+                "summary": "When something goes wrong, Dalio recommends separating the immediate event from its causes. A person can ask what happened, what conditions contributed, and which part of the process can be changed. This reduces the chance of repeating a quick fix that treats a symptom while leaving the underlying issue untouched."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Stay Open-Minded",
+                "summary": "Strong opinions can be useful, but certainty becomes a liability when it blocks better evidence. Dalio encourages asking what one might be missing and listening to people with relevant experience. His idea of believability-weighted discussion gives more influence to expertise, while still requiring claims to be examined rather than accepted automatically."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Use a Five-Step Process",
+                "summary": "Dalio’s process moves from setting clear goals to identifying problems, diagnosing causes, designing a plan, and carrying it out. Each step depends on the one before it: vague goals make it hard to define the real problem, and shallow diagnosis leads to weak solutions. A written process makes learning more repeatable."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Build a Learning Culture",
+                "summary": "A team’s culture is shaped by what it rewards and what it tolerates. Dalio encourages people to treat mistakes as evidence for improvement, share feedback, and make roles and expectations clear. Psychological safety matters because people are more likely to report a problem when doing so will lead to learning rather than humiliation."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Choose People and Roles Carefully",
+                "summary": "Dalio emphasizes matching people’s strengths and limitations to the work they do. Clear evaluation can help a team place responsibility well, but human judgment is imperfect and should be open to correction. Useful feedback describes observable behavior, gives context, and helps someone understand how to improve or find a better fit."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Keep Updating the Principles",
+                "summary": "Principles should evolve when new evidence shows they no longer work. Dalio recommends recording decisions, reviewing results, and refining the rules that guided them. The larger lesson is to make learning visible: a team that can explain how it reached a decision is better positioned to repeat what worked and change what did not."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Principles: Life and Work by Ray Dalio | Full Book Summary & Key Lessons",
+            "author": "Ray Dalio",
+            "category": "Business / Leadership",
+            "affiliate_link": "https://www.amazon.com/dp/1501124021",
+            "cover_image": "https://m.media-amazon.com/images/I/61LKD6scbfL._SL1500_.jpg",
+            "short_description": "Ray Dalio presents a repeatable approach to decision-making: define goals, diagnose problems, design solutions, and learn through radical truth and transparent feedback.",
+            "tags": [
+                "Principles",
+                "Ray Dalio",
+                "Leadership",
+                "Decision Making",
+                "Business Strategy",
+                "Team Culture",
+                "Personal Development",
+                "Book Summary",
+                "Management",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Principles: Life and Work",
+            "author": "Ray Dalio",
+            "thumbnail_id": "1501124021"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What do high-performing groups do to make people feel safe, connected, and ready to contribute?",
+            "intro_line": "Today, we’re exploring Daniel Coyle’s study of successful groups and the everyday signals that build belonging, trust, and shared purpose."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Belonging Is Built in Small Signals",
+                "summary": "Coyle describes group safety as the repeated sense that people are accepted and can contribute. Belonging grows through small signals: attentive eye contact, inclusive language, turn-taking, and follow-through. These moments tell members whether it is safe to speak up, ask for help, and bring concerns into the open."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Make Safety a Daily Practice",
+                "summary": "A strong culture does not appear from a slogan. Leaders create safety by showing that each person matters, listening without rushing to punish mistakes, and making expectations clear. Safety is not an absence of standards; it gives a team enough trust to meet demanding standards together."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Share Vulnerability to Build Trust",
+                "summary": "Coyle highlights how groups can build trust when members acknowledge uncertainty, admit mistakes, and ask for help. A leader who models this behavior makes it easier for others to do the same. Vulnerability is most useful when it is paired with responsibility and a concrete next step, not used to avoid accountability."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Create a Shared Purpose",
+                "summary": "Teams need a clear picture of what they are trying to do and why it matters. Coyle points to repeated stories, phrases, and priorities that make a group’s purpose memorable. The strongest purpose connects everyday choices to a larger mission, so people can see how their work contributes."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Connect Standards to the Mission",
+                "summary": "A culture becomes more than a slogan when its priorities influence hiring, feedback, and daily decisions. Leaders can explain what excellence looks like, set meaningful boundaries, and recognize behavior that reflects the group’s values. Consistency helps people understand that the mission is real and that their actions affect it."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Build Cooperation through Listening",
+                "summary": "Successful teams exchange information rather than relying on isolated expertise. Members ask for input, share what they know, and notice where a colleague’s perspective can improve a plan. Listening is not simply politeness; it helps the group combine different experiences into a stronger understanding of the task."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Use Stories and Rituals with Purpose",
+                "summary": "Stories help people remember what a group values, while rituals make those values visible in recurring moments. A story about a difficult decision can teach more than a generic slogan when it shows what the team chose and why. These practices should invite participation and reflect the group’s real behavior."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Make Culture Observable",
+                "summary": "Coyle’s ideas become practical when teams look at specific behaviors: who speaks, how mistakes are handled, how decisions are explained, and whether members ask for help. Leaders can choose one small behavior to strengthen, repeat it, and observe the effect. Culture is built through consistent interactions, not a one-time announcement."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Culture Code by Daniel Coyle | Full Book Summary & Key Lessons",
+            "author": "Daniel Coyle",
+            "category": "Leadership / Team Culture",
+            "affiliate_link": "https://www.amazon.com/dp/0804176981",
+            "cover_image": "https://m.media-amazon.com/images/I/41sISrWLbrL.jpg",
+            "short_description": "Daniel Coyle identifies three practical skills behind strong group culture: building safety, sharing vulnerability, and establishing purpose through clear shared signals.",
+            "tags": [
+                "The Culture Code",
+                "Daniel Coyle",
+                "Team Culture",
+                "Leadership",
+                "Teamwork",
+                "Psychological Safety",
+                "Management",
+                "Book Summary",
+                "Communication",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Culture Code",
+            "author": "Daniel Coyle",
+            "thumbnail_id": "0804176981"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Can leaders be both courageous and open about uncertainty without losing the trust of their teams?",
+            "intro_line": "Today, we’re exploring Brené Brown’s research-based approach to brave leadership, honest conversations, trust, and learning through setbacks."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Courage Requires Vulnerability",
+                "summary": "Brown connects courage with the willingness to enter situations where the outcome is uncertain. Vulnerability is not oversharing or abandoning boundaries; it is being honest about risk, asking questions, and staying engaged when a conversation is difficult. Leaders who can do this make it easier for others to raise problems early."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Translate Values into Behavior",
+                "summary": "Values guide leadership only when they are visible in decisions and daily conduct. Brown encourages people to name a small number of values and define the behaviors that demonstrate them. A stated value can then help a leader make trade-offs, give feedback, and explain why a choice was made."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Rumble with Difficult Conversations",
+                "summary": "Brown uses the idea of a rumble for conversations that require curiosity, clarity, and a willingness to stay with tension. A productive discussion separates facts from assumptions, asks what each person needs, and seeks a path forward. The goal is not to win the exchange; it is to understand what is happening and address it."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Build Trust through BRAVING",
+                "summary": "Brown’s BRAVING framework breaks trust into behaviors such as keeping boundaries, honoring reliability, protecting confidentiality, and acting with integrity. Trust grows through repeated choices rather than grand declarations. Teams can use the framework to identify a specific behavior that would make cooperation safer and more dependable."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Lead with Curiosity and Clear Standards",
+                "summary": "A brave leader can combine curiosity with accountability. Instead of assuming intent, ask what happened and what information may be missing. Then describe the impact and agree on a clear expectation. This keeps feedback grounded in observable behavior and gives the other person a fair chance to respond."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Use Empathy with Boundaries",
+                "summary": "Empathy means trying to understand another person’s experience, not agreeing with every interpretation or removing every consequence. Brown emphasizes that connection and boundaries can coexist. Leaders can listen to what made a situation difficult while still being clear about the responsibilities that must be met."
+            },
+            {
+                "chapter_number": "7",
+                "chapter_title": "Learn to Rise after a Setback",
+                "summary": "Failure and disappointment can trigger blame, withdrawal, or a story that turns one event into a judgment about a person’s worth. Brown encourages people to examine that story, seek support, and learn from what happened. Recovery includes naming the facts, identifying needs, and choosing a constructive next action."
+            },
+            {
+                "chapter_number": "8",
+                "chapter_title": "Practice Courage as a Team",
+                "summary": "Brave leadership is a set of habits that teams practice together: asking for help, sharing concerns, giving honest feedback, and repairing trust. Leaders make these behaviors more likely when they model them and respond consistently. Courage is not a single heroic act; it is repeated work that keeps people connected to the mission."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Dare to Lead by Brené Brown | Full Book Summary & Key Lessons",
+            "author": "Brené Brown",
+            "category": "Leadership / Personal Growth",
+            "affiliate_link": "https://www.amazon.com/dp/0399592520",
+            "cover_image": "https://m.media-amazon.com/images/I/71qXI7x+mUL.jpg",
+            "short_description": "Brené Brown argues that courageous leadership depends on vulnerability, clear values, trust, and the ability to learn after disappointment rather than retreat into blame.",
+            "tags": [
+                "Dare to Lead",
+                "Brene Brown",
+                "Leadership",
+                "Courage",
+                "Vulnerability",
+                "Teamwork",
+                "Trust",
+                "Book Summary",
+                "Management",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Dare to Lead",
+            "author": "Brené Brown",
+            "thumbnail_id": "0399592520"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do small cues sometimes have a surprising effect on what people decide?",
+            "intro_line": "Today, we’re exploring Robert Cialdini’s research on persuasion and the social shortcuts that influence decisions, along with ways to recognize them and use influence responsibly."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "The Shortcut-Minded Brain",
+                "summary": "People rely on learned shortcuts because they make complex choices faster. A familiar cue can trigger a quick response before someone examines the full situation. Cialdini’s work helps readers notice these moments, pause when the stakes are high, and ask whether the cue is genuinely relevant to the decision."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Reciprocity and Consistency",
+                "summary": "Reciprocity encourages people to return favors, while commitment and consistency make them more likely to act in line with earlier choices. These patterns can support cooperation when they are genuine, but they can also be exploited. A useful defense is to separate gratitude or past effort from the merits of a current request."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Social Proof and Belonging",
+                "summary": "When people are uncertain, they often look to others for guidance. The actions of similar people can provide useful information, yet popularity is not proof of quality. Before following a crowd, consider whether those people have the same needs, access to the same facts, and incentives that match yours."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Liking and Authority",
+                "summary": "People are more receptive to those they like and to people they perceive as credible authorities. Warmth and expertise can help important ideas travel, but neither guarantees that a claim is sound. Check credentials, evidence, and conflicts of interest rather than treating familiarity or status as a substitute for judgment."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Scarcity and Urgency",
+                "summary": "Limited availability can make an opportunity feel more valuable and create pressure to act quickly. Scarcity sometimes reflects a real constraint, but artificial urgency can interfere with clear thinking. Slow the decision down, identify the actual deadline, and compare the opportunity with alternatives before committing."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Use Influence with Integrity",
+                "summary": "Cialdini’s principles are most useful when they help people communicate real value and protect themselves from unfair pressure. Ethical influence makes the facts and choices clear. It respects the other person’s freedom to decline and avoids disguising a weak offer with emotional triggers."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Influence: The Psychology of Persuasion by Robert B. Cialdini | Full Book Summary & Key Lessons",
+            "author": "Robert B. Cialdini",
+            "category": "Psychology / Communication",
+            "affiliate_link": "https://www.amazon.com/dp/006124189X",
+            "cover_image": "https://m.media-amazon.com/images/I/61wwAomEffL._SL1500_.jpg",
+            "short_description": "Cialdini explains recurring principles of persuasion, including reciprocity, consistency, social proof, liking, authority, and scarcity. This summary focuses on how to recognize these cues and evaluate them thoughtfully.",
+            "tags": [
+                "Influence",
+                "Robert Cialdini",
+                "Persuasion",
+                "Psychology",
+                "Communication",
+                "Social Proof",
+                "Decision Making",
+                "Book Summary",
+                "Critical Thinking",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Influence: The Psychology of Persuasion",
+            "author": "Robert B. Cialdini",
+            "thumbnail_id": "006124189X"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How did one species build cities, institutions, and global systems by believing in shared stories?",
+            "intro_line": "Today, we’re exploring Yuval Noah Harari’s sweeping account of human history, from early cognitive change to agriculture, empires, science, and the modern world."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "The Cognitive Revolution",
+                "summary": "Harari describes a period when humans developed richer language and the ability to share imagined possibilities. Stories helped people coordinate with strangers, form larger groups, and create common identities. The same ability that enabled cooperation also made collective beliefs powerful enough to shape behavior across generations."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "The Agricultural Transition",
+                "summary": "Farming allowed populations to grow and settlements to become permanent, but it also brought new forms of labor, hierarchy, and vulnerability to harvest failure. Harari challenges the simple idea that agriculture immediately improved individual lives. The transition increased society’s productive capacity while making many people’s daily work more demanding."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Shared Orders and Cooperation",
+                "summary": "Money, laws, religions, and nations depend on shared systems of meaning. These institutions are not physical objects, yet people coordinate around them because they agree to treat them as real. Their scale allows cooperation among millions, but their rules can also preserve unequal power or constrain change."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Empires, Trade, and Cultural Blending",
+                "summary": "Empires expanded political control and connected distant communities through roads, administration, and trade. Their histories include coercion and conquest as well as the spread of ideas and institutions. Harari’s broad view shows how cultures continually borrow, adapt, and combine rather than remaining sealed from one another."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Science and Modern Growth",
+                "summary": "Modern science joined systematic observation with institutions willing to invest in discovery. Exploration, finance, and political power reinforced one another, helping create rapid economic and technological change. This growth produced new capabilities and standards of living, but it also brought environmental costs and new forms of control."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Progress and Human Well-Being",
+                "summary": "Harari asks whether rising wealth and technological power have brought greater happiness. Material gains matter, but well-being also depends on relationships, expectations, and meaning. The book closes by urging readers to examine what progress is for, rather than assuming that greater capacity automatically creates a better life."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Sapiens: A Brief History of Humankind by Yuval Noah Harari | Full Book Summary & Key Lessons",
+            "author": "Yuval Noah Harari",
+            "category": "History / Human Society",
+            "affiliate_link": "https://www.amazon.com/dp/0062316095",
+            "cover_image": "https://m.media-amazon.com/images/I/716E6dQ4BXL._SL1500_.jpg",
+            "short_description": "Harari traces how shared beliefs and institutions helped humans cooperate at scale, while asking whether technological and economic progress has made people happier.",
+            "tags": [
+                "Sapiens",
+                "Yuval Noah Harari",
+                "Human History",
+                "Anthropology",
+                "Civilization",
+                "Society",
+                "History Summary",
+                "Book Summary",
+                "Culture",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Sapiens: A Brief History of Humankind",
+            "author": "Yuval Noah Harari",
+            "thumbnail_id": "0062316095"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do people reach moral conclusions first and explain them afterward?",
+            "intro_line": "Today, we’re exploring psychologist Jonathan Haidt’s account of moral intuition, group identity, and why people with different values often talk past one another."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Intuition Often Comes First",
+                "summary": "Haidt compares moral reasoning to a rider trying to guide a much larger elephant of intuition. People often feel that a choice is right or wrong before they can explain why. Reason still matters, but it frequently works to justify or revise an initial reaction rather than create it from scratch."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "The Moral Foundations",
+                "summary": "People can care about harm and fairness while also valuing loyalty, authority, sanctity, and liberty in different ways. These foundations help explain why the same policy or behavior can look protective to one person and threatening to another. Mapping the values in play makes disagreement easier to understand."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Groups Shape Moral Vision",
+                "summary": "Humans are capable of cooperation within groups, and shared rituals and identities can create trust. Those bonds also draw boundaries around who is seen as part of the group. Haidt’s point is not that group loyalty is always good or bad, but that it can both unite and divide."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Why Arguments Fail",
+                "summary": "Facts alone rarely persuade when an argument threatens someone’s identity or moral commitments. People listen more closely when they feel understood and when a proposal connects to values they already hold. Asking what concern a belief is protecting can open a better conversation than attacking the belief directly."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Broaden the Moral Conversation",
+                "summary": "A pluralistic society contains people who weigh moral foundations differently. Haidt encourages listeners to understand the full range of values rather than assuming that their own priorities are the only sincere ones. This does not require agreement; it makes debate more accurate and less likely to turn opponents into caricatures."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Reason Together",
+                "summary": "Reasoning works better when people exchange perspectives, test assumptions, and remain open to correction. The book suggests that cooperation can improve judgment because different people notice different risks. Curiosity and intellectual humility help moral discussion move from winning a point toward understanding the real trade-offs."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Righteous Mind by Jonathan Haidt | Full Book Summary & Key Lessons",
+            "author": "Jonathan Haidt",
+            "category": "Psychology / Society",
+            "affiliate_link": "https://www.amazon.com/dp/0307455777",
+            "cover_image": "https://m.media-amazon.com/images/I/51D5iDg-vLL._SL1000_.jpg",
+            "short_description": "Haidt argues that moral judgments draw on quick intuitions and several moral foundations. Understanding those foundations can make disagreement more curious and less dismissive.",
+            "tags": [
+                "The Righteous Mind",
+                "Jonathan Haidt",
+                "Moral Psychology",
+                "Psychology",
+                "Politics",
+                "Communication",
+                "Empathy",
+                "Book Summary",
+                "Social Science",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Righteous Mind",
+            "author": "Jonathan Haidt",
+            "thumbnail_id": "0307455777"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How much of success comes from talent, and how much from timing, practice, and opportunity?",
+            "intro_line": "Today, we’re exploring Malcolm Gladwell’s argument that achievement grows from individual effort combined with circumstances, culture, and access to opportunity."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Success Has a Context",
+                "summary": "Gladwell asks readers to look beyond the lone-genius story. Achievements are shaped by family, institutions, historical timing, and access to useful opportunities. Individual effort still matters, but it develops inside conditions that can either make practice possible or close the door before talent is noticed."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Practice and Preparation",
+                "summary": "Deliberate practice can build expertise over time, especially when people receive feedback and have access to sustained opportunities. A large number of hours is not a magic formula by itself. The quality of practice, support, and resources determines whether repetition turns into meaningful skill."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Timing and Accumulated Advantage",
+                "summary": "Small advantages can compound. Being born at a favorable time, entering a growing field early, or receiving extra chances to learn can create a widening gap. Recognizing these effects helps explain why some people move ahead and reminds institutions to make access to opportunity more equitable."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Culture and Communication",
+                "summary": "Cultural habits influence how people interpret authority, risk, and communication. These patterns can be strengths in one setting and obstacles in another. Gladwell’s examples encourage readers to understand behavior in context rather than treating a person’s actions as proof of fixed ability or character."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Opportunity Is a Shared Responsibility",
+                "summary": "Families, schools, workplaces, and communities shape the conditions in which skill can grow. A fair system notices potential early, gives people room to develop it, and does not reserve second chances for those already favored. Success stories become more honest when they include the help and structures behind them."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Rethink the Success Story",
+                "summary": "The book’s central move is to replace a simple hero narrative with a wider view of contribution and circumstance. This does not erase personal agency. It shows why achievement is more likely when effort meets access, guidance, and a moment when the wider world is ready for the work."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Outliers: The Story of Success by Malcolm Gladwell | Full Book Summary & Key Lessons",
+            "author": "Malcolm Gladwell",
+            "category": "Success / Social Science",
+            "affiliate_link": "https://www.amazon.com/dp/0316017930",
+            "cover_image": "https://m.media-amazon.com/images/I/71xQCy2OyWL._SL1500_.jpg",
+            "short_description": "Gladwell examines the conditions that help exceptional achievement emerge, including practice, timing, cultural context, and the opportunities people receive.",
+            "tags": [
+                "Outliers",
+                "Malcolm Gladwell",
+                "Success",
+                "Opportunity",
+                "Practice",
+                "Social Science",
+                "Culture",
+                "Book Summary",
+                "Personal Growth",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Outliers: The Story of Success",
+            "author": "Malcolm Gladwell",
+            "thumbnail_id": "0316017930"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "When can a quick first impression reveal useful expertise, and when can it mislead us?",
+            "intro_line": "Today, we’re exploring Malcolm Gladwell’s look at rapid cognition, thin-slicing, and the conditions that make fast judgments either insightful or unreliable."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Thin-Slicing",
+                "summary": "People can sometimes infer a great deal from a small slice of information. Experts may notice subtle patterns because they have built experience over time. But rapid judgments are only useful when the cues are relevant and the observer has learned to recognize them."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "The Adaptive Unconscious",
+                "summary": "Some thinking happens outside conscious awareness, allowing quick responses without a lengthy inner debate. This can be efficient in familiar conditions, yet the same speed can hide bias or mistaken assumptions. Gladwell encourages readers to ask what information a first impression uses and what it might leave out."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "When Intuition Works",
+                "summary": "Intuition is more dependable in environments with stable patterns and repeated feedback. A person who has practiced in a field can develop fast recognition, while a confident guess in an unfamiliar or noisy situation may be little more than a stereotype. Context and calibration matter."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "When Stress Distorts Judgment",
+                "summary": "Pressure, distraction, and too much information can narrow attention and weaken decisions. Gladwell shows how experts may perform better when they can focus on the signals that matter, rather than being overwhelmed with detail. Good decision systems protect attention and slow down choices when the cost of error is high."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Design Better First Impressions",
+                "summary": "Organizations can reduce biased snap judgments by structuring how information is presented and by using consistent criteria. Blind evaluations and deliberate checklists can keep irrelevant cues from dominating a decision. The goal is not to eliminate fast thinking, but to make the environment less likely to trigger unfair shortcuts."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Train and Test Your Intuition",
+                "summary": "Fast judgment improves when people receive honest feedback and compare their predictions with outcomes. Keeping a record of important decisions reveals when intuition is accurate and when it needs a second check. A thoughtful decision-maker knows when to trust experience and when to pause for evidence."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Blink: The Power of Thinking Without Thinking by Malcolm Gladwell | Full Book Summary & Key Lessons",
+            "author": "Malcolm Gladwell",
+            "category": "Psychology / Decision-Making",
+            "affiliate_link": "https://www.amazon.com/dp/0316172324",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0316172324-L.jpg",
+            "short_description": "Gladwell examines quick judgments and the hidden processes behind them, showing why intuition can be powerful but needs careful boundaries.",
+            "tags": [
+                "Blink",
+                "Malcolm Gladwell",
+                "Decision Making",
+                "Intuition",
+                "Psychology",
+                "Cognitive Bias",
+                "Critical Thinking",
+                "Book Summary",
+                "Mental Models",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Blink: The Power of Thinking Without Thinking",
+            "author": "Malcolm Gladwell",
+            "thumbnail_id": "0316172324"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What if changing your mind were a sign of strength rather than a sign of failure?",
+            "intro_line": "Today, we’re exploring Adam Grant’s case for intellectual flexibility, better questions, and creating teams where people can rethink their assumptions."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Adopt a Scientist’s Mindset",
+                "summary": "People often think like preachers defending beliefs, prosecutors attacking opponents, or politicians seeking approval. Grant recommends a scientist’s mindset: form a hypothesis, look for evidence, and revise when the results do not fit. This approach values accuracy more than the comfort of being right."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Question What You Know",
+                "summary": "Confidence can make familiar beliefs feel permanent. Asking what evidence would change a conclusion creates room for learning. Grant encourages readers to distinguish identity from opinion, so revising a view does not feel like losing a part of oneself."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Invite Useful Disagreement",
+                "summary": "A strong challenge can reveal blind spots when it comes from a person who wants the work to improve. Grant describes how respectful disagreement focuses on ideas, uses evidence, and leaves room for revision. Teams benefit when dissent is treated as information rather than disloyalty."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Build a Learning Culture",
+                "summary": "Organizations can reward curiosity by making it safe to ask questions, admit uncertainty, and revisit plans. Leaders set the tone when they share what they are rethinking and seek feedback before decisions are locked. Learning cultures change faster because people surface problems while there is still time to respond."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Teach to Rethink",
+                "summary": "Teaching should help people develop mental tools, not merely memorize conclusions. Grant highlights the value of asking questions that make learners explain their reasoning and compare different possibilities. This helps people notice the limits of their knowledge and become more capable of updating their beliefs."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Make Revision a Habit",
+                "summary": "Rethinking is most effective when it becomes a regular practice. Review decisions, examine new evidence, and ask trusted people where the reasoning is weak. A person who can change their mind thoughtfully is better prepared to adapt without drifting from clear values."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Think Again: The Power of Knowing What You Don’t Know by Adam Grant | Full Book Summary & Key Lessons",
+            "author": "Adam Grant",
+            "category": "Psychology / Learning",
+            "affiliate_link": "https://www.amazon.com/dp/1984878107",
+            "cover_image": "https://m.media-amazon.com/images/I/71dJ09pdRkL._SL1500_.jpg",
+            "short_description": "Grant encourages readers to think like scientists: test beliefs, welcome useful disagreement, and treat learning as an ongoing process.",
+            "tags": [
+                "Think Again",
+                "Adam Grant",
+                "Learning",
+                "Critical Thinking",
+                "Growth Mindset",
+                "Psychology",
+                "Leadership",
+                "Book Summary",
+                "Communication",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Think Again: The Power of Knowing What You Don’t Know",
+            "author": "Adam Grant",
+            "thumbnail_id": "1984878107"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do some generous people burn out while others become unusually successful?",
+            "intro_line": "Today, we’re exploring Adam Grant’s study of givers, takers, and matchers, and how generosity can work well when it is paired with boundaries."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Three Ways of Giving and Receiving",
+                "summary": "Grant describes givers, takers, and matchers as broad patterns in how people exchange help. These are not fixed personality labels; one person may act differently across settings. Noticing the pattern helps teams understand how trust and cooperation grow or break down."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Why Givers Can Thrive",
+                "summary": "People who share knowledge and support colleagues can strengthen a network and help good ideas travel. Generosity can improve group performance when it is recognized and reciprocated. Grant’s examples show that long-term success is compatible with helping others, especially when giving creates value rather than seeking immediate credit."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Protect against Burnout",
+                "summary": "Giving without boundaries can exhaust a person and reduce their ability to help well. Sustainable givers focus on high-impact contributions, set limits, and ask for support when needed. They can be generous without saying yes to every request or taking responsibility for work that belongs to someone else."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Create a Culture of Help",
+                "summary": "A workplace can make giving easier by encouraging people to ask for help and making useful contributions visible. Shared knowledge and mentoring reduce dependence on a few overloaded employees. Leaders can shape norms where help flows across roles rather than only from the least powerful people."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Recognize and Reward Contribution",
+                "summary": "Organizations often notice visible individual achievement more than quiet contributions that help others succeed. Grant encourages leaders to value collaboration, coaching, and knowledge sharing alongside personal output. Fair recognition prevents generosity from becoming invisible labor and helps people see that cooperation is part of performance."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Give Strategically and Honestly",
+                "summary": "The best giving starts with a real need and a contribution that the giver can sustain. It respects the receiver’s agency and does not create hidden obligations. Thoughtful generosity builds trust when it is offered freely, with clear boundaries and an eye toward mutual success."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Give and Take by Adam Grant | Full Book Summary & Key Lessons",
+            "author": "Adam Grant",
+            "category": "Work / Relationships",
+            "affiliate_link": "https://www.amazon.com/dp/0143124986",
+            "cover_image": "https://m.media-amazon.com/images/I/719zLK8IioL._SL1500_.jpg",
+            "short_description": "Grant examines how people exchange help at work and why successful giving depends on sustainable habits, clear boundaries, and a supportive culture.",
+            "tags": [
+                "Give and Take",
+                "Adam Grant",
+                "Generosity",
+                "Workplace",
+                "Leadership",
+                "Teamwork",
+                "Relationships",
+                "Book Summary",
+                "Career Growth",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Give and Take",
+            "author": "Adam Grant",
+            "thumbnail_id": "0143124986"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How do people challenge the status quo without taking reckless risks?",
+            "intro_line": "Today, we’re exploring Adam Grant’s research on original ideas, timing, allies, and the habits that help unconventional thinkers turn ideas into change."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Challenge the Default",
+                "summary": "Original thinkers question routines that others take for granted. They do not reject every tradition; they look for a better way when the current approach no longer serves its purpose. Small experiments can test an alternative without requiring a dramatic leap before evidence exists."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Manage Risk with Options",
+                "summary": "Grant’s research suggests that original people often manage risk rather than seek it blindly. They keep alternatives, test ideas while maintaining stability, and increase commitment as evidence improves. A practical move is to protect a reliable base while experimenting with a promising possibility."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Timing and Persistence",
+                "summary": "A good idea needs the right moment and enough persistence to survive early doubt. Grant shows that people can improve their odds by learning how a system works, building credibility, and choosing when to challenge it. Strategic patience makes bold change more achievable."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Build a Coalition",
+                "summary": "Unusual ideas travel farther when supporters can explain their value to different audiences. Seek allies who can offer expertise, credibility, and honest critique. A coalition is stronger when it includes people who disagree on some points but share a reason to support the change."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Make Dissent Productive",
+                "summary": "Leaders can invite original thinking by asking people to critique a plan before it is finalized. A culture where disagreement is safe helps teams catch flaws early. The aim is not conflict for its own sake, but a process that improves ideas through specific, respectful challenge."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Turn Ideas into Practice",
+                "summary": "Creativity matters when it leads to useful action. Break an idea into testable steps, learn from early feedback, and communicate the change in terms the audience values. Originality is a process of generating, revising, and implementing ideas, not simply having a different opinion."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Originals: How Non-Conformists Move the World by Adam Grant | Full Book Summary & Key Lessons",
+            "author": "Adam Grant",
+            "category": "Innovation / Psychology",
+            "affiliate_link": "https://www.amazon.com/dp/014312885X",
+            "cover_image": "https://m.media-amazon.com/images/I/71PizgB6qlL._SL1500_.jpg",
+            "short_description": "Grant explains how people generate original ideas, build support, and manage risk while improving the systems around them.",
+            "tags": [
+                "Originals",
+                "Adam Grant",
+                "Innovation",
+                "Creativity",
+                "Entrepreneurship",
+                "Leadership",
+                "Psychology",
+                "Book Summary",
+                "Risk Taking",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Originals: How Non-Conformists Move the World",
+            "author": "Adam Grant",
+            "thumbnail_id": "014312885X"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why can rewards sometimes reduce the curiosity and creativity they were meant to encourage?",
+            "intro_line": "Today, we’re exploring Daniel Pink’s case for autonomy, mastery, and purpose as important sources of motivation in modern work."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Beyond Rewards and Punishments",
+                "summary": "Simple rewards can help with routine tasks, but they may narrow attention when work requires creativity or judgment. Pink argues that people also want agency, growth, and meaning. Leaders should match incentives to the task and avoid making rewards so controlling that they crowd out interest."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Autonomy Gives People Ownership",
+                "summary": "Autonomy means having appropriate choice over how work is done, not abandoning goals or accountability. People are more engaged when they can use judgment about their methods, schedule, or team. Clear outcomes paired with flexibility can encourage responsibility rather than passive compliance."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Mastery Requires Practice",
+                "summary": "People are motivated by becoming better at something that matters to them. Mastery takes sustained effort, useful feedback, and goals that stretch skills without overwhelming the learner. Progress can feel rewarding even when the task remains difficult, because improvement itself becomes part of the purpose."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Purpose Connects Work to Value",
+                "summary": "Purpose helps people see who benefits from their effort and why the work matters. It can come from a mission, a customer, or a meaningful contribution to a team. Purpose is most credible when daily decisions match the words leaders use to describe it."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Design Work for Motivation",
+                "summary": "Workplaces can support motivation by giving people clear responsibilities, chances to learn, and room to solve problems. Managers should make expectations visible while inviting employees to improve how work gets done. Small design choices can either increase ownership or make every task feel imposed."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Balance Structure and Freedom",
+                "summary": "Autonomy, mastery, and purpose work best alongside fair pay, clear standards, and reliable support. Pink’s framework is not a case against incentives; it asks leaders to understand which motives fit which tasks. Sustainable motivation comes from systems that respect people and make good work possible."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Drive: The Surprising Truth About What Motivates Us by Daniel H. Pink | Full Book Summary & Key Lessons",
+            "author": "Daniel H. Pink",
+            "category": "Psychology / Work",
+            "affiliate_link": "https://www.amazon.com/dp/1594484805",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1594484805-L.jpg",
+            "short_description": "Pink argues that many complex tasks benefit from intrinsic motivation, supported by autonomy, the chance to improve, and meaningful purpose.",
+            "tags": [
+                "Drive",
+                "Daniel Pink",
+                "Motivation",
+                "Psychology",
+                "Workplace",
+                "Leadership",
+                "Autonomy",
+                "Book Summary",
+                "Productivity",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Drive: The Surprising Truth About What Motivates Us",
+            "author": "Daniel H. Pink",
+            "thumbnail_id": "1594484805"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How can a manager challenge someone directly while showing that they care about the person?",
+            "intro_line": "Today, we’re exploring Kim Scott’s framework for honest, humane management, including feedback, listening, and coaching teams to do their best work."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Care Personally, Challenge Directly",
+                "summary": "Scott’s framework pairs genuine concern for people with clear, direct feedback about their work. Care without honesty can leave problems untouched, while challenge without care can become harsh. The goal is to communicate in a way that respects the person and helps the work improve."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Recognize the Failure Modes",
+                "summary": "Scott describes patterns such as ruinous empathy, obnoxious aggression, and manipulative insincerity. These labels help managers notice when their behavior avoids a needed conversation or delivers feedback without respect. Naming the pattern makes it easier to choose a more useful response."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Solicit Feedback First",
+                "summary": "Managers build credibility when they ask for feedback and respond without defensiveness. Invite specific examples, thank the person, and act on what is useful. Asking for feedback is not a ritual; it shows that candor is expected in every direction, including upward."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Make Praise and Criticism Specific",
+                "summary": "Useful feedback describes observable behavior and its impact. Praise should explain what helped, and criticism should identify what needs to change without making sweeping judgments about character. Specificity gives the other person a clearer path to repeat a strength or correct a problem."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Coach Instead of Control",
+                "summary": "Good managers help people think through challenges rather than immediately supplying every answer. Ask what outcome the person wants, what they have tried, and what support would help. Coaching develops judgment and ownership while allowing the manager to notice when a clear decision is still needed."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Build a Team that Can Speak Up",
+                "summary": "A candid culture depends on trust, clear expectations, and consistent follow-through. Leaders should address problems early, explain decisions, and make room for disagreement. When feedback leads to learning rather than humiliation, people are more likely to raise concerns while there is time to act."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Radical Candor by Kim Scott | Full Book Summary & Key Lessons",
+            "author": "Kim Scott",
+            "category": "Leadership / Communication",
+            "affiliate_link": "https://www.amazon.com/dp/1250235375",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1250235375-L.jpg",
+            "short_description": "Scott combines personal care with direct challenge to help managers give clear feedback, build trust, and support strong teams.",
+            "tags": [
+                "Radical Candor",
+                "Kim Scott",
+                "Leadership",
+                "Management",
+                "Feedback",
+                "Communication",
+                "Team Culture",
+                "Book Summary",
+                "Career Growth",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Radical Candor",
+            "author": "Kim Scott",
+            "thumbnail_id": "1250235375"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What should you do when the stakes are high and emotions threaten to take over a conversation?",
+            "intro_line": "Today, we’re exploring the tools in Crucial Conversations for speaking clearly, listening well, and keeping difficult discussions productive."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Notice the Crucial Moment",
+                "summary": "A conversation becomes crucial when opinions differ, stakes rise, and emotions strengthen. People may respond by going silent or becoming forceful. Recognizing that shift early helps a speaker choose a deliberate response instead of following the first impulse."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Start with Your Purpose",
+                "summary": "Before speaking, clarify what you want for yourself, the other person, and the relationship. This keeps a difficult conversation from collapsing into blame or winning. A clear purpose makes it easier to notice when the discussion is drifting away from the real issue."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Make It Safe to Talk",
+                "summary": "People share information when they believe they will be heard and respected. Establish mutual purpose and mutual respect, and pause to repair the conversation if either disappears. Safety does not mean avoiding disagreement; it means making disagreement possible without attacking someone’s dignity."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Separate Facts from Stories",
+                "summary": "A fact is something observable, while a story is an interpretation about what it means. Starting with concrete evidence reduces defensiveness and invites correction. Then describe the concern as a perspective rather than presenting an assumption about another person’s motives as certainty."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Encourage Dialogue",
+                "summary": "Ask for the other person’s view, listen for what matters, and test assumptions with genuine questions. When someone hesitates, make room for their perspective instead of filling the silence. Dialogue improves when people can contribute information that might change the plan."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Agree on Action and Follow Through",
+                "summary": "End with a specific decision, a person responsible, and a time to check progress. A conversation that produces understanding but no next step can leave the same problem in place. Clear follow-through turns dialogue into a change both sides can observe."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Crucial Conversations by Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler | Full Book Summary & Key Lessons",
+            "author": "Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler",
+            "category": "Communication / Leadership",
+            "affiliate_link": "https://www.amazon.com/dp/1260474186",
+            "cover_image": "https://m.media-amazon.com/images/I/71oJG4ynmaL._SL1500_.jpg",
+            "short_description": "This book offers a framework for high-stakes conversations: notice when dialogue breaks down, make it safe to talk, share facts, and agree on action.",
+            "tags": [
+                "Crucial Conversations",
+                "Communication",
+                "Leadership",
+                "Conflict Resolution",
+                "Difficult Conversations",
+                "Teamwork",
+                "Book Summary",
+                "Management",
+                "Listening Skills",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Crucial Conversations",
+            "author": "Kerry Patterson, Joseph Grenny, Ron McMillan, and Al Switzler",
+            "thumbnail_id": "1260474186"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What changes when a manager asks one more useful question before offering advice?",
+            "intro_line": "Today, we’re exploring Michael Bungay Stanier’s short coaching questions for helping people solve problems and take ownership of their work."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Stay Curious a Little Longer",
+                "summary": "Managers often jump to advice because it feels efficient, but doing so can keep people dependent. A useful coaching habit begins by asking what is on someone’s mind and allowing them to explain the real challenge. Curiosity buys time for a better diagnosis."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Ask What Else",
+                "summary": "The first answer may be only the surface of a problem. Asking what else invites another thought and often reveals the concern that matters most. The question is simple, but the pause afterward matters: let the person think rather than filling the space for them."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Find the Real Challenge",
+                "summary": "People can describe many issues without naming the one that needs attention now. Ask what the real challenge is, then help narrow the answer to a specific, actionable problem. This prevents conversations from becoming long lists with no clear point of leverage."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Ask What the Person Wants",
+                "summary": "Advice is less useful when it answers a question the other person did not ask. Clarify what they want from the conversation: a decision, a sounding board, or help with a task. This makes support more relevant and preserves the other person’s ownership."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Offer Help with Clear Boundaries",
+                "summary": "A manager can ask how they can help while staying attentive to their own time and responsibilities. Clarifying what would be useful keeps an offer from becoming an open-ended commitment. Coaching works best when both people understand the support and the limits."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Close with Learning",
+                "summary": "End by asking what was most useful and what action comes next. Reflection helps the person retain the insight, while a next step turns a conversation into progress. Repeating a small set of questions makes coaching a regular management practice rather than a special event."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Coaching Habit by Michael Bungay Stanier | Full Book Summary & Key Lessons",
+            "author": "Michael Bungay Stanier",
+            "category": "Leadership / Coaching",
+            "affiliate_link": "https://www.amazon.com/dp/0978440749",
+            "cover_image": "https://m.media-amazon.com/images/I/7136qE3N2LL._SL1500_.jpg",
+            "short_description": "Stanier presents seven practical questions that help leaders stay curious, avoid rushing to advice, and make coaching a natural part of everyday work.",
+            "tags": [
+                "The Coaching Habit",
+                "Michael Bungay Stanier",
+                "Coaching",
+                "Leadership",
+                "Management",
+                "Questions",
+                "Communication",
+                "Book Summary",
+                "Team Development",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Coaching Habit",
+            "author": "Michael Bungay Stanier",
+            "thumbnail_id": "0978440749"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What distinguishes an effective executive from someone who is merely busy?",
+            "intro_line": "Today, we’re exploring Peter Drucker’s principles for managing time, focusing on contribution, using strengths, and making sound decisions."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Focus on Contribution",
+                "summary": "Effectiveness begins by asking what the organization needs and what contribution will matter. A leader who focuses only on activity can stay busy without improving results. Clear contribution connects daily work to an outcome others can use."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Know Where Time Goes",
+                "summary": "Time is limited and often scattered across small demands. Drucker recommends tracking how time is actually spent before trying to manage it. Removing low-value obligations and combining related tasks creates longer stretches for the work that requires judgment."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Build on Strengths",
+                "summary": "People and organizations perform better when they use strengths and manage around limitations. Assign work to what people can do well, and avoid designing a role around a weakness that cannot be corrected. This makes expectations more realistic and raises the quality of contribution."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Set Priorities and Stop Doing",
+                "summary": "Effective executives choose a few important priorities and protect them from the urgent but less valuable. They also decide what to stop, because adding priorities without removing anything fragments attention. Focus is an active choice about which opportunities deserve time."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Make Decisions Deliberately",
+                "summary": "A good decision starts with understanding whether the issue is a recurring condition or a unique event. Define what a satisfactory outcome requires, identify options, and test assumptions before committing. Decisions should also clarify who will act and how results will be reviewed."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Turn Effectiveness into a Practice",
+                "summary": "Effectiveness is not a personality trait reserved for a few gifted leaders. It comes from habits: protect time, clarify priorities, use strengths, and follow through on choices. Repeating these practices helps knowledge workers make their expertise useful to others."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Effective Executive by Peter F. Drucker | Full Book Summary & Key Lessons",
+            "author": "Peter F. Drucker",
+            "category": "Business / Management",
+            "affiliate_link": "https://www.amazon.com/dp/0060833459",
+            "cover_image": "https://m.media-amazon.com/images/I/61zH9mWg75L._SL1360_.jpg",
+            "short_description": "Drucker treats effectiveness as a learnable discipline: focus on contribution, protect time, build on strengths, set priorities, and make deliberate decisions.",
+            "tags": [
+                "The Effective Executive",
+                "Peter Drucker",
+                "Management",
+                "Leadership",
+                "Productivity",
+                "Decision Making",
+                "Business",
+                "Book Summary",
+                "Time Management",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Effective Executive",
+            "author": "Peter F. Drucker",
+            "thumbnail_id": "0060833459"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What do leaders do when a company faces problems with no easy answer?",
+            "intro_line": "Today, we’re exploring Ben Horowitz’s candid lessons on building companies through crises, difficult decisions, and the realities of leadership."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "There Is No Perfect Playbook",
+                "summary": "Leadership becomes difficult when every option carries a cost. Horowitz argues that founders cannot wait for a clean answer before acting. They need to gather facts, identify the most important risk, choose a direction, and take responsibility for what follows."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Lead through Crisis",
+                "summary": "In a crisis, communication and speed matter. Leaders should describe the situation honestly, explain what is known and unknown, and focus the team on the next necessary action. Confidence comes less from pretending the problem is small and more from showing that someone is working on it."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Build Culture through Decisions",
+                "summary": "Culture is shaped by what leaders do when pressure is high. Decisions about hiring, performance, and priorities teach employees what the company truly values. Consistency matters because a slogan cannot compensate for repeated behavior that contradicts it."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Make Hard People Decisions Fairly",
+                "summary": "Performance problems and layoffs affect real people, so leaders should prepare carefully and communicate with respect. Clear expectations, timely feedback, and direct explanations can reduce confusion. Avoiding a difficult decision may prolong uncertainty and make the eventual impact worse."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Know What Kind of Company You Are Leading",
+                "summary": "A company in rapid growth may need different practices from one navigating a crisis or rebuilding. Horowitz emphasizes adapting management to the company’s actual condition rather than following fashionable advice. Leaders should diagnose the stage, make trade-offs explicit, and change their approach as the business changes."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Keep Going and Keep Learning",
+                "summary": "The work of leadership can feel isolating, but the answer is not to hide uncertainty from everyone. Seek trusted counsel, learn from decisions, and keep communicating with the team. Resilience means facing what is difficult without confusing endurance with refusing to adapt."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Hard Thing About Hard Things by Ben Horowitz | Full Book Summary & Key Lessons",
+            "author": "Ben Horowitz",
+            "category": "Business / Entrepreneurship",
+            "affiliate_link": "https://www.amazon.com/dp/0062273205",
+            "cover_image": "https://m.media-amazon.com/images/I/810u9MkT3SL._SL1500_.jpg",
+            "short_description": "Horowitz draws on his experience as a founder to discuss company crises, hiring, culture, layoffs, and making decisions when there is no perfect option.",
+            "tags": [
+                "The Hard Thing About Hard Things",
+                "Ben Horowitz",
+                "Entrepreneurship",
+                "Leadership",
+                "Startups",
+                "Business Strategy",
+                "Management",
+                "Book Summary",
+                "Decision Making",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Hard Thing About Hard Things",
+            "author": "Ben Horowitz",
+            "thumbnail_id": "0062273205"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why can well-run companies miss a technology that later transforms their industry?",
+            "intro_line": "Today, we’re exploring Clayton Christensen’s theory of disruptive innovation and why successful companies may struggle to respond to emerging markets."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Sustaining and Disruptive Change",
+                "summary": "Sustaining innovations improve products for established customers. Disruptive innovations often begin as simpler, cheaper options for people the established market does not prioritize. They may appear unattractive at first, then improve until they meet the needs of a broader audience."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Why Good Management Can Miss It",
+                "summary": "Successful firms listen to their best customers, invest in profitable products, and avoid uncertain markets. Those practices are usually sensible, but they can direct resources away from a small opportunity that does not yet fit existing expectations. The dilemma is structural, not simply a failure of intelligence."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Markets Shape Investment Choices",
+                "summary": "Companies evaluate opportunities through their current business model and value network. New products may have low margins, small early demand, or unfamiliar buyers, so they struggle to win resources. Leaders need separate ways to assess new markets rather than applying only the metrics of the core business."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Create Space for Experimentation",
+                "summary": "A small team with a focused mission can test an emerging opportunity without being measured against the core unit’s short-term targets. Early work should discover what customers value and whether the market can grow. Learning is more useful than demanding certainty before an experiment begins."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Listen to New Customers",
+                "summary": "Disruptive opportunities often start with non-consumers or customers who accept a simpler solution. Understanding their constraints reveals what a new offering must do well. The organization should watch how the product improves and whether new groups begin to adopt it."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Balance the Core and the Future",
+                "summary": "A company must serve current customers while exploring where its industry may move. That balance requires clear leadership support, patient funding, and independent experiments. The lesson is not to chase every trend, but to make deliberate room for possibilities the core business cannot yet see."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Innovator’s Dilemma by Clayton M. Christensen | Full Book Summary & Key Lessons",
+            "author": "Clayton M. Christensen",
+            "category": "Business / Innovation",
+            "affiliate_link": "https://www.amazon.com/dp/0062060244",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0062060244-L.jpg",
+            "short_description": "Christensen explains how established firms can overlook disruptive technologies while serving current customers, and how leaders can create room to explore new markets.",
+            "tags": [
+                "The Innovator's Dilemma",
+                "Clayton Christensen",
+                "Innovation",
+                "Business Strategy",
+                "Technology",
+                "Entrepreneurship",
+                "Management",
+                "Book Summary",
+                "Disruption",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Innovator’s Dilemma",
+            "author": "Clayton M. Christensen",
+            "thumbnail_id": "0062060244"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What should a new leader learn and accomplish before making sweeping changes?",
+            "intro_line": "Today, we’re exploring Michael Watkins’s transition framework for diagnosing a new role, building trust, and creating early momentum."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Diagnose the Situation",
+                "summary": "A new leader should understand the organization’s context before importing a familiar solution. Watkins distinguishes situations such as startup, turnaround, accelerated growth, and realignment. Each requires different priorities, so listening and fact-finding help prevent the wrong first move."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Learn Quickly and Build Relationships",
+                "summary": "A transition requires a deliberate learning agenda: identify what must be understood, who knows it, and how to gather the information. Relationships matter because stakeholders hold context and influence. Asking thoughtful questions early builds trust while revealing where expectations differ."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Secure Credible Early Wins",
+                "summary": "Early wins create confidence when they address visible needs and are achievable without reckless disruption. Choose a few priorities that show progress and help the team work better. A win should be meaningful to the organization, not simply a quick project chosen to impress."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Align the Strategy and Team",
+                "summary": "A leader needs to understand whether the strategy, structure, and talent fit the situation. Clarify goals, assign responsibilities, and address gaps in skills or decision rights. Alignment reduces the confusion that can grow when people work hard toward different definitions of success."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Build Coalitions and Manage Expectations",
+                "summary": "Stakeholders may have different measures of success and different concerns about change. Watkins encourages leaders to map these interests, communicate trade-offs, and negotiate support. A transition succeeds more readily when key partners understand the plan and know how they can contribute."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Create a Transition Plan",
+                "summary": "A written plan connects learning, early wins, team decisions, and longer-term goals. It gives a new leader a way to review progress and adjust when new facts emerge. The first 90 days are a launch period: the goal is to build a foundation for sustained performance."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The First 90 Days by Michael D. Watkins | Full Book Summary & Key Lessons",
+            "author": "Michael D. Watkins",
+            "category": "Leadership / Career",
+            "affiliate_link": "https://www.amazon.com/dp/1422188612",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1422188612-L.jpg",
+            "short_description": "Watkins offers a practical plan for leaders entering new roles: learn the context, align with stakeholders, secure early wins, and build a strong team.",
+            "tags": [
+                "The First 90 Days",
+                "Michael Watkins",
+                "Leadership",
+                "Career Development",
+                "Management",
+                "New Role",
+                "Business",
+                "Book Summary",
+                "Team Building",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The First 90 Days",
+            "author": "Michael D. Watkins",
+            "thumbnail_id": "1422188612"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How can teams turn an ambitious goal into measurable work people can act on?",
+            "intro_line": "Today, we’re exploring John Doerr’s OKR framework for setting objectives, tracking key results, and aligning teams around shared priorities."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Define the Objective",
+                "summary": "An objective states what a team wants to accomplish in clear, motivating language. It should be important enough to guide attention and understandable enough that people know what success is about. A strong objective gives direction without turning into a list of tasks."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Choose Measurable Key Results",
+                "summary": "Key results describe observable evidence that the objective has been achieved. They should measure outcomes rather than activity, and there should be only a few. Clear measures let a team see progress and identify when a plan is producing effort without results."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Focus and Align",
+                "summary": "Shared goals help teams coordinate and reveal where priorities conflict. Public OKRs make commitments visible, allowing people to connect their work to larger outcomes. Transparency supports alignment when teams also have room to explain different constraints and adjust together."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Track Progress and Learn",
+                "summary": "OKRs work best as a recurring cycle rather than an annual document that is forgotten. Teams review progress, notice obstacles, and decide what to change. A missed result is useful information when people investigate it honestly instead of hiding it to protect a score."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Separate Stretch from Compensation",
+                "summary": "Ambitious goals can invite innovation, but tying every stretch result directly to pay may encourage safer targets or distorted reporting. Doerr encourages organizations to think carefully about the purpose of a goal. Measurement should support learning and focus, not replace judgment."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Combine Goals with Conversation",
+                "summary": "Metrics show what is happening, while regular conversations explain why. Leaders can use check-ins to discuss progress, resources, and feedback. The framework succeeds when it helps people make better decisions, not when it becomes a reporting ritual disconnected from daily work."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Measure What Matters by John Doerr | Full Book Summary & Key Lessons",
+            "author": "John Doerr",
+            "category": "Business / Goal Setting",
+            "affiliate_link": "https://www.amazon.com/dp/0525536221",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0525536221-L.jpg",
+            "short_description": "Doerr explains how Objectives and Key Results can create focus, transparency, and accountability when goals are ambitious and progress is reviewed often.",
+            "tags": [
+                "Measure What Matters",
+                "John Doerr",
+                "OKRs",
+                "Goal Setting",
+                "Leadership",
+                "Business Strategy",
+                "Productivity",
+                "Book Summary",
+                "Management",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Measure What Matters",
+            "author": "John Doerr",
+            "thumbnail_id": "0525536221"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What simple operating habits help a growing business turn its vision into consistent execution?",
+            "intro_line": "Today, we’re exploring Gino Wickman’s Entrepreneurial Operating System and its practical tools for vision, people, data, issues, processes, and execution."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Clarify the Vision",
+                "summary": "A company needs a shared view of where it is going, who it serves, and how it plans to win. Wickman recommends making the vision specific enough to guide decisions. A written plan helps employees connect daily work to the company’s longer-term direction."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Put the Right People in the Right Roles",
+                "summary": "Strong execution depends on people who fit the company’s values and can do the work their roles require. Clarify responsibilities and decision rights so people know what they own. When a role is a poor fit, address it directly rather than allowing confusion to spread."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Use Data to See Reality",
+                "summary": "A small set of weekly measures can reveal problems earlier than a quarterly review. Useful indicators are clear, timely, and connected to actions a team can take. Data should start a conversation about reality, not become a substitute for understanding it."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Solve Issues at the Root",
+                "summary": "Teams often revisit the same problems because they discuss symptoms without deciding what to do. Wickman’s method encourages identifying the real issue, exploring causes, and agreeing on an owner and next action. A visible issues list helps keep important concerns from disappearing."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Make Processes Repeatable",
+                "summary": "Documenting core processes helps the company deliver dependable quality as it grows. The goal is to make essential work clear and teachable, not to eliminate judgment. Teams should simplify processes and improve them when they create unnecessary steps."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Execute with Priorities and Meetings",
+                "summary": "A few quarterly priorities and a steady meeting rhythm create a structure for follow-through. Teams review progress, surface issues, and leave with clear actions. Traction comes from combining a coherent vision with consistent weekly habits that turn plans into work."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Traction: Get a Grip on Your Business by Gino Wickman | Full Book Summary & Key Lessons",
+            "author": "Gino Wickman",
+            "category": "Business / Management",
+            "affiliate_link": "https://www.amazon.com/dp/1936661837",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1936661837-L.jpg",
+            "short_description": "Wickman presents a management system for clarifying a company’s vision, placing the right people in roles, solving issues, and tracking priorities.",
+            "tags": [
+                "Traction",
+                "Gino Wickman",
+                "Entrepreneurship",
+                "Business Systems",
+                "Management",
+                "Leadership",
+                "EOS",
+                "Book Summary",
+                "Execution",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Traction: Get a Grip on Your Business",
+            "author": "Gino Wickman",
+            "thumbnail_id": "1936661837"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do capable teams still fail to work together effectively?",
+            "intro_line": "Today, we’re exploring Patrick Lencioni’s model of team dysfunctions, from low trust and avoided conflict to weak accountability and results."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Build Trust First",
+                "summary": "Teams struggle when members hide mistakes or avoid asking for help. Trust grows when people can acknowledge limitations and share concerns without fear of humiliation. This vulnerability makes it possible to discuss real problems instead of protecting appearances."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Use Conflict to Find Better Answers",
+                "summary": "Avoiding disagreement can create false harmony and leave important issues unresolved. Productive conflict focuses on ideas and decisions, not personal attacks. Leaders can invite different views, keep discussion specific, and make sure disagreement leads somewhere."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Create Commitment through Clarity",
+                "summary": "People can support a decision even when it was not their first choice, if they understand the discussion and the final direction. Teams need clear priorities and explicit decisions. Ambiguity leaves people acting on different assumptions after the meeting ends."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Hold One Another Accountable",
+                "summary": "Accountability is easier when expectations and ownership are visible. Teammates can remind each other of commitments before a leader has to intervene. Respectful peer accountability helps the team keep standards high without turning every mistake into a personal judgment."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Focus on Collective Results",
+                "summary": "Teams lose focus when personal status or departmental goals outrank shared outcomes. Define the results that matter to the whole group and review them together. A collective scorecard can make trade-offs clearer and reward cooperation rather than competition inside the team."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Practice the Pyramid Together",
+                "summary": "The five dysfunctions reinforce one another: low trust makes conflict harder, which weakens commitment and accountability. Teams can improve by working on the foundation first and revisiting habits over time. A model is useful when it leads to honest conversations and specific behavior changes."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Five Dysfunctions of a Team by Patrick Lencioni | Full Book Summary & Key Lessons",
+            "author": "Patrick Lencioni",
+            "category": "Leadership / Teamwork",
+            "affiliate_link": "https://www.amazon.com/dp/0787960756",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0787960756-L.jpg",
+            "short_description": "Lencioni uses a leadership fable to show how trust, healthy conflict, commitment, accountability, and shared results support strong teams.",
+            "tags": [
+                "The Five Dysfunctions of a Team",
+                "Patrick Lencioni",
+                "Teamwork",
+                "Leadership",
+                "Management",
+                "Trust",
+                "Communication",
+                "Book Summary",
+                "Team Culture",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Five Dysfunctions of a Team",
+            "author": "Patrick Lencioni",
+            "thumbnail_id": "0787960756"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How can a business improve its whole system instead of optimizing isolated tasks?",
+            "intro_line": "Today, we’re exploring Eliyahu Goldratt’s business novel and its Theory of Constraints, a method for finding and managing the bottleneck that limits progress."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Define the Goal",
+                "summary": "A company needs a clear definition of success that connects operations to real financial and customer outcomes. Local efficiency can look impressive while the whole system falls behind. The goal helps leaders distinguish useful work from activity that does not improve the result."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Find the Constraint",
+                "summary": "Every system has a bottleneck that limits its overall output. The constraint may be a machine, a policy, a scarce skill, or a decision process. Improving a non-constraint can add cost without increasing the system’s capacity."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Use the Five Focusing Steps",
+                "summary": "Goldratt’s method is to identify the constraint, exploit it, subordinate other work to it, elevate it if needed, and then repeat. The cycle keeps attention on the current limiting factor. Once one constraint improves, another will usually become the next one to manage."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Protect Bottleneck Time",
+                "summary": "The constraint should spend as much time as possible on productive work. Reduce avoidable interruptions, ensure materials are ready, and avoid scheduling work that cannot be completed. Small improvements around a bottleneck can raise throughput across the whole operation."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Measure Throughput and Flow",
+                "summary": "Traditional cost metrics can encourage teams to keep every resource busy even when extra work piles up in queues. Goldratt emphasizes throughput, inventory, and operating expense as system-level measures. Monitoring flow helps a team see whether a change improves delivery or merely shifts work around."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Improve Continuously",
+                "summary": "Constraint management is not a one-time project. As the system changes, leaders must identify the new bottleneck and adjust priorities. The ongoing process helps organizations respond to growth and variability without assuming that the old limiting factor still matters."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Goal: A Process of Ongoing Improvement by Eliyahu M. Goldratt | Full Book Summary & Key Lessons",
+            "author": "Eliyahu M. Goldratt",
+            "category": "Business / Operations",
+            "affiliate_link": "https://www.amazon.com/dp/0884271951",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0884271951-L.jpg",
+            "short_description": "Goldratt uses a manufacturing story to teach that systems improve fastest when leaders identify the constraint and organize work around it.",
+            "tags": [
+                "The Goal",
+                "Eliyahu Goldratt",
+                "Theory of Constraints",
+                "Operations",
+                "Business",
+                "Productivity",
+                "Management",
+                "Book Summary",
+                "Problem Solving",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Goal: A Process of Ongoing Improvement",
+            "author": "Eliyahu M. Goldratt",
+            "thumbnail_id": "0884271951"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What if a business could make progress without endless planning, long hours, and unnecessary complexity?",
+            "intro_line": "Today, we’re exploring Rework, Jason Fried and David Heinemeier Hansson’s challenge to common startup habits and their case for building simpler, more focused businesses."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Start with What You Have",
+                "summary": "Fried and Hansson challenge the belief that a business needs a perfect plan, large team, or outside funding before it can begin. Start with a real problem and a small, useful solution. Action creates information that planning alone cannot provide."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Keep the Work Focused",
+                "summary": "More features, meetings, and people do not automatically produce better results. The authors encourage choosing a small number of priorities and protecting the time needed to finish them. Constraints can help teams decide what matters instead of expanding every idea."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Prefer Simple and Sustainable",
+                "summary": "A company does not need to grow at any cost to be successful. A sustainable pace allows a team to make good decisions and maintain quality. Simplicity in tools, policies, and products makes it easier to understand what the business actually provides."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Communicate Clearly",
+                "summary": "Writing things down creates a shared record that people can consider on their own time. Clear communication reduces unnecessary interruptions and helps distributed teams coordinate. Short, direct explanations are easier to act on than long messages filled with vague requests."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Build Trust with Customers",
+                "summary": "Marketing should show real value rather than rely on hype. Teach customers what the company knows, explain trade-offs honestly, and deliver what was promised. A reputation grows through reliable experiences, not just through attention or clever promotion."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Learn by Shipping",
+                "summary": "Release a small version, listen to feedback, and improve what customers actually use. The authors warn against treating busyness as progress or delaying work until every detail is polished. Sustainable execution comes from finished work and a willingness to learn."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Rework by Jason Fried and David Heinemeier Hansson | Full Book Summary & Key Lessons",
+            "author": "Jason Fried and David Heinemeier Hansson",
+            "category": "Business / Entrepreneurship",
+            "affiliate_link": "https://www.amazon.com/dp/0307463745",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0307463745-L.jpg",
+            "short_description": "Rework argues for starting small, doing less, communicating clearly, and building a sustainable company instead of copying conventional business advice.",
+            "tags": [
+                "Rework",
+                "Jason Fried",
+                "David Heinemeier Hansson",
+                "Entrepreneurship",
+                "Startups",
+                "Business",
+                "Productivity",
+                "Book Summary",
+                "Small Business",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Rework",
+            "author": "Jason Fried and David Heinemeier Hansson",
+            "thumbnail_id": "0307463745"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Which basic business ideas help people understand almost any organization?",
+            "intro_line": "Today, we’re exploring Josh Kaufman’s self-directed introduction to business, covering value creation, marketing, sales, delivery, finance, and systems."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Understand Value Creation",
+                "summary": "A business begins by creating something people want or need. Kaufman encourages testing whether a real group of customers values the proposed solution and whether the organization can deliver it. Value is not simply a clever idea; it is a useful result people choose."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Reach the Right Customers",
+                "summary": "Marketing helps potential customers understand that a solution exists and why it matters. Clear positioning connects a product to a specific need, while honest communication sets expectations. A business learns faster when it listens to customers instead of assuming it already knows what they want."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Make the Sale",
+                "summary": "Sales turns interest into an exchange that supports both buyer and seller. A good sales process clarifies the customer’s problem, explains the offer, and makes next steps understandable. Persuasion should help someone decide, not pressure them into a purchase that does not fit."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Deliver What Was Promised",
+                "summary": "Value must arrive in a form the customer can use. Kaufman emphasizes reliable operations, quality, and a clear delivery process. If a company sells more than it can fulfill, marketing success can create customer disappointment and damage trust."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Understand Money and Risk",
+                "summary": "Revenue, costs, cash flow, and risk determine whether a business can keep operating. Financial models help owners compare choices and notice fragility. A useful business plan explains the assumptions behind the numbers and checks how outcomes change if those assumptions prove wrong."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Think in Systems",
+                "summary": "Organizations consist of people, processes, incentives, and feedback loops. Changing one part can affect the rest, so leaders should observe the whole system before making a fix. Learning core business models helps readers ask better questions even without a formal degree."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Personal MBA by Josh Kaufman | Full Book Summary & Key Lessons",
+            "author": "Josh Kaufman",
+            "category": "Business / Management",
+            "affiliate_link": "https://www.amazon.com/dp/159184352X",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/159184352X-L.jpg",
+            "short_description": "Kaufman distills business into a set of core functions and mental models that help readers evaluate opportunities and understand how organizations create value.",
+            "tags": [
+                "The Personal MBA",
+                "Josh Kaufman",
+                "Business",
+                "Entrepreneurship",
+                "Management",
+                "Marketing",
+                "Finance",
+                "Book Summary",
+                "Business Skills",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Personal MBA",
+            "author": "Josh Kaufman",
+            "thumbnail_id": "159184352X"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "How can a short checklist help experts manage work that has become too complex to hold in memory?",
+            "intro_line": "Today, we’re exploring Atul Gawande’s case for checklists as a practical tool for reducing avoidable errors in complex work."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Complexity Exceeds Memory",
+                "summary": "Modern work involves too many steps, handoffs, and exceptions for any one person to remember perfectly. Even skilled professionals can miss routine details under pressure. Gawande argues that dependable systems should support human attention instead of assuming that expertise eliminates error."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Use a Tool for the Right Problem",
+                "summary": "Some failures come from lack of knowledge, while others happen because known steps are skipped or not coordinated. Checklists are especially useful for the second kind of problem. They make essential actions visible and help teams confirm that critical tasks have been completed."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Design a Short, Usable Checklist",
+                "summary": "A checklist should be concise, focused, and easy to use in the actual work environment. If it repeats everything a professional already knows, it will be ignored. The design process should identify the most consequential omissions and make the list fit the natural flow of work."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Create a Pause Point",
+                "summary": "A pause at the right moment gives a team time to confirm important actions before moving on. Checklists work best when they are tied to clear transitions rather than used continuously. A short pause can prevent a small oversight from becoming a larger failure."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Improve Communication",
+                "summary": "A checklist can prompt people to introduce themselves, state roles, and share relevant concerns. These exchanges reduce assumptions and help team members speak up. The tool creates a shared structure for coordination, which matters when no single person has the complete picture."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Test and Revise the Tool",
+                "summary": "A checklist should be tried in real conditions and revised when it creates friction or misses important risks. Its purpose is to support judgment, not replace it. A reliable process treats the checklist as a living tool that improves with experience."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Checklist Manifesto by Atul Gawande | Full Book Summary & Key Lessons",
+            "author": "Atul Gawande",
+            "category": "Work / Systems",
+            "affiliate_link": "https://www.amazon.com/dp/0312430000",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0312430000-L.jpg",
+            "short_description": "Gawande shows how carefully designed checklists can support expertise, improve team communication, and catch common oversights without replacing judgment.",
+            "tags": [
+                "The Checklist Manifesto",
+                "Atul Gawande",
+                "Checklists",
+                "Productivity",
+                "Operations",
+                "Teamwork",
+                "Healthcare",
+                "Book Summary",
+                "Process Improvement",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Checklist Manifesto",
+            "author": "Atul Gawande",
+            "thumbnail_id": "0312430000"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Can careful preparation and understanding an opponent prevent a costly conflict?",
+            "intro_line": "Today, we’re exploring Sun Tzu’s classic treatise on strategy, preparation, adaptability, and choosing conditions that make success more likely."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Know the Situation",
+                "summary": "Good strategy begins with a realistic picture of one’s own strengths, the other side’s capabilities, and the surrounding conditions. Overconfidence makes plans brittle. Honest assessment helps leaders choose objectives that are possible and recognize where uncertainty is too great."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Prepare Before Acting",
+                "summary": "Preparation can reduce the cost of conflict. Sun Tzu stresses planning, discipline, and readiness before a decisive move. In modern work, this means clarifying resources, roles, and constraints so a team does not improvise every critical step under pressure."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Choose the Ground",
+                "summary": "Conditions shape what actions are possible. A strategic leader looks for a setting where their strengths matter and avoids a contest designed around another party’s advantage. The lesson is to shape the problem before committing effort, rather than treating every challenge as a direct confrontation."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Adapt to Change",
+                "summary": "No plan survives every change in conditions. Sun Tzu values flexibility and warns against treating a past success as a universal formula. Leaders should watch for new information and adjust their tactics while keeping the objective clear."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Conserve Resources",
+                "summary": "Conflict consumes time, money, attention, and relationships. A victory that leaves an organization depleted may cost more than it gains. Effective strategy seeks the result with the least unnecessary damage and recognizes when negotiation or restraint is the better option."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Use Strategy Responsibly",
+                "summary": "The text is often read as a manual for competition, but its deeper value is disciplined awareness. Understanding incentives and avoiding unnecessary escalation can help people solve problems with less harm. Strategy should serve a legitimate goal, not turn every interaction into a contest."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Art of War by Sun Tzu | Full Book Summary & Key Lessons",
+            "author": "Sun Tzu",
+            "category": "Strategy / Leadership",
+            "affiliate_link": "https://www.amazon.com/dp/1590302257",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1590302257-L.jpg",
+            "short_description": "Sun Tzu emphasizes knowing the situation, conserving resources, adapting to change, and seeking objectives without unnecessary conflict.",
+            "tags": [
+                "The Art of War",
+                "Sun Tzu",
+                "Strategy",
+                "Leadership",
+                "Planning",
+                "Decision Making",
+                "History",
+                "Book Summary",
+                "Critical Thinking",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Art of War",
+            "author": "Sun Tzu",
+            "thumbnail_id": "1590302257"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What can a controversial political classic teach about power, stability, and leadership?",
+            "intro_line": "Today, we’re exploring Niccolò Machiavelli’s analysis of political power and the difficult choices leaders face, while treating the text as an object for critical study."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Study Power in Context",
+                "summary": "Machiavelli writes about political conditions in a divided and unstable Italy. His advice reflects a world of shifting alliances and real threats. Reading the work in context helps separate its historical analysis from a simple recommendation to behave ruthlessly in every setting."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Fortune and Capability",
+                "summary": "The text contrasts fortune, which no leader fully controls, with the skill to prepare and respond. Good leadership requires reading circumstances and acting before opportunities close. Preparation cannot remove uncertainty, but it can make a person less dependent on luck."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Authority and Stability",
+                "summary": "Machiavelli asks how leaders maintain order and prevent a state from collapsing. He considers public support, institutions, and the consequences of decisions. Stability depends not only on force but also on the expectations and interests of those being governed."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Appearance and Reality",
+                "summary": "Political leaders are judged by what people can see, so public trust and reputation matter. Machiavelli observes that appearance can shape authority, but deceptive performance can also create future risks. A modern reading should ask how leaders can communicate clearly without disguising their motives."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "The Moral Tension",
+                "summary": "The Prince is unsettling because it examines actions that may conflict with private virtue when a leader claims to protect the state. That tension is central to the book, not a reason to accept every argument. Readers can use it to debate the limits of power and the accountability leaders owe others."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Read Critically, Not as a Script",
+                "summary": "Machiavelli offers a sharp lens on political incentives, but his prescriptions are neither universal nor morally neutral. The useful task is to understand how power operates while asking what constraints should govern it. Critical reading turns a controversial classic into a tool for reflection."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Prince by Niccolò Machiavelli | Full Book Summary & Key Lessons",
+            "author": "Niccolò Machiavelli",
+            "category": "Political Philosophy / Leadership",
+            "affiliate_link": "https://www.amazon.com/dp/1530915684",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1530915684-L.jpg",
+            "short_description": "Machiavelli examines how rulers gain and preserve authority, the role of fortune and skill, and the tension between political effectiveness and conventional morality.",
+            "tags": [
+                "The Prince",
+                "Niccolo Machiavelli",
+                "Political Philosophy",
+                "Leadership",
+                "Power",
+                "History",
+                "Strategy",
+                "Book Summary",
+                "Ethics",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Prince",
+            "author": "Niccolò Machiavelli",
+            "thumbnail_id": "1530915684"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why do rare events seem obvious after they happen but remain difficult to predict beforehand?",
+            "intro_line": "Today, we’re exploring Nassim Nicholas Taleb’s argument about rare, high-impact events and the limits of prediction."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Recognize the Black Swan",
+                "summary": "Taleb describes events that are rare, difficult to predict, and powerful in their consequences. They can reshape markets, institutions, and personal plans. The label reminds readers that models built from ordinary experience may fail when the world changes dramatically."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Beware of the Narrative Fallacy",
+                "summary": "After an event occurs, people often build a coherent story that makes it seem inevitable. This can create false confidence in explanations and predictions. Keeping track of what was known before the outcome helps distinguish genuine foresight from hindsight."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Know the Limits of Prediction",
+                "summary": "Forecasts are especially fragile when data are sparse, systems are complex, or outcomes have extreme tails. Taleb argues that people should be cautious about precise predictions in domains where uncertainty cannot be measured well. Knowing the limits of a model is part of using it responsibly."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Build Robustness",
+                "summary": "If a future event cannot be predicted, it may be more useful to reduce vulnerability and preserve options. Avoiding excessive dependence on one forecast or one point of failure can make a system more resilient. Robustness prepares for surprise rather than pretending to eliminate it."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Benefit from Positive Uncertainty",
+                "summary": "Some choices have limited downside and room for unexpected upside. Taleb encourages looking for structures where small experiments can reveal opportunities without risking everything. This does not make uncertainty disappear; it changes how much harm a wrong guess can cause."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Practice Intellectual Humility",
+                "summary": "The Black Swan perspective urges readers to distinguish what they know from what they assume. It discourages overconfidence and encourages plans that can survive surprise. Humility is practical: it keeps people from mistaking a convincing model for the full reality."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Black Swan by Nassim Nicholas Taleb | Full Book Summary & Key Lessons",
+            "author": "Nassim Nicholas Taleb",
+            "category": "Risk / Decision-Making",
+            "affiliate_link": "https://www.amazon.com/dp/081297381X",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/081297381X-L.jpg",
+            "short_description": "Taleb calls attention to unexpected events that reshape outcomes, the stories people build afterward, and ways to make decisions more robust under uncertainty.",
+            "tags": [
+                "The Black Swan",
+                "Nassim Nicholas Taleb",
+                "Risk",
+                "Uncertainty",
+                "Decision Making",
+                "Statistics",
+                "Critical Thinking",
+                "Book Summary",
+                "Business Strategy",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Black Swan",
+            "author": "Nassim Nicholas Taleb",
+            "thumbnail_id": "081297381X"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What might change if people stopped treating perfection as the price of belonging?",
+            "intro_line": "Today, we’re exploring Brené Brown’s guide to wholehearted living, self-compassion, courage, and letting go of impossible standards."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Let Go of Perfection",
+                "summary": "Perfectionism is often an attempt to avoid judgment, but it can keep people from trying, learning, and connecting. Brown distinguishes striving for excellence from demanding flawlessness. Accepting imperfection allows people to act with greater honesty and less fear."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Practice Authenticity",
+                "summary": "Authenticity means showing up in ways that reflect one’s values rather than performing for approval. It does not require sharing every private detail. It asks people to make choices that feel honest and to accept the uncertainty that comes with being seen."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Build Self-Compassion",
+                "summary": "People often offer more understanding to a friend than to themselves. Brown encourages self-kindness, recognizing common humanity, and noticing emotions without letting them define a person. Compassion makes it easier to recover from mistakes and continue learning."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Choose Courage and Gratitude",
+                "summary": "Courage involves taking small risks in service of connection or meaningful work. Gratitude helps people notice what is present instead of waiting for life to become perfect. These practices do not erase hardship; they create ways to meet it with steadiness."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Set Boundaries and Cultivate Connection",
+                "summary": "Connection grows when people can be honest about needs and limits. Boundaries protect the time and energy needed for meaningful relationships. Brown frames belonging as being accepted for who one is, rather than changing oneself to fit every group."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Make Wholeheartedness a Practice",
+                "summary": "Wholehearted living is built through repeated choices: rest, play, creativity, and meaningful relationships. It is not a finished state or a checklist of virtues. The practice is to notice when fear takes over and return to values that support a fuller life."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The Gifts of Imperfection by Brené Brown | Full Book Summary & Key Lessons",
+            "author": "Brené Brown",
+            "category": "Personal Growth / Psychology",
+            "affiliate_link": "https://www.amazon.com/dp/159285849X",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/159285849X-L.jpg",
+            "short_description": "Brown encourages readers to cultivate authenticity and connection by practicing courage, compassion, and resilience rather than striving for perfection.",
+            "tags": [
+                "The Gifts of Imperfection",
+                "Brene Brown",
+                "Self Compassion",
+                "Personal Growth",
+                "Authenticity",
+                "Courage",
+                "Psychology",
+                "Book Summary",
+                "Wellbeing",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The Gifts of Imperfection",
+            "author": "Brené Brown",
+            "thumbnail_id": "159285849X"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "Why does vulnerability matter when people are trying to lead, create, or build close relationships?",
+            "intro_line": "Today, we’re exploring Brené Brown’s research on vulnerability, shame, courage, and the ways people can show up more fully in work and life."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Enter the Arena",
+                "summary": "Brown uses the idea of the arena to describe choosing to participate even when success is uncertain. Vulnerability is the exposure that comes with trying, creating, and caring. Avoiding all risk may reduce embarrassment, but it also limits growth and connection."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Understand Shame",
+                "summary": "Shame tells people that a mistake means they are unworthy of belonging. Brown distinguishes shame from guilt, which can focus on a behavior that needs repair. Naming the feeling and speaking with a trusted person can reduce shame’s power to isolate."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Practice Shame Resilience",
+                "summary": "Resilience begins with recognizing shame triggers, understanding the story attached to them, and reaching for empathy. People can question whether the story is accurate and choose a response aligned with their values. This process helps transform painful experiences into opportunities for learning."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Lead without Armor",
+                "summary": "Leaders may use perfectionism, control, or silence to protect themselves from criticism. Brown argues that these forms of armor can also make teams less honest. Courageous leaders set clear expectations, admit uncertainty, and invite feedback while remaining accountable."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Build Trust through Small Actions",
+                "summary": "Trust grows from repeated actions that show reliability, respect, and care. Teams need agreements about confidentiality, boundaries, and repair when trust is broken. Vulnerability becomes safer when people know that openness will be met with responsibility."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Choose Courage over Comfort",
+                "summary": "People can respond to uncertainty by withdrawing or by engaging with care and clarity. Brown’s message is not to be fearless; it is to act while fear is present. Small courageous steps make work and relationships more honest over time."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Daring Greatly by Brené Brown | Full Book Summary & Key Lessons",
+            "author": "Brené Brown",
+            "category": "Leadership / Personal Growth",
+            "affiliate_link": "https://www.amazon.com/dp/1592408419",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/1592408419-L.jpg",
+            "short_description": "Brown argues that vulnerability is part of meaningful connection and courageous action, and offers ways to respond to shame with honesty and resilience.",
+            "tags": [
+                "Daring Greatly",
+                "Brene Brown",
+                "Vulnerability",
+                "Courage",
+                "Leadership",
+                "Relationships",
+                "Shame Resilience",
+                "Book Summary",
+                "Personal Growth",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Daring Greatly",
+            "author": "Brené Brown",
+            "thumbnail_id": "1592408419"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What strengths can quieter people bring to teams that reward constant visibility?",
+            "intro_line": "Today, we’re exploring Susan Cain’s case for understanding introversion and creating environments where different working styles can contribute."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Understand Temperament",
+                "summary": "Introversion is not the same as shyness or a lack of confidence. It often describes how a person responds to stimulation and where they recharge. Recognizing temperament helps people choose environments that support their energy and thinking."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Value Quiet Strengths",
+                "summary": "Quieter people may bring careful observation, preparation, and sustained focus. These strengths can be overlooked when visibility is mistaken for contribution. Teams make better use of talent when they assess the quality of ideas and work, not only how quickly someone speaks."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Design for Different Working Styles",
+                "summary": "Open discussion can help a group, but constant meetings and interruptions can overwhelm some people. Cain suggests providing time for independent thought alongside collaboration. A team can share ideas before meetings and invite written input to make participation more balanced."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Stretch without Becoming Someone Else",
+                "summary": "People can act outside their comfort zone when a goal matters, but sustained performance requires recovery. Introverts can practice speaking up or leading while still preserving time to recharge. Growth does not require copying the most extroverted person in the room."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Use Partnerships Wisely",
+                "summary": "Collaborations work well when people contribute complementary strengths. A reflective planner and an energetic facilitator may approach a challenge differently and still share a goal. Clear roles and mutual respect help these differences become useful rather than a source of conflict."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Build a Culture That Listens",
+                "summary": "Schools and workplaces benefit when they make room for focus, reflection, and diverse ways of contributing. Leaders can ask who has not spoken and provide more than one route for input. A culture that values quiet thought can hear ideas it would otherwise miss."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "Quiet: The Power of Introverts in a World That Can’t Stop Talking by Susan Cain | Full Book Summary & Key Lessons",
+            "author": "Susan Cain",
+            "category": "Psychology / Work",
+            "affiliate_link": "https://www.amazon.com/dp/0307352153",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0307352153-L.jpg",
+            "short_description": "Cain examines the strengths of introverts, the effects of overstimulation, and how schools, workplaces, and relationships can support different temperaments.",
+            "tags": [
+                "Quiet",
+                "Susan Cain",
+                "Introversion",
+                "Psychology",
+                "Leadership",
+                "Workplace",
+                "Communication",
+                "Book Summary",
+                "Personal Growth",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "Quiet: The Power of Introverts in a World That Can’t Stop Talking",
+            "author": "Susan Cain",
+            "thumbnail_id": "0307352153"
+        }
+    },
+    {
+        "channel_intro": {
+            "welcome_hook": "What if a small share of the work creates most of the results?",
+            "intro_line": "Today, we’re exploring Richard Koch’s application of the 80/20 principle to work, business, time, and personal priorities."
+        },
+        "chapters": [
+            {
+                "chapter_number": "1",
+                "chapter_title": "Notice Unequal Results",
+                "summary": "The 80/20 principle describes a common pattern in which a minority of causes produce a majority of outcomes. The exact ratio is not a law, but the unevenness is worth examining. Measuring where results come from can reveal where effort is being diluted."
+            },
+            {
+                "chapter_number": "2",
+                "chapter_title": "Find the Vital Few",
+                "summary": "A small number of customers, tasks, or products may account for much of the value a business creates. Identify them with data rather than assumption, then understand why they perform well. This helps leaders focus resources where they can make the largest difference."
+            },
+            {
+                "chapter_number": "3",
+                "chapter_title": "Use Time More Deliberately",
+                "summary": "Some activities produce lasting value while others consume attention without a comparable return. Koch encourages reviewing how time is spent and protecting the work that matters most. The goal is not to eliminate every low-value task, but to reduce its control over the schedule."
+            },
+            {
+                "chapter_number": "4",
+                "chapter_title": "Improve the High-Impact Work",
+                "summary": "Once a person identifies the activities that matter most, they can improve quality, remove obstacles, and build more of that work into the routine. Small improvements to a high-impact process can matter more than optimizing many minor tasks."
+            },
+            {
+                "chapter_number": "5",
+                "chapter_title": "Simplify and Say No",
+                "summary": "Focus requires deciding what not to do. Reducing unnecessary products, meetings, or commitments can create room for better work. The principle works best when choices reflect the organization’s actual goals rather than a generic desire to do less."
+            },
+            {
+                "chapter_number": "6",
+                "chapter_title": "Apply the Principle with Judgment",
+                "summary": "The 80/20 rule is a lens for investigation, not a shortcut that replaces evidence. Some neglected tasks prevent serious problems even if they do not produce visible returns. Use the pattern to ask better questions, then consider quality, fairness, and long-term effects."
+            }
+        ],
+        "call_to_action": {
+            "subscribe": "Subscribe for more powerful book summaries",
+            "affiliate": "Check description to order this book"
+        },
+        "youtube_metadata": {
+            "title": "The 80/20 Principle by Richard Koch | Full Book Summary & Key Lessons",
+            "author": "Richard Koch",
+            "category": "Productivity / Business",
+            "affiliate_link": "https://www.amazon.com/dp/0385491743",
+            "cover_image": "https://covers.openlibrary.org/b/isbn/0385491743-L.jpg",
+            "short_description": "Koch argues that results are often unevenly distributed and encourages readers to find the few inputs that create disproportionate value.",
+            "tags": [
+                "The 80/20 Principle",
+                "Richard Koch",
+                "Productivity",
+                "Business Strategy",
+                "Time Management",
+                "Prioritization",
+                "Personal Growth",
+                "Book Summary",
+                "Efficiency",
+                "Key Lessons"
+            ]
+        },
+        "screentext": {
+            "original_title": "The 80/20 Principle",
+            "author": "Richard Koch",
+            "thumbnail_id": "0385491743"
+        }
+    }
+]
