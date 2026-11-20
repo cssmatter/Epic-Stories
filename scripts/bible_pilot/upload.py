@@ -46,10 +46,17 @@ def youtube(kind):
         save()
     if not entry.get('comment_id'):
         client = get_authenticated_service('token_godisgreatest.pickle')
-        result = client.commentThreads().insert(part='snippet', body={'snippet': {
-            'videoId': entry['id'], 'topLevelComment': {'snippet': {'textOriginal': meta['comment']}}
-        }}).execute()
-        entry['comment_id'] = result['id']
+        try:
+            result = client.commentThreads().insert(part='snippet', body={'snippet': {
+                'videoId': entry['id'], 'topLevelComment': {'snippet': {'textOriginal': meta['comment']}}
+            }}).execute()
+            entry['comment_id'] = result['id']
+            entry.pop('comment_warning', None)
+        except Exception as exc:
+            if getattr(getattr(exc, 'resp', None), 'status', None) != 403 or 'insufficient' not in str(exc).lower():
+                raise
+            entry['comment_warning'] = 'Existing channel credentials permit uploading but not comments. Download links are in the description. Reauthorize with a comment-capable YouTube scope to enable comments.'
+            print('::warning::' + entry['comment_warning'])
         save()
     print(kind, entry['url'])
 
@@ -78,11 +85,18 @@ def instagram():
             raise RuntimeError('Instagram processing timed out; container is saved for retry')
         entry['id'] = graph('POST', f'{account}/media_publish', creation_id=entry['container_id'])['id']
         save()
-    if not entry.get('comment_id'):
-        entry['comment_id'] = graph('POST', f'{entry["id"]}/comments', message=meta['comment'])['id']
-        save()
     entry['url'] = graph('GET', entry['id'], fields='permalink')['permalink']
     save()
+    if not entry.get('comment_id'):
+        try:
+            entry['comment_id'] = graph('POST', f'{entry["id"]}/comments', message=meta['comment'])['id']
+            entry.pop('comment_warning', None)
+        except RuntimeError as exc:
+            if not str(exc).startswith('Instagram API error 10:'):
+                raise
+            entry['comment_warning'] = 'Existing Instagram app credentials do not allow this comment action. Download links are in the Reel caption. Comment permission must be authorized separately.'
+            print('::warning::' + entry['comment_warning'])
+        save()
     print('Instagram', entry['url'])
 
 def main():
@@ -103,6 +117,8 @@ def main():
             summary.write('## Bible Study pilot uploads\n\n')
             for name, result in STATE.items():
                 summary.write(f'- {name}: {result.get("url", result.get("id", "pending"))}\n')
+                if result.get('comment_warning'):
+                    summary.write(f'  - Comment pending: {result["comment_warning"]}\n')
             if failures:
                 summary.write('\nFailed steps: ' + ', '.join(failures) + '\n')
     if failures:
