@@ -1,14 +1,18 @@
 {
   "youtube_short": {
     "id": "Vyzb0ZuXq30",
-    "url": "https://youtu.be/Vyzb0ZuXq30"
+    "url": "https://youtu.be/Vyzb0ZuXq30",
+    "comment_warning": "Existing channel credentials permit uploading but not comments. Download links are in the description. Reauthorize with a comment-capable YouTube scope to enable comments."
   },
   "youtube_long": {
     "id": "_7AIsLG0uX4",
-    "url": "https://youtu.be/_7AIsLG0uX4"
+    "url": "https://youtu.be/_7AIsLG0uX4",
+    "comment_warning": "Existing channel credentials permit uploading but not comments. Download links are in the description. Reauthorize with a comment-capable YouTube scope to enable comments."
   },
   "instagram_short": {
     "container_id": "17910887193666693",
-    "id": "18149140192603129"
+    "id": "18149140192603129",
+    "url": "https://www.instagram.com/reel/Df-DJ3kk-tr/",
+    "comment_warning": "Existing Instagram app credentials do not allow this comment action. Download links are in the Reel caption. Comment permission must be authorized separately."
   }
 }
