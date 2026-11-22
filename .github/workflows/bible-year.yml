@@ -1,0 +1,76 @@
+name: Bible Study - Daily Year Campaign
+on:
+  schedule:
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Campaign date YYYY-MM-DD (blank means today in India)'
+        type: string
+      publish:
+        description: 'Publish to YouTube and Instagram after rendering'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: bible-year-campaign
+  cancel-in-progress: false
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          pip install edge-tts==7.3.1 playwright==1.58.0 qrcode==8.2 pillow==12.1.1 requests==2.32.5 google-auth-oauthlib==1.2.4 google-auth-httplib2==0.3.0 google-api-python-client==2.190.0
+          playwright install --with-deps chromium
+      - name: Select episode
+        id: select
+        env:
+          CAMPAIGN_DATE: ${{ inputs.date }}
+        run: python scripts/bible_year/publish.py --select-only ${CAMPAIGN_DATE:+--date "$CAMPAIGN_DATE"}
+      - name: Render Short and long video
+        if: steps.select.outputs.episode != ''
+        env:
+          EPISODE: ${{ steps.select.outputs.episode }}
+        run: python scripts/bible_year/render.py --episode "$EPISODE"
+      - name: Save preview videos
+        if: steps.select.outputs.episode != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: bible-${{ steps.select.outputs.episode }}
+          path: output/bible-year/${{ steps.select.outputs.episode }}/*.mp4
+          retention-days: 14
+      - name: Publish daily pair
+        if: steps.select.outputs.episode != '' && (github.event_name == 'schedule' || inputs.publish)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EPISODE: ${{ steps.select.outputs.episode }}
+          CAMPAIGN_DATE: ${{ inputs.date }}
+          CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
+          CHANNEL_TOKEN: ${{ secrets.GODISGREATEST_TOKEN_PICKLE_BASE64 }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN_GODISGREATEST }}
+          IG_BUSINESS_ID: ${{ secrets.IG_BUSINESS_ID_GODISGREATEST }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import os,base64,pathlib
+          pathlib.Path('client_secrets.json').write_text(os.environ['CLIENT_SECRETS'])
+          pathlib.Path('token_godisgreatest.pickle').write_bytes(base64.b64decode(os.environ['CHANNEL_TOKEN']))
+          PY
+          gh release view "bible-$EPISODE" || gh release create "bible-$EPISODE" --title "Bible Study $EPISODE" --notes 'Daily Bible study video assets.'
+          gh release upload "bible-$EPISODE" output/bible-year/"$EPISODE"/*.mp4 --clobber
+          python scripts/bible_year/publish.py ${CAMPAIGN_DATE:+--date "$CAMPAIGN_DATE"}
+      - name: Clean restored credentials
+        if: always()
+        run: rm -f client_secrets.json token_godisgreatest.pickle

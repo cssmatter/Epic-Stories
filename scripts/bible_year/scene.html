@@ -1,0 +1,37 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#050505}canvas{display:block}</style><canvas id="c"></canvas>
+<script>
+const c=document.querySelector('canvas'),ctx=c.getContext('2d');
+const gold='#d5b865',mint='#80c9b3',white='#eee9df';
+const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>1-Math.pow(1-clamp(x),3);
+let data,imgs={};
+window.setup=async d=>{data=d;c.width=d.width;c.height=d.height;for(const [k,v] of Object.entries(d.images)){imgs[k]=new Image();imgs[k].src=v;await imgs[k].decode();}};
+function text(s,x,y,size,color=white,font='Arial',max=650){ctx.fillStyle=color;ctx.font=`${size}px ${font}`;ctx.textAlign='center';const words=s.split(' ');let line='',lines=[];for(const w of words){if(ctx.measureText(line+' '+w).width>max&&line){lines.push(line);line=w;}else line+=(line?' ':'')+w;}lines.push(line);lines.forEach((l,i)=>ctx.fillText(l,x,y+i*size*1.3));}
+function line(x1,y1,x2,y2,color=mint){ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
+function icon(kind,t){ctx.save();ctx.translate(360,585);ctx.strokeStyle=gold;ctx.fillStyle=gold;ctx.lineWidth=5;ctx.lineCap='round';
+ if(kind==='heart'){const p=1+.04*Math.sin(t*4);ctx.scale(p,p);ctx.fillStyle='#813349';ctx.beginPath();ctx.moveTo(0,54);ctx.bezierCurveTo(-110,-10,-52,-90,0,-40);ctx.bezierCurveTo(52,-90,110,-10,0,54);ctx.fill();}
+ else if(kind==='seed'){line(0,70,0,-45,gold);for(let i=0;i<6;i++){let y=35-i*18,s=i%2?1:-1;ctx.fillStyle=i%2?mint:'#496f58';ctx.save();ctx.translate(0,y);ctx.rotate(s*(.45+.08*Math.sin(t*2+i)));ctx.beginPath();ctx.ellipse(s*23,-12,28,12,-s*.5,0,7);ctx.fill();ctx.restore();}line(-65,75,65,75,gold);}
+ else if(kind==='sun'){ctx.rotate(t*.15);for(let i=0;i<12;i++){ctx.rotate(Math.PI/6);line(0,-48,0,-65,gold);}ctx.beginPath();ctx.arc(0,0,32,0,7);ctx.fill();}
+ else if(kind==='book'||kind==='journal'){ctx.fillStyle='#ceb985';ctx.beginPath();ctx.moveTo(0,-35);ctx.quadraticCurveTo(-40,-55,-70,-35);ctx.lineTo(-70,55);ctx.quadraticCurveTo(-35,40,0,60);ctx.quadraticCurveTo(35,40,70,55);ctx.lineTo(70,-35);ctx.quadraticCurveTo(35,-55,0,-35);ctx.fill();line(0,-30,0,55,'#665532');for(let i=0;i<4;i++){line(-55,-15+i*15,-15,-10+i*15,'#887751');line(15,-10+i*15,55,-15+i*15,'#887751');}}
+ else if(kind==='path'){ctx.beginPath();ctx.moveTo(-70,65);ctx.bezierCurveTo(100,10,-80,-15,45,-70);ctx.stroke();ctx.fillStyle=mint;ctx.beginPath();ctx.arc(45,-70,10,0,7);ctx.fill();}
+ else if(kind==='prayer'){ctx.save();ctx.rotate(-.16);ctx.beginPath();ctx.moveTo(-5,50);ctx.lineTo(-38,10);ctx.lineTo(-18,-60);ctx.quadraticCurveTo(0,-80,0,-40);ctx.lineTo(0,35);ctx.stroke();ctx.restore();ctx.save();ctx.scale(-1,1);ctx.rotate(-.16);ctx.beginPath();ctx.moveTo(-5,50);ctx.lineTo(-38,10);ctx.lineTo(-18,-60);ctx.quadraticCurveTo(0,-80,0,-40);ctx.lineTo(0,35);ctx.stroke();ctx.restore();}
+ else if(kind==='app')ctx.drawImage(imgs.app,-65,-65,130,130);
+ ctx.restore();}
+function card(s,t,index){ctx.strokeStyle=mint;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(185,478,350,315,22);ctx.stroke();text(`${index+1}. ${s.title}`,360,435,27,gold,'monospace',620);icon(s.icon,t);text(s.icon==='app'?'52-WEEK BIBLE STUDY':s.title.toLowerCase(),360,723,20,gold,'Georgia',290);line(285,744,435,744,gold);}
+window.draw=t=>{ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#050505';ctx.fillRect(0,0,c.width,c.height);const scale=data.kind==='short'?c.width/720:c.height/1100;ctx.translate((c.width-720*scale)/2,(c.height-1280*scale)/2);ctx.scale(scale,scale);
+ for(let i=0;i<170;i++){let x=(i*137.29)%720,y=(i*97.61)%1280;ctx.fillStyle=`rgba(210,210,190,${.07+.05*Math.sin(t*.7+i)})`;ctx.fillRect(x,y,1,1);}
+ let index=data.scenes.findIndex(s=>t>=s.start&&t<s.end);if(index<0)index=data.scenes.length-1;const s=data.scenes[index],local=t-s.start,remain=s.end-t;
+ ctx.save();const enter=ease(local/.65),exit=ease((.5-remain)/.5);ctx.translate((1-enter)*320-exit*650,-exit*160);ctx.translate(360,635);ctx.rotate(-exit*.22);ctx.scale(.94+.06*enter,.94+.06*enter);ctx.translate(-360,-635);ctx.globalAlpha=enter*(1-exit);card(s,t,index);ctx.restore();
+ const words=s.words.filter(w=>w.start<=t);const active=words.length?words[words.length-1]:null;if(active && t<=s.words[s.words.length-1].end+.3){let wi=s.words.indexOf(active),start=Math.floor(wi/6)*6;const phrase=s.words.slice(start,start+6).map(w=>w.word).join(' ');text(phrase,360,850,25,white,'Arial',640);}
+ ctx.strokeStyle='#8b7b48';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(160,900,400,48,8);ctx.stroke();text(data.scripture.toUpperCase(),360,931,18,white,'monospace',380);
+ if(index===0){ctx.drawImage(imgs.app,330,240,60,60);text('52-WEEK BIBLE STUDY',360,330,17,gold,'monospace');text('iOS + Android • Links below',360,1000,17,white);}
+ if(index===data.scenes.length-1){
+  // The reference closes by pulling back into connected cards; adapt it to app download choices.
+  for(let i=0;i<3;i++){let x=110+i*250;line(x,185,x,260,'#365b50');ctx.strokeStyle='#365b50';ctx.strokeRect(x-24,150,48,35);}
+  line(110,185,610,185,'#365b50');
+
+ }
+ // Fine static halftone texture, as seen in the supplied reference.
+ ctx.globalAlpha=.11;ctx.fillStyle='#000';for(let y=0;y<1280;y+=4)for(let x=0;x<720;x+=4)ctx.fillRect(x,y,1,1);ctx.globalAlpha=1;
+ if(index===data.scenes.length-1){ctx.imageSmoothingEnabled=false;ctx.drawImage(imgs.ios,140,980,190,190);ctx.drawImage(imgs.android,390,980,190,190);ctx.imageSmoothingEnabled=true;text('iPhone / iPad',235,1200,18);text('Android',485,1200,18);}
+};
+</script>
