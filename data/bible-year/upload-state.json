@@ -18,5 +18,10 @@
       "url": "https://www.instagram.com/reel/DgDDTDdjT-L/",
       "comment_warning": "Comment permission unavailable; download links remain in the caption."
     }
+  },
+  "day-002": {
+    "youtube_short": {
+      "pending": true
+    }
   }
 }
