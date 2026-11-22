@@ -61,6 +61,12 @@ def main():
         else:raise RuntimeError('Instagram processing timed out')
         r['id']=graph('POST',f'{account}/media_publish',creation_id=r['container_id'])['id'];save()
     r['url']=graph('GET',r['id'],fields='permalink')['permalink'];save()
+    if not r.get('comment_id'):
+        try:
+            r['comment_id']=graph('POST',f"{r['id']}/comments",message='Download our app: iOS '+entry['links']['ios']+' Android '+entry['links']['android'])['id'];save()
+        except RuntimeError as exc:
+            if not str(exc).startswith('Instagram API error 10:'):raise
+            r['comment_warning']='Comment permission unavailable; download links remain in the caption.';save()
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
             f.write('\n'.join(f"- {key}: {value.get('url','pending')}" for key,value in record.items()))
