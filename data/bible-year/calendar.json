@@ -1,7 +1,7 @@
 [
   {
     "id": "day-001",
-    "date": "2026-11-23",
+    "date": "2026-11-22",
     "book": "seniors",
     "week": 1,
     "title": "The Gift of Seasons",
@@ -106,7 +106,7 @@
   },
   {
     "id": "day-002",
-    "date": "2026-11-24",
+    "date": "2026-11-23",
     "book": "kids",
     "week": 1,
     "title": "God's Big Love",
@@ -211,7 +211,7 @@
   },
   {
     "id": "day-003",
-    "date": "2026-11-25",
+    "date": "2026-11-24",
     "book": "young-adults",
     "week": 1,
     "title": "Foundations: Identity in Christ",
@@ -316,7 +316,7 @@
   },
   {
     "id": "day-004",
-    "date": "2026-11-26",
+    "date": "2026-11-25",
     "book": "women",
     "week": 1,
     "title": "Rooted in Grace",
@@ -421,7 +421,7 @@
   },
   {
     "id": "day-005",
-    "date": "2026-11-27",
+    "date": "2026-11-26",
     "book": "men",
     "week": 1,
     "title": "Called to Courage",
@@ -526,7 +526,7 @@
   },
   {
     "id": "day-006",
-    "date": "2026-11-28",
+    "date": "2026-11-27",
     "book": "couples",
     "week": 1,
     "title": "Foundations of Love",
@@ -631,7 +631,7 @@
   },
   {
     "id": "day-007",
-    "date": "2026-11-29",
+    "date": "2026-11-28",
     "book": "beginners",
     "week": 1,
     "title": "In the Beginning: God Creates",
@@ -736,7 +736,7 @@
   },
   {
     "id": "day-008",
-    "date": "2026-11-30",
+    "date": "2026-11-29",
     "book": "seniors",
     "week": 2,
     "title": "Strength for the Journey",
@@ -841,7 +841,7 @@
   },
   {
     "id": "day-009",
-    "date": "2026-12-01",
+    "date": "2026-11-30",
     "book": "kids",
     "week": 2,
     "title": "The First Day",
@@ -946,7 +946,7 @@
   },
   {
     "id": "day-010",
-    "date": "2026-12-02",
+    "date": "2026-12-01",
     "book": "young-adults",
     "week": 2,
     "title": "Rooted in Grace",
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "day-011",
-    "date": "2026-12-03",
+    "date": "2026-12-02",
     "book": "women",
     "week": 2,
     "title": "A Heart of Worship",
@@ -1156,7 +1156,7 @@
   },
   {
     "id": "day-012",
-    "date": "2026-12-04",
+    "date": "2026-12-03",
     "book": "men",
     "week": 2,
     "title": "The Heart of a Warrior",
@@ -1261,7 +1261,7 @@
   },
   {
     "id": "day-013",
-    "date": "2026-12-05",
+    "date": "2026-12-04",
     "book": "couples",
     "week": 2,
     "title": "Grace in Communication",
@@ -1366,7 +1366,7 @@
   },
   {
     "id": "day-014",
-    "date": "2026-12-06",
+    "date": "2026-12-05",
     "book": "beginners",
     "week": 2,
     "title": "Creation and Creator",
@@ -1471,7 +1471,7 @@
   },
   {
     "id": "day-015",
-    "date": "2026-12-07",
+    "date": "2026-12-06",
     "book": "seniors",
     "week": 3,
     "title": "God’s Unfailing Love",
@@ -1576,7 +1576,7 @@
   },
   {
     "id": "day-016",
-    "date": "2026-12-08",
+    "date": "2026-12-07",
     "book": "kids",
     "week": 3,
     "title": "God Made Me Special",
@@ -1681,7 +1681,7 @@
   },
   {
     "id": "day-017",
-    "date": "2026-12-09",
+    "date": "2026-12-08",
     "book": "young-adults",
     "week": 3,
     "title": "Walking in Faith",
@@ -1786,7 +1786,7 @@
   },
   {
     "id": "day-018",
-    "date": "2026-12-10",
+    "date": "2026-12-09",
     "book": "women",
     "week": 3,
     "title": "Strength in Weakness",
@@ -1891,7 +1891,7 @@
   },
   {
     "id": "day-019",
-    "date": "2026-12-11",
+    "date": "2026-12-10",
     "book": "men",
     "week": 3,
     "title": "Strength in Submission",
@@ -1996,7 +1996,7 @@
   },
   {
     "id": "day-020",
-    "date": "2026-12-12",
+    "date": "2026-12-11",
     "book": "couples",
     "week": 3,
     "title": "Unity in Purpose",
@@ -2101,7 +2101,7 @@
   },
   {
     "id": "day-021",
-    "date": "2026-12-13",
+    "date": "2026-12-12",
     "book": "beginners",
     "week": 3,
     "title": "The Good Shepherd",
@@ -2206,7 +2206,7 @@
   },
   {
     "id": "day-022",
-    "date": "2026-12-14",
+    "date": "2026-12-13",
     "book": "seniors",
     "week": 4,
     "title": "Peace in the Evening",
@@ -2311,7 +2311,7 @@
   },
   {
     "id": "day-023",
-    "date": "2026-12-15",
+    "date": "2026-12-14",
     "book": "kids",
     "week": 4,
     "title": "Listening to God",
@@ -2416,7 +2416,7 @@
   },
   {
     "id": "day-024",
-    "date": "2026-12-16",
+    "date": "2026-12-15",
     "book": "young-adults",
     "week": 4,
     "title": "Identity in Christ",
@@ -2521,7 +2521,7 @@
   },
   {
     "id": "day-025",
-    "date": "2026-12-17",
+    "date": "2026-12-16",
     "book": "women",
     "week": 4,
     "title": "The Power of Prayer",
@@ -2626,7 +2626,7 @@
   },
   {
     "id": "day-026",
-    "date": "2026-12-18",
+    "date": "2026-12-17",
     "book": "men",
     "week": 4,
     "title": "Guarding the Mind",
@@ -2731,7 +2731,7 @@
   },
   {
     "id": "day-027",
-    "date": "2026-12-19",
+    "date": "2026-12-18",
     "book": "couples",
     "week": 4,
     "title": "The Gift of Forgiveness",
@@ -2836,7 +2836,7 @@
   },
   {
     "id": "day-028",
-    "date": "2026-12-20",
+    "date": "2026-12-19",
     "book": "beginners",
     "week": 4,
     "title": "Prayer Basics",
@@ -2941,7 +2941,7 @@
   },
   {
     "id": "day-029",
-    "date": "2026-12-21",
+    "date": "2026-12-20",
     "book": "seniors",
     "week": 5,
     "title": "Walking in Faith",
@@ -3046,7 +3046,7 @@
   },
   {
     "id": "day-030",
-    "date": "2026-12-22",
+    "date": "2026-12-21",
     "book": "kids",
     "week": 5,
     "title": "Helping Hands",
@@ -3151,7 +3151,7 @@
   },
   {
     "id": "day-031",
-    "date": "2026-12-23",
+    "date": "2026-12-22",
     "book": "young-adults",
     "week": 5,
     "title": "Living Out Love",
@@ -3256,7 +3256,7 @@
   },
   {
     "id": "day-032",
-    "date": "2026-12-24",
+    "date": "2026-12-23",
     "book": "women",
     "week": 5,
     "title": "Living Water",
@@ -3361,7 +3361,7 @@
   },
   {
     "id": "day-033",
-    "date": "2026-12-25",
+    "date": "2026-12-24",
     "book": "men",
     "week": 5,
     "title": "The Power of Integrity",
@@ -3466,7 +3466,7 @@
   },
   {
     "id": "day-034",
-    "date": "2026-12-26",
+    "date": "2026-12-25",
     "book": "couples",
     "week": 5,
     "title": "Joyful Service",
@@ -3571,7 +3571,7 @@
   },
   {
     "id": "day-035",
-    "date": "2026-12-27",
+    "date": "2026-12-26",
     "book": "beginners",
     "week": 5,
     "title": "Faith in Action",
@@ -3676,7 +3676,7 @@
   },
   {
     "id": "day-036",
-    "date": "2026-12-28",
+    "date": "2026-12-27",
     "book": "seniors",
     "week": 6,
     "title": "Joyful Gratitude",
@@ -3781,7 +3781,7 @@
   },
   {
     "id": "day-037",
-    "date": "2026-12-29",
+    "date": "2026-12-28",
     "book": "kids",
     "week": 6,
     "title": "Pray Like a Friend",
@@ -3886,7 +3886,7 @@
   },
   {
     "id": "day-038",
-    "date": "2026-12-30",
+    "date": "2026-12-29",
     "book": "young-adults",
     "week": 6,
     "title": "Guarding the Heart",
@@ -3991,7 +3991,7 @@
   },
   {
     "id": "day-039",
-    "date": "2026-12-31",
+    "date": "2026-12-30",
     "book": "women",
     "week": 6,
     "title": "Fruitful Friendships",
@@ -4096,7 +4096,7 @@
   },
   {
     "id": "day-040",
-    "date": "2027-01-01",
+    "date": "2026-12-31",
     "book": "men",
     "week": 6,
     "title": "Work as Worship",
@@ -4201,7 +4201,7 @@
   },
   {
     "id": "day-041",
-    "date": "2027-01-02",
+    "date": "2027-01-01",
     "book": "couples",
     "week": 6,
     "title": "Intimacy with God",
@@ -4306,7 +4306,7 @@
   },
   {
     "id": "day-042",
-    "date": "2027-01-03",
+    "date": "2027-01-02",
     "book": "beginners",
     "week": 6,
     "title": "The Ten Commandments Overview",
@@ -4411,7 +4411,7 @@
   },
   {
     "id": "day-043",
-    "date": "2027-01-04",
+    "date": "2027-01-03",
     "book": "seniors",
     "week": 7,
     "title": "The Gift of Prayer",
@@ -4516,7 +4516,7 @@
   },
   {
     "id": "day-044",
-    "date": "2027-01-05",
+    "date": "2027-01-04",
     "book": "kids",
     "week": 7,
     "title": "Jesus Is My Friend",
@@ -4621,7 +4621,7 @@
   },
   {
     "id": "day-045",
-    "date": "2027-01-06",
+    "date": "2027-01-05",
     "book": "young-adults",
     "week": 7,
     "title": "The Gift of Grace",
@@ -4726,7 +4726,7 @@
   },
   {
     "id": "day-046",
-    "date": "2027-01-07",
+    "date": "2027-01-06",
     "book": "women",
     "week": 7,
     "title": "Courageous Faith",
@@ -4831,7 +4831,7 @@
   },
   {
     "id": "day-047",
-    "date": "2027-01-08",
+    "date": "2027-01-07",
     "book": "men",
     "week": 7,
     "title": "Leading the Family",
@@ -4936,7 +4936,7 @@
   },
   {
     "id": "day-048",
-    "date": "2027-01-09",
+    "date": "2027-01-08",
     "book": "couples",
     "week": 7,
     "title": "Guarding the Heart",
@@ -5041,7 +5041,7 @@
   },
   {
     "id": "day-049",
-    "date": "2027-01-10",
+    "date": "2027-01-09",
     "book": "beginners",
     "week": 7,
     "title": "The Power of Forgiveness",
@@ -5146,7 +5146,7 @@
   },
   {
     "id": "day-050",
-    "date": "2027-01-11",
+    "date": "2027-01-10",
     "book": "seniors",
     "week": 8,
     "title": "Living with Wisdom",
@@ -5251,7 +5251,7 @@
   },
   {
     "id": "day-051",
-    "date": "2027-01-12",
+    "date": "2027-01-11",
     "book": "kids",
     "week": 8,
     "title": "Thankful Hearts",
@@ -5356,7 +5356,7 @@
   },
   {
     "id": "day-052",
-    "date": "2027-01-13",
+    "date": "2027-01-12",
     "book": "young-adults",
     "week": 8,
     "title": "Serving Others",
@@ -5461,7 +5461,7 @@
   },
   {
     "id": "day-053",
-    "date": "2027-01-14",
+    "date": "2027-01-13",
     "book": "women",
     "week": 8,
     "title": "Rest for the Soul",
@@ -5566,7 +5566,7 @@
   },
   {
     "id": "day-054",
-    "date": "2027-01-15",
+    "date": "2027-01-14",
     "book": "men",
     "week": 8,
     "title": "Friendship that Builds",
@@ -5671,7 +5671,7 @@
   },
   {
     "id": "day-055",
-    "date": "2027-01-16",
+    "date": "2027-01-15",
     "book": "couples",
     "week": 8,
     "title": "Financial Faithfulness",
@@ -5776,7 +5776,7 @@
   },
   {
     "id": "day-056",
-    "date": "2027-01-17",
+    "date": "2027-01-16",
     "book": "beginners",
     "week": 8,
     "title": "The Fruit of the Spirit",
@@ -5881,7 +5881,7 @@
   },
   {
     "id": "day-057",
-    "date": "2027-01-18",
+    "date": "2027-01-17",
     "book": "seniors",
     "week": 9,
     "title": "God’s Comfort in Sorrow",
@@ -5986,7 +5986,7 @@
   },
   {
     "id": "day-058",
-    "date": "2027-01-19",
+    "date": "2027-01-18",
     "book": "kids",
     "week": 9,
     "title": "Sharing God's Love",
@@ -6091,7 +6091,7 @@
   },
   {
     "id": "day-059",
-    "date": "2027-01-20",
+    "date": "2027-01-19",
     "book": "young-adults",
     "week": 9,
     "title": "Overcoming Anxiety",
@@ -6196,7 +6196,7 @@
   },
   {
     "id": "day-060",
-    "date": "2027-01-21",
+    "date": "2027-01-20",
     "book": "women",
     "week": 9,
     "title": "Radiant Hope",
@@ -6301,7 +6301,7 @@
   },
   {
     "id": "day-061",
-    "date": "2027-01-22",
+    "date": "2027-01-21",
     "book": "men",
     "week": 9,
     "title": "Facing the Giants",
@@ -6406,7 +6406,7 @@
   },
   {
     "id": "day-062",
-    "date": "2027-01-23",
+    "date": "2027-01-22",
     "book": "couples",
     "week": 9,
     "title": "Celebrating Differences",
@@ -6511,7 +6511,7 @@
   },
   {
     "id": "day-063",
-    "date": "2027-01-24",
+    "date": "2027-01-23",
     "book": "beginners",
     "week": 9,
     "title": "Jesus’ Miracles",
@@ -6616,7 +6616,7 @@
   },
   {
     "id": "day-064",
-    "date": "2027-01-25",
+    "date": "2027-01-24",
     "book": "seniors",
     "week": 10,
     "title": "The Light of the World",
@@ -6721,7 +6721,7 @@
   },
   {
     "id": "day-065",
-    "date": "2027-01-26",
+    "date": "2027-01-25",
     "book": "kids",
     "week": 10,
     "title": "Forgiving Others",
@@ -6826,7 +6826,7 @@
   },
   {
     "id": "day-066",
-    "date": "2027-01-27",
+    "date": "2027-01-26",
     "book": "young-adults",
     "week": 10,
     "title": "Living with Integrity",
@@ -6931,7 +6931,7 @@
   },
   {
     "id": "day-067",
-    "date": "2027-01-28",
+    "date": "2027-01-27",
     "book": "women",
     "week": 10,
     "title": "Gentle Strength",
@@ -7036,7 +7036,7 @@
   },
   {
     "id": "day-068",
-    "date": "2027-01-29",
+    "date": "2027-01-28",
     "book": "men",
     "week": 10,
     "title": "Living with Purpose",
@@ -7141,7 +7141,7 @@
   },
   {
     "id": "day-069",
-    "date": "2027-01-30",
+    "date": "2027-01-29",
     "book": "couples",
     "week": 10,
     "title": "Resolving Conflict",
@@ -7246,7 +7246,7 @@
   },
   {
     "id": "day-070",
-    "date": "2027-01-31",
+    "date": "2027-01-30",
     "book": "beginners",
     "week": 10,
     "title": "The Great Commission",
@@ -7351,7 +7351,7 @@
   },
   {
     "id": "day-071",
-    "date": "2027-02-01",
+    "date": "2027-01-31",
     "book": "seniors",
     "week": 11,
     "title": "Serving with a Gentle Hand",
@@ -7456,7 +7456,7 @@
   },
   {
     "id": "day-072",
-    "date": "2027-02-02",
+    "date": "2027-02-01",
     "book": "kids",
     "week": 11,
     "title": "Courage in Trouble",
@@ -7561,7 +7561,7 @@
   },
   {
     "id": "day-073",
-    "date": "2027-02-03",
+    "date": "2027-02-02",
     "book": "young-adults",
     "week": 11,
     "title": "The Beatitudes in Daily Life",
@@ -7666,7 +7666,7 @@
   },
   {
     "id": "day-074",
-    "date": "2027-02-04",
+    "date": "2027-02-03",
     "book": "women",
     "week": 11,
     "title": "Joyful Generosity",
@@ -7771,7 +7771,7 @@
   },
   {
     "id": "day-075",
-    "date": "2027-02-05",
+    "date": "2027-02-04",
     "book": "men",
     "week": 11,
     "title": "The Discipline of Prayer",
@@ -7876,7 +7876,7 @@
   },
   {
     "id": "day-076",
-    "date": "2027-02-06",
+    "date": "2027-02-05",
     "book": "couples",
     "week": 11,
     "title": "Cultivating Patience",
@@ -7981,7 +7981,7 @@
   },
   {
     "id": "day-077",
-    "date": "2027-02-07",
+    "date": "2027-02-06",
     "book": "beginners",
     "week": 11,
     "title": "Living in the Spirit",
@@ -8086,7 +8086,7 @@
   },
   {
     "id": "day-078",
-    "date": "2027-02-08",
+    "date": "2027-02-07",
     "book": "seniors",
     "week": 12,
     "title": "Eternal Perspective",
@@ -8191,7 +8191,7 @@
   },
   {
     "id": "day-079",
-    "date": "2027-02-09",
+    "date": "2027-02-08",
     "book": "kids",
     "week": 12,
     "title": "Trusting God Like a Seed",
@@ -8296,7 +8296,7 @@
   },
   {
     "id": "day-080",
-    "date": "2027-02-10",
+    "date": "2027-02-09",
     "book": "young-adults",
     "week": 12,
     "title": "Renewing the Mind",
@@ -8401,7 +8401,7 @@
   },
   {
     "id": "day-081",
-    "date": "2027-02-11",
+    "date": "2027-02-10",
     "book": "women",
     "week": 12,
     "title": "Healing Hearts",
@@ -8506,7 +8506,7 @@
   },
   {
     "id": "day-082",
-    "date": "2027-02-12",
+    "date": "2027-02-11",
     "book": "men",
     "week": 12,
     "title": "Bearing the Cross",
@@ -8611,7 +8611,7 @@
   },
   {
     "id": "day-083",
-    "date": "2027-02-13",
+    "date": "2027-02-12",
     "book": "couples",
     "week": 12,
     "title": "Building a Legacy",
@@ -8716,7 +8716,7 @@
   },
   {
     "id": "day-084",
-    "date": "2027-02-14",
+    "date": "2027-02-13",
     "book": "beginners",
     "week": 12,
     "title": "Hope in Hard Times",
@@ -8821,7 +8821,7 @@
   },
   {
     "id": "day-085",
-    "date": "2027-02-15",
+    "date": "2027-02-14",
     "book": "seniors",
     "week": 13,
     "title": "Celebrating God’s Faithfulness",
@@ -8926,7 +8926,7 @@
   },
   {
     "id": "day-086",
-    "date": "2027-02-16",
+    "date": "2027-02-15",
     "book": "kids",
     "week": 13,
     "title": "Joyful Praise",
@@ -9031,7 +9031,7 @@
   },
   {
     "id": "day-087",
-    "date": "2027-02-17",
+    "date": "2027-02-16",
     "book": "young-adults",
     "week": 13,
     "title": "Hope in the Future",
@@ -9136,7 +9136,7 @@
   },
   {
     "id": "day-088",
-    "date": "2027-02-18",
+    "date": "2027-02-17",
     "book": "women",
     "week": 13,
     "title": "Living Mission",
@@ -9241,7 +9241,7 @@
   },
   {
     "id": "day-089",
-    "date": "2027-02-19",
+    "date": "2027-02-18",
     "book": "men",
     "week": 13,
     "title": "Hope in the Storm",
@@ -9346,7 +9346,7 @@
   },
   {
     "id": "day-090",
-    "date": "2027-02-20",
+    "date": "2027-02-19",
     "book": "couples",
     "week": 13,
     "title": "A Shared Vision",
@@ -9451,7 +9451,7 @@
   },
   {
     "id": "day-091",
-    "date": "2027-02-21",
+    "date": "2027-02-20",
     "book": "beginners",
     "week": 13,
     "title": "Eternal Life Promise",
@@ -9556,7 +9556,7 @@
   },
   {
     "id": "day-092",
-    "date": "2027-02-22",
+    "date": "2027-02-21",
     "book": "seniors",
     "week": 14,
     "title": "Grace That Sustains",
@@ -9661,7 +9661,7 @@
   },
   {
     "id": "day-093",
-    "date": "2027-02-23",
+    "date": "2027-02-22",
     "book": "kids",
     "week": 14,
     "title": "God's Great Big Love",
@@ -9766,7 +9766,7 @@
   },
   {
     "id": "day-094",
-    "date": "2027-02-24",
+    "date": "2027-02-23",
     "book": "young-adults",
     "week": 14,
     "title": "Finding Purpose in the Midst of Chaos",
@@ -9871,7 +9871,7 @@
   },
   {
     "id": "day-095",
-    "date": "2027-02-25",
+    "date": "2027-02-24",
     "book": "women",
     "week": 14,
     "title": "Rest for the Weary Soul",
@@ -9976,7 +9976,7 @@
   },
   {
     "id": "day-096",
-    "date": "2027-02-26",
+    "date": "2027-02-25",
     "book": "men",
     "week": 14,
     "title": "Courage in the Face of Fear",
@@ -10081,7 +10081,7 @@
   },
   {
     "id": "day-097",
-    "date": "2027-02-27",
+    "date": "2027-02-26",
     "book": "couples",
     "week": 14,
     "title": "Cultivating Patience",
@@ -10186,7 +10186,7 @@
   },
   {
     "id": "day-098",
-    "date": "2027-02-28",
+    "date": "2027-02-27",
     "book": "beginners",
     "week": 14,
     "title": "The Power of Prayer",
@@ -10291,7 +10291,7 @@
   },
   {
     "id": "day-099",
-    "date": "2027-03-01",
+    "date": "2027-02-28",
     "book": "seniors",
     "week": 15,
     "title": "Walking in Faithful Steps",
@@ -10396,7 +10396,7 @@
   },
   {
     "id": "day-100",
-    "date": "2027-03-02",
+    "date": "2027-03-01",
     "book": "kids",
     "week": 15,
     "title": "Created in God's Image",
@@ -10501,7 +10501,7 @@
   },
   {
     "id": "day-101",
-    "date": "2027-03-03",
+    "date": "2027-03-02",
     "book": "young-adults",
     "week": 15,
     "title": "Identity: Who Are You in Christ?",
@@ -10606,7 +10606,7 @@
   },
   {
     "id": "day-102",
-    "date": "2027-03-04",
+    "date": "2027-03-03",
     "book": "women",
     "week": 15,
     "title": "Courage in Uncertainty",
@@ -10711,7 +10711,7 @@
   },
   {
     "id": "day-103",
-    "date": "2027-03-05",
+    "date": "2027-03-04",
     "book": "men",
     "week": 15,
     "title": "Leading with Humility",
@@ -10816,7 +10816,7 @@
   },
   {
     "id": "day-104",
-    "date": "2027-03-06",
+    "date": "2027-03-05",
     "book": "couples",
     "week": 15,
     "title": "Speaking Grace",
@@ -10921,7 +10921,7 @@
   },
   {
     "id": "day-105",
-    "date": "2027-03-07",
+    "date": "2027-03-06",
     "book": "beginners",
     "week": 15,
     "title": "God's Promises",
@@ -11026,7 +11026,7 @@
   },
   {
     "id": "day-106",
-    "date": "2027-03-08",
+    "date": "2027-03-07",
     "book": "seniors",
     "week": 16,
     "title": "The Gift of Peace",
@@ -11131,7 +11131,7 @@
   },
   {
     "id": "day-107",
-    "date": "2027-03-09",
+    "date": "2027-03-08",
     "book": "kids",
     "week": 16,
     "title": "Jesus, Our Superhero",
@@ -11236,7 +11236,7 @@
   },
   {
     "id": "day-108",
-    "date": "2027-03-10",
+    "date": "2027-03-09",
     "book": "young-adults",
     "week": 16,
     "title": "Navigating Relationships with Grace",
@@ -11341,7 +11341,7 @@
   },
   {
     "id": "day-109",
-    "date": "2027-03-11",
+    "date": "2027-03-10",
     "book": "women",
     "week": 16,
     "title": "Identity in God's Love",
@@ -11446,7 +11446,7 @@
   },
   {
     "id": "day-110",
-    "date": "2027-03-12",
+    "date": "2027-03-11",
     "book": "men",
     "week": 16,
     "title": "Guarding Your Heart",
@@ -11551,7 +11551,7 @@
   },
   {
     "id": "day-111",
-    "date": "2027-03-13",
+    "date": "2027-03-12",
     "book": "couples",
     "week": 16,
     "title": "Building Trust",
@@ -11656,7 +11656,7 @@
   },
   {
     "id": "day-112",
-    "date": "2027-03-14",
+    "date": "2027-03-13",
     "book": "beginners",
     "week": 16,
     "title": "Walking in Faith",
@@ -11761,7 +11761,7 @@
   },
   {
     "id": "day-113",
-    "date": "2027-03-15",
+    "date": "2027-03-14",
     "book": "seniors",
     "week": 17,
     "title": "Strength for the Journey",
@@ -11866,7 +11866,7 @@
   },
   {
     "id": "day-114",
-    "date": "2027-03-16",
+    "date": "2027-03-15",
     "book": "kids",
     "week": 17,
     "title": "Prayer: Talking to God",
@@ -11971,7 +11971,7 @@
   },
   {
     "id": "day-115",
-    "date": "2027-03-17",
+    "date": "2027-03-16",
     "book": "young-adults",
     "week": 17,
     "title": "Overcoming Anxiety Through Faith",
@@ -12076,7 +12076,7 @@
   },
   {
     "id": "day-116",
-    "date": "2027-03-18",
+    "date": "2027-03-17",
     "book": "women",
     "week": 17,
     "title": "Joyful Service",
@@ -12181,7 +12181,7 @@
   },
   {
     "id": "day-117",
-    "date": "2027-03-19",
+    "date": "2027-03-18",
     "book": "men",
     "week": 17,
     "title": "The Power of Prayer",
@@ -12286,7 +12286,7 @@
   },
   {
     "id": "day-118",
-    "date": "2027-03-20",
+    "date": "2027-03-19",
     "book": "couples",
     "week": 17,
     "title": "Joyful Togetherness",
@@ -12391,7 +12391,7 @@
   },
   {
     "id": "day-119",
-    "date": "2027-03-21",
+    "date": "2027-03-20",
     "book": "beginners",
     "week": 17,
     "title": "Living in Love",
@@ -12496,7 +12496,7 @@
   },
   {
     "id": "day-120",
-    "date": "2027-03-22",
+    "date": "2027-03-21",
     "book": "seniors",
     "week": 18,
     "title": "Hope for Every Dawn",
@@ -12601,7 +12601,7 @@
   },
   {
     "id": "day-121",
-    "date": "2027-03-23",
+    "date": "2027-03-22",
     "book": "kids",
     "week": 18,
     "title": "Sharing Like Jesus",
@@ -12706,7 +12706,7 @@
   },
   {
     "id": "day-122",
-    "date": "2027-03-24",
+    "date": "2027-03-23",
     "book": "young-adults",
     "week": 18,
     "title": "The Joy of Generosity",
@@ -12811,7 +12811,7 @@
   },
   {
     "id": "day-123",
-    "date": "2027-03-25",
+    "date": "2027-03-24",
     "book": "women",
     "week": 18,
     "title": "Healing Brokenness",
@@ -12916,7 +12916,7 @@
   },
   {
     "id": "day-124",
-    "date": "2027-03-26",
+    "date": "2027-03-25",
     "book": "men",
     "week": 18,
     "title": "Integrity in the Workplace",
@@ -13021,7 +13021,7 @@
   },
   {
     "id": "day-125",
-    "date": "2027-03-27",
+    "date": "2027-03-26",
     "book": "couples",
     "week": 18,
     "title": "Forgiving One Another",
@@ -13126,7 +13126,7 @@
   },
   {
     "id": "day-126",
-    "date": "2027-03-28",
+    "date": "2027-03-27",
     "book": "beginners",
     "week": 18,
     "title": "The Gift of Grace",
@@ -13231,7 +13231,7 @@
   },
   {
     "id": "day-127",
-    "date": "2027-03-29",
+    "date": "2027-03-28",
     "book": "seniors",
     "week": 19,
     "title": "Living in God’s Love",
@@ -13336,7 +13336,7 @@
   },
   {
     "id": "day-128",
-    "date": "2027-03-30",
+    "date": "2027-03-29",
     "book": "kids",
     "week": 19,
     "title": "The Fruitful Tree",
@@ -13441,7 +13441,7 @@
   },
   {
     "id": "day-129",
-    "date": "2027-03-31",
+    "date": "2027-03-30",
     "book": "young-adults",
     "week": 19,
     "title": "Spiritual Disciplines for a Busy Life",
@@ -13546,7 +13546,7 @@
   },
   {
     "id": "day-130",
-    "date": "2027-04-01",
+    "date": "2027-03-31",
     "book": "women",
     "week": 19,
     "title": "Walking in Wisdom",
@@ -13651,7 +13651,7 @@
   },
   {
     "id": "day-131",
-    "date": "2027-04-02",
+    "date": "2027-04-01",
     "book": "men",
     "week": 19,
     "title": "Overcoming Temptation",
@@ -13756,7 +13756,7 @@
   },
   {
     "id": "day-132",
-    "date": "2027-04-03",
+    "date": "2027-04-02",
     "book": "couples",
     "week": 19,
     "title": "Serving as One",
@@ -13861,7 +13861,7 @@
   },
   {
     "id": "day-133",
-    "date": "2027-04-04",
+    "date": "2027-04-03",
     "book": "beginners",
     "week": 19,
     "title": "The Fruitful Life",
@@ -13966,7 +13966,7 @@
   },
   {
     "id": "day-134",
-    "date": "2027-04-05",
+    "date": "2027-04-04",
     "book": "seniors",
     "week": 20,
     "title": "Joy in the Seasons of Life",
@@ -14071,7 +14071,7 @@
   },
   {
     "id": "day-135",
-    "date": "2027-04-06",
+    "date": "2027-04-05",
     "book": "kids",
     "week": 20,
     "title": "Brave Like Daniel",
@@ -14176,7 +14176,7 @@
   },
   {
     "id": "day-136",
-    "date": "2027-04-07",
+    "date": "2027-04-06",
     "book": "young-adults",
     "week": 20,
     "title": "Living in Community, Not in Isolation",
@@ -14281,7 +14281,7 @@
   },
   {
     "id": "day-137",
-    "date": "2027-04-08",
+    "date": "2027-04-07",
     "book": "women",
     "week": 20,
     "title": "Graceful Forgiveness",
@@ -14386,7 +14386,7 @@
   },
   {
     "id": "day-138",
-    "date": "2027-04-09",
+    "date": "2027-04-08",
     "book": "men",
     "week": 20,
     "title": "Building Godly Brotherhood",
@@ -14491,7 +14491,7 @@
   },
   {
     "id": "day-139",
-    "date": "2027-04-10",
+    "date": "2027-04-09",
     "book": "couples",
     "week": 20,
     "title": "Praying Together",
@@ -14596,7 +14596,7 @@
   },
   {
     "id": "day-140",
-    "date": "2027-04-11",
+    "date": "2027-04-10",
     "book": "beginners",
     "week": 20,
     "title": "Following Jesus' Example",
@@ -14701,7 +14701,7 @@
   },
   {
     "id": "day-141",
-    "date": "2027-04-12",
+    "date": "2027-04-11",
     "book": "seniors",
     "week": 21,
     "title": "Legacy of Faithfulness",
@@ -14806,7 +14806,7 @@
   },
   {
     "id": "day-142",
-    "date": "2027-04-13",
+    "date": "2027-04-12",
     "book": "kids",
     "week": 21,
     "title": "Listening to God's Voice",
@@ -14911,7 +14911,7 @@
   },
   {
     "id": "day-143",
-    "date": "2027-04-14",
+    "date": "2027-04-13",
     "book": "young-adults",
     "week": 21,
     "title": "Discovering Your God‑Given Calling",
@@ -15016,7 +15016,7 @@
   },
   {
     "id": "day-144",
-    "date": "2027-04-15",
+    "date": "2027-04-14",
     "book": "women",
     "week": 21,
     "title": "Strength in Weakness",
@@ -15121,7 +15121,7 @@
   },
   {
     "id": "day-145",
-    "date": "2027-04-16",
+    "date": "2027-04-15",
     "book": "men",
     "week": 21,
     "title": "Faithful Finances",
@@ -15226,7 +15226,7 @@
   },
   {
     "id": "day-146",
-    "date": "2027-04-17",
+    "date": "2027-04-16",
     "book": "couples",
     "week": 21,
     "title": "Guarding the Heart",
@@ -15331,7 +15331,7 @@
   },
   {
     "id": "day-147",
-    "date": "2027-04-18",
+    "date": "2027-04-17",
     "book": "beginners",
     "week": 21,
     "title": "Trusting God's Plan",
@@ -15436,7 +15436,7 @@
   },
   {
     "id": "day-148",
-    "date": "2027-04-19",
+    "date": "2027-04-18",
     "book": "seniors",
     "week": 22,
     "title": "Prayer as a Lifeline",
@@ -15541,7 +15541,7 @@
   },
   {
     "id": "day-149",
-    "date": "2027-04-20",
+    "date": "2027-04-19",
     "book": "kids",
     "week": 22,
     "title": "The Good Shepherd",
@@ -15646,7 +15646,7 @@
   },
   {
     "id": "day-150",
-    "date": "2027-04-21",
+    "date": "2027-04-20",
     "book": "young-adults",
     "week": 22,
     "title": "The Power of Forgiveness",
@@ -15751,7 +15751,7 @@
   },
   {
     "id": "day-151",
-    "date": "2027-04-22",
+    "date": "2027-04-21",
     "book": "women",
     "week": 22,
     "title": "Living Generously",
@@ -15856,7 +15856,7 @@
   },
   {
     "id": "day-152",
-    "date": "2027-04-23",
+    "date": "2027-04-22",
     "book": "men",
     "week": 22,
     "title": "Strength in Weakness",
@@ -15961,7 +15961,7 @@
   },
   {
     "id": "day-153",
-    "date": "2027-04-24",
+    "date": "2027-04-23",
     "book": "couples",
     "week": 22,
     "title": "Finances with Faith",
@@ -16066,7 +16066,7 @@
   },
   {
     "id": "day-154",
-    "date": "2027-04-25",
+    "date": "2027-04-24",
     "book": "beginners",
     "week": 22,
     "title": "Serving Others",
@@ -16171,7 +16171,7 @@
   },
   {
     "id": "day-155",
-    "date": "2027-04-26",
+    "date": "2027-04-25",
     "book": "seniors",
     "week": 23,
     "title": "Trusting God’s Timing",
@@ -16276,7 +16276,7 @@
   },
   {
     "id": "day-156",
-    "date": "2027-04-27",
+    "date": "2027-04-26",
     "book": "kids",
     "week": 23,
     "title": "Finding Peace",
@@ -16381,7 +16381,7 @@
   },
   {
     "id": "day-157",
-    "date": "2027-04-28",
+    "date": "2027-04-27",
     "book": "young-adults",
     "week": 23,
     "title": "Stewardship: Managing Time, Talent, and Treasure",
@@ -16486,7 +16486,7 @@
   },
   {
     "id": "day-158",
-    "date": "2027-04-29",
+    "date": "2027-04-28",
     "book": "women",
     "week": 23,
     "title": "Prayerful Heart",
@@ -16591,7 +16591,7 @@
   },
   {
     "id": "day-159",
-    "date": "2027-04-30",
+    "date": "2027-04-29",
     "book": "men",
     "week": 23,
     "title": "Living a Life of Service",
@@ -16696,7 +16696,7 @@
   },
   {
     "id": "day-160",
-    "date": "2027-05-01",
+    "date": "2027-04-30",
     "book": "couples",
     "week": 23,
     "title": "Embracing Differences",
@@ -16801,7 +16801,7 @@
   },
   {
     "id": "day-161",
-    "date": "2027-05-02",
+    "date": "2027-05-01",
     "book": "beginners",
     "week": 23,
     "title": "Hope in Difficult Times",
@@ -16906,7 +16906,7 @@
   },
   {
     "id": "day-162",
-    "date": "2027-05-03",
+    "date": "2027-05-02",
     "book": "seniors",
     "week": 24,
     "title": "Rest in the Lord",
@@ -17011,7 +17011,7 @@
   },
   {
     "id": "day-163",
-    "date": "2027-05-04",
+    "date": "2027-05-03",
     "book": "kids",
     "week": 24,
     "title": "Thankful Hearts",
@@ -17116,7 +17116,7 @@
   },
   {
     "id": "day-164",
-    "date": "2027-05-05",
+    "date": "2027-05-04",
     "book": "young-adults",
     "week": 24,
     "title": "Choosing Joy in a World of Comparison",
@@ -17221,7 +17221,7 @@
   },
   {
     "id": "day-165",
-    "date": "2027-05-06",
+    "date": "2027-05-05",
     "book": "women",
     "week": 24,
     "title": "Guarding the Heart",
@@ -17326,7 +17326,7 @@
   },
   {
     "id": "day-166",
-    "date": "2027-05-07",
+    "date": "2027-05-06",
     "book": "men",
     "week": 24,
     "title": "Guarding Your Mind",
@@ -17431,7 +17431,7 @@
   },
   {
     "id": "day-167",
-    "date": "2027-05-08",
+    "date": "2027-05-07",
     "book": "couples",
     "week": 24,
     "title": "Restoring Intimacy",
@@ -17536,7 +17536,7 @@
   },
   {
     "id": "day-168",
-    "date": "2027-05-09",
+    "date": "2027-05-08",
     "book": "beginners",
     "week": 24,
     "title": "The Beatitudes",
@@ -17641,7 +17641,7 @@
   },
   {
     "id": "day-169",
-    "date": "2027-05-10",
+    "date": "2027-05-09",
     "book": "seniors",
     "week": 25,
     "title": "Wisdom for Daily Living",
@@ -17746,7 +17746,7 @@
   },
   {
     "id": "day-170",
-    "date": "2027-05-11",
+    "date": "2027-05-10",
     "book": "kids",
     "week": 25,
     "title": "God's Promises",
@@ -17851,7 +17851,7 @@
   },
   {
     "id": "day-171",
-    "date": "2027-05-12",
+    "date": "2027-05-11",
     "book": "young-adults",
     "week": 25,
     "title": "Pause and Practice: Choosing Joy in a World of Comparison",
@@ -17956,7 +17956,7 @@
   },
   {
     "id": "day-172",
-    "date": "2027-05-13",
+    "date": "2027-05-12",
     "book": "women",
     "week": 25,
     "title": "Hope in Trials",
@@ -18061,7 +18061,7 @@
   },
   {
     "id": "day-173",
-    "date": "2027-05-14",
+    "date": "2027-05-13",
     "book": "men",
     "week": 25,
     "title": "Perseverance Through Trials",
@@ -18166,7 +18166,7 @@
   },
   {
     "id": "day-174",
-    "date": "2027-05-15",
+    "date": "2027-05-14",
     "book": "couples",
     "week": 25,
     "title": "Hope for the Future",
@@ -18271,7 +18271,7 @@
   },
   {
     "id": "day-175",
-    "date": "2027-05-16",
+    "date": "2027-05-15",
     "book": "beginners",
     "week": 25,
     "title": "God's Creation",
@@ -18376,7 +18376,7 @@
   },
   {
     "id": "day-176",
-    "date": "2027-05-17",
+    "date": "2027-05-16",
     "book": "seniors",
     "week": 26,
     "title": "Celebrating God’s Faithfulness",
@@ -18481,7 +18481,7 @@
   },
   {
     "id": "day-177",
-    "date": "2027-05-18",
+    "date": "2027-05-17",
     "book": "kids",
     "week": 26,
     "title": "Shining Light",
@@ -18586,7 +18586,7 @@
   },
   {
     "id": "day-178",
-    "date": "2027-05-19",
+    "date": "2027-05-18",
     "book": "young-adults",
     "week": 26,
     "title": "Finding Rest in a Restless Culture",
@@ -18691,7 +18691,7 @@
   },
   {
     "id": "day-179",
-    "date": "2027-05-20",
+    "date": "2027-05-19",
     "book": "women",
     "week": 26,
     "title": "Walking in Light",
@@ -18796,7 +18796,7 @@
   },
   {
     "id": "day-180",
-    "date": "2027-05-21",
+    "date": "2027-05-20",
     "book": "men",
     "week": 26,
     "title": "Walking in the Spirit",
@@ -18901,7 +18901,7 @@
   },
   {
     "id": "day-181",
-    "date": "2027-05-22",
+    "date": "2027-05-21",
     "book": "couples",
     "week": 26,
     "title": "Living in Gratitude",
@@ -19006,7 +19006,7 @@
   },
   {
     "id": "day-182",
-    "date": "2027-05-23",
+    "date": "2027-05-22",
     "book": "beginners",
     "week": 26,
     "title": "The Great Commission",
@@ -19111,7 +19111,7 @@
   },
   {
     "id": "day-183",
-    "date": "2027-05-24",
+    "date": "2027-05-23",
     "book": "seniors",
     "week": 27,
     "title": "Grace in the Golden Years",
@@ -19211,7 +19211,7 @@
   },
   {
     "id": "day-184",
-    "date": "2027-05-25",
+    "date": "2027-05-24",
     "book": "kids",
     "week": 27,
     "title": "God's Great Promise",
@@ -19316,7 +19316,7 @@
   },
   {
     "id": "day-185",
-    "date": "2027-05-26",
+    "date": "2027-05-25",
     "book": "young-adults",
     "week": 27,
     "title": "Identity in Christ",
@@ -19421,7 +19421,7 @@
   },
   {
     "id": "day-186",
-    "date": "2027-05-27",
+    "date": "2027-05-26",
     "book": "women",
     "week": 27,
     "title": "Strength in Stillness",
@@ -19526,7 +19526,7 @@
   },
   {
     "id": "day-187",
-    "date": "2027-05-28",
+    "date": "2027-05-27",
     "book": "men",
     "week": 27,
     "title": "Courage in the Face of Fear",
@@ -19631,7 +19631,7 @@
   },
   {
     "id": "day-188",
-    "date": "2027-05-29",
+    "date": "2027-05-28",
     "book": "couples",
     "week": 27,
     "title": "Guarding the Heart",
@@ -19736,7 +19736,7 @@
   },
   {
     "id": "day-189",
-    "date": "2027-05-30",
+    "date": "2027-05-29",
     "book": "beginners",
     "week": 27,
     "title": "The Power of Prayer",
@@ -19841,7 +19841,7 @@
   },
   {
     "id": "day-190",
-    "date": "2027-05-31",
+    "date": "2027-05-30",
     "book": "seniors",
     "week": 28,
     "title": "Steadfast Faith Through Seasons",
@@ -19946,7 +19946,7 @@
   },
   {
     "id": "day-191",
-    "date": "2027-06-01",
+    "date": "2027-05-31",
     "book": "kids",
     "week": 28,
     "title": "Jesus Loves Me",
@@ -20051,7 +20051,7 @@
   },
   {
     "id": "day-192",
-    "date": "2027-06-02",
+    "date": "2027-06-01",
     "book": "young-adults",
     "week": 28,
     "title": "The Power of Forgiveness",
@@ -20156,7 +20156,7 @@
   },
   {
     "id": "day-193",
-    "date": "2027-06-03",
+    "date": "2027-06-02",
     "book": "women",
     "week": 28,
     "title": "Courageous Compassion",
@@ -20261,7 +20261,7 @@
   },
   {
     "id": "day-194",
-    "date": "2027-06-04",
+    "date": "2027-06-03",
     "book": "men",
     "week": 28,
     "title": "Integrity at Work",
@@ -20366,7 +20366,7 @@
   },
   {
     "id": "day-195",
-    "date": "2027-06-05",
+    "date": "2027-06-04",
     "book": "couples",
     "week": 28,
     "title": "Speaking Truth in Love",
@@ -20471,7 +20471,7 @@
   },
   {
     "id": "day-196",
-    "date": "2027-06-06",
+    "date": "2027-06-05",
     "book": "beginners",
     "week": 28,
     "title": "God’s Faithful Promise",
@@ -20576,7 +20576,7 @@
   },
   {
     "id": "day-197",
-    "date": "2027-06-07",
+    "date": "2027-06-06",
     "book": "seniors",
     "week": 29,
     "title": "Hope That Anchors the Soul",
@@ -20681,7 +20681,7 @@
   },
   {
     "id": "day-198",
-    "date": "2027-06-08",
+    "date": "2027-06-07",
     "book": "kids",
     "week": 29,
     "title": "Brave Like Daniel",
@@ -20786,7 +20786,7 @@
   },
   {
     "id": "day-199",
-    "date": "2027-06-09",
+    "date": "2027-06-08",
     "book": "young-adults",
     "week": 29,
     "title": "Identity in Christ",
@@ -20891,7 +20891,7 @@
   },
   {
     "id": "day-200",
-    "date": "2027-06-10",
+    "date": "2027-06-09",
     "book": "women",
     "week": 29,
     "title": "Rooted in Hope",
@@ -20996,7 +20996,7 @@
   },
   {
     "id": "day-201",
-    "date": "2027-06-11",
+    "date": "2027-06-10",
     "book": "men",
     "week": 29,
     "title": "Fatherhood and Legacy",
@@ -21101,7 +21101,7 @@
   },
   {
     "id": "day-202",
-    "date": "2027-06-12",
+    "date": "2027-06-11",
     "book": "couples",
     "week": 29,
     "title": "Building on the Rock",
@@ -21206,7 +21206,7 @@
   },
   {
     "id": "day-203",
-    "date": "2027-06-13",
+    "date": "2027-06-12",
     "book": "beginners",
     "week": 29,
     "title": "Walking in Love",
@@ -21311,7 +21311,7 @@
   },
   {
     "id": "day-204",
-    "date": "2027-06-14",
+    "date": "2027-06-13",
     "book": "seniors",
     "week": 30,
     "title": "The Gift of Peace",
@@ -21416,7 +21416,7 @@
   },
   {
     "id": "day-205",
-    "date": "2027-06-15",
+    "date": "2027-06-14",
     "book": "kids",
     "week": 30,
     "title": "Sharing Is Caring",
@@ -21521,7 +21521,7 @@
   },
   {
     "id": "day-206",
-    "date": "2027-06-16",
+    "date": "2027-06-15",
     "book": "young-adults",
     "week": 30,
     "title": "Living Generously",
@@ -21626,7 +21626,7 @@
   },
   {
     "id": "day-207",
-    "date": "2027-06-17",
+    "date": "2027-06-16",
     "book": "women",
     "week": 30,
     "title": "Graceful Boundaries",
@@ -21731,7 +21731,7 @@
   },
   {
     "id": "day-208",
-    "date": "2027-06-18",
+    "date": "2027-06-17",
     "book": "men",
     "week": 30,
     "title": "Leading with Love",
@@ -21836,7 +21836,7 @@
   },
   {
     "id": "day-209",
-    "date": "2027-06-19",
+    "date": "2027-06-18",
     "book": "couples",
     "week": 30,
     "title": "Finances as Faith",
@@ -21941,7 +21941,7 @@
   },
   {
     "id": "day-210",
-    "date": "2027-06-20",
+    "date": "2027-06-19",
     "book": "beginners",
     "week": 30,
     "title": "The Gift of the Holy Spirit",
@@ -22046,7 +22046,7 @@
   },
   {
     "id": "day-211",
-    "date": "2027-06-21",
+    "date": "2027-06-20",
     "book": "seniors",
     "week": 31,
     "title": "Strength for the Journey",
@@ -22151,7 +22151,7 @@
   },
   {
     "id": "day-212",
-    "date": "2027-06-22",
+    "date": "2027-06-21",
     "book": "kids",
     "week": 31,
     "title": "God's Amazing Creation",
@@ -22256,7 +22256,7 @@
   },
   {
     "id": "day-213",
-    "date": "2027-06-23",
+    "date": "2027-06-22",
     "book": "young-adults",
     "week": 31,
     "title": "Overcoming Anxiety with Prayer",
@@ -22361,7 +22361,7 @@
   },
   {
     "id": "day-214",
-    "date": "2027-06-24",
+    "date": "2027-06-23",
     "book": "women",
     "week": 31,
     "title": "Joyful Service",
@@ -22466,7 +22466,7 @@
   },
   {
     "id": "day-215",
-    "date": "2027-06-25",
+    "date": "2027-06-24",
     "book": "men",
     "week": 31,
     "title": "Overcoming Temptation",
@@ -22571,7 +22571,7 @@
   },
   {
     "id": "day-216",
-    "date": "2027-06-26",
+    "date": "2027-06-25",
     "book": "couples",
     "week": 31,
     "title": "Joyful Service Together",
@@ -22676,7 +22676,7 @@
   },
   {
     "id": "day-217",
-    "date": "2027-06-27",
+    "date": "2027-06-26",
     "book": "beginners",
     "week": 31,
     "title": "Living a Life of Gratitude",
@@ -22781,7 +22781,7 @@
   },
   {
     "id": "day-218",
-    "date": "2027-06-28",
+    "date": "2027-06-27",
     "book": "seniors",
     "week": 32,
     "title": "Living in Joyful Gratitude",
@@ -22886,7 +22886,7 @@
   },
   {
     "id": "day-219",
-    "date": "2027-06-29",
+    "date": "2027-06-28",
     "book": "kids",
     "week": 32,
     "title": "Prayer Power",
@@ -22991,7 +22991,7 @@
   },
   {
     "id": "day-220",
-    "date": "2027-06-30",
+    "date": "2027-06-29",
     "book": "young-adults",
     "week": 32,
     "title": "The Call to Community",
@@ -23096,7 +23096,7 @@
   },
   {
     "id": "day-221",
-    "date": "2027-07-01",
+    "date": "2027-06-30",
     "book": "women",
     "week": 32,
     "title": "Faithful Friendships",
@@ -23201,7 +23201,7 @@
   },
   {
     "id": "day-222",
-    "date": "2027-07-02",
+    "date": "2027-07-01",
     "book": "men",
     "week": 32,
     "title": "The Power of Prayer",
@@ -23306,7 +23306,7 @@
   },
   {
     "id": "day-223",
-    "date": "2027-07-03",
+    "date": "2027-07-02",
     "book": "couples",
     "week": 32,
     "title": "Intimacy in Prayer",
@@ -23411,7 +23411,7 @@
   },
   {
     "id": "day-224",
-    "date": "2027-07-04",
+    "date": "2027-07-03",
     "book": "beginners",
     "week": 32,
     "title": "God’s Guidance in Decision‑Making",
@@ -23516,7 +23516,7 @@
   },
   {
     "id": "day-225",
-    "date": "2027-07-05",
+    "date": "2027-07-04",
     "book": "seniors",
     "week": 33,
     "title": "Trusting God’s Timing",
@@ -23621,7 +23621,7 @@
   },
   {
     "id": "day-226",
-    "date": "2027-07-06",
+    "date": "2027-07-05",
     "book": "kids",
     "week": 33,
     "title": "The Good Shepherd",
@@ -23726,7 +23726,7 @@
   },
   {
     "id": "day-227",
-    "date": "2027-07-07",
+    "date": "2027-07-06",
     "book": "young-adults",
     "week": 33,
     "title": "Truth in a Post‑Truth World",
@@ -23831,7 +23831,7 @@
   },
   {
     "id": "day-228",
-    "date": "2027-07-08",
+    "date": "2027-07-07",
     "book": "women",
     "week": 33,
     "title": "Renewed Identity",
@@ -23936,7 +23936,7 @@
   },
   {
     "id": "day-229",
-    "date": "2027-07-09",
+    "date": "2027-07-08",
     "book": "men",
     "week": 33,
     "title": "Living with Purpose",
@@ -24041,7 +24041,7 @@
   },
   {
     "id": "day-230",
-    "date": "2027-07-10",
+    "date": "2027-07-09",
     "book": "couples",
     "week": 33,
     "title": "Celebrating Differences",
@@ -24146,7 +24146,7 @@
   },
   {
     "id": "day-231",
-    "date": "2027-07-11",
+    "date": "2027-07-10",
     "book": "beginners",
     "week": 33,
     "title": "The Armor of God",
@@ -24251,7 +24251,7 @@
   },
   {
     "id": "day-232",
-    "date": "2027-07-12",
+    "date": "2027-07-11",
     "book": "seniors",
     "week": 34,
     "title": "The Power of Prayer",
@@ -24356,7 +24356,7 @@
   },
   {
     "id": "day-233",
-    "date": "2027-07-13",
+    "date": "2027-07-12",
     "book": "kids",
     "week": 34,
     "title": "Fruit of the Spirit",
@@ -24461,7 +24461,7 @@
   },
   {
     "id": "day-234",
-    "date": "2027-07-14",
+    "date": "2027-07-13",
     "book": "young-adults",
     "week": 34,
     "title": "Purpose‑Driven Productivity",
@@ -24566,7 +24566,7 @@
   },
   {
     "id": "day-235",
-    "date": "2027-07-15",
+    "date": "2027-07-14",
     "book": "women",
     "week": 34,
     "title": "Peaceful Presence",
@@ -24671,7 +24671,7 @@
   },
   {
     "id": "day-236",
-    "date": "2027-07-16",
+    "date": "2027-07-15",
     "book": "men",
     "week": 34,
     "title": "Standing Firm in Truth",
@@ -24776,7 +24776,7 @@
   },
   {
     "id": "day-237",
-    "date": "2027-07-17",
+    "date": "2027-07-16",
     "book": "couples",
     "week": 34,
     "title": "Managing Finances God's Way",
@@ -24881,7 +24881,7 @@
   },
   {
     "id": "day-238",
-    "date": "2027-07-18",
+    "date": "2027-07-17",
     "book": "beginners",
     "week": 34,
     "title": "Grace That Changes Hearts",
@@ -24986,7 +24986,7 @@
   },
   {
     "id": "day-239",
-    "date": "2027-07-19",
+    "date": "2027-07-18",
     "book": "seniors",
     "week": 35,
     "title": "Walking in Love",
@@ -25091,7 +25091,7 @@
   },
   {
     "id": "day-240",
-    "date": "2027-07-20",
+    "date": "2027-07-19",
     "book": "kids",
     "week": 35,
     "title": "Walking with Jesus",
@@ -25196,7 +25196,7 @@
   },
   {
     "id": "day-241",
-    "date": "2027-07-21",
+    "date": "2027-07-20",
     "book": "young-adults",
     "week": 35,
     "title": "Embracing Spiritual Disciplines",
@@ -25301,7 +25301,7 @@
   },
   {
     "id": "day-242",
-    "date": "2027-07-22",
+    "date": "2027-07-21",
     "book": "women",
     "week": 35,
     "title": "Bold Prayer",
@@ -25406,7 +25406,7 @@
   },
   {
     "id": "day-243",
-    "date": "2027-07-23",
+    "date": "2027-07-22",
     "book": "men",
     "week": 35,
     "title": "The Gift of Brotherhood",
@@ -25511,7 +25511,7 @@
   },
   {
     "id": "day-244",
-    "date": "2027-07-24",
+    "date": "2027-07-23",
     "book": "couples",
     "week": 35,
     "title": "Hospitality at Home",
@@ -25616,7 +25616,7 @@
   },
   {
     "id": "day-245",
-    "date": "2027-07-25",
+    "date": "2027-07-24",
     "book": "beginners",
     "week": 35,
     "title": "Bearing Fruit for the Kingdom",
@@ -25721,7 +25721,7 @@
   },
   {
     "id": "day-246",
-    "date": "2027-07-26",
+    "date": "2027-07-25",
     "book": "seniors",
     "week": 36,
     "title": "Wisdom for Every Day",
@@ -25826,7 +25826,7 @@
   },
   {
     "id": "day-247",
-    "date": "2027-07-27",
+    "date": "2027-07-26",
     "book": "kids",
     "week": 36,
     "title": "Forgiveness",
@@ -25931,7 +25931,7 @@
   },
   {
     "id": "day-248",
-    "date": "2027-07-28",
+    "date": "2027-07-27",
     "book": "young-adults",
     "week": 36,
     "title": "Navigating Relationships with Wisdom",
@@ -26036,7 +26036,7 @@
   },
   {
     "id": "day-249",
-    "date": "2027-07-29",
+    "date": "2027-07-28",
     "book": "women",
     "week": 36,
     "title": "Abundant Generosity",
@@ -26141,7 +26141,7 @@
   },
   {
     "id": "day-250",
-    "date": "2027-07-30",
+    "date": "2027-07-29",
     "book": "men",
     "week": 36,
     "title": "Managing Finances God's Way",
@@ -26246,7 +26246,7 @@
   },
   {
     "id": "day-251",
-    "date": "2027-07-31",
+    "date": "2027-07-30",
     "book": "couples",
     "week": 36,
     "title": "Patience in Trials",
@@ -26351,7 +26351,7 @@
   },
   {
     "id": "day-252",
-    "date": "2027-08-01",
+    "date": "2027-07-31",
     "book": "beginners",
     "week": 36,
     "title": "The Joy of Forgiveness",
@@ -26456,7 +26456,7 @@
   },
   {
     "id": "day-253",
-    "date": "2027-08-02",
+    "date": "2027-08-01",
     "book": "seniors",
     "week": 37,
     "title": "Resting in God’s Presence",
@@ -26561,7 +26561,7 @@
   },
   {
     "id": "day-254",
-    "date": "2027-08-03",
+    "date": "2027-08-02",
     "book": "kids",
     "week": 37,
     "title": "Be a Light",
@@ -26666,7 +26666,7 @@
   },
   {
     "id": "day-255",
-    "date": "2027-08-04",
+    "date": "2027-08-03",
     "book": "young-adults",
     "week": 37,
     "title": "Hope in the Midst of Suffering",
@@ -26771,7 +26771,7 @@
   },
   {
     "id": "day-256",
-    "date": "2027-08-05",
+    "date": "2027-08-04",
     "book": "women",
     "week": 37,
     "title": "Healing Hearts",
@@ -26876,7 +26876,7 @@
   },
   {
     "id": "day-257",
-    "date": "2027-08-06",
+    "date": "2027-08-05",
     "book": "men",
     "week": 37,
     "title": "Healing from Past Hurts",
@@ -26981,7 +26981,7 @@
   },
   {
     "id": "day-258",
-    "date": "2027-08-07",
+    "date": "2027-08-06",
     "book": "couples",
     "week": 37,
     "title": "Cultivating a Heart of Praise",
@@ -27086,7 +27086,7 @@
   },
   {
     "id": "day-259",
-    "date": "2027-08-08",
+    "date": "2027-08-07",
     "book": "beginners",
     "week": 37,
     "title": "God’s Promise of Rest",
@@ -27191,7 +27191,7 @@
   },
   {
     "id": "day-260",
-    "date": "2027-08-09",
+    "date": "2027-08-08",
     "book": "seniors",
     "week": 38,
     "title": "Sharing the Good News",
@@ -27296,7 +27296,7 @@
   },
   {
     "id": "day-261",
-    "date": "2027-08-10",
+    "date": "2027-08-09",
     "book": "kids",
     "week": 38,
     "title": "God's Big Family",
@@ -27401,7 +27401,7 @@
   },
   {
     "id": "day-262",
-    "date": "2027-08-11",
+    "date": "2027-08-10",
     "book": "young-adults",
     "week": 38,
     "title": "Stepping Out of the Comfort Zone",
@@ -27506,7 +27506,7 @@
   },
   {
     "id": "day-263",
-    "date": "2027-08-12",
+    "date": "2027-08-11",
     "book": "women",
     "week": 38,
     "title": "Purposeful Planning",
@@ -27611,7 +27611,7 @@
   },
   {
     "id": "day-264",
-    "date": "2027-08-13",
+    "date": "2027-08-12",
     "book": "men",
     "week": 38,
     "title": "Walking in Humility",
@@ -27716,7 +27716,7 @@
   },
   {
     "id": "day-265",
-    "date": "2027-08-14",
+    "date": "2027-08-13",
     "book": "couples",
     "week": 38,
     "title": "Living with Integrity",
@@ -27821,7 +27821,7 @@
   },
   {
     "id": "day-266",
-    "date": "2027-08-15",
+    "date": "2027-08-14",
     "book": "beginners",
     "week": 38,
     "title": "Being Light in a Dark World",
@@ -27926,7 +27926,7 @@
   },
   {
     "id": "day-267",
-    "date": "2027-08-16",
+    "date": "2027-08-15",
     "book": "seniors",
     "week": 39,
     "title": "Eternal Hope in Christ",
@@ -28031,7 +28031,7 @@
   },
   {
     "id": "day-268",
-    "date": "2027-08-17",
+    "date": "2027-08-16",
     "book": "kids",
     "week": 39,
     "title": "Heavenly Treasure",
@@ -28136,7 +28136,7 @@
   },
   {
     "id": "day-269",
-    "date": "2027-08-18",
+    "date": "2027-08-17",
     "book": "young-adults",
     "week": 39,
     "title": "Living with Eternal Perspective",
@@ -28241,7 +28241,7 @@
   },
   {
     "id": "day-270",
-    "date": "2027-08-19",
+    "date": "2027-08-18",
     "book": "women",
     "week": 39,
     "title": "Victorious Trust",
@@ -28346,7 +28346,7 @@
   },
   {
     "id": "day-271",
-    "date": "2027-08-20",
+    "date": "2027-08-19",
     "book": "men",
     "week": 39,
     "title": "The Warrior’s Heart",
@@ -28451,7 +28451,7 @@
   },
   {
     "id": "day-272",
-    "date": "2027-08-21",
+    "date": "2027-08-20",
     "book": "couples",
     "week": 39,
     "title": "Hope for the Future",
@@ -28556,7 +28556,7 @@
   },
   {
     "id": "day-273",
-    "date": "2027-08-22",
+    "date": "2027-08-21",
     "book": "beginners",
     "week": 39,
     "title": "Hope for the Future",
@@ -28661,7 +28661,7 @@
   },
   {
     "id": "day-274",
-    "date": "2027-08-23",
+    "date": "2027-08-22",
     "book": "seniors",
     "week": 40,
     "title": "Grace That Sustains",
@@ -28766,7 +28766,7 @@
   },
   {
     "id": "day-275",
-    "date": "2027-08-24",
+    "date": "2027-08-23",
     "book": "kids",
     "week": 40,
     "title": "The Good Shepherd",
@@ -28871,7 +28871,7 @@
   },
   {
     "id": "day-276",
-    "date": "2027-08-25",
+    "date": "2027-08-24",
     "book": "young-adults",
     "week": 40,
     "title": "Living With Purpose",
@@ -28976,7 +28976,7 @@
   },
   {
     "id": "day-277",
-    "date": "2027-08-26",
+    "date": "2027-08-25",
     "book": "women",
     "week": 40,
     "title": "Walking in Divine Wisdom",
@@ -29081,7 +29081,7 @@
   },
   {
     "id": "day-278",
-    "date": "2027-08-27",
+    "date": "2027-08-26",
     "book": "men",
     "week": 40,
     "title": "Courage in the Face of Fear",
@@ -29186,7 +29186,7 @@
   },
   {
     "id": "day-279",
-    "date": "2027-08-28",
+    "date": "2027-08-27",
     "book": "couples",
     "week": 40,
     "title": "Graceful Forgiveness",
@@ -29291,7 +29291,7 @@
   },
   {
     "id": "day-280",
-    "date": "2027-08-29",
+    "date": "2027-08-28",
     "book": "beginners",
     "week": 40,
     "title": "The Power of Prayer",
@@ -29396,7 +29396,7 @@
   },
   {
     "id": "day-281",
-    "date": "2027-08-30",
+    "date": "2027-08-29",
     "book": "seniors",
     "week": 41,
     "title": "The Joy of Sabbath Rest",
@@ -29501,7 +29501,7 @@
   },
   {
     "id": "day-282",
-    "date": "2027-08-31",
+    "date": "2027-08-30",
     "book": "kids",
     "week": 41,
     "title": "Mighty in Our Weakness",
@@ -29606,7 +29606,7 @@
   },
   {
     "id": "day-283",
-    "date": "2027-09-01",
+    "date": "2027-08-31",
     "book": "young-adults",
     "week": 41,
     "title": "Friendship & Accountability",
@@ -29711,7 +29711,7 @@
   },
   {
     "id": "day-284",
-    "date": "2027-09-02",
+    "date": "2027-09-01",
     "book": "women",
     "week": 41,
     "title": "Resting in God’s Presence",
@@ -29816,7 +29816,7 @@
   },
   {
     "id": "day-285",
-    "date": "2027-09-03",
+    "date": "2027-09-02",
     "book": "men",
     "week": 41,
     "title": "Guarding the Heart",
@@ -29921,7 +29921,7 @@
   },
   {
     "id": "day-286",
-    "date": "2027-09-04",
+    "date": "2027-09-03",
     "book": "couples",
     "week": 41,
     "title": "Joyful Unity",
@@ -30026,7 +30026,7 @@
   },
   {
     "id": "day-287",
-    "date": "2027-09-05",
+    "date": "2027-09-04",
     "book": "beginners",
     "week": 41,
     "title": "The Power of Prayer",
@@ -30131,7 +30131,7 @@
   },
   {
     "id": "day-288",
-    "date": "2027-09-06",
+    "date": "2027-09-05",
     "book": "seniors",
     "week": 42,
     "title": "Legacy of Faith",
@@ -30236,7 +30236,7 @@
   },
   {
     "id": "day-289",
-    "date": "2027-09-07",
+    "date": "2027-09-06",
     "book": "kids",
     "week": 42,
     "title": "The Power of Prayer",
@@ -30341,7 +30341,7 @@
   },
   {
     "id": "day-290",
-    "date": "2027-09-08",
+    "date": "2027-09-07",
     "book": "young-adults",
     "week": 42,
     "title": "Navigating Doubt",
@@ -30446,7 +30446,7 @@
   },
   {
     "id": "day-291",
-    "date": "2027-09-09",
+    "date": "2027-09-08",
     "book": "women",
     "week": 42,
     "title": "Radiant Joy in Every Season",
@@ -30551,7 +30551,7 @@
   },
   {
     "id": "day-292",
-    "date": "2027-09-10",
+    "date": "2027-09-09",
     "book": "men",
     "week": 42,
     "title": "Strength Through Suffering",
@@ -30656,7 +30656,7 @@
   },
   {
     "id": "day-293",
-    "date": "2027-09-11",
+    "date": "2027-09-10",
     "book": "couples",
     "week": 42,
     "title": "Sacrificial Love",
@@ -30761,7 +30761,7 @@
   },
   {
     "id": "day-294",
-    "date": "2027-09-12",
+    "date": "2027-09-11",
     "book": "beginners",
     "week": 42,
     "title": "God's Promises",
@@ -30866,7 +30866,7 @@
   },
   {
     "id": "day-295",
-    "date": "2027-09-13",
+    "date": "2027-09-12",
     "book": "seniors",
     "week": 43,
     "title": "Hope in the Morning",
@@ -30971,7 +30971,7 @@
   },
   {
     "id": "day-296",
-    "date": "2027-09-14",
+    "date": "2027-09-13",
     "book": "kids",
     "week": 43,
     "title": "Sharing God's Love",
@@ -31076,7 +31076,7 @@
   },
   {
     "id": "day-297",
-    "date": "2027-09-15",
+    "date": "2027-09-14",
     "book": "young-adults",
     "week": 43,
     "title": "Stewardship of Time",
@@ -31181,7 +31181,7 @@
   },
   {
     "id": "day-298",
-    "date": "2027-09-16",
+    "date": "2027-09-15",
     "book": "women",
     "week": 43,
     "title": "Courage to Speak Truth",
@@ -31286,7 +31286,7 @@
   },
   {
     "id": "day-299",
-    "date": "2027-09-17",
+    "date": "2027-09-16",
     "book": "men",
     "week": 43,
     "title": "Guarding the Heart",
@@ -31391,7 +31391,7 @@
   },
   {
     "id": "day-300",
-    "date": "2027-09-18",
+    "date": "2027-09-17",
     "book": "couples",
     "week": 43,
     "title": "Peaceful Communication",
@@ -31496,7 +31496,7 @@
   },
   {
     "id": "day-301",
-    "date": "2027-09-19",
+    "date": "2027-09-18",
     "book": "beginners",
     "week": 43,
     "title": "Living a Holy Life",
@@ -31601,7 +31601,7 @@
   },
   {
     "id": "day-302",
-    "date": "2027-09-20",
+    "date": "2027-09-19",
     "book": "seniors",
     "week": 44,
     "title": "Prayerful Hearts",
@@ -31706,7 +31706,7 @@
   },
   {
     "id": "day-303",
-    "date": "2027-09-21",
+    "date": "2027-09-20",
     "book": "kids",
     "week": 44,
     "title": "Walking in Faith",
@@ -31811,7 +31811,7 @@
   },
   {
     "id": "day-304",
-    "date": "2027-09-22",
+    "date": "2027-09-21",
     "book": "young-adults",
     "week": 44,
     "title": "Guarding the Heart",
@@ -31916,7 +31916,7 @@
   },
   {
     "id": "day-305",
-    "date": "2027-09-23",
+    "date": "2027-09-22",
     "book": "women",
     "week": 44,
     "title": "Living with Eternal Hope",
@@ -32021,7 +32021,7 @@
   },
   {
     "id": "day-306",
-    "date": "2027-09-24",
+    "date": "2027-09-23",
     "book": "men",
     "week": 44,
     "title": "Walking in Wisdom",
@@ -32126,7 +32126,7 @@
   },
   {
     "id": "day-307",
-    "date": "2027-09-25",
+    "date": "2027-09-24",
     "book": "couples",
     "week": 44,
     "title": "Fruitful Partnership",
@@ -32231,7 +32231,7 @@
   },
   {
     "id": "day-308",
-    "date": "2027-09-26",
+    "date": "2027-09-25",
     "book": "beginners",
     "week": 44,
     "title": "The Fruit of the Spirit",
@@ -32336,7 +32336,7 @@
   },
   {
     "id": "day-309",
-    "date": "2027-09-27",
+    "date": "2027-09-26",
     "book": "seniors",
     "week": 45,
     "title": "Walking in Wisdom",
@@ -32441,7 +32441,7 @@
   },
   {
     "id": "day-310",
-    "date": "2027-09-28",
+    "date": "2027-09-27",
     "book": "kids",
     "week": 45,
     "title": "The Fruitful Life",
@@ -32546,7 +32546,7 @@
   },
   {
     "id": "day-311",
-    "date": "2027-09-29",
+    "date": "2027-09-28",
     "book": "young-adults",
     "week": 45,
     "title": "Digital Distractions",
@@ -32651,7 +32651,7 @@
   },
   {
     "id": "day-312",
-    "date": "2027-09-30",
+    "date": "2027-09-29",
     "book": "women",
     "week": 45,
     "title": "Grace That Transforms",
@@ -32756,7 +32756,7 @@
   },
   {
     "id": "day-313",
-    "date": "2027-10-01",
+    "date": "2027-09-30",
     "book": "men",
     "week": 45,
     "title": "The Power of Prayerful Persistence",
@@ -32861,7 +32861,7 @@
   },
   {
     "id": "day-314",
-    "date": "2027-10-02",
+    "date": "2027-10-01",
     "book": "couples",
     "week": 45,
     "title": "Hopeful Futures",
@@ -32966,7 +32966,7 @@
   },
   {
     "id": "day-315",
-    "date": "2027-10-03",
+    "date": "2027-10-02",
     "book": "beginners",
     "week": 45,
     "title": "Serving Others",
@@ -33071,7 +33071,7 @@
   },
   {
     "id": "day-316",
-    "date": "2027-10-04",
+    "date": "2027-10-03",
     "book": "seniors",
     "week": 46,
     "title": "Peace Beyond Understanding",
@@ -33176,7 +33176,7 @@
   },
   {
     "id": "day-317",
-    "date": "2027-10-05",
+    "date": "2027-10-04",
     "book": "kids",
     "week": 46,
     "title": "God's Amazing Creation",
@@ -33281,7 +33281,7 @@
   },
   {
     "id": "day-318",
-    "date": "2027-10-06",
+    "date": "2027-10-05",
     "book": "young-adults",
     "week": 46,
     "title": "Serving Beyond Comfort",
@@ -33386,7 +33386,7 @@
   },
   {
     "id": "day-319",
-    "date": "2027-10-07",
+    "date": "2027-10-06",
     "book": "women",
     "week": 46,
     "title": "Heart of a Servant",
@@ -33491,7 +33491,7 @@
   },
   {
     "id": "day-320",
-    "date": "2027-10-08",
+    "date": "2027-10-07",
     "book": "men",
     "week": 46,
     "title": "Building a Legacy of Faith",
@@ -33596,7 +33596,7 @@
   },
   {
     "id": "day-321",
-    "date": "2027-10-09",
+    "date": "2027-10-08",
     "book": "couples",
     "week": 46,
     "title": "Steadfast Commitment",
@@ -33701,7 +33701,7 @@
   },
   {
     "id": "day-322",
-    "date": "2027-10-10",
+    "date": "2027-10-09",
     "book": "beginners",
     "week": 46,
     "title": "God's Unfailing Love",
@@ -33806,7 +33806,7 @@
   },
   {
     "id": "day-323",
-    "date": "2027-10-11",
+    "date": "2027-10-10",
     "book": "seniors",
     "week": 47,
     "title": "The Good Shepherd",
@@ -33911,7 +33911,7 @@
   },
   {
     "id": "day-324",
-    "date": "2027-10-12",
+    "date": "2027-10-11",
     "book": "kids",
     "week": 47,
     "title": "Being a Light",
@@ -34016,7 +34016,7 @@
   },
   {
     "id": "day-325",
-    "date": "2027-10-13",
+    "date": "2027-10-12",
     "book": "young-adults",
     "week": 47,
     "title": "Identity in Christ",
@@ -34121,7 +34121,7 @@
   },
   {
     "id": "day-326",
-    "date": "2027-10-14",
+    "date": "2027-10-13",
     "book": "women",
     "week": 47,
     "title": "Faithful in Small Things",
@@ -34226,7 +34226,7 @@
   },
   {
     "id": "day-327",
-    "date": "2027-10-15",
+    "date": "2027-10-14",
     "book": "men",
     "week": 47,
     "title": "Overcoming Temptation",
@@ -34331,7 +34331,7 @@
   },
   {
     "id": "day-328",
-    "date": "2027-10-16",
+    "date": "2027-10-15",
     "book": "couples",
     "week": 47,
     "title": "Generous Hospitality",
@@ -34436,7 +34436,7 @@
   },
   {
     "id": "day-329",
-    "date": "2027-10-17",
+    "date": "2027-10-16",
     "book": "beginners",
     "week": 47,
     "title": "Guarding Your Heart",
@@ -34541,7 +34541,7 @@
   },
   {
     "id": "day-330",
-    "date": "2027-10-18",
+    "date": "2027-10-17",
     "book": "seniors",
     "week": 48,
     "title": "Fruitful Seasons",
@@ -34646,7 +34646,7 @@
   },
   {
     "id": "day-331",
-    "date": "2027-10-19",
+    "date": "2027-10-18",
     "book": "kids",
     "week": 48,
     "title": "Forgiveness Freely Given",
@@ -34751,7 +34751,7 @@
   },
   {
     "id": "day-332",
-    "date": "2027-10-20",
+    "date": "2027-10-19",
     "book": "young-adults",
     "week": 48,
     "title": "Hope in Uncertainty",
@@ -34856,7 +34856,7 @@
   },
   {
     "id": "day-333",
-    "date": "2027-10-21",
+    "date": "2027-10-20",
     "book": "women",
     "week": 48,
     "title": "The Power of Prayerful Listening",
@@ -34961,7 +34961,7 @@
   },
   {
     "id": "day-334",
-    "date": "2027-10-22",
+    "date": "2027-10-21",
     "book": "men",
     "week": 48,
     "title": "The Joy of Sabbath Rest",
@@ -35066,7 +35066,7 @@
   },
   {
     "id": "day-335",
-    "date": "2027-10-23",
+    "date": "2027-10-22",
     "book": "couples",
     "week": 48,
     "title": "Prayerful Intimacy",
@@ -35171,7 +35171,7 @@
   },
   {
     "id": "day-336",
-    "date": "2027-10-24",
+    "date": "2027-10-23",
     "book": "beginners",
     "week": 48,
     "title": "Hope in Difficult Times",
@@ -35276,7 +35276,7 @@
   },
   {
     "id": "day-337",
-    "date": "2027-10-25",
+    "date": "2027-10-24",
     "book": "seniors",
     "week": 49,
     "title": "God’s Faithfulness",
@@ -35381,7 +35381,7 @@
   },
   {
     "id": "day-338",
-    "date": "2027-10-26",
+    "date": "2027-10-25",
     "book": "kids",
     "week": 49,
     "title": "Courage Like David",
@@ -35486,7 +35486,7 @@
   },
   {
     "id": "day-339",
-    "date": "2027-10-27",
+    "date": "2027-10-26",
     "book": "young-adults",
     "week": 49,
     "title": "Living Generously",
@@ -35591,7 +35591,7 @@
   },
   {
     "id": "day-340",
-    "date": "2027-10-28",
+    "date": "2027-10-27",
     "book": "women",
     "week": 49,
     "title": "Walking in Freedom",
@@ -35696,7 +35696,7 @@
   },
   {
     "id": "day-341",
-    "date": "2027-10-29",
+    "date": "2027-10-28",
     "book": "men",
     "week": 49,
     "title": "Living Out the Great Commission",
@@ -35801,7 +35801,7 @@
   },
   {
     "id": "day-342",
-    "date": "2027-10-30",
+    "date": "2027-10-29",
     "book": "couples",
     "week": 49,
     "title": "Spiritual Rest",
@@ -35906,7 +35906,7 @@
   },
   {
     "id": "day-343",
-    "date": "2027-10-31",
+    "date": "2027-10-30",
     "book": "beginners",
     "week": 49,
     "title": "The Great Commission",
@@ -36011,7 +36011,7 @@
   },
   {
     "id": "day-344",
-    "date": "2027-11-01",
+    "date": "2027-10-31",
     "book": "seniors",
     "week": 50,
     "title": "Celebrating Life’s Milestones",
@@ -36116,7 +36116,7 @@
   },
   {
     "id": "day-345",
-    "date": "2027-11-02",
+    "date": "2027-11-01",
     "book": "kids",
     "week": 50,
     "title": "The Great Celebration",
@@ -36221,7 +36221,7 @@
   },
   {
     "id": "day-346",
-    "date": "2027-11-03",
+    "date": "2027-11-02",
     "book": "young-adults",
     "week": 50,
     "title": "Prayer as Conversation",
@@ -36326,7 +36326,7 @@
   },
   {
     "id": "day-347",
-    "date": "2027-11-04",
+    "date": "2027-11-03",
     "book": "women",
     "week": 50,
     "title": "Cultivating a Thankful Heart",
@@ -36431,7 +36431,7 @@
   },
   {
     "id": "day-348",
-    "date": "2027-11-05",
+    "date": "2027-11-04",
     "book": "men",
     "week": 50,
     "title": "Faithful Finances",
@@ -36536,7 +36536,7 @@
   },
   {
     "id": "day-349",
-    "date": "2027-11-06",
+    "date": "2027-11-05",
     "book": "couples",
     "week": 50,
     "title": "Serving Side by Side",
@@ -36641,7 +36641,7 @@
   },
   {
     "id": "day-350",
-    "date": "2027-11-07",
+    "date": "2027-11-06",
     "book": "beginners",
     "week": 50,
     "title": "Living in Gratitude",
@@ -36746,7 +36746,7 @@
   },
   {
     "id": "day-351",
-    "date": "2027-11-08",
+    "date": "2027-11-07",
     "book": "seniors",
     "week": 51,
     "title": "Eternal Perspective",
@@ -36851,7 +36851,7 @@
   },
   {
     "id": "day-352",
-    "date": "2027-11-09",
+    "date": "2027-11-08",
     "book": "kids",
     "week": 51,
     "title": "Living with Hope",
@@ -36956,7 +36956,7 @@
   },
   {
     "id": "day-353",
-    "date": "2027-11-10",
+    "date": "2027-11-09",
     "book": "young-adults",
     "week": 51,
     "title": "Celebrating Community",
@@ -37061,7 +37061,7 @@
   },
   {
     "id": "day-354",
-    "date": "2027-11-11",
+    "date": "2027-11-10",
     "book": "women",
     "week": 51,
     "title": "Preparing for His Return",
@@ -37166,7 +37166,7 @@
   },
   {
     "id": "day-355",
-    "date": "2027-11-12",
+    "date": "2027-11-11",
     "book": "men",
     "week": 51,
     "title": "Preparing for the New Year",
@@ -37271,7 +37271,7 @@
   },
   {
     "id": "day-356",
-    "date": "2027-11-13",
+    "date": "2027-11-12",
     "book": "couples",
     "week": 51,
     "title": "Living Out Love",
@@ -37376,7 +37376,7 @@
   },
   {
     "id": "day-357",
-    "date": "2027-11-14",
+    "date": "2027-11-13",
     "book": "beginners",
     "week": 51,
     "title": "Eternal Perspective",
@@ -37481,7 +37481,7 @@
   },
   {
     "id": "day-358",
-    "date": "2027-11-15",
+    "date": "2027-11-14",
     "book": "seniors",
     "week": 52,
     "title": "A New Beginning",
@@ -37586,7 +37586,7 @@
   },
   {
     "id": "day-359",
-    "date": "2027-11-16",
+    "date": "2027-11-15",
     "book": "kids",
     "week": 52,
     "title": "A New Beginning",
@@ -37691,7 +37691,7 @@
   },
   {
     "id": "day-360",
-    "date": "2027-11-17",
+    "date": "2027-11-16",
     "book": "young-adults",
     "week": 52,
     "title": "Looking Ahead",
@@ -37796,7 +37796,7 @@
   },
   {
     "id": "day-361",
-    "date": "2027-11-18",
+    "date": "2027-11-17",
     "book": "women",
     "week": 52,
     "title": "Celebrating the New Year in Christ",
@@ -37901,7 +37901,7 @@
   },
   {
     "id": "day-362",
-    "date": "2027-11-19",
+    "date": "2027-11-18",
     "book": "men",
     "week": 52,
     "title": "Celebrating God’s Faithfulness",
@@ -38006,7 +38006,7 @@
   },
   {
     "id": "day-363",
-    "date": "2027-11-20",
+    "date": "2027-11-19",
     "book": "couples",
     "week": 52,
     "title": "Eternal Hope",
@@ -38111,7 +38111,7 @@
   },
   {
     "id": "day-364",
-    "date": "2027-11-21",
+    "date": "2027-11-20",
     "book": "beginners",
     "week": 52,
     "title": "Celebrating God’s Faithfulness",
@@ -38216,7 +38216,7 @@
   },
   {
     "id": "day-365",
-    "date": "2027-11-22",
+    "date": "2027-11-21",
     "book": "seniors",
     "week": 52,
     "title": "A Year of Faith: Reflect and Begin Again",

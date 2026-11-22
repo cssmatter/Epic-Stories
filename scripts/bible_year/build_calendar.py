@@ -25,7 +25,7 @@ def build():
     lessons = json.loads((DATA / 'lessons.json').read_text(encoding='utf-8'))
     lookup = {(x['book_id'].split('for-')[-1], x['week_number']): x for x in lessons}
     entries = []
-    start = dt.date(2026, 11, 23)
+    start = dt.date(2026, 11, 22)
     for day in range(365):
         book, week = BOOKS[day % 7], day // 7 + 1
         recap = day == 364 or (book, week) not in lookup

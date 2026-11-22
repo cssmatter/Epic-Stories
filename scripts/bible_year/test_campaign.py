@@ -10,7 +10,7 @@ class CampaignTests(unittest.TestCase):
         lessons=json.loads((ROOT/'data/bible-year/lessons.json').read_text(encoding='utf-8'))
         self.assertEqual(len(entries),365)
         for i,e in enumerate(entries):
-            self.assertEqual(e['date'],str(dt.date(2026,11,23)+dt.timedelta(days=i)))
+            self.assertEqual(e['date'],str(dt.date(2026,11,22)+dt.timedelta(days=i)))
             source=next(l for l in lessons if l['book_id']=='52-week-bible-study-for-'+e['book'] and l['week_number']==e['source_week'])
             self.assertEqual(e['scripture'],source['scripture'])
             for kind in ['short','long']:
