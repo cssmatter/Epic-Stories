@@ -43,7 +43,7 @@ async def render(entry,kind,out):
         try:
             for frame in range(round(total*30)):
                 await page.evaluate('t=>draw(t)',frame/30)
-                encoder.stdin.write(await page.screenshot(type='jpeg',quality=92))
+                encoder.stdin.write(base64.b64decode(await page.evaluate("c.toDataURL('image/jpeg',.92).split(',')[1]")))
                 if frame in (90,round(total*30)-45): await page.screenshot(path=str(folder/f'check-{frame}.png'))
                 if frame%900==0: print(kind,frame,'/',round(total*30),flush=True)
         finally:

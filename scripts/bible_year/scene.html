@@ -32,6 +32,6 @@ window.draw=t=>{ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#050505';ctx.fillRe
  }
  // Fine static halftone texture, as seen in the supplied reference.
  ctx.globalAlpha=.11;ctx.fillStyle='#000';for(let y=0;y<1280;y+=4)for(let x=0;x<720;x+=4)ctx.fillRect(x,y,1,1);ctx.globalAlpha=1;
- if(index===data.scenes.length-1){ctx.imageSmoothingEnabled=false;ctx.drawImage(imgs.ios,140,980,190,190);ctx.drawImage(imgs.android,390,980,190,190);ctx.imageSmoothingEnabled=true;text('iPhone / iPad',235,1200,18);text('Android',485,1200,18);}
+ if(index===data.scenes.length-1){ctx.imageSmoothingEnabled=false;ctx.drawImage(imgs.ios,140,980,190,190);ctx.drawImage(imgs.android,390,980,190,190);ctx.imageSmoothingEnabled=true;text('iPhone / iPad',235,1200,18);text('Android',485,1200,18);if(data.kind==='long'){ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#050505';ctx.fillRect(470,580,340,140);ctx.imageSmoothingEnabled=false;ctx.drawImage(imgs.ios,100,430,200,200);ctx.drawImage(imgs.android,980,430,200,200);text('iPhone / iPad',200,660,20);text('Android',1080,660,20);}}
 };
 </script>
