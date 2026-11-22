@@ -3,7 +3,7 @@
 const c=document.querySelector('canvas'),ctx=c.getContext('2d');
 const gold='#d5b865',mint='#80c9b3',white='#eee9df';
 const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>1-Math.pow(1-clamp(x),3);
-let data,imgs={};
+let data,imgs={};const tile=document.createElement('canvas');tile.width=tile.height=4;tile.getContext('2d').fillRect(0,0,1,1);const grain=ctx.createPattern(tile,'repeat');
 window.setup=async d=>{data=d;c.width=d.width;c.height=d.height;for(const [k,v] of Object.entries(d.images)){imgs[k]=new Image();imgs[k].src=v;await imgs[k].decode();}};
 function text(s,x,y,size,color=white,font='Arial',max=650){ctx.fillStyle=color;ctx.font=`${size}px ${font}`;ctx.textAlign='center';const words=s.split(' ');let line='',lines=[];for(const w of words){if(ctx.measureText(line+' '+w).width>max&&line){lines.push(line);line=w;}else line+=(line?' ':'')+w;}lines.push(line);lines.forEach((l,i)=>ctx.fillText(l,x,y+i*size*1.3));}
 function line(x1,y1,x2,y2,color=mint){ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
@@ -31,7 +31,7 @@ window.draw=t=>{ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#050505';ctx.fillRe
 
  }
  // Fine static halftone texture, as seen in the supplied reference.
- ctx.globalAlpha=.11;ctx.fillStyle='#000';for(let y=0;y<1280;y+=4)for(let x=0;x<720;x+=4)ctx.fillRect(x,y,1,1);ctx.globalAlpha=1;
+ ctx.globalAlpha=.11;ctx.fillStyle=grain;ctx.fillRect(0,0,720,1280);ctx.globalAlpha=1;
  if(index===data.scenes.length-1){ctx.imageSmoothingEnabled=false;ctx.drawImage(imgs.ios,140,980,190,190);ctx.drawImage(imgs.android,390,980,190,190);ctx.imageSmoothingEnabled=true;text('iPhone / iPad',235,1200,18);text('Android',485,1200,18);if(data.kind==='long'){ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#050505';ctx.fillRect(470,580,340,140);ctx.imageSmoothingEnabled=false;ctx.drawImage(imgs.ios,100,430,200,200);ctx.drawImage(imgs.android,980,430,200,200);text('iPhone / iPad',200,660,20);text('Android',1080,660,20);}}
 };
 </script>
