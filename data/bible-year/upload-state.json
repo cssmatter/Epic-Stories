@@ -1,7 +1,9 @@
 {
   "day-001": {
     "youtube_short": {
-      "pending": true
+      "pending": false,
+      "id": "pGMYiRp8_os",
+      "url": "https://youtu.be/pGMYiRp8_os"
     }
   }
 }
