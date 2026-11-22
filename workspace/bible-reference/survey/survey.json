@@ -1,0 +1,135 @@
+{
+  "version": 4,
+  "source": {
+    "path": "1-Video-76236.mp4",
+    "duration": 56.8,
+    "size": [
+      720,
+      1280
+    ],
+    "fps": 30.0
+  },
+  "rounds": [
+    [
+      "overview"
+    ],
+    [
+      "r2_s01",
+      "r2_s02",
+      "r2_s03"
+    ]
+  ],
+  "shots_estimate": {
+    "range": [
+      12,
+      15
+    ],
+    "answer": 13
+  },
+  "scene_names": {
+    "r2_s01": [
+      {
+        "t": 6.233,
+        "name": "fruit cluster"
+      },
+      {
+        "t": 7.4,
+        "name": "love heart"
+      },
+      {
+        "t": 10.133,
+        "name": "love heart"
+      },
+      {
+        "t": 12.333,
+        "name": "joy sun"
+      },
+      {
+        "t": 14.033,
+        "name": "joy sun"
+      },
+      {
+        "t": 17.5,
+        "name": "peace dove"
+      },
+      {
+        "t": 17.9,
+        "name": "peace dove"
+      },
+      {
+        "t": 21.733,
+        "name": "patience hourglass"
+      }
+    ],
+    "r2_s02": [
+      {
+        "t": 21.8,
+        "name": "patience hourglass"
+      },
+      {
+        "t": 24.767,
+        "name": "kindness face"
+      },
+      {
+        "t": 25.7,
+        "name": "kindness face"
+      },
+      {
+        "t": 29.6,
+        "name": "goodness hands"
+      },
+      {
+        "t": 29.6,
+        "name": "goodness hands"
+      },
+      {
+        "t": 33.633,
+        "name": "faithfulness handshake"
+      }
+    ],
+    "r2_s03": [
+      {
+        "t": 37.367,
+        "name": "faithfulness handshake"
+      },
+      {
+        "t": 40.033,
+        "name": "gentleness feather"
+      },
+      {
+        "t": 41.267,
+        "name": "gentleness feather"
+      },
+      {
+        "t": 44.367,
+        "name": "self control figure"
+      },
+      {
+        "t": 48.433,
+        "name": "self control figure"
+      },
+      {
+        "t": 49.3,
+        "name": "connected grid"
+      }
+    ]
+  },
+  "detail": [
+    "kf_01",
+    "kf_02"
+  ],
+  "detail_for": [
+    202,
+    350,
+    503,
+    628,
+    724,
+    874,
+    995,
+    1008,
+    1175,
+    1299,
+    1469,
+    1538
+  ]
+}

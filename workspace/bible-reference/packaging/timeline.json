@@ -1,0 +1,91 @@
+{
+  "text": [],
+  "stickers": [],
+  "sfx": [
+    {
+      "t": 6.36,
+      "type": "ding",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 11.16,
+      "type": "whoosh",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 22.79,
+      "type": "pop",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 26.08,
+      "type": "pop",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 29.52,
+      "type": "whoosh",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 32.71,
+      "type": "pop",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 33.57,
+      "type": "pop",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": {
+        "type": "cut",
+        "what": "cut",
+        "dt": 0.03,
+        "ref": null
+      }
+    },
+    {
+      "t": 38.55,
+      "type": "pop",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 39.89,
+      "type": "pop",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    },
+    {
+      "t": 42.6,
+      "type": "whoosh",
+      "description": null,
+      "source": "effects_stem",
+      "confidence": "medium",
+      "on": null
+    }
+  ]
+}

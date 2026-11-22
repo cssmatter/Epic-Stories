@@ -1,0 +1,591 @@
+{
+  "by": "",
+  "shots": [
+    {
+      "id": "shot_001",
+      "time": "0.00-6.73",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Nine fruits overview on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Nine fruits overview"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_002",
+      "time": "6.73-11.67",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Love: heart on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Love: heart"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_003",
+      "time": "11.67-16.77",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Joy: sun on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Joy: sun"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_004",
+      "time": "16.77-20.93",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Peace: dove on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Peace: dove"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_005",
+      "time": "20.93-24.13",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Patience: rotating hourglass on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Patience: rotating hourglass"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_006",
+      "time": "24.13-29.13",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Kindness: smiling face on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Kindness: smiling face"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_007",
+      "time": "29.13-33.17",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Goodness: hands on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Goodness: hands"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_008",
+      "time": "33.17-33.60",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Transition gap on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Transition gap"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      }
+    },
+    {
+      "id": "shot_009",
+      "time": "33.60-39.17",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Faithfulness: handshake on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Faithfulness: handshake"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_010",
+      "time": "39.17-43.30",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Gentleness: feather on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Gentleness: feather"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_011",
+      "time": "43.30-48.97",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Self-control: figure on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Self-control: figure"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_012",
+      "time": "48.97-51.27",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "Connected grid pullback on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "explanation",
+        "point": "Connected grid pullback"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "shot_013",
+      "time": "51.27-56.80",
+      "label_probs": {
+        "code_render": 0.96,
+        "anim_2d": 0.04
+      },
+      "image_source": "unknown",
+      "evidence": [
+        "Stable card geometry and typography across frames.",
+        "Illustrated icons undergo rigid transforms; no live camera footage visible."
+      ],
+      "description": "PDF download call to action on a nearly black textured canvas, mint outline card, gold mono heading, white subtitles and scripture badge.",
+      "narrative": {
+        "role": "call to action",
+        "point": "PDF download call to action"
+      },
+      "embedded_assets": [],
+      "ai_edits": [],
+      "same_clip_as": null,
+      "replication": {
+        "image_prompt": "",
+        "video_prompt": "",
+        "video_prompt_en": ""
+      },
+      "performance": {
+        "who": "",
+        "emotion": "",
+        "intensity": "",
+        "face": "",
+        "body": "",
+        "arc": [],
+        "voice": "",
+        "key": false,
+        "move": "",
+        "movers": 0,
+        "full_body": null,
+        "backdrop": "",
+        "en": ""
+      }
+    }
+  ],
+  "aspects": {
+    "camera": {
+      "setups": "",
+      "gear_guess": ""
+    },
+    "lighting": {
+      "lighting_overall": ""
+    },
+    "grade": {
+      "grade_overall": ""
+    },
+    "editing": {
+      "editing": "0.4\u20130.9 second slide/rotation exits; approximately 3\u20136 second cards; final connected grid zoom-out."
+    },
+    "format": {
+      "format": ""
+    }
+  },
+  "story": {
+    "summary": "Nine fruits of the Spirit explained with compact animated cards, then a PDF offer.",
+    "hook": "A cluster of nine symbols introduces a numbered sequence.",
+    "highlights": [
+      "6.3s: first card slides into focus.",
+      "22.6s: hourglass rotation reinforces patience.",
+      "49s: pullback reveals connected card grid."
+    ]
+  },
+  "cast": {
+    "style": "Black grain/halftone, pale mint rounded borders, mustard gold mono headings, centered illustrated symbols; generous negative space.",
+    "characters": [],
+    "scenes": [
+      {
+        "id": "S1",
+        "where": "Abstract black graphic canvas",
+        "when": "Throughout",
+        "look": "Fixed orthographic composition",
+        "shots": [
+          "shot_001",
+          "shot_002",
+          "shot_003",
+          "shot_004",
+          "shot_005",
+          "shot_006",
+          "shot_007",
+          "shot_008",
+          "shot_009",
+          "shot_010",
+          "shot_011",
+          "shot_012",
+          "shot_013"
+        ]
+      }
+    ],
+    "props": [
+      {
+        "name": "PDF pages",
+        "note": "Real document image embedded at end; original file needed only for exact PDF reproduction.",
+        "shots": [
+          "shot_013"
+        ]
+      }
+    ]
+  },
+  "packaging": {
+    "stickers": [],
+    "text": [],
+    "missed": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "filled": true,
+  "shots_estimate": {
+    "range": [
+      12,
+      15
+    ],
+    "answer": 13
+  },
+  "gaps": {
+    "g12": "transition fade .8",
+    "g02": "transition fade .8",
+    "g06": "transition fade .8",
+    "g14": "transition zoom .8",
+    "g04": "transition fade .8",
+    "g16": "cut .95",
+    "g07": "transition slide .7",
+    "g08": "transition slide .7",
+    "g11": "transition fade .7",
+    "g03": "transition fade .8",
+    "g10": "transition fade .7",
+    "g01": "transition zoom .8",
+    "g09": "transition fade .8",
+    "g05": "transition fade .8"
+  }
+}
