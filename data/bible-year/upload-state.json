@@ -41,7 +41,8 @@
     "youtube_short": {
       "pending": false,
       "id": "9pUjgbWyLu8",
-      "url": "https://youtu.be/9pUjgbWyLu8"
+      "url": "https://youtu.be/9pUjgbWyLu8",
+      "comment_warning": "Comments unavailable with current channel permissions; links remain in description."
     }
   }
 }
