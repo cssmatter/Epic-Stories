@@ -47,7 +47,8 @@
     "youtube_long": {
       "pending": false,
       "id": "mtkV-BkjVfA",
-      "url": "https://youtu.be/mtkV-BkjVfA"
+      "url": "https://youtu.be/mtkV-BkjVfA",
+      "comment_warning": "Comments unavailable with current channel permissions; links remain in description."
     }
   }
 }
