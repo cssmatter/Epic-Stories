@@ -65,7 +65,9 @@
       "comment_warning": "Comments unavailable with current channel permissions; links remain in description."
     },
     "youtube_long": {
-      "pending": true
+      "pending": false,
+      "id": "HVP-QO1eVFc",
+      "url": "https://youtu.be/HVP-QO1eVFc"
     }
   }
 }
