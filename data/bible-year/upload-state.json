@@ -127,7 +127,8 @@
     "youtube_long": {
       "pending": false,
       "id": "mIZ7f6Deceo",
-      "url": "https://youtu.be/mIZ7f6Deceo"
+      "url": "https://youtu.be/mIZ7f6Deceo",
+      "comment_warning": "Comments unavailable with current channel permissions; links remain in description."
     }
   }
 }
