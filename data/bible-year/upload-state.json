@@ -119,7 +119,9 @@
   },
   "day-007": {
     "youtube_short": {
-      "pending": true
+      "pending": false,
+      "id": "iUN3YIYTpEI",
+      "url": "https://youtu.be/iUN3YIYTpEI"
     }
   }
 }
